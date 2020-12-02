@@ -1,0 +1,136 @@
+magic
+tech sky130A
+timestamp 1606753832
+<< error_s >>
+rect 168 160 174 166
+rect 273 160 279 166
+rect -206 150 -200 156
+rect -153 150 -147 156
+rect -212 100 -206 106
+rect -147 100 -141 106
+rect 162 96 168 102
+rect 279 96 285 102
+rect -206 41 -200 47
+rect -153 41 -147 47
+rect 168 43 174 49
+rect 273 43 279 49
+rect -212 -9 -206 -3
+rect -147 -9 -141 -3
+rect 162 -21 168 -15
+rect 279 -21 285 -15
+rect 168 -142 174 -136
+rect 273 -142 279 -136
+rect -206 -148 -200 -142
+rect -153 -148 -147 -142
+rect -212 -198 -206 -192
+rect -147 -198 -141 -192
+rect 162 -206 168 -200
+rect 279 -206 285 -200
+rect 168 -258 174 -252
+rect 273 -258 279 -252
+rect -206 -265 -200 -259
+rect -153 -265 -147 -259
+rect -212 -315 -206 -309
+rect -147 -315 -141 -309
+rect 162 -322 168 -316
+rect 279 -322 285 -316
+<< nwell >>
+rect 632 -72 667 -71
+rect 632 -88 649 -72
+rect 666 -88 667 -72
+<< poly >>
+rect 319 147 489 151
+rect -107 114 130 138
+rect 319 135 488 147
+rect -107 5 128 29
+rect 319 -9 488 8
+rect 649 -72 667 -71
+rect 665 -88 667 -72
+rect -107 -175 130 -151
+rect 320 -167 488 -150
+rect -105 -295 132 -271
+rect 320 -309 488 -292
+<< polycont >>
+rect 632 -88 649 -71
+<< locali >>
+rect 623 -88 632 -71
+<< viali >>
+rect 649 -88 667 -71
+<< metal1 >>
+rect -228 -382 -188 217
+rect 654 -68 667 -66
+rect 646 -71 670 -68
+rect 646 -88 649 -71
+rect 667 -88 670 -71
+rect 646 -91 670 -88
+rect 656 -95 667 -91
+<< metal2 >>
+rect -264 166 497 173
+rect -264 155 500 166
+rect -264 112 710 130
+rect -264 24 497 30
+rect -264 12 500 24
+rect -264 -20 496 -13
+rect -264 -31 500 -20
+rect -262 -146 500 -129
+rect -262 -188 500 -171
+rect -262 -286 500 -269
+rect -184 -295 -30 -286
+rect -262 -330 500 -313
+use TunCap01  TunCap01_2
+timestamp 1606740587
+transform 1 0 1188 0 1 324
+box -1451 -400 -1278 -210
+use wellContact  wellContact_1
+timestamp 1606753443
+transform 1 0 1185 0 1 293
+box -1449 -441 -1275 -255
+use TunCap01  TunCap01_0
+timestamp 1606740587
+transform 1 0 1188 0 1 135
+box -1451 -400 -1278 -210
+use FGVaractorCapacitor  FGVaractorCapacitor_2
+timestamp 1606741561
+transform 1 0 1069 0 1 315
+box -957 -395 -734 -209
+use horizPcell01  horizPcell01_0
+timestamp 1606750506
+transform 1 0 777 0 1 -128
+box -289 47 -33 232
+use horizPcell01  horizPcell01_1
+timestamp 1606750506
+transform 1 0 777 0 1 -428
+box -289 47 -33 232
+use horizPcell01  horizPcell01_2
+timestamp 1606750506
+transform 1 0 777 0 -1 -31
+box -289 47 -33 232
+use wellContact  wellContact_0
+timestamp 1606753443
+transform 1 0 1588 0 1 286
+box -1449 -441 -1275 -255
+use FGVaractorCapacitor  FGVaractorCapacitor_0
+timestamp 1606741561
+transform 1 0 1069 0 1 14
+box -957 -395 -734 -209
+use FGVaractorCapacitor  FGVaractorCapacitor_1
+timestamp 1606741561
+transform 1 0 1069 0 1 130
+box -957 -395 -734 -209
+use TunCap01  TunCap01_3
+timestamp 1606740587
+transform 1 0 1188 0 1 433
+box -1451 -400 -1278 -210
+use FGVaractorCapacitor  FGVaractorCapacitor_3
+timestamp 1606741561
+transform 1 0 1069 0 1 432
+box -957 -395 -734 -209
+use horizPcell01  horizPcell01_3
+timestamp 1606750506
+transform 1 0 777 0 -1 270
+box -289 47 -33 232
+use TunCap01  TunCap01_1
+timestamp 1606740587
+transform 1 0 1188 0 1 18
+box -1451 -400 -1278 -210
+<< end >>
