@@ -1,0 +1,21 @@
+magic
+tech sky130A
+timestamp 1606741561
+<< error_p >>
+rect -901 -272 -895 -266
+rect -796 -272 -790 -266
+rect -907 -336 -901 -330
+rect -790 -336 -784 -330
+<< nwell >>
+rect -957 -395 -734 -210
+<< mvvaractor >>
+rect -901 -336 -790 -272
+<< mvnsubdiff >>
+rect -901 -272 -790 -244
+rect -901 -361 -790 -336
+<< poly >>
+rect -941 -336 -901 -272
+rect -790 -336 -749 -272
+<< metal1 >>
+rect -892 -395 -854 -209
+<< end >>
