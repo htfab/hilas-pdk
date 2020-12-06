@@ -1,0 +1,10 @@
+#! /bin/bash
+
+THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+for d in $(find $PWD -type f -iname "*.mag"); do
+    echo "###############################"
+    echo "${d}:"
+    echo "###############################"
+    python3 "${THIS_DIR}/magic_file_checks.py" -f "${d}"
+done

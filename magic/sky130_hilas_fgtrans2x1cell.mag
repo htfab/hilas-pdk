@@ -139,35 +139,35 @@ rect 38 0 269 18
 rect 7 -11 38 -8
 rect 510 -315 514 -313
 rect -394 -330 514 -315
-use TunCap01  TunCap01_3
+use sky130_hilas_tuncap01  sky130_hilas_tuncap01_3
 timestamp 1606740587
 transform 1 0 1056 0 1 433
 box -1451 -400 -1278 -210
-use wellContact  wellContact_1
+use sky130_hilas_wellcontact  sky130_hilas_wellcontact_1
 timestamp 1606753443
 transform 1 0 1054 0 1 404
 box -1449 -441 -1275 -255
-use wellContact  wellContact_0
+use sky130_hilas_wellcontact  sky130_hilas_wellcontact_0
 timestamp 1606753443
 transform 1 0 1054 0 1 231
 box -1449 -441 -1275 -255
-use TunCap01  TunCap01_1
+use sky130_hilas_tuncap01  sky130_hilas_tuncap01_1
 timestamp 1606740587
 transform 1 0 1056 0 1 18
 box -1451 -400 -1278 -210
-use horizTransCell01  horizTransCell01_0
+use sky130_hilas_horiztranscell01  sky130_hilas_horiztranscell01_0
 timestamp 1606869277
 transform 1 0 790 0 1 -429
 box -476 47 -33 359
-use horizTransCell01  horizTransCell01_1
+use sky130_hilas_horiztranscell01  sky130_hilas_horiztranscell01_1
 timestamp 1606869277
 transform 1 0 790 0 -1 270
 box -476 47 -33 359
-use FGVaractorCapacitor02  FGVaractorCapacitor02_0
+use sky130_hilas_fgvaractorcapacitor02  sky130_hilas_fgvaractorcapacitor02_0
 timestamp 1606868103
 transform 1 0 986 0 1 62
 box -1005 -380 -733 -211
-use FGVaractorCapacitor02  FGVaractorCapacitor02_2
+use sky130_hilas_fgvaractorcapacitor02  sky130_hilas_fgvaractorcapacitor02_2
 timestamp 1606868103
 transform 1 0 986 0 -1 -231
 box -1005 -380 -733 -211
