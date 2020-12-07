@@ -20,12 +20,10 @@ cell ("{{ cell_name }}") {
     pg_pin ("{{ pg_pin.name }}") {
         pg_type : "{{ pg_pin.pg_type }}";
         voltage_name : "{{ pg_pin.name }}";
-
-        {% if related_bias_pin %}
+        {% if 'related_bias_pin' in pg_pin and pg_pin.related_bias_pin %}
         related_bias_pin : {{ pg_pin.related_bias_pin }};
         {% endif %}
-
-        {% if physical_connection %}
+        {% if 'physical_connection' in pg_pin and pg_pin.physical_connection%}
         physical_connection : "{{ pg_pin.physical_connection }}"
         {% endif %}
     }
@@ -33,9 +31,11 @@ cell ("{{ cell_name }}") {
 
     {% for pin in pins %}
     pin ("{{ pin.name }}") {
-        clock : "false";
-        direction : "input";
+        clock : "{{ pin.isclock }}";
+        direction : "{{ pin.direction }}";
+        {% if 'function' in pin and pin.function %}
         function : "{{ pin.function }}";
+        {% endif %}
         capacitance : {{ pin.capacitance }};
         max_transition : {{ pin.max_transition }};
         related_ground_pin : "{{ pin.related_ground_pin }}";
