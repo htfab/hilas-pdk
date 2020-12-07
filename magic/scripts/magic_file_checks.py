@@ -8,6 +8,7 @@ import re
 
 from difflib import get_close_matches
 
+
 def confirm(prompt=None, resp=False):
     """prompts for yes or no response from the user. Returns True for yes and
     False for no.
@@ -47,9 +48,10 @@ def confirm(prompt=None, resp=False):
         if ans == 'n' or ans == 'N':
             return False
 
-def edie(message,code=1):
+
+def edie(message, code=1):
     print(message)
-    return code
+    sys.exit(code)
 
 
 def missing(inuse, path):
@@ -60,8 +62,10 @@ def missing(inuse, path):
             missing.append(mod)
     return (list(set(missing)), avail)
 
+
 def print_missing(missing):
     [print('\n    {}'.format(mod)) for mod in missing]
+
 
 def fix(target, inuse, missing, available):
     for m in missing:
@@ -72,42 +76,44 @@ def fix(target, inuse, missing, available):
                     mats[0] = a
                     break
             print('{} is missing, but I found a close match: {}'.format(m, mats[0]))
-            if confirm('Do you want to replace references to {} with {}?'.format(m,mats[0]), resp=False):
+            if confirm('Do you want to replace references to {} with {}?'.format(m, mats[0]), resp=False):
                 rename_refs(target, m, mats[0])
         else:
             print('{} is missing, and I could not find a candidate match.'.format(m))
         print('')
 
+
 def rename_refs(target, old_name, new_name):
-    with open(target,'r') as f:
-        all_lines=f.readlines()
+    with open(target, 'r') as f:
+        all_lines = f.readlines()
     for i, line in enumerate(all_lines):
         if re.match('^\s?use {}'.format(old_name), line):
             all_lines[i] = line.replace(old_name, new_name)
-    with open(target,'w') as f:
+    with open(target, 'w') as f:
         f.writelines(all_lines)
+
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('design', help="The name of the magic design to check.")
-    ap.add_argument('--missing', '-m',action='store_true', help="Print missing submodules (same path).")
+    ap.add_argument('--missing', '-m', action='store_true', help="Print missing submodules (same path).")
     ap.add_argument('--fix', '-f', action='store_true', help="Attempt to fix missing submodules.")
     ap.add_argument('--rename-refs', '-R', nargs=2, help="Rename references of <arg1> to <arg2>.")
-    ap.add_argument('--used','-u',action='store_true', help="Report submodules in use by file.")
+    ap.add_argument('--used', '-u', action='store_true', help="Report submodules in use by file.")
     args = ap.parse_args()
 
     if not 'design' in args or not args.design:
-        edie('missing/bad design file',1)
+        edie('missing/bad design file', 1)
 
     target = pathlib.Path(args.design)
 
     if not target.is_file():
-        edie('missing/bad design file',1)
+        edie('missing/bad design file', 1)
 
     inuse = []
     with open(target, 'r') as f:
         for line in f.readlines():
-            match = re.match('^\s?use (\w+)',line)
+            match = re.match('^\s?use (\w+)', line)
             if match:
                 inuse.append(match.group(1))
 
@@ -115,9 +121,9 @@ def main():
 
     if args.rename_refs:
         print('renaming {} to {}'.format(args.rename_refs[0], args.rename_refs[1]))
-        #rename_refs(target, args.rename_refs[0], args.rename_refs[1])
+        # rename_refs(target, args.rename_refs[0], args.rename_refs[1])
     if args.missing or args.fix:
-        miss,avail = missing(inuse, target.parent)
+        miss, avail = missing(inuse, target.parent)
         if not args.fix:
             print_missing(miss)
         elif args.fix:
@@ -127,5 +133,6 @@ def main():
         for iu in inuse:
             print('    ' + iu)
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     sys.exit(main())
