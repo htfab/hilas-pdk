@@ -1,0 +1,48 @@
+magic
+tech sky130A
+timestamp 1606962025
+<< error_s >>
+rect -401 342 -395 348
+rect -296 342 -290 348
+rect -407 278 -401 284
+rect -290 278 -284 284
+rect -457 219 -234 220
+rect -31 195 44 213
+rect -31 131 -13 195
+rect 26 131 44 195
+rect -31 113 44 131
+rect -374 20 -368 26
+rect -321 20 -315 26
+rect -380 -30 -374 -24
+rect -315 -30 -309 -24
+<< nmos >>
+rect -8 10 25 39
+<< ndiff >>
+rect -8 39 25 64
+rect -8 4 25 10
+rect -8 -13 0 4
+rect 17 -13 25 4
+rect -8 -19 25 -13
+<< pdiff >>
+rect -13 131 26 195
+<< ndiffc >>
+rect 0 -13 17 4
+<< poly >>
+rect -21 10 -8 39
+rect 25 10 38 39
+<< locali >>
+rect -8 -13 0 4
+rect 17 -13 25 4
+use FGVaractorCapacitor  FGVaractorCapacitor_0
+timestamp 1606741561
+transform 1 0 500 0 1 614
+box -957 -395 -734 -209
+use TunCap01  TunCap01_0
+timestamp 1606740587
+transform 1 0 1020 0 1 303
+box -1451 -400 -1278 -210
+use horizPcell01  horizPcell01_0
+timestamp 1606750506
+transform 1 0 530 0 1 165
+box -289 47 -33 232
+<< end >>

@@ -1,0 +1,44 @@
+magic
+tech sky130A
+timestamp 1607106986
+<< error_s >>
+rect 20 503 59 505
+rect 20 419 59 421
+rect 20 335 59 337
+rect 20 251 59 253
+rect 20 167 59 169
+rect 20 83 59 85
+rect 20 -1 59 1
+use pFETdevice01  pFETdevice01_7
+timestamp 1607105717
+transform 1 0 38 0 1 535
+box -64 -41 66 43
+use pFETdevice01  pFETdevice01_6
+timestamp 1607105717
+transform 1 0 38 0 1 451
+box -64 -41 66 43
+use pFETdevice01  pFETdevice01_5
+timestamp 1607105717
+transform 1 0 38 0 1 367
+box -64 -41 66 43
+use pFETdevice01  pFETdevice01_3
+timestamp 1607105717
+transform 1 0 38 0 1 283
+box -64 -41 66 43
+use pFETdevice01  pFETdevice01_2
+timestamp 1607105717
+transform 1 0 38 0 1 199
+box -64 -41 66 43
+use pFETdevice01  pFETdevice01_1
+timestamp 1607105717
+transform 1 0 38 0 1 115
+box -64 -41 66 43
+use pFETdevice01  pFETdevice01_0
+timestamp 1607105717
+transform 1 0 38 0 1 31
+box -64 -41 66 43
+use pFETdevice01  pFETdevice01_4
+timestamp 1607105717
+transform 1 0 38 0 1 -53
+box -64 -41 66 43
+<< end >>

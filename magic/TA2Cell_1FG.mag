@@ -1,0 +1,100 @@
+magic
+tech sky130A
+timestamp 1607347853
+<< error_s >>
+rect -1580 672 -1574 678
+rect -1527 672 -1521 678
+rect -1415 672 -1409 678
+rect -1362 672 -1356 678
+rect -1586 622 -1580 628
+rect -1521 622 -1515 628
+rect -1421 622 -1415 628
+rect -1356 622 -1350 628
+rect -2055 613 -2049 619
+rect -1950 613 -1944 619
+rect -992 613 -986 619
+rect -887 613 -881 619
+rect -2061 563 -2055 569
+rect -1944 563 -1938 569
+rect -998 563 -992 569
+rect -881 563 -875 569
+rect -2055 312 -2049 318
+rect -1950 312 -1944 318
+rect -992 312 -986 318
+rect -887 312 -881 318
+rect -2061 262 -2055 268
+rect -1944 262 -1938 268
+rect -1580 258 -1574 264
+rect -1527 258 -1521 264
+rect -1415 258 -1409 264
+rect -1362 258 -1356 264
+rect -998 262 -992 268
+rect -881 262 -875 268
+rect -1586 208 -1580 214
+rect -1521 208 -1515 214
+rect -1421 208 -1415 214
+rect -1356 208 -1350 214
+<< nwell >>
+rect 65 727 193 745
+rect 65 140 193 159
+<< metal1 >>
+rect -416 737 -397 745
+rect -372 737 -344 745
+rect -3 731 31 745
+rect 63 730 91 745
+rect -3 140 31 159
+rect 64 140 91 161
+<< metal2 >>
+rect -260 718 -229 742
+rect -149 655 -127 657
+rect -1726 617 -1642 637
+rect -154 621 -127 655
+rect -1681 570 -667 592
+rect -328 571 -293 593
+rect -1686 473 -785 495
+rect -1681 295 -1115 317
+rect -1731 241 -1642 265
+rect -1137 262 -1115 295
+rect -807 312 -785 473
+rect -689 450 -667 570
+rect -147 564 -127 565
+rect -147 531 -125 564
+rect -145 530 -125 531
+rect -252 451 -220 475
+rect -692 446 -667 450
+rect -692 382 -666 446
+rect -692 361 -279 382
+rect -300 347 -279 361
+rect -300 326 -113 347
+rect -807 290 -522 312
+rect -700 262 -113 267
+rect -1137 246 -113 262
+rect -1137 240 -661 246
+use FGBias2x1cell  FGBias2x1cell_0
+timestamp 1607346141
+transform 1 0 -1077 0 1 522
+box -396 -382 757 223
+use FGBiasWeakGate2x1cell  FGBiasWeakGate2x1cell_0
+timestamp 1607281816
+transform -1 0 -1859 0 1 522
+box -396 -382 757 223
+use pTransistorPair  pTransistorPair_1
+timestamp 1607345152
+transform 1 0 -454 0 -1 305
+box 133 -440 320 165
+use DualTACore01  DualTACore01_0
+timestamp 1607268356
+transform 1 0 38 0 1 181
+box -172 -22 155 550
+<< labels >>
+rlabel metal1 -416 737 -397 745 0 GateColSelect
+rlabel metal1 -372 737 -344 745 0 Vdd
+rlabel metal2 -1726 617 -1690 636 0 Vin+_Amp1
+rlabel space -1731 241 -1695 266 0 Vin-_Amp1
+rlabel metal1 -3 739 31 745 0 GND
+rlabel metal1 63 739 91 745 0 Vdd
+rlabel metal1 64 140 91 146 0 Vdd
+rlabel metal1 -3 140 31 146 0 GND
+rlabel metal2 -252 451 -220 475 0 Vin+_Amp2
+rlabel metal2 -260 718 -229 742 1 Vin-_Amp2
+<< end >>

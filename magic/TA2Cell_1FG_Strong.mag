@@ -1,0 +1,103 @@
+magic
+tech sky130A
+timestamp 1607365263
+<< error_s >>
+rect -1581 672 -1575 678
+rect -1528 672 -1522 678
+rect -1415 672 -1409 678
+rect -1362 672 -1356 678
+rect -1587 622 -1581 628
+rect -1522 622 -1516 628
+rect -1421 622 -1415 628
+rect -1356 622 -1350 628
+rect -2009 613 -2003 619
+rect -1904 613 -1898 619
+rect -992 613 -986 619
+rect -887 613 -881 619
+rect -2015 563 -2009 569
+rect -1898 563 -1892 569
+rect -998 563 -992 569
+rect -881 563 -875 569
+rect -2009 312 -2003 318
+rect -1904 312 -1898 318
+rect -992 312 -986 318
+rect -887 312 -881 318
+rect -2015 262 -2009 268
+rect -1898 262 -1892 268
+rect -1581 258 -1575 264
+rect -1528 258 -1522 264
+rect -1415 258 -1409 264
+rect -1362 258 -1356 264
+rect -998 262 -992 268
+rect -881 262 -875 268
+rect -1587 208 -1581 214
+rect -1522 208 -1516 214
+rect -1421 208 -1415 214
+rect -1356 208 -1350 214
+<< nwell >>
+rect 65 727 193 745
+rect 65 140 193 159
+<< metal1 >>
+rect -2353 734 -2332 745
+rect -416 737 -397 745
+rect -372 737 -344 745
+rect -3 731 31 745
+rect 63 730 91 745
+rect -2352 141 -2329 153
+rect -3 140 31 159
+rect 64 140 91 161
+<< metal2 >>
+rect -260 718 -229 742
+rect -149 655 -127 657
+rect -154 621 -127 655
+rect -328 571 -293 593
+rect -147 564 -127 565
+rect -1466 522 -667 542
+rect -147 531 -125 564
+rect -145 530 -125 531
+rect -807 454 -785 455
+rect -1465 429 -782 454
+rect -689 450 -667 522
+rect -252 451 -220 475
+rect -1465 337 -1114 356
+rect -1137 277 -1114 337
+rect -811 312 -782 429
+rect -692 446 -667 450
+rect -692 382 -666 446
+rect -692 361 -279 382
+rect -300 347 -279 361
+rect -300 326 -113 347
+rect -811 290 -522 312
+rect -811 289 -782 290
+rect -1137 262 -1115 277
+rect -700 262 -113 267
+rect -1137 246 -113 262
+rect -1137 240 -661 246
+use DualTACore01  DualTACore01_0
+timestamp 1607268356
+transform 1 0 38 0 1 181
+box -172 -22 155 550
+use pTransistorPair  pTransistorPair_1
+timestamp 1607345152
+transform 1 0 -454 0 -1 305
+box 133 -440 320 165
+use FGBias2x1cell  FGBias2x1cell_0
+timestamp 1607346141
+transform 1 0 -1077 0 1 522
+box -396 -382 757 223
+use FGtrans2x1cell  FGtrans2x1cell_0
+timestamp 1607356355
+transform -1 0 -1860 0 1 522
+box -395 -382 757 223
+<< labels >>
+rlabel metal1 -416 737 -397 745 0 GateColSelect
+rlabel metal1 -372 737 -344 745 0 Vdd
+rlabel metal1 -3 739 31 745 0 GND
+rlabel metal1 63 739 91 745 0 Vdd
+rlabel metal1 64 140 91 146 0 Vdd
+rlabel metal1 -3 140 31 146 0 GND
+rlabel metal2 -252 451 -220 475 0 Vin+_Amp2
+rlabel metal2 -260 718 -229 742 1 Vin-_Amp2
+rlabel metal1 -2352 141 -2329 153 0 Vin-_Amp1
+rlabel metal1 -2353 734 -2332 745 0 Vin+_Amp1
+<< end >>

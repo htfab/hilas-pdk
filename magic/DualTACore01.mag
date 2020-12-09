@@ -1,0 +1,63 @@
+magic
+tech sky130A
+timestamp 1607268356
+<< metal1 >>
+rect -41 -22 -7 550
+rect 26 -21 53 549
+<< metal2 >>
+rect -136 507 118 530
+rect -110 293 155 316
+rect -136 211 155 233
+rect -137 -6 134 17
+use nMirror03  nMirror03_1
+timestamp 1607268356
+transform 1 0 -113 0 1 131
+box -59 -5 125 122
+use nMirror03  nMirror03_0
+timestamp 1607268356
+transform 1 0 -113 0 -1 100
+box -59 -5 125 122
+use li2m1  li2m1_1
+timestamp 1607179295
+transform 1 0 41 0 1 126
+box -10 -8 13 21
+use li2m2  li2m2_3
+timestamp 1607089160
+transform 1 0 98 0 1 3
+box -14 -15 20 18
+use li2m2  li2m2_0
+timestamp 1607089160
+transform 1 0 56 0 1 227
+box -14 -15 20 18
+use pFETmirror02  pFETmirror02_0
+timestamp 1607207238
+transform 1 0 88 0 1 -111
+box -61 89 67 373
+use pFETmirror02  pFETmirror02_1
+timestamp 1607207238
+transform 1 0 88 0 -1 635
+box -61 89 67 373
+use nMirror03  nMirror03_2
+timestamp 1607268356
+transform 1 0 -113 0 1 427
+box -59 -5 125 122
+use nMirror03  nMirror03_3
+timestamp 1607268356
+transform 1 0 -113 0 -1 396
+box -59 -5 125 122
+use li2m1  li2m1_0
+timestamp 1607179295
+transform 1 0 41 0 1 385
+box -10 -8 13 21
+use li2m2  li2m2_1
+timestamp 1607089160
+transform 1 0 53 0 1 299
+box -14 -15 20 18
+use li2m2  li2m2_2
+timestamp 1607089160
+transform 1 0 102 0 1 522
+box -14 -15 20 18
+<< labels >>
+rlabel metal2 144 293 155 316 0 output1
+rlabel space 144 211 155 234 0 output2
+<< end >>
