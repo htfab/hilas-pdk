@@ -1,0 +1,28 @@
+magic
+tech sky130A
+timestamp 1607478455
+use pFETdevice01aa  pFETdevice01aa_0
+timestamp 1607478455
+transform 1 0 108 0 1 -36
+box -80 -78 92 43
+use pFETdevice01aa  pFETdevice01aa_1
+timestamp 1607478455
+transform 1 0 108 0 1 60
+box -80 -78 92 43
+use pFETdevice01a  pFETdevice01a_0
+timestamp 1607477942
+transform 1 0 108 0 1 -132
+box -80 -42 81 43
+use pFETdevice01aa  pFETdevice01aa_4
+timestamp 1607478455
+transform 1 0 108 0 1 156
+box -80 -78 92 43
+use pFETdevice01aa  pFETdevice01aa_2
+timestamp 1607478455
+transform 1 0 108 0 1 252
+box -80 -78 92 43
+use pFETdevice01aa  pFETdevice01aa_3
+timestamp 1607478455
+transform 1 0 108 0 1 348
+box -80 -78 92 43
+<< end >>

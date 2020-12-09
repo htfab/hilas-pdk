@@ -1,0 +1,23 @@
+magic
+tech sky130A
+timestamp 1607475333
+<< nwell >>
+rect -79 -78 82 43
+<< pmos >>
+rect -18 -19 21 20
+<< pdiff >>
+rect -45 -19 -18 20
+rect 21 -19 48 20
+<< poly >>
+rect -18 20 21 33
+rect -18 -27 21 -19
+rect -18 -42 71 -27
+rect 56 -63 71 -42
+rect 56 -78 108 -63
+rect 80 -79 85 -78
+rect 93 -90 108 -78
+use poly2m1  poly2m1_0
+timestamp 1607270135
+transform 1 0 81 0 1 -88
+box -9 -26 24 25
+<< end >>
