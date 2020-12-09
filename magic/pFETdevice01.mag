@@ -1,8 +1,8 @@
 magic
 tech sky130A
-timestamp 1607105717
+timestamp 1607471549
 << nwell >>
-rect -64 -41 66 43
+rect -79 -78 82 43
 << pmos >>
 rect -18 -19 21 20
 << pdiff >>
@@ -18,8 +18,13 @@ rect 21 -19 48 -8
 rect -41 -8 -24 9
 rect 27 -8 44 9
 << poly >>
+rect -79 18 -53 33
 rect -18 20 21 33
-rect -18 -32 21 -19
+rect -68 -27 -53 18
+rect -18 -27 21 -19
+rect -68 -42 71 -27
+rect 56 -63 71 -42
+rect 56 -78 82 -63
 << locali >>
 rect -41 9 -24 17
 rect -41 -16 -24 -8

@@ -1,44 +1,171 @@
 magic
 tech sky130A
-timestamp 1607106986
+timestamp 1607480617
 << error_s >>
-rect 20 503 59 505
-rect 20 419 59 421
-rect 20 335 59 337
-rect 20 251 59 253
-rect 20 167 59 169
-rect 20 83 59 85
-rect 20 -1 59 1
-use pFETdevice01  pFETdevice01_7
-timestamp 1607105717
-transform 1 0 38 0 1 535
-box -64 -41 66 43
-use pFETdevice01  pFETdevice01_6
-timestamp 1607105717
-transform 1 0 38 0 1 451
-box -64 -41 66 43
-use pFETdevice01  pFETdevice01_5
-timestamp 1607105717
-transform 1 0 38 0 1 367
-box -64 -41 66 43
-use pFETdevice01  pFETdevice01_3
-timestamp 1607105717
-transform 1 0 38 0 1 283
-box -64 -41 66 43
-use pFETdevice01  pFETdevice01_2
-timestamp 1607105717
-transform 1 0 38 0 1 199
-box -64 -41 66 43
-use pFETdevice01  pFETdevice01_1
-timestamp 1607105717
-transform 1 0 38 0 1 115
-box -64 -41 66 43
-use pFETdevice01  pFETdevice01_0
-timestamp 1607105717
-transform 1 0 38 0 1 31
-box -64 -41 66 43
-use pFETdevice01  pFETdevice01_4
-timestamp 1607105717
-transform 1 0 38 0 1 -53
-box -64 -41 66 43
+rect 1063 889 1065 890
+<< nwell >>
+rect 619 1020 1762 1027
+<< locali >>
+rect 780 1027 797 1028
+rect 1677 1027 1698 1105
+rect 1744 1027 1761 1095
+rect 619 1004 1762 1027
+rect 619 648 636 1004
+rect 685 525 702 971
+rect 780 648 797 1004
+rect 848 525 865 967
+rect 939 648 956 1004
+rect 1008 525 1025 975
+rect 1101 648 1118 1004
+rect 1170 525 1187 970
+rect 1263 650 1280 1004
+rect 1330 525 1347 975
+rect 1423 651 1440 1004
+rect 1492 525 1509 975
+rect 1584 650 1601 1004
+rect 1652 525 1669 973
+rect 1745 647 1762 1004
+rect 1813 525 1830 991
+<< metal1 >>
+rect 1056 880 1401 897
+rect 1211 627 1229 781
+rect 1381 696 1401 880
+rect 686 525 2030 548
+<< metal2 >>
+rect 382 1102 1087 1121
+rect 382 1020 588 1026
+rect 730 1020 752 1066
+rect 1222 1021 1247 1097
+rect 1222 1020 1250 1021
+rect 382 1005 1250 1020
+rect 408 981 428 1005
+rect 572 990 1250 1005
+rect 1393 833 1413 1089
+rect 382 812 1413 833
+rect 1553 735 1568 1109
+rect 1653 1093 1769 1121
+rect 1728 1092 1769 1093
+rect 382 715 1569 735
+rect 382 603 1236 623
+use DAC6TransistorStack01a  DAC6TransistorStack01a_0
+timestamp 1607478455
+transform 1 0 391 0 1 701
+box 28 -174 200 391
+use poly2m2  poly2m2_12
+timestamp 1607270276
+transform 1 0 417 0 1 769
+box -9 -26 24 29
+use poly2m2  poly2m2_11
+timestamp 1607270276
+transform 1 0 417 0 1 863
+box -9 -26 24 29
+use poly2m2  poly2m2_10
+timestamp 1607270276
+transform 1 0 411 0 1 958
+box -9 -26 24 29
+use poly2m2  poly2m2_9
+timestamp 1607270276
+transform 1 0 425 0 1 1089
+box -9 -26 24 29
+use poly2m2  poly2m2_8
+timestamp 1607270276
+transform 1 0 584 0 1 1090
+box -9 -26 24 29
+use poly2m2  poly2m2_7
+timestamp 1607270276
+transform 0 1 739 -1 0 1073
+box -9 -26 24 29
+use poly2m2  poly2m2_6
+timestamp 1607270276
+transform 1 0 904 0 1 1089
+box -9 -26 24 29
+use li2m1  li2m1_6
+timestamp 1607179295
+transform 1 0 855 0 1 532
+box -10 -8 13 21
+use li2m1  li2m1_0
+timestamp 1607179295
+transform 1 0 693 0 1 532
+box -10 -8 13 21
+use DAC6TransistorStack01  DAC6TransistorStack01_0
+array 0 2 161 0 0 566
+timestamp 1607480432
+transform 1 0 552 0 1 701
+box 28 -174 200 391
+use DAC6TransistorStack01b  DAC6TransistorStack01b_0
+timestamp 1607480432
+transform 1 0 1035 0 1 701
+box 15 -174 200 391
+use poly2m2  poly2m2_5
+timestamp 1607270276
+transform 1 0 1065 0 1 1089
+box -9 -26 24 29
+use li2m1  li2m1_7
+timestamp 1607179295
+transform 1 0 1015 0 1 532
+box -10 -8 13 21
+use DAC6TransistorStack01c  DAC6TransistorStack01c_0
+timestamp 1607478930
+transform 1 0 1196 0 1 701
+box 28 -174 215 391
+use poly2m2  poly2m2_3
+timestamp 1607270276
+transform 1 0 1388 0 1 1090
+box -9 -26 24 29
+use poly2m2  poly2m2_4
+timestamp 1607270276
+transform 1 0 1227 0 1 1089
+box -9 -26 24 29
+use li2m1  li2m1_1
+timestamp 1607179295
+transform 1 0 1177 0 1 532
+box -10 -8 13 21
+use li2m1  li2m1_5
+timestamp 1607179295
+transform 1 0 1337 0 1 532
+box -10 -8 13 21
+use m12m2  m12m2_0
+timestamp 1607179755
+transform 1 0 1217 0 1 607
+box -9 -10 23 22
+use DAC6TransistorStack01  DAC6TransistorStack01_2
+array 0 2 161 0 0 566
+timestamp 1607480432
+transform 1 0 1357 0 1 701
+box 28 -174 200 391
+use DAC6TransistorStack01a  DAC6TransistorStack01a_1
+timestamp 1607478455
+transform 1 0 1840 0 1 701
+box 28 -174 200 391
+use li2m1  li2m1_2
+timestamp 1607179295
+transform 1 0 1499 0 1 532
+box -10 -8 13 21
+use li2m1  li2m1_4
+timestamp 1607179295
+transform 1 0 1820 0 1 532
+box -10 -8 13 21
+use li2m1  li2m1_3
+timestamp 1607179295
+transform 1 0 1659 0 1 532
+box -10 -8 13 21
+use li2m2  li2m2_1
+timestamp 1607089160
+transform 1 0 1746 0 1 1090
+box -14 -15 20 18
+use li2m2  li2m2_0
+timestamp 1607089160
+transform 1 0 1679 0 1 1090
+box -14 -15 20 18
+use poly2m2  poly2m2_2
+timestamp 1607270276
+transform 1 0 1549 0 1 1090
+box -9 -26 24 29
+<< labels >>
+rlabel space 383 1100 393 1121 0 A4
+rlabel metal2 382 1005 392 1026 0 A3
+rlabel metal2 383 812 393 833 0 A2
+rlabel space 383 714 393 735 0 A1
+rlabel metal2 382 603 390 623 0 A0
+rlabel metal2 1653 1107 1728 1121 0 Vdd
 << end >>
