@@ -7,9 +7,11 @@ These cells can be used in the openLANE/openROAD toolchains in order
 to create GDSII files for fabrication.
 
 # PG (power/ground) and Interfacing
-Vdd: normal supply 1.8V (analog 1.8V)
-GND: reference 0
-Vinj:  run time: 1.8V, prog: 1.8V – 6.0V
+| *Net Name*  |     Description                    |
+|-----------|------------------------------------|
+| Vdd       | normal supply 1.8V (analog 1.8V)   |
+| GND       | reference 0                        |
+| Vinj      | run time: 1.8V, prog: 1.8V – 6.0V  |
 
 # Standard Cell Blocks:
 | Block Name            | size              | Description |
@@ -24,7 +26,7 @@ Vinj:  run time: 1.8V, prog: 1.8V – 6.0V
 | SWC4x1BiasCell        | 11.05um x 6.05um  |
 | FG transistors        |                   | 2x1 bare FG transistors
 
-#Cells In Progress:
+# Cells In Progress:
 | Block Name            | size              | Description |
 |-----------------------|-------------------|-------------|
 | larger DAC block      |                   | A DAC with >5-bit resolution |
