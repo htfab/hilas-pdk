@@ -33,16 +33,16 @@ rect 25 10 38 39
 << locali >>
 rect -8 -13 0 4
 rect 17 -13 25 4
-use sky130_hilas_horizpcell01  sky130_hilas_horizpcell01_0
-timestamp 1606750506
-transform 1 0 530 0 1 165
-box -289 47 -33 232
-use sky130_hilas_tuncap01  sky130_hilas_tuncap01_0
-timestamp 1606740587
-transform 1 0 1020 0 1 303
-box -1451 -400 -1278 -210
-use sky130_hilas_fgvaractorcapacitor  sky130_hilas_fgvaractorcapacitor_0
+use FGVaractorCapacitor  FGVaractorCapacitor_0
 timestamp 1606741561
 transform 1 0 500 0 1 614
 box -957 -395 -734 -209
+use TunCap01  TunCap01_0
+timestamp 1606740587
+transform 1 0 1020 0 1 303
+box -1451 -400 -1278 -210
+use horizPcell01  horizPcell01_0
+timestamp 1606750506
+transform 1 0 530 0 1 165
+box -289 47 -33 232
 << end >>

@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1606753832
+timestamp 1607392100
 << error_s >>
 rect -539 538 -533 544
 rect -434 538 -428 544
@@ -30,10 +30,16 @@ rect -119 369 -113 375
 rect -54 369 -48 375
 rect 52 369 58 375
 rect 117 369 123 375
+rect -770 361 -757 366
+rect -756 361 -743 365
+rect -770 358 -743 361
 rect -545 357 -539 363
 rect -428 357 -422 363
 rect 426 357 432 363
 rect 543 357 549 363
+rect 747 361 760 365
+rect 761 361 774 366
+rect 747 358 774 361
 rect -539 236 -533 242
 rect -434 236 -428 242
 rect 432 236 438 242
@@ -66,12 +72,12 @@ rect -545 56 -539 62
 rect -428 56 -422 62
 rect 426 56 432 62
 rect 543 56 549 62
-use sky130_hilas_cellattempt01  sky130_hilas_cellattempt01_0
-timestamp 1606753832
-transform 1 0 264 0 1 378
-box -264 -382 744 223
-use sky130_hilas_cellattempt01  sky130_hilas_cellattempt01_1
-timestamp 1606753832
+use cellAttempt01  cellAttempt01_1
+timestamp 1607392100
 transform -1 0 -260 0 1 378
+box -264 -382 744 223
+use cellAttempt01  cellAttempt01_0
+timestamp 1607392100
+transform 1 0 264 0 1 378
 box -264 -382 744 223
 << end >>
