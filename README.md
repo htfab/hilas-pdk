@@ -4,5 +4,5 @@ This repo contains a set of analog standard cells designed for the
 (formerly Cypress Semi.) foundry.
 
 Here is a map:
-![map](StandardCellMap_Dec9_2020.png)
+![map](cell_map.png)
 
