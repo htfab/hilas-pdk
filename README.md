@@ -11,7 +11,8 @@ to create GDSII files for fabrication.
 |-----------|------------------------------------|
 | `Vdd`     | normal supply 1.8V (analog 1.8V)   |
 | `GND`     | reference 0                        |
-| `Vinj`    | Tunnelling input for FG devices. (run time: 1.8V, programming: 1.8-6.0V) |
+| `Vinj`    | Supply for Injection for FG devices. (run time: 1.8V, programming: 1.8-6.0V) |
+| `Vtun`    | Tunnelling input for FG devices. (run time: 0 or 1.8V, programming: 11-12V) |
 
 # Standard Cell Blocks:
 | Block Name            | Width     | Height | Description |
