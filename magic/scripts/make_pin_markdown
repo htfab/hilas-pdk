@@ -20,11 +20,11 @@ def main():
                     default=DEFAULT_TARGETS)
     args = ap.parse_args()
 
-    tables = []
+    tables = [['# Cell Ports Summary\n']]
     for targ in args.magic_files:
         cn = Path(targ).stem
-        head = ['## {} - Ports'.format(cn)]
-        head.append('| {:<20} | {:<20} | {:<20} | {:<20} |'.format('Port Number', 'Label', 'Layer', 'attributes'))
+        head = ['___\n### {}\n'.format(cn)]
+        head.append('| {:<20} | {:<20} | {:<20} | {:<20} |'.format('Port Number', 'Label', 'Layer', 'Attributes'))
         head.append('|----------------------|----------------------|----------------------|----------------------|')
         rows = []
         with open(targ, 'r') as f:
@@ -33,11 +33,11 @@ def main():
         matches = sorted(list(set(matches)), key=lambda x: int(x[2]))
         for m in matches:
             rows.append('| {:<20} | {:<20} | {:<20} | {:<20} |'.format(m[2], m[1], m[0], ','.join(m[3].split())))
-        if rows:
-            tables.append(head + rows + ['\n'])
+        # if rows:
+        tables.append(head + rows + ['\n'])
 
     md = '\n'.join(['\n'.join(table) for table in tables])
-    print(md)
+    # print(md)
 
     with open(args.md_output, 'w') as f:
         f.write(md)
