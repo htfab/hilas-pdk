@@ -1,0 +1,78 @@
+magic
+tech sky130A
+timestamp 1607956796
+<< nmos >>
+rect 320 -94 360 -64
+rect 320 -157 360 -126
+<< ndiff >>
+rect 291 -70 320 -64
+rect 291 -87 296 -70
+rect 313 -87 320 -70
+rect 291 -94 320 -87
+rect 360 -70 391 -64
+rect 360 -87 367 -70
+rect 384 -87 391 -70
+rect 360 -94 391 -87
+rect 291 -133 320 -126
+rect 291 -150 297 -133
+rect 314 -150 320 -133
+rect 291 -157 320 -150
+rect 360 -133 390 -126
+rect 360 -150 366 -133
+rect 383 -150 390 -133
+rect 360 -157 390 -150
+<< ndiffc >>
+rect 296 -87 313 -70
+rect 367 -87 384 -70
+rect 297 -150 314 -133
+rect 366 -150 383 -133
+<< psubdiff >>
+rect 417 -134 440 -122
+rect 417 -151 420 -134
+rect 437 -151 440 -134
+rect 417 -163 440 -151
+<< psubdiffcont >>
+rect 420 -151 437 -134
+<< poly >>
+rect 257 -56 360 -40
+rect 320 -64 360 -56
+rect 320 -126 360 -94
+rect 320 -170 360 -157
+<< locali >>
+rect 257 -87 296 -70
+rect 313 -87 321 -70
+rect 359 -87 367 -70
+rect 384 -87 394 -70
+rect 257 -88 321 -87
+rect 412 -91 437 -71
+rect 297 -133 314 -125
+rect 363 -150 366 -133
+rect 383 -150 392 -133
+rect 420 -134 437 -91
+rect 297 -155 314 -150
+rect 420 -159 437 -151
+<< metal1 >>
+rect 346 -128 365 -53
+rect 394 -181 413 -29
+<< metal2 >>
+rect 257 -72 445 -52
+rect 257 -170 314 -150
+use sky130_hilas_li2m2  sky130_hilas_li2m2_3
+timestamp 1607089160
+transform 1 0 304 0 1 -155
+box -14 -15 20 18
+use sky130_hilas_m12m2  sky130_hilas_m12m2_3
+timestamp 1607949437
+transform 1 0 335 0 1 -68
+box -9 -10 23 22
+use sky130_hilas_li2m1  sky130_hilas_li2m1_5
+timestamp 1607179295
+transform 1 0 356 0 1 -148
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_1
+timestamp 1607179295
+transform 1 0 402 0 1 -86
+box -10 -8 13 21
+<< labels >>
+rlabel metal2 439 -72 445 -52 0 output
+<< end >>

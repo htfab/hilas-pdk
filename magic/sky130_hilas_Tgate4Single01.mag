@@ -1,0 +1,55 @@
+magic
+tech sky130A
+timestamp 1607957265
+<< metal1 >>
+rect 38 460 58 464
+rect 389 458 408 464
+rect 38 -141 58 -137
+rect 389 -141 408 -135
+<< metal2 >>
+rect -36 433 -31 453
+rect -36 335 -30 355
+rect 433 335 440 355
+rect -36 270 -30 290
+rect 433 270 440 290
+rect -36 172 -31 192
+rect -36 131 -31 151
+rect -36 33 -30 53
+rect 433 33 440 53
+rect -36 -32 -30 -12
+rect 433 -32 440 -12
+rect -36 -130 -31 -110
+use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_1
+timestamp 1607957016
+transform 1 0 227 0 1 40
+box -263 -181 213 -29
+use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_0
+timestamp 1607957016
+transform 1 0 227 0 -1 283
+box -263 -181 213 -29
+use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_3
+timestamp 1607957016
+transform 1 0 227 0 1 342
+box -263 -181 213 -29
+use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_2
+timestamp 1607957016
+transform 1 0 227 0 -1 -19
+box -263 -181 213 -29
+<< labels >>
+rlabel metal1 38 460 58 464 0 GND
+rlabel metal2 -36 335 -30 355 0 Select1
+rlabel metal2 -36 270 -30 290 0 Select2
+rlabel metal2 -36 33 -30 53 0 Select3
+rlabel metal2 -36 -32 -30 -12 0 Select4
+rlabel metal1 38 -141 58 -137 0 Vdd
+rlabel metal2 -36 433 -31 453 0 Input1_1
+rlabel metal2 -36 172 -31 192 0 Input1_2
+rlabel metal2 -36 131 -31 151 0 Input1_3
+rlabel metal2 -36 -130 -31 -110 0 Input1_4
+rlabel metal1 389 458 408 464 0 GND
+rlabel metal1 389 -141 408 -135 0 GND
+rlabel metal2 433 335 440 355 0 Output1
+rlabel metal2 433 270 440 290 0 Output2
+rlabel metal2 433 33 440 53 0 Output3
+rlabel metal2 433 -32 440 -12 0 Output4
+<< end >>
