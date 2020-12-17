@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1608079637
+timestamp 1607392100
 << error_s >>
 rect -539 538 -533 544
 rect -434 538 -428 544
@@ -30,10 +30,16 @@ rect -119 369 -113 375
 rect -54 369 -48 375
 rect 52 369 58 375
 rect 117 369 123 375
+rect -770 361 -757 366
+rect -756 361 -743 365
+rect -770 358 -743 361
 rect -545 357 -539 363
 rect -428 357 -422 363
 rect 426 357 432 363
 rect 543 357 549 363
+rect 747 361 760 365
+rect 761 361 774 366
+rect 747 358 774 361
 rect -539 236 -533 242
 rect -434 236 -428 242
 rect 432 236 438 242
@@ -66,55 +72,12 @@ rect -545 56 -539 62
 rect -428 56 -422 62
 rect 426 56 432 62
 rect 543 56 549 62
-<< metal1 >>
-rect -968 596 -952 601
-rect -475 591 -437 601
-rect -72 588 -32 601
-rect 36 591 76 601
-rect 441 591 479 601
-rect 875 596 891 601
-rect 912 596 931 601
-rect 956 596 972 601
-rect -968 -4 -952 2
-rect -475 -4 -437 5
-rect -72 -4 -32 8
-rect 36 -4 76 8
-rect 441 -4 479 11
-rect 956 -3 972 3
-use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_1
-timestamp 1608069483
+use cellAttempt01  cellAttempt01_1
+timestamp 1607392100
 transform -1 0 -260 0 1 378
 box -264 -382 744 223
-use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_0
-timestamp 1608069483
+use cellAttempt01  cellAttempt01_0
+timestamp 1607392100
 transform 1 0 264 0 1 378
 box -264 -382 744 223
-<< labels >>
-rlabel metal1 441 591 479 601 0 Gate2
-port 1 nsew analog default
-rlabel metal1 -72 -4 -32 8 0 Vtun
-port 2 nsew power default
-rlabel metal1 36 -4 76 8 0 Vtun
-port 2 nsew power default
-rlabel metal1 36 591 76 601 0 Vtun
-port 2 nsew power default
-rlabel metal1 -72 588 -32 601 0 Vtun
-port 2 nsew power default
-rlabel metal1 -475 591 -437 601 0 Gate1
-port 3 nsew analog default
-rlabel metal1 -475 -4 -437 5 0 Gate1
-port 3 nsew analog default
-rlabel metal1 -968 -4 -952 2 0 Vdd
-port 4 nsew power default
-rlabel metal1 -968 596 -952 601 0 Vdd
-port 4 nsew power default
-rlabel metal1 956 -3 972 3 0 Vdd
-port 4 nsew power default
-rlabel metal1 441 -4 479 11 0 Gate2
-port 1 nsew analog default
-rlabel metal1 875 596 891 601 0 Horiz2
-port 5 nsew analog default
-rlabel metal1 912 596 931 601 0 SelectGate2
-rlabel metal1 956 596 972 601 0 Vinj
-port 6 nsew power default
 << end >>

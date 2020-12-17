@@ -1,0 +1,75 @@
+magic
+tech sky130A
+timestamp 1607346141
+<< error_s >>
+rect -1415 672 -1409 678
+rect -1362 672 -1356 678
+rect -1421 622 -1415 628
+rect -1356 622 -1350 628
+rect -992 613 -986 619
+rect -887 613 -881 619
+rect -998 563 -992 569
+rect -881 563 -875 569
+rect -992 312 -986 318
+rect -887 312 -881 318
+rect -1415 258 -1409 264
+rect -1362 258 -1356 264
+rect -998 262 -992 268
+rect -881 262 -875 268
+rect -1421 208 -1415 214
+rect -1356 208 -1350 214
+<< nwell >>
+rect 192 727 319 745
+rect -328 571 -162 593
+rect -282 410 -254 434
+rect 191 140 319 159
+<< metal1 >>
+rect -416 737 -397 745
+rect -372 737 -344 745
+rect 123 731 157 745
+rect 190 730 217 745
+rect 123 140 157 159
+rect 190 140 217 161
+<< metal2 >>
+rect -130 718 -105 744
+rect -24 620 1 657
+rect -328 571 -162 593
+rect -21 535 0 564
+rect 304 474 319 496
+rect -126 451 -101 474
+rect -282 410 -254 434
+rect 304 392 319 414
+rect -177 327 0 347
+rect -334 278 -318 318
+rect -206 246 0 267
+rect -286 142 -260 167
+use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_0
+timestamp 1607345152
+transform 1 0 -484 0 1 580
+box 133 -440 320 165
+use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
+timestamp 1607345152
+transform 1 0 -328 0 -1 305
+box 133 -440 320 165
+use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
+timestamp 1607268356
+transform 1 0 164 0 1 181
+box -172 -22 155 550
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1607346141
+transform 1 0 -1077 0 1 522
+box -396 -382 757 223
+<< labels >>
+rlabel metal1 123 140 157 146 0 GND
+rlabel metal1 190 140 217 146 0 Vdd
+rlabel metal1 123 740 157 745 0 GND
+rlabel metal1 190 740 217 745 0 Vdd
+rlabel metal2 -282 410 -259 434 0 Vin+_amp1
+rlabel metal2 -126 451 -101 474 0 Vin+_amp2
+rlabel metal2 -286 142 -263 167 0 Vin-_Amp1
+rlabel metal2 -130 718 -105 744 0 Vin-_Amp2
+rlabel metal2 304 392 319 414 0 Vout_Amp1
+rlabel metal2 304 474 319 496 0 Vout_Amp2
+rlabel metal1 -416 737 -397 745 0 GateColSelect
+rlabel metal1 -372 737 -344 745 0 Vdd
+<< end >>
