@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1607347853
+timestamp 1608384750
 << error_s >>
 rect -1580 672 -1574 678
 rect -1527 672 -1521 678
@@ -42,6 +42,8 @@ rect -416 737 -397 745
 rect -372 737 -344 745
 rect -3 731 31 745
 rect 63 730 91 745
+rect -416 140 -397 145
+rect -372 140 -344 145
 rect -3 140 31 159
 rect 64 140 91 161
 << metal2 >>
@@ -61,8 +63,10 @@ rect -147 564 -127 565
 rect -147 531 -125 564
 rect -145 530 -125 531
 rect -252 451 -220 475
+rect 182 474 193 497
 rect -692 446 -667 450
 rect -692 382 -666 446
+rect 182 392 193 414
 rect -692 361 -279 382
 rect -300 347 -279 361
 rect -300 326 -113 347
@@ -70,31 +74,49 @@ rect -807 290 -522 312
 rect -700 262 -113 267
 rect -1137 246 -113 262
 rect -1137 240 -661 246
-use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1607346141
-transform 1 0 -1077 0 1 522
-box -396 -382 757 223
 use sky130_hilas_FGBiasWeakGate2x1cell  sky130_hilas_FGBiasWeakGate2x1cell_0
-timestamp 1607281816
+timestamp 1608384750
 transform -1 0 -1859 0 1 522
 box -396 -382 757 223
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1608384750
+transform 1 0 -1077 0 1 522
+box -396 -382 757 223
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
-timestamp 1607345152
+timestamp 1608384750
 transform 1 0 -454 0 -1 305
 box 133 -440 320 165
 use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
-timestamp 1607268356
+timestamp 1608069483
 transform 1 0 38 0 1 181
 box -172 -22 155 550
 << labels >>
 rlabel metal1 -416 737 -397 745 0 GateColSelect
-rlabel metal1 -372 737 -344 745 0 Vdd
+port 5 nsew analog default
 rlabel metal2 -1726 617 -1690 636 0 Vin+_Amp1
+port 2 nsew analog default
 rlabel space -1731 241 -1695 266 0 Vin-_Amp1
+port 1 nsew analog default
 rlabel metal1 -3 739 31 745 0 GND
+port 7 nsew analog default
 rlabel metal1 63 739 91 745 0 Vdd
+port 6 nsew analog default
 rlabel metal1 64 140 91 146 0 Vdd
+port 6 nsew power default
 rlabel metal1 -3 140 31 146 0 GND
+port 7 nsew ground default
 rlabel metal2 -252 451 -220 475 0 Vin+_Amp2
+port 3 nsew analog default
 rlabel metal2 -260 718 -229 742 1 Vin-_Amp2
+port 4 n analog default
+rlabel metal1 -372 737 -344 745 0 Vinj
+port 8 nsew power default
+rlabel metal1 -416 140 -397 145 0 GateColSelect
+port 5 nsew analog default
+rlabel metal1 -372 140 -344 145 0 Vinj
+port 8 nsew power default
+rlabel metal2 182 474 193 497 0 output1
+port 9 nsew analog default
+rlabel metal2 182 392 193 414 0 output2
+port 10 nsew analog default
 << end >>
