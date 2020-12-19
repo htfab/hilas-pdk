@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1607986851
+timestamp 1608245216
 << poly >>
 rect -326 160 -247 175
 rect -155 160 -76 175
@@ -48,14 +48,14 @@ use sky130_hilas_nFETmed  sky130_hilas_nFETmed_0
 timestamp 1607963611
 transform 1 0 -171 0 1 -99
 box -12 -44 70 228
-use sky130_hilas_poly2m2  sky130_hilas_poly2m2_0
-timestamp 1607270276
-transform 0 -1 -54 1 0 115
-box -9 -26 24 29
 use sky130_hilas_li2m2  sky130_hilas_li2m2_6
 timestamp 1607089160
 transform 1 0 -112 0 1 -108
 box -14 -15 20 18
+use sky130_hilas_poly2m2  sky130_hilas_poly2m2_0
+timestamp 1607270276
+transform 0 -1 -54 1 0 115
+box -9 -26 24 29
 use sky130_hilas_pFETmed  sky130_hilas_pFETmed_0
 timestamp 1607969308
 transform 1 0 -467 0 1 187
@@ -72,6 +72,10 @@ use sky130_hilas_li2m2  sky130_hilas_li2m2_3
 timestamp 1607089160
 transform 1 0 -296 0 1 324
 box -14 -15 20 18
+use sky130_hilas_li2m2  sky130_hilas_li2m2_0
+timestamp 1607089160
+transform 1 0 -227 0 1 325
+box -14 -15 20 18
 use sky130_hilas_pFETmed  sky130_hilas_pFETmed_1
 timestamp 1607969308
 transform 1 0 -349 0 1 187
@@ -80,29 +84,37 @@ use sky130_hilas_li2m2  sky130_hilas_li2m2_2
 timestamp 1607089160
 transform 1 0 -179 0 1 402
 box -14 -15 20 18
-use sky130_hilas_li2m2  sky130_hilas_li2m2_0
+use sky130_hilas_li2m2  sky130_hilas_li2m2_1
 timestamp 1607089160
-transform 1 0 -227 0 1 325
+transform 1 0 -108 0 1 408
 box -14 -15 20 18
 use sky130_hilas_poly2m2  sky130_hilas_poly2m2_1
 timestamp 1607270276
 transform 0 -1 -53 1 0 169
 box -9 -26 24 29
-use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1607089160
-transform 1 0 -108 0 1 408
-box -14 -15 20 18
 << labels >>
 rlabel metal2 -380 215 -371 237 0 pFET_Gate01
+port 3 nsew analog default
 rlabel metal2 -380 159 -372 180 0 pET_Gate02
+port 2 nsew analog default
 rlabel metal2 -380 119 -372 140 0 nFET_Gate02
+port 4 nsew analog default
 rlabel metal2 -380 62 -372 83 0 nFET_Gate01
+port 1 nsew analog default
 rlabel metal2 -37 400 -27 421 0 pFET_Drain2
+port 12 nsew analog default
 rlabel metal2 -37 317 -27 338 0 pFET_Drain01
+port 11 nsew analog default
 rlabel metal2 -380 314 -372 336 0 pFET_Source1
+port 5 nsew analog default
 rlabel metal2 -380 392 -372 414 0 pFET_Source2
+port 6 nsew analog default
 rlabel metal2 -380 -74 -373 -53 0 nFET_Source1
+port 8 nsew analog default
 rlabel metal2 -380 -119 -373 -97 0 nFET_Source2
+port 7 nsew analog default
 rlabel metal2 -34 -72 -27 -50 0 nFET_Drain1
+port 9 nsew analog default
 rlabel metal2 -34 -116 -27 -95 0 nFET_Drain2
+port 10 nsew analog default
 << end >>

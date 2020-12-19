@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1608069483
+timestamp 1608306354
 << error_s >>
 rect -338 150 -332 156
 rect -285 150 -279 156
@@ -89,10 +89,11 @@ rect -92 -135 -73 -127
 rect 11 -197 34 -193
 rect 467 -204 470 -187
 << metal1 >>
-rect -361 -381 -319 223
+rect -361 -382 -319 223
 rect -113 -382 -90 223
 rect 9 -382 32 223
 rect 661 222 680 223
+rect 661 -382 680 -377
 rect 705 -382 733 223
 << metal2 >>
 rect 484 173 516 175
@@ -101,8 +102,8 @@ rect 554 49 757 71
 rect 622 -98 740 -63
 rect 553 -226 757 -205
 rect 510 -315 526 -313
-rect -394 -320 526 -315
-rect -394 -330 514 -320
+rect -396 -320 526 -315
+rect -396 -330 514 -320
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
 timestamp 1608066871
 transform 1 0 1056 0 1 433
@@ -161,10 +162,28 @@ transform 1 0 538 0 1 60
 box -14 -15 20 18
 << labels >>
 rlabel metal1 -361 216 -319 223 0 Vtun
+port 1 nsew analog default
 rlabel metal1 -113 216 -90 223 0 GND
+port 2 nsew ground default
 rlabel metal1 9 215 32 223 0 gate_control
+port 3 nsew analog default
 rlabel metal1 705 216 733 223 0 Vinj
+port 7 nsew power default
 rlabel metal2 749 49 757 71 0 output1
+port 8 nsew analog default
 rlabel metal2 750 -226 757 -205 0 output2
+port 9 nsew analog default
 rlabel space 661 219 680 223 0 gateColSelect
+rlabel metal1 -361 -382 -319 -370 0 Vtun
+port 1 nsew analog default
+rlabel metal1 9 -382 32 -376 0 Gate_control
+port 4 nsew analog default
+rlabel metal1 -113 -382 -90 -376 0 GND
+port 2 nsew ground default
+rlabel metal2 -396 155 -389 173 0 drain1
+port 5 nsew analog default
+rlabel metal2 -396 -330 -390 -315 0 drain4
+port 6 nsew analog default
+rlabel metal1 661 -382 680 -377 0 GateColSelect
+rlabel metal1 705 -382 733 -377 0 Vinj
 << end >>

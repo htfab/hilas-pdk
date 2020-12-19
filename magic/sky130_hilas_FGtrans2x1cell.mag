@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1608069483
+timestamp 1608306354
 << error_s >>
 rect -338 150 -332 156
 rect -285 150 -279 156
@@ -20,6 +20,7 @@ rect -344 -314 -338 -308
 rect -279 -314 -273 -308
 << nwell >>
 rect -337 -242 -281 0
+rect -361 -381 -319 -374
 << psubdiff >>
 rect -95 -42 -70 121
 rect -95 -59 -92 -42
@@ -124,7 +125,7 @@ rect 280 -255 297 -238
 rect 297 -255 299 -238
 rect 278 -257 299 -255
 << metal1 >>
-rect -361 -381 -319 223
+rect -361 -382 -319 223
 rect -113 -382 -90 223
 rect 279 -230 297 223
 rect 274 -236 303 -230
@@ -133,22 +134,28 @@ rect 299 -257 303 -236
 rect 274 -264 303 -257
 rect 279 -382 297 -264
 rect 384 -382 405 223
-rect 427 -381 446 223
-rect 472 -56 493 222
+rect 427 -382 446 223
+rect 472 -56 493 223
+rect 661 217 680 223
+rect 705 218 721 223
 rect 621 -101 645 -59
 rect 472 -332 491 -107
 rect 522 -332 523 -331
-rect 469 -381 492 -332
+rect 469 -382 492 -332
+rect 661 -382 680 -377
+rect 705 -382 721 -377
 << metal2 >>
 rect 484 173 516 175
 rect -395 155 516 173
-rect -395 0 269 19
+rect 749 155 757 173
+rect -395 0 576 19
 rect -395 -73 621 -69
 rect -395 -92 622 -73
-rect -395 -186 270 -167
+rect -395 -186 577 -167
 rect 510 -315 526 -313
 rect -395 -320 526 -315
 rect -395 -330 514 -320
+rect 749 -332 757 -314
 use sky130_hilas_FGVaractorCapacitor02  sky130_hilas_FGVaractorCapacitor02_0
 timestamp 1606868103
 transform -1 0 -752 0 1 62
@@ -231,18 +238,49 @@ transform 1 0 628 0 1 -85
 box -9 -10 23 22
 << labels >>
 rlabel metal1 -361 216 -319 223 0 Vtun
+port 11 nsew analog default
 rlabel metal1 -113 216 -90 223 0 GND
+port 10 nsew ground default
 rlabel space 705 217 721 222 0 Vinj
+port 2 nsew analog default
 rlabel metal2 -395 -92 -389 -69 0 Vs
+port 14 nsew analog default
 rlabel metal2 -395 0 -389 19 0 drain1
+port 3 nsew analog default
 flabel metal2 -395 -186 -389 -167 3 FreeMono 1 0 0 0 drain
+port 13 e analog default
 rlabel metal2 -395 -330 -391 -315 3 FGdrainProgram2
+port 12 e analog default
 rlabel metal2 -395 155 -389 173 0 FGdrainProgram1
+port 15 nsew analog default
 rlabel metal1 427 217 446 223 0 ProgGate
+port 9 nsew analog default
 rlabel metal1 469 -381 492 -357 0 Gate1
+port 7 nsew analog default
 rlabel metal1 279 -382 297 -375 0 run
+port 6 nsew analog default
 rlabel metal1 384 -382 405 -375 0 prog
+port 5 nsew analog default
 rlabel metal1 279 216 297 223 0 run
+port 6 nsew analog default
 rlabel metal1 384 217 405 223 0 prog
+port 5 nsew analog default
 rlabel metal1 472 191 493 222 0 Gate2
+port 8 nsew analog default
+rlabel metal1 661 217 680 223 0 GateSelect
+port 1 nsew analog default
+rlabel metal1 661 -382 680 -377 0 GateSelect
+port 1 nsew analog default
+rlabel metal1 705 -382 721 -377 0 Vinj
+port 2 nsew analog default
+rlabel metal2 749 155 757 173 0 drain1
+port 3 nsew analog default
+rlabel metal2 749 -332 757 -314 0 drain4
+port 4 nsew analog default
+rlabel metal1 427 -381 446 -376 0 ProgGate
+port 9 nsew analog default
+rlabel metal1 -113 -382 -90 -375 0 GND
+port 10 nsew ground default
+rlabel metal1 -361 -381 -319 -374 0 Vtun
+port 11 nsew analog default
 << end >>

@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1608078189
+timestamp 1608249223
 << error_s >>
 rect -872 485 -866 491
 rect -767 485 -761 491
@@ -122,35 +122,35 @@ rect -170 22 -119 52
 rect -149 -2 -119 22
 rect 2064 -2 2094 79
 rect -149 -32 2094 -2
-use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1607949437
-transform 1 0 -428 0 1 524
-box -9 -10 23 22
-use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_0
-timestamp 1608069483
-transform 1 0 -1040 0 1 325
-box -264 -382 744 223
-use sky130_hilas_m22m4  sky130_hilas_m22m4_3
-timestamp 1607701799
-transform 1 0 -197 0 1 52
-box -36 -36 43 39
-use sky130_hilas_m22m4  sky130_hilas_m22m4_2
-timestamp 1607701799
-transform 1 0 -306 0 1 139
-box -36 -36 43 39
 use sky130_hilas_CapModule01  sky130_hilas_CapModule01_0
 array 0 7 284 0 1 286
 timestamp 1607800460
 transform 1 0 390 0 1 205
 box -443 -245 -159 41
-use sky130_hilas_m22m4  sky130_hilas_m22m4_1
-timestamp 1607701799
-transform 1 0 -302 0 1 348
-box -36 -36 43 39
 use sky130_hilas_m22m4  sky130_hilas_m22m4_0
 timestamp 1607701799
 transform 1 0 -160 0 1 413
 box -36 -36 43 39
+use sky130_hilas_m22m4  sky130_hilas_m22m4_1
+timestamp 1607701799
+transform 1 0 -302 0 1 348
+box -36 -36 43 39
+use sky130_hilas_m22m4  sky130_hilas_m22m4_2
+timestamp 1607701799
+transform 1 0 -306 0 1 139
+box -36 -36 43 39
+use sky130_hilas_m22m4  sky130_hilas_m22m4_3
+timestamp 1607701799
+transform 1 0 -197 0 1 52
+box -36 -36 43 39
+use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_0
+timestamp 1608069483
+transform 1 0 -1040 0 1 325
+box -264 -382 744 223
+use sky130_hilas_m12m2  sky130_hilas_m12m2_0
+timestamp 1607949437
+transform 1 0 -428 0 1 524
+box -9 -10 23 22
 << labels >>
 rlabel metal2 2354 222 2366 263 0 CapTerminal2
 port 1 nsew analog default
@@ -161,6 +161,7 @@ port 4 nsew
 rlabel metal1 -348 543 -332 548 0 Vinj
 port 3 nsew power default
 rlabel metal1 -862 535 -825 548 0 Gate
+port 6 nsew analog default
 rlabel metal1 -1268 534 -1228 548 0 Vtun
 port 5 nsew
 rlabel metal1 -1268 -57 -1229 -45 0 Vtun

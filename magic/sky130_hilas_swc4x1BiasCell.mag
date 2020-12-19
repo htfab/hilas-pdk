@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1607392100
+timestamp 1608303107
 << error_s >>
 rect 168 160 174 166
 rect 273 160 279 166
@@ -35,10 +35,13 @@ rect -147 -315 -141 -309
 rect 162 -322 168 -316
 rect 279 -322 285 -316
 << nwell >>
+rect 112 220 335 223
+rect -264 37 -263 160
 rect 488 -21 497 -13
 rect 632 -72 667 -71
 rect 632 -88 649 -72
 rect 666 -88 667 -72
+rect 112 -382 335 -380
 << poly >>
 rect 319 147 489 151
 rect -107 114 130 138
@@ -58,33 +61,52 @@ rect 623 -88 632 -71
 << viali >>
 rect 649 -88 667 -71
 << metal1 >>
-rect -228 -382 -188 217
+rect -228 -382 -188 223
+rect 177 213 215 223
+rect 611 216 627 223
+rect 648 216 667 223
+rect 692 216 708 223
 rect 654 -68 667 -66
 rect 646 -71 670 -68
 rect 646 -88 649 -71
 rect 667 -88 670 -71
 rect 646 -91 670 -88
 rect 656 -95 667 -91
+rect 177 -382 215 -372
+rect 611 -381 627 -374
+rect 648 -381 667 -374
+rect 692 -381 708 -374
 << metal2 >>
 rect 487 166 497 173
 rect 487 155 500 166
+rect 735 155 744 173
 rect -264 112 540 130
-rect -264 24 497 30
-rect -264 12 500 24
+rect 735 112 744 130
+rect -264 111 -249 112
+rect -266 30 -252 32
+rect -266 24 497 30
+rect -266 12 500 24
+rect 736 12 745 30
 rect 488 -20 497 -17
 rect 488 -31 500 -20
+rect 735 -31 744 -13
 rect 485 -146 500 -129
-rect -262 -188 500 -171
-rect -262 -286 500 -269
+rect 734 -146 745 -128
+rect -263 -187 500 -171
+rect -262 -188 500 -187
+rect 733 -189 744 -171
+rect -263 -286 500 -269
 rect -184 -295 -30 -286
+rect 733 -288 744 -270
 rect 487 -330 500 -313
-use sky130_hilas_TunCap01  sky130_hilas_TunCap01_0
-timestamp 1606740587
-transform 1 0 1188 0 1 135
-box -1451 -400 -1278 -210
+rect 733 -331 744 -313
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
-timestamp 1606740587
+timestamp 1608066871
 transform 1 0 1188 0 1 18
+box -1451 -400 -1278 -210
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_0
+timestamp 1608066871
+transform 1 0 1188 0 1 135
 box -1451 -400 -1278 -210
 use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_0
 timestamp 1606741561
@@ -102,14 +124,14 @@ use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_2
 timestamp 1607386385
 transform 1 0 777 0 -1 -31
 box -289 47 -33 232
-use sky130_hilas_TunCap01  sky130_hilas_TunCap01_2
-timestamp 1606740587
-transform 1 0 1188 0 1 324
-box -1451 -400 -1278 -210
 use sky130_hilas_wellContact  sky130_hilas_wellContact_1
 timestamp 1606753443
 transform 1 0 1185 0 1 293
 box -1449 -441 -1275 -255
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_2
+timestamp 1608066871
+transform 1 0 1188 0 1 324
+box -1451 -400 -1278 -210
 use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_2
 timestamp 1606741561
 transform 1 0 1069 0 1 315
@@ -123,7 +145,7 @@ timestamp 1607386385
 transform 1 0 777 0 1 -128
 box -289 47 -33 232
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
-timestamp 1606740587
+timestamp 1608066871
 transform 1 0 1188 0 1 433
 box -1451 -400 -1278 -210
 use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_3
@@ -135,9 +157,47 @@ timestamp 1607386385
 transform 1 0 777 0 -1 270
 box -289 47 -33 232
 << labels >>
-rlabel space -264 111 -252 130 0 bias1
-rlabel space -266 13 -254 32 0 bias2
-rlabel space -263 -187 -251 -171 0 bias3
-rlabel space -361 -142 -310 -89 0 bias4
-rlabel space -263 -285 -249 -270 0 bias4
+rlabel metal2 -264 111 -252 130 0 bias1
+port 1 nsew analog default
+rlabel metal2 -266 13 -254 32 0 bias2
+port 2 nsew analog default
+rlabel metal2 -263 -187 -251 -171 0 bias3
+port 3 nsew analog default
+rlabel metal2 -263 -285 -249 -270 0 bias4
+port 4 nsew analog default
+rlabel metal1 -228 209 -188 223 0 Vtun
+port 5 nsew analog default
+rlabel metal1 -228 -382 -188 -372 0 Vtun
+port 5 nsew analog default
+rlabel metal1 177 -382 215 -372 0 Gate
+port 6 nsew analog default
+rlabel metal1 177 213 215 223 0 Gate
+port 6 nsew analog default
+rlabel metal1 692 216 708 223 0 Vinj
+port 7 nsew power default
+rlabel metal1 611 216 627 223 0 Vdd
+port 8 nsew power default
+rlabel metal1 648 216 667 223 0 GateSelect
+rlabel metal1 692 -381 708 -374 0 Vinj
+port 7 nsew power default
+rlabel metal1 611 -381 627 -374 0 Vdd
+port 8 nsew power default
+rlabel metal1 648 -381 667 -374 0 GateSelect
+port 9 nsew analog default
+rlabel metal2 735 155 744 173 0 drain1
+port 10 nsew analog default
+rlabel metal2 735 112 744 130 0 Horiz1
+port 11 nsew analog default
+rlabel metal2 735 -31 744 -13 0 drain2
+port 13 nsew
+rlabel metal2 736 12 745 30 0 Horiz2
+port 12 nsew analog default
+rlabel metal2 734 -146 745 -128 0 drain3
+port 14 nsew analog default
+rlabel metal2 733 -189 744 -171 0 Horiz3
+port 15 nsew analog default
+rlabel metal2 733 -288 744 -270 0 Horiz4
+port 16 nsew analog default
+rlabel metal2 733 -331 744 -313 0 drain4
+port 17 nsew analog default
 << end >>

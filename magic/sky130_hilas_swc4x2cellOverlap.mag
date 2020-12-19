@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1607392100
+timestamp 1608301303
 << error_s >>
 rect -678 1300 -649 1316
 rect -599 1300 -570 1316
@@ -145,9 +145,6 @@ rect 365 1119 366 1120
 rect 393 1119 394 1120
 rect 444 1119 445 1120
 rect 472 1119 473 1120
-rect -767 1093 -754 1098
-rect -753 1093 -740 1097
-rect -767 1090 -740 1093
 rect -728 1090 -711 1119
 rect -679 1118 -648 1119
 rect -600 1118 -569 1119
@@ -216,9 +213,6 @@ rect 285 1090 316 1091
 rect 364 1090 395 1091
 rect 443 1090 474 1091
 rect 506 1090 523 1119
-rect 535 1093 548 1097
-rect 549 1093 562 1098
-rect 535 1090 562 1093
 rect 207 1089 208 1090
 rect 235 1089 236 1090
 rect 286 1089 287 1090
@@ -473,12 +467,120 @@ rect 207 746 236 761
 rect 286 746 315 761
 rect 365 746 394 761
 rect 444 746 473 761
-use sky130_hilas_swc4x1cellOverlap2  sky130_hilas_swc4x1cellOverlap2_1
-timestamp 1607392100
-transform -1 0 -257 0 1 1110
-box -191 -382 744 223
+<< metal1 >>
+rect -965 1327 -949 1333
+rect -924 1327 -905 1333
+rect -884 1327 -868 1333
+rect -965 729 -949 736
+rect -924 729 -905 736
+rect -884 729 -868 736
+rect -557 728 -532 1333
+rect -196 728 -166 1333
+rect -38 728 -8 1333
+rect 328 728 352 1333
+rect 663 1326 679 1333
+rect 700 1326 719 1333
+rect 744 1326 760 1333
+rect 663 729 679 736
+rect 700 729 719 736
+rect 744 729 760 736
+<< metal2 >>
+rect -1001 1265 -993 1283
+rect 785 1265 796 1283
+rect -1001 1222 -993 1240
+rect 786 1222 797 1240
+rect -1001 1122 -993 1140
+rect 786 1122 797 1140
+rect -1001 1079 -993 1097
+rect -761 1089 -749 1097
+rect 548 1083 560 1097
+rect 786 1079 797 1097
+rect -1001 964 -994 982
+rect 785 964 796 982
+rect -1001 921 -994 939
+rect 785 921 796 939
+rect -1001 822 -994 840
+rect 785 822 796 840
+rect -1001 779 -994 797
+rect 785 779 796 797
 use sky130_hilas_swc4x1cellOverlap2  sky130_hilas_swc4x1cellOverlap2_0
 timestamp 1607392100
 transform 1 0 52 0 1 1110
 box -191 -382 744 223
+use sky130_hilas_swc4x1cellOverlap2  sky130_hilas_swc4x1cellOverlap2_1
+timestamp 1607392100
+transform -1 0 -257 0 1 1110
+box -191 -382 744 223
+<< labels >>
+rlabel metal1 -884 1327 -868 1333 0 Vert1
+port 1 nsew analog default
+rlabel metal1 -965 1327 -949 1333 0 Vinj
+port 10 nsew
+rlabel metal1 -924 1327 -905 1333 0 GateSelect1
+port 11 nsew analog default
+rlabel metal2 -1001 1265 -993 1283 0 drain1
+port 3 nsew analog default
+rlabel metal2 -1001 1222 -993 1240 0 Horiz1
+port 2 nsew analog default
+rlabel metal2 -1001 1122 -993 1140 0 Horiz2
+port 4 nsew analog default
+rlabel metal2 -1001 1079 -993 1097 0 drain2
+port 5 nsew analog default
+rlabel metal2 -1001 964 -994 982 0 drain3
+port 6 nsew analog default
+rlabel metal2 -1001 921 -994 939 0 Horiz3
+port 7 nsew analog default
+rlabel metal2 -1001 822 -994 840 0 Horiz4
+port 8 nsew analog default
+rlabel metal2 -1001 779 -994 797 0 drain4
+port 9 nsew analog default
+rlabel metal1 -965 729 -949 736 0 Vinj
+port 10 nsew power default
+rlabel metal1 -884 729 -868 736 0 Vert1
+port 1 nsew analog default
+rlabel metal1 -924 729 -905 736 0 GateSelect1
+port 11 nsew analog default
+rlabel metal1 744 729 760 736 0 Vinj
+port 10 nsew power default
+rlabel metal1 663 1326 679 1333 0 Vert2
+port 12 nsew analog default
+rlabel metal1 700 1326 719 1333 0 GateSelect2
+port 13 nsew analog default
+rlabel metal1 744 1326 760 1333 0 Vinj
+port 10 nsew power default
+rlabel metal1 663 729 679 736 0 Vert2
+port 12 nsew analog default
+rlabel metal1 700 729 719 736 0 GateSelect2
+port 13 nsew analog default
+rlabel metal2 785 1265 796 1283 0 drain1
+port 3 nsew analog default
+rlabel metal2 786 1222 797 1240 0 Horiz1
+port 2 nsew analog default
+rlabel metal2 786 1122 797 1140 0 Horiz2
+port 4 nsew analog default
+rlabel metal2 786 1079 797 1097 0 drain2
+port 5 nsew analog default
+rlabel metal2 785 964 796 982 0 drain3
+port 6 nsew analog default
+rlabel metal2 785 921 796 939 0 Horiz3
+port 7 nsew analog default
+rlabel metal2 785 822 796 840 0 Horiz4
+port 8 nsew analog default
+rlabel metal2 785 779 796 797 0 drain
+port 14 nsew analog default
+rlabel metal1 328 1328 352 1333 0 Gate2
+port 15 nsew analog default
+rlabel metal1 328 728 352 734 0 Gate2
+port 15 nsew analog default
+rlabel metal1 -557 1327 -532 1333 0 Gate1
+port 16 nsew analog default
+rlabel metal1 -557 728 -532 734 0 Gate1
+port 16 nsew analog default
+rlabel metal1 -196 1325 -166 1333 0 Vtun
+port 17 nsew analog default
+rlabel metal1 -38 1325 -8 1333 0 Vtun
+rlabel metal1 -196 728 -166 736 0 Vtun
+port 17 nsew analog default
+rlabel metal1 -38 728 -8 736 0 Vtun
+port 17 nsew analog default
 << end >>

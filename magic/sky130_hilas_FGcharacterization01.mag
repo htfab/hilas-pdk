@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1608069483
+timestamp 1608304092
 << error_s >>
 rect 52 825 81 841
 rect 131 825 160 841
@@ -620,7 +620,7 @@ rect 1710 458 1727 475
 rect 1857 436 1874 453
 rect 1998 436 2015 453
 << metal1 >>
-rect -884 775 -858 863
+rect -884 775 -858 864
 rect -414 739 -387 864
 rect 173 823 197 864
 rect 1705 837 1734 840
@@ -672,7 +672,7 @@ rect 1700 458 1710 475
 rect 1727 458 1733 475
 rect 1700 455 1733 458
 rect 1854 453 1877 548
-rect 174 260 198 447
+rect 174 259 198 447
 rect 1854 436 1857 453
 rect 1874 436 1877 453
 rect 1854 430 1877 436
@@ -683,7 +683,7 @@ rect 1995 453 2018 548
 rect 1995 436 1998 453
 rect 2015 436 2018 453
 rect 1995 430 2018 436
-rect 1505 261 1534 365
+rect 1505 259 1534 365
 << metal2 >>
 rect 1704 817 1993 841
 rect 351 718 1816 731
@@ -766,121 +766,133 @@ use sky130_hilas_li2m2  sky130_hilas_li2m2_9
 timestamp 1607089160
 transform 1 0 1706 0 1 298
 box -14 -15 20 18
-use sky130_hilas_li2m2  sky130_hilas_li2m2_6
+use sky130_hilas_li2m2  sky130_hilas_li2m2_4
 timestamp 1607089160
-transform 1 0 1851 0 1 299
+transform 1 0 1792 0 1 359
 box -14 -15 20 18
 use sky130_hilas_li2m2  sky130_hilas_li2m2_5
 timestamp 1607089160
 transform 1 0 1777 0 1 299
 box -14 -15 20 18
-use sky130_hilas_li2m2  sky130_hilas_li2m2_4
+use sky130_hilas_li2m2  sky130_hilas_li2m2_6
 timestamp 1607089160
-transform 1 0 1792 0 1 359
-box -14 -15 20 18
-use sky130_hilas_li2m2  sky130_hilas_li2m2_8
-timestamp 1607089160
-transform 1 0 2014 0 1 299
-box -14 -15 20 18
-use sky130_hilas_li2m2  sky130_hilas_li2m2_7
-timestamp 1607089160
-transform 1 0 1921 0 1 299
+transform 1 0 1851 0 1 299
 box -14 -15 20 18
 use sky130_hilas_li2m2  sky130_hilas_li2m2_3
 timestamp 1607089160
 transform 1 0 1935 0 1 357
 box -14 -15 20 18
-use sky130_hilas_poly2li  sky130_hilas_poly2li_5
-timestamp 1607178257
-transform -1 0 1805 0 -1 480
-box -9 -14 18 19
-use sky130_hilas_li2m2  sky130_hilas_li2m2_10
+use sky130_hilas_li2m2  sky130_hilas_li2m2_7
 timestamp 1607089160
-transform -1 0 1795 0 -1 479
+transform 1 0 1921 0 1 299
+box -14 -15 20 18
+use sky130_hilas_li2m2  sky130_hilas_li2m2_8
+timestamp 1607089160
+transform 1 0 2014 0 1 299
 box -14 -15 20 18
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
 timestamp 1607179295
 transform 1 0 1791 0 1 524
 box -10 -8 13 21
-use sky130_hilas_m12m2  sky130_hilas_m12m2_9
-timestamp 1607949437
-transform 1 0 2000 0 1 497
-box -9 -10 23 22
+use sky130_hilas_li2m2  sky130_hilas_li2m2_10
+timestamp 1607089160
+transform -1 0 1795 0 -1 479
+box -14 -15 20 18
+use sky130_hilas_poly2li  sky130_hilas_poly2li_5
+timestamp 1607178257
+transform -1 0 1805 0 -1 480
+box -9 -14 18 19
 use sky130_hilas_poly2li  sky130_hilas_poly2li_3
 timestamp 1607178257
 transform 1 0 1921 0 1 440
 box -9 -14 18 19
-use sky130_hilas_poly2m2  sky130_hilas_poly2m2_0
-timestamp 1607270276
-transform 1 0 1743 0 1 666
-box -9 -26 24 29
+use sky130_hilas_m12m2  sky130_hilas_m12m2_9
+timestamp 1607949437
+transform 1 0 2000 0 1 497
+box -9 -10 23 22
 use sky130_hilas_nDiffThOxContact  sky130_hilas_nDiffThOxContact_3
 timestamp 1608039004
 transform 1 0 1712 0 1 580
 box -26 13 41 42
-use sky130_hilas_m12m2  sky130_hilas_m12m2_6
+use sky130_hilas_poly2m2  sky130_hilas_poly2m2_0
+timestamp 1607270276
+transform 1 0 1743 0 1 666
+box -9 -26 24 29
+use sky130_hilas_m12m2  sky130_hilas_m12m2_0
 timestamp 1607949437
-transform 1 0 1859 0 1 720
+transform 1 0 1859 0 1 676
 box -9 -10 23 22
 use sky130_hilas_m12m2  sky130_hilas_m12m2_4
 timestamp 1607949437
 transform 1 0 1857 0 1 634
 box -9 -10 23 22
-use sky130_hilas_m12m2  sky130_hilas_m12m2_0
+use sky130_hilas_m12m2  sky130_hilas_m12m2_6
 timestamp 1607949437
-transform 1 0 1859 0 1 676
+transform 1 0 1859 0 1 720
 box -9 -10 23 22
-use sky130_hilas_m12m2  sky130_hilas_m12m2_3
+use sky130_hilas_li2m2  sky130_hilas_li2m2_1
+timestamp 1607089160
+transform 1 0 1933 0 1 637
+box -14 -15 20 18
+use sky130_hilas_li2m2  sky130_hilas_li2m2_2
+timestamp 1607089160
+transform 1 0 1933 0 1 721
+box -14 -15 20 18
+use sky130_hilas_m12m2  sky130_hilas_m12m2_1
 timestamp 1607949437
-transform 1 0 2000 0 1 632
+transform 1 0 2000 0 1 674
 box -9 -10 23 22
 use sky130_hilas_m12m2  sky130_hilas_m12m2_2
 timestamp 1607949437
 transform 1 0 2000 0 1 719
 box -9 -10 23 22
-use sky130_hilas_m12m2  sky130_hilas_m12m2_1
+use sky130_hilas_m12m2  sky130_hilas_m12m2_3
 timestamp 1607949437
-transform 1 0 2000 0 1 674
-box -9 -10 23 22
-use sky130_hilas_li2m2  sky130_hilas_li2m2_2
-timestamp 1607089160
-transform 1 0 1933 0 1 721
-box -14 -15 20 18
-use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1607089160
-transform 1 0 1933 0 1 637
-box -14 -15 20 18
-use sky130_hilas_m12m2  sky130_hilas_m12m2_10
-timestamp 1607949437
-transform 1 0 1713 0 1 827
+transform 1 0 2000 0 1 632
 box -9 -10 23 22
 use sky130_hilas_nDiffThOxContact  sky130_hilas_nDiffThOxContact_0
 timestamp 1608039004
 transform 1 0 1712 0 1 723
 box -26 13 41 42
-use sky130_hilas_m12m2  sky130_hilas_m12m2_7
+use sky130_hilas_m12m2  sky130_hilas_m12m2_10
 timestamp 1607949437
-transform 1 0 1999 0 1 822
+transform 1 0 1713 0 1 827
 box -9 -10 23 22
-use sky130_hilas_poly2li  sky130_hilas_poly2li_4
-timestamp 1607178257
-transform 1 0 2060 0 1 828
-box -9 -14 18 19
 use sky130_hilas_poly2li  sky130_hilas_poly2li_1
 timestamp 1607178257
 transform 1 0 1920 0 1 828
 box -9 -14 18 19
+use sky130_hilas_poly2li  sky130_hilas_poly2li_4
+timestamp 1607178257
+transform 1 0 2060 0 1 828
+box -9 -14 18 19
+use sky130_hilas_m12m2  sky130_hilas_m12m2_7
+timestamp 1607949437
+transform 1 0 1999 0 1 822
+box -9 -10 23 22
 << labels >>
 rlabel metal2 2077 305 2083 354 0 GND
+port 8 nsew ground default
 rlabel metal2 2077 487 2083 519 0 Output
+port 10 nsew analog default
 rlabel metal2 2076 642 2083 718 0 Vinj
+port 9 nsew power default
 rlabel metal2 2077 448 2083 471 0 AmplifierBias
+port 12 nsew analog default
 rlabel metal2 2077 535 2083 558 0 Vref
+port 11 nsew analog default
 rlabel metal1 1505 261 1534 266 0 LargeCapacitor
+port 7 nsew analog default
 rlabel metal1 173 858 197 864 0 overlapCap01
-rlabel space 174 259 198 266 0 overlapCap02
+port 3 nsew analog default
+rlabel metal1 174 259 198 266 0 overlapCap02
+port 6 nsew analog default
 rlabel metal1 -415 259 -384 266 0 VaractorCap02
+port 5 nsew analog default
 rlabel metal1 -414 855 -387 864 0 VaractorCap01
-rlabel space -884 857 -858 864 0 VtunVaractor01
+port 2 nsew analog default
 rlabel space -806 259 -780 269 0 VtunOverlap01
+port 4 nsew analog default
+rlabel metal1 -884 857 -858 864 0 VtunVaractor01
+port 1 nsew analog default
 << end >>

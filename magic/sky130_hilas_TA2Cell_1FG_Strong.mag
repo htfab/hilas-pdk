@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1607365263
+timestamp 1608340051
 << error_s >>
 rect -1581 672 -1575 678
 rect -1528 672 -1522 678
@@ -73,22 +73,22 @@ rect -1137 262 -1115 277
 rect -700 262 -113 267
 rect -1137 246 -113 262
 rect -1137 240 -661 246
-use sky130_hilas_FGtrans2x1cell  sky130_hilas_FGtrans2x1cell_0
-timestamp 1607356355
-transform -1 0 -1860 0 1 522
-box -395 -382 757 223
-use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1607346141
-transform 1 0 -1077 0 1 522
-box -396 -382 757 223
-use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
-timestamp 1607345152
-transform 1 0 -454 0 -1 305
-box 133 -440 320 165
 use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
-timestamp 1607268356
+timestamp 1608069483
 transform 1 0 38 0 1 181
 box -172 -22 155 550
+use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
+timestamp 1608069483
+transform 1 0 -454 0 -1 305
+box 133 -440 320 165
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1608306354
+transform 1 0 -1077 0 1 522
+box -396 -382 757 223
+use sky130_hilas_FGtrans2x1cell  sky130_hilas_FGtrans2x1cell_0
+timestamp 1608306354
+transform -1 0 -1860 0 1 522
+box -395 -382 757 223
 << labels >>
 rlabel metal1 -416 737 -397 745 0 GateColSelect
 rlabel metal1 -372 737 -344 745 0 Vdd

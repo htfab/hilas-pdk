@@ -22,18 +22,18 @@ rect 1459 221 1566 222
 rect 1730 110 1793 222
 rect 1730 80 1945 110
 rect 1763 79 1945 80
-use sky130_hilas_m22m4  sky130_hilas_m22m4_1
-timestamp 1607701799
-transform 1 0 2401 0 1 243
-box -36 -36 43 39
-use sky130_hilas_m22m4  sky130_hilas_m22m4_0
-timestamp 1607701799
-transform 1 0 1452 0 1 242
-box -36 -36 43 39
 use sky130_hilas_CapModule02  sky130_hilas_CapModule02_0
 timestamp 1607802006
 transform 1 0 2003 0 1 199
 box -443 -247 277 336
+use sky130_hilas_m22m4  sky130_hilas_m22m4_0
+timestamp 1607701799
+transform 1 0 1452 0 1 242
+box -36 -36 43 39
+use sky130_hilas_m22m4  sky130_hilas_m22m4_1
+timestamp 1607701799
+transform 1 0 2401 0 1 243
+box -36 -36 43 39
 << labels >>
 rlabel metal2 1416 232 1423 260 0 CapTerm01
 port 2 nsew analog default
