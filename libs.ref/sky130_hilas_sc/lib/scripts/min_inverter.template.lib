@@ -1,0 +1,47 @@
+{% if cell_name %}
+
+cell ("{{ cell_name }}") {
+    {% if leakage_power %}
+    leakage_power () {
+        value : {{ leakage_power }};
+    }
+    {% endif %}
+    {% if area %}
+    area : {{ area }};
+    {% endif %}
+    cell_footprint : "{{ cell_name }}";
+    {% if cell_leakage_power %}
+    cell_leakage_power : {{ cell_leakage_power }};
+    {% endif %}
+    driver_waveform_fall : "ramp";
+    driver_waveform_rise : "ramp";
+
+    {% for pg_pin in pg_pins %}
+    pg_pin ("{{ pg_pin.name }}") {
+        pg_type : "{{ pg_pin.pg_type }}";
+        voltage_name : "{{ pg_pin.name }}";
+        {% if 'related_bias_pin' in pg_pin and pg_pin.related_bias_pin %}
+        related_bias_pin : {{ pg_pin.related_bias_pin }};
+        {% endif %}
+        {% if 'physical_connection' in pg_pin and pg_pin.physical_connection%}
+        physical_connection : "{{ pg_pin.physical_connection }}"
+        {% endif %}
+    }
+    {% endfor %}
+
+    {% for pin in pins %}
+    pin ("{{ pin.name }}") {
+        clock : "{{ pin.isclock }}";
+        direction : "{{ pin.direction }}";
+        {% if 'function' in pin and pin.function %}
+        function : "{{ pin.function }}";
+        {% endif %}
+        capacitance : {{ pin.capacitance }};
+        max_transition : {{ pin.max_transition }};
+        related_ground_pin : "{{ pin.related_ground_pin }}";
+        related_power_pin : "{{ pin.related_power_pin }}";
+    }
+    {% endfor %}
+}
+
+{%endif%}

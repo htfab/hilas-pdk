@@ -1,0 +1,48 @@
+magic
+tech sky130A
+timestamp 1608249223
+<< metal2 >>
+rect 1414 480 1992 498
+rect 1414 437 1992 455
+rect 1417 337 1992 355
+rect 1417 294 1992 312
+rect 1416 232 1443 260
+rect 1956 236 1993 264
+rect 1417 179 1992 196
+rect 1417 137 1992 154
+rect 1417 39 1992 56
+rect 1417 -5 1992 12
+<< metal3 >>
+rect 1559 285 1586 286
+rect 1559 210 1973 285
+<< metal4 >>
+rect 1672 273 1716 357
+rect 1530 272 1631 273
+rect 1671 272 1717 273
+rect 1459 222 1717 272
+rect 1459 221 1566 222
+rect 1671 156 1717 222
+rect 1671 106 1719 156
+rect 1716 76 1719 106
+use sky130_hilas_CapModule01  sky130_hilas_CapModule01_0
+timestamp 1607800460
+transform 1 0 2002 0 1 198
+box -443 -245 -159 41
+use sky130_hilas_CapModule01  sky130_hilas_CapModule01_1
+timestamp 1607800460
+transform 1 0 2002 0 1 499
+box -443 -245 -159 41
+use sky130_hilas_m22m4  sky130_hilas_m22m4_1
+timestamp 1607701799
+transform 1 0 1937 0 1 246
+box -36 -36 43 39
+use sky130_hilas_m22m4  sky130_hilas_m22m4_0
+timestamp 1607701799
+transform 1 0 1452 0 1 242
+box -36 -36 43 39
+<< labels >>
+rlabel metal2 1416 232 1423 260 0 CapTerm01
+port 2 nsew analog default
+rlabel metal2 1985 236 1993 264 0 CapTerm02
+port 1 nsew analog default
+<< end >>

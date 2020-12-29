@@ -1,0 +1,128 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+UNITS
+  DATABASE MICRONS 200 ;
+END UNITS
+
+LAYER via2
+  TYPE CUT ;
+END via2
+
+LAYER via
+  TYPE CUT ;
+END via
+
+LAYER nwell
+  TYPE MASTERSLICE ;
+END nwell
+
+LAYER via3
+  TYPE CUT ;
+END via3
+
+LAYER pwell
+  TYPE MASTERSLICE ;
+END pwell
+
+LAYER via4
+  TYPE CUT ;
+END via4
+
+LAYER mcon
+  TYPE CUT ;
+END mcon
+
+LAYER met6
+  TYPE ROUTING ;
+  WIDTH 0.030000 ;
+  SPACING 0.040000 ;
+  DIRECTION HORIZONTAL ;
+END met6
+
+LAYER met1
+  TYPE ROUTING ;
+  WIDTH 0.140000 ;
+  SPACING 0.140000 ;
+  DIRECTION HORIZONTAL ;
+END met1
+
+LAYER met3
+  TYPE ROUTING ;
+  WIDTH 0.300000 ;
+  SPACING 0.300000 ;
+  DIRECTION HORIZONTAL ;
+END met3
+
+LAYER met2
+  TYPE ROUTING ;
+  WIDTH 0.140000 ;
+  SPACING 0.140000 ;
+  DIRECTION HORIZONTAL ;
+END met2
+
+LAYER met4
+  TYPE ROUTING ;
+  WIDTH 0.300000 ;
+  SPACING 0.300000 ;
+  DIRECTION HORIZONTAL ;
+END met4
+
+LAYER met5
+  TYPE ROUTING ;
+  WIDTH 1.600000 ;
+  SPACING 1.600000 ;
+  DIRECTION HORIZONTAL ;
+END met5
+
+LAYER li1
+  TYPE ROUTING ;
+  WIDTH 0.170000 ;
+  SPACING 0.170000 ;
+  DIRECTION HORIZONTAL ;
+END li1
+
+MACRO sky130_hilas_all
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_all ;
+  ORIGIN 6.020 4.410 ;
+  SIZE 1.770 BY 6.670 ;
+  OBS
+      LAYER nwell ;
+        RECT -5.720 -0.430 -4.250 2.260 ;
+        RECT -6.010 -0.670 -4.250 -0.430 ;
+        RECT -6.020 -1.500 -4.250 -0.670 ;
+        RECT -5.720 -4.410 -4.250 -1.500 ;
+      LAYER li1 ;
+        RECT -5.400 1.720 -4.900 1.890 ;
+        RECT -5.230 0.930 -4.890 1.100 ;
+        RECT -5.230 0.360 -4.890 0.530 ;
+        RECT -5.690 -1.170 -4.890 -1.000 ;
+        RECT -5.230 -2.690 -4.890 -2.520 ;
+        RECT -5.230 -3.250 -4.890 -3.080 ;
+        RECT -5.230 -4.040 -4.890 -3.870 ;
+      LAYER mcon ;
+        RECT -5.400 -1.170 -5.220 -1.000 ;
+      LAYER met1 ;
+        RECT -5.360 1.950 -5.020 2.000 ;
+        RECT -5.460 1.700 -4.900 1.950 ;
+        RECT -5.360 1.670 -5.020 1.700 ;
+        RECT -5.200 -0.960 -4.950 -0.950 ;
+        RECT -5.690 -1.170 -5.540 -1.000 ;
+        RECT -5.460 -1.210 -4.920 -0.960 ;
+      LAYER via ;
+        RECT -5.320 1.700 -5.060 1.960 ;
+        RECT -5.200 -1.210 -4.950 -0.950 ;
+      LAYER met2 ;
+        RECT -5.360 1.960 -5.020 2.000 ;
+        RECT -5.720 1.700 -4.530 1.960 ;
+        RECT -5.360 1.670 -5.020 1.700 ;
+        RECT -5.220 -0.940 -4.920 -0.930 ;
+        RECT -5.220 -0.950 -4.910 -0.940 ;
+        RECT -5.420 -1.220 -4.890 -0.950 ;
+        RECT -5.220 -1.240 -4.920 -1.220 ;
+  END
+END sky130_hilas_all
+END LIBRARY
+
