@@ -89,6 +89,8 @@ MACRO sky130_hilas_wellContact
   ORIGIN 14.490 4.410 ;
   SIZE 1.740 BY 1.860 ;
   OBS
+      LAYER nwell ;
+        RECT -14.490 -4.400 -12.750 -2.560 ;
       LAYER li1 ;
         RECT -14.060 -3.950 -13.510 -3.520 ;
       LAYER met1 ;

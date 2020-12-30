@@ -89,6 +89,8 @@ MACRO sky130_hilas_swc4x1cellOverlap
   ORIGIN 2.640 4.130 ;
   SIZE 10.080 BY 6.710 ;
   OBS
+      LAYER nwell ;
+        RECT -2.640 -1.470 -0.900 0.370 ;
       LAYER li1 ;
         RECT -2.210 -3.680 7.050 2.120 ;
       LAYER met1 ;

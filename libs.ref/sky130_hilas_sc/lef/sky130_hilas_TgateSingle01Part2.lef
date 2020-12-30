@@ -89,6 +89,8 @@ MACRO sky130_hilas_TgateSingle01Part2
   ORIGIN 0.670 1.810 ;
   SIZE 1.630 BY 1.430 ;
   OBS
+      LAYER nwell ;
+        RECT -0.670 -1.810 0.960 -0.970 ;
       LAYER li1 ;
         RECT -0.270 -1.670 0.960 -0.700 ;
       LAYER met1 ;

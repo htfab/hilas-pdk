@@ -89,6 +89,8 @@ MACRO sky130_hilas_swc2x2varactor
   ORIGIN 14.660 4.420 ;
   SIZE 14.680 BY 7.010 ;
   OBS
+      LAYER nwell ;
+        RECT -14.660 1.750 -12.750 2.270 ;
       LAYER li1 ;
         RECT -13.790 -4.040 -0.730 1.890 ;
   END

@@ -89,6 +89,8 @@ MACRO sky130_hilas_TACoreBlock2
   ORIGIN 0.610 1.920 ;
   SIZE 2.190 BY 4.770 ;
   OBS
+      LAYER nwell ;
+        RECT -0.610 1.120 1.580 2.850 ;
       LAYER li1 ;
         RECT -0.400 -1.920 1.360 2.530 ;
   END

@@ -89,6 +89,9 @@ MACRO sky130_hilas_horizPcell01
   ORIGIN 2.890 -0.470 ;
   SIZE 2.560 BY 1.850 ;
   OBS
+      LAYER nwell ;
+        RECT -2.890 0.480 -0.330 2.320 ;
+        RECT -2.890 0.470 -0.340 0.480 ;
       LAYER li1 ;
         RECT -2.790 0.800 -0.720 1.770 ;
       LAYER met1 ;

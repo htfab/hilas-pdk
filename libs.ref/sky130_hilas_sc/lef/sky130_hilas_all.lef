@@ -89,6 +89,8 @@ MACRO sky130_hilas_all
   ORIGIN 6.020 4.410 ;
   SIZE 1.770 BY 6.670 ;
   OBS
+      LAYER nwell ;
+        RECT -6.020 -1.500 -4.250 -0.670 ;
       LAYER li1 ;
         RECT -5.690 -4.040 -4.890 1.890 ;
       LAYER met1 ;

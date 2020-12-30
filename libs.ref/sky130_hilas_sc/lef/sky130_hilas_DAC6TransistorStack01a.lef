@@ -88,6 +88,10 @@ MACRO sky130_hilas_DAC6TransistorStack01a
   FOREIGN sky130_hilas_DAC6TransistorStack01a ;
   ORIGIN -0.280 1.740 ;
   SIZE 1.720 BY 5.650 ;
+  OBS
+      LAYER nwell ;
+        RECT 0.280 -1.740 1.890 3.910 ;
+  END
 END sky130_hilas_DAC6TransistorStack01a
 END LIBRARY
 

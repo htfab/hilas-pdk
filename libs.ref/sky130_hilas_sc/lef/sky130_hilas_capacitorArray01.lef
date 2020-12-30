@@ -129,6 +129,8 @@ MACRO sky130_hilas_capacitorArray01
     END
   END Gate
   OBS
+      LAYER nwell ;
+        RECT -13.040 1.780 -11.300 3.620 ;
       LAYER li1 ;
         RECT -12.610 -0.230 -3.350 5.150 ;
       LAYER met1 ;

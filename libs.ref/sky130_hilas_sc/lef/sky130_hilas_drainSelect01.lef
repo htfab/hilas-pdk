@@ -172,6 +172,8 @@ MACRO sky130_hilas_drainSelect01
     END
   END GND
   OBS
+      LAYER nwell ;
+        RECT 10.720 0.050 13.920 6.100 ;
       LAYER li1 ;
         RECT 11.120 0.380 15.990 5.770 ;
       LAYER met1 ;

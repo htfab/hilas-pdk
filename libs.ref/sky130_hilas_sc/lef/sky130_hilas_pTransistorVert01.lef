@@ -89,6 +89,8 @@ MACRO sky130_hilas_pTransistorVert01
   ORIGIN 3.630 4.440 ;
   SIZE 1.860 BY 2.990 ;
   OBS
+      LAYER nwell ;
+        RECT -3.630 -4.440 -1.770 -1.450 ;
       LAYER li1 ;
         RECT -3.220 -3.970 -2.160 -1.920 ;
   END

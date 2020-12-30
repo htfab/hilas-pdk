@@ -89,6 +89,8 @@ MACRO sky130_hilas_pTransistorPair
   ORIGIN -1.330 4.400 ;
   SIZE 1.870 BY 6.050 ;
   OBS
+      LAYER nwell ;
+        RECT 1.330 -4.390 3.190 1.650 ;
       LAYER li1 ;
         RECT 1.620 -4.400 3.030 1.180 ;
       LAYER met1 ;

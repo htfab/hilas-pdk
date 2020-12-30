@@ -89,6 +89,8 @@ MACRO sky130_hilas_FGVaractorTunnelCap01
   ORIGIN 10.050 3.800 ;
   SIZE 2.220 BY 1.690 ;
   OBS
+      LAYER nwell ;
+        RECT -10.050 -3.800 -7.830 -2.110 ;
       LAYER li1 ;
         RECT -9.750 -3.280 -9.520 -2.590 ;
       LAYER met1 ;

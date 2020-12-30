@@ -279,6 +279,8 @@ MACRO sky130_hilas_swc4x2cellOverlap
     END
   END Vtun
   OBS
+      LAYER nwell ;
+        RECT -10.010 7.300 -3.450 13.320 ;
       LAYER li1 ;
         RECT -9.620 7.610 7.570 13.010 ;
       LAYER met1 ;

@@ -88,6 +88,10 @@ MACRO sky130_hilas_pFETdevice01aa
   FOREIGN sky130_hilas_pFETdevice01aa ;
   ORIGIN 0.800 0.780 ;
   SIZE 1.720 BY 1.210 ;
+  OBS
+      LAYER nwell ;
+        RECT -0.800 -0.780 0.810 0.430 ;
+  END
 END sky130_hilas_pFETdevice01aa
 END LIBRARY
 

@@ -89,6 +89,8 @@ MACRO sky130_hilas_pFETmirror02
   ORIGIN 0.610 -0.890 ;
   SIZE 1.280 BY 2.840 ;
   OBS
+      LAYER nwell ;
+        RECT -0.610 0.890 0.670 3.730 ;
       LAYER li1 ;
         RECT -0.410 0.950 0.530 3.490 ;
   END

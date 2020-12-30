@@ -89,6 +89,8 @@ MACRO sky130_hilas_overlapCap02a
   ORIGIN 5.210 0.540 ;
   SIZE 4.000 BY 1.640 ;
   OBS
+      LAYER nwell ;
+        RECT -5.210 -0.540 -1.210 1.100 ;
       LAYER li1 ;
         RECT -4.860 -0.210 -1.550 0.770 ;
       LAYER met1 ;

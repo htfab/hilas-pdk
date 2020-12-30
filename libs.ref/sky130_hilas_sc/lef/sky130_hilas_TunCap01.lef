@@ -88,6 +88,10 @@ MACRO sky130_hilas_TunCap01
   FOREIGN sky130_hilas_TunCap01 ;
   ORIGIN 14.510 4.000 ;
   SIZE 1.730 BY 1.900 ;
+  OBS
+      LAYER nwell ;
+        RECT -14.510 -4.000 -12.780 -2.100 ;
+  END
 END sky130_hilas_TunCap01
 END LIBRARY
 

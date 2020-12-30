@@ -89,6 +89,8 @@ MACRO sky130_hilas_TunVaractorCapcitor
   ORIGIN 14.660 4.420 ;
   SIZE 10.430 BY 7.010 ;
   OBS
+      LAYER nwell ;
+        RECT -14.660 1.750 -12.750 2.260 ;
       LAYER li1 ;
         RECT -13.790 -4.040 -4.890 1.890 ;
   END

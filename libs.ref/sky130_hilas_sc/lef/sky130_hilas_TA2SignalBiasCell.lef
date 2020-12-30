@@ -171,6 +171,9 @@ MACRO sky130_hilas_TA2SignalBiasCell
     END
   END Vbias1
   OBS
+      LAYER nwell ;
+        RECT -5.260 7.440 -1.650 7.450 ;
+        RECT -5.260 1.410 -0.090 7.440 ;
       LAYER li1 ;
         RECT -4.970 1.400 3.050 7.450 ;
       LAYER met1 ;

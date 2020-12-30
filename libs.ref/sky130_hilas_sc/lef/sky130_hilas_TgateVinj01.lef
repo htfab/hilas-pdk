@@ -89,6 +89,8 @@ MACRO sky130_hilas_TgateVinj01
   ORIGIN 2.100 0.400 ;
   SIZE 5.420 BY 1.590 ;
   OBS
+      LAYER nwell ;
+        RECT -2.100 -0.400 1.100 1.190 ;
       LAYER li1 ;
         RECT -1.700 -0.070 3.170 1.040 ;
       LAYER met1 ;

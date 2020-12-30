@@ -89,6 +89,8 @@ MACRO sky130_hilas_pFETLargePart1
   ORIGIN 0.060 0.090 ;
   SIZE 3.390 BY 2.870 ;
   OBS
+      LAYER nwell ;
+        RECT -0.060 -0.090 3.330 2.780 ;
       LAYER li1 ;
         RECT 0.180 0.050 3.100 2.550 ;
   END

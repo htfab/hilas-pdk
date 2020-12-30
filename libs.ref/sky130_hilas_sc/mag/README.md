@@ -1,6 +1,13 @@
 # Cell Ports Summary
 
 ___
+### sky130\_hilas\_pTransistorVert01
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+
+
+___
 ### sky130\_hilas\_capacitorSize03
 
 | Port Number          | Label                | Layer                | Attributes           |
@@ -134,13 +141,6 @@ ___
 
 ___
 ### sky130\_hilas\_poly2li
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-
-
-___
-### sky130\_hilas\_cellAttempt01
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -347,8 +347,8 @@ ___
 | 7                    | Horiz3               | metal2               | nsew,analog,default  |
 | 8                    | Horiz4               | metal2               | nsew,analog,default  |
 | 9                    | drain4               | metal2               | nsew,analog,default  |
-| 10                   | Vinj                 | metal1               | nsew,power,default   |
 | 10                   | Vinj                 | metal1               | nsew                 |
+| 10                   | Vinj                 | metal1               | nsew,power,default   |
 | 11                   | GateSelect1          | metal1               | nsew,analog,default  |
 | 12                   | Vert2                | metal1               | nsew,analog,default  |
 | 13                   | GateSelect2          | metal1               | nsew,analog,default  |
@@ -392,10 +392,10 @@ ___
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 | 1                    | GND                  | metal1               | nsew,ground,default  |
-| 2                    | CommonNode           | metal1               | nsew,analog,default  |
 | 2                    | CommonNode           | poly                 | nsew,analog,default  |
-| 3                    | CommonMode           | poly                 | nsew,analog,default  |
+| 2                    | CommonNode           | metal1               | nsew,analog,default  |
 | 3                    | CommonMode           | metal1               | nsew,analog,default  |
+| 3                    | CommonMode           | poly                 | nsew,analog,default  |
 | 4                    | output1              | metal2               | nsew,analog,default  |
 | 5                    | output2              | metal2               | nsew,analog,default  |
 | 6                    | output3              | metal2               | nsew,analog,default  |
@@ -623,8 +623,8 @@ ___
 | 11                   | GateSelect2          | metal1               | nsew,analog,default  |
 | 12                   | Vert1                | metal1               | nsew,analog,default  |
 | 13                   | Vert2                | metal1               | nsew,analog,default  |
-| 14                   | Horiz1               | space                | nsew,analog,default  |
 | 14                   | Horiz1               | metal2               | nsew,analog,default  |
+| 14                   | Horiz1               | space                | nsew,analog,default  |
 | 15                   | Horiz2               | metal2               | nsew,analog,default  |
 | 16                   | drain1               | metal2               | nsew,analog,default  |
 | 17                   | drain2               | metal2               | nsew,analog,default  |
@@ -653,8 +653,8 @@ ___
 | 5                    | GateColSelect        | metal1               | nsew,analog,default  |
 | 6                    | Vdd                  | metal1               | nsew,power,default   |
 | 6                    | Vdd                  | metal1               | nsew,analog,default  |
-| 7                    | GND                  | metal1               | nsew,ground,default  |
 | 7                    | GND                  | metal1               | nsew,analog,default  |
+| 7                    | GND                  | metal1               | nsew,ground,default  |
 | 8                    | Vinj                 | metal1               | nsew,power,default   |
 | 9                    | output1              | metal2               | nsew,analog,default  |
 | 10                   | output2              | metal2               | nsew,analog,default  |
@@ -791,8 +791,8 @@ ___
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 | 1                    | GateSelect           | metal1               | nsew,analog,default  |
-| 2                    | Vinj                 | metal1               | nsew,analog,default  |
 | 2                    | Vinj                 | space                | nsew,analog,default  |
+| 2                    | Vinj                 | metal1               | nsew,analog,default  |
 | 3                    | drain1               | metal2               | nsew,analog,default  |
 | 4                    | drain4               | metal2               | nsew,analog,default  |
 | 5                    | prog                 | metal1               | nsew,analog,default  |
@@ -813,8 +813,8 @@ ___
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | GND                  | metal1               | nsew,ground,default  |
 | 1                    | GND                  | metal1               | nsew                 |
+| 1                    | GND                  | metal1               | nsew,ground,default  |
 | 2                    | Input1_1             | metal2               | nsew                 |
 | 3                    | Input2_1             | metal2               | nsew                 |
 | 4                    | Select1              | metal2               | nsew                 |
@@ -856,6 +856,13 @@ ___
 | 2                    | Cap2Term02           | metal2               | nsew,analog,default  |
 | 3                    | Cap2Term01           | metal2               | nsew,analog,default  |
 | 4                    | Cap1Term01           | metal2               | nsew,analog,default  |
+
+
+___
+### sky130\_hilas\_cellAttempt01
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
 
 
 ___
@@ -917,8 +924,8 @@ ___
 | 10                   | pFET_Gate2           | metal2               | nsew,analog,default  |
 | 11                   | pFET_Source3         | metal2               | nsew,analog,default  |
 | 12                   | pFET_Gate3           | metal2               | nsew,analog,default  |
-| 13                   | Well                 | metal1               | nsew,power,default   |
 | 13                   | Well                 | metal1               | nsew,ground,default  |
+| 13                   | Well                 | metal1               | nsew,power,default   |
 | 14                   | GND                  | metal1               | nsew,ground,default  |
 | 14                   | GND                  | metal1               | nsew,power,default   |
 | 15                   | pFET_Drain3          | metal2               | nsew,analog,default  |
@@ -931,13 +938,6 @@ ___
 
 ___
 ### sky130\_hilas\_pFETLargePart1
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-
-
-___
-### sky130\_hilas\_pTransistorVert01
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|

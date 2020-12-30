@@ -167,6 +167,8 @@ MACRO sky130_hilas_TA2Cell_1FG_Strong
     END
   END Vinj
   OBS
+      LAYER nwell ;
+        RECT -26.170 1.410 -22.860 7.440 ;
       LAYER li1 ;
         RECT -25.780 1.650 1.790 7.450 ;
       LAYER met1 ;
