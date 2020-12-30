@@ -1,0 +1,229 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+UNITS
+  DATABASE MICRONS 200 ;
+END UNITS
+
+LAYER via2
+  TYPE CUT ;
+END via2
+
+LAYER via
+  TYPE CUT ;
+END via
+
+LAYER nwell
+  TYPE MASTERSLICE ;
+END nwell
+
+LAYER via3
+  TYPE CUT ;
+END via3
+
+LAYER pwell
+  TYPE MASTERSLICE ;
+END pwell
+
+LAYER via4
+  TYPE CUT ;
+END via4
+
+LAYER mcon
+  TYPE CUT ;
+END mcon
+
+LAYER met6
+  TYPE ROUTING ;
+  WIDTH 0.030000 ;
+  SPACING 0.040000 ;
+  DIRECTION HORIZONTAL ;
+END met6
+
+LAYER met1
+  TYPE ROUTING ;
+  WIDTH 0.140000 ;
+  SPACING 0.140000 ;
+  DIRECTION HORIZONTAL ;
+END met1
+
+LAYER met3
+  TYPE ROUTING ;
+  WIDTH 0.300000 ;
+  SPACING 0.300000 ;
+  DIRECTION HORIZONTAL ;
+END met3
+
+LAYER met2
+  TYPE ROUTING ;
+  WIDTH 0.140000 ;
+  SPACING 0.140000 ;
+  DIRECTION HORIZONTAL ;
+END met2
+
+LAYER met4
+  TYPE ROUTING ;
+  WIDTH 0.300000 ;
+  SPACING 0.300000 ;
+  DIRECTION HORIZONTAL ;
+END met4
+
+LAYER met5
+  TYPE ROUTING ;
+  WIDTH 1.600000 ;
+  SPACING 1.600000 ;
+  DIRECTION HORIZONTAL ;
+END met5
+
+LAYER li1
+  TYPE ROUTING ;
+  WIDTH 0.170000 ;
+  SPACING 0.170000 ;
+  DIRECTION HORIZONTAL ;
+END li1
+
+MACRO sky130_hilas_Tgate4Double01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_Tgate4Double01 ;
+  ORIGIN 0.360 1.410 ;
+  SIZE 7.080 BY 6.050 ;
+  PIN GND
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 0.380 3.710 0.580 4.640 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 6.210 -1.410 6.400 -0.480 ;
+    END
+  END GND
+  PIN Input1_1
+    PORT
+      LAYER met2 ;
+        RECT -0.360 4.330 2.120 4.530 ;
+    END
+  END Input1_1
+  PIN Input2_1
+    PORT
+      LAYER met2 ;
+        RECT -0.360 3.850 0.770 4.050 ;
+    END
+  END Input2_1
+  PIN Select1
+    PORT
+      LAYER met2 ;
+        RECT -0.360 3.350 -0.040 3.550 ;
+    END
+  END Select1
+  PIN Select2
+    PORT
+      LAYER met2 ;
+        RECT -0.360 2.700 -0.040 2.900 ;
+    END
+  END Select2
+  PIN Input2_2
+    PORT
+      LAYER met2 ;
+        RECT -0.360 2.200 0.770 2.400 ;
+    END
+  END Input2_2
+  PIN Input1_2
+    PORT
+      LAYER met2 ;
+        RECT -0.360 1.720 2.120 1.920 ;
+    END
+  END Input1_2
+  PIN Select3
+    PORT
+      LAYER met2 ;
+        RECT -0.360 0.330 -0.040 0.530 ;
+    END
+  END Select3
+  PIN Input2_3
+    PORT
+      LAYER met2 ;
+        RECT -0.360 0.830 0.770 1.030 ;
+    END
+  END Input2_3
+  PIN Select4
+    PORT
+      LAYER met2 ;
+        RECT -0.360 -0.320 -0.040 -0.120 ;
+    END
+  END Select4
+  PIN Input2_4
+    PORT
+      LAYER met2 ;
+        RECT -0.360 -0.820 0.770 -0.620 ;
+    END
+  END Input2_4
+  PIN Input1_4
+    PORT
+      LAYER met2 ;
+        RECT -0.360 -1.300 2.120 -1.100 ;
+    END
+  END Input1_4
+  PIN Vdd
+    PORT
+      LAYER met1 ;
+        RECT 6.210 3.710 6.400 4.640 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 0.380 -1.410 0.580 -0.480 ;
+    END
+  END Vdd
+  PIN Output4
+    PORT
+      LAYER met2 ;
+        RECT 5.820 -0.320 6.720 -0.120 ;
+    END
+  END Output4
+  PIN Output3
+    PORT
+      LAYER met2 ;
+        RECT 5.820 0.330 6.720 0.530 ;
+    END
+  END Output3
+  PIN Output2
+    PORT
+      LAYER met2 ;
+        RECT 5.820 2.700 6.720 2.900 ;
+    END
+  END Output2
+  PIN Output1
+    PORT
+      LAYER met2 ;
+        RECT 5.820 3.350 6.720 3.550 ;
+    END
+  END Output1
+  OBS
+      LAYER li1 ;
+        RECT -0.120 -1.280 6.640 4.510 ;
+      LAYER met1 ;
+        RECT -0.130 3.430 0.100 4.540 ;
+        RECT 0.860 3.430 5.930 4.540 ;
+        RECT -0.130 -0.200 6.420 3.430 ;
+        RECT -0.130 -1.310 0.100 -0.200 ;
+        RECT 0.860 -1.310 5.930 -0.200 ;
+      LAYER met2 ;
+        RECT 2.400 4.050 5.850 4.540 ;
+        RECT 1.050 3.830 5.850 4.050 ;
+        RECT 1.050 3.570 5.540 3.830 ;
+        RECT 0.240 2.680 5.540 3.570 ;
+        RECT 1.050 2.420 5.540 2.680 ;
+        RECT 1.050 2.200 5.850 2.420 ;
+        RECT 2.400 1.440 5.850 2.200 ;
+        RECT -0.360 1.310 5.850 1.440 ;
+        RECT 1.050 0.810 5.850 1.310 ;
+        RECT 1.050 0.550 5.540 0.810 ;
+        RECT 0.240 -0.340 5.540 0.550 ;
+        RECT 1.050 -0.600 5.540 -0.340 ;
+        RECT 1.050 -0.820 5.850 -0.600 ;
+        RECT 2.400 -1.310 5.850 -0.820 ;
+  END
+END sky130_hilas_Tgate4Double01
+END LIBRARY
+

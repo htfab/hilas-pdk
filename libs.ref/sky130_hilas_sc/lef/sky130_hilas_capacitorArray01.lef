@@ -1,0 +1,154 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+UNITS
+  DATABASE MICRONS 200 ;
+END UNITS
+
+LAYER via2
+  TYPE CUT ;
+END via2
+
+LAYER via
+  TYPE CUT ;
+END via
+
+LAYER nwell
+  TYPE MASTERSLICE ;
+END nwell
+
+LAYER via3
+  TYPE CUT ;
+END via3
+
+LAYER pwell
+  TYPE MASTERSLICE ;
+END pwell
+
+LAYER via4
+  TYPE CUT ;
+END via4
+
+LAYER mcon
+  TYPE CUT ;
+END mcon
+
+LAYER met6
+  TYPE ROUTING ;
+  WIDTH 0.030000 ;
+  SPACING 0.040000 ;
+  DIRECTION HORIZONTAL ;
+END met6
+
+LAYER met1
+  TYPE ROUTING ;
+  WIDTH 0.140000 ;
+  SPACING 0.140000 ;
+  DIRECTION HORIZONTAL ;
+END met1
+
+LAYER met3
+  TYPE ROUTING ;
+  WIDTH 0.300000 ;
+  SPACING 0.300000 ;
+  DIRECTION HORIZONTAL ;
+END met3
+
+LAYER met2
+  TYPE ROUTING ;
+  WIDTH 0.140000 ;
+  SPACING 0.140000 ;
+  DIRECTION HORIZONTAL ;
+END met2
+
+LAYER met4
+  TYPE ROUTING ;
+  WIDTH 0.300000 ;
+  SPACING 0.300000 ;
+  DIRECTION HORIZONTAL ;
+END met4
+
+LAYER met5
+  TYPE ROUTING ;
+  WIDTH 1.600000 ;
+  SPACING 1.600000 ;
+  DIRECTION HORIZONTAL ;
+END met5
+
+LAYER li1
+  TYPE ROUTING ;
+  WIDTH 0.170000 ;
+  SPACING 0.170000 ;
+  DIRECTION HORIZONTAL ;
+END li1
+
+MACRO sky130_hilas_capacitorArray01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_capacitorArray01 ;
+  ORIGIN 13.040 0.570 ;
+  SIZE 36.700 BY 6.050 ;
+  PIN CapTerminal2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 23.330 2.220 23.660 2.630 ;
+    END
+  END CapTerminal2
+  PIN CapTerm01
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.300 5.170 -1.790 5.480 ;
+    END
+  END CapTerm01
+  PIN Vinj
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT -3.480 4.770 -3.320 5.480 ;
+    END
+  END Vinj
+  PIN GateSelect
+    PORT
+      LAYER met1 ;
+        RECT -3.920 4.490 -3.730 5.480 ;
+    END
+  END GateSelect
+  PIN Vtun
+    PORT
+      LAYER met1 ;
+        RECT -12.680 2.580 -12.280 5.480 ;
+    END
+  END Vtun
+  PIN Gate
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT -8.630 2.510 -8.250 5.480 ;
+    END
+  END Gate
+  OBS
+      LAYER li1 ;
+        RECT -12.610 -0.230 -3.350 5.150 ;
+      LAYER met1 ;
+        RECT -12.000 2.300 -8.910 5.480 ;
+        RECT -12.680 2.230 -8.910 2.300 ;
+        RECT -7.970 4.210 -4.200 5.480 ;
+        RECT -3.450 4.210 -3.310 4.490 ;
+        RECT -7.970 2.230 -3.310 4.210 ;
+        RECT -12.680 -0.570 -3.310 2.230 ;
+      LAYER met2 ;
+        RECT -13.040 4.890 -2.580 5.450 ;
+        RECT -1.510 4.890 23.660 5.450 ;
+        RECT -13.040 2.910 23.660 4.890 ;
+        RECT -13.040 1.940 23.050 2.910 ;
+        RECT -13.040 -0.200 23.660 1.940 ;
+      LAYER met3 ;
+        RECT -3.420 -0.400 23.340 5.460 ;
+      LAYER met4 ;
+        RECT -3.330 -0.320 20.970 5.110 ;
+  END
+END sky130_hilas_capacitorArray01
+END LIBRARY
+

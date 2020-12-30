@@ -1,0 +1,179 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+UNITS
+  DATABASE MICRONS 200 ;
+END UNITS
+
+LAYER via2
+  TYPE CUT ;
+END via2
+
+LAYER via
+  TYPE CUT ;
+END via
+
+LAYER nwell
+  TYPE MASTERSLICE ;
+END nwell
+
+LAYER via3
+  TYPE CUT ;
+END via3
+
+LAYER pwell
+  TYPE MASTERSLICE ;
+END pwell
+
+LAYER via4
+  TYPE CUT ;
+END via4
+
+LAYER mcon
+  TYPE CUT ;
+END mcon
+
+LAYER met6
+  TYPE ROUTING ;
+  WIDTH 0.030000 ;
+  SPACING 0.040000 ;
+  DIRECTION HORIZONTAL ;
+END met6
+
+LAYER met1
+  TYPE ROUTING ;
+  WIDTH 0.140000 ;
+  SPACING 0.140000 ;
+  DIRECTION HORIZONTAL ;
+END met1
+
+LAYER met3
+  TYPE ROUTING ;
+  WIDTH 0.300000 ;
+  SPACING 0.300000 ;
+  DIRECTION HORIZONTAL ;
+END met3
+
+LAYER met2
+  TYPE ROUTING ;
+  WIDTH 0.140000 ;
+  SPACING 0.140000 ;
+  DIRECTION HORIZONTAL ;
+END met2
+
+LAYER met4
+  TYPE ROUTING ;
+  WIDTH 0.300000 ;
+  SPACING 0.300000 ;
+  DIRECTION HORIZONTAL ;
+END met4
+
+LAYER met5
+  TYPE ROUTING ;
+  WIDTH 1.600000 ;
+  SPACING 1.600000 ;
+  DIRECTION HORIZONTAL ;
+END met5
+
+LAYER li1
+  TYPE ROUTING ;
+  WIDTH 0.170000 ;
+  SPACING 0.170000 ;
+  DIRECTION HORIZONTAL ;
+END li1
+
+MACRO sky130_hilas_TA2Cell_NoFG
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_TA2Cell_NoFG ;
+  ORIGIN 14.730 -1.400 ;
+  SIZE 17.920 BY 6.050 ;
+  PIN GateColSelect
+    PORT
+      LAYER met1 ;
+        RECT -4.160 5.920 -3.970 7.450 ;
+    END
+  END GateColSelect
+  PIN Vin-_Amp1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.860 1.420 -2.240 1.670 ;
+    END
+  END Vin-_Amp1
+  PIN Vin+_amp2
+    PORT
+      LAYER met2 ;
+        RECT -1.260 4.510 -0.910 4.740 ;
+    END
+  END Vin+_amp2
+  PIN Vin-_Amp2
+    PORT
+      LAYER met2 ;
+        RECT -1.300 7.180 -1.050 7.440 ;
+    END
+  END Vin-_Amp2
+  PIN Vout_Amp1
+    PORT
+      LAYER met2 ;
+        RECT 2.850 3.920 3.190 4.140 ;
+    END
+  END Vout_Amp1
+  PIN Vout_Amp2
+    PORT
+      LAYER met2 ;
+        RECT 2.860 4.740 3.190 4.970 ;
+    END
+  END Vout_Amp2
+  PIN GND
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 1.230 1.400 1.570 2.140 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 1.230 6.750 1.570 7.450 ;
+    END
+  END GND
+  PIN Vdd
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 1.900 1.400 2.170 3.050 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 1.900 5.810 2.170 7.450 ;
+    END
+  END Vdd
+  OBS
+      LAYER li1 ;
+        RECT -14.290 1.400 3.050 7.450 ;
+      LAYER met1 ;
+        RECT -14.380 5.640 -4.440 7.450 ;
+        RECT -3.690 6.470 0.950 7.450 ;
+        RECT -3.690 5.640 1.620 6.470 ;
+        RECT -14.380 5.530 1.620 5.640 ;
+        RECT 2.450 5.530 2.890 7.450 ;
+        RECT -14.380 3.330 2.890 5.530 ;
+        RECT -14.380 2.420 1.620 3.330 ;
+        RECT -14.380 1.400 0.950 2.420 ;
+        RECT 2.450 1.400 2.890 3.330 ;
+      LAYER met2 ;
+        RECT -14.730 6.900 -1.580 7.440 ;
+        RECT -0.770 6.900 2.980 7.440 ;
+        RECT -14.730 5.250 2.980 6.900 ;
+        RECT -14.730 5.020 2.580 5.250 ;
+        RECT -14.730 4.230 -1.540 5.020 ;
+        RECT -0.630 4.460 2.580 5.020 ;
+        RECT -0.630 4.420 2.980 4.460 ;
+        RECT -0.630 4.230 2.570 4.420 ;
+        RECT -14.730 3.640 2.570 4.230 ;
+        RECT -14.730 1.950 2.980 3.640 ;
+        RECT -14.730 1.410 -3.140 1.950 ;
+        RECT -1.960 1.410 2.980 1.950 ;
+  END
+END sky130_hilas_TA2Cell_NoFG
+END LIBRARY
+
