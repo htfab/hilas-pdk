@@ -6,22 +6,21 @@
 src_dir="${1}"
 targ_dir="${2}"
 
-
-mk_input(){  
-    for f in $(find "${src_dir}" -iname "*.mag"); do
-        tfile=$(basename ${f})
-        INPUT="${INPUT}"$'\r\n'"load ${f} -force"$'\r\n'"lef write -tech -hide"
-    done
-}
-
 do_it(){
-magic -dnull -noconsole -rcfile "${MAGICRC}" << EOF
-${INPUT}
+magic -dnull -noconsole -rcfile "${MAGICRC}" -T "${TECHFILE}" << EOF
+load "${1}" -force
+lef write -tech -hide
 quit -noprompt
 EOF
 }
 
-mk_input
-#echo "${INPUT}"
 cd "${targ_dir}"
-do_it
+set -e
+for f in $(find "${src_dir}" -iname "*.mag"); do
+  echo
+  echo
+  echo "#######################################################################"
+  echo "#   Generating LEF from: $(basename "${f}") "
+  echo "#######################################################################"
+  do_it "${f}"
+done

@@ -3,26 +3,33 @@
 # first argument is path to magic files
 # second arg.    is path to write GDS output
 
-targ_dir=${2}
-src_dir=${1}
-
-mk_input(){
-    INPUT=''
-    for f in $(find "${src_dir}" -iname "*.mag"); do
-        tfile=$(basename ${f})
-        INPUT="${INPUT}"$'\r\n'"load ${f} -force"$'\r\n'"gds merge"$'\r\n'"gds write"
-    done
-}
+targ_dir="${2}"
+src_dir="${1}"
 
 do_it(){
-magic -dnull -noconsole -rcfile "${MAGICRC}" << EOF
-"${INPUT}"
+  magic -dnull -noconsole -rcfile "${MAGICRC}" -T "${TECHFILE}" << EOF
+drc off
+load "${1}" -force
+drc off
+gds readonly true
+gds rescale false
+gds merge
+gds flatten
+gds write "${targ}"
 quit -noprompt
 EOF
 }
 
-#echo "using rcfile: ${MAGICRC}"
-mk_input
-#echo "${INPUT}"
 cd ${targ_dir}
-do_it
+set -e
+for f in $(find "${src_dir}" -iname "*.mag"); do
+  targ=$(basename ${f})
+  targ="${targ%.*}".gds
+  echo
+  echo
+  echo "######################################################################"
+  echo "#   Making GDS from: $(basename "${f}") "
+  echo "#   Will write to: ${targ} "
+  echo "######################################################################"
+  do_it "${f}"
+done

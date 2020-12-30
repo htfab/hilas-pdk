@@ -9,6 +9,7 @@ MAG_CELLS = $(wildcard $(MAG_ROOT)/*.mag)
 SCRIPTS = $(HILAS_ROOT)/scripts
 
 export MAGICRC = $(TECH_ROOT)/magic/sky130A.magicrc
+export TECHFILE = $(TECH_ROOT)/magic/sky130A.tech
 
 .DEFAULT_GOAL := all
 
