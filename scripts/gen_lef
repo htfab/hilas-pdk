@@ -15,7 +15,7 @@ EOF
 }
 
 cd "${targ_dir}"
-set -e
+#set -e
 for f in $(find "${src_dir}" -iname "*.mag"); do
   echo
   echo
