@@ -1,0 +1,27 @@
+#! /usr/bin/env bash
+
+# first argument is path to magic files
+# second arg.    is path to write LEF output
+
+src_dir="${1}"
+targ_dir="${2}"
+
+
+mk_input(){  
+    for f in $(find "${src_dir}" -iname "*.mag"); do
+        tfile=$(basename ${f})
+        INPUT="${INPUT}"$'\r\n'"load ${f} -force"$'\r\n'"lef write -tech -hide"
+    done
+}
+
+do_it(){
+magic -dnull -noconsole -rcfile "${MAGICRC}" << EOF
+${INPUT}
+quit -noprompt
+EOF
+}
+
+mk_input
+#echo "${INPUT}"
+cd "${targ_dir}"
+do_it

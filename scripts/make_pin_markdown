@@ -23,7 +23,7 @@ def main():
     tables = [['# Cell Ports Summary\n']]
     for targ in args.magic_files:
         cn = Path(targ).stem
-        head = ['___\n### {}\n'.format(cn)]
+        head = ['___\n### {}\n'.format(cn.replace('_','\_'))]
         head.append('| {:<20} | {:<20} | {:<20} | {:<20} |'.format('Port Number', 'Label', 'Layer', 'Attributes'))
         head.append('|----------------------|----------------------|----------------------|----------------------|')
         rows = []
