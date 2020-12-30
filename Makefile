@@ -25,7 +25,7 @@ lef: $(MAG_CELLS)
 
 lib: $(MAG_CELLS)
 	echo "making lib file"
-	$(SCRIPTS}/gen_libfile.py $(REF_ROOT)/lef $(REF_ROOT)/lib/sky130A_hilas.lib
+	$(SCRIPTS)/gen_lib $(REF_ROOT)/lef $(REF_ROOT)/lib/sky130A_hilas.lib
 
 pin-md: $(MAG_CELLS)
 	@$(HILAS_ROOT)/scripts/make_pin_markdown -o $(MAG_ROOT)/README.md -m $(MAG_CELLS)
