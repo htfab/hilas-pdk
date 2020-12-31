@@ -1,21 +1,20 @@
-    ===================================
-    |    _   _ _ _      ___  _____    |
-    |   | | | (_| |    / _ \/  ___|   |
-    |   | |_| |_| |   / /_\ \ `--.    |
-    |   |  _  | | |   |  _  |`--. \   |
-    |   | | | | | |___| | | /\__/ /   |
-    |   \_| |_|_\_____\_| |_\____/    |
-    |                                 |
-    ===================================
+# -- Hilas Analog Standard Cells --
 
 
-# Hilas Standard Cells
 This repo contains a set of analog standard cells designed for the 
 "Skywater 130nm" fabrication process available at the Google Skywater 
 (formerly Cypress Semi.) foundry.
 
 These cells can be used in the openLANE/openROAD toolchains in order
 to create GDSII files for fabrication.
+
+A custom version of the OpenLANE flow that we're calling "fastlane" is available on [gitlab.com](https://gitlab.com/um-ece/ftl-lab/hilas/fastlane)
+<br>
+[(git link)](https://gitlab.com/um-ece/ftl-lab/hilas/fastlane.git)
+
+Fastlane uses git submodules to include this repository, so it's probably a better idea to start on the [Fastlane Page](https://gitlab.com/um-ece/ftl-lab/hilas/fastlane)
+
+---
 
 # PG (power/ground) and Interfacing
 | Net Name  |     Description                    |
@@ -24,6 +23,9 @@ to create GDSII files for fabrication.
 | `GND`     | reference 0                        |
 | `Vinj`    | Supply for Injection for FG devices. (run time: 1.8V, programming: 1.8-6.0V) |
 | `Vtun`    | Tunnelling input for FG devices. (run time: 0 or 1.8V, programming: 11-12V) |
+
+---
+---
 
 # Standard Cell Blocks:
 | Block Name            | Width     | Height | Description |
@@ -49,6 +51,10 @@ to create GDSII files for fabrication.
 
 ![map](cell-map.png)
 
+---
+---
+---
+---
 
 
 # Cell Ports Summary
@@ -630,13 +636,6 @@ ___
 
 
 ___
-### sky130\_hilas\_li2m1
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-
-
-___
 ### sky130\_hilas\_Trans2med
 
 | Port Number          | Label                | Layer                | Attributes           |
@@ -736,6 +735,13 @@ ___
 
 ___
 ### sky130\_hilas\_DualTACore01
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+
+
+___
+### sky130\_hilas\_li2m1
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -844,8 +850,8 @@ ___
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 | 1                    | GateSelect           | metal1               | nsew,analog,default  |
-| 2                    | Vinj                 | metal1               | nsew,analog,default  |
 | 2                    | Vinj                 | space                | nsew,analog,default  |
+| 2                    | Vinj                 | metal1               | nsew,analog,default  |
 | 3                    | drain1               | metal2               | nsew,analog,default  |
 | 4                    | drain4               | metal2               | nsew,analog,default  |
 | 5                    | prog                 | metal1               | nsew,analog,default  |
@@ -972,8 +978,8 @@ ___
 | 12                   | pFET_Gate3           | metal2               | nsew,analog,default  |
 | 13                   | Well                 | metal1               | nsew,ground,default  |
 | 13                   | Well                 | metal1               | nsew,power,default   |
-| 14                   | GND                  | metal1               | nsew,ground,default  |
 | 14                   | GND                  | metal1               | nsew,power,default   |
+| 14                   | GND                  | metal1               | nsew,ground,default  |
 | 15                   | pFET_Drain3          | metal2               | nsew,analog,default  |
 | 16                   | pFET_Drain2          | metal2               | nsew,analog,default  |
 | 17                   | pFET_Drain1          | metal2               | nsew,analog,default  |

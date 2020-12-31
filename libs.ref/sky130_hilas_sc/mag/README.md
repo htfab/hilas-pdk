@@ -577,13 +577,6 @@ ___
 
 
 ___
-### sky130\_hilas\_li2m1
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-
-
-___
 ### sky130\_hilas\_Trans2med
 
 | Port Number          | Label                | Layer                | Attributes           |
@@ -683,6 +676,13 @@ ___
 
 ___
 ### sky130\_hilas\_DualTACore01
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+
+
+___
+### sky130\_hilas\_li2m1
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -791,8 +791,8 @@ ___
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 | 1                    | GateSelect           | metal1               | nsew,analog,default  |
-| 2                    | Vinj                 | metal1               | nsew,analog,default  |
 | 2                    | Vinj                 | space                | nsew,analog,default  |
+| 2                    | Vinj                 | metal1               | nsew,analog,default  |
 | 3                    | drain1               | metal2               | nsew,analog,default  |
 | 4                    | drain4               | metal2               | nsew,analog,default  |
 | 5                    | prog                 | metal1               | nsew,analog,default  |
@@ -919,8 +919,8 @@ ___
 | 12                   | pFET_Gate3           | metal2               | nsew,analog,default  |
 | 13                   | Well                 | metal1               | nsew,ground,default  |
 | 13                   | Well                 | metal1               | nsew,power,default   |
-| 14                   | GND                  | metal1               | nsew,ground,default  |
 | 14                   | GND                  | metal1               | nsew,power,default   |
+| 14                   | GND                  | metal1               | nsew,ground,default  |
 | 15                   | pFET_Drain3          | metal2               | nsew,analog,default  |
 | 16                   | pFET_Drain2          | metal2               | nsew,analog,default  |
 | 17                   | pFET_Drain1          | metal2               | nsew,analog,default  |
