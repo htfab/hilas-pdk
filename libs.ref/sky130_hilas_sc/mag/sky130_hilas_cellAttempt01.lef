@@ -1,0 +1,22 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_cellAttempt01
+  CLASS BLOCK ;
+  FOREIGN /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_cellAttempt01 ;
+  ORIGIN 2.640 3.820 ;
+  SIZE 10.080 BY 6.050 ;
+  OBS
+      LAYER nwell ;
+        RECT -2.640 -1.470 -0.900 0.370 ;
+      LAYER li1 ;
+        RECT -2.210 -3.480 7.050 1.900 ;
+      LAYER met1 ;
+        RECT -2.280 -3.820 7.090 2.230 ;
+      LAYER met2 ;
+        RECT -2.640 -3.450 7.440 1.870 ;
+  END
+END /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_cellAttempt01
+END LIBRARY
+

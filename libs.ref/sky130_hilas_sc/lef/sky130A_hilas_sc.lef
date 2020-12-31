@@ -1,0 +1,2905 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO sky130_hilas_invert01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_invert01 ;
+  ORIGIN 0.130 0.150 ;
+  SIZE 0.520 BY 0.310 ;
+  OBS
+      LAYER li1 ;
+        RECT -0.040 -0.070 0.310 0.100 ;
+      LAYER met1 ;
+        RECT -0.120 -0.150 0.380 0.160 ;
+      LAYER met2 ;
+        RECT -0.130 -0.120 0.390 0.150 ;
+  END
+END sky130_hilas_invert01
+
+MACRO sky130_hilas_CapModule02
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_CapModule02 ;
+  ORIGIN 4.430 2.470 ;
+  SIZE 7.200 BY 5.830 ;
+  OBS
+      LAYER met3 ;
+        RECT -4.430 -2.470 2.770 3.360 ;
+      LAYER met4 ;
+        RECT -3.540 -1.370 -0.500 -0.900 ;
+  END
+END sky130_hilas_CapModule02
+
+MACRO sky130_hilas_FGVaractorCapacitor02
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_FGVaractorCapacitor02 ;
+  ORIGIN 10.050 3.800 ;
+  SIZE 2.720 BY 1.690 ;
+  OBS
+      LAYER nwell ;
+        RECT -10.050 -2.150 -7.340 -2.110 ;
+        RECT -10.050 -3.800 -7.330 -2.150 ;
+      LAYER li1 ;
+        RECT -9.750 -3.280 -9.520 -2.590 ;
+      LAYER met1 ;
+        RECT -9.770 -3.330 -9.510 -2.540 ;
+  END
+END sky130_hilas_FGVaractorCapacitor02
+
+MACRO sky130_hilas_Trans4small
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_Trans4small ;
+  ORIGIN -1.910 1.500 ;
+  SIZE 2.800 BY 5.880 ;
+  PIN nFET_Source1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 1.910 3.980 2.540 4.150 ;
+    END
+  END nFET_Source1
+  PIN nFET_Gate1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 1.910 3.570 2.070 3.740 ;
+    END
+  END nFET_Gate1
+  PIN nFET_Source2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 1.910 3.060 2.540 3.230 ;
+    END
+  END nFET_Source2
+  PIN nFET_Gate2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 1.910 2.650 2.070 2.820 ;
+    END
+  END nFET_Gate2
+  PIN nFET_Source3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 1.910 2.140 2.540 2.310 ;
+    END
+  END nFET_Source3
+  PIN nFET_Gate3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 1.910 1.730 2.070 1.900 ;
+    END
+  END nFET_Gate3
+  PIN pFET_Source1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 1.910 1.120 2.350 1.310 ;
+    END
+  END pFET_Source1
+  PIN pFET_Gate1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 1.910 0.700 2.350 0.890 ;
+    END
+  END pFET_Gate1
+  PIN pFET_Source2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 1.910 0.160 2.350 0.350 ;
+    END
+  END pFET_Source2
+  PIN pFET_Gate2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 1.910 -0.260 2.350 -0.070 ;
+    END
+  END pFET_Gate2
+  PIN pFET_Source3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 1.910 -0.800 2.350 -0.610 ;
+    END
+  END pFET_Source3
+  PIN pFET_Gate3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 1.910 -1.220 2.350 -1.030 ;
+    END
+  END pFET_Gate3
+  PIN Well
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 4.090 -1.500 4.310 -1.300 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 4.090 -1.130 4.310 4.380 ;
+    END
+  END Well
+  PIN GND
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 4.490 -1.500 4.710 3.520 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 4.490 3.690 4.710 4.380 ;
+    END
+  END GND
+  PIN pFET_Drain3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 3.910 -0.870 4.710 -0.670 ;
+    END
+  END pFET_Drain3
+  PIN pFET_Drain2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 3.910 0.090 4.710 0.290 ;
+    END
+  END pFET_Drain2
+  PIN pFET_Drain1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 3.910 1.050 4.710 1.250 ;
+    END
+  END pFET_Drain1
+  PIN nFET_Drain3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 3.890 2.150 4.710 2.320 ;
+    END
+  END nFET_Drain3
+  PIN nFET_Drain2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 3.890 3.070 4.710 3.240 ;
+    END
+  END nFET_Drain2
+  PIN nFET_Drain1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 3.890 3.990 4.710 4.160 ;
+    END
+  END nFET_Drain1
+  OBS
+      LAYER li1 ;
+        RECT 2.080 -1.310 4.690 4.240 ;
+      LAYER met1 ;
+        RECT 2.040 -1.330 3.810 4.240 ;
+      LAYER met2 ;
+        RECT 2.820 3.710 3.610 4.250 ;
+        RECT 2.820 3.700 3.930 3.710 ;
+        RECT 2.350 3.520 3.930 3.700 ;
+        RECT 2.350 3.510 3.610 3.520 ;
+        RECT 2.820 2.790 3.610 3.510 ;
+        RECT 2.820 2.780 3.930 2.790 ;
+        RECT 2.350 2.600 3.930 2.780 ;
+        RECT 2.350 2.590 3.610 2.600 ;
+        RECT 2.820 1.870 3.610 2.590 ;
+        RECT 2.820 1.860 3.930 1.870 ;
+        RECT 2.350 1.590 3.930 1.860 ;
+        RECT 2.630 1.530 3.930 1.590 ;
+        RECT 2.630 0.770 3.630 1.530 ;
+        RECT 2.630 0.570 3.930 0.770 ;
+        RECT 2.630 -0.190 3.630 0.570 ;
+        RECT 2.630 -0.390 3.930 -0.190 ;
+        RECT 2.630 -1.150 3.630 -0.390 ;
+        RECT 2.630 -1.290 3.930 -1.150 ;
+  END
+END sky130_hilas_Trans4small
+
+MACRO sky130_hilas_horizPcell01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_horizPcell01 ;
+  ORIGIN 2.890 -0.470 ;
+  SIZE 2.560 BY 1.850 ;
+  OBS
+      LAYER nwell ;
+        RECT -2.890 0.480 -0.330 2.320 ;
+        RECT -2.890 0.470 -0.340 0.480 ;
+      LAYER li1 ;
+        RECT -2.790 0.800 -0.720 1.770 ;
+      LAYER met1 ;
+        RECT -2.800 0.470 -0.680 2.320 ;
+      LAYER met2 ;
+        RECT -2.890 0.830 -0.330 1.710 ;
+  END
+END sky130_hilas_horizPcell01
+
+MACRO sky130_hilas_Trans2med
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_Trans2med ;
+  ORIGIN 3.800 1.430 ;
+  SIZE 3.530 BY 5.950 ;
+  PIN nFET_Gate01
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.800 0.610 -3.550 0.830 ;
+    END
+  END nFET_Gate01
+  PIN pET_Gate02
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.800 1.590 -0.820 1.800 ;
+    END
+  END pET_Gate02
+  PIN pFET_Gate01
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.800 2.150 -3.550 2.370 ;
+    END
+  END pFET_Gate01
+  PIN nFET_Gate02
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.800 1.190 -0.820 1.400 ;
+    END
+  END nFET_Gate02
+  PIN pFET_Source1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.800 3.140 -3.530 3.360 ;
+    END
+  END pFET_Source1
+  PIN pFET_Source2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.800 3.920 -1.900 4.140 ;
+    END
+  END pFET_Source2
+  PIN nFET_Source2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.800 -1.190 -1.880 -0.970 ;
+    END
+  END nFET_Source2
+  PIN nFET_Source1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.800 -0.740 -3.100 -0.530 ;
+    END
+  END nFET_Source1
+  PIN nFET_Drain1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.140 -0.720 -0.270 -0.500 ;
+    END
+  END nFET_Drain1
+  PIN nFET_Drain2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -0.970 -1.160 -0.270 -0.950 ;
+    END
+  END nFET_Drain2
+  PIN pFET_Drain01
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.120 3.170 -0.270 3.380 ;
+    END
+  END pFET_Drain01
+  PIN pFET_Drain2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -0.930 4.000 -0.270 4.210 ;
+    END
+  END pFET_Drain2
+  OBS
+      LAYER li1 ;
+        RECT -3.530 -1.250 -0.330 4.290 ;
+      LAYER met1 ;
+        RECT -3.550 -1.230 -0.270 4.250 ;
+      LAYER met2 ;
+        RECT -1.620 3.720 -1.210 4.260 ;
+        RECT -1.620 3.660 -0.500 3.720 ;
+        RECT -3.250 2.890 -2.400 3.640 ;
+        RECT -3.250 2.860 -0.500 2.890 ;
+        RECT -3.580 2.650 -0.500 2.860 ;
+        RECT -3.270 2.080 -0.500 2.650 ;
+        RECT -0.540 0.910 -0.500 2.080 ;
+        RECT -3.270 0.330 -0.500 0.910 ;
+        RECT -3.580 -0.220 -0.500 0.330 ;
+        RECT -3.580 -0.250 -2.420 -0.220 ;
+        RECT -2.820 -0.690 -2.420 -0.250 ;
+        RECT -1.600 -1.230 -1.250 -1.000 ;
+  END
+END sky130_hilas_Trans2med
+
+MACRO sky130_hilas_FGBiasWeakGate2x1cell
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_FGBiasWeakGate2x1cell ;
+  ORIGIN 3.960 3.820 ;
+  SIZE 11.530 BY 6.050 ;
+  PIN drain1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.960 1.550 5.110 1.730 ;
+    END
+  END drain1
+  PIN Input1
+    PORT
+      LAYER met2 ;
+        RECT -3.960 0.950 -1.990 1.130 ;
+    END
+  END Input1
+  PIN output1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 5.530 0.490 7.570 0.710 ;
+    END
+  END output1
+  PIN output2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 5.530 -2.260 7.570 -2.050 ;
+    END
+  END output2
+  PIN Vinj
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 7.050 1.520 7.330 2.230 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 7.050 -3.820 7.330 -3.110 ;
+    END
+  END Vinj
+  PIN GateSelect
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 6.610 0.700 6.800 2.230 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 6.610 -3.820 6.800 -2.290 ;
+    END
+  END GateSelect
+  PIN GND
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT -1.130 -0.770 -0.900 2.230 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT -1.130 -3.820 -0.900 -0.940 ;
+    END
+  END GND
+  PIN gate_control
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 0.090 0.940 0.320 2.230 ;
+    END
+  END gate_control
+  PIN Vtun
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT -3.610 0.440 -3.190 2.230 ;
+    END
+  END Vtun
+  PIN gateControl
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 0.090 -3.820 0.320 -2.630 ;
+    END
+  END gateControl
+  PIN drain4
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.960 -3.300 5.110 -3.150 ;
+    END
+  END drain4
+  PIN Input2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.960 -2.790 -2.020 -2.580 ;
+    END
+  END Input2
+  PIN CommonSource
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.960 -0.490 6.210 -0.270 ;
+    END
+  END CommonSource
+  OBS
+      LAYER li1 ;
+        RECT -3.520 -3.720 7.180 2.050 ;
+      LAYER met1 ;
+        RECT -2.910 0.160 -1.410 1.930 ;
+        RECT -3.610 -3.810 -1.410 0.160 ;
+        RECT -0.620 0.660 -0.190 1.930 ;
+        RECT 0.600 0.660 6.330 1.930 ;
+        RECT -0.620 0.420 6.330 0.660 ;
+        RECT 7.080 0.420 7.330 1.240 ;
+        RECT -0.620 -2.010 7.330 0.420 ;
+        RECT -0.620 -2.350 6.330 -2.010 ;
+        RECT -0.620 -3.810 -0.190 -2.350 ;
+        RECT 0.600 -3.810 6.330 -2.350 ;
+        RECT 7.080 -2.830 7.330 -2.010 ;
+      LAYER met2 ;
+        RECT 5.390 1.270 7.570 1.930 ;
+        RECT -1.710 0.990 7.570 1.270 ;
+        RECT -1.710 0.700 5.250 0.990 ;
+        RECT -3.960 0.480 5.270 0.700 ;
+        RECT -3.960 0.210 5.250 0.480 ;
+        RECT -3.960 0.010 7.570 0.210 ;
+        RECT 6.490 -0.770 7.570 0.010 ;
+        RECT -3.960 -1.770 7.570 -0.770 ;
+        RECT -3.960 -2.050 5.250 -1.770 ;
+        RECT -3.960 -2.270 5.270 -2.050 ;
+        RECT -3.960 -2.300 5.250 -2.270 ;
+        RECT -1.740 -2.540 5.250 -2.300 ;
+        RECT -1.740 -2.870 7.570 -2.540 ;
+        RECT 5.390 -3.520 7.570 -2.870 ;
+  END
+END sky130_hilas_FGBiasWeakGate2x1cell
+
+MACRO sky130_hilas_CapModule01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_CapModule01 ;
+  ORIGIN 4.430 2.450 ;
+  SIZE 2.840 BY 2.860 ;
+  OBS
+      LAYER met3 ;
+        RECT -4.430 -2.450 -1.590 0.410 ;
+      LAYER met4 ;
+        RECT -3.330 -1.420 -2.810 -0.920 ;
+  END
+END sky130_hilas_CapModule01
+
+MACRO sky130_hilas_overlapCap02
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_overlapCap02 ;
+  ORIGIN 5.370 0.690 ;
+  SIZE 4.320 BY 1.950 ;
+  OBS
+      LAYER nwell ;
+        RECT -5.370 -0.690 -1.050 1.260 ;
+      LAYER li1 ;
+        RECT -5.120 -0.430 -1.320 0.980 ;
+      LAYER met1 ;
+        RECT -3.330 -0.520 -3.090 0.770 ;
+  END
+END sky130_hilas_overlapCap02
+
+MACRO sky130_hilas_Tgate4Double01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_Tgate4Double01 ;
+  ORIGIN 0.360 1.410 ;
+  SIZE 7.080 BY 6.050 ;
+  PIN GND
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 0.380 3.710 0.580 4.640 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 6.210 -1.410 6.400 -0.480 ;
+    END
+  END GND
+  PIN Input1_1
+    PORT
+      LAYER met2 ;
+        RECT -0.360 4.330 2.120 4.530 ;
+    END
+  END Input1_1
+  PIN Input2_1
+    PORT
+      LAYER met2 ;
+        RECT -0.360 3.850 0.770 4.050 ;
+    END
+  END Input2_1
+  PIN Select1
+    PORT
+      LAYER met2 ;
+        RECT -0.360 3.350 -0.040 3.550 ;
+    END
+  END Select1
+  PIN Select2
+    PORT
+      LAYER met2 ;
+        RECT -0.360 2.700 -0.040 2.900 ;
+    END
+  END Select2
+  PIN Input2_2
+    PORT
+      LAYER met2 ;
+        RECT -0.360 2.200 0.770 2.400 ;
+    END
+  END Input2_2
+  PIN Input1_2
+    PORT
+      LAYER met2 ;
+        RECT -0.360 1.720 2.120 1.920 ;
+    END
+  END Input1_2
+  PIN Select3
+    PORT
+      LAYER met2 ;
+        RECT -0.360 0.330 -0.040 0.530 ;
+    END
+  END Select3
+  PIN Input2_3
+    PORT
+      LAYER met2 ;
+        RECT -0.360 0.830 0.770 1.030 ;
+    END
+  END Input2_3
+  PIN Select4
+    PORT
+      LAYER met2 ;
+        RECT -0.360 -0.320 -0.040 -0.120 ;
+    END
+  END Select4
+  PIN Input2_4
+    PORT
+      LAYER met2 ;
+        RECT -0.360 -0.820 0.770 -0.620 ;
+    END
+  END Input2_4
+  PIN Input1_4
+    PORT
+      LAYER met2 ;
+        RECT -0.360 -1.300 2.120 -1.100 ;
+    END
+  END Input1_4
+  PIN Vdd
+    PORT
+      LAYER met1 ;
+        RECT 6.210 3.710 6.400 4.640 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 0.380 -1.410 0.580 -0.480 ;
+    END
+  END Vdd
+  PIN Output4
+    PORT
+      LAYER met2 ;
+        RECT 5.820 -0.320 6.720 -0.120 ;
+    END
+  END Output4
+  PIN Output3
+    PORT
+      LAYER met2 ;
+        RECT 5.820 0.330 6.720 0.530 ;
+    END
+  END Output3
+  PIN Output2
+    PORT
+      LAYER met2 ;
+        RECT 5.820 2.700 6.720 2.900 ;
+    END
+  END Output2
+  PIN Output1
+    PORT
+      LAYER met2 ;
+        RECT 5.820 3.350 6.720 3.550 ;
+    END
+  END Output1
+  OBS
+      LAYER li1 ;
+        RECT -0.120 -1.280 6.640 4.510 ;
+      LAYER met1 ;
+        RECT -0.130 3.430 0.100 4.540 ;
+        RECT 0.860 3.430 5.930 4.540 ;
+        RECT -0.130 -0.200 6.420 3.430 ;
+        RECT -0.130 -1.310 0.100 -0.200 ;
+        RECT 0.860 -1.310 5.930 -0.200 ;
+      LAYER met2 ;
+        RECT 2.400 4.050 5.850 4.540 ;
+        RECT 1.050 3.830 5.850 4.050 ;
+        RECT 1.050 3.570 5.540 3.830 ;
+        RECT 0.240 2.680 5.540 3.570 ;
+        RECT 1.050 2.420 5.540 2.680 ;
+        RECT 1.050 2.200 5.850 2.420 ;
+        RECT 2.400 1.510 5.850 2.200 ;
+        RECT -0.360 1.490 5.850 1.510 ;
+        RECT -0.360 1.440 2.120 1.490 ;
+        RECT 2.400 1.440 5.850 1.490 ;
+        RECT -0.360 1.310 5.850 1.440 ;
+        RECT 1.050 0.810 5.850 1.310 ;
+        RECT 1.050 0.550 5.540 0.810 ;
+        RECT 0.240 -0.340 5.540 0.550 ;
+        RECT 1.050 -0.600 5.540 -0.340 ;
+        RECT 1.050 -0.820 5.850 -0.600 ;
+        RECT 2.400 -1.310 5.850 -0.820 ;
+  END
+END sky130_hilas_Tgate4Double01
+
+MACRO sky130_hilas_FGVaractorTunnelCap01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_FGVaractorTunnelCap01 ;
+  ORIGIN 10.050 3.800 ;
+  SIZE 2.220 BY 1.690 ;
+  OBS
+      LAYER nwell ;
+        RECT -10.050 -3.800 -7.830 -2.110 ;
+      LAYER li1 ;
+        RECT -9.750 -3.280 -9.520 -2.590 ;
+      LAYER met1 ;
+        RECT -9.770 -3.330 -9.510 -2.540 ;
+  END
+END sky130_hilas_FGVaractorTunnelCap01
+
+MACRO sky130_hilas_WTAblockSample01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_WTAblockSample01 ;
+  ORIGIN 20.050 0.050 ;
+  SIZE 34.090 BY 12.030 ;
+  OBS
+      LAYER nwell ;
+        RECT -20.050 6.000 -17.490 11.970 ;
+        RECT -20.050 5.950 -17.460 6.000 ;
+      LAYER li1 ;
+        RECT -19.660 0.290 13.350 11.680 ;
+      LAYER met1 ;
+        RECT -19.700 -0.050 13.210 11.980 ;
+      LAYER met2 ;
+        RECT -20.050 0.320 13.370 11.710 ;
+  END
+END sky130_hilas_WTAblockSample01
+
+MACRO sky130_hilas_DAC_bit6_01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_DAC_bit6_01 ;
+  ORIGIN -4.020 -5.240 ;
+  SIZE 16.380 BY 13.680 ;
+  OBS
+      LAYER li1 ;
+        RECT 4.080 5.250 18.310 17.700 ;
+      LAYER met1 ;
+        RECT 4.030 5.240 20.300 11.190 ;
+      LAYER met2 ;
+        RECT 4.030 6.000 17.690 11.210 ;
+  END
+END sky130_hilas_DAC_bit6_01
+
+MACRO sky130_hilas_WTAsinglestage01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_WTAsinglestage01 ;
+  ORIGIN 1.080 0.760 ;
+  SIZE 2.830 BY 1.430 ;
+  OBS
+      LAYER li1 ;
+        RECT -0.970 -0.730 1.730 0.630 ;
+      LAYER met1 ;
+        RECT -0.980 -0.760 1.590 0.670 ;
+      LAYER met2 ;
+        RECT -1.080 -0.760 1.750 0.250 ;
+  END
+END sky130_hilas_WTAsinglestage01
+
+MACRO sky130_hilas_TACoreBlock
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_TACoreBlock ;
+  ORIGIN 4.570 0.970 ;
+  SIZE 9.540 BY 5.020 ;
+  OBS
+      LAYER nwell ;
+        RECT -4.570 2.190 -2.340 4.040 ;
+      LAYER li1 ;
+        RECT -0.080 -0.130 4.580 3.420 ;
+      LAYER met1 ;
+        RECT -3.920 2.120 4.620 4.050 ;
+      LAYER met2 ;
+        RECT 2.410 2.480 4.970 3.360 ;
+  END
+END sky130_hilas_TACoreBlock
+
+MACRO sky130_hilas_pFETdevice01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_pFETdevice01 ;
+  ORIGIN 0.790 0.780 ;
+  SIZE 1.610 BY 1.210 ;
+  OBS
+      LAYER nwell ;
+        RECT -0.790 -0.780 0.820 0.430 ;
+      LAYER li1 ;
+        RECT -0.410 -0.160 0.440 0.170 ;
+  END
+END sky130_hilas_pFETdevice01
+
+MACRO sky130_hilas_pFETdevice01ba
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_pFETdevice01ba ;
+  ORIGIN 0.790 1.140 ;
+  SIZE 1.870 BY 1.570 ;
+  OBS
+      LAYER nwell ;
+        RECT -0.790 -0.780 0.820 0.430 ;
+      LAYER li1 ;
+        RECT 0.780 -1.080 0.990 -0.630 ;
+      LAYER met1 ;
+        RECT 0.770 -1.140 1.000 -0.630 ;
+  END
+END sky130_hilas_pFETdevice01ba
+
+MACRO sky130_hilas_overlapCap01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_overlapCap01 ;
+  ORIGIN 2.870 0.710 ;
+  SIZE 2.870 BY 2.080 ;
+  OBS
+      LAYER li1 ;
+        RECT -2.410 -0.260 -0.460 0.910 ;
+      LAYER met1 ;
+        RECT -1.980 -0.650 -1.710 0.800 ;
+  END
+END sky130_hilas_overlapCap01
+
+MACRO sky130_hilas_swc4x1cellOverlap
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_swc4x1cellOverlap ;
+  ORIGIN 2.640 4.130 ;
+  SIZE 10.080 BY 6.710 ;
+  OBS
+      LAYER nwell ;
+        RECT -2.640 -1.470 -0.900 0.370 ;
+      LAYER li1 ;
+        RECT -2.210 -3.680 7.050 2.120 ;
+      LAYER met1 ;
+        RECT -2.280 -4.070 7.090 2.230 ;
+      LAYER met2 ;
+        RECT -2.640 -3.450 7.440 1.870 ;
+  END
+END sky130_hilas_swc4x1cellOverlap
+
+MACRO sky130_hilas_Tgate4Single01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_Tgate4Single01 ;
+  ORIGIN 0.360 1.410 ;
+  SIZE 4.760 BY 6.050 ;
+  PIN Input1_4
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -0.360 -1.300 1.310 -1.100 ;
+    END
+  END Input1_4
+  PIN Vdd
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 0.380 -1.410 0.580 -0.480 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 0.380 3.710 0.580 4.640 ;
+    END
+  END Vdd
+  PIN Select4
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -0.360 -0.320 -0.040 -0.120 ;
+    END
+  END Select4
+  PIN Select3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -0.360 0.330 -0.040 0.530 ;
+    END
+  END Select3
+  PIN Input1_3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -0.360 1.310 1.310 1.510 ;
+    END
+  END Input1_3
+  PIN Input1_2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -0.360 1.720 1.310 1.920 ;
+    END
+  END Input1_2
+  PIN Select2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -0.360 2.700 -0.040 2.900 ;
+    END
+  END Select2
+  PIN Select1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -0.360 3.350 -0.040 3.550 ;
+    END
+  END Select1
+  PIN Input1_1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -0.360 4.330 1.310 4.530 ;
+    END
+  END Input1_1
+  PIN GND
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 3.890 3.710 4.080 4.640 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 3.890 -1.410 4.080 -0.480 ;
+    END
+  END GND
+  PIN Output1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 3.500 3.350 4.400 3.550 ;
+    END
+  END Output1
+  PIN Output2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 3.500 2.700 4.400 2.900 ;
+    END
+  END Output2
+  PIN Output3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 3.500 0.330 4.400 0.530 ;
+    END
+  END Output3
+  PIN Output4
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 3.500 -0.320 4.400 -0.120 ;
+    END
+  END Output4
+  OBS
+      LAYER li1 ;
+        RECT -0.120 -1.270 4.320 4.500 ;
+      LAYER met1 ;
+        RECT -0.130 3.430 0.100 4.530 ;
+        RECT 0.860 3.430 3.610 4.530 ;
+        RECT -0.130 -0.200 4.100 3.430 ;
+        RECT -0.130 -1.300 0.100 -0.200 ;
+        RECT 0.860 -1.300 3.610 -0.200 ;
+      LAYER met2 ;
+        RECT 1.590 4.050 3.530 4.540 ;
+        RECT -0.070 3.830 3.530 4.050 ;
+        RECT 0.240 2.420 3.220 3.830 ;
+        RECT -0.070 2.200 3.530 2.420 ;
+        RECT 1.590 1.030 3.530 2.200 ;
+        RECT -0.070 0.810 3.530 1.030 ;
+        RECT 0.240 -0.600 3.220 0.810 ;
+        RECT -0.070 -0.820 3.530 -0.600 ;
+        RECT 1.590 -1.310 3.530 -0.820 ;
+  END
+END sky130_hilas_Tgate4Single01
+
+MACRO sky130_hilas_nFETLargePart1
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_nFETLargePart1 ;
+  ORIGIN 1.650 0.310 ;
+  SIZE 3.020 BY 2.720 ;
+  OBS
+      LAYER li1 ;
+        RECT -1.600 -0.130 1.320 2.270 ;
+  END
+END sky130_hilas_nFETLargePart1
+
+MACRO sky130_hilas_swc2x2varactor
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_swc2x2varactor ;
+  ORIGIN 14.660 4.420 ;
+  SIZE 14.680 BY 7.010 ;
+  OBS
+      LAYER nwell ;
+        RECT -14.660 1.750 -12.750 2.270 ;
+      LAYER li1 ;
+        RECT -13.790 -4.040 -0.730 1.890 ;
+  END
+END sky130_hilas_swc2x2varactor
+
+MACRO sky130_hilas_drainSelect01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_drainSelect01 ;
+  ORIGIN -10.720 -0.050 ;
+  SIZE 5.420 BY 6.050 ;
+  PIN drain4
+    PORT
+      LAYER met2 ;
+        RECT 11.070 0.570 12.280 0.740 ;
+    END
+  END drain4
+  PIN drain3
+    PORT
+      LAYER met2 ;
+        RECT 11.070 2.410 11.770 2.580 ;
+    END
+  END drain3
+  PIN drain2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 11.070 3.560 11.740 3.740 ;
+    END
+  END drain2
+  PIN drain1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 11.070 5.420 11.800 5.600 ;
+    END
+  END drain1
+  PIN DrainSelect1
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 15.990 4.980 16.140 5.220 ;
+    END
+  END DrainSelect1
+  PIN DrainSelect2
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 15.990 3.860 16.140 4.100 ;
+    END
+  END DrainSelect2
+  PIN DrainSelect3
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 15.990 2.050 16.140 2.290 ;
+    END
+  END DrainSelect3
+  PIN DrainSelect4
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 15.990 0.930 16.140 1.170 ;
+    END
+  END DrainSelect4
+  PIN Vinj
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 11.080 5.370 11.330 6.100 ;
+    END
+  END Vinj
+  PIN Drain_Mux
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 14.070 5.700 14.300 6.100 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 14.070 0.050 14.300 0.450 ;
+    END
+  END Drain_Mux
+  PIN GND
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 15.420 0.050 15.610 1.080 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 15.420 5.070 15.610 6.100 ;
+    END
+  END GND
+  OBS
+      LAYER nwell ;
+        RECT 10.720 0.050 13.920 6.100 ;
+      LAYER li1 ;
+        RECT 11.120 0.380 15.990 5.770 ;
+      LAYER met1 ;
+        RECT 11.610 5.420 13.790 5.770 ;
+        RECT 14.580 5.420 15.140 5.770 ;
+        RECT 15.890 5.500 15.990 5.770 ;
+        RECT 11.610 5.090 15.140 5.420 ;
+        RECT 11.080 4.790 15.140 5.090 ;
+        RECT 11.080 4.700 15.710 4.790 ;
+        RECT 11.080 4.380 15.990 4.700 ;
+        RECT 11.080 3.580 15.710 4.380 ;
+        RECT 11.080 2.570 15.990 3.580 ;
+        RECT 11.080 1.770 15.710 2.570 ;
+        RECT 11.080 1.450 15.990 1.770 ;
+        RECT 11.080 1.360 15.710 1.450 ;
+        RECT 11.080 0.730 15.140 1.360 ;
+        RECT 11.080 0.050 13.790 0.730 ;
+        RECT 14.580 0.050 15.140 0.730 ;
+        RECT 15.890 0.050 15.990 0.650 ;
+      LAYER met2 ;
+        RECT 12.080 5.140 14.980 5.770 ;
+        RECT 11.740 4.020 14.980 5.140 ;
+        RECT 12.020 3.280 14.980 4.020 ;
+        RECT 11.740 2.860 14.980 3.280 ;
+        RECT 12.050 2.130 14.980 2.860 ;
+        RECT 11.740 1.020 14.980 2.130 ;
+        RECT 12.560 0.380 14.980 1.020 ;
+  END
+END sky130_hilas_drainSelect01
+
+MACRO sky130_hilas_TunVaractorCapcitor
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_TunVaractorCapcitor ;
+  ORIGIN 14.660 4.420 ;
+  SIZE 10.430 BY 7.010 ;
+  OBS
+      LAYER nwell ;
+        RECT -14.660 1.750 -12.750 2.260 ;
+      LAYER li1 ;
+        RECT -13.790 -4.040 -4.890 1.890 ;
+  END
+END sky130_hilas_TunVaractorCapcitor
+
+MACRO sky130_hilas_pFETmirror
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_pFETmirror ;
+  ORIGIN 0.610 -0.820 ;
+  SIZE 2.190 BY 2.030 ;
+  OBS
+      LAYER nwell ;
+        RECT -0.610 1.120 1.580 2.850 ;
+      LAYER li1 ;
+        RECT -0.400 0.820 1.360 2.530 ;
+  END
+END sky130_hilas_pFETmirror
+
+MACRO sky130_hilas_pFETdevice01c
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_pFETdevice01c ;
+  ORIGIN 0.790 1.140 ;
+  SIZE 1.870 BY 1.570 ;
+  OBS
+      LAYER nwell ;
+        RECT -0.790 -0.780 0.820 0.430 ;
+      LAYER li1 ;
+        RECT 0.780 -1.080 0.990 -0.630 ;
+      LAYER met1 ;
+        RECT 0.770 -1.140 1.000 -0.630 ;
+  END
+END sky130_hilas_pFETdevice01c
+
+MACRO sky130_hilas_swc4x1BiasCell
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_swc4x1BiasCell ;
+  ORIGIN 2.660 3.820 ;
+  SIZE 10.110 BY 6.050 ;
+  PIN bias1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.640 1.110 -2.490 1.300 ;
+    END
+  END bias1
+  PIN bias2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.660 0.120 -2.520 0.320 ;
+    END
+  END bias2
+  PIN bias3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.630 -1.870 5.000 -1.710 ;
+    END
+  END bias3
+  PIN bias4
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.630 -2.860 5.000 -2.690 ;
+    END
+  END bias4
+  PIN Vtun
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT -2.280 -0.670 -1.880 2.230 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT -2.280 -3.820 -1.880 -0.940 ;
+    END
+  END Vtun
+  PIN Gate
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 1.770 -3.820 2.150 -1.010 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 1.770 -0.740 2.150 2.230 ;
+    END
+  END Gate
+  PIN Vinj
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 6.920 1.520 7.080 2.230 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 6.920 -3.810 7.080 -3.100 ;
+    END
+  END Vinj
+  PIN Vdd
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 6.110 1.490 6.270 2.230 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 6.110 -3.810 6.270 -3.070 ;
+    END
+  END Vdd
+  PIN GateSelect
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 6.480 -3.810 6.670 -2.820 ;
+    END
+  END GateSelect
+  PIN drain1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 5.260 1.550 7.440 1.730 ;
+    END
+  END drain1
+  PIN Horiz1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 5.260 1.120 7.440 1.300 ;
+    END
+  END Horiz1
+  PIN Horiz2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 5.260 0.120 7.450 0.300 ;
+    END
+  END Horiz2
+  PIN drain2
+    PORT
+      LAYER met2 ;
+        RECT 5.260 -0.310 7.440 -0.130 ;
+    END
+  END drain2
+  PIN drain3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 5.260 -1.460 7.450 -1.280 ;
+    END
+  END drain3
+  PIN Horiz3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 5.260 -1.890 7.440 -1.710 ;
+    END
+  END Horiz3
+  PIN Horiz4
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 5.260 -2.880 7.440 -2.700 ;
+    END
+  END Horiz4
+  PIN drain4
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 5.260 -3.310 7.440 -3.130 ;
+    END
+  END drain4
+  OBS
+      LAYER li1 ;
+        RECT -2.210 -3.480 7.050 1.900 ;
+      LAYER met1 ;
+        RECT -1.600 -3.440 1.490 2.230 ;
+        RECT 2.430 1.210 5.830 2.230 ;
+        RECT 6.550 1.240 6.640 2.230 ;
+        RECT 6.550 1.210 7.090 1.240 ;
+        RECT 2.430 -2.540 7.090 1.210 ;
+        RECT 2.430 -2.790 6.200 -2.540 ;
+        RECT 2.430 -3.440 5.830 -2.790 ;
+        RECT 6.950 -2.820 7.090 -2.540 ;
+      LAYER met2 ;
+        RECT -2.620 1.580 4.980 1.870 ;
+        RECT -2.210 0.840 4.980 1.580 ;
+        RECT -2.210 0.830 5.280 0.840 ;
+        RECT -2.620 0.600 5.280 0.830 ;
+        RECT -2.240 0.580 5.280 0.600 ;
+        RECT -2.240 -0.160 4.980 0.580 ;
+        RECT -2.620 -0.590 4.980 -0.160 ;
+        RECT -2.620 -1.000 5.280 -0.590 ;
+        RECT -2.620 -1.430 4.980 -1.000 ;
+        RECT -2.620 -2.170 4.980 -2.150 ;
+        RECT -2.620 -2.410 5.280 -2.170 ;
+        RECT -2.620 -3.450 4.980 -3.140 ;
+  END
+END sky130_hilas_swc4x1BiasCell
+
+MACRO sky130_hilas_nMirror03
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_nMirror03 ;
+  ORIGIN 0.590 0.050 ;
+  SIZE 1.840 BY 1.270 ;
+  OBS
+      LAYER li1 ;
+        RECT -0.410 0.090 1.140 1.080 ;
+      LAYER met1 ;
+        RECT -0.290 0.100 1.010 1.070 ;
+      LAYER met2 ;
+        RECT -0.590 0.100 0.070 1.080 ;
+  END
+END sky130_hilas_nMirror03
+
+MACRO sky130_hilas_FGHugeVaractorCapacitor01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_FGHugeVaractorCapacitor01 ;
+  ORIGIN 5.560 8.160 ;
+  SIZE 10.290 BY 5.990 ;
+  OBS
+      LAYER nwell ;
+        RECT -5.560 -6.770 4.130 -2.170 ;
+        RECT -5.560 -8.160 4.730 -6.770 ;
+      LAYER li1 ;
+        RECT 4.100 -7.860 4.270 -7.190 ;
+      LAYER met1 ;
+        RECT 4.070 -7.700 4.310 -7.340 ;
+  END
+END sky130_hilas_FGHugeVaractorCapacitor01
+
+MACRO sky130_hilas_nFETmirrorPairs
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_nFETmirrorPairs ;
+  ORIGIN 0.330 1.920 ;
+  SIZE 1.660 BY 2.750 ;
+  OBS
+      LAYER li1 ;
+        RECT -0.120 -1.920 1.140 0.830 ;
+  END
+END sky130_hilas_nFETmirrorPairs
+
+MACRO sky130_hilas_TgateSingle01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_TgateSingle01 ;
+  ORIGIN 2.630 1.810 ;
+  SIZE 4.760 BY 1.520 ;
+  OBS
+      LAYER li1 ;
+        RECT -2.390 -1.670 2.050 -0.400 ;
+      LAYER met1 ;
+        RECT -2.400 -1.810 1.830 -0.290 ;
+      LAYER met2 ;
+        RECT -2.630 -1.710 2.130 -0.430 ;
+  END
+END sky130_hilas_TgateSingle01
+
+MACRO sky130_hilas_TA2SignalBiasCell
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_TA2SignalBiasCell ;
+  ORIGIN 5.260 -1.400 ;
+  SIZE 8.450 BY 6.050 ;
+  PIN Vout_Amp2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 2.860 4.740 3.190 4.970 ;
+    END
+  END Vout_Amp2
+  PIN Vout_Amp1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 2.850 3.920 3.190 4.140 ;
+    END
+  END Vout_Amp1
+  PIN GND
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 1.230 1.400 1.570 2.140 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 1.230 6.750 1.570 7.450 ;
+    END
+  END GND
+  PIN Vdd
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 1.900 1.400 2.170 3.050 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 1.900 5.810 2.170 7.450 ;
+    END
+    PORT
+      LAYER met2 ;
+        RECT -4.900 6.960 -4.660 7.450 ;
+    END
+  END Vdd
+  PIN Vin-_Amp2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -1.300 7.180 -1.050 7.440 ;
+    END
+  END Vin-_Amp2
+  PIN Vin+_amp2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -1.260 4.510 -0.910 4.740 ;
+    END
+  END Vin+_amp2
+  PIN Vin+_amp1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.820 4.100 -2.470 4.340 ;
+    END
+  END Vin+_amp1
+  PIN Vin-_Amp1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.860 1.420 -2.240 1.670 ;
+    END
+  END Vin-_Amp1
+  PIN Vbias2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -5.260 1.430 -3.990 1.660 ;
+    END
+  END Vbias2
+  PIN Vbias1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -5.260 4.100 -4.220 4.340 ;
+    END
+  END Vbias1
+  OBS
+      LAYER nwell ;
+        RECT -5.260 7.440 -1.650 7.450 ;
+        RECT -5.260 1.410 -0.090 7.440 ;
+      LAYER li1 ;
+        RECT -4.970 1.400 3.050 7.450 ;
+      LAYER met1 ;
+        RECT -4.980 6.470 0.950 7.430 ;
+        RECT -4.980 5.530 1.620 6.470 ;
+        RECT 2.450 5.530 2.890 7.430 ;
+        RECT -4.980 3.330 2.890 5.530 ;
+        RECT -4.980 2.420 1.620 3.330 ;
+        RECT -4.980 1.420 0.950 2.420 ;
+        RECT 2.450 1.420 2.890 3.330 ;
+      LAYER met2 ;
+        RECT -4.380 6.900 -1.580 7.440 ;
+        RECT -0.770 6.900 2.980 7.440 ;
+        RECT -4.380 6.680 2.980 6.900 ;
+        RECT -4.980 5.250 2.980 6.680 ;
+        RECT -4.980 5.020 2.580 5.250 ;
+        RECT -4.980 4.620 -1.540 5.020 ;
+        RECT -3.940 3.820 -3.100 4.620 ;
+        RECT -2.190 4.230 -1.540 4.620 ;
+        RECT -0.630 4.460 2.580 5.020 ;
+        RECT -0.630 4.420 2.980 4.460 ;
+        RECT -0.630 4.230 2.570 4.420 ;
+        RECT -2.190 3.820 2.570 4.230 ;
+        RECT -4.980 3.640 2.570 3.820 ;
+        RECT -4.980 1.950 2.980 3.640 ;
+        RECT -4.980 1.940 -3.140 1.950 ;
+        RECT -3.710 1.410 -3.140 1.940 ;
+        RECT -1.960 1.410 2.980 1.950 ;
+  END
+END sky130_hilas_TA2SignalBiasCell
+
+MACRO sky130_hilas_WTA4stage01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_WTA4stage01 ;
+  ORIGIN 0.540 -0.010 ;
+  SIZE 2.830 BY 5.340 ;
+  OBS
+      LAYER li1 ;
+        RECT -0.430 0.040 2.270 5.320 ;
+      LAYER met1 ;
+        RECT -0.440 0.010 2.130 5.350 ;
+      LAYER met2 ;
+        RECT -0.540 0.010 2.290 5.350 ;
+  END
+END sky130_hilas_WTA4stage01
+
+MACRO sky130_hilas_TgateVinj01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_TgateVinj01 ;
+  ORIGIN 2.100 0.400 ;
+  SIZE 5.420 BY 1.590 ;
+  OBS
+      LAYER nwell ;
+        RECT -2.100 -0.400 1.100 1.190 ;
+      LAYER li1 ;
+        RECT -1.700 -0.070 3.170 1.040 ;
+      LAYER met1 ;
+        RECT -1.740 -0.400 3.320 1.190 ;
+      LAYER met2 ;
+        RECT -0.570 -0.070 2.160 0.250 ;
+  END
+END sky130_hilas_TgateVinj01
+
+MACRO sky130_hilas_capacitorSize04
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_capacitorSize04 ;
+  ORIGIN -14.150 0.180 ;
+  SIZE 5.780 BY 5.290 ;
+  PIN Cap1Term02
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 19.570 3.850 19.920 4.130 ;
+    END
+  END Cap1Term02
+  PIN Cap2Term02
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 19.570 0.850 19.930 1.130 ;
+    END
+  END Cap2Term02
+  PIN Cap2Term01
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 14.170 0.850 14.450 1.130 ;
+    END
+  END Cap2Term01
+  PIN Cap1Term01
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 14.170 3.850 14.420 4.130 ;
+    END
+  END Cap1Term01
+  OBS
+      LAYER met2 ;
+        RECT 14.170 4.410 19.920 4.980 ;
+        RECT 14.700 3.570 19.290 4.410 ;
+        RECT 14.170 1.410 19.920 3.570 ;
+        RECT 14.730 0.570 19.290 1.410 ;
+        RECT 14.170 -0.050 19.920 0.570 ;
+      LAYER met3 ;
+        RECT 14.150 -0.180 19.810 5.110 ;
+      LAYER met4 ;
+        RECT 14.240 0.560 19.770 4.310 ;
+  END
+END sky130_hilas_capacitorSize04
+
+MACRO sky130_hilas_TAcoreblock
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_TAcoreblock ;
+  ORIGIN -4.630 -1.990 ;
+  SIZE 2.190 BY 4.770 ;
+  OBS
+      LAYER nwell ;
+        RECT 4.630 5.030 6.820 6.760 ;
+      LAYER li1 ;
+        RECT 4.840 1.990 6.600 6.440 ;
+  END
+END sky130_hilas_TAcoreblock
+
+MACRO sky130_hilas_nFETLarge
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_nFETLarge ;
+  ORIGIN -0.640 -4.200 ;
+  SIZE 4.370 BY 5.830 ;
+  PIN Gate
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 0.640 4.200 0.960 5.020 ;
+    END
+  END Gate
+  PIN Source
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 0.880 5.320 1.200 9.790 ;
+    END
+  END Source
+  PIN Drain
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 4.660 4.650 5.010 9.080 ;
+    END
+  END Drain
+  OBS
+      LAYER li1 ;
+        RECT 0.830 4.200 4.600 9.780 ;
+      LAYER met1 ;
+        RECT 0.930 4.200 4.580 9.780 ;
+      LAYER met2 ;
+        RECT 1.480 9.360 4.780 9.800 ;
+        RECT 1.480 5.040 4.380 9.360 ;
+        RECT 1.240 4.370 4.380 5.040 ;
+        RECT 1.240 4.200 4.780 4.370 ;
+  END
+END sky130_hilas_nFETLarge
+
+MACRO sky130_hilas_mcap2m4
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_mcap2m4 ;
+  ORIGIN 0.360 0.360 ;
+  SIZE 0.790 BY 0.750 ;
+  OBS
+      LAYER met2 ;
+        RECT -0.140 -0.160 0.230 0.240 ;
+      LAYER met3 ;
+        RECT -0.360 -0.360 0.430 0.390 ;
+      LAYER met4 ;
+        RECT -0.270 -0.300 0.390 0.360 ;
+  END
+END sky130_hilas_mcap2m4
+
+MACRO sky130_hilas_all
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_all ;
+  ORIGIN 6.020 4.410 ;
+  SIZE 1.770 BY 6.670 ;
+  OBS
+      LAYER nwell ;
+        RECT -6.020 -1.500 -4.250 -0.670 ;
+      LAYER li1 ;
+        RECT -5.690 -4.040 -4.890 1.890 ;
+      LAYER met1 ;
+        RECT -5.690 -1.210 -4.900 2.000 ;
+      LAYER met2 ;
+        RECT -5.720 -1.240 -4.530 2.000 ;
+  END
+END sky130_hilas_all
+
+MACRO sky130_hilas_nOverlapCap01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_nOverlapCap01 ;
+  ORIGIN 0.620 0.430 ;
+  SIZE 1.290 BY 1.290 ;
+  OBS
+      LAYER li1 ;
+        RECT -0.060 -0.220 0.110 0.670 ;
+      LAYER met1 ;
+        RECT -0.090 -0.430 0.140 0.860 ;
+  END
+END sky130_hilas_nOverlapCap01
+
+MACRO sky130_hilas_pFETmed
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_pFETmed ;
+  ORIGIN -1.470 0.220 ;
+  SIZE 1.190 BY 2.870 ;
+  OBS
+      LAYER nwell ;
+        RECT 1.470 -0.220 2.660 2.650 ;
+      LAYER li1 ;
+        RECT 1.710 -0.080 2.430 2.420 ;
+  END
+END sky130_hilas_pFETmed
+
+MACRO sky130_hilas_nFETmed
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_nFETmed ;
+  ORIGIN 0.120 0.440 ;
+  SIZE 0.820 BY 2.720 ;
+  OBS
+      LAYER li1 ;
+        RECT -0.070 -0.260 0.650 2.140 ;
+  END
+END sky130_hilas_nFETmed
+
+MACRO sky130_hilas_DAC6TransistorStack01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_DAC6TransistorStack01 ;
+  ORIGIN -0.280 1.740 ;
+  SIZE 1.720 BY 5.650 ;
+  OBS
+      LAYER nwell ;
+        RECT 0.280 -1.740 1.890 3.910 ;
+      LAYER li1 ;
+        RECT 0.660 -0.520 1.510 2.690 ;
+  END
+END sky130_hilas_DAC6TransistorStack01
+
+MACRO sky130_hilas_DoubleTGate01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_DoubleTGate01 ;
+  ORIGIN -10.720 -0.050 ;
+  SIZE 5.420 BY 6.050 ;
+  OBS
+      LAYER nwell ;
+        RECT 10.720 0.050 13.920 6.100 ;
+      LAYER li1 ;
+        RECT 11.120 0.380 15.990 5.770 ;
+      LAYER met1 ;
+        RECT 11.080 0.050 16.140 6.100 ;
+      LAYER met2 ;
+        RECT 11.070 0.380 14.980 5.770 ;
+  END
+END sky130_hilas_DoubleTGate01
+
+MACRO sky130_hilas_DAC6TransistorStack01c
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_DAC6TransistorStack01c ;
+  ORIGIN -0.280 1.740 ;
+  SIZE 1.870 BY 5.650 ;
+  OBS
+      LAYER nwell ;
+        RECT 0.280 -1.740 1.890 3.910 ;
+      LAYER li1 ;
+        RECT 0.660 -0.520 2.060 2.690 ;
+      LAYER met1 ;
+        RECT 1.840 -0.540 2.070 -0.030 ;
+  END
+END sky130_hilas_DAC6TransistorStack01c
+
+MACRO sky130_hilas_TgateSingle01Part1
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_TgateSingle01Part1 ;
+  ORIGIN -2.570 1.810 ;
+  SIZE 1.880 BY 1.520 ;
+  OBS
+      LAYER li1 ;
+        RECT 2.570 -1.670 4.370 -0.680 ;
+      LAYER met1 ;
+        RECT 2.900 -1.810 4.150 -0.290 ;
+      LAYER met2 ;
+        RECT 2.570 -1.700 4.450 -0.490 ;
+  END
+END sky130_hilas_TgateSingle01Part1
+
+MACRO sky130_hilas_pFETLarge
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_pFETLarge ;
+  ORIGIN -0.640 -4.190 ;
+  SIZE 4.640 BY 5.990 ;
+  PIN Gate
+    PORT
+      LAYER met2 ;
+        RECT 0.640 4.200 0.960 5.020 ;
+    END
+  END Gate
+  PIN Source
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 0.880 5.320 1.200 9.790 ;
+    END
+  END Source
+  PIN Drain
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 4.660 4.650 5.010 9.080 ;
+    END
+  END Drain
+  PIN Well
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 4.780 9.870 5.040 10.180 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 4.780 4.190 5.040 9.360 ;
+    END
+  END Well
+  OBS
+      LAYER li1 ;
+        RECT 0.830 4.200 5.060 9.870 ;
+      LAYER met1 ;
+        RECT 0.930 4.200 4.500 9.980 ;
+      LAYER met2 ;
+        RECT 1.480 9.360 4.780 9.800 ;
+        RECT 1.480 5.040 4.380 9.360 ;
+        RECT 1.240 4.370 4.380 5.040 ;
+        RECT 1.240 4.200 4.780 4.370 ;
+  END
+END sky130_hilas_pFETLarge
+
+MACRO sky130_hilas_FGBias2x1cell
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_FGBias2x1cell ;
+  ORIGIN 3.960 3.820 ;
+  SIZE 11.530 BY 6.050 ;
+  PIN Vtun
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT -3.610 0.440 -3.190 2.230 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT -3.610 -3.820 -3.190 -1.560 ;
+    END
+  END Vtun
+  PIN GND
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT -1.130 -0.770 -0.900 2.230 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT -1.130 -3.820 -0.900 -0.940 ;
+    END
+  END GND
+  PIN gate_control
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 0.090 0.940 0.320 2.230 ;
+    END
+  END gate_control
+  PIN Gate_control
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 0.090 -3.820 0.320 -2.630 ;
+    END
+  END Gate_control
+  PIN drain1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.960 1.550 5.110 1.730 ;
+    END
+  END drain1
+  PIN drain4
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -3.960 -3.300 5.110 -3.150 ;
+    END
+  END drain4
+  PIN Vinj
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 7.050 1.520 7.330 2.230 ;
+    END
+  END Vinj
+  PIN output1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 5.530 0.490 7.570 0.710 ;
+    END
+  END output1
+  PIN output2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 5.530 -2.260 7.570 -2.050 ;
+    END
+  END output2
+  OBS
+      LAYER li1 ;
+        RECT -3.520 -3.490 7.180 1.900 ;
+      LAYER met1 ;
+        RECT -2.910 0.160 -1.410 2.230 ;
+        RECT -3.610 -1.280 -1.410 0.160 ;
+        RECT -2.910 -3.820 -1.410 -1.280 ;
+        RECT -0.620 0.660 -0.190 2.230 ;
+        RECT 0.600 1.240 6.770 2.230 ;
+        RECT 0.600 0.660 7.410 1.240 ;
+        RECT -0.620 -2.350 7.410 0.660 ;
+        RECT -0.620 -3.820 -0.190 -2.350 ;
+        RECT 0.600 -3.820 7.410 -2.350 ;
+      LAYER met2 ;
+        RECT 5.390 1.270 7.570 1.930 ;
+        RECT 4.840 0.990 7.570 1.270 ;
+        RECT 4.840 0.210 5.250 0.990 ;
+        RECT 4.840 -1.770 7.570 0.210 ;
+        RECT 4.840 -2.540 5.250 -1.770 ;
+        RECT 4.840 -2.870 7.570 -2.540 ;
+        RECT 5.390 -3.520 7.570 -2.870 ;
+  END
+END sky130_hilas_FGBias2x1cell
+
+MACRO sky130_hilas_pFETdevice01d
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_pFETdevice01d ;
+  ORIGIN 0.920 1.020 ;
+  SIZE 1.840 BY 1.450 ;
+  OBS
+      LAYER li1 ;
+        RECT -0.860 -1.020 0.860 0.320 ;
+      LAYER met1 ;
+        RECT -0.870 -1.020 0.870 0.320 ;
+  END
+END sky130_hilas_pFETdevice01d
+
+MACRO sky130_hilas_pTransistorPair
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_pTransistorPair ;
+  ORIGIN -1.330 4.400 ;
+  SIZE 1.870 BY 6.050 ;
+  OBS
+      LAYER nwell ;
+        RECT 1.330 -4.390 3.190 1.650 ;
+      LAYER li1 ;
+        RECT 1.620 -4.400 3.030 1.180 ;
+      LAYER met1 ;
+        RECT 1.610 -4.380 3.070 -0.640 ;
+      LAYER met2 ;
+        RECT 1.610 -4.390 3.200 -1.410 ;
+  END
+END sky130_hilas_pTransistorPair
+
+MACRO sky130_hilas_TA2Cell_1FG_Strong
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_TA2Cell_1FG_Strong ;
+  ORIGIN 26.170 -1.400 ;
+  SIZE 28.100 BY 6.050 ;
+  PIN Vin+_Amp2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.520 4.510 -2.170 4.750 ;
+    END
+  END Vin+_Amp2
+  PIN Vin-_Amp2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.600 7.180 -1.940 7.420 ;
+    END
+  END Vin-_Amp2
+  PIN Vdd
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 0.630 7.300 0.910 7.450 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 0.640 1.400 0.910 3.050 ;
+    END
+  END Vdd
+  PIN GateColSelect
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT -4.160 5.920 -3.970 7.450 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT -4.160 1.400 -3.970 2.930 ;
+    END
+  END GateColSelect
+  PIN Vin+_Amp1
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT -23.530 7.020 -23.320 7.450 ;
+    END
+  END Vin+_Amp1
+  PIN GND
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT -0.030 6.750 0.310 7.450 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT -0.030 1.400 0.310 2.140 ;
+    END
+  END GND
+  PIN output2
+    PORT
+      LAYER met2 ;
+        RECT 1.750 3.920 1.930 4.150 ;
+    END
+  END output2
+  PIN output1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 1.600 4.740 1.930 4.970 ;
+    END
+  END output1
+  PIN Vinj
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT -3.720 6.740 -3.440 7.450 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT -3.720 1.400 -3.440 2.110 ;
+    END
+  END Vinj
+  OBS
+      LAYER nwell ;
+        RECT -26.170 1.410 -22.860 7.440 ;
+      LAYER li1 ;
+        RECT -25.780 1.650 1.790 7.450 ;
+      LAYER met1 ;
+        RECT -25.820 6.740 -23.810 7.450 ;
+        RECT -23.040 6.740 -4.440 7.450 ;
+        RECT -25.820 5.640 -4.440 6.740 ;
+        RECT -3.160 6.470 -0.310 7.450 ;
+        RECT 1.190 7.020 1.630 7.450 ;
+        RECT 0.590 6.470 1.630 7.020 ;
+        RECT -3.160 6.460 1.630 6.470 ;
+        RECT -3.690 5.640 1.630 6.460 ;
+        RECT -25.820 3.330 1.630 5.640 ;
+        RECT -25.820 3.210 0.360 3.330 ;
+        RECT -25.820 1.400 -4.440 3.210 ;
+        RECT -3.690 2.420 0.360 3.210 ;
+        RECT -3.690 2.390 -0.310 2.420 ;
+        RECT -3.160 1.400 -0.310 2.390 ;
+        RECT 1.190 1.400 1.630 3.330 ;
+      LAYER met2 ;
+        RECT -26.170 6.900 -2.880 7.440 ;
+        RECT -1.660 6.900 1.750 7.440 ;
+        RECT -26.170 5.250 1.750 6.900 ;
+        RECT -26.170 5.030 1.320 5.250 ;
+        RECT -26.170 4.230 -2.800 5.030 ;
+        RECT -1.890 4.460 1.320 5.030 ;
+        RECT -1.890 4.430 1.750 4.460 ;
+        RECT -1.890 4.230 1.470 4.430 ;
+        RECT -26.170 3.640 1.470 4.230 ;
+        RECT -26.170 1.690 1.750 3.640 ;
+  END
+END sky130_hilas_TA2Cell_1FG_Strong
+
+MACRO sky130_hilas_m22m4
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_m22m4 ;
+  ORIGIN 0.360 0.360 ;
+  SIZE 0.790 BY 0.750 ;
+  OBS
+      LAYER met2 ;
+        RECT -0.140 -0.160 0.230 0.240 ;
+      LAYER met3 ;
+        RECT -0.360 -0.360 0.430 0.390 ;
+      LAYER met4 ;
+        RECT -0.270 -0.300 0.390 0.360 ;
+  END
+END sky130_hilas_m22m4
+
+MACRO sky130_hilas_DAC6bit01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_DAC6bit01 ;
+  ORIGIN -0.230 0.060 ;
+  SIZE 33.400 BY 13.680 ;
+  OBS
+      LAYER li1 ;
+        RECT 0.490 -0.050 31.540 12.400 ;
+      LAYER met1 ;
+        RECT 0.440 -0.060 33.530 5.890 ;
+      LAYER met2 ;
+        RECT 0.230 0.700 30.920 5.910 ;
+  END
+END sky130_hilas_DAC6bit01
+
+MACRO sky130_hilas_swc4x2cellOverlap
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_swc4x2cellOverlap ;
+  ORIGIN 10.010 -7.280 ;
+  SIZE 17.980 BY 6.050 ;
+  PIN Vert1
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT -8.840 12.590 -8.680 13.330 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT -8.840 7.290 -8.680 8.030 ;
+    END
+  END Vert1
+  PIN Horiz1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -10.010 12.220 -7.830 12.400 ;
+    END
+    PORT
+      LAYER met2 ;
+        RECT 5.780 12.220 7.970 12.400 ;
+    END
+  END Horiz1
+  PIN drain1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -10.010 12.650 -7.830 12.830 ;
+    END
+    PORT
+      LAYER met2 ;
+        RECT 5.780 12.650 7.960 12.830 ;
+    END
+  END drain1
+  PIN Horiz2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -10.010 11.220 -7.830 11.400 ;
+    END
+    PORT
+      LAYER met2 ;
+        RECT 5.780 11.220 7.970 11.400 ;
+    END
+  END Horiz2
+  PIN drain2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -10.010 10.790 -7.830 10.970 ;
+    END
+    PORT
+      LAYER met2 ;
+        RECT 5.780 10.790 7.970 10.970 ;
+    END
+  END drain2
+  PIN drain3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -10.010 9.640 -7.830 9.820 ;
+    END
+    PORT
+      LAYER met2 ;
+        RECT 5.780 9.640 7.960 9.820 ;
+    END
+  END drain3
+  PIN Horiz3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -10.010 9.210 -7.830 9.390 ;
+    END
+    PORT
+      LAYER met2 ;
+        RECT 5.780 9.210 7.960 9.390 ;
+    END
+  END Horiz3
+  PIN Horiz4
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -10.010 8.220 -7.830 8.400 ;
+    END
+    PORT
+      LAYER met2 ;
+        RECT 5.780 8.220 7.960 8.400 ;
+    END
+  END Horiz4
+  PIN drain4
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -10.010 7.790 -7.830 7.970 ;
+    END
+  END drain4
+  PIN Vinj
+    PORT
+      LAYER met1 ;
+        RECT -9.650 12.620 -9.490 13.330 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT -9.650 7.290 -9.490 8.000 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 7.440 7.290 7.600 8.000 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 7.440 12.620 7.600 13.330 ;
+    END
+  END Vinj
+  PIN GateSelect1
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT -9.240 12.340 -9.050 13.330 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT -9.240 7.290 -9.050 8.280 ;
+    END
+  END GateSelect1
+  PIN Vert2
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 6.630 12.590 6.790 13.330 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 6.630 7.290 6.790 8.030 ;
+    END
+  END Vert2
+  PIN GateSelect2
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 7.000 12.340 7.190 13.330 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 7.000 7.290 7.190 8.280 ;
+    END
+  END GateSelect2
+  PIN drain
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 5.780 7.790 7.960 7.970 ;
+    END
+  END drain
+  PIN Gate2
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 3.280 12.940 3.520 13.330 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 3.280 7.280 3.520 7.670 ;
+    END
+  END Gate2
+  PIN Gate1
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT -5.570 12.940 -5.320 13.330 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT -5.570 7.280 -5.320 7.670 ;
+    END
+  END Gate1
+  PIN Vtun
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT -1.960 12.980 -1.660 13.330 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT -1.960 7.280 -1.660 7.610 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT -0.380 7.280 -0.080 7.610 ;
+    END
+  END Vtun
+  OBS
+      LAYER nwell ;
+        RECT -10.010 7.300 -3.450 13.320 ;
+      LAYER li1 ;
+        RECT -9.620 7.610 7.570 13.010 ;
+      LAYER met1 ;
+        RECT -8.400 12.660 -5.850 13.330 ;
+        RECT -5.040 12.700 -2.240 13.330 ;
+        RECT -1.380 12.700 3.000 13.330 ;
+        RECT -5.040 12.660 3.000 12.700 ;
+        RECT 3.800 12.660 6.350 13.330 ;
+        RECT -9.660 12.060 -9.520 12.340 ;
+        RECT -8.400 12.310 6.350 12.660 ;
+        RECT -8.770 12.060 6.720 12.310 ;
+        RECT 7.470 12.060 7.610 12.340 ;
+        RECT -9.660 8.560 7.610 12.060 ;
+        RECT -9.660 8.280 -9.520 8.560 ;
+        RECT -8.770 8.310 6.720 8.560 ;
+        RECT -8.400 7.950 6.350 8.310 ;
+        RECT 7.470 8.280 7.610 8.560 ;
+        RECT -8.400 7.470 -5.850 7.950 ;
+        RECT -5.040 7.890 3.000 7.950 ;
+        RECT -5.040 7.470 -2.240 7.890 ;
+        RECT -1.380 7.470 -0.660 7.890 ;
+        RECT 0.200 7.470 3.000 7.890 ;
+        RECT 3.800 7.470 6.350 7.950 ;
+      LAYER met2 ;
+        RECT -7.550 11.940 5.500 12.970 ;
+        RECT -7.850 11.680 5.800 11.940 ;
+        RECT -7.550 10.510 5.500 11.680 ;
+        RECT -7.850 10.100 5.800 10.510 ;
+        RECT -7.550 8.930 5.500 10.100 ;
+        RECT -7.850 8.680 5.800 8.930 ;
+        RECT -7.550 7.650 5.500 8.680 ;
+  END
+END sky130_hilas_swc4x2cellOverlap
+
+MACRO sky130_hilas_TACoreBlock2
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_TACoreBlock2 ;
+  ORIGIN 0.610 1.920 ;
+  SIZE 2.190 BY 4.770 ;
+  OBS
+      LAYER nwell ;
+        RECT -0.610 1.120 1.580 2.850 ;
+      LAYER li1 ;
+        RECT -0.400 -1.920 1.360 2.530 ;
+  END
+END sky130_hilas_TACoreBlock2
+
+MACRO sky130_hilas_nDiffThOxContact
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_nDiffThOxContact ;
+  ORIGIN 0.260 -0.130 ;
+  SIZE 0.670 BY 0.290 ;
+  OBS
+      LAYER li1 ;
+        RECT -0.260 0.180 0.410 0.350 ;
+      LAYER met1 ;
+        RECT -0.120 0.150 0.270 0.380 ;
+  END
+END sky130_hilas_nDiffThOxContact
+
+MACRO sky130_hilas_capacitorSize01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_capacitorSize01 ;
+  ORIGIN -14.140 0.480 ;
+  SIZE 10.420 BY 5.830 ;
+  PIN CapTerm02
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 24.200 2.330 24.560 2.610 ;
+    END
+  END CapTerm02
+  PIN CapTerm01
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 14.160 2.320 14.430 2.600 ;
+    END
+  END CapTerm01
+  OBS
+      LAYER met2 ;
+        RECT 14.140 2.890 24.560 4.980 ;
+        RECT 14.140 2.880 23.920 2.890 ;
+        RECT 14.710 2.050 23.920 2.880 ;
+        RECT 14.710 2.040 24.560 2.050 ;
+        RECT 14.140 -0.050 24.560 2.040 ;
+      LAYER met3 ;
+        RECT 14.160 -0.480 24.440 5.350 ;
+      LAYER met4 ;
+        RECT 14.250 0.620 24.400 2.790 ;
+  END
+END sky130_hilas_capacitorSize01
+
+MACRO sky130_hilas_TgateDouble01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_TgateDouble01 ;
+  ORIGIN 2.630 1.810 ;
+  SIZE 7.080 BY 1.520 ;
+  OBS
+      LAYER li1 ;
+        RECT -2.390 -1.680 4.370 -0.400 ;
+      LAYER met1 ;
+        RECT -2.400 -1.810 4.150 -0.290 ;
+      LAYER met2 ;
+        RECT -2.630 -1.710 4.450 -0.430 ;
+  END
+END sky130_hilas_TgateDouble01
+
+MACRO sky130_hilas_capacitorSize02
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_capacitorSize02 ;
+  ORIGIN -14.140 0.480 ;
+  SIZE 7.970 BY 5.830 ;
+  PIN CapTerm02
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 21.830 2.340 22.110 2.620 ;
+    END
+  END CapTerm02
+  PIN CapTerm01
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 14.160 2.320 14.430 2.600 ;
+    END
+  END CapTerm01
+  OBS
+      LAYER met2 ;
+        RECT 14.140 2.900 22.110 4.980 ;
+        RECT 14.140 2.880 21.550 2.900 ;
+        RECT 14.710 2.060 21.550 2.880 ;
+        RECT 14.710 2.040 22.110 2.060 ;
+        RECT 14.140 -0.050 22.110 2.040 ;
+      LAYER met3 ;
+        RECT 14.160 -0.480 22.070 5.350 ;
+      LAYER met4 ;
+        RECT 14.250 0.620 22.030 2.800 ;
+  END
+END sky130_hilas_capacitorSize02
+
+MACRO sky130_hilas_pFETdevice01aa
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_pFETdevice01aa ;
+  ORIGIN 0.800 0.780 ;
+  SIZE 1.720 BY 1.210 ;
+  OBS
+      LAYER nwell ;
+        RECT -0.800 -0.780 0.810 0.430 ;
+  END
+END sky130_hilas_pFETdevice01aa
+
+MACRO sky130_hilas_wellContact
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_wellContact ;
+  ORIGIN 14.490 4.410 ;
+  SIZE 1.740 BY 1.860 ;
+  OBS
+      LAYER nwell ;
+        RECT -14.490 -4.400 -12.750 -2.560 ;
+      LAYER li1 ;
+        RECT -14.060 -3.950 -13.510 -3.520 ;
+      LAYER met1 ;
+        RECT -14.120 -4.410 -13.730 -2.550 ;
+  END
+END sky130_hilas_wellContact
+
+MACRO sky130_hilas_DAC6TransistorStack01b
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_DAC6TransistorStack01b ;
+  ORIGIN -0.150 1.740 ;
+  SIZE 1.850 BY 5.650 ;
+  OBS
+      LAYER li1 ;
+        RECT 0.210 -0.520 1.930 2.690 ;
+      LAYER met1 ;
+        RECT 0.200 0.540 1.940 1.880 ;
+  END
+END sky130_hilas_DAC6TransistorStack01b
+
+MACRO sky130_hilas_WTA4Stage01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_WTA4Stage01 ;
+  ORIGIN 11.210 0.430 ;
+  SIZE 14.170 BY 6.050 ;
+  PIN GND
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 2.570 4.530 2.800 5.620 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 2.570 -0.430 2.800 0.450 ;
+    END
+  END GND
+  PIN CommonNode
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 1.310 3.960 1.540 5.620 ;
+    END
+  END CommonNode
+  PIN CommonMode
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT 1.310 -0.430 1.540 1.020 ;
+    END
+  END CommonMode
+  PIN output1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 0.670 4.260 2.960 4.420 ;
+    END
+  END output1
+  PIN output2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 0.670 3.330 2.960 3.490 ;
+    END
+  END output2
+  PIN output3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 0.670 1.490 2.960 1.650 ;
+    END
+  END output3
+  PIN output4
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 0.670 0.560 2.960 0.720 ;
+    END
+  END output4
+  PIN input1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -11.120 4.020 -10.970 4.690 ;
+    END
+  END input1
+  PIN input2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -11.120 3.520 -10.860 3.780 ;
+    END
+  END input2
+  PIN input3
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -11.180 0.980 -10.980 1.680 ;
+    END
+  END input3
+  PIN input4
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -11.190 0.470 -10.910 0.740 ;
+    END
+  END input4
+  OBS
+      LAYER li1 ;
+        RECT -11.200 -0.380 2.940 5.290 ;
+      LAYER met1 ;
+        RECT -11.210 3.680 1.030 5.620 ;
+        RECT 1.820 4.250 2.290 5.620 ;
+        RECT 1.820 3.680 2.800 4.250 ;
+        RECT -11.210 1.300 2.800 3.680 ;
+        RECT -11.210 -0.430 1.030 1.300 ;
+        RECT 1.820 0.730 2.800 1.300 ;
+        RECT 1.820 -0.430 2.290 0.730 ;
+      LAYER met2 ;
+        RECT -11.210 4.970 0.690 5.340 ;
+        RECT -10.690 4.700 0.690 4.970 ;
+        RECT -10.690 4.060 0.390 4.700 ;
+        RECT -10.580 3.980 0.390 4.060 ;
+        RECT -10.580 3.770 0.690 3.980 ;
+        RECT -10.580 3.240 0.390 3.770 ;
+        RECT -11.210 3.050 0.390 3.240 ;
+        RECT -11.210 1.960 0.690 3.050 ;
+        RECT -10.700 1.930 0.690 1.960 ;
+        RECT -10.700 1.210 0.390 1.930 ;
+        RECT -10.700 1.020 0.690 1.210 ;
+        RECT -10.630 1.000 0.690 1.020 ;
+        RECT -11.210 0.740 -10.900 0.770 ;
+        RECT -11.210 0.470 -11.190 0.740 ;
+        RECT -11.210 0.440 -10.900 0.470 ;
+        RECT -10.630 0.280 0.390 1.000 ;
+        RECT -10.630 0.190 0.690 0.280 ;
+        RECT -11.210 -0.410 0.690 0.190 ;
+  END
+END sky130_hilas_WTA4Stage01
+
+MACRO sky130_hilas_FGVaractorCapacitor
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_FGVaractorCapacitor ;
+  ORIGIN 9.570 3.950 ;
+  SIZE 2.230 BY 1.860 ;
+  OBS
+      LAYER nwell ;
+        RECT -9.570 -3.950 -7.340 -2.100 ;
+      LAYER met1 ;
+        RECT -8.920 -3.950 -8.540 -2.090 ;
+  END
+END sky130_hilas_FGVaractorCapacitor
+
+MACRO sky130_hilas_horizTransCell01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_horizTransCell01 ;
+  ORIGIN 4.760 -0.480 ;
+  SIZE 4.430 BY 3.110 ;
+  OBS
+      LAYER li1 ;
+        RECT -4.610 0.800 -0.720 3.230 ;
+      LAYER met1 ;
+        RECT -2.810 0.480 -0.680 3.500 ;
+      LAYER met2 ;
+        RECT -2.890 0.770 -0.330 1.150 ;
+  END
+END sky130_hilas_horizTransCell01
+
+MACRO sky130_hilas_CapModule01a
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_CapModule01a ;
+  ORIGIN 4.160 2.160 ;
+  SIZE 2.300 BY 2.280 ;
+  OBS
+      LAYER met3 ;
+        RECT -4.160 -2.160 -1.860 0.120 ;
+      LAYER met4 ;
+        RECT -3.330 -1.420 -2.810 -0.920 ;
+  END
+END sky130_hilas_CapModule01a
+
+MACRO sky130_hilas_CapModule03
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_CapModule03 ;
+  ORIGIN 3.920 2.470 ;
+  SIZE 4.230 BY 5.830 ;
+  OBS
+      LAYER met3 ;
+        RECT -3.920 -2.470 0.310 3.360 ;
+      LAYER met4 ;
+        RECT -3.540 -1.370 -0.530 -0.900 ;
+  END
+END sky130_hilas_CapModule03
+
+MACRO sky130_hilas_pFETmirror02
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_pFETmirror02 ;
+  ORIGIN 0.610 -0.890 ;
+  SIZE 1.280 BY 2.840 ;
+  OBS
+      LAYER nwell ;
+        RECT -0.610 0.890 0.670 3.730 ;
+      LAYER li1 ;
+        RECT -0.410 0.950 0.530 3.490 ;
+  END
+END sky130_hilas_pFETmirror02
+
+MACRO sky130_hilas_overlapCap02a
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_overlapCap02a ;
+  ORIGIN 5.210 0.540 ;
+  SIZE 4.000 BY 1.640 ;
+  OBS
+      LAYER nwell ;
+        RECT -5.210 -0.540 -1.210 1.100 ;
+      LAYER li1 ;
+        RECT -4.860 -0.210 -1.550 0.770 ;
+      LAYER met1 ;
+        RECT -3.330 -0.350 -3.080 0.770 ;
+  END
+END sky130_hilas_overlapCap02a
+
+MACRO sky130_hilas_DualTACore01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_DualTACore01 ;
+  ORIGIN 1.720 0.220 ;
+  SIZE 3.270 BY 5.720 ;
+  OBS
+      LAYER li1 ;
+        RECT -1.540 -0.160 1.410 5.400 ;
+      LAYER met1 ;
+        RECT -1.420 -0.220 1.250 5.500 ;
+      LAYER met2 ;
+        RECT -1.720 -0.120 1.550 5.400 ;
+  END
+END sky130_hilas_DualTACore01
+
+MACRO sky130_hilas_TA2Cell_NoFG
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_TA2Cell_NoFG ;
+  ORIGIN 14.730 -1.400 ;
+  SIZE 17.920 BY 6.050 ;
+  PIN GateColSelect
+    PORT
+      LAYER met1 ;
+        RECT -4.160 5.920 -3.970 7.450 ;
+    END
+  END GateColSelect
+  PIN Vin-_Amp1
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.860 1.420 -2.240 1.670 ;
+    END
+  END Vin-_Amp1
+  PIN Vin+_amp2
+    PORT
+      LAYER met2 ;
+        RECT -1.260 4.510 -0.910 4.740 ;
+    END
+  END Vin+_amp2
+  PIN Vin-_Amp2
+    PORT
+      LAYER met2 ;
+        RECT -1.300 7.180 -1.050 7.440 ;
+    END
+  END Vin-_Amp2
+  PIN Vout_Amp1
+    PORT
+      LAYER met2 ;
+        RECT 2.850 3.920 3.190 4.140 ;
+    END
+  END Vout_Amp1
+  PIN Vout_Amp2
+    PORT
+      LAYER met2 ;
+        RECT 2.860 4.740 3.190 4.970 ;
+    END
+  END Vout_Amp2
+  PIN GND
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 1.230 1.400 1.570 2.140 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 1.230 6.750 1.570 7.450 ;
+    END
+  END GND
+  PIN Vdd
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 1.900 1.400 2.170 3.050 ;
+    END
+    PORT
+      LAYER met1 ;
+        RECT 1.900 5.810 2.170 7.450 ;
+    END
+  END Vdd
+  OBS
+      LAYER li1 ;
+        RECT -14.290 1.400 3.050 7.450 ;
+      LAYER met1 ;
+        RECT -14.380 5.640 -4.440 7.450 ;
+        RECT -3.690 6.470 0.950 7.450 ;
+        RECT -3.690 5.640 1.620 6.470 ;
+        RECT -14.380 5.530 1.620 5.640 ;
+        RECT 2.450 5.530 2.890 7.450 ;
+        RECT -14.380 3.330 2.890 5.530 ;
+        RECT -14.380 2.420 1.620 3.330 ;
+        RECT -14.380 1.400 0.950 2.420 ;
+        RECT 2.450 1.400 2.890 3.330 ;
+      LAYER met2 ;
+        RECT -14.730 6.900 -1.580 7.440 ;
+        RECT -0.770 6.900 2.980 7.440 ;
+        RECT -14.730 5.250 2.980 6.900 ;
+        RECT -14.730 5.020 2.580 5.250 ;
+        RECT -14.730 4.230 -1.540 5.020 ;
+        RECT -0.630 4.460 2.580 5.020 ;
+        RECT -0.630 4.420 2.980 4.460 ;
+        RECT -0.630 4.230 2.570 4.420 ;
+        RECT -14.730 3.640 2.570 4.230 ;
+        RECT -14.730 1.950 2.980 3.640 ;
+        RECT -14.730 1.410 -3.140 1.950 ;
+        RECT -1.960 1.410 2.980 1.950 ;
+  END
+END sky130_hilas_TA2Cell_NoFG
+
+MACRO sky130_hilas_pFETdevice01b
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_pFETdevice01b ;
+  ORIGIN 0.790 1.140 ;
+  SIZE 1.870 BY 1.570 ;
+  OBS
+      LAYER nwell ;
+        RECT -0.790 -0.780 0.820 0.430 ;
+      LAYER li1 ;
+        RECT 0.780 -1.080 0.990 -0.630 ;
+      LAYER met1 ;
+        RECT 0.770 -1.140 1.000 -0.630 ;
+  END
+END sky130_hilas_pFETdevice01b
+
+MACRO sky130_hilas_capacitorArray01
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_capacitorArray01 ;
+  ORIGIN 13.040 0.570 ;
+  SIZE 36.700 BY 6.050 ;
+  PIN CapTerminal2
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 23.330 2.220 23.660 2.630 ;
+    END
+  END CapTerminal2
+  PIN CapTerm01
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT -2.300 5.170 -1.790 5.480 ;
+    END
+  END CapTerm01
+  PIN Vinj
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT -3.480 4.770 -3.320 5.480 ;
+    END
+  END Vinj
+  PIN GateSelect
+    PORT
+      LAYER met1 ;
+        RECT -3.920 4.490 -3.730 5.480 ;
+    END
+  END GateSelect
+  PIN Vtun
+    PORT
+      LAYER met1 ;
+        RECT -12.680 2.580 -12.280 5.480 ;
+    END
+  END Vtun
+  PIN Gate
+    USE ANALOG ;
+    PORT
+      LAYER met1 ;
+        RECT -8.630 2.510 -8.250 5.480 ;
+    END
+  END Gate
+  OBS
+      LAYER nwell ;
+        RECT -13.040 1.780 -11.300 3.620 ;
+      LAYER li1 ;
+        RECT -12.610 -0.230 -3.350 5.150 ;
+      LAYER met1 ;
+        RECT -12.000 2.300 -8.910 5.480 ;
+        RECT -12.680 2.230 -8.910 2.300 ;
+        RECT -7.970 4.210 -4.200 5.480 ;
+        RECT -3.450 4.210 -3.310 4.490 ;
+        RECT -7.970 2.230 -3.310 4.210 ;
+        RECT -12.680 -0.570 -3.310 2.230 ;
+      LAYER met2 ;
+        RECT -13.040 4.890 -2.580 5.450 ;
+        RECT -1.510 4.890 23.660 5.450 ;
+        RECT -13.040 2.910 23.660 4.890 ;
+        RECT -13.040 1.940 23.050 2.910 ;
+        RECT -13.040 -0.200 23.660 1.940 ;
+      LAYER met3 ;
+        RECT -3.420 -0.400 23.340 5.460 ;
+      LAYER met4 ;
+        RECT -3.330 -0.320 20.970 5.110 ;
+  END
+END sky130_hilas_capacitorArray01
+
+MACRO sky130_hilas_capacitorSize03
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_capacitorSize03 ;
+  ORIGIN -14.140 0.470 ;
+  SIZE 5.790 BY 5.870 ;
+  PIN CapTerm02
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 19.560 2.360 19.930 2.640 ;
+    END
+  END CapTerm02
+  PIN CapTerm01
+    USE ANALOG ;
+    PORT
+      LAYER met2 ;
+        RECT 14.160 2.320 14.430 2.600 ;
+    END
+  END CapTerm01
+  OBS
+      LAYER met2 ;
+        RECT 14.140 2.920 19.920 4.980 ;
+        RECT 14.140 2.880 19.280 2.920 ;
+        RECT 14.710 2.080 19.280 2.880 ;
+        RECT 14.710 2.040 19.920 2.080 ;
+        RECT 14.140 -0.050 19.920 2.040 ;
+      LAYER met3 ;
+        RECT 14.160 -0.470 19.800 5.400 ;
+      LAYER met4 ;
+        RECT 14.250 0.560 19.760 4.070 ;
+  END
+END sky130_hilas_capacitorSize03
+
+MACRO sky130_hilas_pFETLargePart1
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_pFETLargePart1 ;
+  ORIGIN 0.060 0.090 ;
+  SIZE 3.390 BY 2.870 ;
+  OBS
+      LAYER nwell ;
+        RECT -0.060 -0.090 3.330 2.780 ;
+      LAYER li1 ;
+        RECT 0.180 0.050 3.100 2.550 ;
+  END
+END sky130_hilas_pFETLargePart1
+
+MACRO sky130_hilas_nFETmirrorPairs2
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_nFETmirrorPairs2 ;
+  ORIGIN 3.090 1.920 ;
+  SIZE 4.670 BY 4.770 ;
+  OBS
+      LAYER li1 ;
+        RECT -3.040 -1.920 1.360 2.530 ;
+  END
+END sky130_hilas_nFETmirrorPairs2
+
+MACRO sky130_hilas_nFET03a
+  CLASS BLOCK ;
+  FOREIGN sky130_hilas_nFET03a ;
+  ORIGIN 1.110 0.470 ;
+  SIZE 2.080 BY 0.890 ;
+  OBS
+      LAYER li1 ;
+        RECT -1.010 -0.410 0.850 0.280 ;
+      LAYER met1 ;
+        RECT -1.050 -0.460 0.830 0.280 ;
+      LAYER met2 ;
+        RECT -1.110 -0.460 0.970 0.290 ;
+  END
+END sky130_hilas_nFET03a
+
+END LIBRARY

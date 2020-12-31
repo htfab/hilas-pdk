@@ -1,0 +1,18 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_pTransistorVert01
+  CLASS BLOCK ;
+  FOREIGN /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_pTransistorVert01 ;
+  ORIGIN 3.630 4.440 ;
+  SIZE 1.860 BY 2.990 ;
+  OBS
+      LAYER nwell ;
+        RECT -3.630 -4.440 -1.770 -1.450 ;
+      LAYER li1 ;
+        RECT -3.220 -3.970 -2.160 -1.920 ;
+  END
+END /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_pTransistorVert01
+END LIBRARY
+

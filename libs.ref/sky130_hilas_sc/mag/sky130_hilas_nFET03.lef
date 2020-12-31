@@ -1,0 +1,16 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_nFET03
+  CLASS BLOCK ;
+  FOREIGN /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_nFET03 ;
+  ORIGIN 0.310 0.190 ;
+  SIZE 0.890 BY 0.610 ;
+  OBS
+      LAYER li1 ;
+        RECT -0.260 -0.050 0.530 0.280 ;
+  END
+END /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_nFET03
+END LIBRARY
+

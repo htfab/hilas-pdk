@@ -8,8 +8,9 @@ from pexpect.replwrap import REPLWrapper
 from subprocess import run
 from pathlib import Path, PurePath
 
+
 # first argument is path to magic files
-# second arg.    is path to write LEF output
+
 
 def edie(msg, code=1):
     print(msg)
@@ -70,14 +71,14 @@ def main():
         edie('Target argument should be a path to put all \'*.gds\' files.')
 
     try:
-        with open(targ_file/'testfile', 'w') as f:
+        with open(targ_file / 'testfile', 'w') as f:
             f.write('')
-        os.remove(targ_file/'testfile')
+        os.remove(targ_file / 'testfile')
     except:
         edie('problem writing to destination dir')
 
     os.chdir(targ_file)
-    successes = [True]*len(source_files)
+    successes = [True] * len(source_files)
 
     magic = newmagic()
 

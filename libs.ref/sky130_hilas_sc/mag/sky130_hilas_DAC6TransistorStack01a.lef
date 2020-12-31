@@ -1,0 +1,16 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_DAC6TransistorStack01a
+  CLASS BLOCK ;
+  FOREIGN /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_DAC6TransistorStack01a ;
+  ORIGIN -0.280 1.740 ;
+  SIZE 1.720 BY 5.650 ;
+  OBS
+      LAYER nwell ;
+        RECT 0.280 -1.740 1.890 3.910 ;
+  END
+END /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_DAC6TransistorStack01a
+END LIBRARY
+

@@ -16,7 +16,7 @@ LIB_TEMPLATE = 'head.template.lib'
 PG_PIN_NAMES = ['VPB', 'VPWRIN', 'LOWLVPWR', 'VGND', 'VPWR', 'VNB', 'KAPWR']
 
 
-def edie(message,code=1):
+def edie(message, code=1):
     print(message)
     sys.exit(code)
 
@@ -25,13 +25,11 @@ def edie(message,code=1):
 #     fake=True
 
 
-def read_pin(text, lino):
+def read_pin(pin_name, text_block):
     res = {}
-    res.update({'name': text[lino].split('PIN')[1].strip()})
-    endi = re.search('END\s+{}'.format(res['name']), ''.join(text[lino:])).end()
-    text = ''.join(text[lino:])[:endi].split('\n')
+    res.update({'name': pin_name.strip()})
 
-    for line in text:
+    for line in text_block.split('\n'):
         if 'DIRECTION ' in line:
             res.update({'direction': line.split('DIRECTION')[1].strip().rstrip(';')})
         elif 'USE ' in line:
@@ -42,17 +40,31 @@ def read_pin(text, lino):
     return res
 
 
-def read_cell_info(cell_file):
+def read_cell_info(cell_name, lef_path):
+
+    if isinstance(lef_path, Path):
+
+        if lef_path.is_dir():
+            # treat it as the directory containing the desired LEF file
+            try:
+                with open(lef_path / (cell_name+'.lef'), 'r') as f:
+                    cc = f.read()
+            except:
+                edie('no file named {}'.format(lef_path / (cell_name+'.lef')))
+
+        elif lef_path.is_file():
+            with open(lef_path, 'r') as f:
+                cc = f.read()
+
+    elif isinstance(lef_path, str):
+        # treat it as the contents of a single LEF file
+        cc = lef_path
+
     pi = []
-    with open(cell_file, 'r') as f:
-        cc = f.readlines()
-    for i, line in enumerate(cc):
 
-        if re.match('^\s*PIN (.*)\s*\n', line):
-            # found a pin
-            pi.append(read_pin(cc, i))
-
-
+    for pinfo in re.findall(r'(^\s*PIN\s+(?P<name>\S*)\n(?:.*\n)*?\s*END\s+\2)', cc, re.MULTILINE):
+        # found a pin
+        pi.append(read_pin(pinfo[1], pinfo[0]))
         # elif re.match('^\s*pg_pin \("(.*)"\)', line):
         #     # found a pg_pin
         #     pi.append(read_pg_pin(cc, i))
@@ -67,11 +79,31 @@ def main():
 
     try:
         lef_path = Path(args.LEF_dir)
-        assert lef_path.is_dir()
+        assert lef_path.is_dir() or lef_path.is_file()
     except AssertionError:
-        edie('bac LEF source path')
+        edie('Bad LEF source path')
 
-    cell_names = [x.split('.lef')[0] for x in os.listdir(lef_path) if x.endswith('.lef')]
+    dest_file = Path(args.output)
+    if not dest_file.parent.is_dir():
+        os.makedirs(dest_file.parent, exist_ok=True)
+    try:
+        with open(dest_file, 'w') as f:
+            f.write('')
+    except:
+        edie('could not write to destination')
+
+    print('gen_lib deriving info from LEF file(s) at {}'.format(lef_path))
+
+    if lef_path.is_dir():
+        lef_files = list(lef_path.glob('*.lef'))
+    elif lef_path.is_file():
+        lef_files = [lef_path]
+
+    cell_names = {}
+    for lf in lef_files:
+        with open(lf, 'r') as f:
+            cc = f.read()
+        cell_names.update({lf: re.findall(r'\n\s*MACRO\s+(\S+)', cc)})
 
     template_loader = jinja2.FileSystemLoader(this_dir)
     template_env = jinja2.Environment(
@@ -88,65 +120,71 @@ def main():
     cell_template = template_env.get_template(str(CELL_TEMPLATE))
 
     cell_block = []
-    for cn in cell_names:
 
-        pins = read_cell_info(lef_path/( cn+'.lef'))
+    for file, macros in cell_names.items():
 
-        pg_pins = [p for p in pins if p['name'] in PG_PIN_NAMES]
-        pins = [p for p in pins if p['name'] not in PG_PIN_NAMES]
+        for cn in macros:
+            print('reading cell info: {}'.format(cn))
 
-        for pgp in pg_pins:
-            pgp.update({
-                'pg_type': 'primary_ground' if pgp['name'] == 'VGND' else 'primary_power',
-                'related_bias_pin': 'VPB' if pgp['name'] == 'VGND' else 'VNB',
-                'voltage_name': pgp['name'],
+            pins = read_cell_info(cn, file)
+
+            pg_pins = [p for p in pins if p['name'] in PG_PIN_NAMES]
+            pins = [p for p in pins if p['name'] not in PG_PIN_NAMES]
+
+            for pgp in pg_pins:
+                pgp.update({
+                    'pg_type': 'primary_ground' if pgp['name'] == 'VGND' else 'primary_power',
+                    'related_bias_pin': 'VPB' if pgp['name'] == 'VGND' else 'VNB',
+                    'voltage_name': pgp['name'],
+                })
+
+            pg_pins.append({
+                'name': "VNB",
+                'pg_type': "nwell",
+                'physical_connection': "device_layer",
+                'voltage_name': "VNB",
             })
 
-        pg_pins.append({
-            'name': "VNB",
-            'pg_type': "nwell",
-            'physical_connection': "device_layer",
-            'voltage_name': "VNB",
-        })
-
-        pg_pins.append({
-            'name': "VPB",
-            'pg_type': "pwell",
-            'physical_connection': "device_layer",
-            'voltage_name': "VPB",
-        })
-
-        for p in pins:
-            #output pins:
-                # max_capacitance: 0.1300150000;
-                # max_transition: 1.5061030000;
-            #input pins:
-                # capacitance: 0.0021030000;
-                # fall_capacitance: 0.0020150000;
-                # max_transition: 1.5000000000;
-            p.update({
-                'isclock': 'false',
-                'direction': 'inout',
-                'is_analog': 'true',
-                'function': None,
-                'capacitance': 0.0021030000,
-                'max_transition': 1.5061030000,
-                'related_ground_pin': 'VGND',
-                'related_power_pin': 'VPWR'
+            pg_pins.append({
+                'name': "VPB",
+                'pg_type': "pwell",
+                'physical_connection': "device_layer",
+                'voltage_name': "VPB",
             })
 
-        cell_block.append(cell_template.render(
-            cell_name=cn,
-            leakage_power=None,
-            area=None,
-            cell_leakage_power=None,
-            pg_pins=pg_pins,
-            pins=pins,
-        ))
+            for p in pins:
+                #output pins:
+                    # max_capacitance: 0.1300150000;
+                    # max_transition: 1.5061030000;
+                #input pins:
+                    # capacitance: 0.0021030000;
+                    # fall_capacitance: 0.0020150000;
+                    # max_transition: 1.5000000000;
+                p.update({
+                    'isclock': 'false',
+                    'direction': 'inout',
+                    'is_analog': 'true',
+                    'function': None,
+                    'capacitance': 0.0021030000,
+                    'max_transition': 1.5061030000,
+                    'related_ground_pin': 'VGND',
+                    'related_power_pin': 'VPWR'
+                })
+
+            cell_block.append(cell_template.render(
+                cell_name=cn,
+                leakage_power=None,
+                area=None,
+                cell_leakage_power=None,
+                pg_pins=pg_pins,
+                pins=pins,
+            ))
+            print('appended LIB info for {}'.format(cn))
 
     result = lib_template.render(cells='\n\n'.join(cell_block))
-    with open(args.output, 'w') as f:
+    with open(dest_file, 'w') as f:
         f.write(result)
+    print('wrote LIB file to {}'.format(dest_file))
 
 
 if __name__ == '__main__':

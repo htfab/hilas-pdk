@@ -21,11 +21,11 @@ gds: $(MAG_CELLS)
 
 lef: $(MAG_CELLS)
 	echo "extracting lef views"
-	$(SCRIPTS)/gen_lef $(MAG_ROOT) $(REF_ROOT)/lef
+	$(SCRIPTS)/gen_lef --compile --delete $(MAG_ROOT) $(REF_ROOT)/lef/sky130A_hilas_sc.lef
 
 lib: $(MAG_CELLS)
 	echo "making lib file"
-	$(SCRIPTS)/gen_lib $(REF_ROOT)/lef $(REF_ROOT)/lib/sky130A_hilas.lib
+	$(SCRIPTS)/gen_lib $(REF_ROOT)/lef $(REF_ROOT)/lib/sky130A_hilas_sc.lib
 
 pin-md: $(MAG_CELLS)
 	@$(HILAS_ROOT)/scripts/make_pin_markdown -o $(MAG_ROOT)/README.md -m $(MAG_CELLS)
