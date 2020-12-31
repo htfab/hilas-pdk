@@ -25,6 +25,7 @@ def edie(msg, code=1):
 def newmagic():
     try:
         print('starting Magic')
+
         os.chdir(tempdir)
         return REPLWrapper('magic -dnull -noconsole -rcfile "{}" -T "{}"'.format(
             os.getenv('MAGICRC'), os.getenv('TECHFILE')),
@@ -163,6 +164,7 @@ def make_spice(mf):
 
     try:
         result = magic_spice(mf, target)
+
         if not magic.child.isalive():
             print("[ERROR] There was a problem during the processing of {}: ".format(mf))
             print(result)
@@ -240,7 +242,9 @@ def handle_magic(magic_file):
 
     try:
         result = renew_magic(magic_file)
+
         print('loaded file {}'.format(magic_file.relative_to(rel_root)))
+
     except:
         print('couldn\'t load magic file: {}'.format(magic_file))
         edie(result)
@@ -394,6 +398,7 @@ def make_lib():
 
 
 def main():
+
     global paths, magic, tempdir, args, rel_root
 
     ap = argparse.ArgumentParser()
