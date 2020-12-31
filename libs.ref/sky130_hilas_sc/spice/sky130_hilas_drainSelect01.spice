@@ -1,0 +1,24 @@
+* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_drainSelect01.ext - technology: sky130A
+
+.subckt sky130_hilas_TgateVinj01 VSUBS a_n354_n14# a_86_n14# w_n420_n80# a_n194_n14#
++ a_446_110# DrainSelect
+X0 a_n194_110# DrainSelect a_n354_n14# w_n420_n80# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
+X1 a_446_110# DrainSelect a_n194_110# VSUBS sky130_fd_pr__nfet_g5v0d10v5 w=310000u l=500000u
+X2 a_86_n14# a_n194_110# a_n194_n14# w_n420_n80# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
+X3 a_n194_n14# DrainSelect a_n354_n14# w_n420_n80# sky130_fd_pr__pfet_g5v0d10v5 w=320000u l=500000u
+X4 a_n194_n14# DrainSelect a_86_n14# VSUBS sky130_fd_pr__nfet_g5v0d10v5 w=310000u l=500000u
+.ends
+
+.subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_drainSelect01
++ drain4 drain3 drain2 drain1 DrainSelect1 DrainSelect2 DrainSelect3 DrainSelect4
++ Vinj Drain_Mux GND
+Xsky130_hilas_TgateVinj01_0 VSUBS Vinj Drain_Mux sky130_hilas_TgateVinj01_3/w_n420_n80#
++ drain2 GND DrainSelect2 sky130_hilas_TgateVinj01
+Xsky130_hilas_TgateVinj01_1 VSUBS Vinj Drain_Mux sky130_hilas_TgateVinj01_3/w_n420_n80#
++ drain1 GND DrainSelect1 sky130_hilas_TgateVinj01
+Xsky130_hilas_TgateVinj01_2 VSUBS Vinj Drain_Mux sky130_hilas_TgateVinj01_3/w_n420_n80#
++ drain4 GND DrainSelect4 sky130_hilas_TgateVinj01
+Xsky130_hilas_TgateVinj01_3 VSUBS Vinj Drain_Mux sky130_hilas_TgateVinj01_3/w_n420_n80#
++ drain3 GND DrainSelect3 sky130_hilas_TgateVinj01
+.ends
+

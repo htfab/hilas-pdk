@@ -69,8 +69,8 @@ def magic_lef(source):
 
 def magic_spice(source, target):
     result = renew_magic(source)
-    # result += magic.run_command('extract do all')
-    # result += magic.run_command('extract all')
+    result += magic.run_command('extract do all')
+    result += magic.run_command('extract all')
     result += magic.run_command('ext2spice lvs')
     # result += magic.run_command('ext2spice format ngspice')
     result += magic.run_command('ext2spice -m -o {}'.format(target))
@@ -132,7 +132,7 @@ def make_gds(mf):
         if not magic.child.isalive():
             print("[ERROR] There was a problem during the processing of {}: ".format(mf))
             print(result)
-        print('wrote GDS: {}'.format(target))
+        print('wrote GDS: {}'.format(target.relative_to(rel_root)))
 
     except BaseException:
         print("[ERROR] There was a problem during the processing of {}:".format(mf))
@@ -151,7 +151,7 @@ def make_temp_lef(mf):
 
         shutil.copy(mf.parent / (mf.stem + '.lef'), target)
         os.remove(mf.parent / (mf.stem + '.lef'))
-        print('wrote LEF: {}'.format(target))
+        print('wrote LEF: {}'.format(target.relative_to(rel_root)))
 
     except BaseException:
         print("[ERROR] There was a problem (Magic crash?) during the processing of {}:".format(mf))
@@ -169,7 +169,7 @@ def make_spice(mf):
 
         for df in paths['mag'].glob('*.ext'):
             os.remove(df)
-        print('wrote SPICE: {}'.format(target))
+        print('wrote SPICE: {}'.format(target.relative_to(rel_root)))
 
     except BaseException:
         print("[ERROR] There was a problem during the processing of {}:".format(mf))
@@ -240,7 +240,7 @@ def handle_magic(magic_file):
 
     try:
         result = renew_magic(magic_file)
-        print('loaded file {}'.format(magic_file))
+        print('loaded file {}'.format(magic_file.relative_to(rel_root)))
     except:
         print('couldn\'t load magic file: {}'.format(magic_file))
         edie(result)
@@ -394,7 +394,7 @@ def make_lib():
 
 
 def main():
-    global paths, magic, tempdir, args
+    global paths, magic, tempdir, args, rel_root
 
     ap = argparse.ArgumentParser()
     ap.add_argument('-g', '--gds-path', action='store', help='Directory in which to put GDS output', default=None)
@@ -409,41 +409,42 @@ def main():
     args = ap.parse_args()
 
     paths = {}
+    rel_root = Path.cwd()
 
     if args.magic_path is not None:
         p = Path(args.magic_path)
         if not p.is_absolute():
-            p = Path.cwd() / p
+            p = rel_root / p
         paths.update({'mag': p})
 
     if args.gds_path is not None:
         p = Path(args.gds_path)
         if not p.is_absolute():
-            p = Path.cwd() / p
+            p = rel_root / p
         paths.update({'gds': p})
 
     if args.temp_lef is not None:
         p = Path(args.temp_lef)
         if not p.is_absolute():
-            p = Path.cwd() / p
+            p = rel_root / p
         paths.update({'tlef': p})
 
     if args.lef_path is not None:
         p = Path(args.lef_path)
         if not p.is_absolute():
-            p = Path.cwd() / p
+            p = rel_root / p
         paths.update({'lef': p})
 
     if args.lib_path is not None:
         p = Path(args.lib_path)
         if not p.is_absolute():
-            p = Path.cwd() / p
+            p = rel_root / p
         paths.update({'lib': p})
 
     if args.spice_path is not None:
         p = Path(args.spice_path)
         if not p.is_absolute():
-            p = Path.cwd() / p
+            p = rel_root / p
         paths.update({'spice': p})
 
     try:

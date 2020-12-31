@@ -1,0 +1,8 @@
+* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_pTransistorVert01.ext - technology: sky130A
+
+
+* Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_pTransistorVert01
+
+X0 a_n496_n792# a_n596_n822# a_n658_n792# w_n726_n888# sky130_fd_pr__pfet_g5v0d10v5 w=2.03e+06u l=500000u
+.end
+

@@ -1,0 +1,9 @@
+* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_pFETmirror02.ext - technology: sky130A
+
+
+* Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_pFETmirror02
+
+X0 a_n80_650# a_n80_262# w_n122_178# w_n122_178# sky130_fd_pr__pfet_01v8 w=680000u l=300000u
+X1 w_n122_178# a_n80_262# a_n80_262# w_n122_178# sky130_fd_pr__pfet_01v8 w=680000u l=300000u
+.end
+

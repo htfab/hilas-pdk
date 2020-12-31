@@ -1,0 +1,12 @@
+* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_capacitorSize03.ext - technology: sky130A
+
+.subckt sky130_hilas_CapModule01 VSUBS c1_n802_n404# m3_n886_n490#
+X0 c1_n802_n404# m3_n886_n490# sky130_fd_pr__cap_mim_m3_1 l=2e+06u w=2e+06u
+.ends
+
+.subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_capacitorSize03
++ CapTerm02 CapTerm01
+Xsky130_hilas_CapModule01_0 VSUBS CapTerm01 CapTerm02 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_1 VSUBS CapTerm01 CapTerm02 sky130_hilas_CapModule01
+.ends
+

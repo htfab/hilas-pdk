@@ -1,0 +1,21 @@
+* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_nFETmirrorPairs2.ext - technology: sky130A
+
+.subckt sky130_hilas_nFET03 VSUBS a_0_n38#
+X0 a_54_n12# a_0_n38# a_n62_n12# VSUBS sky130_fd_pr__nfet_01v8 w=350000u l=270000u
+.ends
+
+
+* Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_nFETmirrorPairs2
+
+Xsky130_hilas_nFET03_0 VSUBS a_n556_n246# sky130_hilas_nFET03
+Xsky130_hilas_nFET03_1 VSUBS a_n556_n246# sky130_hilas_nFET03
+Xsky130_hilas_nFET03_3 VSUBS a_n556_46# sky130_hilas_nFET03
+Xsky130_hilas_nFET03_2 VSUBS a_n556_46# sky130_hilas_nFET03
+X0 w_n122_224# a_n106_328# a_n106_328# w_n122_224# sky130_fd_pr__pfet_01v8 w=680000u l=300000u
+X1 VSUBS a_n66_n378# a_n66_n378# VSUBS sky130_fd_pr__nfet_01v8 w=330000u l=290000u
+X2 a_n106_328# a_n66_n378# VSUBS VSUBS sky130_fd_pr__nfet_01v8 w=330000u l=290000u
+X3 a_128_272# a_124_n238# VSUBS VSUBS sky130_fd_pr__nfet_01v8 w=330000u l=290000u
+X4 w_n122_224# a_n106_328# a_128_272# w_n122_224# sky130_fd_pr__pfet_01v8 w=680000u l=300000u
+X5 VSUBS a_124_n238# a_124_n238# VSUBS sky130_fd_pr__nfet_01v8 w=330000u l=290000u
+.end
+

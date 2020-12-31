@@ -1,0 +1,13 @@
+* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_TgateDouble01.ext - technology: sky130A
+
+
+* Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_TgateDouble01
+
+X0 a_n196_n192# a_n468_n112# w_n502_n362# w_n502_n362# sky130_fd_pr__pfet_01v8 w=320000u l=400000u
+X1 VSUBS a_n468_n112# a_n196_n192# VSUBS sky130_fd_pr__nfet_01v8 w=300000u l=400000u
+X2 output a_n468_n112# a_n40_n314# VSUBS sky130_fd_pr__nfet_01v8 w=310000u l=400000u
+X3 output a_n468_n112# a_290_n314# w_n502_n362# sky130_fd_pr__pfet_01v8 w=310000u l=400000u
+X4 output a_n196_n192# a_n40_n314# w_n502_n362# sky130_fd_pr__pfet_01v8 w=310000u l=400000u
+X5 output a_n196_n192# a_290_n314# VSUBS sky130_fd_pr__nfet_01v8 w=310000u l=400000u
+.end
+

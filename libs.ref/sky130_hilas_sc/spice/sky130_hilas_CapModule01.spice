@@ -1,0 +1,8 @@
+* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_CapModule01.ext - technology: sky130A
+
+
+* Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_CapModule01
+
+X0 c1_n802_n404# m3_n886_n490# sky130_fd_pr__cap_mim_m3_1 l=2e+06u w=2e+06u
+.end
+

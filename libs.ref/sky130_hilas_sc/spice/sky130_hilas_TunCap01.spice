@@ -1,0 +1,8 @@
+* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_TunCap01.ext - technology: sky130A
+
+
+* Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_TunCap01
+
+X0 a_n2872_n666# w_n2902_n800# w_n2902_n800# sky130_fd_pr__cap_var w=590000u l=500000u
+.end
+

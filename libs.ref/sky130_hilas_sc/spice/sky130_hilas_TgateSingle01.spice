@@ -1,0 +1,22 @@
+* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_TgateSingle01.ext - technology: sky130A
+
+.subckt sky130_hilas_TgateSingle01Part1 VSUBS a_582_n188# output a_582_n314# a_514_n112#
+X0 VSUBS a_514_n112# a_582_n188# VSUBS sky130_fd_pr__nfet_01v8 w=300000u l=400000u
+X1 output a_514_n112# a_582_n314# VSUBS sky130_fd_pr__nfet_01v8 w=310000u l=400000u
+.ends
+
+.subckt sky130_hilas_TgateSingle01Part2 VSUBS a_18_n340# a_n40_n314# w_n134_n362#
++ li_n36_n176# a_98_n314# a_n36_n112#
+X0 a_98_n314# a_18_n340# a_n40_n314# w_n134_n362# sky130_fd_pr__pfet_01v8 w=310000u l=400000u
+.ends
+
+
+* Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_TgateSingle01
+
+Xsky130_hilas_TgateSingle01Part1_0 VSUBS a_n196_n192# sky130_hilas_TgateSingle01Part1_0/output
++ m2_n526_n340# a_n468_n112# sky130_hilas_TgateSingle01Part1
+Xsky130_hilas_TgateSingle01Part2_0 VSUBS a_n196_n192# m2_n526_n340# w_n502_n362# a_n196_n192#
++ sky130_hilas_TgateSingle01Part1_0/output a_n468_n112# sky130_hilas_TgateSingle01Part2
+X0 a_n196_n192# a_n468_n112# w_n502_n362# w_n502_n362# sky130_fd_pr__pfet_01v8 w=320000u l=400000u
+.end
+

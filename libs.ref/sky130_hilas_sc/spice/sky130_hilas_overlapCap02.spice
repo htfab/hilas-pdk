@@ -1,0 +1,8 @@
+* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_overlapCap02.ext - technology: sky130A
+
+
+* Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_overlapCap02
+
+X0 a_n908_28# a_n1036_n100# a_n908_28# w_n1074_n138# sky130_fd_pr__pfet_g5v0d10v5 w=465000u l=500000u
+.end
+

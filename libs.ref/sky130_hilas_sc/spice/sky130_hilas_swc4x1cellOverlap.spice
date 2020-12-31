@@ -1,0 +1,38 @@
+* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_swc4x1cellOverlap.ext - technology: sky130A
+
+.subckt sky130_hilas_overlapCap01 VSUBS a_n504_n72# w_n562_n130#
+X0 a_n474_n42# a_n504_n72# a_n474_n42# w_n562_n130# sky130_fd_pr__pfet_g5v0d10v5 w=690000u l=500000u
+.ends
+
+.subckt sky130_hilas_TunCap01 VSUBS a_n2872_n666# w_n2902_n800#
+X0 a_n2872_n666# w_n2902_n800# w_n2902_n800# sky130_fd_pr__cap_var w=590000u l=500000u
+.ends
+
+.subckt sky130_hilas_horizPcell01 VSUBS a_n502_286# a_n508_162# w_n578_94# a_n578_238#
++ m1_n258_94# a_n300_94# a_n344_286#
+X0 w_n578_94# a_n300_94# a_n344_162# w_n578_94# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
+X1 a_n344_286# a_n578_238# a_n502_286# w_n578_94# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
+X2 a_n344_162# a_n578_238# a_n508_162# w_n578_94# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
+.ends
+
+
+* Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_swc4x1cellOverlap
+
+Xsky130_hilas_overlapCap01_0 VSUBS a_906_270# w_1264_n176# sky130_hilas_overlapCap01
+Xsky130_hilas_overlapCap01_1 VSUBS a_906_n18# w_1264_n176# sky130_hilas_overlapCap01
+Xsky130_hilas_overlapCap01_2 VSUBS a_640_n334# w_1264_n176# sky130_hilas_overlapCap01
+Xsky130_hilas_overlapCap01_3 VSUBS a_640_n618# w_1264_n176# sky130_hilas_overlapCap01
+Xsky130_hilas_TunCap01_0 VSUBS a_n214_n350# m1_n456_n764# sky130_hilas_TunCap01
+Xsky130_hilas_TunCap01_1 VSUBS a_n210_n590# m1_n456_n764# sky130_hilas_TunCap01
+Xsky130_hilas_TunCap01_2 VSUBS a_n214_10# m1_n456_n764# sky130_hilas_TunCap01
+Xsky130_hilas_TunCap01_3 VSUBS a_n214_228# m1_n456_n764# sky130_hilas_TunCap01
+Xsky130_hilas_horizPcell01_0 VSUBS m2_n528_24# m2_n528_n62# w_1264_n176# a_906_n18#
++ a_1264_n176# a_1264_n176# sky130_hilas_horizPcell01_3/a_n344_286# sky130_hilas_horizPcell01
+Xsky130_hilas_horizPcell01_1 VSUBS m2_n524_n572# m2_n524_n660# w_1264_n176# a_640_n618#
++ a_1264_n176# a_1264_n176# sky130_hilas_horizPcell01_3/a_n344_286# sky130_hilas_horizPcell01
+Xsky130_hilas_horizPcell01_2 VSUBS m2_n524_n376# m2_n524_n292# w_1264_n176# a_640_n334#
++ a_1264_n176# a_1264_n176# sky130_hilas_horizPcell01_3/a_n344_286# sky130_hilas_horizPcell01
+Xsky130_hilas_horizPcell01_3 VSUBS m2_n528_224# m2_n528_310# w_1264_n176# a_906_270#
++ a_1264_n176# a_1264_n176# sky130_hilas_horizPcell01_3/a_n344_286# sky130_hilas_horizPcell01
+.end
+

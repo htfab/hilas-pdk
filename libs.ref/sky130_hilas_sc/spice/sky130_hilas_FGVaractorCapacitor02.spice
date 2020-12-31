@@ -1,0 +1,8 @@
+* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_FGVaractorCapacitor02.ext - technology: sky130A
+
+
+* Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_FGVaractorCapacitor02
+
+X0 a_n1882_n644# w_n2010_n760# w_n2010_n760# sky130_fd_pr__cap_var w=1.11e+06u l=500000u
+.end
+

@@ -1,0 +1,31 @@
+* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_pFETLarge.ext - technology: sky130A
+
+.subckt sky130_hilas_pFETmed VSUBS a_440_n8# w_294_n44# a_388_n34# a_330_n8#
+X0 a_440_n8# a_388_n34# a_330_n8# w_294_n44# sky130_fd_pr__pfet_01v8 w=2.51e+06u l=260000u
+.ends
+
+.subckt sky130_hilas_pFETLargePart1 VSUBS sky130_hilas_pFETmed_2/a_388_n34# sky130_hilas_pFETmed_4/a_330_n8#
++ sky130_hilas_pFETmed_1/a_388_n34# sky130_hilas_pFETmed_0/a_388_n34# sky130_hilas_pFETmed_3/a_330_n8#
++ sky130_hilas_pFETmed_2/a_330_n8# sky130_hilas_pFETmed_1/a_330_n8# sky130_hilas_pFETmed_4/a_440_n8#
++ sky130_hilas_pFETmed_4/a_388_n34# sky130_hilas_pFETmed_4/w_294_n44# sky130_hilas_pFETmed_3/a_388_n34#
++ sky130_hilas_pFETmed_3/a_440_n8#
+Xsky130_hilas_pFETmed_0 VSUBS sky130_hilas_pFETmed_1/a_330_n8# sky130_hilas_pFETmed_4/w_294_n44#
++ sky130_hilas_pFETmed_0/a_388_n34# sky130_hilas_pFETmed_4/a_440_n8# sky130_hilas_pFETmed
+Xsky130_hilas_pFETmed_2 VSUBS sky130_hilas_pFETmed_3/a_330_n8# sky130_hilas_pFETmed_4/w_294_n44#
++ sky130_hilas_pFETmed_2/a_388_n34# sky130_hilas_pFETmed_2/a_330_n8# sky130_hilas_pFETmed
+Xsky130_hilas_pFETmed_1 VSUBS sky130_hilas_pFETmed_2/a_330_n8# sky130_hilas_pFETmed_4/w_294_n44#
++ sky130_hilas_pFETmed_1/a_388_n34# sky130_hilas_pFETmed_1/a_330_n8# sky130_hilas_pFETmed
+Xsky130_hilas_pFETmed_3 VSUBS sky130_hilas_pFETmed_3/a_440_n8# sky130_hilas_pFETmed_4/w_294_n44#
++ sky130_hilas_pFETmed_3/a_388_n34# sky130_hilas_pFETmed_3/a_330_n8# sky130_hilas_pFETmed
+Xsky130_hilas_pFETmed_4 VSUBS sky130_hilas_pFETmed_4/a_440_n8# sky130_hilas_pFETmed_4/w_294_n44#
++ sky130_hilas_pFETmed_4/a_388_n34# sky130_hilas_pFETmed_4/a_330_n8# sky130_hilas_pFETmed
+.ends
+
+.subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_pFETLarge
++ Gate Source Drain Well
+Xsky130_hilas_pFETLargePart1_0 VSUBS Gate Source Gate Gate Source Drain Source Drain
++ Gate Well Gate Drain sky130_hilas_pFETLargePart1
+Xsky130_hilas_pFETLargePart1_1 VSUBS Gate Source Gate Gate Source Drain Source Drain
++ Gate Well Gate Drain sky130_hilas_pFETLargePart1
+.ends
+
