@@ -1,4 +1,4 @@
 .idea
 *.py.swp
 *~
-lib/scripts/example_LEFs
+libs.ref/sky130_hilas_sc/_templef
