@@ -10,12 +10,14 @@ import jinja2
 from pexpect.replwrap import REPLWrapper
 from pathlib import Path
 
-CELL_TEMPLATE = 'min_inverter.template.lib'
-LIB_TEMPLATE = 'head.template.lib'
+LIB_CELL_TEMPLATE = 'min_inverter.template.lib'
+LIB_HEAD_TEMPLATE = 'head.template.lib'
 PG_PIN_NAMES = ['VPB', 'VPWRIN', 'LOWLVPWR', 'VGND', 'VPWR', 'VNB', 'KAPWR']
 
 this_dir = Path(__file__).parent
 
+with open(this_dir / 'license_head.txt','r') as f:
+    LICENSE_HEAD = f.read() + '\n'
 
 def edie(msg, code=1):
     print(msg)
@@ -178,6 +180,115 @@ def make_spice(mf):
         print(result)
 
 
+def make_verilog():
+    """
+    make a skeletal verilog module def for each cell with ports
+    :return:
+    """
+
+    target = paths['verilog']
+
+    if paths['tlef'] and paths['tlef'].is_dir():
+        lef_path = paths['tlef']
+    else:
+        edie('Must specify \'--temp-lef\' path in order to generate VERILOG.')
+
+    print('deriving VERILOG info from LEF file(s) at {}'.format(lef_path))
+
+    if lef_path.is_dir():
+        lef_files = list(lef_path.glob('*.lef'))
+    elif lef_path.is_file():
+        lef_files = [lef_path]
+
+    cell_names = {}
+    for lf in lef_files:
+        with open(lf, 'r') as f:
+            cc = f.read()
+        cell_names.update({lf: re.findall(r'\n\s*MACRO\s+(\S+)', cc)})
+
+    template_loader = jinja2.FileSystemLoader(this_dir)
+    template_env = jinja2.Environment(
+        trim_blocks=True,
+        lstrip_blocks=True,
+        loader=template_loader,
+        autoescape=jinja2.select_autoescape(
+            disabled_extensions=('.v',),
+            default_for_string=True,
+            default=True,
+        ))
+
+    lib_template = template_env.get_template(str(LIB_HEAD_TEMPLATE))
+    cell_template = template_env.get_template(str(LIB_CELL_TEMPLATE))
+
+    cell_block = []
+
+    for file, macros in cell_names.items():
+
+        for cn in macros:
+            print('reading cell info: {}'.format(cn))
+
+            pins = read_cell_info(cn, file)
+
+            pg_pins = [p for p in pins if p['name'] in PG_PIN_NAMES]
+            pins = [p for p in pins if p['name'] not in PG_PIN_NAMES]
+
+            for pgp in pg_pins:
+                pgp.update({
+                    'pg_type': 'primary_ground' if pgp['name'] == 'VGND' else 'primary_power',
+                    'related_bias_pin': 'VPB' if pgp['name'] == 'VGND' else 'VNB',
+                    'voltage_name': pgp['name'],
+                })
+
+            pg_pins.append({
+                'name': "VNB",
+                'pg_type': "nwell",
+                'physical_connection': "device_layer",
+                'voltage_name': "VNB",
+            })
+
+            pg_pins.append({
+                'name': "VPB",
+                'pg_type': "pwell",
+                'physical_connection': "device_layer",
+                'voltage_name': "VPB",
+            })
+
+            for p in pins:
+                # output pins:
+                # max_capacitance: 0.1300150000;
+                # max_transition: 1.5061030000;
+                # input pins:
+                # capacitance: 0.0021030000;
+                # fall_capacitance: 0.0020150000;
+                # max_transition: 1.5000000000;
+                p.update({
+                    'isclock': 'false',
+                    'direction': 'inout',
+                    'is_analog': 'true',
+                    'function': None,
+                    'capacitance': 0.0021030000,
+                    'max_transition': 1.5061030000,
+                    'related_ground_pin': 'VGND',
+                    'related_power_pin': 'VPWR'
+                })
+
+            cell_block.append(cell_template.render(
+                cell_name=cn,
+                leakage_power=None,
+                area=None,
+                cell_leakage_power=None,
+                pg_pins=pg_pins,
+                pins=pins,
+            ))
+            print('appended LIB info for {}'.format(cn))
+
+    result = lib_template.render(cells='\n\n'.join(cell_block))
+
+    with open(target, 'w') as f:
+        f.write(result)
+    print('wrote VERILOG file to {}'.format(target))
+
+
 def parent_check(path):
     if not path.suffix:
         # treat path as a directory
@@ -208,23 +319,26 @@ def parent_check(path):
 
 
 def target_check(magic_file, type):
+    if type not in paths or paths[type] is None:
+        return False
 
-    if type == 'lef' or type == 'lib':
+    if type == 'tlef':
+        suffix = 'lef'
+    else:
+        suffix = type
+
+    if magic_file is None:
         target = paths[type]
-        if target.is_file() and os.path.getmtime(target) > max([os.path.getmtime(mf) for mf in paths['mag'].glob('*.mag')]):
+        if not args.force and target.is_file() and os.path.getmtime(target) > max([os.path.getmtime(mf) for mf in paths['mag'].glob('*.mag')]):
             # short circuit; don't do it
             return False
         else:
             return True
 
     else:
-        if type == 'tlef':
-            suffix = 'lef'
-        else:
-            suffix = type
         target = paths[type] / Path(magic_file.stem).with_suffix('.'+suffix)
 
-        if target.is_file() and os.path.getmtime(target) > os.path.getmtime(magic_file):
+        if not args.force and target.is_file() and os.path.getmtime(target) > os.path.getmtime(magic_file):
             # short circuit; don't do it
             return False
         else:
@@ -325,8 +439,8 @@ def make_lib():
             default=True,
         ))
 
-    lib_template = template_env.get_template(str(LIB_TEMPLATE))
-    cell_template = template_env.get_template(str(CELL_TEMPLATE))
+    lib_template = template_env.get_template(str(LIB_HEAD_TEMPLATE))
+    cell_template = template_env.get_template(str(LIB_CELL_TEMPLATE))
 
     cell_block = []
 
@@ -397,6 +511,62 @@ def make_lib():
     print('wrote LIB file to {}'.format(target))
 
 
+def make_markdown():
+    """
+    Create markdown summary of Magic cells in library
+    :return:
+    """
+    matcher = re.compile(r'^\s*[rf]label\s+(\S+).*\s+(\S+)\s*\n\s*port\s+(\d+)\s+(.*)$', re.MULTILINE)
+    tables = [['# Cell Ports Summary\n']]
+
+    for targ in sorted(paths['mag'].glob('*.mag')):
+        cn = Path(targ).stem
+        head = ['___\n### {}\n'.format(cn.replace('_', '\_'))]
+        head.append('| {:<20} | {:<20} | {:<20} | {:<20} |'.format('Port Number', 'Label', 'Layer', 'Attributes'))
+        head.append('|----------------------|----------------------|----------------------|----------------------|')
+        rows = []
+        with open(targ, 'r') as f:
+            c = f.read()
+        matches = re.findall(matcher, c)
+        matches = sorted(list(set(matches)), key=lambda x: int(x[2]))
+        for m in matches:
+            rows.append('| {:<20} | {:<20} | {:<20} | {:<20} |'.format(m[2], m[1], m[0], ','.join(m[3].split())))
+        # if rows:
+        tables.append(head + rows + ['\n'])
+
+    md = '\n'.join(['\n'.join(table) for table in tables])
+    # print(md)
+
+    with open(paths['md'], 'w') as f:
+        f.write(md)
+
+    print('markdown written to {}'.format(paths['md']))
+
+
+def fix_rel_path(path):
+    if path is None:
+        return None
+    path = Path(path)
+    if not path.is_absolute():
+        path = rel_root / path
+    return path
+
+
+def fixed_paths():
+    paths = {}
+
+    paths.update({'mag': fix_rel_path(args.magic_path)})
+    paths.update({'gds': fix_rel_path(args.gds_path)})
+    paths.update({'tlef': fix_rel_path(args.temp_lef)})
+    paths.update({'lef': fix_rel_path(args.lef_path)})
+    paths.update({'lib': fix_rel_path(args.lib_path)})
+    paths.update({'spice': fix_rel_path(args.spice_path)})
+    paths.update({'md': fix_rel_path(args.pin_summary)})
+    paths.update({'verilog': fix_rel_path(args.verilog)})
+
+    return paths
+
+
 def main():
 
     global paths, magic, tempdir, args, rel_root
@@ -409,48 +579,15 @@ def main():
     ap.add_argument('-i', '--lib-path', action='store', help='Directory in which to put LIB output', default=None)
     ap.add_argument('-s', '--spice-path', action='store', help='Directory in which to put Spice output', default=None)
     ap.add_argument('-D', '--delete', action='store_true', help='Delete temporary (individual) LEF files after consolidation', default=False)
+    ap.add_argument('-p', '--pin-summary', action='store', help='Path to file. Will create a pretty, human-readable markdown summary of cell pins')
+    ap.add_argument('-F', '--force', action='store_true', help='Overwrite existing collateral.', default=False)
+    ap.add_argument('-v', '--verilog', action='store', help='Directory in which to put synthetic Verilog output', default=None)
     ap.add_argument('magic_path', help='Path to directory containing Magic cell source files')
 
     args = ap.parse_args()
 
-    paths = {}
     rel_root = Path.cwd()
-
-    if args.magic_path is not None:
-        p = Path(args.magic_path)
-        if not p.is_absolute():
-            p = rel_root / p
-        paths.update({'mag': p})
-
-    if args.gds_path is not None:
-        p = Path(args.gds_path)
-        if not p.is_absolute():
-            p = rel_root / p
-        paths.update({'gds': p})
-
-    if args.temp_lef is not None:
-        p = Path(args.temp_lef)
-        if not p.is_absolute():
-            p = rel_root / p
-        paths.update({'tlef': p})
-
-    if args.lef_path is not None:
-        p = Path(args.lef_path)
-        if not p.is_absolute():
-            p = rel_root / p
-        paths.update({'lef': p})
-
-    if args.lib_path is not None:
-        p = Path(args.lib_path)
-        if not p.is_absolute():
-            p = rel_root / p
-        paths.update({'lib': p})
-
-    if args.spice_path is not None:
-        p = Path(args.spice_path)
-        if not p.is_absolute():
-            p = rel_root / p
-        paths.update({'spice': p})
+    paths = fixed_paths()
 
     try:
         assert paths['mag'].is_dir()
@@ -468,20 +605,30 @@ def main():
 
         tempdir = Path(tempdirname)
 
-        magic = newmagic()
-
+        # Items here on done on a per-cell basis with Magic opening each one
         for mf in source_files:
             handle_magic(mf)
 
-        if paths['lef'] is not None and target_check(None, 'lef'):
+        # The following items can be done on the batch level:
+
+        if 'lef' in paths and paths['lef'] is not None and target_check(None, 'lef'):
             # consolidate all temp LEFs
             parent_check(paths['lef'])
             consolidate_lef()
 
-        if paths['lib'] is not None and target_check(None, 'lib'):
+        if 'lib' in paths and paths['lib'] is not None and target_check(None, 'lib'):
             # make single LIB from single LEF
             parent_check(paths['lib'])
             make_lib()
+
+        if 'md' in paths and paths['md'] is not None and target_check(None, 'md'):
+            # make a markdown pin summary file based on the Magic file source (text)
+            parent_check(paths['md'])
+            make_markdown()
+
+        if 'verilog' in paths and paths['verilog']:
+            parent_check(paths['verilog'])
+            make_verilog()
 
 
 if __name__ == '__main__':
