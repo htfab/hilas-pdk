@@ -1,21 +1,21 @@
 * NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_Trans2med.ext - technology: sky130A
 
-.subckt sky130_hilas_nFETmed VSUBS a_32_n88# a_84_n62# a_n24_n62#
-X0 a_84_n62# a_32_n88# a_n24_n62# VSUBS sky130_fd_pr__nfet_01v8 w=2.46e+06u l=260000u
+.subckt sky130_hilas_nFETmed a_32_n88# a_84_n62# $SUB a_n24_n62#
+X0 a_84_n62# a_32_n88# a_n24_n62# $SUB sky130_fd_pr__nfet_01v8 w=2.46e+06u l=260000u
 .ends
 
-.subckt sky130_hilas_pFETmed VSUBS a_440_n8# w_294_n44# a_388_n34# a_330_n8#
+.subckt sky130_hilas_pFETmed a_440_n8# w_294_n44# a_388_n34# $SUB a_330_n8#
 X0 a_440_n8# a_388_n34# a_330_n8# w_294_n44# sky130_fd_pr__pfet_01v8 w=2.51e+06u l=260000u
 .ends
 
 .subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_Trans2med
 + nFET_Gate01 pET_Gate02 pFET_Gate01 nFET_Gate02 pFET_Source1 pFET_Source2 nFET_Source2
 + nFET_Source1 nFET_Drain1 nFET_Drain2 pFET_Drain01 pFET_Drain2
-Xsky130_hilas_nFETmed_0 VSUBS nFET_Gate02 nFET_Drain2 nFET_Source2 sky130_hilas_nFETmed
-Xsky130_hilas_nFETmed_1 VSUBS nFET_Gate01 nFET_Drain1 nFET_Source1 sky130_hilas_nFETmed
-Xsky130_hilas_pFETmed_0 VSUBS pFET_Drain01 sky130_hilas_pFETmed_1/w_294_n44# pFET_Gate01
-+ pFET_Source1 sky130_hilas_pFETmed
-Xsky130_hilas_pFETmed_1 VSUBS pFET_Drain2 sky130_hilas_pFETmed_1/w_294_n44# pET_Gate02
+Xsky130_hilas_nFETmed_0 nFET_Gate02 nFET_Drain2 $SUB nFET_Source2 sky130_hilas_nFETmed
+Xsky130_hilas_nFETmed_1 nFET_Gate01 nFET_Drain1 $SUB nFET_Source1 sky130_hilas_nFETmed
+Xsky130_hilas_pFETmed_0 pFET_Drain01 sky130_hilas_pFETmed_1/w_294_n44# pFET_Gate01
++ $SUB pFET_Source1 sky130_hilas_pFETmed
+Xsky130_hilas_pFETmed_1 pFET_Drain2 sky130_hilas_pFETmed_1/w_294_n44# pET_Gate02 $SUB
 + pFET_Source2 sky130_hilas_pFETmed
 .ends
 

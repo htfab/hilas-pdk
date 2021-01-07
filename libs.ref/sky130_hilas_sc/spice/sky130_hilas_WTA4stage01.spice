@@ -1,16 +1,16 @@
 * NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_WTA4stage01.ext - technology: sky130A
 
-.subckt sky130_hilas_WTAsinglestage01 VSUBS a_4_n68# a_216_n68#
-X0 a_4_n68# a_n126_n150# a_n94_n68# VSUBS sky130_fd_pr__nfet_01v8 w=590000u l=200000u
-X1 VSUBS a_4_n68# a_n126_n150# VSUBS sky130_fd_pr__nfet_01v8 w=590000u l=200000u
+.subckt sky130_hilas_WTAsinglestage01 a_4_n68# a_216_n68# $SUB
+X0 a_4_n68# a_n126_n150# a_n94_n68# $SUB sky130_fd_pr__nfet_01v8 w=590000u l=200000u
+X1 $SUB a_4_n68# a_n126_n150# $SUB sky130_fd_pr__nfet_01v8 w=590000u l=200000u
 .ends
 
 
 * Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_WTA4stage01
 
-Xsky130_hilas_WTAsinglestage01_0 VSUBS a_284_2# m1_380_516# sky130_hilas_WTAsinglestage01
-Xsky130_hilas_WTAsinglestage01_1 VSUBS a_284_2# m1_380_516# sky130_hilas_WTAsinglestage01
-Xsky130_hilas_WTAsinglestage01_2 VSUBS a_284_2# m1_380_516# sky130_hilas_WTAsinglestage01
-Xsky130_hilas_WTAsinglestage01_3 VSUBS a_284_2# m1_380_516# sky130_hilas_WTAsinglestage01
+Xsky130_hilas_WTAsinglestage01_0 a_284_2# m1_380_516# $SUB sky130_hilas_WTAsinglestage01
+Xsky130_hilas_WTAsinglestage01_1 a_284_2# m1_380_516# $SUB sky130_hilas_WTAsinglestage01
+Xsky130_hilas_WTAsinglestage01_2 a_284_2# m1_380_516# $SUB sky130_hilas_WTAsinglestage01
+Xsky130_hilas_WTAsinglestage01_3 a_284_2# m1_380_516# $SUB sky130_hilas_WTAsinglestage01
 .end
 

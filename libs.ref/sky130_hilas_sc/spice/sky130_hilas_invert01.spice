@@ -3,6 +3,6 @@
 
 * Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_invert01
 
-X0 a_n10_6# a_n16_0# a_n10_n14# VSUBS sky130_fd_pr__nfet_01v8 w=60000u l=30000u
+X0 a_n10_6# a_n16_0# a_n10_n14# $SUB sky130_fd_pr__nfet_01v8 w=60000u l=30000u
 .end
 

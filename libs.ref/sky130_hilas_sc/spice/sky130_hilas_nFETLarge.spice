@@ -1,30 +1,30 @@
 * NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_nFETLarge.ext - technology: sky130A
 
-.subckt sky130_hilas_nFETmed VSUBS a_32_n88# a_84_n62# a_n24_n62#
-X0 a_84_n62# a_32_n88# a_n24_n62# VSUBS sky130_fd_pr__nfet_01v8 w=2.46e+06u l=260000u
+.subckt sky130_hilas_nFETmed a_32_n88# a_84_n62# $SUB a_n24_n62#
+X0 a_84_n62# a_32_n88# a_n24_n62# $SUB sky130_fd_pr__nfet_01v8 w=2.46e+06u l=260000u
 .ends
 
-.subckt sky130_hilas_nFETLargePart1 VSUBS sky130_hilas_nFETmed_0/a_84_n62# sky130_hilas_nFETmed_4/a_84_n62#
+.subckt sky130_hilas_nFETLargePart1 sky130_hilas_nFETmed_0/a_84_n62# sky130_hilas_nFETmed_4/a_84_n62#
 + sky130_hilas_nFETmed_2/a_32_n88# sky130_hilas_nFETmed_3/a_84_n62# sky130_hilas_nFETmed_1/a_32_n88#
-+ sky130_hilas_nFETmed_4/a_n24_n62# sky130_hilas_nFETmed_2/a_84_n62# sky130_hilas_nFETmed_0/a_32_n88#
++ sky130_hilas_nFETmed_4/a_n24_n62# $SUB sky130_hilas_nFETmed_2/a_84_n62# sky130_hilas_nFETmed_0/a_32_n88#
 + sky130_hilas_nFETmed_4/a_32_n88# sky130_hilas_nFETmed_1/a_84_n62# sky130_hilas_nFETmed_3/a_32_n88#
-Xsky130_hilas_nFETmed_0 VSUBS sky130_hilas_nFETmed_0/a_32_n88# sky130_hilas_nFETmed_0/a_84_n62#
-+ sky130_hilas_nFETmed_4/a_84_n62# sky130_hilas_nFETmed
-Xsky130_hilas_nFETmed_1 VSUBS sky130_hilas_nFETmed_1/a_32_n88# sky130_hilas_nFETmed_1/a_84_n62#
-+ sky130_hilas_nFETmed_0/a_84_n62# sky130_hilas_nFETmed
-Xsky130_hilas_nFETmed_2 VSUBS sky130_hilas_nFETmed_2/a_32_n88# sky130_hilas_nFETmed_2/a_84_n62#
-+ sky130_hilas_nFETmed_1/a_84_n62# sky130_hilas_nFETmed
-Xsky130_hilas_nFETmed_3 VSUBS sky130_hilas_nFETmed_3/a_32_n88# sky130_hilas_nFETmed_3/a_84_n62#
-+ sky130_hilas_nFETmed_2/a_84_n62# sky130_hilas_nFETmed
-Xsky130_hilas_nFETmed_4 VSUBS sky130_hilas_nFETmed_4/a_32_n88# sky130_hilas_nFETmed_4/a_84_n62#
-+ sky130_hilas_nFETmed_4/a_n24_n62# sky130_hilas_nFETmed
+Xsky130_hilas_nFETmed_0 sky130_hilas_nFETmed_0/a_32_n88# sky130_hilas_nFETmed_0/a_84_n62#
++ $SUB sky130_hilas_nFETmed_4/a_84_n62# sky130_hilas_nFETmed
+Xsky130_hilas_nFETmed_1 sky130_hilas_nFETmed_1/a_32_n88# sky130_hilas_nFETmed_1/a_84_n62#
++ $SUB sky130_hilas_nFETmed_0/a_84_n62# sky130_hilas_nFETmed
+Xsky130_hilas_nFETmed_2 sky130_hilas_nFETmed_2/a_32_n88# sky130_hilas_nFETmed_2/a_84_n62#
++ $SUB sky130_hilas_nFETmed_1/a_84_n62# sky130_hilas_nFETmed
+Xsky130_hilas_nFETmed_3 sky130_hilas_nFETmed_3/a_32_n88# sky130_hilas_nFETmed_3/a_84_n62#
++ $SUB sky130_hilas_nFETmed_2/a_84_n62# sky130_hilas_nFETmed
+Xsky130_hilas_nFETmed_4 sky130_hilas_nFETmed_4/a_32_n88# sky130_hilas_nFETmed_4/a_84_n62#
++ $SUB sky130_hilas_nFETmed_4/a_n24_n62# sky130_hilas_nFETmed
 .ends
 
 .subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_nFETLarge
 + Gate Source Drain
-Xsky130_hilas_nFETLargePart1_0 VSUBS Source Drain Gate Drain Gate Source Source Gate
+Xsky130_hilas_nFETLargePart1_0 Source Drain Gate Drain Gate Source $SUB Source Gate
 + Gate Drain Gate sky130_hilas_nFETLargePart1
-Xsky130_hilas_nFETLargePart1_1 VSUBS Source Drain Gate Drain Gate Source Source Gate
+Xsky130_hilas_nFETLargePart1_1 Source Drain Gate Drain Gate Source $SUB Source Gate
 + Gate Drain Gate sky130_hilas_nFETLargePart1
 .ends
 

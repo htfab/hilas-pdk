@@ -1,70 +1,69 @@
 * NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_capacitorArray01.ext - technology: sky130A
 
-.subckt sky130_hilas_CapModule01 VSUBS c1_n802_n404# m3_n886_n490#
+.subckt sky130_hilas_CapModule01 $SUB c1_n802_n404# m3_n886_n490#
 X0 c1_n802_n404# m3_n886_n490# sky130_fd_pr__cap_mim_m3_1 l=2e+06u w=2e+06u
 .ends
 
-.subckt sky130_hilas_TunCap01 VSUBS a_n2872_n666# w_n2902_n800#
+.subckt sky130_hilas_TunCap01 $SUB a_n2872_n666# w_n2902_n800#
 X0 a_n2872_n666# w_n2902_n800# w_n2902_n800# sky130_fd_pr__cap_var w=590000u l=500000u
 .ends
 
-.subckt sky130_hilas_horizPcell01 VSUBS a_n502_286# a_n508_162# w_n578_94# a_n578_238#
+.subckt sky130_hilas_horizPcell01 a_n502_286# a_n508_162# w_n578_94# $SUB a_n578_238#
 + m1_n258_94# a_n300_94# a_n344_286#
 X0 w_n578_94# a_n300_94# a_n344_162# w_n578_94# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
 X1 a_n344_286# a_n578_238# a_n502_286# w_n578_94# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
 X2 a_n344_162# a_n578_238# a_n508_162# w_n578_94# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
 .ends
 
-.subckt sky130_hilas_FGVaractorCapacitor VSUBS m1_n1784_n790# a_n1882_n672# w_n1914_n790#
+.subckt sky130_hilas_FGVaractorCapacitor m1_n1784_n790# $SUB a_n1882_n672# w_n1914_n790#
 X0 a_n1882_n672# w_n1914_n790# w_n1914_n790# sky130_fd_pr__cap_var w=1.11e+06u l=640000u
 .ends
 
-.subckt sky130_hilas_cellAttempt01 VSUBS a_1264_n176# m2_n524_n660# m1_n456_n764#
-+ m2_n524_n572# m2_n528_n62# m2_n524_n376# sky130_hilas_horizPcell01_3/a_n344_286#
-+ sky130_hilas_wellContact_0/w_n2898_n880# m2_n524_n292# w_1264_n176# m2_n528_24#
-+ m2_n528_310# m2_n528_224#
-Xsky130_hilas_TunCap01_0 VSUBS a_640_n334# m1_n456_n764# sky130_hilas_TunCap01
-Xsky130_hilas_TunCap01_1 VSUBS a_640_n618# m1_n456_n764# sky130_hilas_TunCap01
-Xsky130_hilas_TunCap01_2 VSUBS a_n214_10# m1_n456_n764# sky130_hilas_TunCap01
-Xsky130_hilas_TunCap01_3 VSUBS a_638_270# m1_n456_n764# sky130_hilas_TunCap01
-Xsky130_hilas_horizPcell01_0 VSUBS m2_n528_24# m2_n528_n62# w_1264_n176# a_n214_10#
+.subckt sky130_hilas_cellAttempt01 a_1264_n176# m2_n524_n660# m1_n456_n764# m2_n524_n572#
++ m2_n528_n62# m2_n524_n376# sky130_hilas_horizPcell01_3/a_n344_286# $SUB sky130_hilas_wellContact_0/w_n2898_n880#
++ m2_n524_n292# w_1264_n176# m2_n528_24# m2_n528_310# m2_n528_224#
+Xsky130_hilas_TunCap01_0 $SUB a_640_n334# m1_n456_n764# sky130_hilas_TunCap01
+Xsky130_hilas_TunCap01_1 $SUB a_640_n618# m1_n456_n764# sky130_hilas_TunCap01
+Xsky130_hilas_TunCap01_2 $SUB a_n214_10# m1_n456_n764# sky130_hilas_TunCap01
+Xsky130_hilas_TunCap01_3 $SUB a_638_270# m1_n456_n764# sky130_hilas_TunCap01
+Xsky130_hilas_horizPcell01_0 m2_n528_24# m2_n528_n62# w_1264_n176# $SUB a_n214_10#
 + a_1264_n176# a_1264_n176# sky130_hilas_horizPcell01_3/a_n344_286# sky130_hilas_horizPcell01
-Xsky130_hilas_horizPcell01_1 VSUBS m2_n524_n572# m2_n524_n660# w_1264_n176# a_640_n618#
+Xsky130_hilas_horizPcell01_1 m2_n524_n572# m2_n524_n660# w_1264_n176# $SUB a_640_n618#
 + a_1264_n176# a_1264_n176# sky130_hilas_horizPcell01_3/a_n344_286# sky130_hilas_horizPcell01
-Xsky130_hilas_horizPcell01_2 VSUBS m2_n524_n376# m2_n524_n292# w_1264_n176# a_640_n334#
+Xsky130_hilas_horizPcell01_2 m2_n524_n376# m2_n524_n292# w_1264_n176# $SUB a_640_n334#
 + a_1264_n176# a_1264_n176# sky130_hilas_horizPcell01_3/a_n344_286# sky130_hilas_horizPcell01
-Xsky130_hilas_horizPcell01_3 VSUBS m2_n528_224# m2_n528_310# w_1264_n176# a_638_270#
+Xsky130_hilas_horizPcell01_3 m2_n528_224# m2_n528_310# w_1264_n176# $SUB a_638_270#
 + a_1264_n176# a_1264_n176# sky130_hilas_horizPcell01_3/a_n344_286# sky130_hilas_horizPcell01
-Xsky130_hilas_FGVaractorCapacitor_0 VSUBS sky130_hilas_wellContact_0/w_n2898_n880#
+Xsky130_hilas_FGVaractorCapacitor_0 sky130_hilas_wellContact_0/w_n2898_n880# $SUB
 + a_640_n618# sky130_hilas_wellContact_0/w_n2898_n880# sky130_hilas_FGVaractorCapacitor
-Xsky130_hilas_FGVaractorCapacitor_2 VSUBS sky130_hilas_wellContact_0/w_n2898_n880#
+Xsky130_hilas_FGVaractorCapacitor_2 sky130_hilas_wellContact_0/w_n2898_n880# $SUB
 + a_n214_10# sky130_hilas_wellContact_0/w_n2898_n880# sky130_hilas_FGVaractorCapacitor
-Xsky130_hilas_FGVaractorCapacitor_1 VSUBS sky130_hilas_wellContact_0/w_n2898_n880#
+Xsky130_hilas_FGVaractorCapacitor_1 sky130_hilas_wellContact_0/w_n2898_n880# $SUB
 + a_640_n334# sky130_hilas_wellContact_0/w_n2898_n880# sky130_hilas_FGVaractorCapacitor
-Xsky130_hilas_FGVaractorCapacitor_3 VSUBS sky130_hilas_wellContact_0/w_n2898_n880#
+Xsky130_hilas_FGVaractorCapacitor_3 sky130_hilas_wellContact_0/w_n2898_n880# $SUB
 + a_638_270# sky130_hilas_wellContact_0/w_n2898_n880# sky130_hilas_FGVaractorCapacitor
 .ends
 
 .subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_capacitorArray01
 + CapTerminal2 CapTerm01 Vinj GateSelect Vtun Gate
-Xsky130_hilas_CapModule01_0[0|0] VSUBS m4_n534_286# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[1|0] VSUBS CapTerm01 CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[0|1] VSUBS m4_n534_286# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[1|1] VSUBS m4_n50_962# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[0|2] VSUBS m4_n534_286# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[1|2] VSUBS m4_n526_636# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[0|3] VSUBS m4_n534_286# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[1|3] VSUBS m4_n526_636# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[0|4] VSUBS m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[1|4] VSUBS m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[0|5] VSUBS m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[1|5] VSUBS m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[0|6] VSUBS m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[1|6] VSUBS m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[0|7] VSUBS m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_CapModule01_0[1|7] VSUBS m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
-Xsky130_hilas_cellAttempt01_0 VSUBS GateSelect m2_n846_n10# Vtun m4_n340_44# m2_n820_588#
-+ m4_n534_286# CapTerm01 Gate m2_n854_358# Vinj m4_n526_636# m2_n812_960# CapTerm01
+Xsky130_hilas_CapModule01_0[0|0] $SUB m4_n534_286# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[1|0] $SUB CapTerm01 CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[0|1] $SUB m4_n534_286# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[1|1] $SUB m4_n50_962# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[0|2] $SUB m4_n534_286# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[1|2] $SUB m4_n526_636# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[0|3] $SUB m4_n534_286# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[1|3] $SUB m4_n526_636# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[0|4] $SUB m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[1|4] $SUB m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[0|5] $SUB m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[1|5] $SUB m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[0|6] $SUB m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[1|6] $SUB m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[0|7] $SUB m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_CapModule01_0[1|7] $SUB m4_n340_44# CapTerminal2 sky130_hilas_CapModule01
+Xsky130_hilas_cellAttempt01_0 GateSelect m2_n846_n10# Vtun m4_n340_44# m2_n820_588#
++ m4_n534_286# CapTerm01 $SUB Gate m2_n854_358# Vinj m4_n526_636# m2_n812_960# CapTerm01
 + sky130_hilas_cellAttempt01
 .ends
 

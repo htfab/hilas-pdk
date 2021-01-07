@@ -3,7 +3,7 @@
 
 * Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_WTAsinglestage01
 
-X0 a_4_n68# a_n126_n150# a_n94_n68# VSUBS sky130_fd_pr__nfet_01v8 w=590000u l=200000u
-X1 VSUBS a_4_n68# a_n126_n150# VSUBS sky130_fd_pr__nfet_01v8 w=590000u l=200000u
+X0 a_4_n68# a_n126_n150# a_n94_n68# $SUB sky130_fd_pr__nfet_01v8 w=590000u l=200000u
+X1 $SUB a_4_n68# a_n126_n150# $SUB sky130_fd_pr__nfet_01v8 w=590000u l=200000u
 .end
 

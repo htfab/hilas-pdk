@@ -1,13 +1,13 @@
 * NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_nMirror03.ext - technology: sky130A
 
-.subckt sky130_hilas_nFET03 VSUBS a_n62_n12# a_54_n12# a_0_n38#
-X0 a_54_n12# a_0_n38# a_n62_n12# VSUBS sky130_fd_pr__nfet_01v8 w=350000u l=270000u
+.subckt sky130_hilas_nFET03 a_n62_n12# a_54_n12# $SUB a_0_n38#
+X0 a_54_n12# a_0_n38# a_n62_n12# $SUB sky130_fd_pr__nfet_01v8 w=350000u l=270000u
 .ends
 
 
 * Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_nMirror03
 
-Xsky130_hilas_nFET03_0 VSUBS a_n92_86# VSUBS a_n92_86# sky130_hilas_nFET03
-Xsky130_hilas_nFET03_1 VSUBS sky130_hilas_nFET03_1/a_n62_n12# VSUBS a_n92_86# sky130_hilas_nFET03
+Xsky130_hilas_nFET03_0 a_n92_86# $SUB $SUB a_n92_86# sky130_hilas_nFET03
+Xsky130_hilas_nFET03_1 sky130_hilas_nFET03_1/a_n62_n12# $SUB $SUB a_n92_86# sky130_hilas_nFET03
 .end
 

@@ -1,6 +1,6 @@
 * NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_pTransistorPair.ext - technology: sky130A
 
-.subckt sky130_hilas_pTransistorVert01 VSUBS a_n658_n792# a_n596_n822# a_n496_n792#
+.subckt sky130_hilas_pTransistorVert01 a_n658_n792# a_n596_n822# a_n496_n792# $SUB
 + w_n726_n888#
 X0 a_n496_n792# a_n596_n822# a_n658_n792# w_n726_n888# sky130_fd_pr__pfet_g5v0d10v5 w=2.03e+06u l=500000u
 .ends
@@ -8,9 +8,9 @@ X0 a_n496_n792# a_n596_n822# a_n658_n792# w_n726_n888# sky130_fd_pr__pfet_g5v0d1
 
 * Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_pTransistorPair
 
-Xsky130_hilas_pTransistorVert01_0 VSUBS li_348_n384# a_450_n208# m2_546_n498# w_534_n338#
+Xsky130_hilas_pTransistorVert01_0 li_348_n384# a_450_n208# m2_546_n498# $SUB w_534_n338#
 + sky130_hilas_pTransistorVert01
-Xsky130_hilas_pTransistorVert01_1 VSUBS li_348_n384# a_454_n814# m2_510_n704# w_534_n338#
+Xsky130_hilas_pTransistorVert01_1 li_348_n384# a_454_n814# m2_510_n704# $SUB w_534_n338#
 + sky130_hilas_pTransistorVert01
 .end
 

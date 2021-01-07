@@ -7,8 +7,8 @@ X0 a_n654_438# a_n952_338# a_n654_284# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w
 X1 w_n728_96# a_n300_130# a_n344_162# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
 X2 a_n346_284# a_n952_238# a_n512_284# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=1.84e+06u l=510000u
 X3 a_n344_162# a_n952_238# a_n512_162# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
-X4 a_n926_596# a_n952_496# a_n926_438# VSUBS sky130_fd_pr__nfet_g5v0d10v5 w=400000u l=500000u
-X5 a_n926_438# a_n952_338# a_n926_284# VSUBS sky130_fd_pr__nfet_g5v0d10v5 w=400000u l=500000u
+X4 a_n926_596# a_n952_496# a_n926_438# $SUB sky130_fd_pr__nfet_g5v0d10v5 w=400000u l=500000u
+X5 a_n926_438# a_n952_338# a_n926_284# $SUB sky130_fd_pr__nfet_g5v0d10v5 w=400000u l=500000u
 X6 a_n654_596# a_n952_496# a_n654_438# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=390000u l=500000u
 .end
 

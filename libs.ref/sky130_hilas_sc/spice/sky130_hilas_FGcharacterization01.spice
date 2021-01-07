@@ -1,26 +1,26 @@
 * NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_FGcharacterization01.ext - technology: sky130A
 
-.subckt sky130_hilas_nOverlapCap01 VSUBS a_n114_n76# a_n24_14#
-X0 a_n24_14# a_n114_n76# a_n24_14# VSUBS sky130_fd_pr__nfet_g5v0d10v5 w=580000u l=1.86e+06u
+.subckt sky130_hilas_nOverlapCap01 $SUB a_n114_n76# a_n24_14#
+X0 a_n24_14# a_n114_n76# a_n24_14# $SUB sky130_fd_pr__nfet_g5v0d10v5 w=580000u l=1.86e+06u
 .ends
 
-.subckt sky130_hilas_FGVaractorCapacitor02 VSUBS a_n1882_n644# w_n2010_n760#
+.subckt sky130_hilas_FGVaractorCapacitor02 a_n1882_n644# $SUB w_n2010_n760#
 X0 a_n1882_n644# w_n2010_n760# w_n2010_n760# sky130_fd_pr__cap_var w=1.11e+06u l=500000u
 .ends
 
-.subckt sky130_hilas_pFETdevice01 VSUBS w_n158_n156# a_n90_n38# a_42_n38# a_n158_36#
+.subckt sky130_hilas_pFETdevice01 w_n158_n156# a_n90_n38# $SUB a_42_n38# a_n158_36#
 X0 a_42_n38# a_n158_36# a_n90_n38# w_n158_n156# sky130_fd_pr__pfet_01v8 w=390000u l=390000u
 .ends
 
-.subckt sky130_hilas_overlapCap02a VSUBS a_n1004_n70# w_n1042_n108# a_n908_28#
+.subckt sky130_hilas_overlapCap02a a_n1004_n70# w_n1042_n108# $SUB a_n908_28#
 X0 a_n908_28# a_n1004_n70# a_n908_28# w_n1042_n108# sky130_fd_pr__pfet_g5v0d10v5 w=465000u l=500000u
 .ends
 
-.subckt sky130_hilas_FGHugeVaractorCapacitor01 VSUBS w_n1112_n1632# a_n1080_n1484#
+.subckt sky130_hilas_FGHugeVaractorCapacitor01 $SUB w_n1112_n1632# a_n1080_n1484#
 X0 a_n1080_n1484# w_n1112_n1632# w_n1112_n1632# sky130_fd_pr__cap_var w=8.56e+06u l=4.66e+06u
 .ends
 
-.subckt sky130_hilas_FGVaractorTunnelCap01 VSUBS a_n1882_n644# w_n2010_n760#
+.subckt sky130_hilas_FGVaractorTunnelCap01 a_n1882_n644# $SUB w_n2010_n760#
 X0 a_n1882_n644# w_n2010_n760# w_n2010_n760# sky130_fd_pr__cap_var w=610000u l=500000u
 .ends
 
@@ -28,16 +28,16 @@ X0 a_n1882_n644# w_n2010_n760# w_n2010_n760# sky130_fd_pr__cap_var w=610000u l=5
 + VtunVaractor01 VaractorCap01 overlapCap01 VaractorCap02 overlapCap02 LargeCapacitor
 + GND Vinj Output Vref AmplifierBias
 Xsky130_hilas_nOverlapCap01_0 GND a_730_1428# m1_n1610_518# sky130_hilas_nOverlapCap01
-Xsky130_hilas_FGVaractorCapacitor02_0 GND a_730_1428# VaractorCap02 sky130_hilas_FGVaractorCapacitor02
-Xsky130_hilas_FGVaractorCapacitor02_1 GND a_730_1428# VaractorCap01 sky130_hilas_FGVaractorCapacitor02
-Xsky130_hilas_FGVaractorCapacitor02_2 GND a_730_1428# VaractorCap02 sky130_hilas_FGVaractorCapacitor02
-Xsky130_hilas_pFETdevice01_0 GND Vinj sky130_hilas_li2m2_13/li_n26_n24# sky130_hilas_li2m2_12/li_n26_n24#
+Xsky130_hilas_FGVaractorCapacitor02_0 a_730_1428# GND VaractorCap02 sky130_hilas_FGVaractorCapacitor02
+Xsky130_hilas_FGVaractorCapacitor02_1 a_730_1428# GND VaractorCap01 sky130_hilas_FGVaractorCapacitor02
+Xsky130_hilas_FGVaractorCapacitor02_2 a_730_1428# GND VaractorCap02 sky130_hilas_FGVaractorCapacitor02
+Xsky130_hilas_pFETdevice01_0 Vinj sky130_hilas_li2m2_13/li_n26_n24# GND sky130_hilas_li2m2_12/li_n26_n24#
 + a_730_1428# sky130_hilas_pFETdevice01
-Xsky130_hilas_overlapCap02a_0 GND a_730_1428# Vinj overlapCap01 sky130_hilas_overlapCap02a
-Xsky130_hilas_overlapCap02a_1 GND a_730_1428# Vinj overlapCap02 sky130_hilas_overlapCap02a
-Xsky130_hilas_overlapCap02a_2 GND a_730_1428# Vinj overlapCap02 sky130_hilas_overlapCap02a
+Xsky130_hilas_overlapCap02a_0 a_730_1428# Vinj GND overlapCap01 sky130_hilas_overlapCap02a
+Xsky130_hilas_overlapCap02a_1 a_730_1428# Vinj GND overlapCap02 sky130_hilas_overlapCap02a
+Xsky130_hilas_overlapCap02a_2 a_730_1428# Vinj GND overlapCap02 sky130_hilas_overlapCap02a
 Xsky130_hilas_FGHugeVaractorCapacitor01_0 GND LargeCapacitor a_730_1428# sky130_hilas_FGHugeVaractorCapacitor01
-Xsky130_hilas_FGVaractorTunnelCap01_0 GND a_730_1428# VtunVaractor01 sky130_hilas_FGVaractorTunnelCap01
+Xsky130_hilas_FGVaractorTunnelCap01_0 a_730_1428# GND VtunVaractor01 sky130_hilas_FGVaractorTunnelCap01
 X0 a_3376_904# AmplifierBias GND GND sky130_fd_pr__nfet_g5v0d10v5 w=620000u l=770000u
 X1 a_3666_860# a_3666_860# GND GND sky130_fd_pr__nfet_g5v0d10v5 w=640000u l=550000u
 X2 a_3952_1586# a_730_1428# a_3376_904# GND sky130_fd_pr__nfet_g5v0d10v5 w=630000u l=500000u

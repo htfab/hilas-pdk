@@ -1,29 +1,29 @@
 * NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_Tgate4Single01.ext - technology: sky130A
 
-.subckt sky130_hilas_TgateSingle01Part1 VSUBS a_582_n188# output a_582_n314# a_514_n112#
-X0 VSUBS a_514_n112# a_582_n188# VSUBS sky130_fd_pr__nfet_01v8 w=300000u l=400000u
-X1 output a_514_n112# a_582_n314# VSUBS sky130_fd_pr__nfet_01v8 w=310000u l=400000u
+.subckt sky130_hilas_TgateSingle01Part1 $SUB a_582_n188# output a_582_n314# a_514_n112#
+X0 $SUB a_514_n112# a_582_n188# $SUB sky130_fd_pr__nfet_01v8 w=300000u l=400000u
+X1 output a_514_n112# a_582_n314# $SUB sky130_fd_pr__nfet_01v8 w=310000u l=400000u
 .ends
 
-.subckt sky130_hilas_TgateSingle01Part2 VSUBS a_18_n340# a_n40_n314# w_n134_n362#
-+ li_n36_n176# a_98_n314# a_n36_n112#
+.subckt sky130_hilas_TgateSingle01Part2 a_18_n340# a_n40_n314# w_n134_n362# li_n36_n176#
++ a_98_n314# $SUB a_n36_n112#
 X0 a_98_n314# a_18_n340# a_n40_n314# w_n134_n362# sky130_fd_pr__pfet_01v8 w=310000u l=400000u
 .ends
 
-.subckt sky130_hilas_TgateSingle01 VSUBS m2_n526_n340# a_n468_n112# w_n502_n362# sky130_hilas_TgateSingle01Part1_0/output
-Xsky130_hilas_TgateSingle01Part1_0 VSUBS a_n196_n192# sky130_hilas_TgateSingle01Part1_0/output
+.subckt sky130_hilas_TgateSingle01 m2_n526_n340# a_n468_n112# w_n502_n362# $SUB sky130_hilas_TgateSingle01Part1_0/output
+Xsky130_hilas_TgateSingle01Part1_0 $SUB a_n196_n192# sky130_hilas_TgateSingle01Part1_0/output
 + m2_n526_n340# a_n468_n112# sky130_hilas_TgateSingle01Part1
-Xsky130_hilas_TgateSingle01Part2_0 VSUBS a_n196_n192# m2_n526_n340# w_n502_n362# a_n196_n192#
-+ sky130_hilas_TgateSingle01Part1_0/output a_n468_n112# sky130_hilas_TgateSingle01Part2
+Xsky130_hilas_TgateSingle01Part2_0 a_n196_n192# m2_n526_n340# w_n502_n362# a_n196_n192#
++ sky130_hilas_TgateSingle01Part1_0/output $SUB a_n468_n112# sky130_hilas_TgateSingle01Part2
 X0 a_n196_n192# a_n468_n112# w_n502_n362# w_n502_n362# sky130_fd_pr__pfet_01v8 w=320000u l=400000u
 .ends
 
 .subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_Tgate4Single01
 + Input1_4 Vdd Select4 Select3 Input1_3 Input1_2 Select2 Select1 Input1_1 GND Output1
 + Output2 Output3 Output4
-Xsky130_hilas_TgateSingle01_0 GND Input1_1 Select1 Vdd Output1 sky130_hilas_TgateSingle01
-Xsky130_hilas_TgateSingle01_1 GND Input1_4 Select4 Vdd Output4 sky130_hilas_TgateSingle01
-Xsky130_hilas_TgateSingle01_2 GND Input1_3 Select3 Vdd Output3 sky130_hilas_TgateSingle01
-Xsky130_hilas_TgateSingle01_3 GND Input1_2 Select2 Vdd Output2 sky130_hilas_TgateSingle01
+Xsky130_hilas_TgateSingle01_0 Input1_1 Select1 Vdd GND Output1 sky130_hilas_TgateSingle01
+Xsky130_hilas_TgateSingle01_1 Input1_4 Select4 Vdd GND Output4 sky130_hilas_TgateSingle01
+Xsky130_hilas_TgateSingle01_2 Input1_3 Select3 Vdd GND Output3 sky130_hilas_TgateSingle01
+Xsky130_hilas_TgateSingle01_3 Input1_2 Select2 Vdd GND Output2 sky130_hilas_TgateSingle01
 .ends
 

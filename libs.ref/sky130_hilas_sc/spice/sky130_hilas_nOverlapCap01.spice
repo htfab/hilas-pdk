@@ -3,6 +3,6 @@
 
 * Top level circuit /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_nOverlapCap01
 
-X0 a_n24_14# a_n114_n76# a_n24_14# VSUBS sky130_fd_pr__nfet_g5v0d10v5 w=580000u l=1.86e+06u
+X0 a_n24_14# a_n114_n76# a_n24_14# $SUB sky130_fd_pr__nfet_g5v0d10v5 w=580000u l=1.86e+06u
 .end
 
