@@ -52,7 +52,7 @@ spice: $(MAG_CELLS)
 		$(MAG_ROOT)
 
 pin-md: $(MAG_CELLS)
-	@$(HILAS_ROOT)/scripts/make_pin_markdown -o $(MAG_ROOT)/README.md -m $(MAG_CELLS)
+	@$(HILAS_ROOT)/scripts/magic_gen.py -p $(MAG_ROOT)/README.md $(MAG_ROOT)
 
 pins: pin-md
 	bash -c 'cat $(HILAS_ROOT)/summary.md <(echo; echo; echo;) \
