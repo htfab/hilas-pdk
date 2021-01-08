@@ -16,8 +16,9 @@ PG_PIN_NAMES = ['VPB', 'VPWRIN', 'LOWLVPWR', 'VGND', 'VPWR', 'VNB', 'KAPWR']
 
 this_dir = Path(__file__).parent
 
-with open(this_dir / 'license_head.txt','r') as f:
+with open(this_dir / 'license_head.txt', 'r') as f:
     LICENSE_HEAD = f.read() + '\n'
+
 
 def edie(msg, code=1):
     print(msg)
