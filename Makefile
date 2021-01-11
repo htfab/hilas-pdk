@@ -22,7 +22,8 @@ all:
 		-i \
 		-s \
 		-v \
-		-p
+		-m \
+		-Y
 
 gds: $(MAG_CELLS)
 	echo "extracting gds"
@@ -40,12 +41,10 @@ spice: $(MAG_CELLS)
 	echo "making lib file"
 	$(SCRIPTS)/magic_gen.py -s
 
-pin-md: $(MAG_CELLS)
-	@$(HILAS_ROOT)/scripts/magic_gen.py -p
+markdown: lef
+	@$(HILAS_ROOT)/scripts/magic_gen.py -m
 
-pins: pin-md
-	bash -c 'cat $(HILAS_ROOT)/summary.md <(echo; echo; echo;) \
-	 $(MAG_ROOT)/README.md > $(HILAS_ROOT)/README.md'
+
 
 
 # vvvvvvvvv         CLEANING          vvvvvvvvvvvvvv

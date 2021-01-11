@@ -912,7 +912,7 @@ def check_schematics():
             missing.append(cell)
     if missing:
         warn('######################################################################################################')
-        warn('The following public cells are missing schematics in the /schematic/ path:')
+        warn('The following public cells are missing schematics in the /schem/ path:')
         for mf in missing:
             warn('    ' + str(mf))
         warn('######################################################################################################')
@@ -1061,14 +1061,13 @@ def main():
         parent_check(LIB_PATH['lib'])
         make_lib()
 
-    if args.markdown and target_check(None, 'markdown'):
-        # make a markdown pin summary file based on the Magic file source (text)
-        make_markdown()
-
     if args.verilog and target_check(None, 'verilog'):
         parent_check(LIB_PATH['verilog'])
         make_verilog()
 
+    if args.markdown and target_check(None, 'markdown'):
+        # make a markdown pin summary file based on the Magic file source (text)
+        make_markdown()
 
 if __name__ == '__main__':
     exit(main())
