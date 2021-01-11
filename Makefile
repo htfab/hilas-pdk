@@ -16,43 +16,32 @@ export TECHFILE = $(TECH_ROOT)/magic/sky130A.tech
 all:
 	echo "making all"
 	$(SCRIPTS)/magic_gen.py \
-		-g $(REF_ROOT)/gds \
-		-t $(REF_ROOT)/_templef \
-		-e $(REF_ROOT)/lef/$(CELL_LIB).lef \
-		-i $(REF_ROOT)/lib/$(CELL_LIB).lib \
-		-s $(REF_ROOT)/spice \
-		$(MAG_ROOT)
-	make pins
+		-g \
+		-t \
+		-e \
+		-i \
+		-s \
+		-v \
+		-p
 
 gds: $(MAG_CELLS)
 	echo "extracting gds"
-	$(SCRIPTS)/magic_gen.py \
-		-g $(REF_ROOT)/gds \
-		$(MAG_ROOT)
+	$(SCRIPTS)/magic_gen.py -g
 
 lef: $(MAG_CELLS)
 	echo "extracting lef views"
-	$(SCRIPTS)/magic_gen.py \
-		-t $(REF_ROOT)/_templef \
-		-e $(REF_ROOT)/lef/$(CELL_LIB).lef \
-		$(MAG_ROOT)
+	$(SCRIPTS)/magic_gen.py -t -e
 
 lib: $(MAG_CELLS)
 	echo "making lib file"
-	$(SCRIPTS)/magic_gen.py \
-		-t $(REF_ROOT)/_templef \
-		-e $(REF_ROOT)/lef/$(CELL_LIB).lef \
-		-i $(REF_ROOT)/lib/$(CELL_LIB).lib \
-		$(MAG_ROOT)
+	$(SCRIPTS)/magic_gen.py -t -e -i
 
 spice: $(MAG_CELLS)
 	echo "making lib file"
-	$(SCRIPTS)/magic_gen.py \
-		-s $(REF_ROOT)/spice \
-		$(MAG_ROOT)
+	$(SCRIPTS)/magic_gen.py -s
 
 pin-md: $(MAG_CELLS)
-	@$(HILAS_ROOT)/scripts/magic_gen.py -p $(MAG_ROOT)/README.md $(MAG_ROOT)
+	@$(HILAS_ROOT)/scripts/magic_gen.py -p
 
 pins: pin-md
 	bash -c 'cat $(HILAS_ROOT)/summary.md <(echo; echo; echo;) \
@@ -62,7 +51,13 @@ pins: pin-md
 # vvvvvvvvv         CLEANING          vvvvvvvvvvvvvv
 
 .PHONY: clean
-clean: clean-gds clean-lef clean-lib clean-pins clean-spice clean-tlef
+clean: clean-all
+
+.PHONY: clean-all
+clean-all: clean-gds clean-lef clean-tlef clean-lib clean-spice clean-verilog clean-markdown
+
+.PHONY: clean-markdown
+clean-markdown: clean-cell-details clean-cell-summary clean-readme
 
 .PHONY: clean-gds
 clean-gds:
@@ -80,12 +75,24 @@ clean-tlef:
 clean-lib:
 	-rm $(REF_ROOT)/lib/*.lib
 
-.PHONY: clean-pins
-clean-pins:
-	-rm $(MAG_ROOT)/README.md
-	-rm $(HILAS_ROOT)/README.md
-	-cp $(HILAS_ROOT)/summary.md $(HILAS_ROOT)/README.md
-
 .PHONY: clean-spice
 clean-spice:
 	-rm $(REF_ROOT)/spice/*.spice
+
+.PHONY: clean-verilog
+clean-verilog:
+	-rm $(REF_ROOT)/verilog/*.v
+
+.PHONY: clean-cell-details
+clean-cell-details:
+	-rm $(REF_ROOT)/CELL_DETAILS.md
+
+.PHONY: clean-cell-summary
+clean-cell-summary:
+	-rm $(REF_ROOT)/README.md
+	-rm $(REF_ROOT)/CELL_SUMMARY.md
+
+.PHONY: clean-readme
+clean-readme:
+	-rm $(HILAS_ROOT)/README.md
+	-cp $(SCRIPTS)/templates/README.md $(HILAS_ROOT)/README.md
