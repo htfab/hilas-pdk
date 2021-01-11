@@ -14,7 +14,6 @@ export TECHFILE = $(TECH_ROOT)/magic/sky130A.tech
 .DEFAULT_GOAL := all
 
 all:
-	echo "making all"
 	$(SCRIPTS)/magic_gen.py \
 		-g \
 		-t \
@@ -25,20 +24,19 @@ all:
 		-m \
 		-Y
 
+check:
+	$(SCRIPTS)/magic_gen.py -C
+
 gds: $(MAG_CELLS)
-	echo "extracting gds"
 	$(SCRIPTS)/magic_gen.py -g
 
 lef: $(MAG_CELLS)
-	echo "extracting lef views"
 	$(SCRIPTS)/magic_gen.py -t -e
 
 lib: $(MAG_CELLS)
-	echo "making lib file"
 	$(SCRIPTS)/magic_gen.py -t -e -i
 
 spice: $(MAG_CELLS)
-	echo "making lib file"
 	$(SCRIPTS)/magic_gen.py -s
 
 markdown: lef
