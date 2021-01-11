@@ -1,0 +1,360 @@
+#      Copyright 2020 The Hilas PDK Authors
+#
+#      This file is part of HILAS.
+#
+#      HILAS is free software: you can redistribute it and/or modify
+#      it under the terms of the GNU Lesser General Public License as published by
+#      the Free Software Foundation, version 3 of the License.
+#
+#      HILAS is distributed in the hope that it will be useful,
+#      but WITHOUT ANY WARRANTY; without even the implied warranty of
+#      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#      GNU Lesser General Public License for more details.
+#
+#      You should have received a copy of the GNU Lesser General Public License
+#      along with HILAS.  If not, see <https://www.gnu.org/licenses/>.
+#
+#      Licensed under the Lesser General Public License, Version 3.0 (the "License");
+#      you may not use this file except in compliance with the License.
+#      You may obtain a copy of the License at
+#
+#      https://www.gnu.org/licenses/lgpl-3.0.en.html
+#
+#      Unless required by applicable law or agreed to in writing, software
+#      distributed under the License is distributed on an "AS IS" BASIS,
+#      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#      See the License for the specific language governing permissions and
+#      limitations under the License.
+#
+#      SPDX-License-Identifier: LGPL-3.0
+
+
+#######################################################################################
+##
+##    PUBLIC CELLS
+##
+public-cells: #########################################################################
+
+  capacitorArray01:
+    description: 2x8 array of capacitors
+
+  DoubleTGate01:
+    description: 2x1 array of transmission gates
+
+  FGHugeVaractorCapacitor01:
+    description: one large varactor cap
+
+  Trans4small:
+    description: small transconductance amp?
+
+  DAC5bit01:
+    description: >- # '>-' indicates string wrapped over multiple lines
+          5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit,
+          and they would use this cell
+
+  Tgate4Double01:
+    description: 2x1 array of transmission gates (variant 4)
+
+  DAC_bit6_01:
+    description: 6-bit DAC, first variant
+
+  swc4x1BiasCell:
+    description: core switch cell 4x1 biasing unit
+
+  FGVaractorCapacitor02:
+    description: variant 2, varactor cap for floating-gate charge storage
+
+  TA2Cell_1FG_Strong:
+    description: Core transimpedance amp; strong FG inputs.
+
+  WTA4stage01:
+    description: >-     # '>-' indicates string wrapped over multiple lines
+        4-input winner-take-all circuit. Connects directly to array of swc4x2cell.
+        Can array vertically. Needs one current source.
+
+
+#######################################################################################
+##
+##    PRIMITIVE CELLS
+##
+primitive-cells: ######################################################################
+
+  CapModule01a:
+    description: primitive cap, variant 01a
+
+  capacitorSize01:
+    description:
+
+  capacitorSize03:
+    description:
+
+  mcap2m4:
+    description:
+
+  li2m2:
+    description:
+
+  pFETmirror:
+    description:
+
+  nFETLarge:
+    description:
+
+  pFETLargePart1:
+    description:
+
+  pFETdevice01e:
+    description:
+
+  pFETdevice01:
+    description:
+
+  pFETdevice01aa:
+    description:
+
+  TunVaractorCapcitor:
+    description:
+
+#######################################################################################
+##
+##    TEST CELLS
+##
+test-cells: ###########################################################################
+
+  all:
+    description:
+
+#######################################################################################
+##
+##    PRIVATE CELLS
+##
+private-cells:
+#######################################################################################
+
+  nDiffThOxContact:
+    description:
+
+#######################################################################################
+##
+##    CELLS TO BE SORTED
+##
+cells-to-be-sorted:
+#######################################################################################
+
+  FGVaractorCapacitor:
+    description:
+
+  overlapCap02:
+    description:
+
+  Tgate4Single01:
+    description:
+
+  TgateSingle01Part2:
+    description:
+
+  m22m4:
+    description:
+
+  DAC6TransistorStack01a:
+    description:
+
+  DualTACore01:
+    description:
+
+  TA2Cell_NoFG:
+    description: Core transimpedance amplifier
+
+  swc4x1cellOverlap:
+    description:
+
+  DAC6bit01:
+    description:
+
+  invert01:
+    description:
+
+  TA2Cell_1FG:
+    description: Core transimpedance amp; floating-gate inputs. (C4 block is a specific routing of this cell's terminals)
+
+  pFETdevice01c:
+    description:
+
+  horizTransCell01:
+    description:
+
+  nFETmirrorPairs:
+    description:
+
+  swc4x2cellOverlap:
+    description: Core switch cell, built with overlap capacitor
+
+  FGVaractorTunnelCap01:
+    description:
+
+  pFETdevice01d:
+    description:
+
+  pFETmirror02:
+    description:
+
+  TgateSingle01:
+    description:
+
+  swc4x1cellOverlap2:
+    description:
+
+  WTAsinglestage01:
+    description:
+
+  FGBias2x1cell:
+    description:
+
+
+
+  CapModule03:
+    description:
+
+  nFETmed:
+    description:
+
+  TunCap01:
+    description:
+
+  cellAttempt01:
+    description:
+
+  DAC6TransistorStack01b:
+    description:
+
+  TACoreBlock2:
+    description:
+
+  pFETdevice01a:
+    description:
+
+  m12m2:
+    description:
+
+  swc4x2cell:
+    description: Core switch cell ,Varactor capacitor cell
+
+  WTAblockSample01:
+    description:
+
+  TgateVinj01:
+    description:
+
+  pFETLarge:
+    description:
+
+  drainSelect01:
+    description:
+
+  pFETdevice01b:
+    description:
+
+  TACoreBlock:
+    description:
+
+  TA2SignalBiasCell:
+    description:
+
+  pTransistorVert01:
+    description:
+
+  Trans2med:
+    description:
+
+  capacitorSize02:
+    description:
+
+  WTA4Stage01:
+    description:
+
+  CapModule02:
+    description:
+
+  poly2m1:
+    description:
+
+  poly2m2:
+    description:
+
+  li2m1:
+    description:
+
+  pFETdevice01ba:
+    description:
+
+  poly2li:
+    description:
+
+  nFETmirrorPairs2:
+    description:
+
+  CapModule01:
+    description:
+
+  nFET03:
+    description:
+
+  FGcharacterization01:
+    description:
+
+  capacitorSize04:
+    description:
+
+  FGtrans2x1cell:
+    description:
+
+  TgateSingle01Part1:
+    description:
+
+  DAC6TransistorStack01:
+    description:
+
+  pFETmed:
+    description:
+
+  nMirror03:
+    description:
+
+  overlapCap02a:
+    description:
+
+  horizPcell01:
+    description:
+
+  overlapCap01:
+    description:
+
+  wellContact:
+    description:
+
+  nOverlapCap01:
+    description:
+
+  swc2x2varactor:
+    description:
+
+  pTransistorPair:
+    description:
+
+  DAC6TransistorStack01c:
+    description:
+
+  TAcoreblock:
+    description:
+
+  TgateDouble01:
+    description:
+
+  nFET03a:
+    description:
+
+  nFETLargePart1:
+    description:
+
+  FGBiasWeakGate2x1cell:
+    description:
