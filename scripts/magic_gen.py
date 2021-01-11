@@ -83,7 +83,7 @@ LIB_PATH = {
     'cell_summary': REF_ROOT / PDK_VARIANT / 'CELL_SUMMARY.md',
     'cell_details': REF_ROOT / PDK_VARIANT / 'CELL_DETAILS.md'
 }
-for name in ['cdl', 'doc', 'gds', 'lef', 'lib', 'mag', 'spice', 'schematic', 'techlef', 'verilog']:
+for name in ['cdl', 'doc', 'gds', 'lef', 'lib', 'mag', 'spice', 'schem', 'techlef', 'verilog']:
     LIB_PATH.update({name: REF_ROOT / PDK_VARIANT / name})
 
 with open(THIS_DIR / 'templates' / 'license_head.txt', 'r') as f:
@@ -906,7 +906,7 @@ def check_depends():
 
 def check_schematics():
     missing = []
-    avail_schem = [file.stem for file in LIB_PATH['schematic'].glob('.*')]
+    avail_schem = [file.stem for file in LIB_PATH['schem'].glob('.*')]
     for cell in cd.public_cells:
         if cell not in avail_schem:
             missing.append(cell)
