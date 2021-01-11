@@ -60,26 +60,26 @@ timestamp 1608069483
 transform 1 0 164 0 1 181
 box -172 -22 155 550
 << labels >>
-rlabel metal1 123 140 157 146 0 GND
+rlabel metal1 123 140 157 146 0 VGND
 port 7 nsew ground default
-rlabel metal1 190 140 217 146 0 Vdd
+rlabel metal1 190 140 217 146 0 VPWR
 port 8 nsew power default
-rlabel metal1 123 740 157 745 0 GND
+rlabel metal1 123 740 157 745 0 VGND
 port 7 nsew ground default
-rlabel metal1 190 740 217 745 0 Vdd
+rlabel metal1 190 740 217 745 0 VPWR
 port 8 nsew power default
 rlabel metal2 -282 410 -259 434 0 Vin+_amp1
-rlabel metal2 -126 451 -101 474 0 Vin+_amp2
+rlabel metal2 -126 451 -101 474 0 VINP_AMP2
 port 3 nsew
-rlabel metal2 -286 142 -263 167 0 Vin-_Amp1
+rlabel metal2 -286 142 -263 167 0 VINN_AMP1
 port 2 nsew analog default
-rlabel metal2 -130 718 -105 744 0 Vin-_Amp2
+rlabel metal2 -130 718 -105 744 0 VINN_AMP2
 port 4 nsew
-rlabel metal2 304 392 319 414 0 Vout_Amp1
+rlabel metal2 304 392 319 414 0 VOUT_AMP1
 port 5 nsew
-rlabel metal2 304 474 319 496 0 Vout_Amp2
+rlabel metal2 304 474 319 496 0 VOUT_AMP2
 port 6 nsew
-rlabel metal1 -416 737 -397 745 0 GateColSelect
+rlabel metal1 -416 737 -397 745 0 GATECOLSELECT
 port 1 nsew
-rlabel metal1 -372 737 -344 745 0 Vdd
+rlabel metal1 -372 737 -344 745 0 VPWR
 << end >>

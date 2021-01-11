@@ -191,14 +191,14 @@ timestamp 1607986851
 transform 1 0 142 0 1 729
 box -6 -9 333 278
 << labels >>
-rlabel metal2 486 834 500 908 0 Drain
+rlabel metal2 486 834 500 908 0 DRAIN
 port 3 nsew analog default
-rlabel metal2 88 905 102 979 0 Source
+rlabel metal2 88 905 102 979 0 SOURCE
 port 2 nsew analog default
-rlabel metal2 64 420 74 502 0 Gate
+rlabel metal2 64 420 74 502 0 GATE
 port 1 nsew
-rlabel metal1 478 1010 504 1018 0 Well
+rlabel metal1 478 1010 504 1018 0 WELL
 port 4 nsew analog default
-rlabel metal1 478 419 504 427 0 Well
+rlabel metal1 478 419 504 427 0 WELL
 port 4 nsew analog default
 << end >>

@@ -93,28 +93,28 @@ timestamp 1607270276
 transform 0 -1 -53 1 0 169
 box -9 -26 24 29
 << labels >>
-rlabel metal2 -380 215 -371 237 0 pFET_Gate01
+rlabel metal2 -380 215 -371 237 0 PFET_GATE01
 port 3 nsew analog default
-rlabel metal2 -380 159 -372 180 0 pET_Gate02
+rlabel metal2 -380 159 -372 180 0 PET_GATE02
 port 2 nsew analog default
-rlabel metal2 -380 119 -372 140 0 nFET_Gate02
+rlabel metal2 -380 119 -372 140 0 NFET_GATE02
 port 4 nsew analog default
-rlabel metal2 -380 62 -372 83 0 nFET_Gate01
+rlabel metal2 -380 62 -372 83 0 NFET_GATE01
 port 1 nsew analog default
-rlabel metal2 -37 400 -27 421 0 pFET_Drain2
+rlabel metal2 -37 400 -27 421 0 PFET_DRAIN2
 port 12 nsew analog default
-rlabel metal2 -37 317 -27 338 0 pFET_Drain01
+rlabel metal2 -37 317 -27 338 0 PFET_DRAIN01
 port 11 nsew analog default
-rlabel metal2 -380 314 -372 336 0 pFET_Source1
+rlabel metal2 -380 314 -372 336 0 PFET_SOURCE1
 port 5 nsew analog default
-rlabel metal2 -380 392 -372 414 0 pFET_Source2
+rlabel metal2 -380 392 -372 414 0 PFET_SOURCE2
 port 6 nsew analog default
-rlabel metal2 -380 -74 -373 -53 0 nFET_Source1
+rlabel metal2 -380 -74 -373 -53 0 NFET_SOURCE1
 port 8 nsew analog default
-rlabel metal2 -380 -119 -373 -97 0 nFET_Source2
+rlabel metal2 -380 -119 -373 -97 0 NFET_SOURCE2
 port 7 nsew analog default
-rlabel metal2 -34 -72 -27 -50 0 nFET_Drain1
+rlabel metal2 -34 -72 -27 -50 0 NFET_DRAIN1
 port 9 nsew analog default
-rlabel metal2 -34 -116 -27 -95 0 nFET_Drain2
+rlabel metal2 -34 -116 -27 -95 0 NFET_DRAIN2
 port 10 nsew analog default
 << end >>

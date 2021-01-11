@@ -91,32 +91,32 @@ timestamp 1608069483
 transform 1 0 38 0 1 181
 box -172 -22 155 550
 << labels >>
-rlabel metal1 -416 737 -397 745 0 GateColSelect
+rlabel metal1 -416 737 -397 745 0 GATECOLSELECT
 port 5 nsew analog default
-rlabel metal2 -1726 617 -1690 636 0 Vin+_Amp1
+rlabel metal2 -1726 617 -1690 636 0 VINP_AMP1
 port 2 nsew analog default
-rlabel space -1731 241 -1695 266 0 Vin-_Amp1
+rlabel space -1731 241 -1695 266 0 VINN_AMP1
 port 1 nsew analog default
-rlabel metal1 -3 739 31 745 0 GND
+rlabel metal1 -3 739 31 745 0 VGND
 port 7 nsew analog default
-rlabel metal1 63 739 91 745 0 Vdd
+rlabel metal1 63 739 91 745 0 VPWR
 port 6 nsew analog default
-rlabel metal1 64 140 91 146 0 Vdd
+rlabel metal1 64 140 91 146 0 VPWR
 port 6 nsew power default
-rlabel metal1 -3 140 31 146 0 GND
+rlabel metal1 -3 140 31 146 0 VGND
 port 7 nsew ground default
-rlabel metal2 -252 451 -220 475 0 Vin+_Amp2
+rlabel metal2 -252 451 -220 475 0 VINP_AMP2
 port 3 nsew analog default
-rlabel metal2 -260 718 -229 742 1 Vin-_Amp2
+rlabel metal2 -260 718 -229 742 1 VINN_AMP2
 port 4 n analog default
-rlabel metal1 -372 737 -344 745 0 Vinj
+rlabel metal1 -372 737 -344 745 0 VINJ
 port 8 nsew power default
-rlabel metal1 -416 140 -397 145 0 GateColSelect
+rlabel metal1 -416 140 -397 145 0 GATECOLSELECT
 port 5 nsew analog default
-rlabel metal1 -372 140 -344 145 0 Vinj
+rlabel metal1 -372 140 -344 145 0 VINJ
 port 8 nsew power default
-rlabel metal2 182 474 193 497 0 output1
+rlabel metal2 182 474 193 497 0 OUTPUT1
 port 9 nsew analog default
-rlabel metal2 182 392 193 414 0 output2
+rlabel metal2 182 392 193 414 0 OUTPUT2
 port 10 nsew analog default
 << end >>

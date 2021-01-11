@@ -157,47 +157,47 @@ timestamp 1607386385
 transform 1 0 777 0 -1 270
 box -289 47 -33 232
 << labels >>
-rlabel metal2 -264 111 -252 130 0 bias1
+rlabel metal2 -264 111 -252 130 0 BIAS1
 port 1 nsew analog default
-rlabel metal2 -266 13 -254 32 0 bias2
+rlabel metal2 -266 13 -254 32 0 BIAS2
 port 2 nsew analog default
-rlabel metal2 -263 -187 -251 -171 0 bias3
+rlabel metal2 -263 -187 -251 -171 0 BIAS3
 port 3 nsew analog default
-rlabel metal2 -263 -285 -249 -270 0 bias4
+rlabel metal2 -263 -285 -249 -270 0 BIAS4
 port 4 nsew analog default
-rlabel metal1 -228 209 -188 223 0 Vtun
+rlabel metal1 -228 209 -188 223 0 VTUN
 port 5 nsew analog default
-rlabel metal1 -228 -382 -188 -372 0 Vtun
+rlabel metal1 -228 -382 -188 -372 0 VTUN
 port 5 nsew analog default
-rlabel metal1 177 -382 215 -372 0 Gate
+rlabel metal1 177 -382 215 -372 0 GATE
 port 6 nsew analog default
-rlabel metal1 177 213 215 223 0 Gate
+rlabel metal1 177 213 215 223 0 GATE
 port 6 nsew analog default
-rlabel metal1 692 216 708 223 0 Vinj
+rlabel metal1 692 216 708 223 0 VINJ
 port 7 nsew power default
-rlabel metal1 611 216 627 223 0 Vdd
+rlabel metal1 611 216 627 223 0 VPWR
 port 8 nsew power default
-rlabel metal1 648 216 667 223 0 GateSelect
-rlabel metal1 692 -381 708 -374 0 Vinj
+rlabel metal1 648 216 667 223 0 GATESELECT
+rlabel metal1 692 -381 708 -374 0 VINJ
 port 7 nsew power default
-rlabel metal1 611 -381 627 -374 0 Vdd
+rlabel metal1 611 -381 627 -374 0 VPWR
 port 8 nsew power default
-rlabel metal1 648 -381 667 -374 0 GateSelect
+rlabel metal1 648 -381 667 -374 0 GATESELECT
 port 9 nsew analog default
-rlabel metal2 735 155 744 173 0 drain1
+rlabel metal2 735 155 744 173 0 DRAIN1
 port 10 nsew analog default
-rlabel metal2 735 112 744 130 0 Horiz1
+rlabel metal2 735 112 744 130 0 HORIZ1
 port 11 nsew analog default
-rlabel metal2 735 -31 744 -13 0 drain2
+rlabel metal2 735 -31 744 -13 0 DRAIN2
 port 13 nsew
-rlabel metal2 736 12 745 30 0 Horiz2
+rlabel metal2 736 12 745 30 0 HORIZ2
 port 12 nsew analog default
-rlabel metal2 734 -146 745 -128 0 drain3
+rlabel metal2 734 -146 745 -128 0 DRAIN3
 port 14 nsew analog default
-rlabel metal2 733 -189 744 -171 0 Horiz3
+rlabel metal2 733 -189 744 -171 0 HORIZ3
 port 15 nsew analog default
-rlabel metal2 733 -288 744 -270 0 Horiz4
+rlabel metal2 733 -288 744 -270 0 HORIZ4
 port 16 nsew analog default
-rlabel metal2 733 -331 744 -313 0 drain4
+rlabel metal2 733 -331 744 -313 0 DRAIN4
 port 17 nsew analog default
 << end >>

@@ -45,12 +45,12 @@ timestamp 1607818356
 transform 1 0 2002 0 1 499
 box -416 -216 -186 12
 << labels >>
-rlabel metal2 1982 385 1992 413 0 Cap1Term02
+rlabel metal2 1982 385 1992 413 0 CAP1TERM02
 port 1 nsew analog default
-rlabel metal2 1417 385 1424 413 0 Cap1Term01
+rlabel metal2 1417 385 1424 413 0 CAP1TERM01
 port 4 nsew analog default
-rlabel metal2 1417 85 1423 113 0 Cap2Term01
+rlabel metal2 1417 85 1423 113 0 CAP2TERM01
 port 3 nsew analog default
-rlabel metal2 1986 85 1993 113 0 Cap2Term02
+rlabel metal2 1986 85 1993 113 0 CAP2TERM02
 port 2 nsew analog default
 << end >>

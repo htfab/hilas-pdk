@@ -40,43 +40,43 @@ timestamp 1608225149
 transform 1 0 227 0 1 40
 box -263 -181 445 -29
 << labels >>
-rlabel metal1 621 460 640 464 0 Vdd
+rlabel metal1 621 460 640 464 0 VPWR
 port 13 nsew
-rlabel metal1 38 460 58 464 0 GND
+rlabel metal1 38 460 58 464 0 VGND
 port 1 nsew ground default
-rlabel metal2 665 335 672 355 0 Output1
+rlabel metal2 665 335 672 355 0 OUTPUT1
 port 17 nsew
-rlabel metal2 666 33 672 53 0 Output3
+rlabel metal2 666 33 672 53 0 OUTPUT3
 port 15 nsew
-rlabel metal2 666 270 672 290 0 Output2
+rlabel metal2 666 270 672 290 0 OUTPUT2
 port 16 nsew
-rlabel metal2 666 -32 672 -12 0 Output4
+rlabel metal2 666 -32 672 -12 0 OUTPUT4
 port 14 nsew
-rlabel metal2 -36 335 -30 355 0 Select1
+rlabel metal2 -36 335 -30 355 0 SELECT1
 port 4 nsew
-rlabel metal2 -36 270 -30 290 0 Select2
+rlabel metal2 -36 270 -30 290 0 SELECT2
 port 5 nsew
-rlabel metal2 -36 33 -30 53 0 Select3
+rlabel metal2 -36 33 -30 53 0 SELECT3
 port 8 nsew
-rlabel metal2 -36 -32 -30 -12 0 Select4
+rlabel metal2 -36 -32 -30 -12 0 SELECT4
 port 10 nsew
-rlabel metal1 621 -141 640 -137 0 GND
+rlabel metal1 621 -141 640 -137 0 VGND
 port 1 nsew
-rlabel metal1 38 -141 58 -137 0 Vdd
+rlabel metal1 38 -141 58 -137 0 VPWR
 port 13 nsew
-rlabel metal2 -36 433 -31 453 0 Input1_1
+rlabel metal2 -36 433 -31 453 0 INPUT1_1
 port 2 nsew
-rlabel metal2 -36 385 -31 405 0 Input2_1
+rlabel metal2 -36 385 -31 405 0 INPUT2_1
 port 3 nsew
-rlabel metal2 -36 172 -31 192 0 Input1_2
+rlabel metal2 -36 172 -31 192 0 INPUT1_2
 port 7 nsew
-rlabel metal2 -36 220 -31 240 0 Input2_2
+rlabel metal2 -36 220 -31 240 0 INPUT2_2
 port 6 nsew
 rlabel metal2 -36 131 -31 151 0 Input1_3
-rlabel metal2 -36 83 -31 103 0 Input2_3
+rlabel metal2 -36 83 -31 103 0 INPUT2_3
 port 9 nsew
-rlabel metal2 -36 -82 -31 -62 0 Input2_4
+rlabel metal2 -36 -82 -31 -62 0 INPUT2_4
 port 11 nsew
-rlabel metal2 -36 -130 -31 -110 0 Input1_4
+rlabel metal2 -36 -130 -31 -110 0 INPUT1_4
 port 12 nsew
 << end >>

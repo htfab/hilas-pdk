@@ -512,75 +512,75 @@ timestamp 1607392100
 transform -1 0 -257 0 1 1110
 box -191 -382 744 223
 << labels >>
-rlabel metal1 -884 1327 -868 1333 0 Vert1
+rlabel metal1 -884 1327 -868 1333 0 VERT1
 port 1 nsew analog default
-rlabel metal1 -965 1327 -949 1333 0 Vinj
+rlabel metal1 -965 1327 -949 1333 0 VINJ
 port 10 nsew
-rlabel metal1 -924 1327 -905 1333 0 GateSelect1
+rlabel metal1 -924 1327 -905 1333 0 GATESELECT1
 port 11 nsew analog default
-rlabel metal2 -1001 1265 -993 1283 0 drain1
+rlabel metal2 -1001 1265 -993 1283 0 DRAIN1
 port 3 nsew analog default
-rlabel metal2 -1001 1222 -993 1240 0 Horiz1
+rlabel metal2 -1001 1222 -993 1240 0 HORIZ1
 port 2 nsew analog default
-rlabel metal2 -1001 1122 -993 1140 0 Horiz2
+rlabel metal2 -1001 1122 -993 1140 0 HORIZ2
 port 4 nsew analog default
-rlabel metal2 -1001 1079 -993 1097 0 drain2
+rlabel metal2 -1001 1079 -993 1097 0 DRAIN2
 port 5 nsew analog default
-rlabel metal2 -1001 964 -994 982 0 drain3
+rlabel metal2 -1001 964 -994 982 0 DRAIN3
 port 6 nsew analog default
-rlabel metal2 -1001 921 -994 939 0 Horiz3
+rlabel metal2 -1001 921 -994 939 0 HORIZ3
 port 7 nsew analog default
-rlabel metal2 -1001 822 -994 840 0 Horiz4
+rlabel metal2 -1001 822 -994 840 0 HORIZ4
 port 8 nsew analog default
-rlabel metal2 -1001 779 -994 797 0 drain4
+rlabel metal2 -1001 779 -994 797 0 DRAIN4
 port 9 nsew analog default
-rlabel metal1 -965 729 -949 736 0 Vinj
+rlabel metal1 -965 729 -949 736 0 VINJ
 port 10 nsew power default
-rlabel metal1 -884 729 -868 736 0 Vert1
+rlabel metal1 -884 729 -868 736 0 VERT1
 port 1 nsew analog default
-rlabel metal1 -924 729 -905 736 0 GateSelect1
+rlabel metal1 -924 729 -905 736 0 GATESELECT1
 port 11 nsew analog default
-rlabel metal1 744 729 760 736 0 Vinj
+rlabel metal1 744 729 760 736 0 VINJ
 port 10 nsew power default
-rlabel metal1 663 1326 679 1333 0 Vert2
+rlabel metal1 663 1326 679 1333 0 VERT2
 port 12 nsew analog default
-rlabel metal1 700 1326 719 1333 0 GateSelect2
+rlabel metal1 700 1326 719 1333 0 GATESELECT2
 port 13 nsew analog default
-rlabel metal1 744 1326 760 1333 0 Vinj
+rlabel metal1 744 1326 760 1333 0 VINJ
 port 10 nsew power default
-rlabel metal1 663 729 679 736 0 Vert2
+rlabel metal1 663 729 679 736 0 VERT2
 port 12 nsew analog default
-rlabel metal1 700 729 719 736 0 GateSelect2
+rlabel metal1 700 729 719 736 0 GATESELECT2
 port 13 nsew analog default
-rlabel metal2 785 1265 796 1283 0 drain1
+rlabel metal2 785 1265 796 1283 0 DRAIN1
 port 3 nsew analog default
-rlabel metal2 786 1222 797 1240 0 Horiz1
+rlabel metal2 786 1222 797 1240 0 HORIZ1
 port 2 nsew analog default
-rlabel metal2 786 1122 797 1140 0 Horiz2
+rlabel metal2 786 1122 797 1140 0 HORIZ2
 port 4 nsew analog default
-rlabel metal2 786 1079 797 1097 0 drain2
+rlabel metal2 786 1079 797 1097 0 DRAIN2
 port 5 nsew analog default
-rlabel metal2 785 964 796 982 0 drain3
+rlabel metal2 785 964 796 982 0 DRAIN3
 port 6 nsew analog default
-rlabel metal2 785 921 796 939 0 Horiz3
+rlabel metal2 785 921 796 939 0 HORIZ3
 port 7 nsew analog default
-rlabel metal2 785 822 796 840 0 Horiz4
+rlabel metal2 785 822 796 840 0 HORIZ4
 port 8 nsew analog default
-rlabel metal2 785 779 796 797 0 drain
+rlabel metal2 785 779 796 797 0 DRAIN
 port 14 nsew analog default
-rlabel metal1 328 1328 352 1333 0 Gate2
+rlabel metal1 328 1328 352 1333 0 GATE2
 port 15 nsew analog default
-rlabel metal1 328 728 352 734 0 Gate2
+rlabel metal1 328 728 352 734 0 GATE2
 port 15 nsew analog default
-rlabel metal1 -557 1327 -532 1333 0 Gate1
+rlabel metal1 -557 1327 -532 1333 0 GATE1
 port 16 nsew analog default
-rlabel metal1 -557 728 -532 734 0 Gate1
+rlabel metal1 -557 728 -532 734 0 GATE1
 port 16 nsew analog default
-rlabel metal1 -196 1325 -166 1333 0 Vtun
+rlabel metal1 -196 1325 -166 1333 0 VTUN
 port 17 nsew analog default
-rlabel metal1 -38 1325 -8 1333 0 Vtun
-rlabel metal1 -196 728 -166 736 0 Vtun
+rlabel metal1 -38 1325 -8 1333 0 VTUN
+rlabel metal1 -196 728 -166 736 0 VTUN
 port 17 nsew analog default
-rlabel metal1 -38 728 -8 736 0 Vtun
+rlabel metal1 -38 728 -8 736 0 VTUN
 port 17 nsew analog default
 << end >>

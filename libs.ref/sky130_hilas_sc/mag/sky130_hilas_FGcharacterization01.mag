@@ -871,28 +871,28 @@ timestamp 1607949437
 transform 1 0 1999 0 1 822
 box -9 -10 23 22
 << labels >>
-rlabel metal2 2077 305 2083 354 0 GND
+rlabel metal2 2077 305 2083 354 0 VGND
 port 8 nsew ground default
-rlabel metal2 2077 487 2083 519 0 Output
+rlabel metal2 2077 487 2083 519 0 OUTPUT
 port 10 nsew analog default
-rlabel metal2 2076 642 2083 718 0 Vinj
+rlabel metal2 2076 642 2083 718 0 VINJ
 port 9 nsew power default
-rlabel metal2 2077 448 2083 471 0 AmplifierBias
+rlabel metal2 2077 448 2083 471 0 AMPLIFIERBIAS
 port 12 nsew analog default
-rlabel metal2 2077 535 2083 558 0 Vref
+rlabel metal2 2077 535 2083 558 0 VREF
 port 11 nsew analog default
-rlabel metal1 1505 261 1534 266 0 LargeCapacitor
+rlabel metal1 1505 261 1534 266 0 LARGECAPACITOR
 port 7 nsew analog default
-rlabel metal1 173 858 197 864 0 overlapCap01
+rlabel metal1 173 858 197 864 0 OVERLAPCAP01
 port 3 nsew analog default
-rlabel metal1 174 259 198 266 0 overlapCap02
+rlabel metal1 174 259 198 266 0 OVERLAPCAP02
 port 6 nsew analog default
-rlabel metal1 -415 259 -384 266 0 VaractorCap02
+rlabel metal1 -415 259 -384 266 0 VARACTORCAP02
 port 5 nsew analog default
-rlabel metal1 -414 855 -387 864 0 VaractorCap01
+rlabel metal1 -414 855 -387 864 0 VARACTORCAP01
 port 2 nsew analog default
-rlabel space -806 259 -780 269 0 VtunOverlap01
+rlabel space -806 259 -780 269 0 VTUNOVERLAP01
 port 4 nsew analog default
-rlabel metal1 -884 857 -858 864 0 VtunVaractor01
+rlabel metal1 -884 857 -858 864 0 VTUNVARACTOR01
 port 1 nsew analog default
 << end >>

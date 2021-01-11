@@ -182,36 +182,36 @@ timestamp 1607089160
 transform 1 0 538 0 1 60
 box -14 -15 20 18
 << labels >>
-rlabel metal1 -361 216 -319 223 0 Vtun
+rlabel metal1 -361 216 -319 223 0 VTUN
 port 9 nsew analog default
-rlabel metal1 -113 216 -90 223 0 GND
+rlabel metal1 -113 216 -90 223 0 VGND
 port 7 nsew ground default
-rlabel metal1 9 215 32 223 0 gate_control
+rlabel metal1 9 215 32 223 0 GATE_CONTROL
 port 8 nsew analog default
-rlabel metal1 705 216 733 223 0 Vinj
+rlabel metal1 705 216 733 223 0 VINJ
 port 5 nsew power default
-rlabel metal2 749 49 757 71 0 output1
+rlabel metal2 749 49 757 71 0 OUTPUT1
 port 3 nsew analog default
-rlabel metal2 750 -226 757 -205 0 output2
+rlabel metal2 750 -226 757 -205 0 OUTPUT2
 port 4 nsew analog default
-rlabel metal2 -396 155 -389 173 0 drain1
+rlabel metal2 -396 155 -389 173 0 DRAIN1
 port 1 nsew analog default
-rlabel metal2 -396 95 -391 113 0 Input1
+rlabel metal2 -396 95 -391 113 0 INPUT1
 port 2 nsew
-rlabel metal1 661 217 680 222 0 GateSelect
+rlabel metal1 661 217 680 222 0 GATESELECT
 port 6 nsew analog default
-rlabel metal1 661 -382 680 -376 0 GateSelect
+rlabel metal1 661 -382 680 -376 0 GATESELECT
 port 6 nsew analog default
-rlabel metal1 705 -382 733 -375 0 Vinj
+rlabel metal1 705 -382 733 -375 0 VINJ
 port 5 nsew power default
-rlabel metal1 -113 -382 -90 -372 0 GND
+rlabel metal1 -113 -382 -90 -372 0 VGND
 port 7 nsew ground default
-rlabel metal1 9 -382 32 -374 0 gateControl
+rlabel metal1 9 -382 32 -374 0 GATECONTROL
 port 10 nsew analog default
-rlabel metal2 -396 -330 -391 -315 0 drain4
+rlabel metal2 -396 -330 -391 -315 0 DRAIN4
 port 11 nsew analog default
-rlabel metal2 -396 -279 -390 -258 0 Input2
+rlabel metal2 -396 -279 -390 -258 0 INPUT2
 port 12 nsew analog default
-rlabel metal2 -396 -49 -390 -27 0 CommonSource
+rlabel metal2 -396 -49 -390 -27 0 COMMONSOURCE
 port 13 nsew analog default
 << end >>

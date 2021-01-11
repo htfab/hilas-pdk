@@ -139,32 +139,32 @@ timestamp 1608303107
 transform -1 0 -317 0 1 339
 box -266 -382 745 223
 << labels >>
-rlabel metal2 289 426 296 442 0 output1
+rlabel metal2 289 426 296 442 0 OUTPUT1
 port 4 nsew analog default
-rlabel metal2 291 333 296 349 0 output2
+rlabel metal2 291 333 296 349 0 OUTPUT2
 port 5 nsew analog default
-rlabel metal2 291 149 296 165 0 output3
+rlabel metal2 291 149 296 165 0 OUTPUT3
 port 6 nsew analog default
-rlabel metal2 291 56 296 72 0 output4
+rlabel metal2 291 56 296 72 0 OUTPUT4
 port 7 nsew analog default
-rlabel metal1 257 556 280 562 0 GND
+rlabel metal1 257 556 280 562 0 VGND
 port 1 nsew ground default
-rlabel poly 209 556 229 562 0 CommonNode
+rlabel poly 209 556 229 562 0 COMMONNODE
 port 2 nsew analog default
-rlabel metal1 131 556 154 562 0 CommonNode
+rlabel metal1 131 556 154 562 0 COMMONNODE
 port 2 nsew analog default
-rlabel metal1 131 -43 154 -37 0 CommonMode
+rlabel metal1 131 -43 154 -37 0 COMMONMODE
 port 3 nsew analog default
-rlabel poly 209 -43 229 -37 0 CommonMode
+rlabel poly 209 -43 229 -37 0 COMMONMODE
 port 3 nsew analog default
-rlabel metal1 257 -43 280 -37 0 GND
+rlabel metal1 257 -43 280 -37 0 VGND
 port 1 nsew ground default
-rlabel metal2 -1112 449 -1097 469 0 input1
+rlabel metal2 -1112 449 -1097 469 0 INPUT1
 port 8 nsew analog default
-rlabel metal2 -1112 352 -1086 378 0 input2
+rlabel metal2 -1112 352 -1086 378 0 INPUT2
 port 9 nsew analog default
-rlabel metal2 -1118 151 -1098 168 0 input3
+rlabel metal2 -1118 151 -1098 168 0 INPUT3
 port 10 nsew analog default
-rlabel metal2 -1119 47 -1091 74 0 input4
+rlabel metal2 -1119 47 -1091 74 0 INPUT4
 port 11 nsew analog default
 << end >>
