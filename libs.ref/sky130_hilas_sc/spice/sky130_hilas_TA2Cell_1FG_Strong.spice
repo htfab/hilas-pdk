@@ -1,4 +1,36 @@
-* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_TA2Cell_1FG_Strong.ext - technology: sky130A
+* Copyright 2020 The Hilas PDK Authors
+* 
+* This file is part of HILAS.
+* 
+* HILAS is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Lesser General Public License as published by
+* the Free Software Foundation, version 3 of the License.
+* 
+* HILAS is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Lesser General Public License for more details.
+* 
+* You should have received a copy of the GNU Lesser General Public License
+* along with HILAS.  If not, see <https://www.gnu.org/licenses/>.
+* 
+* Licensed under the Lesser General Public License, Version 3.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+* 
+* https://www.gnu.org/licenses/lgpl-3.0.en.html
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+* 
+* SPDX-License-Identifier: LGPL-3.0
+* 
+* 
+
+* NGSPICE file created from sky130_hilas_TA2Cell_1FG_Strong.ext - technology: sky130A
 
 .subckt sky130_hilas_nFET03 a_n62_n12# a_54_n12# $SUB a_0_n38#
 X0 a_54_n12# a_0_n38# a_n62_n12# $SUB sky130_fd_pr__nfet_01v8 w=350000u l=270000u
@@ -49,22 +81,22 @@ X6 a_n654_596# a_n952_496# a_n654_438# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w
 X0 a_n1882_n644# w_n2010_n760# w_n2010_n760# sky130_fd_pr__cap_var w=1.11e+06u l=500000u
 .ends
 
-.subckt sky130_hilas_FGBias2x1cell Vtun GND gate_control drain1 drain4 Vinj output1
-+ output2 GateColSelect
-Xsky130_hilas_TunCap01_1 GND a_n560_n620# Vtun sky130_hilas_TunCap01
-Xsky130_hilas_horizTransCell01_0 output2 a_n560_n620# Vinj sky130_hilas_horizTransCell01_0/a_n654_284#
-+ sky130_hilas_horizTransCell01_0/a_n926_284# GND sky130_hilas_horizTransCell01_0/a_n952_338#
+.subckt sky130_hilas_FGBias2x1cell VTUN VGND GATE_CONTROL DRAIN1 DRAIN4 VINJ OUTPUT1
++ OUTPUT2 GateColSelect
+Xsky130_hilas_TunCap01_1 VGND a_n560_n620# VTUN sky130_hilas_TunCap01
+Xsky130_hilas_horizTransCell01_0 OUTPUT2 a_n560_n620# VINJ sky130_hilas_horizTransCell01_0/a_n654_284#
++ sky130_hilas_horizTransCell01_0/a_n926_284# VGND sky130_hilas_horizTransCell01_0/a_n952_338#
 + sky130_hilas_horizTransCell01_0/a_n952_496# li_934_n408# sky130_hilas_horizTransCell01_0/a_n926_438#
-+ GateColSelect drain4 Vinj li_948_n216# sky130_hilas_horizTransCell01_0/a_n926_596#
++ GateColSelect DRAIN4 VINJ li_948_n216# sky130_hilas_horizTransCell01_0/a_n926_596#
 + sky130_hilas_horizTransCell01
-Xsky130_hilas_TunCap01_3 GND a_n474_252# Vtun sky130_hilas_TunCap01
-Xsky130_hilas_horizTransCell01_1 output1 a_n474_252# Vinj sky130_hilas_horizTransCell01_1/a_n654_284#
-+ sky130_hilas_horizTransCell01_1/a_n926_284# GND sky130_hilas_horizTransCell01_1/a_n952_338#
+Xsky130_hilas_TunCap01_3 VGND a_n474_252# VTUN sky130_hilas_TunCap01
+Xsky130_hilas_horizTransCell01_1 OUTPUT1 a_n474_252# VINJ sky130_hilas_horizTransCell01_1/a_n654_284#
++ sky130_hilas_horizTransCell01_1/a_n926_284# VGND sky130_hilas_horizTransCell01_1/a_n952_338#
 + sky130_hilas_horizTransCell01_1/a_n952_496# li_934_56# sky130_hilas_horizTransCell01_1/a_n926_438#
-+ GateColSelect drain1 Vinj li_948_n216# sky130_hilas_horizTransCell01_1/a_n926_596#
++ GateColSelect DRAIN1 VINJ li_948_n216# sky130_hilas_horizTransCell01_1/a_n926_596#
 + sky130_hilas_horizTransCell01
-Xsky130_hilas_FGVaractorCapacitor02_0 a_n560_n620# GND gate_control sky130_hilas_FGVaractorCapacitor02
-Xsky130_hilas_FGVaractorCapacitor02_2 a_n474_252# GND gate_control sky130_hilas_FGVaractorCapacitor02
+Xsky130_hilas_FGVaractorCapacitor02_0 a_n560_n620# VGND GATE_CONTROL sky130_hilas_FGVaractorCapacitor02
+Xsky130_hilas_FGVaractorCapacitor02_2 a_n474_252# VGND GATE_CONTROL sky130_hilas_FGVaractorCapacitor02
 .ends
 
 .subckt sky130_hilas_pTransistorVert01 a_n658_n792# a_n596_n822# a_n496_n792# $SUB
@@ -80,31 +112,31 @@ Xsky130_hilas_pTransistorVert01_1 li_348_n384# a_454_n814# m2_510_n704# $SUB w_5
 + sky130_hilas_pTransistorVert01
 .ends
 
-.subckt sky130_hilas_FGtrans2x1cell GateSelect Vinj drain1 drain4 prog run Gate1 Gate2
-+ ProgGate GND Vtun drain Vs
-Xsky130_hilas_TunCap01_1 GND a_n560_n620# Vtun sky130_hilas_TunCap01
-Xsky130_hilas_horizTransCell01_0 drain a_n560_n620# Vs ProgGate Gate1 GND run prog
-+ li_724_n408# li_724_n408# GateSelect drain4 Vinj Gate1 ProgGate sky130_hilas_horizTransCell01
-Xsky130_hilas_TunCap01_3 GND a_n474_252# Vtun sky130_hilas_TunCap01
-Xsky130_hilas_horizTransCell01_1 drain1 a_n474_252# Vs ProgGate Gate2 GND run prog
-+ li_724_56# li_724_56# GateSelect drain1 Vinj Gate2 ProgGate sky130_hilas_horizTransCell01
-Xsky130_hilas_FGVaractorCapacitor02_0 a_n560_n620# GND li_724_n408# sky130_hilas_FGVaractorCapacitor02
-Xsky130_hilas_FGVaractorCapacitor02_2 a_n474_252# GND li_724_56# sky130_hilas_FGVaractorCapacitor02
+.subckt sky130_hilas_FGtrans2x1cell GATESELECT VINJ DRAIN1 DRAIN4 PROG RUN GATE1 GATE2
++ PROGGATE VGND VTUN DRAIN VS
+Xsky130_hilas_TunCap01_1 VGND a_n560_n620# VTUN sky130_hilas_TunCap01
+Xsky130_hilas_horizTransCell01_0 DRAIN a_n560_n620# VS PROGGATE GATE1 VGND RUN PROG
++ li_724_n408# li_724_n408# GATESELECT DRAIN4 VINJ GATE1 PROGGATE sky130_hilas_horizTransCell01
+Xsky130_hilas_TunCap01_3 VGND a_n474_252# VTUN sky130_hilas_TunCap01
+Xsky130_hilas_horizTransCell01_1 DRAIN1 a_n474_252# VS PROGGATE GATE2 VGND RUN PROG
++ li_724_56# li_724_56# GATESELECT DRAIN1 VINJ GATE2 PROGGATE sky130_hilas_horizTransCell01
+Xsky130_hilas_FGVaractorCapacitor02_0 a_n560_n620# VGND li_724_n408# sky130_hilas_FGVaractorCapacitor02
+Xsky130_hilas_FGVaractorCapacitor02_2 a_n474_252# VGND li_724_56# sky130_hilas_FGVaractorCapacitor02
 .ends
 
-.subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_TA2Cell_1FG_Strong
-+ Vin+_Amp2 Vin-_Amp2 Vdd GateColSelect Vin+_Amp1 GND output2 output1 Vinj
-Xsky130_hilas_DualTACore01_0 m2_n294_1062# m2_n308_1242# sky130_hilas_FGBias2x1cell_0/drain1
-+ sky130_hilas_FGtrans2x1cell_0/drain GND $SUB output2 Vdd output1 sky130_hilas_DualTACore01
-Xsky130_hilas_FGBias2x1cell_0 sky130_hilas_FGBias2x1cell_0/Vtun $SUB sky130_hilas_FGBias2x1cell_0/gate_control
-+ sky130_hilas_FGBias2x1cell_0/drain1 sky130_hilas_FGBias2x1cell_0/drain4 Vinj sky130_hilas_FGBias2x1cell_0/output1
-+ sky130_hilas_FGtrans2x1cell_0/Vs GateColSelect sky130_hilas_FGBias2x1cell
-Xsky130_hilas_pTransistorPair_1 m2_n308_1242# Vinj sky130_hilas_FGBias2x1cell_0/output1
-+ Vin-_Amp2 $SUB Vin+_Amp2 m2_n294_1062# sky130_hilas_pTransistorPair
-Xsky130_hilas_FGtrans2x1cell_0 sky130_hilas_FGtrans2x1cell_0/GateSelect sky130_hilas_FGtrans2x1cell_0/Vinj
-+ sky130_hilas_FGBias2x1cell_0/drain1 sky130_hilas_FGtrans2x1cell_0/drain4 sky130_hilas_FGtrans2x1cell_0/prog
-+ sky130_hilas_FGtrans2x1cell_0/run Vin-_Amp1 Vin+_Amp1 sky130_hilas_FGtrans2x1cell_0/ProgGate
-+ $SUB sky130_hilas_FGBias2x1cell_0/Vtun sky130_hilas_FGtrans2x1cell_0/drain sky130_hilas_FGtrans2x1cell_0/Vs
+.subckt sky130_hilas_TA2Cell_1FG_Strong VINP_AMP2 VINN_AMP2 VPWR GATECOLSELECT VINP_AMP1
++ VGND OUTPUT2 OUTPUT1 VINJ
+Xsky130_hilas_DualTACore01_0 m2_n294_1062# m2_n308_1242# sky130_hilas_FGBias2x1cell_0/DRAIN1
++ sky130_hilas_FGtrans2x1cell_0/DRAIN VGND $SUB OUTPUT2 VPWR OUTPUT1 sky130_hilas_DualTACore01
+Xsky130_hilas_FGBias2x1cell_0 sky130_hilas_FGBias2x1cell_0/VTUN $SUB sky130_hilas_FGBias2x1cell_0/GATE_CONTROL
++ sky130_hilas_FGBias2x1cell_0/DRAIN1 sky130_hilas_FGBias2x1cell_0/DRAIN4 VINJ sky130_hilas_FGBias2x1cell_0/OUTPUT1
++ sky130_hilas_FGtrans2x1cell_0/VS GATECOLSELECT sky130_hilas_FGBias2x1cell
+Xsky130_hilas_pTransistorPair_1 m2_n308_1242# VINJ sky130_hilas_FGBias2x1cell_0/OUTPUT1
++ VINN_AMP2 $SUB VINP_AMP2 m2_n294_1062# sky130_hilas_pTransistorPair
+Xsky130_hilas_FGtrans2x1cell_0 sky130_hilas_FGtrans2x1cell_0/GATESELECT sky130_hilas_FGtrans2x1cell_0/VINJ
++ sky130_hilas_FGBias2x1cell_0/DRAIN1 sky130_hilas_FGtrans2x1cell_0/DRAIN4 sky130_hilas_FGtrans2x1cell_0/PROG
++ sky130_hilas_FGtrans2x1cell_0/RUN Vin-_Amp1 VINP_AMP1 sky130_hilas_FGtrans2x1cell_0/PROGGATE
++ $SUB sky130_hilas_FGBias2x1cell_0/VTUN sky130_hilas_FGtrans2x1cell_0/DRAIN sky130_hilas_FGtrans2x1cell_0/VS
 + sky130_hilas_FGtrans2x1cell
 .ends
 

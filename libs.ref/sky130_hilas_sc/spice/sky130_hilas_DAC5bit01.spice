@@ -1,4 +1,36 @@
-* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_DAC5bit01.ext - technology: sky130A
+* Copyright 2020 The Hilas PDK Authors
+* 
+* This file is part of HILAS.
+* 
+* HILAS is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Lesser General Public License as published by
+* the Free Software Foundation, version 3 of the License.
+* 
+* HILAS is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Lesser General Public License for more details.
+* 
+* You should have received a copy of the GNU Lesser General Public License
+* along with HILAS.  If not, see <https://www.gnu.org/licenses/>.
+* 
+* Licensed under the Lesser General Public License, Version 3.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+* 
+* https://www.gnu.org/licenses/lgpl-3.0.en.html
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+* 
+* SPDX-License-Identifier: LGPL-3.0
+* 
+* 
+
+* NGSPICE file created from sky130_hilas_DAC5bit01.ext - technology: sky130A
 
 .subckt sky130_hilas_pFETdevice01 w_n158_n156# a_n90_n38# $SUB a_42_n38# a_n158_36#
 X0 a_42_n38# a_n158_36# a_n90_n38# w_n158_n156# sky130_fd_pr__pfet_01v8 w=390000u l=390000u
@@ -112,27 +144,26 @@ Xsky130_hilas_pFETdevice01a_0 sky130_hilas_pFETdevice01a_0/a_n160_36# $SUB sky13
 + sky130_hilas_pFETdevice01a
 .ends
 
-.subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_DAC5bit01
-+ A0 A2 A3 A4 Vdd Drain
-Xsky130_hilas_DAC6TransistorStack01_0[0] Vdd Vdd A4 Drain Drain $SUB sky130_hilas_poly2m2_11/a_n18_n16#
+.subckt sky130_hilas_DAC5bit01 A0 A2 A3 A4 VPWR DRAIN
+Xsky130_hilas_DAC6TransistorStack01_0[0] VPWR VPWR A4 DRAIN DRAIN $SUB sky130_hilas_poly2m2_11/a_n18_n16#
 + w_1238_2040# sky130_hilas_DAC6TransistorStack01a_0/sky130_hilas_pFETdevice01aa_0/a_n160_36#
-+ A3 Drain Vdd A4 Vdd sky130_hilas_poly2m2_12/a_n18_n16# Drain sky130_hilas_DAC6TransistorStack01
-Xsky130_hilas_DAC6TransistorStack01_0[1] Vdd Vdd A4 Drain Drain $SUB A3 w_1238_2040#
-+ sky130_hilas_poly2m2_12/a_n18_n16# A4 Drain Vdd A3 Vdd sky130_hilas_poly2m2_11/a_n18_n16#
-+ Drain sky130_hilas_DAC6TransistorStack01
-Xsky130_hilas_DAC6TransistorStack01_0[2] Vdd Vdd A3 Drain Drain $SUB A4 w_1238_2040#
-+ sky130_hilas_poly2m2_11/a_n18_n16# A4 Drain Vdd A4 Vdd A3 Drain sky130_hilas_DAC6TransistorStack01
-Xsky130_hilas_DAC6TransistorStack01_2[0] Vdd Vdd A3 Drain Drain $SUB A4 w_1238_2040#
-+ A4 A4 Drain Vdd A2 Vdd A3 Drain sky130_hilas_DAC6TransistorStack01
-Xsky130_hilas_DAC6TransistorStack01_2[1] Vdd Vdd A2 Drain Drain $SUB A4 w_1238_2040#
-+ A3 A3 Drain Vdd m2_764_1430# Vdd A4 Drain sky130_hilas_DAC6TransistorStack01
-Xsky130_hilas_DAC6TransistorStack01_2[2] Vdd Vdd m2_764_1430# Drain Drain $SUB A3
-+ w_1238_2040# A4 A2 Drain Vdd sky130_hilas_DAC6TransistorStack01a_1/sky130_hilas_pFETdevice01aa_2/a_n160_36#
-+ Vdd A4 Drain sky130_hilas_DAC6TransistorStack01
-Xsky130_hilas_DAC6TransistorStack01b_0 Vdd A4 Vdd A0 Drain Drain $SUB A4 A3 w_1238_2040#
-+ A3 Vdd A4 Vdd A4 Drain Drain sky130_hilas_DAC6TransistorStack01b
-Xsky130_hilas_DAC6TransistorStack01c_0 Vdd A3 Vdd A4 Drain $SUB A4 w_1238_2040# A4
-+ Drain Vdd A3 A4 Drain sky130_hilas_DAC6TransistorStack01c
++ A3 DRAIN VPWR A4 VPWR sky130_hilas_poly2m2_12/a_n18_n16# DRAIN sky130_hilas_DAC6TransistorStack01
+Xsky130_hilas_DAC6TransistorStack01_0[1] VPWR VPWR A4 DRAIN DRAIN $SUB A3 w_1238_2040#
++ sky130_hilas_poly2m2_12/a_n18_n16# A4 DRAIN VPWR A3 VPWR sky130_hilas_poly2m2_11/a_n18_n16#
++ DRAIN sky130_hilas_DAC6TransistorStack01
+Xsky130_hilas_DAC6TransistorStack01_0[2] VPWR VPWR A3 DRAIN DRAIN $SUB A4 w_1238_2040#
++ sky130_hilas_poly2m2_11/a_n18_n16# A4 DRAIN VPWR A4 VPWR A3 DRAIN sky130_hilas_DAC6TransistorStack01
+Xsky130_hilas_DAC6TransistorStack01_2[0] VPWR VPWR A3 DRAIN DRAIN $SUB A4 w_1238_2040#
++ A4 A4 DRAIN VPWR A2 VPWR A3 DRAIN sky130_hilas_DAC6TransistorStack01
+Xsky130_hilas_DAC6TransistorStack01_2[1] VPWR VPWR A2 DRAIN DRAIN $SUB A4 w_1238_2040#
++ A3 A3 DRAIN VPWR m2_764_1430# VPWR A4 DRAIN sky130_hilas_DAC6TransistorStack01
+Xsky130_hilas_DAC6TransistorStack01_2[2] VPWR VPWR m2_764_1430# DRAIN DRAIN $SUB A3
++ w_1238_2040# A4 A2 DRAIN VPWR sky130_hilas_DAC6TransistorStack01a_1/sky130_hilas_pFETdevice01aa_2/a_n160_36#
++ VPWR A4 DRAIN sky130_hilas_DAC6TransistorStack01
+Xsky130_hilas_DAC6TransistorStack01b_0 VPWR A4 VPWR A0 DRAIN DRAIN $SUB A4 A3 w_1238_2040#
++ A3 VPWR A4 VPWR A4 DRAIN DRAIN sky130_hilas_DAC6TransistorStack01b
+Xsky130_hilas_DAC6TransistorStack01c_0 VPWR A3 VPWR A4 DRAIN $SUB A4 w_1238_2040#
++ A4 DRAIN VPWR A3 A4 DRAIN sky130_hilas_DAC6TransistorStack01c
 Xsky130_hilas_DAC6TransistorStack01a_0 sky130_hilas_poly2m2_11/a_n18_n16# A4 $SUB
 + sky130_hilas_DAC6TransistorStack01a_0/sky130_hilas_pFETdevice01a_0/a_n160_36# w_1238_2040#
 + A3 sky130_hilas_poly2m2_12/a_n18_n16# sky130_hilas_DAC6TransistorStack01a_0/sky130_hilas_pFETdevice01aa_0/a_n160_36#

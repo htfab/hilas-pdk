@@ -1,4 +1,36 @@
-* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_WTA4Stage01.ext - technology: sky130A
+* Copyright 2020 The Hilas PDK Authors
+* 
+* This file is part of HILAS.
+* 
+* HILAS is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Lesser General Public License as published by
+* the Free Software Foundation, version 3 of the License.
+* 
+* HILAS is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Lesser General Public License for more details.
+* 
+* You should have received a copy of the GNU Lesser General Public License
+* along with HILAS.  If not, see <https://www.gnu.org/licenses/>.
+* 
+* Licensed under the Lesser General Public License, Version 3.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+* 
+* https://www.gnu.org/licenses/lgpl-3.0.en.html
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+* 
+* SPDX-License-Identifier: LGPL-3.0
+* 
+* 
+
+* NGSPICE file created from sky130_hilas_WTA4Stage01.ext - technology: sky130A
 
 .subckt sky130_hilas_WTAsinglestage01 a_n94_n68# a_4_n68# a_n126_n150# a_216_n68#
 + $SUB
@@ -35,33 +67,33 @@ X2 a_n344_162# a_n578_238# a_n508_162# w_n578_94# sky130_fd_pr__pfet_g5v0d10v5 w
 X0 a_n1882_n672# w_n1914_n790# w_n1914_n790# sky130_fd_pr__cap_var w=1.11e+06u l=640000u
 .ends
 
-.subckt sky130_hilas_swc4x1BiasCell bias1 bias2 bias3 bias4 Vtun Gate Vinj Vdd GateSelect
-+ drain1 drain2 drain3 drain4 $SUB
-Xsky130_hilas_TunCap01_0 $SUB a_640_n334# Vtun sky130_hilas_TunCap01
-Xsky130_hilas_TunCap01_1 $SUB a_640_n618# Vtun sky130_hilas_TunCap01
-Xsky130_hilas_TunCap01_2 $SUB a_n214_10# Vtun sky130_hilas_TunCap01
-Xsky130_hilas_TunCap01_3 $SUB a_638_270# Vtun sky130_hilas_TunCap01
-Xsky130_hilas_horizPcell01_0 bias2 drain2 Vinj $SUB a_n214_10# GateSelect GateSelect
-+ Vdd sky130_hilas_horizPcell01
-Xsky130_hilas_horizPcell01_1 bias4 drain4 Vinj $SUB a_640_n618# GateSelect GateSelect
-+ Vdd sky130_hilas_horizPcell01
-Xsky130_hilas_horizPcell01_2 bias3 drain3 Vinj $SUB a_640_n334# GateSelect GateSelect
-+ Vdd sky130_hilas_horizPcell01
-Xsky130_hilas_horizPcell01_3 bias1 drain1 Vinj $SUB a_638_270# GateSelect GateSelect
-+ Vdd sky130_hilas_horizPcell01
-Xsky130_hilas_FGVaractorCapacitor_0 Gate $SUB a_640_n618# Gate sky130_hilas_FGVaractorCapacitor
-Xsky130_hilas_FGVaractorCapacitor_2 Gate $SUB a_n214_10# Gate sky130_hilas_FGVaractorCapacitor
-Xsky130_hilas_FGVaractorCapacitor_1 Gate $SUB a_640_n334# Gate sky130_hilas_FGVaractorCapacitor
-Xsky130_hilas_FGVaractorCapacitor_3 Gate $SUB a_638_270# Gate sky130_hilas_FGVaractorCapacitor
+.subckt sky130_hilas_swc4x1BiasCell BIAS1 BIAS2 BIAS3 BIAS4 VTUN GATE VINJ VPWR GATESELECT
++ DRAIN1 DRAIN2 DRAIN3 DRAIN4 $SUB
+Xsky130_hilas_TunCap01_0 $SUB a_640_n334# VTUN sky130_hilas_TunCap01
+Xsky130_hilas_TunCap01_1 $SUB a_640_n618# VTUN sky130_hilas_TunCap01
+Xsky130_hilas_TunCap01_2 $SUB a_n214_10# VTUN sky130_hilas_TunCap01
+Xsky130_hilas_TunCap01_3 $SUB a_638_270# VTUN sky130_hilas_TunCap01
+Xsky130_hilas_horizPcell01_0 BIAS2 DRAIN2 VINJ $SUB a_n214_10# GATESELECT GATESELECT
++ VPWR sky130_hilas_horizPcell01
+Xsky130_hilas_horizPcell01_1 BIAS4 DRAIN4 VINJ $SUB a_640_n618# GATESELECT GATESELECT
++ VPWR sky130_hilas_horizPcell01
+Xsky130_hilas_horizPcell01_2 BIAS3 DRAIN3 VINJ $SUB a_640_n334# GATESELECT GATESELECT
++ VPWR sky130_hilas_horizPcell01
+Xsky130_hilas_horizPcell01_3 BIAS1 DRAIN1 VINJ $SUB a_638_270# GATESELECT GATESELECT
++ VPWR sky130_hilas_horizPcell01
+Xsky130_hilas_FGVaractorCapacitor_0 GATE $SUB a_640_n618# GATE sky130_hilas_FGVaractorCapacitor
+Xsky130_hilas_FGVaractorCapacitor_2 GATE $SUB a_n214_10# GATE sky130_hilas_FGVaractorCapacitor
+Xsky130_hilas_FGVaractorCapacitor_1 GATE $SUB a_640_n334# GATE sky130_hilas_FGVaractorCapacitor
+Xsky130_hilas_FGVaractorCapacitor_3 GATE $SUB a_638_270# GATE sky130_hilas_FGVaractorCapacitor
 .ends
 
-.subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_WTA4Stage01
-+ GND CommonNode output1 output2 output3 output4 input1 input2 input3 input4
-Xsky130_hilas_WTA4stage01_0 input2 output2 output1 CommonNode output3 input3 output4
-+ input4 GND $SUB input1 sky130_hilas_WTA4stage01
-Xsky130_hilas_swc4x1BiasCell_0 output1 output2 output3 output4 sky130_hilas_swc4x1BiasCell_0/Vtun
-+ sky130_hilas_swc4x1BiasCell_0/Gate sky130_hilas_swc4x1BiasCell_0/Vinj sky130_hilas_swc4x1BiasCell_0/Vdd
-+ sky130_hilas_swc4x1BiasCell_0/GateSelect sky130_hilas_swc4x1BiasCell_0/drain1 sky130_hilas_swc4x1BiasCell_0/drain2
-+ sky130_hilas_swc4x1BiasCell_0/drain3 sky130_hilas_swc4x1BiasCell_0/drain4 $SUB sky130_hilas_swc4x1BiasCell
+.subckt sky130_hilas_WTA4Stage01 VGND COMMONNODE OUTPUT1 OUTPUT2 OUTPUT3 OUTPUT4 INPUT1
++ INPUT2 INPUT3 INPUT4
+Xsky130_hilas_WTA4stage01_0 INPUT2 OUTPUT2 OUTPUT1 COMMONNODE OUTPUT3 INPUT3 OUTPUT4
++ INPUT4 VGND $SUB INPUT1 sky130_hilas_WTA4stage01
+Xsky130_hilas_swc4x1BiasCell_0 OUTPUT1 OUTPUT2 OUTPUT3 OUTPUT4 sky130_hilas_swc4x1BiasCell_0/VTUN
++ sky130_hilas_swc4x1BiasCell_0/GATE sky130_hilas_swc4x1BiasCell_0/VINJ sky130_hilas_swc4x1BiasCell_0/VPWR
++ sky130_hilas_swc4x1BiasCell_0/GATESELECT sky130_hilas_swc4x1BiasCell_0/DRAIN1 sky130_hilas_swc4x1BiasCell_0/DRAIN2
++ sky130_hilas_swc4x1BiasCell_0/DRAIN3 sky130_hilas_swc4x1BiasCell_0/DRAIN4 $SUB sky130_hilas_swc4x1BiasCell
 .ends
 

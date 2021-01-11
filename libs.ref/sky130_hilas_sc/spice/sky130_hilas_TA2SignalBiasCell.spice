@@ -1,4 +1,36 @@
-* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_TA2SignalBiasCell.ext - technology: sky130A
+* Copyright 2020 The Hilas PDK Authors
+* 
+* This file is part of HILAS.
+* 
+* HILAS is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Lesser General Public License as published by
+* the Free Software Foundation, version 3 of the License.
+* 
+* HILAS is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Lesser General Public License for more details.
+* 
+* You should have received a copy of the GNU Lesser General Public License
+* along with HILAS.  If not, see <https://www.gnu.org/licenses/>.
+* 
+* Licensed under the Lesser General Public License, Version 3.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+* 
+* https://www.gnu.org/licenses/lgpl-3.0.en.html
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+* 
+* SPDX-License-Identifier: LGPL-3.0
+* 
+* 
+
+* NGSPICE file created from sky130_hilas_TA2SignalBiasCell.ext - technology: sky130A
 
 .subckt sky130_hilas_nFET03 a_n62_n12# a_54_n12# $SUB a_0_n38#
 X0 a_54_n12# a_0_n38# a_n62_n12# $SUB sky130_fd_pr__nfet_01v8 w=350000u l=270000u
@@ -42,15 +74,15 @@ Xsky130_hilas_pTransistorVert01_1 li_348_n384# a_454_n814# m2_510_n704# $SUB w_5
 + sky130_hilas_pTransistorVert01
 .ends
 
-.subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_TA2SignalBiasCell
-+ Vout_Amp2 Vout_Amp1 GND Vdd Vin-_Amp2 Vin+_amp2 Vin+_amp1 Vin-_Amp1 Vbias2 Vbias1
-Xsky130_hilas_DualTACore01_0 m2_n42_1070# m2_n48_1240# m2_n354_654# m2_n412_492# GND
-+ $SUB Vout_Amp1 Vdd Vout_Amp2 sky130_hilas_DualTACore01
-Xsky130_hilas_pTransistorPair_0 m2_n412_492# m2_n354_654# Vin-_Amp1 Vin+_amp1 w_n564_820#
+.subckt sky130_hilas_TA2SignalBiasCell VOUT_AMP2 VOUT_AMP1 VGND VPWR VINN_AMP2 VINP_AMP2
++ VINP_AMP1 VINN_AMP1 VBIAS2 VBIAS1
+Xsky130_hilas_DualTACore01_0 m2_n42_1070# m2_n48_1240# m2_n354_654# m2_n412_492# VGND
++ $SUB VOUT_AMP1 VPWR VOUT_AMP2 sky130_hilas_DualTACore01
+Xsky130_hilas_pTransistorPair_0 m2_n412_492# m2_n354_654# VINN_AMP1 VINP_AMP1 w_n564_820#
 + m2_n716_458# $SUB sky130_hilas_pTransistorPair
-Xsky130_hilas_pTransistorPair_1 m2_n48_1240# m2_n42_1070# Vin-_Amp2 Vin+_amp2 w_n564_820#
+Xsky130_hilas_pTransistorPair_1 m2_n48_1240# m2_n42_1070# VINN_AMP2 VINP_AMP2 w_n564_820#
 + m2_n762_1142# $SUB sky130_hilas_pTransistorPair
-Xsky130_hilas_pTransistorPair_2 m2_n716_458# m2_n762_1142# Vbias2 Vbias1 w_n564_820#
-+ Vdd $SUB sky130_hilas_pTransistorPair
+Xsky130_hilas_pTransistorPair_2 m2_n716_458# m2_n762_1142# VBIAS2 VBIAS1 w_n564_820#
++ VPWR $SUB sky130_hilas_pTransistorPair
 .ends
 

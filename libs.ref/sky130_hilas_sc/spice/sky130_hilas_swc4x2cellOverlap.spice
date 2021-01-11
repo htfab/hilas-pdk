@@ -1,4 +1,36 @@
-* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_swc4x2cellOverlap.ext - technology: sky130A
+* Copyright 2020 The Hilas PDK Authors
+* 
+* This file is part of HILAS.
+* 
+* HILAS is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Lesser General Public License as published by
+* the Free Software Foundation, version 3 of the License.
+* 
+* HILAS is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Lesser General Public License for more details.
+* 
+* You should have received a copy of the GNU Lesser General Public License
+* along with HILAS.  If not, see <https://www.gnu.org/licenses/>.
+* 
+* Licensed under the Lesser General Public License, Version 3.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+* 
+* https://www.gnu.org/licenses/lgpl-3.0.en.html
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+* 
+* SPDX-License-Identifier: LGPL-3.0
+* 
+* 
+
+* NGSPICE file created from sky130_hilas_swc4x2cellOverlap.ext - technology: sky130A
 
 .subckt sky130_hilas_nOverlapCap01 $SUB a_n114_n76# a_n24_14#
 X0 a_n24_14# a_n114_n76# a_n24_14# $SUB sky130_fd_pr__nfet_g5v0d10v5 w=580000u l=1.86e+06u
@@ -15,9 +47,9 @@ X2 a_n344_162# a_n578_238# a_n508_162# w_n578_94# sky130_fd_pr__pfet_g5v0d10v5 w
 X0 a_n908_28# a_n1004_n70# a_n908_28# w_n1042_n108# sky130_fd_pr__pfet_g5v0d10v5 w=465000u l=500000u
 .ends
 
-.subckt sky130_hilas_swc4x1cellOverlap2 m2_n382_24# a_1264_n176# sky130_hilas_overlapCap02a_3/a_n908_28#
-+ m2_n382_n572# m2_n382_n62# sky130_hilas_overlapCap02a_2/a_n908_28# m2_n382_310#
-+ m2_n382_224# sky130_hilas_overlapCap02a_1/a_n908_28# sky130_hilas_horizPcell01_3/a_n344_286#
+.subckt sky130_hilas_swc4x1cellOverlap2 m2_n382_24# sky130_hilas_overlapCap02a_3/a_n908_28#
++ a_1264_n176# m2_n382_n572# sky130_hilas_overlapCap02a_2/a_n908_28# m2_n382_n62#
++ m2_n382_310# m2_n382_224# sky130_hilas_overlapCap02a_1/a_n908_28# sky130_hilas_horizPcell01_3/a_n344_286#
 + sky130_hilas_overlapCap02a_0/a_n908_28# $SUB m2_n382_n292# m2_n382_n660# m1_n180_n764#
 + w_1264_n176# m2_n382_n376#
 Xsky130_hilas_nOverlapCap01_0 $SUB a_n38_228# m1_n180_n764# sky130_hilas_nOverlapCap01
@@ -42,12 +74,11 @@ Xsky130_hilas_overlapCap02a_3 a_n38_n590# w_1264_n176# $SUB sky130_hilas_overlap
 + sky130_hilas_overlapCap02a
 .ends
 
-.subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_swc4x2cellOverlap
-+ Vert1 Horiz1 drain1 Horiz2 drain2 drain3 Horiz3 Horiz4 drain4 Vinj GateSelect1 Vert2
-+ GateSelect2 Gate2 Gate1 Vtun
-Xsky130_hilas_swc4x1cellOverlap2_0 Horiz2 GateSelect2 Gate2 Horiz4 drain2 Gate2 drain1
-+ Horiz1 Gate2 Vert2 Gate2 $SUB drain3 drain4 Vtun Vinj Horiz3 sky130_hilas_swc4x1cellOverlap2
-Xsky130_hilas_swc4x1cellOverlap2_1 Horiz2 GateSelect1 Gate1 Horiz4 drain2 Gate1 drain1
-+ Horiz1 Gate1 Vert1 Gate1 $SUB drain3 drain4 Vtun Vinj Horiz3 sky130_hilas_swc4x1cellOverlap2
+.subckt sky130_hilas_swc4x2cellOverlap VERT1 HORIZ1 DRAIN1 HORIZ2 DRAIN2 DRAIN3 HORIZ3
++ HORIZ4 DRAIN4 VINJ GATESELECT1 VERT2 GATESELECT2 GATE2 GATE1 VTUN
+Xsky130_hilas_swc4x1cellOverlap2_0 HORIZ2 GATE2 GATESELECT2 HORIZ4 GATE2 DRAIN2 DRAIN1
++ HORIZ1 GATE2 VERT2 GATE2 $SUB DRAIN3 DRAIN4 VTUN VINJ HORIZ3 sky130_hilas_swc4x1cellOverlap2
+Xsky130_hilas_swc4x1cellOverlap2_1 HORIZ2 GATE1 GATESELECT1 HORIZ4 GATE1 DRAIN2 DRAIN1
++ HORIZ1 GATE1 VERT1 GATE1 $SUB DRAIN3 DRAIN4 VTUN VINJ HORIZ3 sky130_hilas_swc4x1cellOverlap2
 .ends
 

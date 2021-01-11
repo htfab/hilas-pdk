@@ -1,4 +1,36 @@
-* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_FGBias2x1cell.ext - technology: sky130A
+* Copyright 2020 The Hilas PDK Authors
+* 
+* This file is part of HILAS.
+* 
+* HILAS is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Lesser General Public License as published by
+* the Free Software Foundation, version 3 of the License.
+* 
+* HILAS is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Lesser General Public License for more details.
+* 
+* You should have received a copy of the GNU Lesser General Public License
+* along with HILAS.  If not, see <https://www.gnu.org/licenses/>.
+* 
+* Licensed under the Lesser General Public License, Version 3.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+* 
+* https://www.gnu.org/licenses/lgpl-3.0.en.html
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+* 
+* SPDX-License-Identifier: LGPL-3.0
+* 
+* 
+
+* NGSPICE file created from sky130_hilas_FGBias2x1cell.ext - technology: sky130A
 
 .subckt sky130_hilas_TunCap01 $SUB a_n2872_n666# w_n2902_n800#
 X0 a_n2872_n666# w_n2902_n800# w_n2902_n800# sky130_fd_pr__cap_var w=590000u l=500000u
@@ -19,15 +51,15 @@ X6 a_n654_596# a_n952_496# a_n654_438# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w
 X0 a_n1882_n644# w_n2010_n760# w_n2010_n760# sky130_fd_pr__cap_var w=1.11e+06u l=500000u
 .ends
 
-.subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_FGBias2x1cell
-+ Vtun GND Gate_control drain1 drain4 Vinj output1 output2
-Xsky130_hilas_TunCap01_1 GND a_n560_n620# Vtun sky130_hilas_TunCap01
-Xsky130_hilas_horizTransCell01_0 output2 a_n560_n620# Vinj GND li_934_n408# GateColSelect
-+ drain4 Vinj li_948_n216# sky130_hilas_horizTransCell01
-Xsky130_hilas_TunCap01_3 GND a_n474_252# Vtun sky130_hilas_TunCap01
-Xsky130_hilas_horizTransCell01_1 output1 a_n474_252# Vinj GND li_934_56# GateColSelect
-+ drain1 Vinj li_948_n216# sky130_hilas_horizTransCell01
-Xsky130_hilas_FGVaractorCapacitor02_0 a_n560_n620# GND Gate_control sky130_hilas_FGVaractorCapacitor02
-Xsky130_hilas_FGVaractorCapacitor02_2 a_n474_252# GND Gate_control sky130_hilas_FGVaractorCapacitor02
+.subckt sky130_hilas_FGBias2x1cell VTUN VGND GATE_CONTROL DRAIN1 DRAIN4 VINJ OUTPUT1
++ OUTPUT2
+Xsky130_hilas_TunCap01_1 VGND a_n560_n620# VTUN sky130_hilas_TunCap01
+Xsky130_hilas_horizTransCell01_0 OUTPUT2 a_n560_n620# VINJ VGND li_934_n408# GateColSelect
++ DRAIN4 VINJ li_948_n216# sky130_hilas_horizTransCell01
+Xsky130_hilas_TunCap01_3 VGND a_n474_252# VTUN sky130_hilas_TunCap01
+Xsky130_hilas_horizTransCell01_1 OUTPUT1 a_n474_252# VINJ VGND li_934_56# GateColSelect
++ DRAIN1 VINJ li_948_n216# sky130_hilas_horizTransCell01
+Xsky130_hilas_FGVaractorCapacitor02_0 a_n560_n620# VGND GATE_CONTROL sky130_hilas_FGVaractorCapacitor02
+Xsky130_hilas_FGVaractorCapacitor02_2 a_n474_252# VGND GATE_CONTROL sky130_hilas_FGVaractorCapacitor02
 .ends
 

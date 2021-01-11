@@ -1,4 +1,36 @@
-* NGSPICE file created from /home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_FGcharacterization01.ext - technology: sky130A
+* Copyright 2020 The Hilas PDK Authors
+* 
+* This file is part of HILAS.
+* 
+* HILAS is free software: you can redistribute it and/or modify
+* it under the terms of the GNU Lesser General Public License as published by
+* the Free Software Foundation, version 3 of the License.
+* 
+* HILAS is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU Lesser General Public License for more details.
+* 
+* You should have received a copy of the GNU Lesser General Public License
+* along with HILAS.  If not, see <https://www.gnu.org/licenses/>.
+* 
+* Licensed under the Lesser General Public License, Version 3.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+* 
+* https://www.gnu.org/licenses/lgpl-3.0.en.html
+* 
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+* 
+* SPDX-License-Identifier: LGPL-3.0
+* 
+* 
+
+* NGSPICE file created from sky130_hilas_FGcharacterization01.ext - technology: sky130A
 
 .subckt sky130_hilas_nOverlapCap01 $SUB a_n114_n76# a_n24_14#
 X0 a_n24_14# a_n114_n76# a_n24_14# $SUB sky130_fd_pr__nfet_g5v0d10v5 w=580000u l=1.86e+06u
@@ -24,28 +56,27 @@ X0 a_n1080_n1484# w_n1112_n1632# w_n1112_n1632# sky130_fd_pr__cap_var w=8.56e+06
 X0 a_n1882_n644# w_n2010_n760# w_n2010_n760# sky130_fd_pr__cap_var w=610000u l=500000u
 .ends
 
-.subckt home/bjmuld/work/hilas/fastlane/PDKs/sky130A_hilas/libs.ref/sky130_hilas_sc/mag/sky130_hilas_FGcharacterization01
-+ VtunVaractor01 VaractorCap01 overlapCap01 VaractorCap02 overlapCap02 LargeCapacitor
-+ GND Vinj Output Vref AmplifierBias
-Xsky130_hilas_nOverlapCap01_0 GND a_730_1428# m1_n1610_518# sky130_hilas_nOverlapCap01
-Xsky130_hilas_FGVaractorCapacitor02_0 a_730_1428# GND VaractorCap02 sky130_hilas_FGVaractorCapacitor02
-Xsky130_hilas_FGVaractorCapacitor02_1 a_730_1428# GND VaractorCap01 sky130_hilas_FGVaractorCapacitor02
-Xsky130_hilas_FGVaractorCapacitor02_2 a_730_1428# GND VaractorCap02 sky130_hilas_FGVaractorCapacitor02
-Xsky130_hilas_pFETdevice01_0 Vinj sky130_hilas_li2m2_13/li_n26_n24# GND sky130_hilas_li2m2_12/li_n26_n24#
+.subckt sky130_hilas_FGcharacterization01 VTUNVARACTOR01 VARACTORCAP01 OVERLAPCAP01
++ VARACTORCAP02 OVERLAPCAP02 LARGECAPACITOR VGND VINJ OUTPUT VREF AMPLIFIERBIAS
+Xsky130_hilas_nOverlapCap01_0 VGND a_730_1428# m1_n1610_518# sky130_hilas_nOverlapCap01
+Xsky130_hilas_FGVaractorCapacitor02_0 a_730_1428# VGND VARACTORCAP02 sky130_hilas_FGVaractorCapacitor02
+Xsky130_hilas_FGVaractorCapacitor02_1 a_730_1428# VGND VARACTORCAP01 sky130_hilas_FGVaractorCapacitor02
+Xsky130_hilas_FGVaractorCapacitor02_2 a_730_1428# VGND VARACTORCAP02 sky130_hilas_FGVaractorCapacitor02
+Xsky130_hilas_pFETdevice01_0 VINJ sky130_hilas_li2m2_13/li_n26_n24# VGND sky130_hilas_li2m2_12/li_n26_n24#
 + a_730_1428# sky130_hilas_pFETdevice01
-Xsky130_hilas_overlapCap02a_0 a_730_1428# Vinj GND overlapCap01 sky130_hilas_overlapCap02a
-Xsky130_hilas_overlapCap02a_1 a_730_1428# Vinj GND overlapCap02 sky130_hilas_overlapCap02a
-Xsky130_hilas_overlapCap02a_2 a_730_1428# Vinj GND overlapCap02 sky130_hilas_overlapCap02a
-Xsky130_hilas_FGHugeVaractorCapacitor01_0 GND LargeCapacitor a_730_1428# sky130_hilas_FGHugeVaractorCapacitor01
-Xsky130_hilas_FGVaractorTunnelCap01_0 a_730_1428# GND VtunVaractor01 sky130_hilas_FGVaractorTunnelCap01
-X0 a_3376_904# AmplifierBias GND GND sky130_fd_pr__nfet_g5v0d10v5 w=620000u l=770000u
-X1 a_3666_860# a_3666_860# GND GND sky130_fd_pr__nfet_g5v0d10v5 w=640000u l=550000u
-X2 a_3952_1586# a_730_1428# a_3376_904# GND sky130_fd_pr__nfet_g5v0d10v5 w=630000u l=500000u
-X3 a_3376_904# Vref a_3672_1586# GND sky130_fd_pr__nfet_g5v0d10v5 w=630000u l=500000u
-X4 Output a_3666_860# GND GND sky130_fd_pr__nfet_g5v0d10v5 w=640000u l=550000u
-X5 a_3952_1586# a_3952_1586# Vinj Vinj sky130_fd_pr__pfet_g5v0d10v5 w=600000u l=550000u
-X6 a_3672_1586# a_3672_1586# Vinj Vinj sky130_fd_pr__pfet_g5v0d10v5 w=600000u l=550000u
-X7 Vinj a_3952_1586# Output Vinj sky130_fd_pr__pfet_g5v0d10v5 w=600000u l=550000u
-X8 Vinj a_3672_1586# a_3666_860# Vinj sky130_fd_pr__pfet_g5v0d10v5 w=600000u l=550000u
+Xsky130_hilas_overlapCap02a_0 a_730_1428# VINJ VGND OVERLAPCAP01 sky130_hilas_overlapCap02a
+Xsky130_hilas_overlapCap02a_1 a_730_1428# VINJ VGND OVERLAPCAP02 sky130_hilas_overlapCap02a
+Xsky130_hilas_overlapCap02a_2 a_730_1428# VINJ VGND OVERLAPCAP02 sky130_hilas_overlapCap02a
+Xsky130_hilas_FGHugeVaractorCapacitor01_0 VGND LARGECAPACITOR a_730_1428# sky130_hilas_FGHugeVaractorCapacitor01
+Xsky130_hilas_FGVaractorTunnelCap01_0 a_730_1428# VGND VTUNVARACTOR01 sky130_hilas_FGVaractorTunnelCap01
+X0 a_3376_904# AMPLIFIERBIAS VGND VGND sky130_fd_pr__nfet_g5v0d10v5 w=620000u l=770000u
+X1 a_3666_860# a_3666_860# VGND VGND sky130_fd_pr__nfet_g5v0d10v5 w=640000u l=550000u
+X2 a_3952_1586# a_730_1428# a_3376_904# VGND sky130_fd_pr__nfet_g5v0d10v5 w=630000u l=500000u
+X3 a_3376_904# VREF a_3672_1586# VGND sky130_fd_pr__nfet_g5v0d10v5 w=630000u l=500000u
+X4 OUTPUT a_3666_860# VGND VGND sky130_fd_pr__nfet_g5v0d10v5 w=640000u l=550000u
+X5 a_3952_1586# a_3952_1586# VINJ VINJ sky130_fd_pr__pfet_g5v0d10v5 w=600000u l=550000u
+X6 a_3672_1586# a_3672_1586# VINJ VINJ sky130_fd_pr__pfet_g5v0d10v5 w=600000u l=550000u
+X7 VINJ a_3952_1586# OUTPUT VINJ sky130_fd_pr__pfet_g5v0d10v5 w=600000u l=550000u
+X8 VINJ a_3672_1586# a_3666_860# VINJ sky130_fd_pr__pfet_g5v0d10v5 w=600000u l=550000u
 .ends
 
