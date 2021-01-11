@@ -46,7 +46,7 @@ from pathlib import Path
 #######################################################################################
 PDK_VARIANT = 'sky130_hilas_sc'
 CELL_PREFIX = 'sky130_hilas_'
-PG_PIN_NAMES = {'VPB': [],              # net names appearing in the lists will be converted to the key
+PG_PIN_NAMES = {'VPB': [],  # net names appearing in the lists will be converted to the key
                 'VPWRIN': [],
                 'LOWLVPWR': [],
                 'VGND': ['GND'],
@@ -64,7 +64,6 @@ REF_ROOT = HILAS_ROOT / 'libs.ref'
 CELL_DATA_FILE = REF_ROOT / PDK_VARIANT / 'CELL_INDEX.yml'
 MAIN_README = HILAS_ROOT / 'README.md'
 
-
 TEMPLATE_PATH = HILAS_ROOT / 'scripts' / 'templates'
 LIB_CELL_TEMPLATE = 'min_inverter.template.lib'
 LIB_HEAD_TEMPLATE = 'head.template.lib'
@@ -74,10 +73,10 @@ MD_LIB_TEMPLATE = 'lib_summary.template.md'
 README_HEADER = HILAS_ROOT / 'scripts' / 'templates' / 'README.md'
 
 CELL_CATEGORIES = ['public-cells',
-                     'primitive-cells',
-                     'test-cells',
-                     'private-cells',
-                     'cells-to-be-sorted']
+                   'primitive-cells',
+                   'test-cells',
+                   'private-cells',
+                   'cells-to-be-sorted']
 
 LIB_PATH = {
     'temp_lef': REF_ROOT / PDK_VARIANT / '_templef',
@@ -85,7 +84,7 @@ LIB_PATH = {
     'cell_details': REF_ROOT / PDK_VARIANT / 'CELL_DETAILS.md'
 }
 for name in ['cdl', 'doc', 'gds', 'lef', 'lib', 'mag', 'spice', 'schematic', 'techlef', 'verilog']:
-    LIB_PATH.update({name: REF_ROOT / PDK_VARIANT /name})
+    LIB_PATH.update({name: REF_ROOT / PDK_VARIANT / name})
 
 with open(THIS_DIR / 'templates' / 'license_head.txt', 'r') as f:
     LICENSE_HEAD = f.read() + '\n'
@@ -132,7 +131,8 @@ class LefData(object):
     SIZE_REGEX = re.compile(r'^\s*SIZE\s+(\S+)\s+BY\s+(\S+)\s*;\s*$', re.MULTILINE)
 
     def __init__(self, lef_file):
-        if isinstance(lef_file, Path) or (isinstance(lef_file, str) and '\n' not in lef_file and os.path.isfile(lef_file)):
+        if isinstance(lef_file, Path) or (
+                isinstance(lef_file, str) and '\n' not in lef_file and os.path.isfile(lef_file)):
             with open(lef_file, 'r') as f:
                 self.c = f.read()
         else:
@@ -170,7 +170,8 @@ class LefData(object):
         return res
 
     def get_cell(self, cell_name):
-        return re.search(r'(^\s*MACRO {}[\n\s\S]*^\s*END {})'.format(cell_name, cell_name), self.c, re.MULTILINE).group(1)
+        return re.search(r'(^\s*MACRO {}[\n\s\S]*^\s*END {})'.format(cell_name, cell_name), self.c, re.MULTILINE).group(
+            1)
 
     def cell_info(self, cell_name):
         cell_text = self.get_cell(cell_name)
@@ -200,12 +201,12 @@ class MagicLibrary(dict):
 
 
 class MagData(object):
-
     MAGIC_PIN_REGEX = re.compile(r'^\s*\wlabel\s+(\S+).*\s+(\S+)\s*\n\s*port\s+(\d+)\s+(.*)$', re.MULTILINE)
     CELL_REF_REGEX = re.compile(r'^\s?use (\w+)', re.MULTILINE)
 
     def __init__(self, mag_file):
-        if isinstance(mag_file, Path) or (isinstance(mag_file, str) and '\n' not in mag_file and os.path.isfile(mag_file)):
+        if isinstance(mag_file, Path) or (
+                isinstance(mag_file, str) and '\n' not in mag_file and os.path.isfile(mag_file)):
             with open(mag_file, 'r') as f:
                 self.c = f.read()
         else:
@@ -223,7 +224,8 @@ class MagData(object):
         return {item[1]: (item[0], item[2], item[3]) for item in match}
 
     def rename_net(self, old_name, new_name):
-        self.c = re.sub(r'(\n\s*[fr]label\s+.*\s+){}\s*\n'.format(re.escape(old_name)), r'\g<1>{}\n'.format(re.escape(new_name)), self.c, re.MULTILINE)
+        self.c = re.sub(r'(\n\s*[fr]label\s+.*\s+){}\s*\n'.format(re.escape(old_name)),
+                        r'\g<1>{}\n'.format(re.escape(new_name)), self.c, re.MULTILINE)
 
     def write_file(self):
         with open(self.file, 'w') as f:
@@ -358,7 +360,6 @@ def warn(msg):
 
 
 def make_gds(mf):
-
     target = (LIB_PATH['gds'] / mf.long_name).with_suffix('.gds')
 
     try:
@@ -374,7 +375,6 @@ def make_gds(mf):
 
 
 def make_temp_lef(mf):
-
     target = (LIB_PATH['temp_lef'] / mf.long_name).with_suffix('.lef')
 
     # try:
@@ -393,8 +393,7 @@ def make_temp_lef(mf):
 
 
 def make_lef():
-
-    target = (LIB_PATH['lef']/PDK_VARIANT).with_suffix('.lef')
+    target = (LIB_PATH['lef'] / PDK_VARIANT).with_suffix('.lef')
 
     for sf in LIB_PATH['temp_lef'].glob('*.lef'):
 
@@ -432,7 +431,6 @@ def make_lef():
 
 
 def make_spice(mf):
-
     target = (LIB_PATH['spice'] / mf.long_name).with_suffix('.spice')
 
     try:
@@ -449,7 +447,7 @@ def make_spice(mf):
         with open(target, 'r') as f:
             tt = f.read()
         with open(target, 'w') as f:
-            f.write(LICENSE_HEAD)
+            f.write('* ' + LICENSE_HEAD.replace('\n', '\n* '))
             f.write('\n\n')
             f.write(tt)
 
@@ -463,7 +461,7 @@ def make_verilog():
     :return:
     """
 
-    target = (LIB_PATH['verilog']/PDK_VARIANT).with_suffix('.v')
+    target = (LIB_PATH['verilog'] / PDK_VARIANT).with_suffix('.v')
 
     if LIB_PATH['temp_lef'] and LIB_PATH['temp_lef'].is_dir():
         lef_path = LIB_PATH['temp_lef']
@@ -522,7 +520,7 @@ def make_verilog():
             ))
             print('appended VERILOG info for {}'.format(cn))
 
-    result = LICENSE_HEAD + '\n\n'.join(cell_block)
+    result = '/** ' + LICENSE_HEAD.replace('\n', '\n * ') + '\n */\n\n\n' + '\n\n'.join(cell_block)
 
     with open(target, 'w') as f:
         f.write(result)
@@ -531,7 +529,6 @@ def make_verilog():
 
 
 def make_lib():
-
     target = (LIB_PATH['lib'] / PDK_VARIANT).with_suffix('.lib')
     lef_path = (LIB_PATH['lef'] / PDK_VARIANT).with_suffix('.lef')
 
@@ -710,7 +707,6 @@ def make_lib_summary_md():
 
 
 def make_cell_details_md():
-
     template_env = jinja2.Environment(
         trim_blocks=True,
         lstrip_blocks=True,
@@ -723,7 +719,10 @@ def make_cell_details_md():
 
     cell_template = template_env.get_template(MD_CELL_TEMPLATE)
 
-    tables = '# Cell Details\n\n'
+    tables = '<!--\n' + \
+             '    This Markdown text is autogenerated. Do not Modify here. \n' + \
+             '-->\n'
+    tables += '# Cell Details\n\n'
 
     for cat in CELL_CATEGORIES:
         tables += '## {}\n\n'.format(cat.upper())
@@ -734,7 +733,8 @@ def make_cell_details_md():
             matches = [(k, v) for k, v in mag_files[cn].ports().items()]
             matches = sorted(list(set(matches)), key=lambda x: int(x[1][1]))
             for m in matches:
-                rows.append('| {:<20} | {:<20} | {:<20} | {:<20} |'.format(m[1][1], m[0], m[1][0], ','.join(m[1][2].split())))
+                rows.append(
+                    '| {:<20} | {:<20} | {:<20} | {:<20} |'.format(m[1][1], m[0], m[1][0], ','.join(m[1][2].split())))
             ld = LefData((LIB_PATH['temp_lef'] / mag_files[cn].file.name).with_suffix('.lef'))
             tables += cell_template.render(
                 cell_name=cn,
@@ -794,7 +794,7 @@ def target_check(magic_file, type):
         suffix = type
 
     if type in ['gds', 'temp_lef', 'spice']:
-        target = Path(LIB_PATH[type] / magic_file.long_name).with_suffix('.'+suffix)
+        target = Path(LIB_PATH[type] / magic_file.long_name).with_suffix('.' + suffix)
         if not args.force and target.is_file() and os.path.getmtime(target) > os.path.getmtime(magic_file.file):
             # short circuit; don't do it
             return False
@@ -802,8 +802,9 @@ def target_check(magic_file, type):
             return True
 
     elif type in ['lef', 'lib', 'verilog']:
-        target = (LIB_PATH[type] / PDK_VARIANT).with_suffix('.'+suffix)
-        if not args.force and target.is_file() and os.path.getmtime(target) > max([os.path.getmtime(mf) for mf in LIB_PATH['mag'].glob('*.mag')]):
+        target = (LIB_PATH[type] / PDK_VARIANT).with_suffix('.' + suffix)
+        if not args.force and target.is_file() and os.path.getmtime(target) > max(
+                [os.path.getmtime(mf) for mf in LIB_PATH['mag'].glob('*.mag')]):
             # short circuit; don't do it
             return False
         else:
@@ -811,7 +812,8 @@ def target_check(magic_file, type):
 
     elif type == 'markdown':
         target = LIB_PATH['mag'] / 'README.md'
-        if not args.force and target.is_file() and os.path.getmtime(target) > max([os.path.getmtime(mf) for mf in LIB_PATH['mag'].glob('*.mag')]):
+        if not args.force and target.is_file() and os.path.getmtime(target) > max(
+                [os.path.getmtime(mf) for mf in LIB_PATH['mag'].glob('*.mag')]):
             # short circuit; don't do it
             return False
         else:
@@ -819,7 +821,6 @@ def target_check(magic_file, type):
 
 
 def handle_magic(magic_file):
-
     if not any([
         target_check(magic_file, 'gds'),
         target_check(magic_file, 'temp_lef'),
@@ -860,7 +861,7 @@ def check_count():
     ml = list(magic_files)
     mm = []
     for cn, c in dl.items():
-        mag_name = 'sky130_hilas_'+cn+'.mag'
+        mag_name = 'sky130_hilas_' + cn + '.mag'
         if mag_name in ml:
             ml.remove(mag_name)
         else:
@@ -886,7 +887,7 @@ def check_depends():
     for m in mag_files.values():
         deps = m.referenced_mods()
         for d in deps:
-            if not (LIB_PATH['mag']/d).with_suffix('.mag').is_file():
+            if not (LIB_PATH['mag'] / d).with_suffix('.mag').is_file():
                 missing.append(d)
 
     if missing:
@@ -971,7 +972,8 @@ def check_power_nets():
                 for new_net, list in PG_PIN_NAMES.items():
                     if old_net in list:
                         break
-                warn('Found net \'{}\' in {} which is probably meant to be \'{}\''.format(old_net, m.file.name, new_net))
+                warn(
+                    'Found net \'{}\' in {} which is probably meant to be \'{}\''.format(old_net, m.file.name, new_net))
                 m.rename_net(old_net, new_net)
                 write = True
 
@@ -995,7 +997,6 @@ def run_checks():
 
 
 def main():
-
     global magic, args, rel_root, cd, mag_files
 
     ap = argparse.ArgumentParser()
@@ -1005,12 +1006,15 @@ def main():
     ap.add_argument('-e', '--lef', action='store_true', help='Create LEF file', default=False)
     ap.add_argument('-i', '--lib', action='store_true', help='Create LIB file', default=False)
     ap.add_argument('-s', '--spice', action='store_true', help='Create Spice files', default=False)
-    ap.add_argument('-m', '--markdown', action='store_true', help='Create a pretty, human-readable markdown summary of cell pins',
+    ap.add_argument('-m', '--markdown', action='store_true',
+                    help='Create a pretty, human-readable markdown summary of cell pins',
                     default=False)
-    ap.add_argument('-v', '--verilog', action='store_true', help='Directory in which to put synthetic Verilog output', default=False)
+    ap.add_argument('-v', '--verilog', action='store_true', help='Directory in which to put synthetic Verilog output',
+                    default=False)
 
     ap.add_argument('-C', '--checks-only', action='store_true', help='Run consistency checks and quit.')
-    ap.add_argument('-D', '--delete', action='store_true', help='Delete temporary (individual) LEF files after consolidation', default=False)
+    ap.add_argument('-D', '--delete', action='store_true',
+                    help='Delete temporary (individual) LEF files after consolidation', default=False)
     ap.add_argument('-F', '--force', action='store_true', help='Overwrite existing collateral.', default=False)
     ap.add_argument('-Y', '--yes', action='store_true', help='Assume a \'yes\' answer to all prompts.')
     ap.add_argument('-N', '--no', action='store_true', help='Assume a \'no\' answer to all prompts.')
