@@ -72,10 +72,10 @@ MD_CELL_TEMPLATE = 'cell_details.template.md'
 MD_LIB_TEMPLATE = 'lib_summary.template.md'
 README_HEADER = HILAS_ROOT / 'scripts' / 'templates' / 'README.md'
 
-CELL_CATEGORIES = ['public-cells',
+CELL_CATEGORIES = ['standard-cells',
                    'primitive-cells',
                    'test-cells',
-                   'private-cells',
+                   'component-cells',
                    'cells-to-be-sorted']
 
 LIB_PATH = {
@@ -110,21 +110,31 @@ class CellData(OrderedDict):
         return OrderedDict({cn: cell for cat, cells in self.items() for cn, cell in cells.items()})
 
     @property
-    def public_cells(self):
-        return OrderedDict({cn: cell for cn, cell in self['public-cells'].items()})
+    def standard_cells(self):
+        return OrderedDict({cn: cell for cn, cell in self['standard-cells'].items()})
 
     @property
-    def private_cells(self):
-        return OrderedDict({cn: cell for cn, cell in self['private-cells'].items()})
+    def component_cells(self):
+        return OrderedDict({cn: cell for cn, cell in self['component-cells'].items()})
 
     @property
     def primitive_cells(self):
         return OrderedDict({cn: cell for cn, cell in self['primitive-cells'].items()})
 
+    @property
+    def test_cells(self):
+        return OrderedDict({cn: cell for cn, cell in self['test-cells'].items()})
+
     def by_name(self, cell_name):
         if cell_name.startswith(CELL_PREFIX):
             cell_name = cell_name.split(CELL_PREFIX)[1]
-        return [cell for cat in self.values() for cn, cell in cat.items() if cn == cell_name][0]
+        try:
+            return [cell for cat in self.values() for cn, cell in cat.items() if cn == cell_name][0]
+        except IndexError:
+            return None
+
+    def by_cat(self, category_name):
+        return OrderedDict({cn: cell for cn, cell in self[category_name].items() if cn != 'description'})
 
 
 class LefData(object):
@@ -511,12 +521,13 @@ def make_verilog():
             pins = [p['name'] for p in pins if p['name'] not in PG_PIN_NAMES]
             pg_pins.extend(["VNB", "VPB"])
 
+            descr = cd.by_name(cn)
             cell_block.append(v_template.render(
                 cell_name=cn,
                 pins=pins,
                 pg_pins=pg_pins,
                 shortname=cn,
-                description=cd.by_name(cn)['description']
+                description=descr['description'] if descr else ''
             ))
             print('appended VERILOG info for {}'.format(cn))
 
@@ -673,9 +684,9 @@ def make_lib_summary_md():
 
     tables = []
 
-    for cat in ['public-cells', 'primitive-cells', 'test-cells']:
+    for cat in ['standard-cells', 'primitive-cells', 'test-cells']:
         rows = []
-        for cn, cell in cd[cat].items():
+        for cn, cell in cd.by_cat(cat).items():
             if cell['description']:
                 rows.append('| {:<25} | {:<55} |'.format(
                     '[`{}`]({}#{})'.format(cn, LIB_PATH['cell_details'].relative_to(LIB_PATH['cell_summary'].parent),
@@ -726,7 +737,7 @@ def make_cell_details_md():
 
     for cat in CELL_CATEGORIES:
         tables += '## {}\n\n'.format(cat.upper())
-        cells = cd[cat]
+        cells = cd.by_cat(cat)
 
         for cn, cell in cells.items():
             rows = []
@@ -907,12 +918,12 @@ def check_depends():
 def check_schematics():
     missing = []
     avail_schem = [file.stem for file in LIB_PATH['schem'].glob('.*')]
-    for cell in cd.public_cells:
+    for cell in cd.standard_cells:
         if cell not in avail_schem:
             missing.append(cell)
     if missing:
         warn('######################################################################################################')
-        warn('The following public cells are missing schematics in the /schem/ path:')
+        warn('The following standard cells are missing schematics in the /schem/ path:')
         for mf in missing:
             warn('    ' + str(mf))
         warn('######################################################################################################')
@@ -920,12 +931,12 @@ def check_schematics():
 
 def check_descriptions():
     missing = []
-    for cn, cell in cd.public_cells.items():
+    for cn, cell in cd.all_cells.items():
         if 'description' not in cell or cell['description'] is None or cell['description'] == '':
             missing.append(cn)
     if missing:
         warn('######################################################################################################')
-        warn('The following public cells are missing descriptions in the \'{}\'file:'.format(CELL_DATA_FILE.name))
+        warn('The following standard cells are missing descriptions in the \'{}\'file:'.format(CELL_DATA_FILE.name))
         for mf in missing:
             warn('    ' + str(mf))
         warn('######################################################################################################')

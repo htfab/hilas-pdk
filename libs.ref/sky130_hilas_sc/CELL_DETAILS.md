@@ -3,7 +3,7 @@
 -->
 # Cell Details
 
-## PUBLIC-CELLS
+## STANDARD-CELLS
 
 --------------------------------------------------------------------------------------------
 <a name="DAC5bit01"></a>
@@ -28,7 +28,7 @@ Width: 16.580
 <a name="DAC-bit6-01"></a>
 ### `DAC_bit6_01`
 
-Description: 6-bit DAC, first variant
+Description: 6-bit DAC
 
 Height: 13.680
 <br>
@@ -37,46 +37,104 @@ Width: 16.380
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="DoubleTGate01"></a>
-### `DoubleTGate01`
+<a name="FGBias2x1cell"></a>
+### `FGBias2x1cell`
 
-Description: 2x1 array of transmission gates
+Description: None
 
 Height: 6.050
 <br>
-Width: 5.420
+Width: 11.530
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
+| 1                    | VTUN                 | metal1               | nsew,analog,default  |
+| 2                    | VGND                 | metal1               | nsew,ground,default  |
+| 4                    | GATE_CONTROL         | metal1               | nsew,analog,default  |
+| 5                    | DRAIN1               | metal2               | nsew,analog,default  |
+| 6                    | DRAIN4               | metal2               | nsew,analog,default  |
+| 7                    | VINJ                 | metal1               | nsew,power,default   |
+| 8                    | OUTPUT1              | metal2               | nsew,analog,default  |
+| 9                    | OUTPUT2              | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="FGHugeVaractorCapacitor01"></a>
-### `FGHugeVaractorCapacitor01`
+<a name="FGBiasWeakGate2x1cell"></a>
+### `FGBiasWeakGate2x1cell`
 
-Description: one large varactor cap
+Description: 2x1 array of FG switch cells configured as pFET current sources with weak capacitive gate inputs
 
-Height: 5.990
+Height: 6.050
 <br>
-Width: 10.290
+Width: 11.530
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
+| 1                    | DRAIN1               | metal2               | nsew,analog,default  |
+| 2                    | INPUT1               | metal2               | nsew                 |
+| 3                    | OUTPUT1              | metal2               | nsew,analog,default  |
+| 4                    | OUTPUT2              | metal2               | nsew,analog,default  |
+| 5                    | VINJ                 | metal1               | nsew,power,default   |
+| 6                    | GATESELECT           | metal1               | nsew,analog,default  |
+| 7                    | VGND                 | metal1               | nsew,ground,default  |
+| 8                    | GATE_CONTROL         | metal1               | nsew,analog,default  |
+| 9                    | VTUN                 | metal1               | nsew,analog,default  |
+| 10                   | GATECONTROL          | metal1               | nsew,analog,default  |
+| 11                   | DRAIN4               | metal2               | nsew,analog,default  |
+| 12                   | INPUT2               | metal2               | nsew,analog,default  |
+| 13                   | COMMONSOURCE         | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="FGVaractorCapacitor02"></a>
-### `FGVaractorCapacitor02`
+<a name="FGtrans2x1cell"></a>
+### `FGtrans2x1cell`
 
-Description: variant 2, varactor cap for floating-gate charge storage
+Description: None
 
-Height: 1.690
+Height: 6.050
 <br>
-Width: 2.720
+Width: 11.520
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
+| 1                    | GATESELECT           | metal1               | nsew,analog,default  |
+| 2                    | VINJ                 | metal1               | nsew,analog,default  |
+| 3                    | DRAIN1               | metal2               | nsew,analog,default  |
+| 4                    | DRAIN4               | metal2               | nsew,analog,default  |
+| 5                    | PROG                 | metal1               | nsew,analog,default  |
+| 6                    | RUN                  | metal1               | nsew,analog,default  |
+| 7                    | GATE1                | metal1               | nsew,analog,default  |
+| 8                    | GATE2                | metal1               | nsew,analog,default  |
+| 9                    | PROGGATE             | metal1               | nsew,analog,default  |
+| 10                   | VGND                 | metal1               | nsew,ground,default  |
+| 11                   | VTUN                 | metal1               | nsew,analog,default  |
+| 12                   | FGDRAINPROGRAM2      | metal2               | e,analog,default     |
+| 13                   | DRAIN                | metal2               | e,analog,default     |
+| 14                   | VS                   | metal2               | nsew,analog,default  |
+| 15                   | FGDRAINPROGRAM1      | metal2               | nsew,analog,default  |
+--------------------------------------------------------------------------------------------
+<a name="TA2Cell-1FG"></a>
+### `TA2Cell_1FG`
+
+Description: Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with wide linear range.
+
+Height: 6.050
+<br>
+Width: 28.090
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | VINN_AMP1            | space                | nsew,analog,default  |
+| 2                    | VINP_AMP1            | metal2               | nsew,analog,default  |
+| 3                    | VINP_AMP2            | metal2               | nsew,analog,default  |
+| 4                    | VINN_AMP2            | metal2               | n,analog,default     |
+| 5                    | GATECOLSELECT        | metal1               | nsew,analog,default  |
+| 6                    | VPWR                 | metal1               | nsew,power,default   |
+| 7                    | VGND                 | metal1               | nsew,ground,default  |
+| 8                    | VINJ                 | metal1               | nsew,power,default   |
+| 9                    | OUTPUT1              | metal2               | nsew,analog,default  |
+| 10                   | OUTPUT2              | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
 <a name="TA2Cell-1FG-Strong"></a>
 ### `TA2Cell_1FG_Strong`
 
-Description: Core transimpedance amp; strong FG inputs.
+Description: Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with normal linear range.
 
 Height: 6.050
 <br>
@@ -94,10 +152,52 @@ Width: 28.100
 | 8                    | OUTPUT1              | metal2               | nsew,analog,default  |
 | 9                    | VINJ                 | metal1               | nsew,power,default   |
 --------------------------------------------------------------------------------------------
+<a name="TA2Cell-NoFG"></a>
+### `TA2Cell_NoFG`
+
+Description: Two transimpedane amplifiers with no floating-gate inputs.
+
+Height: 6.050
+<br>
+Width: 17.920
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | GATECOLSELECT        | metal1               | nsew                 |
+| 2                    | VINN_AMP1            | metal2               | nsew,analog,default  |
+| 3                    | VINP_AMP2            | metal2               | nsew                 |
+| 4                    | VINN_AMP2            | metal2               | nsew                 |
+| 5                    | VOUT_AMP1            | metal2               | nsew                 |
+| 6                    | VOUT_AMP2            | metal2               | nsew                 |
+| 7                    | VGND                 | metal1               | nsew,ground,default  |
+| 8                    | VPWR                 | metal1               | nsew,power,default   |
+--------------------------------------------------------------------------------------------
+<a name="TA2SignalBiasCell"></a>
+### `TA2SignalBiasCell`
+
+Description: None
+
+Height: 6.050
+<br>
+Width: 8.450
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | VOUT_AMP2            | metal2               | nsew,analog,default  |
+| 2                    | VOUT_AMP1            | metal2               | nsew,analog,default  |
+| 3                    | VGND                 | metal1               | nsew,ground,default  |
+| 4                    | VPWR                 | metal2               | nsew,power,default   |
+| 5                    | VINN_AMP2            | metal2               | nsew,analog,default  |
+| 6                    | VINP_AMP2            | metal2               | nsew,analog,default  |
+| 7                    | VINP_AMP1            | metal2               | nsew,analog,default  |
+| 8                    | VINN_AMP1            | metal2               | nsew,analog,default  |
+| 9                    | VBIAS2               | metal2               | nsew,analog,default  |
+| 10                   | VBIAS1               | metal2               | nsew,analog,default  |
+--------------------------------------------------------------------------------------------
 <a name="Tgate4Double01"></a>
 ### `Tgate4Double01`
 
-Description: 2x1 array of transmission gates (variant 4)
+Description: 4 double-throw transmission gates
 
 Height: 6.050
 <br>
@@ -123,10 +223,36 @@ Width: 7.080
 | 16                   | OUTPUT2              | metal2               | nsew                 |
 | 17                   | OUTPUT1              | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
+<a name="Tgate4Single01"></a>
+### `Tgate4Single01`
+
+Description: 4 single-throw transmission gates
+
+Height: 6.050
+<br>
+Width: 4.760
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | INPUT1_4             | metal2               | nsew,analog,default  |
+| 2                    | VPWR                 | metal1               | nsew,power,default   |
+| 3                    | SELECT4              | metal2               | nsew,analog,default  |
+| 4                    | SELECT3              | metal2               | nsew,analog,default  |
+| 5                    | INPUT1_3             | metal2               | nsew,analog,default  |
+| 6                    | INPUT1_2             | metal2               | nsew,analog,default  |
+| 7                    | SELECT2              | metal2               | nsew,analog,default  |
+| 8                    | SELECT1              | metal2               | nsew,analog,default  |
+| 9                    | INPUT1_1             | metal2               | nsew,analog,default  |
+| 10                   | VGND                 | metal1               | nsew,ground,default  |
+| 11                   | OUTPUT1              | metal2               | nsew,analog,default  |
+| 12                   | OUTPUT2              | metal2               | nsew,analog,default  |
+| 13                   | OUTPUT3              | metal2               | nsew,analog,default  |
+| 14                   | OUTPUT4              | metal2               | nsew,analog,default  |
+--------------------------------------------------------------------------------------------
 <a name="Trans4small"></a>
 ### `Trans4small`
 
-Description: small transconductance amp?
+Description: 3 small nFETs + 3 small pFETs
 
 Height: 5.880
 <br>
@@ -158,7 +284,7 @@ Width: 2.800
 <a name="WTA4stage01"></a>
 ### `WTA4stage01`
 
-Description: 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one current source.
+Description: 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one nFET transistor current source.
 
 Height: 5.340
 <br>
@@ -170,7 +296,7 @@ Width: 2.830
 <a name="capacitorArray01"></a>
 ### `capacitorArray01`
 
-Description: 2x8 array of capacitors
+Description: selectable capacitor array
 
 Height: 6.050
 <br>
@@ -185,10 +311,146 @@ Width: 36.700
 | 5                    | VTUN                 | metal1               | nsew                 |
 | 6                    | GATE                 | metal1               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
+<a name="capacitorSize01"></a>
+### `capacitorSize01`
+
+Description: None
+
+Height: 5.830
+<br>
+Width: 10.420
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | CAPTERM02            | metal2               | nsew,analog,default  |
+| 2                    | CAPTERM01            | metal2               | nsew,analog,default  |
+--------------------------------------------------------------------------------------------
+<a name="capacitorSize02"></a>
+### `capacitorSize02`
+
+Description: None
+
+Height: 5.830
+<br>
+Width: 7.970
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | CAPTERM02            | metal2               | nsew,analog,default  |
+| 2                    | CAPTERM01            | metal2               | nsew,analog,default  |
+--------------------------------------------------------------------------------------------
+<a name="capacitorSize03"></a>
+### `capacitorSize03`
+
+Description: None
+
+Height: 5.870
+<br>
+Width: 5.790
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | CAPTERM02            | metal2               | nsew,analog,default  |
+| 2                    | CAPTERM01            | metal2               | nsew,analog,default  |
+--------------------------------------------------------------------------------------------
+<a name="capacitorSize04"></a>
+### `capacitorSize04`
+
+Description: None
+
+Height: 5.290
+<br>
+Width: 5.780
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | CAP1TERM02           | metal2               | nsew,analog,default  |
+| 2                    | CAP2TERM02           | metal2               | nsew,analog,default  |
+| 3                    | CAP2TERM01           | metal2               | nsew,analog,default  |
+| 4                    | CAP1TERM01           | metal2               | nsew,analog,default  |
+--------------------------------------------------------------------------------------------
+<a name="cellAttempt01"></a>
+### `cellAttempt01`
+
+Description: 4x1 array of FG switch cell, Varactor capacitor cell
+
+Height: 6.050
+<br>
+Width: 10.080
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="drainSelect01"></a>
+### `drainSelect01`
+
+Description: multiplexor for drain selection for 4 drain lines, pitch matched
+
+Height: 6.050
+<br>
+Width: 5.420
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | DRAIN4               | metal2               | nsew                 |
+| 2                    | DRAIN3               | metal2               | nsew                 |
+| 3                    | DRAIN2               | metal2               | nsew,analog,default  |
+| 4                    | DRAIN1               | metal2               | nsew,analog,default  |
+| 5                    | DRAINSELECT1         | metal1               | nsew,analog,default  |
+| 6                    | DRAINSELECT2         | metal1               | nsew,analog,default  |
+| 7                    | DRAINSELECT3         | metal1               | nsew,analog,default  |
+| 8                    | DRAINSELECT4         | metal1               | nsew,analog,default  |
+| 9                    | VINJ                 | metal1               | nsew,power,default   |
+| 10                   | DRAIN_MUX            | metal1               | nsew,analog,default  |
+| 11                   | VGND                 | metal1               | nsew,ground,default  |
+--------------------------------------------------------------------------------------------
+<a name="nFETLarge"></a>
+### `nFETLarge`
+
+Description: Single Large (W//L=100) nFET Transistor
+
+Height: 5.830
+<br>
+Width: 4.370
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | GATE                 | metal2               | nsew,analog,default  |
+| 2                    | SOURCE               | metal2               | nsew,analog,default  |
+| 3                    | DRAIN                | metal2               | nsew,analog,default  |
+--------------------------------------------------------------------------------------------
+<a name="pFETLarge"></a>
+### `pFETLarge`
+
+Description: Single Large (W/L=100) pFET Transistor
+
+Height: 5.990
+<br>
+Width: 4.640
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | GATE                 | metal2               | nsew                 |
+| 2                    | SOURCE               | metal2               | nsew,analog,default  |
+| 3                    | DRAIN                | metal2               | nsew,analog,default  |
+| 4                    | WELL                 | metal1               | nsew,analog,default  |
+--------------------------------------------------------------------------------------------
+<a name="pFETmed"></a>
+### `pFETmed`
+
+Description: Medium-sized (W/L=10) pFET transistor
+
+Height: 2.870
+<br>
+Width: 1.190
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
 <a name="swc4x1BiasCell"></a>
 ### `swc4x1BiasCell`
 
-Description: core switch cell 4x1 biasing unit
+Description: 4x1 array of FG switch cell configured pFET as current sources
 
 Height: 6.050
 <br>
@@ -213,188 +475,89 @@ Width: 10.110
 | 15                   | HORIZ3               | metal2               | nsew,analog,default  |
 | 16                   | HORIZ4               | metal2               | nsew,analog,default  |
 | 17                   | DRAIN4               | metal2               | nsew,analog,default  |
+--------------------------------------------------------------------------------------------
+<a name="swc4x1cellOverlap"></a>
+### `swc4x1cellOverlap`
+
+Description: 4x1 array of FG switch cell using overlap capacitors
+
+Height: 6.710
+<br>
+Width: 10.080
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="swc4x1cellOverlap2"></a>
+### `swc4x1cellOverlap2`
+
+Description: None
+
+Height: 6.050
+<br>
+Width: 9.350
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="swc4x2cell"></a>
+### `swc4x2cell`
+
+Description: 4x2 array of FG switch cell, Varactor capacitor cell
+
+Height: 6.050
+<br>
+Width: 20.130
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | GATE2                | metal1               | nsew,analog,default  |
+| 2                    | VTUN                 | metal1               | nsew,power,default   |
+| 3                    | GATE1                | metal1               | nsew,analog,default  |
+| 4                    | VPWR                 | metal1               | nsew,power,default   |
+| 6                    | VINJ                 | metal1               | nsew,power,default   |
+| 10                   | GATESELECT1          | metal1               | nsew,analog,default  |
+| 11                   | GATESELECT2          | metal1               | nsew,analog,default  |
+| 12                   | VERT1                | metal1               | nsew,analog,default  |
+| 13                   | VERT2                | metal1               | nsew,analog,default  |
+| 14                   | HORIZ1               | metal2               | nsew,analog,default  |
+| 15                   | HORIZ2               | metal2               | nsew,analog,default  |
+| 16                   | DRAIN1               | metal2               | nsew,analog,default  |
+| 17                   | DRAIN2               | metal2               | nsew,analog,default  |
+| 18                   | DRAIN3               | metal2               | nsew,analog,default  |
+| 19                   | HORIZ3               | metal2               | nsew,analog,default  |
+| 20                   | HORIZ4               | metal2               | nsew,analog,default  |
+| 21                   | DRAIN4               | metal2               | nsew,analog,default  |
+--------------------------------------------------------------------------------------------
+<a name="swc4x2cellOverlap"></a>
+### `swc4x2cellOverlap`
+
+Description: Core switch cell, built with overlap capacitor
+
+Height: 6.050
+<br>
+Width: 17.980
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | VERT1                | metal1               | nsew,analog,default  |
+| 2                    | HORIZ1               | metal2               | nsew,analog,default  |
+| 3                    | DRAIN1               | metal2               | nsew,analog,default  |
+| 4                    | HORIZ2               | metal2               | nsew,analog,default  |
+| 5                    | DRAIN2               | metal2               | nsew,analog,default  |
+| 6                    | DRAIN3               | metal2               | nsew,analog,default  |
+| 7                    | HORIZ3               | metal2               | nsew,analog,default  |
+| 8                    | HORIZ4               | metal2               | nsew,analog,default  |
+| 9                    | DRAIN4               | metal2               | nsew,analog,default  |
+| 10                   | VINJ                 | metal1               | nsew,power,default   |
+| 11                   | GATESELECT1          | metal1               | nsew,analog,default  |
+| 12                   | VERT2                | metal1               | nsew,analog,default  |
+| 13                   | GATESELECT2          | metal1               | nsew,analog,default  |
+| 14                   | DRAIN                | metal2               | nsew,analog,default  |
+| 15                   | GATE2                | metal1               | nsew,analog,default  |
+| 16                   | GATE1                | metal1               | nsew,analog,default  |
+| 17                   | VTUN                 | metal1               | nsew,analog,default  |
 ## PRIMITIVE-CELLS
-
---------------------------------------------------------------------------------------------
-<a name="CapModule01a"></a>
-### `CapModule01a`
-
-Description: primitive cap, variant 01a
-
-Height: 2.280
-<br>
-Width: 2.300
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="TunVaractorCapcitor"></a>
-### `TunVaractorCapcitor`
-
-Description: None
-
-Height: 7.010
-<br>
-Width: 10.430
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="capacitorSize01"></a>
-### `capacitorSize01`
-
-Description: None
-
-Height: 5.830
-<br>
-Width: 10.420
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | CAPTERM02            | metal2               | nsew,analog,default  |
-| 2                    | CAPTERM01            | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="capacitorSize03"></a>
-### `capacitorSize03`
-
-Description: None
-
-Height: 5.870
-<br>
-Width: 5.790
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | CAPTERM02            | metal2               | nsew,analog,default  |
-| 2                    | CAPTERM01            | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="li2m2"></a>
-### `li2m2`
-
-Description: None
-
-Height: 0.330
-<br>
-Width: 0.340
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="mcap2m4"></a>
-### `mcap2m4`
-
-Description: None
-
-Height: 0.750
-<br>
-Width: 0.790
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="nFETLarge"></a>
-### `nFETLarge`
-
-Description: None
-
-Height: 5.830
-<br>
-Width: 4.370
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | GATE                 | metal2               | nsew,analog,default  |
-| 2                    | SOURCE               | metal2               | nsew,analog,default  |
-| 3                    | DRAIN                | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="pFETLargePart1"></a>
-### `pFETLargePart1`
-
-Description: None
-
-Height: 2.870
-<br>
-Width: 3.390
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="pFETdevice01"></a>
-### `pFETdevice01`
-
-Description: None
-
-Height: 1.210
-<br>
-Width: 1.610
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="pFETdevice01aa"></a>
-### `pFETdevice01aa`
-
-Description: None
-
-Height: 1.210
-<br>
-Width: 1.720
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="pFETdevice01e"></a>
-### `pFETdevice01e`
-
-Description: None
-
-Height: 0.990
-<br>
-Width: 2.030
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="pFETmirror"></a>
-### `pFETmirror`
-
-Description: None
-
-Height: 2.030
-<br>
-Width: 2.190
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-## TEST-CELLS
-
---------------------------------------------------------------------------------------------
-<a name="all"></a>
-### `all`
-
-Description: None
-
-Height: 6.670
-<br>
-Width: 1.770
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-## PRIVATE-CELLS
-
---------------------------------------------------------------------------------------------
-<a name="nDiffThOxContact"></a>
-### `nDiffThOxContact`
-
-Description: None
-
-Height: 0.290
-<br>
-Width: 0.670
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-## CELLS-TO-BE-SORTED
 
 --------------------------------------------------------------------------------------------
 <a name="CapModule01"></a>
@@ -405,6 +568,18 @@ Description: None
 Height: 2.860
 <br>
 Width: 2.840
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="CapModule01a"></a>
+### `CapModule01a`
+
+Description: primitive cap, variant 01a
+
+Height: 2.280
+<br>
+Width: 2.300
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -493,6 +668,18 @@ Width: 33.400
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
+<a name="DoubleTGate01"></a>
+### `DoubleTGate01`
+
+Description: 2x1 array of transmission gates
+
+Height: 6.050
+<br>
+Width: 5.420
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
 <a name="DualTACore01"></a>
 ### `DualTACore01`
 
@@ -505,189 +692,29 @@ Width: 3.270
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="FGBias2x1cell"></a>
-### `FGBias2x1cell`
+<a name="FGHugeVaractorCapacitor01"></a>
+### `FGHugeVaractorCapacitor01`
 
-Description: None
+Description: one large varactor cap
 
-Height: 6.050
+Height: 5.990
 <br>
-Width: 11.530
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | VTUN                 | metal1               | nsew,analog,default  |
-| 2                    | VGND                 | metal1               | nsew,ground,default  |
-| 4                    | GATE_CONTROL         | metal1               | nsew,analog,default  |
-| 5                    | DRAIN1               | metal2               | nsew,analog,default  |
-| 6                    | DRAIN4               | metal2               | nsew,analog,default  |
-| 7                    | VINJ                 | metal1               | nsew,power,default   |
-| 8                    | OUTPUT1              | metal2               | nsew,analog,default  |
-| 9                    | OUTPUT2              | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="FGBiasWeakGate2x1cell"></a>
-### `FGBiasWeakGate2x1cell`
-
-Description: None
-
-Height: 6.050
-<br>
-Width: 11.530
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | DRAIN1               | metal2               | nsew,analog,default  |
-| 2                    | INPUT1               | metal2               | nsew                 |
-| 3                    | OUTPUT1              | metal2               | nsew,analog,default  |
-| 4                    | OUTPUT2              | metal2               | nsew,analog,default  |
-| 5                    | VINJ                 | metal1               | nsew,power,default   |
-| 6                    | GATESELECT           | metal1               | nsew,analog,default  |
-| 7                    | VGND                 | metal1               | nsew,ground,default  |
-| 8                    | GATE_CONTROL         | metal1               | nsew,analog,default  |
-| 9                    | VTUN                 | metal1               | nsew,analog,default  |
-| 10                   | GATECONTROL          | metal1               | nsew,analog,default  |
-| 11                   | DRAIN4               | metal2               | nsew,analog,default  |
-| 12                   | INPUT2               | metal2               | nsew,analog,default  |
-| 13                   | COMMONSOURCE         | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="FGVaractorCapacitor"></a>
-### `FGVaractorCapacitor`
-
-Description: None
-
-Height: 1.860
-<br>
-Width: 2.230
+Width: 10.290
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="FGVaractorTunnelCap01"></a>
-### `FGVaractorTunnelCap01`
+<a name="FGVaractorCapacitor02"></a>
+### `FGVaractorCapacitor02`
 
-Description: None
+Description: variant 2, varactor cap for floating-gate charge storage
 
 Height: 1.690
 <br>
-Width: 2.220
+Width: 2.720
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="FGcharacterization01"></a>
-### `FGcharacterization01`
-
-Description: None
-
-Height: 6.050
-<br>
-Width: 29.950
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | VTUNVARACTOR01       | metal1               | nsew,analog,default  |
-| 2                    | VARACTORCAP01        | metal1               | nsew,analog,default  |
-| 3                    | OVERLAPCAP01         | metal1               | nsew,analog,default  |
-| 4                    | VTUNOVERLAP01        | space                | nsew,analog,default  |
-| 5                    | VARACTORCAP02        | metal1               | nsew,analog,default  |
-| 6                    | OVERLAPCAP02         | metal1               | nsew,analog,default  |
-| 7                    | LARGECAPACITOR       | metal1               | nsew,analog,default  |
-| 8                    | VGND                 | metal2               | nsew,ground,default  |
-| 9                    | VINJ                 | metal2               | nsew,power,default   |
-| 10                   | OUTPUT               | metal2               | nsew,analog,default  |
-| 11                   | VREF                 | metal2               | nsew,analog,default  |
-| 12                   | AMPLIFIERBIAS        | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="FGtrans2x1cell"></a>
-### `FGtrans2x1cell`
-
-Description: None
-
-Height: 6.050
-<br>
-Width: 11.520
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | GATESELECT           | metal1               | nsew,analog,default  |
-| 2                    | VINJ                 | metal1               | nsew,analog,default  |
-| 3                    | DRAIN1               | metal2               | nsew,analog,default  |
-| 4                    | DRAIN4               | metal2               | nsew,analog,default  |
-| 5                    | PROG                 | metal1               | nsew,analog,default  |
-| 6                    | RUN                  | metal1               | nsew,analog,default  |
-| 7                    | GATE1                | metal1               | nsew,analog,default  |
-| 8                    | GATE2                | metal1               | nsew,analog,default  |
-| 9                    | PROGGATE             | metal1               | nsew,analog,default  |
-| 10                   | VGND                 | metal1               | nsew,ground,default  |
-| 11                   | VTUN                 | metal1               | nsew,analog,default  |
-| 12                   | FGDRAINPROGRAM2      | metal2               | e,analog,default     |
-| 13                   | DRAIN                | metal2               | e,analog,default     |
-| 14                   | VS                   | metal2               | nsew,analog,default  |
-| 15                   | FGDRAINPROGRAM1      | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="TA2Cell-1FG"></a>
-### `TA2Cell_1FG`
-
-Description: Core transimpedance amp; floating-gate inputs. (C4 block is a specific routing of this cell&#39;s terminals)
-
-Height: 6.050
-<br>
-Width: 28.090
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | VINN_AMP1            | space                | nsew,analog,default  |
-| 2                    | VINP_AMP1            | metal2               | nsew,analog,default  |
-| 3                    | VINP_AMP2            | metal2               | nsew,analog,default  |
-| 4                    | VINN_AMP2            | metal2               | n,analog,default     |
-| 5                    | GATECOLSELECT        | metal1               | nsew,analog,default  |
-| 6                    | VPWR                 | metal1               | nsew,power,default   |
-| 7                    | VGND                 | metal1               | nsew,ground,default  |
-| 8                    | VINJ                 | metal1               | nsew,power,default   |
-| 9                    | OUTPUT1              | metal2               | nsew,analog,default  |
-| 10                   | OUTPUT2              | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="TA2Cell-NoFG"></a>
-### `TA2Cell_NoFG`
-
-Description: Core transimpedance amplifier
-
-Height: 6.050
-<br>
-Width: 17.920
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | GATECOLSELECT        | metal1               | nsew                 |
-| 2                    | VINN_AMP1            | metal2               | nsew,analog,default  |
-| 3                    | VINP_AMP2            | metal2               | nsew                 |
-| 4                    | VINN_AMP2            | metal2               | nsew                 |
-| 5                    | VOUT_AMP1            | metal2               | nsew                 |
-| 6                    | VOUT_AMP2            | metal2               | nsew                 |
-| 7                    | VGND                 | metal1               | nsew,ground,default  |
-| 8                    | VPWR                 | metal1               | nsew,power,default   |
---------------------------------------------------------------------------------------------
-<a name="TA2SignalBiasCell"></a>
-### `TA2SignalBiasCell`
-
-Description: None
-
-Height: 6.050
-<br>
-Width: 8.450
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | VOUT_AMP2            | metal2               | nsew,analog,default  |
-| 2                    | VOUT_AMP1            | metal2               | nsew,analog,default  |
-| 3                    | VGND                 | metal1               | nsew,ground,default  |
-| 4                    | VPWR                 | metal2               | nsew,power,default   |
-| 5                    | VINN_AMP2            | metal2               | nsew,analog,default  |
-| 6                    | VINP_AMP2            | metal2               | nsew,analog,default  |
-| 7                    | VINP_AMP1            | metal2               | nsew,analog,default  |
-| 8                    | VINN_AMP1            | metal2               | nsew,analog,default  |
-| 9                    | VBIAS2               | metal2               | nsew,analog,default  |
-| 10                   | VBIAS1               | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
 <a name="TACoreBlock"></a>
 ### `TACoreBlock`
@@ -724,32 +751,6 @@ Width: 2.190
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="Tgate4Single01"></a>
-### `Tgate4Single01`
-
-Description: None
-
-Height: 6.050
-<br>
-Width: 4.760
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | INPUT1_4             | metal2               | nsew,analog,default  |
-| 2                    | VPWR                 | metal1               | nsew,power,default   |
-| 3                    | SELECT4              | metal2               | nsew,analog,default  |
-| 4                    | SELECT3              | metal2               | nsew,analog,default  |
-| 5                    | INPUT1_3             | metal2               | nsew,analog,default  |
-| 6                    | INPUT1_2             | metal2               | nsew,analog,default  |
-| 7                    | SELECT2              | metal2               | nsew,analog,default  |
-| 8                    | SELECT1              | metal2               | nsew,analog,default  |
-| 9                    | INPUT1_1             | metal2               | nsew,analog,default  |
-| 10                   | VGND                 | metal1               | nsew,ground,default  |
-| 11                   | OUTPUT1              | metal2               | nsew,analog,default  |
-| 12                   | OUTPUT2              | metal2               | nsew,analog,default  |
-| 13                   | OUTPUT3              | metal2               | nsew,analog,default  |
-| 14                   | OUTPUT4              | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
 <a name="TgateDouble01"></a>
 ### `TgateDouble01`
@@ -811,42 +812,6 @@ Width: 5.420
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="Trans2med"></a>
-### `Trans2med`
-
-Description: None
-
-Height: 5.950
-<br>
-Width: 3.530
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | NFET_GATE01          | metal2               | nsew,analog,default  |
-| 2                    | PET_GATE02           | metal2               | nsew,analog,default  |
-| 3                    | PFET_GATE01          | metal2               | nsew,analog,default  |
-| 4                    | NFET_GATE02          | metal2               | nsew,analog,default  |
-| 5                    | PFET_SOURCE1         | metal2               | nsew,analog,default  |
-| 6                    | PFET_SOURCE2         | metal2               | nsew,analog,default  |
-| 7                    | NFET_SOURCE2         | metal2               | nsew,analog,default  |
-| 8                    | NFET_SOURCE1         | metal2               | nsew,analog,default  |
-| 9                    | NFET_DRAIN1          | metal2               | nsew,analog,default  |
-| 10                   | NFET_DRAIN2          | metal2               | nsew,analog,default  |
-| 11                   | PFET_DRAIN01         | metal2               | nsew,analog,default  |
-| 12                   | PFET_DRAIN2          | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="TunCap01"></a>
-### `TunCap01`
-
-Description: None
-
-Height: 1.900
-<br>
-Width: 1.730
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
 <a name="WTA4Stage01"></a>
 ### `WTA4Stage01`
 
@@ -894,95 +859,6 @@ Width: 2.830
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="capacitorSize02"></a>
-### `capacitorSize02`
-
-Description: None
-
-Height: 5.830
-<br>
-Width: 7.970
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | CAPTERM02            | metal2               | nsew,analog,default  |
-| 2                    | CAPTERM01            | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="capacitorSize04"></a>
-### `capacitorSize04`
-
-Description: None
-
-Height: 5.290
-<br>
-Width: 5.780
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | CAP1TERM02           | metal2               | nsew,analog,default  |
-| 2                    | CAP2TERM02           | metal2               | nsew,analog,default  |
-| 3                    | CAP2TERM01           | metal2               | nsew,analog,default  |
-| 4                    | CAP1TERM01           | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="cellAttempt01"></a>
-### `cellAttempt01`
-
-Description: None
-
-Height: 6.050
-<br>
-Width: 10.080
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="drainSelect01"></a>
-### `drainSelect01`
-
-Description: None
-
-Height: 6.050
-<br>
-Width: 5.420
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | DRAIN4               | metal2               | nsew                 |
-| 2                    | DRAIN3               | metal2               | nsew                 |
-| 3                    | DRAIN2               | metal2               | nsew,analog,default  |
-| 4                    | DRAIN1               | metal2               | nsew,analog,default  |
-| 5                    | DRAINSELECT1         | metal1               | nsew,analog,default  |
-| 6                    | DRAINSELECT2         | metal1               | nsew,analog,default  |
-| 7                    | DRAINSELECT3         | metal1               | nsew,analog,default  |
-| 8                    | DRAINSELECT4         | metal1               | nsew,analog,default  |
-| 9                    | VINJ                 | metal1               | nsew,power,default   |
-| 10                   | DRAIN_MUX            | metal1               | nsew,analog,default  |
-| 11                   | VGND                 | metal1               | nsew,ground,default  |
---------------------------------------------------------------------------------------------
-<a name="horizPcell01"></a>
-### `horizPcell01`
-
-Description: None
-
-Height: 1.850
-<br>
-Width: 2.560
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="horizTransCell01"></a>
-### `horizTransCell01`
-
-Description: None
-
-Height: 3.110
-<br>
-Width: 4.430
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
 <a name="invert01"></a>
 ### `invert01`
 
@@ -991,66 +867,6 @@ Description: None
 Height: 0.310
 <br>
 Width: 0.520
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="li2m1"></a>
-### `li2m1`
-
-Description: None
-
-Height: 0.290
-<br>
-Width: 0.230
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="m12m2"></a>
-### `m12m2`
-
-Description: None
-
-Height: 0.320
-<br>
-Width: 0.320
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="m22m4"></a>
-### `m22m4`
-
-Description: None
-
-Height: 0.750
-<br>
-Width: 0.790
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="nFET03"></a>
-### `nFET03`
-
-Description: None
-
-Height: 0.610
-<br>
-Width: 0.890
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="nFET03a"></a>
-### `nFET03a`
-
-Description: None
-
-Height: 0.890
-<br>
-Width: 2.080
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1067,22 +883,10 @@ Width: 3.020
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="nFETmed"></a>
-### `nFETmed`
-
-Description: None
-
-Height: 2.720
-<br>
-Width: 0.820
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
 <a name="nFETmirrorPairs"></a>
 ### `nFETmirrorPairs`
 
-Description: None
+Description: pairs of nFET current mirrors
 
 Height: 2.750
 <br>
@@ -1115,138 +919,14 @@ Width: 1.840
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="nOverlapCap01"></a>
-### `nOverlapCap01`
+<a name="pFETmirror"></a>
+### `pFETmirror`
 
-Description: None
+Description: pFET current mirror
 
-Height: 1.290
+Height: 2.030
 <br>
-Width: 1.290
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="overlapCap01"></a>
-### `overlapCap01`
-
-Description: None
-
-Height: 2.080
-<br>
-Width: 2.870
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="overlapCap02"></a>
-### `overlapCap02`
-
-Description: None
-
-Height: 1.950
-<br>
-Width: 4.320
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="overlapCap02a"></a>
-### `overlapCap02a`
-
-Description: None
-
-Height: 1.640
-<br>
-Width: 4.000
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="pFETLarge"></a>
-### `pFETLarge`
-
-Description: None
-
-Height: 5.990
-<br>
-Width: 4.640
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | GATE                 | metal2               | nsew                 |
-| 2                    | SOURCE               | metal2               | nsew,analog,default  |
-| 3                    | DRAIN                | metal2               | nsew,analog,default  |
-| 4                    | WELL                 | metal1               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="pFETdevice01a"></a>
-### `pFETdevice01a`
-
-Description: None
-
-Height: 0.850
-<br>
-Width: 1.610
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="pFETdevice01b"></a>
-### `pFETdevice01b`
-
-Description: None
-
-Height: 1.570
-<br>
-Width: 1.870
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="pFETdevice01ba"></a>
-### `pFETdevice01ba`
-
-Description: None
-
-Height: 1.570
-<br>
-Width: 1.870
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="pFETdevice01c"></a>
-### `pFETdevice01c`
-
-Description: None
-
-Height: 1.570
-<br>
-Width: 1.870
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="pFETdevice01d"></a>
-### `pFETdevice01d`
-
-Description: None
-
-Height: 1.450
-<br>
-Width: 1.840
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="pFETmed"></a>
-### `pFETmed`
-
-Description: None
-
-Height: 2.870
-<br>
-Width: 1.190
+Width: 2.190
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1254,7 +934,7 @@ Width: 1.190
 <a name="pFETmirror02"></a>
 ### `pFETmirror02`
 
-Description: None
+Description: second pFET current mirror
 
 Height: 2.840
 <br>
@@ -1274,6 +954,382 @@ Width: 1.870
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
+## TEST-CELLS
+
+--------------------------------------------------------------------------------------------
+<a name="FGcharacterization01"></a>
+### `FGcharacterization01`
+
+Description: FG test strucure that uses a capacitor around a transconductance amplifier
+
+Height: 6.050
+<br>
+Width: 29.950
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | VTUNVARACTOR01       | metal1               | nsew,analog,default  |
+| 2                    | VARACTORCAP01        | metal1               | nsew,analog,default  |
+| 3                    | OVERLAPCAP01         | metal1               | nsew,analog,default  |
+| 4                    | VTUNOVERLAP01        | space                | nsew,analog,default  |
+| 5                    | VARACTORCAP02        | metal1               | nsew,analog,default  |
+| 6                    | OVERLAPCAP02         | metal1               | nsew,analog,default  |
+| 7                    | LARGECAPACITOR       | metal1               | nsew,analog,default  |
+| 8                    | VGND                 | metal2               | nsew,ground,default  |
+| 9                    | VINJ                 | metal2               | nsew,power,default   |
+| 10                   | OUTPUT               | metal2               | nsew,analog,default  |
+| 11                   | VREF                 | metal2               | nsew,analog,default  |
+| 12                   | AMPLIFIERBIAS        | metal2               | nsew,analog,default  |
+## COMPONENT-CELLS
+
+--------------------------------------------------------------------------------------------
+<a name="FGVaractorTunnelCap01"></a>
+### `FGVaractorTunnelCap01`
+
+Description: Tunneling cpacitor using a standard varactor capacitor
+
+Height: 1.690
+<br>
+Width: 2.220
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="Trans2med"></a>
+### `Trans2med`
+
+Description: None
+
+Height: 5.950
+<br>
+Width: 3.530
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | NFET_GATE01          | metal2               | nsew,analog,default  |
+| 2                    | PET_GATE02           | metal2               | nsew,analog,default  |
+| 3                    | PFET_GATE01          | metal2               | nsew,analog,default  |
+| 4                    | NFET_GATE02          | metal2               | nsew,analog,default  |
+| 5                    | PFET_SOURCE1         | metal2               | nsew,analog,default  |
+| 6                    | PFET_SOURCE2         | metal2               | nsew,analog,default  |
+| 7                    | NFET_SOURCE2         | metal2               | nsew,analog,default  |
+| 8                    | NFET_SOURCE1         | metal2               | nsew,analog,default  |
+| 9                    | NFET_DRAIN1          | metal2               | nsew,analog,default  |
+| 10                   | NFET_DRAIN2          | metal2               | nsew,analog,default  |
+| 11                   | PFET_DRAIN01         | metal2               | nsew,analog,default  |
+| 12                   | PFET_DRAIN2          | metal2               | nsew,analog,default  |
+--------------------------------------------------------------------------------------------
+<a name="TunCap01"></a>
+### `TunCap01`
+
+Description: None
+
+Height: 1.900
+<br>
+Width: 1.730
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="TunVaractorCapcitor"></a>
+### `TunVaractorCapcitor`
+
+Description: Tunneling capacitor using a standard varactor capacitor
+
+Height: 7.010
+<br>
+Width: 10.430
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="horizPcell01"></a>
+### `horizPcell01`
+
+Description: None
+
+Height: 1.850
+<br>
+Width: 2.560
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="horizTransCell01"></a>
+### `horizTransCell01`
+
+Description: None
+
+Height: 3.110
+<br>
+Width: 4.430
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="li2m1"></a>
+### `li2m1`
+
+Description: local interconnect to m1 contact
+
+Height: 0.290
+<br>
+Width: 0.230
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="li2m2"></a>
+### `li2m2`
+
+Description: local interconnect to m2 contact
+
+Height: 0.330
+<br>
+Width: 0.340
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="m12m2"></a>
+### `m12m2`
+
+Description: m1 to m2 contact
+
+Height: 0.320
+<br>
+Width: 0.320
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="m22m4"></a>
+### `m22m4`
+
+Description: m2 to m4 contact
+
+Height: 0.750
+<br>
+Width: 0.790
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="mcap2m4"></a>
+### `mcap2m4`
+
+Description: metal capacitor layer contact to m4
+
+Height: 0.750
+<br>
+Width: 0.790
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="nDiffThOxContact"></a>
+### `nDiffThOxContact`
+
+Description: None
+
+Height: 0.290
+<br>
+Width: 0.670
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="nFET03"></a>
+### `nFET03`
+
+Description: None
+
+Height: 0.610
+<br>
+Width: 0.890
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="nFET03a"></a>
+### `nFET03a`
+
+Description: None
+
+Height: 0.890
+<br>
+Width: 2.080
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="nFETmed"></a>
+### `nFETmed`
+
+Description: None
+
+Height: 2.720
+<br>
+Width: 0.820
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="nOverlapCap01"></a>
+### `nOverlapCap01`
+
+Description: overlap capacitor based capacitor (nFET)
+
+Height: 1.290
+<br>
+Width: 1.290
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="overlapCap01"></a>
+### `overlapCap01`
+
+Description: overlap capacitor based capacitor
+
+Height: 2.080
+<br>
+Width: 2.870
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="overlapCap02"></a>
+### `overlapCap02`
+
+Description: overlap capacitor based capacitor)
+
+Height: 1.950
+<br>
+Width: 4.320
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="overlapCap02a"></a>
+### `overlapCap02a`
+
+Description: overlap capacitor based capacitor
+
+Height: 1.640
+<br>
+Width: 4.000
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="pFETLargePart1"></a>
+### `pFETLargePart1`
+
+Description: Part of the W/L=100 pFET transistor
+
+Height: 2.870
+<br>
+Width: 3.390
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="pFETdevice01"></a>
+### `pFETdevice01`
+
+Description: pFET transistor used in DAC block
+
+Height: 1.210
+<br>
+Width: 1.610
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="pFETdevice01a"></a>
+### `pFETdevice01a`
+
+Description: pFET transistor used in DAC block
+
+Height: 0.850
+<br>
+Width: 1.610
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="pFETdevice01aa"></a>
+### `pFETdevice01aa`
+
+Description: pFET transistor used in DAC block
+
+Height: 1.210
+<br>
+Width: 1.720
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="pFETdevice01b"></a>
+### `pFETdevice01b`
+
+Description: pFET transistor used in DAC block
+
+Height: 1.570
+<br>
+Width: 1.870
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="pFETdevice01ba"></a>
+### `pFETdevice01ba`
+
+Description: pFET transistor used in DAC block
+
+Height: 1.570
+<br>
+Width: 1.870
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="pFETdevice01c"></a>
+### `pFETdevice01c`
+
+Description: pFET transistor used in DAC block
+
+Height: 1.570
+<br>
+Width: 1.870
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="pFETdevice01d"></a>
+### `pFETdevice01d`
+
+Description: pFET transistor used in DAC block
+
+Height: 1.450
+<br>
+Width: 1.840
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="pFETdevice01e"></a>
+### `pFETdevice01e`
+
+Description: pFET transistor used in DAC block
+
+Height: 0.990
+<br>
+Width: 2.030
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
 <a name="pTransistorVert01"></a>
 ### `pTransistorVert01`
@@ -1290,7 +1346,7 @@ Width: 1.860
 <a name="poly2li"></a>
 ### `poly2li`
 
-Description: None
+Description: polysilicon layer to li contact
 
 Height: 0.330
 <br>
@@ -1302,7 +1358,7 @@ Width: 0.270
 <a name="poly2m1"></a>
 ### `poly2m1`
 
-Description: None
+Description: polysilicon layer to m1 contact
 
 Height: 0.510
 <br>
@@ -1314,7 +1370,7 @@ Width: 0.330
 <a name="poly2m2"></a>
 ### `poly2m2`
 
-Description: None
+Description: polysilicon layer to m2 contact
 
 Height: 0.550
 <br>
@@ -1323,108 +1379,28 @@ Width: 0.330
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="swc2x2varactor"></a>
-### `swc2x2varactor`
-
-Description: None
-
-Height: 7.010
-<br>
-Width: 14.680
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="swc4x1cellOverlap"></a>
-### `swc4x1cellOverlap`
-
-Description: None
-
-Height: 6.710
-<br>
-Width: 10.080
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="swc4x1cellOverlap2"></a>
-### `swc4x1cellOverlap2`
-
-Description: None
-
-Height: 6.050
-<br>
-Width: 9.350
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="swc4x2cell"></a>
-### `swc4x2cell`
-
-Description: Core switch cell ,Varactor capacitor cell
-
-Height: 6.050
-<br>
-Width: 20.130
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | GATE2                | metal1               | nsew,analog,default  |
-| 2                    | VTUN                 | metal1               | nsew,power,default   |
-| 3                    | GATE1                | metal1               | nsew,analog,default  |
-| 4                    | VPWR                 | metal1               | nsew,power,default   |
-| 6                    | VINJ                 | metal1               | nsew,power,default   |
-| 10                   | GATESELECT1          | metal1               | nsew,analog,default  |
-| 11                   | GATESELECT2          | metal1               | nsew,analog,default  |
-| 12                   | VERT1                | metal1               | nsew,analog,default  |
-| 13                   | VERT2                | metal1               | nsew,analog,default  |
-| 14                   | HORIZ1               | metal2               | nsew,analog,default  |
-| 15                   | HORIZ2               | metal2               | nsew,analog,default  |
-| 16                   | DRAIN1               | metal2               | nsew,analog,default  |
-| 17                   | DRAIN2               | metal2               | nsew,analog,default  |
-| 18                   | DRAIN3               | metal2               | nsew,analog,default  |
-| 19                   | HORIZ3               | metal2               | nsew,analog,default  |
-| 20                   | HORIZ4               | metal2               | nsew,analog,default  |
-| 21                   | DRAIN4               | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="swc4x2cellOverlap"></a>
-### `swc4x2cellOverlap`
-
-Description: Core switch cell, built with overlap capacitor
-
-Height: 6.050
-<br>
-Width: 17.980
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | VERT1                | metal1               | nsew,analog,default  |
-| 2                    | HORIZ1               | metal2               | nsew,analog,default  |
-| 3                    | DRAIN1               | metal2               | nsew,analog,default  |
-| 4                    | HORIZ2               | metal2               | nsew,analog,default  |
-| 5                    | DRAIN2               | metal2               | nsew,analog,default  |
-| 6                    | DRAIN3               | metal2               | nsew,analog,default  |
-| 7                    | HORIZ3               | metal2               | nsew,analog,default  |
-| 8                    | HORIZ4               | metal2               | nsew,analog,default  |
-| 9                    | DRAIN4               | metal2               | nsew,analog,default  |
-| 10                   | VINJ                 | metal1               | nsew,power,default   |
-| 11                   | GATESELECT1          | metal1               | nsew,analog,default  |
-| 12                   | VERT2                | metal1               | nsew,analog,default  |
-| 13                   | GATESELECT2          | metal1               | nsew,analog,default  |
-| 14                   | DRAIN                | metal2               | nsew,analog,default  |
-| 15                   | GATE2                | metal1               | nsew,analog,default  |
-| 16                   | GATE1                | metal1               | nsew,analog,default  |
-| 17                   | VTUN                 | metal1               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
 <a name="wellContact"></a>
 ### `wellContact`
 
-Description: None
+Description: contact to a well block, typically used for contacting tunneling junctions in a well.
 
 Height: 1.860
 <br>
 Width: 1.740
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+## CELLS-TO-BE-SORTED
+
+--------------------------------------------------------------------------------------------
+<a name="swc2x2varactor"></a>
+### `swc2x2varactor`
+
+Description: ??  Is this part of the library?
+
+Height: 7.010
+<br>
+Width: 14.680
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|

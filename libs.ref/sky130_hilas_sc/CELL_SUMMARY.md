@@ -6,36 +6,73 @@
 | Block Name                | Description                                             |
 |---------------------------|---------------------------------------------------------|
 | [`DAC5bit01`](CELL_DETAILS.md#DAC5bit01) | 5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit, and they would use this cell |
-| [`DAC_bit6_01`](CELL_DETAILS.md#DAC-bit6-01) | 6-bit DAC, first variant                                |
-| [`DoubleTGate01`](CELL_DETAILS.md#DoubleTGate01) | 2x1 array of transmission gates                         |
-| [`FGHugeVaractorCapacitor01`](CELL_DETAILS.md#FGHugeVaractorCapacitor01) | one large varactor cap                                  |
-| [`FGVaractorCapacitor02`](CELL_DETAILS.md#FGVaractorCapacitor02) | variant 2, varactor cap for floating-gate charge storage |
-| [`TA2Cell_1FG_Strong`](CELL_DETAILS.md#TA2Cell-1FG-Strong) | Core transimpedance amp; strong FG inputs.              |
-| [`Tgate4Double01`](CELL_DETAILS.md#Tgate4Double01) | 2x1 array of transmission gates (variant 4)             |
-| [`Trans4small`](CELL_DETAILS.md#Trans4small) | small transconductance amp?                             |
-| [`WTA4stage01`](CELL_DETAILS.md#WTA4stage01) | 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one current source. |
-| [`capacitorArray01`](CELL_DETAILS.md#capacitorArray01) | 2x8 array of capacitors                                 |
-| [`swc4x1BiasCell`](CELL_DETAILS.md#swc4x1BiasCell) | core switch cell 4x1 biasing unit                       |
+| [`DAC_bit6_01`](CELL_DETAILS.md#DAC-bit6-01) | 6-bit DAC                                               |
+| [`FGBias2x1cell`](CELL_DETAILS.md#FGBias2x1cell) |                                                         |
+| [`FGBiasWeakGate2x1cell`](CELL_DETAILS.md#FGBiasWeakGate2x1cell) | 2x1 array of FG switch cells configured as pFET current sources with weak capacitive gate inputs |
+| [`FGtrans2x1cell`](CELL_DETAILS.md#FGtrans2x1cell) |                                                         |
+| [`TA2Cell_1FG`](CELL_DETAILS.md#TA2Cell-1FG) | Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with wide linear range. |
+| [`TA2Cell_1FG_Strong`](CELL_DETAILS.md#TA2Cell-1FG-Strong) | Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with normal linear range. |
+| [`TA2Cell_NoFG`](CELL_DETAILS.md#TA2Cell-NoFG) | Two transimpedane amplifiers with no floating-gate inputs. |
+| [`TA2SignalBiasCell`](CELL_DETAILS.md#TA2SignalBiasCell) |                                                         |
+| [`Tgate4Double01`](CELL_DETAILS.md#Tgate4Double01) | 4 double-throw transmission gates                       |
+| [`Tgate4Single01`](CELL_DETAILS.md#Tgate4Single01) | 4 single-throw transmission gates                       |
+| [`Trans4small`](CELL_DETAILS.md#Trans4small) | 3 small nFETs + 3 small pFETs                           |
+| [`WTA4stage01`](CELL_DETAILS.md#WTA4stage01) | 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one nFET transistor current source. |
+| [`capacitorArray01`](CELL_DETAILS.md#capacitorArray01) | selectable capacitor array                              |
+| [`capacitorSize01`](CELL_DETAILS.md#capacitorSize01) |                                                         |
+| [`capacitorSize02`](CELL_DETAILS.md#capacitorSize02) |                                                         |
+| [`capacitorSize03`](CELL_DETAILS.md#capacitorSize03) |                                                         |
+| [`capacitorSize04`](CELL_DETAILS.md#capacitorSize04) |                                                         |
+| [`cellAttempt01`](CELL_DETAILS.md#cellAttempt01) | 4x1 array of FG switch cell, Varactor capacitor cell    |
+| [`drainSelect01`](CELL_DETAILS.md#drainSelect01) | multiplexor for drain selection for 4 drain lines, pitch matched |
+| [`nFETLarge`](CELL_DETAILS.md#nFETLarge) | Single Large (W//L=100) nFET Transistor                 |
+| [`pFETLarge`](CELL_DETAILS.md#pFETLarge) | Single Large (W/L=100) pFET Transistor                  |
+| [`pFETmed`](CELL_DETAILS.md#pFETmed) | Medium-sized (W/L=10) pFET transistor                   |
+| [`swc4x1BiasCell`](CELL_DETAILS.md#swc4x1BiasCell) | 4x1 array of FG switch cell configured pFET as current sources |
+| [`swc4x1cellOverlap`](CELL_DETAILS.md#swc4x1cellOverlap) | 4x1 array of FG switch cell using overlap capacitors    |
+| [`swc4x1cellOverlap2`](CELL_DETAILS.md#swc4x1cellOverlap2) |                                                         |
+| [`swc4x2cell`](CELL_DETAILS.md#swc4x2cell) | 4x2 array of FG switch cell, Varactor capacitor cell    |
+| [`swc4x2cellOverlap`](CELL_DETAILS.md#swc4x2cellOverlap) | Core switch cell, built with overlap capacitor          |
 
 # Primitive Cells in this Library:
 
 | Block Name                | Description                                             |
 |---------------------------|---------------------------------------------------------|
+| [`CapModule01`](CELL_DETAILS.md#CapModule01) |                                                         |
 | [`CapModule01a`](CELL_DETAILS.md#CapModule01a) | primitive cap, variant 01a                              |
-| [`TunVaractorCapcitor`](CELL_DETAILS.md#TunVaractorCapcitor) |                                                         |
-| [`capacitorSize01`](CELL_DETAILS.md#capacitorSize01) |                                                         |
-| [`capacitorSize03`](CELL_DETAILS.md#capacitorSize03) |                                                         |
-| [`li2m2`](CELL_DETAILS.md#li2m2) |                                                         |
-| [`mcap2m4`](CELL_DETAILS.md#mcap2m4) |                                                         |
-| [`nFETLarge`](CELL_DETAILS.md#nFETLarge) |                                                         |
-| [`pFETLargePart1`](CELL_DETAILS.md#pFETLargePart1) |                                                         |
-| [`pFETdevice01`](CELL_DETAILS.md#pFETdevice01) |                                                         |
-| [`pFETdevice01aa`](CELL_DETAILS.md#pFETdevice01aa) |                                                         |
-| [`pFETdevice01e`](CELL_DETAILS.md#pFETdevice01e) |                                                         |
-| [`pFETmirror`](CELL_DETAILS.md#pFETmirror) |                                                         |
+| [`CapModule02`](CELL_DETAILS.md#CapModule02) |                                                         |
+| [`CapModule03`](CELL_DETAILS.md#CapModule03) |                                                         |
+| [`DAC6TransistorStack01`](CELL_DETAILS.md#DAC6TransistorStack01) |                                                         |
+| [`DAC6TransistorStack01a`](CELL_DETAILS.md#DAC6TransistorStack01a) |                                                         |
+| [`DAC6TransistorStack01b`](CELL_DETAILS.md#DAC6TransistorStack01b) |                                                         |
+| [`DAC6TransistorStack01c`](CELL_DETAILS.md#DAC6TransistorStack01c) |                                                         |
+| [`DAC6bit01`](CELL_DETAILS.md#DAC6bit01) |                                                         |
+| [`DoubleTGate01`](CELL_DETAILS.md#DoubleTGate01) | 2x1 array of transmission gates                         |
+| [`DualTACore01`](CELL_DETAILS.md#DualTACore01) |                                                         |
+| [`FGHugeVaractorCapacitor01`](CELL_DETAILS.md#FGHugeVaractorCapacitor01) | one large varactor cap                                  |
+| [`FGVaractorCapacitor02`](CELL_DETAILS.md#FGVaractorCapacitor02) | variant 2, varactor cap for floating-gate charge storage |
+| [`TACoreBlock`](CELL_DETAILS.md#TACoreBlock) |                                                         |
+| [`TACoreBlock2`](CELL_DETAILS.md#TACoreBlock2) |                                                         |
+| [`TAcoreblock`](CELL_DETAILS.md#TAcoreblock) |                                                         |
+| [`TgateDouble01`](CELL_DETAILS.md#TgateDouble01) |                                                         |
+| [`TgateSingle01`](CELL_DETAILS.md#TgateSingle01) |                                                         |
+| [`TgateSingle01Part1`](CELL_DETAILS.md#TgateSingle01Part1) |                                                         |
+| [`TgateSingle01Part2`](CELL_DETAILS.md#TgateSingle01Part2) |                                                         |
+| [`TgateVinj01`](CELL_DETAILS.md#TgateVinj01) |                                                         |
+| [`WTA4Stage01`](CELL_DETAILS.md#WTA4Stage01) |                                                         |
+| [`WTAblockSample01`](CELL_DETAILS.md#WTAblockSample01) |                                                         |
+| [`WTAsinglestage01`](CELL_DETAILS.md#WTAsinglestage01) |                                                         |
+| [`invert01`](CELL_DETAILS.md#invert01) |                                                         |
+| [`nFETLargePart1`](CELL_DETAILS.md#nFETLargePart1) |                                                         |
+| [`nFETmirrorPairs`](CELL_DETAILS.md#nFETmirrorPairs) | pairs of nFET current mirrors                           |
+| [`nFETmirrorPairs2`](CELL_DETAILS.md#nFETmirrorPairs2) |                                                         |
+| [`nMirror03`](CELL_DETAILS.md#nMirror03) |                                                         |
+| [`pFETmirror`](CELL_DETAILS.md#pFETmirror) | pFET current mirror                                     |
+| [`pFETmirror02`](CELL_DETAILS.md#pFETmirror02) | second pFET current mirror                              |
+| [`pTransistorPair`](CELL_DETAILS.md#pTransistorPair) |                                                         |
 
 # Test Cells in this Library:
 
 | Block Name                | Description                                             |
 |---------------------------|---------------------------------------------------------|
-| [`all`](CELL_DETAILS.md#all) |                                                         |
+| [`FGcharacterization01`](CELL_DETAILS.md#FGcharacterization01) | FG test strucure that uses a capacitor around a transconductance amplifier |

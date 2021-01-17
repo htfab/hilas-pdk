@@ -31,46 +31,104 @@
 
 #######################################################################################
 ##
-##    PUBLIC CELLS
+##    Standard CELLS
 ##
-public-cells: #########################################################################
+standard-cells:
+  description: Top-level cells for use in designs
+#########################################################################
 
-  capacitorArray01:
-    description: 2x8 array of capacitors
+  swc4x2cell:
+    description: 4x2 array of FG switch cell, Varactor capacitor cell
 
-  DoubleTGate01:
-    description: 2x1 array of transmission gates
+  swc4x2cellOverlap:
+    description: Core switch cell, built with overlap capacitor
 
-  FGHugeVaractorCapacitor01:
-    description: one large varactor cap
+  cellAttempt01:
+    description: 4x1 array of FG switch cell, Varactor capacitor cell
+
+  swc4x1cellOverlap:
+    description: 4x1 array of FG switch cell using overlap capacitors  
+
+  swc4x1cellOverlap2:
+    description:
+
+  swc4x1BiasCell:
+    description: 4x1 array of FG switch cell configured pFET as current sources 
+
+  FGBias2x1cell:
+    description:
+
+  FGtrans2x1cell:
+    description:
+
+  FGBiasWeakGate2x1cell:
+    description: 2x1 array of FG switch cells configured as pFET current sources with weak capacitive gate inputs
+
+  TA2Cell_NoFG:
+    description: Two transimpedane amplifiers with no floating-gate inputs.  
+
+  TA2Cell_1FG:
+    description: >-
+      Two transimpedance amps with one (of two) amplifiers using floating-gate inputs.
+      FG amplifier with wide linear range.
+
+  TA2Cell_1FG_Strong:
+    description: >-
+      Two transimpedance amps with one (of two) amplifiers using floating-gate inputs.
+      FG amplifier with normal linear range.
+
+  TA2SignalBiasCell:
+    description:
+
+  WTA4stage01:
+    description: >-
+        4-input winner-take-all circuit. Connects directly to array of swc4x2cell.
+        Can array vertically. Needs one nFET transistor current source.
+
+  Tgate4Double01:
+    description: 4 double-throw transmission gates 
+
+  Tgate4Single01:
+    description: 4 single-throw transmission gates
+
+  drainSelect01:
+    description: multiplexor for drain selection for 4 drain lines, pitch matched 
 
   Trans4small:
-    description: small transconductance amp?
+    description: 3 small nFETs + 3 small pFETs 
+
+  pFETmed:
+    description: Medium-sized (W/L=10) pFET transistor
+
+  nFETLarge:
+    description: Single Large (W//L=100) nFET Transistor
+
+  pFETLarge:
+    description: Single Large (W/L=100) pFET Transistor
+
+  capacitorSize01:
+    description:
+
+  capacitorSize02:
+    description:
+
+  capacitorSize03:
+    description:
+
+  capacitorSize04:
+    description:
+
+  capacitorArray01:
+    description: selectable capacitor array
+
 
   DAC5bit01:
     description: >- # '>-' indicates string wrapped over multiple lines
           5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit,
           and they would use this cell
 
-  Tgate4Double01:
-    description: 2x1 array of transmission gates (variant 4)
-
   DAC_bit6_01:
-    description: 6-bit DAC, first variant
-
-  swc4x1BiasCell:
-    description: core switch cell 4x1 biasing unit
-
-  FGVaractorCapacitor02:
-    description: variant 2, varactor cap for floating-gate charge storage
-
-  TA2Cell_1FG_Strong:
-    description: Core transimpedance amp; strong FG inputs.
-
-  WTA4stage01:
-    description: >-     # '>-' indicates string wrapped over multiple lines
-        4-input winner-take-all circuit. Connects directly to array of swc4x2cell.
-        Can array vertically. Needs one current source.
+    description: 6-bit DAC 
 
 
 #######################################################################################
@@ -79,282 +137,236 @@ public-cells: ##################################################################
 ##
 primitive-cells: ######################################################################
 
+  WTA4Stage01:
+    description:
+
   CapModule01a:
     description: primitive cap, variant 01a
 
-  capacitorSize01:
+  FGVaractorCapacitor02:
+    description: variant 2, varactor cap for floating-gate charge storage
+
+  FGHugeVaractorCapacitor01:
+    description: one large varactor cap
+
+  DoubleTGate01:
+    description: 2x1 array of transmission gates
+
+  TgateSingle01Part2:
     description:
 
-  capacitorSize03:
+  TgateDouble01:
     description:
 
-  mcap2m4:
+  TgateSingle01:
     description:
 
-  li2m2:
+  TgateVinj01:
+    description:
+
+  TgateSingle01Part1:
+    description:
+
+
+  DualTACore01:
+    description:
+
+  TACoreBlock:
+    description:
+
+  TAcoreblock:
+    description:
+
+  TACoreBlock2:
+    description:
+
+  pTransistorPair:
+    description:
+
+  nFETLargePart1:
+    description:
+
+
+  nFETmirrorPairs:
+    description: pairs of nFET current mirrors
+
+  nFETmirrorPairs2:
+    description:
+
+  nMirror03:
     description:
 
   pFETmirror:
+    description: pFET current mirror
+
+  pFETmirror02:
+    description: second pFET current mirror
+
+  DAC6TransistorStack01:
     description:
 
-  nFETLarge:
+  DAC6TransistorStack01b:
     description:
 
-  pFETLargePart1:
+  DAC6TransistorStack01c:
     description:
 
-  pFETdevice01e:
+  DAC6bit01:
     description:
 
-  pFETdevice01:
+  DAC6TransistorStack01a:
     description:
 
-  pFETdevice01aa:
+  invert01:
     description:
 
-  TunVaractorCapcitor:
+  WTAblockSample01:
     description:
+
+  WTAsinglestage01:
+    description:
+
+  CapModule01:
+    description:
+
+  CapModule02:
+    description:
+
+  CapModule03:
+    description:
+
 
 #######################################################################################
 ##
 ##    TEST CELLS
 ##
-test-cells: ###########################################################################
+test-cells:
+  description: These cells are meant to be used for testing purposes
+#######################################################################################
 
-  all:
+  FGcharacterization01:
+    description: FG test strucure that uses a capacitor around a 
+           transconductance amplifier
+
+
+#######################################################################################
+##
+##   Component Cells 
+##
+component-cells:
+  description: >-
+    These cells are components used to create the standard cells.
+    They are not to be used directly
+#######################################################################################
+
+  pTransistorVert01:
     description:
 
-#######################################################################################
-##
-##    PRIVATE CELLS
-##
-private-cells:
-#######################################################################################
+  pFETLargePart1:
+    description: Part of the W/L=100 pFET transistor
+
+  pFETdevice01:
+    description: pFET transistor used in DAC block
+
+  pFETdevice01a:
+    description: pFET transistor used in DAC block
+
+  pFETdevice01aa:
+    description: pFET transistor used in DAC block
+
+  pFETdevice01b:
+    description: pFET transistor used in DAC block
+
+  pFETdevice01ba:
+    description: pFET transistor used in DAC block
+
+  pFETdevice01c:
+    description: pFET transistor used in DAC block
+
+  pFETdevice01d:
+    description: pFET transistor used in DAC block
+
+  pFETdevice01e:
+    description: pFET transistor used in DAC block
+
+  nFET03:
+    description:
+
+  nFET03a:
+    description:
+
+  horizPcell01:
+    description:
+
+  TunCap01:
+    description:
+
+  TunVaractorCapcitor:
+    description: Tunneling capacitor using a standard varactor capacitor
+
+  FGVaractorTunnelCap01:
+    description: Tunneling cpacitor using a standard varactor capacitor
+
+  wellContact:
+    description: contact to a well block, typically used for contacting tunneling junctions in a well. 
+
+  overlapCap01:
+    description: overlap capacitor based capacitor
+
+  overlapCap02:
+    description: overlap capacitor based capacitor)
+
+  overlapCap02a:
+    description: overlap capacitor based capacitor
+
+  nOverlapCap01:
+    description: overlap capacitor based capacitor (nFET)
+
+  horizTransCell01:
+    description:
+
+  nFETmed:
+    description:
+
+  Trans2med:
+    description:
+
+  mcap2m4:
+    description: metal capacitor layer contact to m4
+
+  poly2m1:
+    description: polysilicon layer to m1 contact
+
+  poly2m2:
+    description: polysilicon layer to m2 contact
+
+  poly2li:
+    description: polysilicon layer to li contact
+
+  li2m1:
+    description: local interconnect to m1 contact
+
+  li2m2:
+    description: local interconnect to m2 contact
+
+  m12m2:
+    description: m1 to m2 contact
+
+  m22m4:
+    description: m2 to m4 contact
 
   nDiffThOxContact:
     description:
+
 
 #######################################################################################
 ##
 ##    CELLS TO BE SORTED
 ##
 cells-to-be-sorted:
+  description: Holding area for cells which haven't been sorted
 #######################################################################################
 
-  FGVaractorCapacitor:
-    description:
-
-  overlapCap02:
-    description:
-
-  Tgate4Single01:
-    description:
-
-  TgateSingle01Part2:
-    description:
-
-  m22m4:
-    description:
-
-  DAC6TransistorStack01a:
-    description:
-
-  DualTACore01:
-    description:
-
-  TA2Cell_NoFG:
-    description: Core transimpedance amplifier
-
-  swc4x1cellOverlap:
-    description:
-
-  DAC6bit01:
-    description:
-
-  invert01:
-    description:
-
-  TA2Cell_1FG:
-    description: Core transimpedance amp; floating-gate inputs. (C4 block is a specific routing of this cell's terminals)
-
-  pFETdevice01c:
-    description:
-
-  horizTransCell01:
-    description:
-
-  nFETmirrorPairs:
-    description:
-
-  swc4x2cellOverlap:
-    description: Core switch cell, built with overlap capacitor
-
-  FGVaractorTunnelCap01:
-    description:
-
-  pFETdevice01d:
-    description:
-
-  pFETmirror02:
-    description:
-
-  TgateSingle01:
-    description:
-
-  swc4x1cellOverlap2:
-    description:
-
-  WTAsinglestage01:
-    description:
-
-  FGBias2x1cell:
-    description:
-
-
-
-  CapModule03:
-    description:
-
-  nFETmed:
-    description:
-
-  TunCap01:
-    description:
-
-  cellAttempt01:
-    description:
-
-  DAC6TransistorStack01b:
-    description:
-
-  TACoreBlock2:
-    description:
-
-  pFETdevice01a:
-    description:
-
-  m12m2:
-    description:
-
-  swc4x2cell:
-    description: Core switch cell ,Varactor capacitor cell
-
-  WTAblockSample01:
-    description:
-
-  TgateVinj01:
-    description:
-
-  pFETLarge:
-    description:
-
-  drainSelect01:
-    description:
-
-  pFETdevice01b:
-    description:
-
-  TACoreBlock:
-    description:
-
-  TA2SignalBiasCell:
-    description:
-
-  pTransistorVert01:
-    description:
-
-  Trans2med:
-    description:
-
-  capacitorSize02:
-    description:
-
-  WTA4Stage01:
-    description:
-
-  CapModule02:
-    description:
-
-  poly2m1:
-    description:
-
-  poly2m2:
-    description:
-
-  li2m1:
-    description:
-
-  pFETdevice01ba:
-    description:
-
-  poly2li:
-    description:
-
-  nFETmirrorPairs2:
-    description:
-
-  CapModule01:
-    description:
-
-  nFET03:
-    description:
-
-  FGcharacterization01:
-    description:
-
-  capacitorSize04:
-    description:
-
-  FGtrans2x1cell:
-    description:
-
-  TgateSingle01Part1:
-    description:
-
-  DAC6TransistorStack01:
-    description:
-
-  pFETmed:
-    description:
-
-  nMirror03:
-    description:
-
-  overlapCap02a:
-    description:
-
-  horizPcell01:
-    description:
-
-  overlapCap01:
-    description:
-
-  wellContact:
-    description:
-
-  nOverlapCap01:
-    description:
-
   swc2x2varactor:
-    description:
+    description:  ??  Is this part of the library?
 
-  pTransistorPair:
-    description:
-
-  DAC6TransistorStack01c:
-    description:
-
-  TAcoreblock:
-    description:
-
-  TgateDouble01:
-    description:
-
-  nFET03a:
-    description:
-
-  nFETLargePart1:
-    description:
-
-  FGBiasWeakGate2x1cell:
-    description:
