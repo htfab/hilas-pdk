@@ -40,9 +40,10 @@ spice: $(MAG_CELLS)
 	$(SCRIPTS)/magic_gen.py -s
 
 markdown: lef
-	@$(HILAS_ROOT)/scripts/magic_gen.py -m
+	$(SCRIPTS)/magic_gen.py -m
 
-
+nosynth:
+	$(SCRIPTS)/magic_gen.py -n -F
 
 
 # vvvvvvvvv         CLEANING          vvvvvvvvvvvvvv

@@ -57,26 +57,28 @@ PG_PIN_NAMES = {'VPB': [],  # net names appearing in the lists will be converted
 ###########################################################################################
 
 THIS_DIR = Path(__file__).parent
-HILAS_ROOT = THIS_DIR.parent
+HILAS_PDK_ROOT = THIS_DIR.parent
 
-TECH_ROOT = HILAS_ROOT / 'libs.tech'
-REF_ROOT = HILAS_ROOT / 'libs.ref'
+TECH_ROOT = HILAS_PDK_ROOT / 'libs.tech'
+REF_ROOT = HILAS_PDK_ROOT / 'libs.ref'
 CELL_DATA_FILE = REF_ROOT / PDK_VARIANT / 'CELL_INDEX.yml'
-MAIN_README = HILAS_ROOT / 'README.md'
+MAIN_README = HILAS_PDK_ROOT / 'README.md'
 
-TEMPLATE_PATH = HILAS_ROOT / 'scripts' / 'templates'
+TEMPLATE_PATH = HILAS_PDK_ROOT / 'scripts' / 'templates'
 LIB_CELL_TEMPLATE = 'min_inverter.template.lib'
 LIB_HEAD_TEMPLATE = 'head.template.lib'
 V_CELL_TEPLATE = 'cell.template.v'
 MD_CELL_TEMPLATE = 'cell_details.template.md'
 MD_LIB_TEMPLATE = 'lib_summary.template.md'
-README_HEADER = HILAS_ROOT / 'scripts' / 'templates' / 'README.md'
+README_HEADER = HILAS_PDK_ROOT / 'scripts' / 'templates' / 'README.md'
 
 CELL_CATEGORIES = ['standard-cells',
                    'primitive-cells',
                    'test-cells',
                    'component-cells',
                    'cells-to-be-sorted']
+
+NO_SYNTH_FILE = TECH_ROOT / 'openlane' / 'no_synth.cells'
 
 LIB_PATH = {
     'temp_lef': REF_ROOT / PDK_VARIANT / '_templef',
@@ -762,6 +764,12 @@ def make_cell_details_md():
     print('markdown written to {}'.format(LIB_PATH['cell_details']))
 
 
+def make_nosynth():
+    with open(NO_SYNTH_FILE, 'w') as f:
+        for cellname in cd.all_cells.keys():
+            f.write(cellname+'\n')
+
+
 def parent_check(path):
     if not path.suffix:
         # treat path as a directory
@@ -1020,6 +1028,7 @@ def main():
     ap.add_argument('-m', '--markdown', action='store_true',
                     help='Create a pretty, human-readable markdown summary of cell pins',
                     default=False)
+    ap.add_argument('-n', '--nosynth', action='store_true', help='Create \"no_synth.cells\" file')
     ap.add_argument('-v', '--verilog', action='store_true', help='Directory in which to put synthetic Verilog output',
                     default=False)
 
@@ -1079,6 +1088,10 @@ def main():
     if args.markdown and target_check(None, 'markdown'):
         # make a markdown pin summary file based on the Magic file source (text)
         make_markdown()
+
+    if args.nosynth:
+        make_nosynth()
+
 
 if __name__ == '__main__':
     exit(main())
