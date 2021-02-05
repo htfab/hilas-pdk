@@ -17,8 +17,8 @@
 /*********************************************************/
 
 `celldefine
-module {{ cell_name.lower() }} (
-{{ '\n    '.join(pins + pg_pins) }}
+module {{ cell_name }} (
+{{ '    ' + ',\n    '.join(pins + pg_pins) }}
 );
 endmodule
 `endcelldefine
@@ -28,8 +28,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module {{ cell_name.lower() }} (
-{{ '\n    '.join(pins) }}
+module {{ cell_name }} (
+{{ '    ' +  ',\n    '.join(pins) }}
 );
 endmodule
 `endcelldefine

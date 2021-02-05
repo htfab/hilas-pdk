@@ -52,7 +52,7 @@
 
 `celldefine
 module sky130_hilas_invert01 (
-VNB
+    VNB,
     VPB
 );
 endmodule
@@ -64,7 +64,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_invert01 (
-
+    
 );
 endmodule
 `endcelldefine
@@ -97,8 +97,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capmodule02 (
-VNB
+module sky130_hilas_CapModule02 (
+    VNB,
     VPB
 );
 endmodule
@@ -109,8 +109,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capmodule02 (
-
+module sky130_hilas_CapModule02 (
+    
 );
 endmodule
 `endcelldefine
@@ -144,7 +144,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_poly2m1 (
-VNB
+    VNB,
     VPB
 );
 endmodule
@@ -156,7 +156,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_poly2m1 (
-
+    
 );
 endmodule
 `endcelldefine
@@ -189,8 +189,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgvaractorcapacitor02 (
-VNB
+module sky130_hilas_FGVaractorCapacitor02 (
+    VNB,
     VPB
 );
 endmodule
@@ -201,8 +201,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgvaractorcapacitor02 (
-
+module sky130_hilas_FGVaractorCapacitor02 (
+    
 );
 endmodule
 `endcelldefine
@@ -236,7 +236,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_poly2m2 (
-VNB
+    VNB,
     VPB
 );
 endmodule
@@ -248,7 +248,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_poly2m2 (
-
+    
 );
 endmodule
 `endcelldefine
@@ -281,28 +281,28 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_trans4small (
-NFET_SOURCE1
-    NFET_GATE1
-    NFET_SOURCE2
-    NFET_GATE2
-    NFET_SOURCE3
-    NFET_GATE3
-    PFET_SOURCE1
-    PFET_GATE1
-    PFET_SOURCE2
-    PFET_GATE2
-    PFET_SOURCE3
-    PFET_GATE3
-    WELL
-    PFET_DRAIN3
-    PFET_DRAIN2
-    PFET_DRAIN1
-    NFET_DRAIN3
-    NFET_DRAIN2
-    NFET_DRAIN1
-    VGND
-    VNB
+module sky130_hilas_Trans4small (
+    NFET_SOURCE1,
+    NFET_GATE1,
+    NFET_SOURCE2,
+    NFET_GATE2,
+    NFET_SOURCE3,
+    NFET_GATE3,
+    PFET_SOURCE1,
+    PFET_GATE1,
+    PFET_SOURCE2,
+    PFET_GATE2,
+    PFET_SOURCE3,
+    PFET_GATE3,
+    WELL,
+    PFET_DRAIN3,
+    PFET_DRAIN2,
+    PFET_DRAIN1,
+    NFET_DRAIN3,
+    NFET_DRAIN2,
+    NFET_DRAIN1,
+    VGND,
+    VNB,
     VPB
 );
 endmodule
@@ -313,25 +313,25 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_trans4small (
-NFET_SOURCE1
-    NFET_GATE1
-    NFET_SOURCE2
-    NFET_GATE2
-    NFET_SOURCE3
-    NFET_GATE3
-    PFET_SOURCE1
-    PFET_GATE1
-    PFET_SOURCE2
-    PFET_GATE2
-    PFET_SOURCE3
-    PFET_GATE3
-    WELL
-    PFET_DRAIN3
-    PFET_DRAIN2
-    PFET_DRAIN1
-    NFET_DRAIN3
-    NFET_DRAIN2
+module sky130_hilas_Trans4small (
+    NFET_SOURCE1,
+    NFET_GATE1,
+    NFET_SOURCE2,
+    NFET_GATE2,
+    NFET_SOURCE3,
+    NFET_GATE3,
+    PFET_SOURCE1,
+    PFET_GATE1,
+    PFET_SOURCE2,
+    PFET_GATE2,
+    PFET_SOURCE3,
+    PFET_GATE3,
+    WELL,
+    PFET_DRAIN3,
+    PFET_DRAIN2,
+    PFET_DRAIN1,
+    NFET_DRAIN3,
+    NFET_DRAIN2,
     NFET_DRAIN1
 );
 endmodule
@@ -365,8 +365,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_horizpcell01 (
-VNB
+module sky130_hilas_horizPcell01 (
+    VNB,
     VPB
 );
 endmodule
@@ -377,8 +377,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_horizpcell01 (
-
+module sky130_hilas_horizPcell01 (
+    
 );
 endmodule
 `endcelldefine
@@ -411,20 +411,20 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_trans2med (
-NFET_GATE01
-    PET_GATE02
-    PFET_GATE01
-    NFET_GATE02
-    PFET_SOURCE1
-    PFET_SOURCE2
-    NFET_SOURCE2
-    NFET_SOURCE1
-    NFET_DRAIN1
-    NFET_DRAIN2
-    PFET_DRAIN01
-    PFET_DRAIN2
-    VNB
+module sky130_hilas_Trans2med (
+    NFET_GATE01,
+    PET_GATE02,
+    PFET_GATE01,
+    NFET_GATE02,
+    PFET_SOURCE1,
+    PFET_SOURCE2,
+    NFET_SOURCE2,
+    NFET_SOURCE1,
+    NFET_DRAIN1,
+    NFET_DRAIN2,
+    PFET_DRAIN01,
+    PFET_DRAIN2,
+    VNB,
     VPB
 );
 endmodule
@@ -435,18 +435,18 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_trans2med (
-NFET_GATE01
-    PET_GATE02
-    PFET_GATE01
-    NFET_GATE02
-    PFET_SOURCE1
-    PFET_SOURCE2
-    NFET_SOURCE2
-    NFET_SOURCE1
-    NFET_DRAIN1
-    NFET_DRAIN2
-    PFET_DRAIN01
+module sky130_hilas_Trans2med (
+    NFET_GATE01,
+    PET_GATE02,
+    PFET_GATE01,
+    NFET_GATE02,
+    PFET_SOURCE1,
+    PFET_SOURCE2,
+    NFET_SOURCE2,
+    NFET_SOURCE1,
+    NFET_DRAIN1,
+    NFET_DRAIN2,
+    PFET_DRAIN01,
     PFET_DRAIN2
 );
 endmodule
@@ -480,20 +480,20 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgbiasweakgate2x1cell (
-DRAIN1
-    INPUT1
-    OUTPUT1
-    OUTPUT2
-    VINJ
-    GATESELECT
-    GATE_CONTROL
-    VTUN
-    DRAIN4
-    INPUT2
-    COMMONSOURCE
-    VGND
-    VNB
+module sky130_hilas_FGBiasWeakGate2x1cell (
+    DRAIN1,
+    INPUT1,
+    OUTPUT1,
+    OUTPUT2,
+    VINJ,
+    GATESELECT,
+    GATE_CONTROL,
+    VTUN,
+    DRAIN4,
+    INPUT2,
+    COMMONSOURCE,
+    VGND,
+    VNB,
     VPB
 );
 endmodule
@@ -504,17 +504,17 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgbiasweakgate2x1cell (
-DRAIN1
-    INPUT1
-    OUTPUT1
-    OUTPUT2
-    VINJ
-    GATESELECT
-    GATE_CONTROL
-    VTUN
-    DRAIN4
-    INPUT2
+module sky130_hilas_FGBiasWeakGate2x1cell (
+    DRAIN1,
+    INPUT1,
+    OUTPUT1,
+    OUTPUT2,
+    VINJ,
+    GATESELECT,
+    GATE_CONTROL,
+    VTUN,
+    DRAIN4,
+    INPUT2,
     COMMONSOURCE
 );
 endmodule
@@ -548,8 +548,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01a (
-VNB
+module sky130_hilas_pFETdevice01a (
+    VNB,
     VPB
 );
 endmodule
@@ -560,8 +560,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01a (
-
+module sky130_hilas_pFETdevice01a (
+    
 );
 endmodule
 `endcelldefine
@@ -594,8 +594,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capmodule01 (
-VNB
+module sky130_hilas_CapModule01 (
+    VNB,
     VPB
 );
 endmodule
@@ -606,8 +606,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capmodule01 (
-
+module sky130_hilas_CapModule01 (
+    
 );
 endmodule
 `endcelldefine
@@ -640,8 +640,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_overlapcap02 (
-VNB
+module sky130_hilas_overlapCap02 (
+    VNB,
     VPB
 );
 endmodule
@@ -652,8 +652,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_overlapcap02 (
-
+module sky130_hilas_overlapCap02 (
+    
 );
 endmodule
 `endcelldefine
@@ -686,8 +686,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ptransistorvert01 (
-VNB
+module sky130_hilas_pTransistorVert01 (
+    VNB,
     VPB
 );
 endmodule
@@ -698,8 +698,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ptransistorvert01 (
-
+module sky130_hilas_pTransistorVert01 (
+    
 );
 endmodule
 `endcelldefine
@@ -732,24 +732,24 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgate4double01 (
-INPUT1_1
-    INPUT2_1
-    SELECT1
-    SELECT2
-    INPUT2_2
-    INPUT1_2
-    SELECT3
-    INPUT2_3
-    SELECT4
-    INPUT2_4
-    INPUT1_4
-    OUTPUT4
-    OUTPUT3
-    OUTPUT2
-    OUTPUT1
-    VGND
-    VNB
+module sky130_hilas_Tgate4Double01 (
+    INPUT1_1,
+    INPUT2_1,
+    SELECT1,
+    SELECT2,
+    INPUT2_2,
+    INPUT1_2,
+    SELECT3,
+    INPUT2_3,
+    SELECT4,
+    INPUT2_4,
+    INPUT1_4,
+    OUTPUT4,
+    OUTPUT3,
+    OUTPUT2,
+    OUTPUT1,
+    VGND,
+    VNB,
     VPB
 );
 endmodule
@@ -760,21 +760,21 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgate4double01 (
-INPUT1_1
-    INPUT2_1
-    SELECT1
-    SELECT2
-    INPUT2_2
-    INPUT1_2
-    SELECT3
-    INPUT2_3
-    SELECT4
-    INPUT2_4
-    INPUT1_4
-    OUTPUT4
-    OUTPUT3
-    OUTPUT2
+module sky130_hilas_Tgate4Double01 (
+    INPUT1_1,
+    INPUT2_1,
+    SELECT1,
+    SELECT2,
+    INPUT2_2,
+    INPUT1_2,
+    SELECT3,
+    INPUT2_3,
+    SELECT4,
+    INPUT2_4,
+    INPUT1_4,
+    OUTPUT4,
+    OUTPUT3,
+    OUTPUT2,
     OUTPUT1
 );
 endmodule
@@ -808,8 +808,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgvaractortunnelcap01 (
-VNB
+module sky130_hilas_FGVaractorTunnelCap01 (
+    VNB,
     VPB
 );
 endmodule
@@ -820,8 +820,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgvaractortunnelcap01 (
-
+module sky130_hilas_FGVaractorTunnelCap01 (
+    
 );
 endmodule
 `endcelldefine
@@ -854,8 +854,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_wtablocksample01 (
-VNB
+module sky130_hilas_WTAblockSample01 (
+    VNB,
     VPB
 );
 endmodule
@@ -866,8 +866,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_wtablocksample01 (
-
+module sky130_hilas_WTAblockSample01 (
+    
 );
 endmodule
 `endcelldefine
@@ -901,7 +901,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_li2m2 (
-VNB
+    VNB,
     VPB
 );
 endmodule
@@ -913,7 +913,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_li2m2 (
-
+    
 );
 endmodule
 `endcelldefine
@@ -946,8 +946,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac_bit6_01 (
-VNB
+module sky130_hilas_DAC_bit6_01 (
+    VNB,
     VPB
 );
 endmodule
@@ -958,8 +958,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac_bit6_01 (
-
+module sky130_hilas_DAC_bit6_01 (
+    
 );
 endmodule
 `endcelldefine
@@ -992,8 +992,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_wtasinglestage01 (
-VNB
+module sky130_hilas_WTAsinglestage01 (
+    VNB,
     VPB
 );
 endmodule
@@ -1004,8 +1004,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_wtasinglestage01 (
-
+module sky130_hilas_WTAsinglestage01 (
+    
 );
 endmodule
 `endcelldefine
@@ -1038,8 +1038,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tacoreblock (
-VNB
+module sky130_hilas_TACoreBlock (
+    VNB,
     VPB
 );
 endmodule
@@ -1050,8 +1050,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tacoreblock (
-
+module sky130_hilas_TACoreBlock (
+    
 );
 endmodule
 `endcelldefine
@@ -1084,8 +1084,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01 (
-VNB
+module sky130_hilas_pFETdevice01 (
+    VNB,
     VPB
 );
 endmodule
@@ -1096,8 +1096,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01 (
-
+module sky130_hilas_pFETdevice01 (
+    
 );
 endmodule
 `endcelldefine
@@ -1130,8 +1130,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01ba (
-VNB
+module sky130_hilas_pFETdevice01ba (
+    VNB,
     VPB
 );
 endmodule
@@ -1142,8 +1142,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01ba (
-
+module sky130_hilas_pFETdevice01ba (
+    
 );
 endmodule
 `endcelldefine
@@ -1176,8 +1176,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_overlapcap01 (
-VNB
+module sky130_hilas_overlapCap01 (
+    VNB,
     VPB
 );
 endmodule
@@ -1188,8 +1188,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_overlapcap01 (
-
+module sky130_hilas_overlapCap01 (
+    
 );
 endmodule
 `endcelldefine
@@ -1222,8 +1222,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_swc4x1celloverlap (
-VNB
+module sky130_hilas_swc4x1cellOverlap (
+    VNB,
     VPB
 );
 endmodule
@@ -1234,8 +1234,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_swc4x1celloverlap (
-
+module sky130_hilas_swc4x1cellOverlap (
+    
 );
 endmodule
 `endcelldefine
@@ -1268,22 +1268,22 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgate4single01 (
-INPUT1_4
-    SELECT4
-    SELECT3
-    INPUT1_3
-    INPUT1_2
-    SELECT2
-    SELECT1
-    INPUT1_1
-    OUTPUT1
-    OUTPUT2
-    OUTPUT3
-    OUTPUT4
-    VPWR
-    VGND
-    VNB
+module sky130_hilas_Tgate4Single01 (
+    INPUT1_4,
+    SELECT4,
+    SELECT3,
+    INPUT1_3,
+    INPUT1_2,
+    SELECT2,
+    SELECT1,
+    INPUT1_1,
+    OUTPUT1,
+    OUTPUT2,
+    OUTPUT3,
+    OUTPUT4,
+    VPWR,
+    VGND,
+    VNB,
     VPB
 );
 endmodule
@@ -1294,18 +1294,18 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgate4single01 (
-INPUT1_4
-    SELECT4
-    SELECT3
-    INPUT1_3
-    INPUT1_2
-    SELECT2
-    SELECT1
-    INPUT1_1
-    OUTPUT1
-    OUTPUT2
-    OUTPUT3
+module sky130_hilas_Tgate4Single01 (
+    INPUT1_4,
+    SELECT4,
+    SELECT3,
+    INPUT1_3,
+    INPUT1_2,
+    SELECT2,
+    SELECT1,
+    INPUT1_1,
+    OUTPUT1,
+    OUTPUT2,
+    OUTPUT3,
     OUTPUT4
 );
 endmodule
@@ -1339,8 +1339,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfetlargepart1 (
-VNB
+module sky130_hilas_nFETLargePart1 (
+    VNB,
     VPB
 );
 endmodule
@@ -1351,8 +1351,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfetlargepart1 (
-
+module sky130_hilas_nFETLargePart1 (
+    
 );
 endmodule
 `endcelldefine
@@ -1385,17 +1385,17 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ta2cell_1fg (
-VINP_AMP1
-    VINP_AMP2
-    VINN_AMP2
-    GATECOLSELECT
-    VINJ
-    OUTPUT1
-    OUTPUT2
-    VPWR
-    VGND
-    VNB
+module sky130_hilas_TA2Cell_1FG (
+    VINP_AMP1,
+    VINP_AMP2,
+    VINN_AMP2,
+    GATECOLSELECT,
+    VINJ,
+    OUTPUT1,
+    OUTPUT2,
+    VPWR,
+    VGND,
+    VNB,
     VPB
 );
 endmodule
@@ -1406,13 +1406,13 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ta2cell_1fg (
-VINP_AMP1
-    VINP_AMP2
-    VINN_AMP2
-    GATECOLSELECT
-    VINJ
-    OUTPUT1
+module sky130_hilas_TA2Cell_1FG (
+    VINP_AMP1,
+    VINP_AMP2,
+    VINN_AMP2,
+    GATECOLSELECT,
+    VINJ,
+    OUTPUT1,
     OUTPUT2
 );
 endmodule
@@ -1447,7 +1447,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_swc2x2varactor (
-VNB
+    VNB,
     VPB
 );
 endmodule
@@ -1459,7 +1459,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_swc2x2varactor (
-
+    
 );
 endmodule
 `endcelldefine
@@ -1492,19 +1492,19 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_drainselect01 (
-DRAIN4
-    DRAIN3
-    DRAIN2
-    DRAIN1
-    DRAINSELECT1
-    DRAINSELECT2
-    DRAINSELECT3
-    DRAINSELECT4
-    VINJ
-    DRAIN_MUX
-    VGND
-    VNB
+module sky130_hilas_drainSelect01 (
+    DRAIN4,
+    DRAIN3,
+    DRAIN2,
+    DRAIN1,
+    DRAINSELECT1,
+    DRAINSELECT2,
+    DRAINSELECT3,
+    DRAINSELECT4,
+    VINJ,
+    DRAIN_MUX,
+    VGND,
+    VNB,
     VPB
 );
 endmodule
@@ -1515,16 +1515,16 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_drainselect01 (
-DRAIN4
-    DRAIN3
-    DRAIN2
-    DRAIN1
-    DRAINSELECT1
-    DRAINSELECT2
-    DRAINSELECT3
-    DRAINSELECT4
-    VINJ
+module sky130_hilas_drainSelect01 (
+    DRAIN4,
+    DRAIN3,
+    DRAIN2,
+    DRAIN1,
+    DRAINSELECT1,
+    DRAINSELECT2,
+    DRAINSELECT3,
+    DRAINSELECT4,
+    VINJ,
     DRAIN_MUX
 );
 endmodule
@@ -1558,8 +1558,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tunvaractorcapcitor (
-VNB
+module sky130_hilas_TunVaractorCapcitor (
+    VNB,
     VPB
 );
 endmodule
@@ -1570,8 +1570,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tunvaractorcapcitor (
-
+module sky130_hilas_TunVaractorCapcitor (
+    
 );
 endmodule
 `endcelldefine
@@ -1604,8 +1604,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetmirror (
-VNB
+module sky130_hilas_pFETmirror (
+    VNB,
     VPB
 );
 endmodule
@@ -1616,8 +1616,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetmirror (
-
+module sky130_hilas_pFETmirror (
+    
 );
 endmodule
 `endcelldefine
@@ -1650,8 +1650,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01c (
-VNB
+module sky130_hilas_pFETdevice01c (
+    VNB,
     VPB
 );
 endmodule
@@ -1662,8 +1662,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01c (
-
+module sky130_hilas_pFETdevice01c (
+    
 );
 endmodule
 `endcelldefine
@@ -1696,21 +1696,21 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_swc4x1biascell (
-BIAS1
-    BIAS2
-    BIAS3
-    BIAS4
-    VTUN
-    GATE
-    VINJ
-    GATESELECT
-    DRAIN1
-    DRAIN2
-    DRAIN3
-    DRAIN4
-    VPWR
-    VNB
+module sky130_hilas_swc4x1BiasCell (
+    BIAS1,
+    BIAS2,
+    BIAS3,
+    BIAS4,
+    VTUN,
+    GATE,
+    VINJ,
+    GATESELECT,
+    DRAIN1,
+    DRAIN2,
+    DRAIN3,
+    DRAIN4,
+    VPWR,
+    VNB,
     VPB
 );
 endmodule
@@ -1721,18 +1721,18 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_swc4x1biascell (
-BIAS1
-    BIAS2
-    BIAS3
-    BIAS4
-    VTUN
-    GATE
-    VINJ
-    GATESELECT
-    DRAIN1
-    DRAIN2
-    DRAIN3
+module sky130_hilas_swc4x1BiasCell (
+    BIAS1,
+    BIAS2,
+    BIAS3,
+    BIAS4,
+    VTUN,
+    GATE,
+    VINJ,
+    GATESELECT,
+    DRAIN1,
+    DRAIN2,
+    DRAIN3,
     DRAIN4
 );
 endmodule
@@ -1766,8 +1766,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nmirror03 (
-VNB
+module sky130_hilas_nMirror03 (
+    VNB,
     VPB
 );
 endmodule
@@ -1778,8 +1778,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nmirror03 (
-
+module sky130_hilas_nMirror03 (
+    
 );
 endmodule
 `endcelldefine
@@ -1812,8 +1812,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fghugevaractorcapacitor01 (
-VNB
+module sky130_hilas_FGHugeVaractorCapacitor01 (
+    VNB,
     VPB
 );
 endmodule
@@ -1824,8 +1824,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fghugevaractorcapacitor01 (
-
+module sky130_hilas_FGHugeVaractorCapacitor01 (
+    
 );
 endmodule
 `endcelldefine
@@ -1858,8 +1858,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfetmirrorpairs (
-VNB
+module sky130_hilas_nFETmirrorPairs (
+    VNB,
     VPB
 );
 endmodule
@@ -1870,8 +1870,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfetmirrorpairs (
-
+module sky130_hilas_nFETmirrorPairs (
+    
 );
 endmodule
 `endcelldefine
@@ -1904,8 +1904,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac6transistorstack01a (
-VNB
+module sky130_hilas_DAC6TransistorStack01a (
+    VNB,
     VPB
 );
 endmodule
@@ -1916,8 +1916,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac6transistorstack01a (
-
+module sky130_hilas_DAC6TransistorStack01a (
+    
 );
 endmodule
 `endcelldefine
@@ -1950,8 +1950,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgatesingle01 (
-VNB
+module sky130_hilas_TgateSingle01 (
+    VNB,
     VPB
 );
 endmodule
@@ -1962,8 +1962,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgatesingle01 (
-
+module sky130_hilas_TgateSingle01 (
+    
 );
 endmodule
 `endcelldefine
@@ -1996,8 +1996,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_cellattempt01 (
-VNB
+module sky130_hilas_cellAttempt01 (
+    VNB,
     VPB
 );
 endmodule
@@ -2008,8 +2008,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_cellattempt01 (
-
+module sky130_hilas_cellAttempt01 (
+    
 );
 endmodule
 `endcelldefine
@@ -2042,18 +2042,18 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ta2signalbiascell (
-VOUT_AMP2
-    VOUT_AMP1
-    VINN_AMP2
-    VINP_AMP2
-    VINP_AMP1
-    VINN_AMP1
-    VBIAS2
-    VBIAS1
-    VGND
-    VPWR
-    VNB
+module sky130_hilas_TA2SignalBiasCell (
+    VOUT_AMP2,
+    VOUT_AMP1,
+    VINN_AMP2,
+    VINP_AMP2,
+    VINP_AMP1,
+    VINN_AMP1,
+    VBIAS2,
+    VBIAS1,
+    VGND,
+    VPWR,
+    VNB,
     VPB
 );
 endmodule
@@ -2064,14 +2064,14 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ta2signalbiascell (
-VOUT_AMP2
-    VOUT_AMP1
-    VINN_AMP2
-    VINP_AMP2
-    VINP_AMP1
-    VINN_AMP1
-    VBIAS2
+module sky130_hilas_TA2SignalBiasCell (
+    VOUT_AMP2,
+    VOUT_AMP1,
+    VINN_AMP2,
+    VINP_AMP2,
+    VINP_AMP1,
+    VINN_AMP1,
+    VBIAS2,
     VBIAS1
 );
 endmodule
@@ -2105,8 +2105,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_wta4stage01 (
-VNB
+module sky130_hilas_WTA4stage01 (
+    VNB,
     VPB
 );
 endmodule
@@ -2117,8 +2117,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_wta4stage01 (
-
+module sky130_hilas_WTA4stage01 (
+    
 );
 endmodule
 `endcelldefine
@@ -2151,8 +2151,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgatevinj01 (
-VNB
+module sky130_hilas_TgateVinj01 (
+    VNB,
     VPB
 );
 endmodule
@@ -2163,8 +2163,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgatevinj01 (
-
+module sky130_hilas_TgateVinj01 (
+    
 );
 endmodule
 `endcelldefine
@@ -2197,12 +2197,12 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capacitorsize04 (
-CAP1TERM02
-    CAP2TERM02
-    CAP2TERM01
-    CAP1TERM01
-    VNB
+module sky130_hilas_capacitorSize04 (
+    CAP1TERM02,
+    CAP2TERM02,
+    CAP2TERM01,
+    CAP1TERM01,
+    VNB,
     VPB
 );
 endmodule
@@ -2213,10 +2213,10 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capacitorsize04 (
-CAP1TERM02
-    CAP2TERM02
-    CAP2TERM01
+module sky130_hilas_capacitorSize04 (
+    CAP1TERM02,
+    CAP2TERM02,
+    CAP2TERM01,
     CAP1TERM01
 );
 endmodule
@@ -2250,8 +2250,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tacoreblock (
-VNB
+module sky130_hilas_TAcoreblock (
+    VNB,
     VPB
 );
 endmodule
@@ -2262,8 +2262,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tacoreblock (
-
+module sky130_hilas_TAcoreblock (
+    
 );
 endmodule
 `endcelldefine
@@ -2296,11 +2296,11 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfetlarge (
-GATE
-    SOURCE
-    DRAIN
-    VNB
+module sky130_hilas_nFETLarge (
+    GATE,
+    SOURCE,
+    DRAIN,
+    VNB,
     VPB
 );
 endmodule
@@ -2311,9 +2311,9 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfetlarge (
-GATE
-    SOURCE
+module sky130_hilas_nFETLarge (
+    GATE,
+    SOURCE,
     DRAIN
 );
 endmodule
@@ -2348,7 +2348,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_mcap2m4 (
-VNB
+    VNB,
     VPB
 );
 endmodule
@@ -2360,7 +2360,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_mcap2m4 (
-
+    
 );
 endmodule
 `endcelldefine
@@ -2394,7 +2394,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_all (
-VNB
+    VNB,
     VPB
 );
 endmodule
@@ -2406,7 +2406,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_all (
-
+    
 );
 endmodule
 `endcelldefine
@@ -2439,8 +2439,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_noverlapcap01 (
-VNB
+module sky130_hilas_nOverlapCap01 (
+    VNB,
     VPB
 );
 endmodule
@@ -2451,8 +2451,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_noverlapcap01 (
-
+module sky130_hilas_nOverlapCap01 (
+    
 );
 endmodule
 `endcelldefine
@@ -2485,8 +2485,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetmed (
-VNB
+module sky130_hilas_pFETmed (
+    VNB,
     VPB
 );
 endmodule
@@ -2497,8 +2497,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetmed (
-
+module sky130_hilas_pFETmed (
+    
 );
 endmodule
 `endcelldefine
@@ -2532,7 +2532,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_poly2li (
-VNB
+    VNB,
     VPB
 );
 endmodule
@@ -2544,7 +2544,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_poly2li (
-
+    
 );
 endmodule
 `endcelldefine
@@ -2577,8 +2577,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfetmed (
-VNB
+module sky130_hilas_nFETmed (
+    VNB,
     VPB
 );
 endmodule
@@ -2589,8 +2589,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfetmed (
-
+module sky130_hilas_nFETmed (
+    
 );
 endmodule
 `endcelldefine
@@ -2623,8 +2623,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac6transistorstack01 (
-VNB
+module sky130_hilas_DAC6TransistorStack01 (
+    VNB,
     VPB
 );
 endmodule
@@ -2635,8 +2635,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac6transistorstack01 (
-
+module sky130_hilas_DAC6TransistorStack01 (
+    
 );
 endmodule
 `endcelldefine
@@ -2669,8 +2669,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_doubletgate01 (
-VNB
+module sky130_hilas_DoubleTGate01 (
+    VNB,
     VPB
 );
 endmodule
@@ -2681,8 +2681,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_doubletgate01 (
-
+module sky130_hilas_DoubleTGate01 (
+    
 );
 endmodule
 `endcelldefine
@@ -2715,8 +2715,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac6transistorstack01c (
-VNB
+module sky130_hilas_DAC6TransistorStack01c (
+    VNB,
     VPB
 );
 endmodule
@@ -2727,8 +2727,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac6transistorstack01c (
-
+module sky130_hilas_DAC6TransistorStack01c (
+    
 );
 endmodule
 `endcelldefine
@@ -2761,8 +2761,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgatesingle01part1 (
-VNB
+module sky130_hilas_TgateSingle01Part1 (
+    VNB,
     VPB
 );
 endmodule
@@ -2773,8 +2773,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgatesingle01part1 (
-
+module sky130_hilas_TgateSingle01Part1 (
+    
 );
 endmodule
 `endcelldefine
@@ -2807,12 +2807,12 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetlarge (
-GATE
-    SOURCE
-    DRAIN
-    WELL
-    VNB
+module sky130_hilas_pFETLarge (
+    GATE,
+    SOURCE,
+    DRAIN,
+    WELL,
+    VNB,
     VPB
 );
 endmodule
@@ -2823,10 +2823,10 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetlarge (
-GATE
-    SOURCE
-    DRAIN
+module sky130_hilas_pFETLarge (
+    GATE,
+    SOURCE,
+    DRAIN,
     WELL
 );
 endmodule
@@ -2860,16 +2860,16 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgbias2x1cell (
-VTUN
-    GATE_CONTROL
-    DRAIN1
-    DRAIN4
-    VINJ
-    OUTPUT1
-    OUTPUT2
-    VGND
-    VNB
+module sky130_hilas_FGBias2x1cell (
+    VTUN,
+    GATE_CONTROL,
+    DRAIN1,
+    DRAIN4,
+    VINJ,
+    OUTPUT1,
+    OUTPUT2,
+    VGND,
+    VNB,
     VPB
 );
 endmodule
@@ -2880,13 +2880,13 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgbias2x1cell (
-VTUN
-    GATE_CONTROL
-    DRAIN1
-    DRAIN4
-    VINJ
-    OUTPUT1
+module sky130_hilas_FGBias2x1cell (
+    VTUN,
+    GATE_CONTROL,
+    DRAIN1,
+    DRAIN4,
+    VINJ,
+    OUTPUT1,
     OUTPUT2
 );
 endmodule
@@ -2920,8 +2920,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgatesingle01part2 (
-VNB
+module sky130_hilas_TgateSingle01Part2 (
+    VNB,
     VPB
 );
 endmodule
@@ -2932,8 +2932,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgatesingle01part2 (
-
+module sky130_hilas_TgateSingle01Part2 (
+    
 );
 endmodule
 `endcelldefine
@@ -2966,14 +2966,14 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac5bit01 (
-A0
-    A2
-    A3
-    A4
-    DRAIN
-    VPWR
-    VNB
+module sky130_hilas_DAC5bit01 (
+    A0,
+    A2,
+    A3,
+    A4,
+    DRAIN,
+    VPWR,
+    VNB,
     VPB
 );
 endmodule
@@ -2984,11 +2984,11 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac5bit01 (
-A0
-    A2
-    A3
-    A4
+module sky130_hilas_DAC5bit01 (
+    A0,
+    A2,
+    A3,
+    A4,
     DRAIN
 );
 endmodule
@@ -3022,8 +3022,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_swc4x1celloverlap2 (
-VNB
+module sky130_hilas_swc4x1cellOverlap2 (
+    VNB,
     VPB
 );
 endmodule
@@ -3034,8 +3034,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_swc4x1celloverlap2 (
-
+module sky130_hilas_swc4x1cellOverlap2 (
+    
 );
 endmodule
 `endcelldefine
@@ -3068,8 +3068,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01d (
-VNB
+module sky130_hilas_pFETdevice01d (
+    VNB,
     VPB
 );
 endmodule
@@ -3080,8 +3080,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01d (
-
+module sky130_hilas_pFETdevice01d (
+    
 );
 endmodule
 `endcelldefine
@@ -3114,8 +3114,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ptransistorpair (
-VNB
+module sky130_hilas_pTransistorPair (
+    VNB,
     VPB
 );
 endmodule
@@ -3126,8 +3126,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ptransistorpair (
-
+module sky130_hilas_pTransistorPair (
+    
 );
 endmodule
 `endcelldefine
@@ -3160,17 +3160,17 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ta2cell_1fg_strong (
-VINP_AMP2
-    VINN_AMP2
-    GATECOLSELECT
-    VINP_AMP1
-    OUTPUT2
-    OUTPUT1
-    VINJ
-    VPWR
-    VGND
-    VNB
+module sky130_hilas_TA2Cell_1FG_Strong (
+    VINP_AMP2,
+    VINN_AMP2,
+    GATECOLSELECT,
+    VINP_AMP1,
+    OUTPUT2,
+    OUTPUT1,
+    VINJ,
+    VPWR,
+    VGND,
+    VNB,
     VPB
 );
 endmodule
@@ -3181,13 +3181,13 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ta2cell_1fg_strong (
-VINP_AMP2
-    VINN_AMP2
-    GATECOLSELECT
-    VINP_AMP1
-    OUTPUT2
-    OUTPUT1
+module sky130_hilas_TA2Cell_1FG_Strong (
+    VINP_AMP2,
+    VINN_AMP2,
+    GATECOLSELECT,
+    VINP_AMP1,
+    OUTPUT2,
+    OUTPUT1,
     VINJ
 );
 endmodule
@@ -3221,19 +3221,19 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgcharacterization01 (
-VTUNVARACTOR01
-    VARACTORCAP01
-    OVERLAPCAP01
-    VARACTORCAP02
-    OVERLAPCAP02
-    LARGECAPACITOR
-    VINJ
-    OUTPUT
-    VREF
-    AMPLIFIERBIAS
-    VGND
-    VNB
+module sky130_hilas_FGcharacterization01 (
+    VTUNVARACTOR01,
+    VARACTORCAP01,
+    OVERLAPCAP01,
+    VARACTORCAP02,
+    OVERLAPCAP02,
+    LARGECAPACITOR,
+    VINJ,
+    OUTPUT,
+    VREF,
+    AMPLIFIERBIAS,
+    VGND,
+    VNB,
     VPB
 );
 endmodule
@@ -3244,16 +3244,16 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgcharacterization01 (
-VTUNVARACTOR01
-    VARACTORCAP01
-    OVERLAPCAP01
-    VARACTORCAP02
-    OVERLAPCAP02
-    LARGECAPACITOR
-    VINJ
-    OUTPUT
-    VREF
+module sky130_hilas_FGcharacterization01 (
+    VTUNVARACTOR01,
+    VARACTORCAP01,
+    OVERLAPCAP01,
+    VARACTORCAP02,
+    OVERLAPCAP02,
+    LARGECAPACITOR,
+    VINJ,
+    OUTPUT,
+    VREF,
     AMPLIFIERBIAS
 );
 endmodule
@@ -3288,7 +3288,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_m22m4 (
-VNB
+    VNB,
     VPB
 );
 endmodule
@@ -3300,7 +3300,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_m22m4 (
-
+    
 );
 endmodule
 `endcelldefine
@@ -3333,8 +3333,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac6bit01 (
-VNB
+module sky130_hilas_DAC6bit01 (
+    VNB,
     VPB
 );
 endmodule
@@ -3345,8 +3345,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac6bit01 (
-
+module sky130_hilas_DAC6bit01 (
+    
 );
 endmodule
 `endcelldefine
@@ -3379,24 +3379,24 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_swc4x2celloverlap (
-VERT1
-    HORIZ1
-    DRAIN1
-    HORIZ2
-    DRAIN2
-    DRAIN3
-    HORIZ3
-    HORIZ4
-    DRAIN4
-    VINJ
-    GATESELECT1
-    VERT2
-    GATESELECT2
-    GATE2
-    GATE1
-    VTUN
-    VNB
+module sky130_hilas_swc4x2cellOverlap (
+    VERT1,
+    HORIZ1,
+    DRAIN1,
+    HORIZ2,
+    DRAIN2,
+    DRAIN3,
+    HORIZ3,
+    HORIZ4,
+    DRAIN4,
+    VINJ,
+    GATESELECT1,
+    VERT2,
+    GATESELECT2,
+    GATE2,
+    GATE1,
+    VTUN,
+    VNB,
     VPB
 );
 endmodule
@@ -3407,22 +3407,22 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_swc4x2celloverlap (
-VERT1
-    HORIZ1
-    DRAIN1
-    HORIZ2
-    DRAIN2
-    DRAIN3
-    HORIZ3
-    HORIZ4
-    DRAIN4
-    VINJ
-    GATESELECT1
-    VERT2
-    GATESELECT2
-    GATE2
-    GATE1
+module sky130_hilas_swc4x2cellOverlap (
+    VERT1,
+    HORIZ1,
+    DRAIN1,
+    HORIZ2,
+    DRAIN2,
+    DRAIN3,
+    HORIZ3,
+    HORIZ4,
+    DRAIN4,
+    VINJ,
+    GATESELECT1,
+    VERT2,
+    GATESELECT2,
+    GATE2,
+    GATE1,
     VTUN
 );
 endmodule
@@ -3457,23 +3457,23 @@ endmodule
 
 `celldefine
 module sky130_hilas_swc4x2cell (
-GATE2
-    VTUN
-    GATE1
-    VINJ
-    GATESELECT1
-    GATESELECT2
-    VERT1
-    VERT2
-    HORIZ1
-    HORIZ2
-    DRAIN1
-    DRAIN2
-    DRAIN3
-    HORIZ3
-    HORIZ4
-    VPWR
-    VNB
+    GATE2,
+    VTUN,
+    GATE1,
+    VINJ,
+    GATESELECT1,
+    GATESELECT2,
+    VERT1,
+    VERT2,
+    HORIZ1,
+    HORIZ2,
+    DRAIN1,
+    DRAIN2,
+    DRAIN3,
+    HORIZ3,
+    HORIZ4,
+    VPWR,
+    VNB,
     VPB
 );
 endmodule
@@ -3485,20 +3485,20 @@ endmodule
 
 `celldefine
 module sky130_hilas_swc4x2cell (
-GATE2
-    VTUN
-    GATE1
-    VINJ
-    GATESELECT1
-    GATESELECT2
-    VERT1
-    VERT2
-    HORIZ1
-    HORIZ2
-    DRAIN1
-    DRAIN2
-    DRAIN3
-    HORIZ3
+    GATE2,
+    VTUN,
+    GATE1,
+    VINJ,
+    GATESELECT1,
+    GATESELECT2,
+    VERT1,
+    VERT2,
+    HORIZ1,
+    HORIZ2,
+    DRAIN1,
+    DRAIN2,
+    DRAIN3,
+    HORIZ3,
     HORIZ4
 );
 endmodule
@@ -3532,8 +3532,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tacoreblock2 (
-VNB
+module sky130_hilas_TACoreBlock2 (
+    VNB,
     VPB
 );
 endmodule
@@ -3544,8 +3544,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tacoreblock2 (
-
+module sky130_hilas_TACoreBlock2 (
+    
 );
 endmodule
 `endcelldefine
@@ -3578,8 +3578,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ndiffthoxcontact (
-VNB
+module sky130_hilas_nDiffThOxContact (
+    VNB,
     VPB
 );
 endmodule
@@ -3590,8 +3590,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ndiffthoxcontact (
-
+module sky130_hilas_nDiffThOxContact (
+    
 );
 endmodule
 `endcelldefine
@@ -3624,10 +3624,10 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capacitorsize01 (
-CAPTERM02
-    CAPTERM01
-    VNB
+module sky130_hilas_capacitorSize01 (
+    CAPTERM02,
+    CAPTERM01,
+    VNB,
     VPB
 );
 endmodule
@@ -3638,8 +3638,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capacitorsize01 (
-CAPTERM02
+module sky130_hilas_capacitorSize01 (
+    CAPTERM02,
     CAPTERM01
 );
 endmodule
@@ -3673,21 +3673,21 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgtrans2x1cell (
-GATESELECT
-    VINJ
-    DRAIN1
-    DRAIN4
-    PROG
-    RUN
-    GATE1
-    GATE2
-    PROGGATE
-    VTUN
-    DRAIN
-    VS
-    VGND
-    VNB
+module sky130_hilas_FGtrans2x1cell (
+    GATESELECT,
+    VINJ,
+    DRAIN1,
+    DRAIN4,
+    PROG,
+    RUN,
+    GATE1,
+    GATE2,
+    PROGGATE,
+    VTUN,
+    DRAIN,
+    VS,
+    VGND,
+    VNB,
     VPB
 );
 endmodule
@@ -3698,18 +3698,18 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgtrans2x1cell (
-GATESELECT
-    VINJ
-    DRAIN1
-    DRAIN4
-    PROG
-    RUN
-    GATE1
-    GATE2
-    PROGGATE
-    VTUN
-    DRAIN
+module sky130_hilas_FGtrans2x1cell (
+    GATESELECT,
+    VINJ,
+    DRAIN1,
+    DRAIN4,
+    PROG,
+    RUN,
+    GATE1,
+    GATE2,
+    PROGGATE,
+    VTUN,
+    DRAIN,
     VS
 );
 endmodule
@@ -3743,8 +3743,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgatedouble01 (
-VNB
+module sky130_hilas_TgateDouble01 (
+    VNB,
     VPB
 );
 endmodule
@@ -3755,8 +3755,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tgatedouble01 (
-
+module sky130_hilas_TgateDouble01 (
+    
 );
 endmodule
 `endcelldefine
@@ -3789,10 +3789,10 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capacitorsize02 (
-CAPTERM02
-    CAPTERM01
-    VNB
+module sky130_hilas_capacitorSize02 (
+    CAPTERM02,
+    CAPTERM01,
+    VNB,
     VPB
 );
 endmodule
@@ -3803,8 +3803,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capacitorsize02 (
-CAPTERM02
+module sky130_hilas_capacitorSize02 (
+    CAPTERM02,
     CAPTERM01
 );
 endmodule
@@ -3838,8 +3838,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01aa (
-VNB
+module sky130_hilas_pFETdevice01aa (
+    VNB,
     VPB
 );
 endmodule
@@ -3850,8 +3850,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01aa (
-
+module sky130_hilas_pFETdevice01aa (
+    
 );
 endmodule
 `endcelldefine
@@ -3885,7 +3885,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_m12m2 (
-VNB
+    VNB,
     VPB
 );
 endmodule
@@ -3897,7 +3897,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_m12m2 (
-
+    
 );
 endmodule
 `endcelldefine
@@ -3930,8 +3930,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_wellcontact (
-VNB
+module sky130_hilas_wellContact (
+    VNB,
     VPB
 );
 endmodule
@@ -3942,8 +3942,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_wellcontact (
-
+module sky130_hilas_wellContact (
+    
 );
 endmodule
 `endcelldefine
@@ -3976,8 +3976,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac6transistorstack01b (
-VNB
+module sky130_hilas_DAC6TransistorStack01b (
+    VNB,
     VPB
 );
 endmodule
@@ -3988,8 +3988,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dac6transistorstack01b (
-
+module sky130_hilas_DAC6TransistorStack01b (
+    
 );
 endmodule
 `endcelldefine
@@ -4022,18 +4022,18 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_wta4stage01 (
-COMMONNODE
-    OUTPUT1
-    OUTPUT2
-    OUTPUT3
-    OUTPUT4
-    INPUT1
-    INPUT2
-    INPUT3
-    INPUT4
-    VGND
-    VNB
+module sky130_hilas_WTA4Stage01 (
+    COMMONNODE,
+    OUTPUT1,
+    OUTPUT2,
+    OUTPUT3,
+    OUTPUT4,
+    INPUT1,
+    INPUT2,
+    INPUT3,
+    INPUT4,
+    VGND,
+    VNB,
     VPB
 );
 endmodule
@@ -4044,15 +4044,15 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_wta4stage01 (
-COMMONNODE
-    OUTPUT1
-    OUTPUT2
-    OUTPUT3
-    OUTPUT4
-    INPUT1
-    INPUT2
-    INPUT3
+module sky130_hilas_WTA4Stage01 (
+    COMMONNODE,
+    OUTPUT1,
+    OUTPUT2,
+    OUTPUT3,
+    OUTPUT4,
+    INPUT1,
+    INPUT2,
+    INPUT3,
     INPUT4
 );
 endmodule
@@ -4086,8 +4086,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgvaractorcapacitor (
-VNB
+module sky130_hilas_FGVaractorCapacitor (
+    VNB,
     VPB
 );
 endmodule
@@ -4098,8 +4098,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_fgvaractorcapacitor (
-
+module sky130_hilas_FGVaractorCapacitor (
+    
 );
 endmodule
 `endcelldefine
@@ -4132,8 +4132,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_horiztranscell01 (
-VNB
+module sky130_hilas_horizTransCell01 (
+    VNB,
     VPB
 );
 endmodule
@@ -4144,8 +4144,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_horiztranscell01 (
-
+module sky130_hilas_horizTransCell01 (
+    
 );
 endmodule
 `endcelldefine
@@ -4178,8 +4178,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capmodule01a (
-VNB
+module sky130_hilas_CapModule01a (
+    VNB,
     VPB
 );
 endmodule
@@ -4190,8 +4190,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capmodule01a (
-
+module sky130_hilas_CapModule01a (
+    
 );
 endmodule
 `endcelldefine
@@ -4224,8 +4224,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capmodule03 (
-VNB
+module sky130_hilas_CapModule03 (
+    VNB,
     VPB
 );
 endmodule
@@ -4236,8 +4236,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capmodule03 (
-
+module sky130_hilas_CapModule03 (
+    
 );
 endmodule
 `endcelldefine
@@ -4270,8 +4270,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetmirror02 (
-VNB
+module sky130_hilas_pFETmirror02 (
+    VNB,
     VPB
 );
 endmodule
@@ -4282,8 +4282,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetmirror02 (
-
+module sky130_hilas_pFETmirror02 (
+    
 );
 endmodule
 `endcelldefine
@@ -4316,8 +4316,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_overlapcap02a (
-VNB
+module sky130_hilas_overlapCap02a (
+    VNB,
     VPB
 );
 endmodule
@@ -4328,8 +4328,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_overlapcap02a (
-
+module sky130_hilas_overlapCap02a (
+    
 );
 endmodule
 `endcelldefine
@@ -4362,8 +4362,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dualtacore01 (
-VNB
+module sky130_hilas_DualTACore01 (
+    VNB,
     VPB
 );
 endmodule
@@ -4374,8 +4374,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_dualtacore01 (
-
+module sky130_hilas_DualTACore01 (
+    
 );
 endmodule
 `endcelldefine
@@ -4408,16 +4408,16 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ta2cell_nofg (
-GATECOLSELECT
-    VINN_AMP1
-    VINP_AMP2
-    VINN_AMP2
-    VOUT_AMP1
-    VOUT_AMP2
-    VGND
-    VPWR
-    VNB
+module sky130_hilas_TA2Cell_NoFG (
+    GATECOLSELECT,
+    VINN_AMP1,
+    VINP_AMP2,
+    VINN_AMP2,
+    VOUT_AMP1,
+    VOUT_AMP2,
+    VGND,
+    VPWR,
+    VNB,
     VPB
 );
 endmodule
@@ -4428,12 +4428,12 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_ta2cell_nofg (
-GATECOLSELECT
-    VINN_AMP1
-    VINP_AMP2
-    VINN_AMP2
-    VOUT_AMP1
+module sky130_hilas_TA2Cell_NoFG (
+    GATECOLSELECT,
+    VINN_AMP1,
+    VINP_AMP2,
+    VINN_AMP2,
+    VOUT_AMP1,
     VOUT_AMP2
 );
 endmodule
@@ -4467,8 +4467,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01b (
-VNB
+module sky130_hilas_pFETdevice01b (
+    VNB,
     VPB
 );
 endmodule
@@ -4479,8 +4479,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01b (
-
+module sky130_hilas_pFETdevice01b (
+    
 );
 endmodule
 `endcelldefine
@@ -4513,14 +4513,14 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capacitorarray01 (
-CAPTERMINAL2
-    CAPTERM01
-    VINJ
-    GATESELECT
-    VTUN
-    GATE
-    VNB
+module sky130_hilas_capacitorArray01 (
+    CAPTERMINAL2,
+    CAPTERM01,
+    VINJ,
+    GATESELECT,
+    VTUN,
+    GATE,
+    VNB,
     VPB
 );
 endmodule
@@ -4531,12 +4531,12 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capacitorarray01 (
-CAPTERMINAL2
-    CAPTERM01
-    VINJ
-    GATESELECT
-    VTUN
+module sky130_hilas_capacitorArray01 (
+    CAPTERMINAL2,
+    CAPTERM01,
+    VINJ,
+    GATESELECT,
+    VTUN,
     GATE
 );
 endmodule
@@ -4571,7 +4571,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_li2m1 (
-VNB
+    VNB,
     VPB
 );
 endmodule
@@ -4583,7 +4583,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_li2m1 (
-
+    
 );
 endmodule
 `endcelldefine
@@ -4616,10 +4616,10 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capacitorsize03 (
-CAPTERM02
-    CAPTERM01
-    VNB
+module sky130_hilas_capacitorSize03 (
+    CAPTERM02,
+    CAPTERM01,
+    VNB,
     VPB
 );
 endmodule
@@ -4630,8 +4630,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_capacitorsize03 (
-CAPTERM02
+module sky130_hilas_capacitorSize03 (
+    CAPTERM02,
     CAPTERM01
 );
 endmodule
@@ -4665,8 +4665,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tuncap01 (
-VNB
+module sky130_hilas_TunCap01 (
+    VNB,
     VPB
 );
 endmodule
@@ -4677,8 +4677,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_tuncap01 (
-
+module sky130_hilas_TunCap01 (
+    
 );
 endmodule
 `endcelldefine
@@ -4711,8 +4711,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetlargepart1 (
-VNB
+module sky130_hilas_pFETLargePart1 (
+    VNB,
     VPB
 );
 endmodule
@@ -4723,8 +4723,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetlargepart1 (
-
+module sky130_hilas_pFETLargePart1 (
+    
 );
 endmodule
 `endcelldefine
@@ -4757,8 +4757,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01e (
-VNB
+module sky130_hilas_pFETdevice01e (
+    VNB,
     VPB
 );
 endmodule
@@ -4769,8 +4769,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_pfetdevice01e (
-
+module sky130_hilas_pFETdevice01e (
+    
 );
 endmodule
 `endcelldefine
@@ -4803,8 +4803,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfet03 (
-VNB
+module sky130_hilas_nFET03 (
+    VNB,
     VPB
 );
 endmodule
@@ -4815,8 +4815,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfet03 (
-
+module sky130_hilas_nFET03 (
+    
 );
 endmodule
 `endcelldefine
@@ -4849,8 +4849,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfetmirrorpairs2 (
-VNB
+module sky130_hilas_nFETmirrorPairs2 (
+    VNB,
     VPB
 );
 endmodule
@@ -4861,8 +4861,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfetmirrorpairs2 (
-
+module sky130_hilas_nFETmirrorPairs2 (
+    
 );
 endmodule
 `endcelldefine
@@ -4895,8 +4895,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfet03a (
-VNB
+module sky130_hilas_nFET03a (
+    VNB,
     VPB
 );
 endmodule
@@ -4907,8 +4907,8 @@ endmodule
 /*********************************************************/
 
 `celldefine
-module sky130_hilas_nfet03a (
-
+module sky130_hilas_nFET03a (
+    
 );
 endmodule
 `endcelldefine

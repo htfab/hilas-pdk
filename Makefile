@@ -24,6 +24,9 @@ all:
 		-m \
 		-Y
 
+force:
+	$(SCRIPTS)/magic_gen.py -F -g -t -e -i -s -v -m -n -Y
+
 check:
 	$(SCRIPTS)/magic_gen.py -C
 
