@@ -32,144 +32,134 @@
 
 * NGSPICE file created from sky130_hilas_DAC5bit01.ext - technology: sky130A
 
-.subckt sky130_hilas_pFETdevice01 w_n158_n156# a_n90_n38# $SUB a_42_n38# a_n158_36#
+.subckt sky130_hilas_pFETdevice01 VSUBS w_n158_n156# a_n90_n38# a_42_n38# a_n158_36#
 X0 a_42_n38# a_n158_36# a_n90_n38# w_n158_n156# sky130_fd_pr__pfet_01v8 w=390000u l=390000u
 .ends
 
-.subckt sky130_hilas_pFETdevice01aa a_n160_36# $SUB w_n160_n156#
+.subckt sky130_hilas_pFETdevice01aa VSUBS a_n160_36# w_n160_n156#
 X0 a_42_n38# a_n160_36# a_n92_n38# w_n160_n156# sky130_fd_pr__pfet_01v8 w=390000u l=390000u
 .ends
 
-.subckt sky130_hilas_pFETdevice01a a_n160_36# $SUB w_n160_n84#
+.subckt sky130_hilas_pFETdevice01a VSUBS a_n160_36# w_n160_n84#
 X0 a_42_n38# a_n160_36# a_n92_n38# w_n160_n84# sky130_fd_pr__pfet_01v8 w=390000u l=390000u
 .ends
 
 .subckt sky130_hilas_DAC6TransistorStack01 sky130_hilas_pFETdevice01_3/a_n90_n38#
-+ sky130_hilas_pFETdevice01_0/a_n90_n38# sky130_hilas_pFETdevice01_6/a_n158_36# sky130_hilas_pFETdevice01_0/a_42_n38#
-+ sky130_hilas_pFETdevice01_4/a_42_n38# $SUB sky130_hilas_pFETdevice01_4/a_n158_36#
++ VSUBS sky130_hilas_pFETdevice01_0/a_n90_n38# sky130_hilas_pFETdevice01_6/a_n158_36#
++ sky130_hilas_pFETdevice01_0/a_42_n38# sky130_hilas_pFETdevice01_4/a_42_n38# sky130_hilas_pFETdevice01_4/a_n158_36#
 + sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01a_0/a_n160_36#
 + sky130_hilas_pFETdevice01_3/a_n158_36# sky130_hilas_pFETdevice01_3/a_42_n38# sky130_hilas_pFETdevice01_6/a_n90_n38#
 + sky130_hilas_pFETdevice01aa_0/a_n160_36# sky130_hilas_pFETdevice01_4/a_n90_n38#
 + sky130_hilas_pFETdevice01_0/a_n158_36# sky130_hilas_pFETdevice01_6/a_42_n38#
-Xsky130_hilas_pFETdevice01_0 sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_0/a_n90_n38#
-+ $SUB sky130_hilas_pFETdevice01_0/a_42_n38# sky130_hilas_pFETdevice01_0/a_n158_36#
-+ sky130_hilas_pFETdevice01
-Xsky130_hilas_pFETdevice01_3 sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_3/a_n90_n38#
-+ $SUB sky130_hilas_pFETdevice01_3/a_42_n38# sky130_hilas_pFETdevice01_3/a_n158_36#
-+ sky130_hilas_pFETdevice01
-Xsky130_hilas_pFETdevice01_4 sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_4/a_n90_n38#
-+ $SUB sky130_hilas_pFETdevice01_4/a_42_n38# sky130_hilas_pFETdevice01_4/a_n158_36#
-+ sky130_hilas_pFETdevice01
-Xsky130_hilas_pFETdevice01_6 sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_6/a_n90_n38#
-+ $SUB sky130_hilas_pFETdevice01_6/a_42_n38# sky130_hilas_pFETdevice01_6/a_n158_36#
-+ sky130_hilas_pFETdevice01
-Xsky130_hilas_pFETdevice01aa_0 sky130_hilas_pFETdevice01aa_0/a_n160_36# $SUB sky130_hilas_pFETdevice01a_0/w_n160_n84#
+Xsky130_hilas_pFETdevice01_0 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_0/a_n90_n38#
++ sky130_hilas_pFETdevice01_0/a_42_n38# sky130_hilas_pFETdevice01_0/a_n158_36# sky130_hilas_pFETdevice01
+Xsky130_hilas_pFETdevice01_3 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_3/a_n90_n38#
++ sky130_hilas_pFETdevice01_3/a_42_n38# sky130_hilas_pFETdevice01_3/a_n158_36# sky130_hilas_pFETdevice01
+Xsky130_hilas_pFETdevice01_4 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_4/a_n90_n38#
++ sky130_hilas_pFETdevice01_4/a_42_n38# sky130_hilas_pFETdevice01_4/a_n158_36# sky130_hilas_pFETdevice01
+Xsky130_hilas_pFETdevice01_6 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_6/a_n90_n38#
++ sky130_hilas_pFETdevice01_6/a_42_n38# sky130_hilas_pFETdevice01_6/a_n158_36# sky130_hilas_pFETdevice01
+Xsky130_hilas_pFETdevice01aa_0 VSUBS sky130_hilas_pFETdevice01aa_0/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
 + sky130_hilas_pFETdevice01aa
-Xsky130_hilas_pFETdevice01a_0 sky130_hilas_pFETdevice01a_0/a_n160_36# $SUB sky130_hilas_pFETdevice01a_0/w_n160_n84#
+Xsky130_hilas_pFETdevice01a_0 VSUBS sky130_hilas_pFETdevice01a_0/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
 + sky130_hilas_pFETdevice01a
 .ends
 
-.subckt sky130_hilas_pFETdevice01d w_n158_n156# a_n90_n38# $SUB a_n36_n84# a_42_n38#
+.subckt sky130_hilas_pFETdevice01d VSUBS w_n158_n156# a_n90_n38# a_n36_n84# a_42_n38#
 + sky130_hilas_poly2m1_0/a_n18_n16#
 X0 a_42_n38# a_n36_n84# a_n90_n38# w_n158_n156# sky130_fd_pr__pfet_01v8 w=390000u l=390000u
 .ends
 
-.subckt sky130_hilas_DAC6TransistorStack01b sky130_hilas_pFETdevice01_0/a_n90_n38#
+.subckt sky130_hilas_DAC6TransistorStack01b VSUBS sky130_hilas_pFETdevice01_0/a_n90_n38#
 + sky130_hilas_pFETdevice01_6/a_n158_36# sky130_hilas_pFETdevice01d_0/a_n90_n38# sky130_hilas_pFETdevice01d_0/a_n36_n84#
-+ sky130_hilas_pFETdevice01_0/a_42_n38# sky130_hilas_pFETdevice01_4/a_42_n38# $SUB
-+ sky130_hilas_pFETdevice01_4/a_n158_36# sky130_hilas_pFETdevice01a_0/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
++ sky130_hilas_pFETdevice01_0/a_42_n38# sky130_hilas_pFETdevice01_4/a_42_n38# sky130_hilas_pFETdevice01_4/a_n158_36#
++ sky130_hilas_pFETdevice01a_0/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
 + sky130_hilas_pFETdevice01d_0/sky130_hilas_poly2m1_0/a_n18_n16# sky130_hilas_pFETdevice01_6/a_n90_n38#
 + sky130_hilas_pFETdevice01aa_0/a_n160_36# sky130_hilas_pFETdevice01_4/a_n90_n38#
 + sky130_hilas_pFETdevice01_0/a_n158_36# sky130_hilas_pFETdevice01d_0/a_42_n38# sky130_hilas_pFETdevice01_6/a_42_n38#
-Xsky130_hilas_pFETdevice01d_0 sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01d_0/a_n90_n38#
-+ $SUB sky130_hilas_pFETdevice01d_0/a_n36_n84# sky130_hilas_pFETdevice01d_0/a_42_n38#
-+ sky130_hilas_pFETdevice01d_0/sky130_hilas_poly2m1_0/a_n18_n16# sky130_hilas_pFETdevice01d
-Xsky130_hilas_pFETdevice01_0 sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_0/a_n90_n38#
-+ $SUB sky130_hilas_pFETdevice01_0/a_42_n38# sky130_hilas_pFETdevice01_0/a_n158_36#
-+ sky130_hilas_pFETdevice01
-Xsky130_hilas_pFETdevice01_4 sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_4/a_n90_n38#
-+ $SUB sky130_hilas_pFETdevice01_4/a_42_n38# sky130_hilas_pFETdevice01_4/a_n158_36#
-+ sky130_hilas_pFETdevice01
-Xsky130_hilas_pFETdevice01_6 sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_6/a_n90_n38#
-+ $SUB sky130_hilas_pFETdevice01_6/a_42_n38# sky130_hilas_pFETdevice01_6/a_n158_36#
-+ sky130_hilas_pFETdevice01
-Xsky130_hilas_pFETdevice01aa_0 sky130_hilas_pFETdevice01aa_0/a_n160_36# $SUB sky130_hilas_pFETdevice01a_0/w_n160_n84#
+Xsky130_hilas_pFETdevice01d_0 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01d_0/a_n90_n38#
++ sky130_hilas_pFETdevice01d_0/a_n36_n84# sky130_hilas_pFETdevice01d_0/a_42_n38# sky130_hilas_pFETdevice01d_0/sky130_hilas_poly2m1_0/a_n18_n16#
++ sky130_hilas_pFETdevice01d
+Xsky130_hilas_pFETdevice01_0 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_0/a_n90_n38#
++ sky130_hilas_pFETdevice01_0/a_42_n38# sky130_hilas_pFETdevice01_0/a_n158_36# sky130_hilas_pFETdevice01
+Xsky130_hilas_pFETdevice01_4 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_4/a_n90_n38#
++ sky130_hilas_pFETdevice01_4/a_42_n38# sky130_hilas_pFETdevice01_4/a_n158_36# sky130_hilas_pFETdevice01
+Xsky130_hilas_pFETdevice01_6 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_6/a_n90_n38#
++ sky130_hilas_pFETdevice01_6/a_42_n38# sky130_hilas_pFETdevice01_6/a_n158_36# sky130_hilas_pFETdevice01
+Xsky130_hilas_pFETdevice01aa_0 VSUBS sky130_hilas_pFETdevice01aa_0/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
 + sky130_hilas_pFETdevice01aa
-Xsky130_hilas_pFETdevice01a_0 sky130_hilas_pFETdevice01a_0/a_n160_36# $SUB sky130_hilas_pFETdevice01a_0/w_n160_n84#
+Xsky130_hilas_pFETdevice01a_0 VSUBS sky130_hilas_pFETdevice01a_0/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
 + sky130_hilas_pFETdevice01a
 .ends
 
-.subckt sky130_hilas_pFETdevice01b w_n158_n156# $SUB a_n36_n84#
+.subckt sky130_hilas_pFETdevice01b VSUBS w_n158_n156# a_n36_n84#
 X0 a_42_n38# a_n36_n84# a_n90_n38# w_n158_n156# sky130_fd_pr__pfet_01v8 w=390000u l=390000u
 .ends
 
 .subckt sky130_hilas_DAC6TransistorStack01c sky130_hilas_pFETdevice01_3/a_n90_n38#
-+ sky130_hilas_pFETdevice01b_1/a_n36_n84# sky130_hilas_pFETdevice01_0/a_n90_n38# sky130_hilas_pFETdevice01_6/a_n158_36#
-+ sky130_hilas_pFETdevice01_0/a_42_n38# $SUB sky130_hilas_pFETdevice01a_0/a_n160_36#
++ VSUBS sky130_hilas_pFETdevice01b_1/a_n36_n84# sky130_hilas_pFETdevice01_0/a_n90_n38#
++ sky130_hilas_pFETdevice01_6/a_n158_36# sky130_hilas_pFETdevice01_0/a_42_n38# sky130_hilas_pFETdevice01a_0/a_n160_36#
 + sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_3/a_n158_36#
 + sky130_hilas_pFETdevice01_3/a_42_n38# sky130_hilas_pFETdevice01_6/a_n90_n38# sky130_hilas_pFETdevice01aa_0/a_n160_36#
 + sky130_hilas_pFETdevice01_0/a_n158_36# sky130_hilas_pFETdevice01_6/a_42_n38#
-Xsky130_hilas_pFETdevice01b_1 sky130_hilas_pFETdevice01a_0/w_n160_n84# $SUB sky130_hilas_pFETdevice01b_1/a_n36_n84#
+Xsky130_hilas_pFETdevice01b_1 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01b_1/a_n36_n84#
 + sky130_hilas_pFETdevice01b
-Xsky130_hilas_pFETdevice01_0 sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_0/a_n90_n38#
-+ $SUB sky130_hilas_pFETdevice01_0/a_42_n38# sky130_hilas_pFETdevice01_0/a_n158_36#
-+ sky130_hilas_pFETdevice01
-Xsky130_hilas_pFETdevice01_3 sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_3/a_n90_n38#
-+ $SUB sky130_hilas_pFETdevice01_3/a_42_n38# sky130_hilas_pFETdevice01_3/a_n158_36#
-+ sky130_hilas_pFETdevice01
-Xsky130_hilas_pFETdevice01_6 sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_6/a_n90_n38#
-+ $SUB sky130_hilas_pFETdevice01_6/a_42_n38# sky130_hilas_pFETdevice01_6/a_n158_36#
-+ sky130_hilas_pFETdevice01
-Xsky130_hilas_pFETdevice01aa_0 sky130_hilas_pFETdevice01aa_0/a_n160_36# $SUB sky130_hilas_pFETdevice01a_0/w_n160_n84#
+Xsky130_hilas_pFETdevice01_0 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_0/a_n90_n38#
++ sky130_hilas_pFETdevice01_0/a_42_n38# sky130_hilas_pFETdevice01_0/a_n158_36# sky130_hilas_pFETdevice01
+Xsky130_hilas_pFETdevice01_3 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_3/a_n90_n38#
++ sky130_hilas_pFETdevice01_3/a_42_n38# sky130_hilas_pFETdevice01_3/a_n158_36# sky130_hilas_pFETdevice01
+Xsky130_hilas_pFETdevice01_6 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01_6/a_n90_n38#
++ sky130_hilas_pFETdevice01_6/a_42_n38# sky130_hilas_pFETdevice01_6/a_n158_36# sky130_hilas_pFETdevice01
+Xsky130_hilas_pFETdevice01aa_0 VSUBS sky130_hilas_pFETdevice01aa_0/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
 + sky130_hilas_pFETdevice01aa
-Xsky130_hilas_pFETdevice01a_0 sky130_hilas_pFETdevice01a_0/a_n160_36# $SUB sky130_hilas_pFETdevice01a_0/w_n160_n84#
+Xsky130_hilas_pFETdevice01a_0 VSUBS sky130_hilas_pFETdevice01a_0/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
 + sky130_hilas_pFETdevice01a
 .ends
 
-.subckt sky130_hilas_DAC6TransistorStack01a sky130_hilas_pFETdevice01aa_4/a_n160_36#
-+ sky130_hilas_pFETdevice01aa_3/a_n160_36# $SUB sky130_hilas_pFETdevice01a_0/a_n160_36#
+.subckt sky130_hilas_DAC6TransistorStack01a VSUBS sky130_hilas_pFETdevice01aa_4/a_n160_36#
++ sky130_hilas_pFETdevice01aa_3/a_n160_36# sky130_hilas_pFETdevice01a_0/a_n160_36#
 + sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01aa_2/a_n160_36#
 + sky130_hilas_pFETdevice01aa_1/a_n160_36# sky130_hilas_pFETdevice01aa_0/a_n160_36#
-Xsky130_hilas_pFETdevice01aa_0 sky130_hilas_pFETdevice01aa_0/a_n160_36# $SUB sky130_hilas_pFETdevice01a_0/w_n160_n84#
+Xsky130_hilas_pFETdevice01aa_0 VSUBS sky130_hilas_pFETdevice01aa_0/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
 + sky130_hilas_pFETdevice01aa
-Xsky130_hilas_pFETdevice01aa_1 sky130_hilas_pFETdevice01aa_1/a_n160_36# $SUB sky130_hilas_pFETdevice01a_0/w_n160_n84#
+Xsky130_hilas_pFETdevice01aa_1 VSUBS sky130_hilas_pFETdevice01aa_1/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
 + sky130_hilas_pFETdevice01aa
-Xsky130_hilas_pFETdevice01aa_2 sky130_hilas_pFETdevice01aa_2/a_n160_36# $SUB sky130_hilas_pFETdevice01a_0/w_n160_n84#
+Xsky130_hilas_pFETdevice01aa_2 VSUBS sky130_hilas_pFETdevice01aa_2/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
 + sky130_hilas_pFETdevice01aa
-Xsky130_hilas_pFETdevice01aa_3 sky130_hilas_pFETdevice01aa_3/a_n160_36# $SUB sky130_hilas_pFETdevice01a_0/w_n160_n84#
+Xsky130_hilas_pFETdevice01aa_3 VSUBS sky130_hilas_pFETdevice01aa_3/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
 + sky130_hilas_pFETdevice01aa
-Xsky130_hilas_pFETdevice01aa_4 sky130_hilas_pFETdevice01aa_4/a_n160_36# $SUB sky130_hilas_pFETdevice01a_0/w_n160_n84#
+Xsky130_hilas_pFETdevice01aa_4 VSUBS sky130_hilas_pFETdevice01aa_4/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
 + sky130_hilas_pFETdevice01aa
-Xsky130_hilas_pFETdevice01a_0 sky130_hilas_pFETdevice01a_0/a_n160_36# $SUB sky130_hilas_pFETdevice01a_0/w_n160_n84#
+Xsky130_hilas_pFETdevice01a_0 VSUBS sky130_hilas_pFETdevice01a_0/a_n160_36# sky130_hilas_pFETdevice01a_0/w_n160_n84#
 + sky130_hilas_pFETdevice01a
 .ends
 
 .subckt sky130_hilas_DAC5bit01 A0 A2 A3 A4 VPWR DRAIN
-Xsky130_hilas_DAC6TransistorStack01_0[0] VPWR VPWR A4 DRAIN DRAIN $SUB sky130_hilas_poly2m2_11/a_n18_n16#
+Xsky130_hilas_DAC6TransistorStack01_0[0] VPWR VSUBS VPWR A4 DRAIN DRAIN sky130_hilas_poly2m2_11/a_n18_n16#
 + w_1238_2040# sky130_hilas_DAC6TransistorStack01a_0/sky130_hilas_pFETdevice01aa_0/a_n160_36#
 + A3 DRAIN VPWR A4 VPWR sky130_hilas_poly2m2_12/a_n18_n16# DRAIN sky130_hilas_DAC6TransistorStack01
-Xsky130_hilas_DAC6TransistorStack01_0[1] VPWR VPWR A4 DRAIN DRAIN $SUB A3 w_1238_2040#
+Xsky130_hilas_DAC6TransistorStack01_0[1] VPWR VSUBS VPWR A4 DRAIN DRAIN A3 w_1238_2040#
 + sky130_hilas_poly2m2_12/a_n18_n16# A4 DRAIN VPWR A3 VPWR sky130_hilas_poly2m2_11/a_n18_n16#
 + DRAIN sky130_hilas_DAC6TransistorStack01
-Xsky130_hilas_DAC6TransistorStack01_0[2] VPWR VPWR A3 DRAIN DRAIN $SUB A4 w_1238_2040#
+Xsky130_hilas_DAC6TransistorStack01_0[2] VPWR VSUBS VPWR A3 DRAIN DRAIN A4 w_1238_2040#
 + sky130_hilas_poly2m2_11/a_n18_n16# A4 DRAIN VPWR A4 VPWR A3 DRAIN sky130_hilas_DAC6TransistorStack01
-Xsky130_hilas_DAC6TransistorStack01_2[0] VPWR VPWR A3 DRAIN DRAIN $SUB A4 w_1238_2040#
+Xsky130_hilas_DAC6TransistorStack01_2[0] VPWR VSUBS VPWR A3 DRAIN DRAIN A4 w_1238_2040#
 + A4 A4 DRAIN VPWR A2 VPWR A3 DRAIN sky130_hilas_DAC6TransistorStack01
-Xsky130_hilas_DAC6TransistorStack01_2[1] VPWR VPWR A2 DRAIN DRAIN $SUB A4 w_1238_2040#
+Xsky130_hilas_DAC6TransistorStack01_2[1] VPWR VSUBS VPWR A2 DRAIN DRAIN A4 w_1238_2040#
 + A3 A3 DRAIN VPWR m2_764_1430# VPWR A4 DRAIN sky130_hilas_DAC6TransistorStack01
-Xsky130_hilas_DAC6TransistorStack01_2[2] VPWR VPWR m2_764_1430# DRAIN DRAIN $SUB A3
-+ w_1238_2040# A4 A2 DRAIN VPWR sky130_hilas_DAC6TransistorStack01a_1/sky130_hilas_pFETdevice01aa_2/a_n160_36#
+Xsky130_hilas_DAC6TransistorStack01_2[2] VPWR VSUBS VPWR m2_764_1430# DRAIN DRAIN
++ A3 w_1238_2040# A4 A2 DRAIN VPWR sky130_hilas_DAC6TransistorStack01a_1/sky130_hilas_pFETdevice01aa_2/a_n160_36#
 + VPWR A4 DRAIN sky130_hilas_DAC6TransistorStack01
-Xsky130_hilas_DAC6TransistorStack01b_0 VPWR A4 VPWR A0 DRAIN DRAIN $SUB A4 A3 w_1238_2040#
+Xsky130_hilas_DAC6TransistorStack01b_0 VSUBS VPWR A4 VPWR A0 DRAIN DRAIN A4 A3 w_1238_2040#
 + A3 VPWR A4 VPWR A4 DRAIN DRAIN sky130_hilas_DAC6TransistorStack01b
-Xsky130_hilas_DAC6TransistorStack01c_0 VPWR A3 VPWR A4 DRAIN $SUB A4 w_1238_2040#
+Xsky130_hilas_DAC6TransistorStack01c_0 VPWR VSUBS A3 VPWR A4 DRAIN A4 w_1238_2040#
 + A4 DRAIN VPWR A3 A4 DRAIN sky130_hilas_DAC6TransistorStack01c
-Xsky130_hilas_DAC6TransistorStack01a_0 sky130_hilas_poly2m2_11/a_n18_n16# A4 $SUB
+Xsky130_hilas_DAC6TransistorStack01a_0 VSUBS sky130_hilas_poly2m2_11/a_n18_n16# A4
 + sky130_hilas_DAC6TransistorStack01a_0/sky130_hilas_pFETdevice01a_0/a_n160_36# w_1238_2040#
 + A3 sky130_hilas_poly2m2_12/a_n18_n16# sky130_hilas_DAC6TransistorStack01a_0/sky130_hilas_pFETdevice01aa_0/a_n160_36#
 + sky130_hilas_DAC6TransistorStack01a
-Xsky130_hilas_DAC6TransistorStack01a_1 m2_764_1430# sky130_hilas_DAC6TransistorStack01a_1/sky130_hilas_pFETdevice01aa_3/a_n160_36#
-+ $SUB A4 w_1238_2040# sky130_hilas_DAC6TransistorStack01a_1/sky130_hilas_pFETdevice01aa_2/a_n160_36#
+Xsky130_hilas_DAC6TransistorStack01a_1 VSUBS m2_764_1430# sky130_hilas_DAC6TransistorStack01a_1/sky130_hilas_pFETdevice01aa_3/a_n160_36#
++ A4 w_1238_2040# sky130_hilas_DAC6TransistorStack01a_1/sky130_hilas_pFETdevice01aa_2/a_n160_36#
 + A2 A3 sky130_hilas_DAC6TransistorStack01a
 .ends
 

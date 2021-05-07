@@ -32,12 +32,12 @@
 
 * NGSPICE file created from sky130_hilas_capacitorSize04.ext - technology: sky130A
 
-.subckt sky130_hilas_CapModule01a m3_n832_n432# $SUB c1_n802_n404#
+.subckt sky130_hilas_CapModule01a VSUBS m3_n832_n432# c1_n802_n404#
 X0 c1_n802_n404# m3_n832_n432# sky130_fd_pr__cap_mim_m3_1 l=2e+06u w=2e+06u
 .ends
 
 .subckt sky130_hilas_capacitorSize04 CAP1TERM02 CAP2TERM02 CAP2TERM01 CAP1TERM01
-Xsky130_hilas_CapModule01a_0 CAP2TERM02 $SUB CAP2TERM01 sky130_hilas_CapModule01a
-Xsky130_hilas_CapModule01a_1 CAP1TERM02 $SUB CAP1TERM01 sky130_hilas_CapModule01a
+Xsky130_hilas_CapModule01a_0 VSUBS CAP2TERM02 CAP2TERM01 sky130_hilas_CapModule01a
+Xsky130_hilas_CapModule01a_1 VSUBS CAP1TERM02 CAP1TERM01 sky130_hilas_CapModule01a
 .ends
 

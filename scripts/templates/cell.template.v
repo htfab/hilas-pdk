@@ -20,6 +20,9 @@
 module {{ cell_name }} (
 {{ '    ' + ',\n    '.join(pins + pg_pins) }}
 );
+    {% for pin in pins+pg_pins %}
+        {{'inout ' + pin + ';'}}
+    {% endfor %}
 endmodule
 `endcelldefine
 
@@ -31,6 +34,9 @@ endmodule
 module {{ cell_name }} (
 {{ '    ' +  ',\n    '.join(pins) }}
 );
+    {% for pin in pins %}
+        {{'inout ' + pin + ';'}}
+    {% endfor %}
 endmodule
 `endcelldefine
 

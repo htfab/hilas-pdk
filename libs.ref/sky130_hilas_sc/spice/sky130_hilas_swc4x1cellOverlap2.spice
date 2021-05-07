@@ -32,39 +32,39 @@
 
 * NGSPICE file created from sky130_hilas_swc4x1cellOverlap2.ext - technology: sky130A
 
-.subckt sky130_hilas_nOverlapCap01 $SUB a_n114_n76# a_n24_14#
-X0 a_n24_14# a_n114_n76# a_n24_14# $SUB sky130_fd_pr__nfet_g5v0d10v5 w=580000u l=1.86e+06u
+.subckt sky130_hilas_nOverlapCap01 VSUBS a_n114_n76# a_n24_14#
+X0 a_n24_14# a_n114_n76# a_n24_14# VSUBS sky130_fd_pr__nfet_g5v0d10v5 w=580000u l=1.86e+06u
 .ends
 
-.subckt sky130_hilas_horizPcell01 a_n502_286# a_n508_162# w_n578_94# $SUB a_n578_238#
+.subckt sky130_hilas_horizPcell01 VSUBS a_n502_286# a_n508_162# w_n578_94# a_n578_238#
 + m1_n258_94# a_n300_94# a_n344_286#
 X0 w_n578_94# a_n300_94# a_n344_162# w_n578_94# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
 X1 a_n344_286# a_n578_238# a_n502_286# w_n578_94# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
 X2 a_n344_162# a_n578_238# a_n508_162# w_n578_94# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
 .ends
 
-.subckt sky130_hilas_overlapCap02a a_n1004_n70# w_n1042_n108# $SUB
+.subckt sky130_hilas_overlapCap02a VSUBS a_n1004_n70# w_n1042_n108#
 X0 a_n908_28# a_n1004_n70# a_n908_28# w_n1042_n108# sky130_fd_pr__pfet_g5v0d10v5 w=465000u l=500000u
 .ends
 
 
 * Top level circuit sky130_hilas_swc4x1cellOverlap2
 
-Xsky130_hilas_nOverlapCap01_0 $SUB a_n38_228# m1_n180_n764# sky130_hilas_nOverlapCap01
-Xsky130_hilas_horizPcell01_0 m2_n382_24# m2_n382_n62# w_1264_n176# $SUB a_n38_10#
+Xsky130_hilas_nOverlapCap01_0 VSUBS a_n38_228# m1_n180_n764# sky130_hilas_nOverlapCap01
+Xsky130_hilas_horizPcell01_0 VSUBS m2_n382_24# m2_n382_n62# w_1264_n176# a_n38_10#
 + a_1264_n176# a_1264_n176# sky130_hilas_horizPcell01_3/a_n344_286# sky130_hilas_horizPcell01
-Xsky130_hilas_nOverlapCap01_1 $SUB a_n38_10# m1_n180_n764# sky130_hilas_nOverlapCap01
-Xsky130_hilas_horizPcell01_1 m2_n382_n572# m2_n382_n660# w_1264_n176# $SUB a_n38_n590#
+Xsky130_hilas_nOverlapCap01_1 VSUBS a_n38_10# m1_n180_n764# sky130_hilas_nOverlapCap01
+Xsky130_hilas_horizPcell01_1 VSUBS m2_n382_n572# m2_n382_n660# w_1264_n176# a_n38_n590#
 + a_1264_n176# a_1264_n176# sky130_hilas_horizPcell01_3/a_n344_286# sky130_hilas_horizPcell01
-Xsky130_hilas_horizPcell01_2 m2_n382_n376# m2_n382_n292# w_1264_n176# $SUB a_n38_n350#
+Xsky130_hilas_horizPcell01_2 VSUBS m2_n382_n376# m2_n382_n292# w_1264_n176# a_n38_n350#
 + a_1264_n176# a_1264_n176# sky130_hilas_horizPcell01_3/a_n344_286# sky130_hilas_horizPcell01
-Xsky130_hilas_nOverlapCap01_2 $SUB a_n38_n350# m1_n180_n764# sky130_hilas_nOverlapCap01
-Xsky130_hilas_horizPcell01_3 m2_n382_224# m2_n382_310# w_1264_n176# $SUB a_n38_228#
+Xsky130_hilas_nOverlapCap01_2 VSUBS a_n38_n350# m1_n180_n764# sky130_hilas_nOverlapCap01
+Xsky130_hilas_horizPcell01_3 VSUBS m2_n382_224# m2_n382_310# w_1264_n176# a_n38_228#
 + a_1264_n176# a_1264_n176# sky130_hilas_horizPcell01_3/a_n344_286# sky130_hilas_horizPcell01
-Xsky130_hilas_nOverlapCap01_3 $SUB a_n38_n590# m1_n180_n764# sky130_hilas_nOverlapCap01
-Xsky130_hilas_overlapCap02a_0 a_n38_228# w_1264_n176# $SUB sky130_hilas_overlapCap02a
-Xsky130_hilas_overlapCap02a_1 a_n38_10# w_1264_n176# $SUB sky130_hilas_overlapCap02a
-Xsky130_hilas_overlapCap02a_2 a_n38_n350# w_1264_n176# $SUB sky130_hilas_overlapCap02a
-Xsky130_hilas_overlapCap02a_3 a_n38_n590# w_1264_n176# $SUB sky130_hilas_overlapCap02a
+Xsky130_hilas_nOverlapCap01_3 VSUBS a_n38_n590# m1_n180_n764# sky130_hilas_nOverlapCap01
+Xsky130_hilas_overlapCap02a_0 VSUBS a_n38_228# w_1264_n176# sky130_hilas_overlapCap02a
+Xsky130_hilas_overlapCap02a_1 VSUBS a_n38_10# w_1264_n176# sky130_hilas_overlapCap02a
+Xsky130_hilas_overlapCap02a_2 VSUBS a_n38_n350# w_1264_n176# sky130_hilas_overlapCap02a
+Xsky130_hilas_overlapCap02a_3 VSUBS a_n38_n590# w_1264_n176# sky130_hilas_overlapCap02a
 .end
 

@@ -32,29 +32,30 @@
 
 * NGSPICE file created from sky130_hilas_Tgate4Single01.ext - technology: sky130A
 
-.subckt sky130_hilas_TgateSingle01Part1 $SUB a_582_n188# output a_582_n314# a_514_n112#
-X0 $SUB a_514_n112# a_582_n188# $SUB sky130_fd_pr__nfet_01v8 w=300000u l=400000u
-X1 output a_514_n112# a_582_n314# $SUB sky130_fd_pr__nfet_01v8 w=310000u l=400000u
+.subckt sky130_hilas_TgateSingle01Part1 sky130_hilas_m12m2_3/VSUBS a_582_n188# output
++ a_582_n314# a_514_n112#
+X0 sky130_hilas_m12m2_3/VSUBS a_514_n112# a_582_n188# sky130_hilas_m12m2_3/VSUBS sky130_fd_pr__nfet_01v8 w=300000u l=400000u
+X1 output a_514_n112# a_582_n314# sky130_hilas_m12m2_3/VSUBS sky130_fd_pr__nfet_01v8 w=310000u l=400000u
 .ends
 
-.subckt sky130_hilas_TgateSingle01Part2 a_18_n340# a_n40_n314# w_n134_n362# li_n36_n176#
-+ a_98_n314# $SUB a_n36_n112#
+.subckt sky130_hilas_TgateSingle01Part2 VSUBS a_18_n340# a_n40_n314# w_n134_n362#
++ li_n36_n176# a_98_n314# a_n36_n112#
 X0 a_98_n314# a_18_n340# a_n40_n314# w_n134_n362# sky130_fd_pr__pfet_01v8 w=310000u l=400000u
 .ends
 
-.subckt sky130_hilas_TgateSingle01 m2_n526_n340# a_n468_n112# w_n502_n362# $SUB sky130_hilas_TgateSingle01Part1_0/output
-Xsky130_hilas_TgateSingle01Part1_0 $SUB a_n196_n192# sky130_hilas_TgateSingle01Part1_0/output
+.subckt sky130_hilas_TgateSingle01 VSUBS m2_n526_n340# a_n468_n112# w_n502_n362# sky130_hilas_TgateSingle01Part1_0/output
+Xsky130_hilas_TgateSingle01Part1_0 VSUBS a_n196_n192# sky130_hilas_TgateSingle01Part1_0/output
 + m2_n526_n340# a_n468_n112# sky130_hilas_TgateSingle01Part1
-Xsky130_hilas_TgateSingle01Part2_0 a_n196_n192# m2_n526_n340# w_n502_n362# a_n196_n192#
-+ sky130_hilas_TgateSingle01Part1_0/output $SUB a_n468_n112# sky130_hilas_TgateSingle01Part2
+Xsky130_hilas_TgateSingle01Part2_0 VSUBS a_n196_n192# m2_n526_n340# w_n502_n362# a_n196_n192#
++ sky130_hilas_TgateSingle01Part1_0/output a_n468_n112# sky130_hilas_TgateSingle01Part2
 X0 a_n196_n192# a_n468_n112# w_n502_n362# w_n502_n362# sky130_fd_pr__pfet_01v8 w=320000u l=400000u
 .ends
 
 .subckt sky130_hilas_Tgate4Single01 INPUT1_4 VPWR SELECT4 SELECT3 INPUT1_3 INPUT1_2
 + SELECT2 SELECT1 INPUT1_1 VGND OUTPUT1 OUTPUT2 OUTPUT3 OUTPUT4
-Xsky130_hilas_TgateSingle01_0 INPUT1_1 SELECT1 VPWR VGND OUTPUT1 sky130_hilas_TgateSingle01
-Xsky130_hilas_TgateSingle01_1 INPUT1_4 SELECT4 VPWR VGND OUTPUT4 sky130_hilas_TgateSingle01
-Xsky130_hilas_TgateSingle01_2 INPUT1_3 SELECT3 VPWR VGND OUTPUT3 sky130_hilas_TgateSingle01
-Xsky130_hilas_TgateSingle01_3 INPUT1_2 SELECT2 VPWR VGND OUTPUT2 sky130_hilas_TgateSingle01
+Xsky130_hilas_TgateSingle01_0 VGND INPUT1_1 SELECT1 VPWR OUTPUT1 sky130_hilas_TgateSingle01
+Xsky130_hilas_TgateSingle01_1 VGND INPUT1_4 SELECT4 VPWR OUTPUT4 sky130_hilas_TgateSingle01
+Xsky130_hilas_TgateSingle01_2 VGND INPUT1_3 SELECT3 VPWR OUTPUT3 sky130_hilas_TgateSingle01
+Xsky130_hilas_TgateSingle01_3 VGND INPUT1_2 SELECT2 VPWR OUTPUT2 sky130_hilas_TgateSingle01
 .ends
 

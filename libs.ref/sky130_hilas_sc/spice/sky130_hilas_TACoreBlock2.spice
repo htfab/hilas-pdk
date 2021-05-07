@@ -36,10 +36,10 @@
 * Top level circuit sky130_hilas_TACoreBlock2
 
 X0 w_n122_224# a_n106_328# a_n106_328# w_n122_224# sky130_fd_pr__pfet_01v8 w=680000u l=300000u
-X1 $SUB a_n66_n378# a_n66_n378# $SUB sky130_fd_pr__nfet_01v8 w=330000u l=290000u
-X2 a_n106_328# a_n66_n378# $SUB $SUB sky130_fd_pr__nfet_01v8 w=330000u l=290000u
-X3 a_128_272# a_124_n238# $SUB $SUB sky130_fd_pr__nfet_01v8 w=330000u l=290000u
+X1 a_n16_n180# a_n66_n378# a_n66_n378# a_n16_n180# sky130_fd_pr__nfet_01v8 w=330000u l=290000u
+X2 a_n106_328# a_n66_n378# a_n16_n180# a_n16_n180# sky130_fd_pr__nfet_01v8 w=330000u l=290000u
+X3 a_128_272# a_124_n238# a_n16_n180# a_n16_n180# sky130_fd_pr__nfet_01v8 w=330000u l=290000u
 X4 w_n122_224# a_n106_328# a_128_272# w_n122_224# sky130_fd_pr__pfet_01v8 w=680000u l=300000u
-X5 $SUB a_124_n238# a_124_n238# $SUB sky130_fd_pr__nfet_01v8 w=330000u l=290000u
+X5 a_n16_n180# a_124_n238# a_124_n238# a_n16_n180# sky130_fd_pr__nfet_01v8 w=330000u l=290000u
 .end
 

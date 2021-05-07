@@ -262,16 +262,32 @@ class Magic:
 
     def newmagic(self):
         try:
-            print('starting Magic')
 
+            magicrcfile = os.getenv('MAGICRC')
+            if not magicrcfile:
+                ourrcfile = Path(TECH_ROOT) / 'magic' / 'sky130A.magicrc'
+                if ourrcfile.is_file():
+                    magicrcfile = str(ourrcfile)
+
+            techfile = os.getenv('TECHFILE')
+            if not techfile:
+                ourtechfile = Path(TECH_ROOT) / 'magic' / 'sky130A.tech'
+                if ourtechfile.is_file():
+                    techfile = str(ourtechfile)
+
+            print('starting Magic')
+            odir = os.getcwd()
             os.chdir(LIB_PATH['mag'])
 
             self.p = REPLWrapper('magic -dnull -noconsole -rcfile "{}" -T "{}"'.format(
-                os.getenv('MAGICRC'), os.getenv('TECHFILE')),
+                magicrcfile, techfile),
                 orig_prompt='%', prompt_change=None)
 
         except:
             edie('couldn\'t start Magic')
+
+        finally:
+            os.chdir(odir)
 
     def load(self, magic_file):
         try:
@@ -419,7 +435,13 @@ def make_lef():
             break
 
     blocks = []
+
+    # only standard cells make it into the merged LEF
     for sf in LIB_PATH['temp_lef'].glob('*.lef'):
+        sh_name = sf.stem.split(CELL_PREFIX)[1]
+        if sh_name not in cd.standard_cells:
+            continue
+
         try:
             with open(sf, 'r') as f:
                 st = f.read()
@@ -551,6 +573,8 @@ def make_lib():
         lef_files = list(lef_path.glob('*.lef'))
     elif lef_path.is_file():
         lef_files = [lef_path]
+    else:
+        raise BaseException('lef source not found')
 
     cell_names = {}
     for lf in lef_files:
@@ -817,17 +841,23 @@ def target_check(magic_file, type):
         if not args.force and target.is_file() and os.path.getmtime(target) > os.path.getmtime(magic_file.file):
             # short circuit; don't do it
             return False
+        # elif magic_file.short_name in cd.standard_cells:
+        #     return True
         else:
             return True
 
     elif type in ['lef', 'lib', 'verilog']:
         target = (LIB_PATH[type] / PDK_VARIANT).with_suffix('.' + suffix)
-        if not args.force and target.is_file() and os.path.getmtime(target) > max(
-                [os.path.getmtime(mf) for mf in LIB_PATH['mag'].glob('*.mag')]):
+        if not args.force and \
+            (target.is_file() and os.path.getmtime(target) > max([os.path.getmtime(mf) for mf in LIB_PATH['mag'].glob('*.mag')])):
             # short circuit; don't do it
             return False
-        else:
+        elif magic_file is not None and magic_file.short_name in cd.standard_cells:
             return True
+        elif magic_file is None:
+            return True
+        else:
+            return False
 
     elif type == 'markdown':
         target = LIB_PATH['mag'] / 'README.md'
@@ -838,6 +868,8 @@ def target_check(magic_file, type):
         else:
             return True
 
+    else:
+        return True
 
 def handle_magic(magic_file):
     if not any([

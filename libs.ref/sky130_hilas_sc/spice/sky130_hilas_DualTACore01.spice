@@ -32,16 +32,18 @@
 
 * NGSPICE file created from sky130_hilas_DualTACore01.ext - technology: sky130A
 
-.subckt sky130_hilas_nFET03 a_n62_n12# a_54_n12# $SUB a_0_n38#
-X0 a_54_n12# a_0_n38# a_n62_n12# $SUB sky130_fd_pr__nfet_01v8 w=350000u l=270000u
+.subckt sky130_hilas_nFET03 VSUBS a_n62_n12# a_54_n12# a_0_n38#
+X0 a_54_n12# a_0_n38# a_n62_n12# VSUBS sky130_fd_pr__nfet_01v8 w=350000u l=270000u
 .ends
 
-.subckt sky130_hilas_nMirror03 sky130_hilas_nFET03_1/a_n62_n12# $SUB a_168_16#
-Xsky130_hilas_nFET03_0 a_n92_86# $SUB $SUB a_n92_86# sky130_hilas_nFET03
-Xsky130_hilas_nFET03_1 sky130_hilas_nFET03_1/a_n62_n12# $SUB $SUB a_n92_86# sky130_hilas_nFET03
+.subckt sky130_hilas_nMirror03 sky130_hilas_nFET03_1/a_n62_n12# sky130_hilas_li2m2_1/VSUBS
+Xsky130_hilas_nFET03_0 sky130_hilas_li2m2_1/VSUBS a_n92_86# sky130_hilas_li2m2_1/VSUBS
++ a_n92_86# sky130_hilas_nFET03
+Xsky130_hilas_nFET03_1 sky130_hilas_li2m2_1/VSUBS sky130_hilas_nFET03_1/a_n62_n12#
++ sky130_hilas_li2m2_1/VSUBS a_n92_86# sky130_hilas_nFET03
 .ends
 
-.subckt sky130_hilas_pFETmirror02 w_n122_178# a_n80_650# $SUB a_n80_262#
+.subckt sky130_hilas_pFETmirror02 VSUBS w_n122_178# a_n80_650# a_n80_262#
 X0 a_n80_650# a_n80_262# w_n122_178# w_n122_178# sky130_fd_pr__pfet_01v8 w=680000u l=300000u
 X1 w_n122_178# a_n80_262# a_n80_262# w_n122_178# sky130_fd_pr__pfet_01v8 w=680000u l=300000u
 .ends
@@ -49,11 +51,11 @@ X1 w_n122_178# a_n80_262# a_n80_262# w_n122_178# sky130_fd_pr__pfet_01v8 w=68000
 
 * Top level circuit sky130_hilas_DualTACore01
 
-Xsky130_hilas_nMirror03_3 output1 $SUB m1_n82_n44# sky130_hilas_nMirror03
-Xsky130_hilas_pFETmirror02_0 m1_52_n42# m2_n272_422# $SUB m2_n274_n12# sky130_hilas_pFETmirror02
-Xsky130_hilas_pFETmirror02_1 m1_52_n42# output1 $SUB m2_n272_1014# sky130_hilas_pFETmirror02
-Xsky130_hilas_nMirror03_0 m2_n274_n12# $SUB m1_n82_n44# sky130_hilas_nMirror03
-Xsky130_hilas_nMirror03_2 m2_n272_1014# $SUB m1_n82_n44# sky130_hilas_nMirror03
-Xsky130_hilas_nMirror03_1 m2_n272_422# $SUB m1_n82_n44# sky130_hilas_nMirror03
+Xsky130_hilas_nMirror03_3 output1 VSUBS sky130_hilas_nMirror03
+Xsky130_hilas_pFETmirror02_0 VSUBS m1_52_n42# m2_n272_422# m2_n274_n12# sky130_hilas_pFETmirror02
+Xsky130_hilas_pFETmirror02_1 VSUBS m1_52_n42# output1 m2_n272_1014# sky130_hilas_pFETmirror02
+Xsky130_hilas_nMirror03_0 m2_n274_n12# VSUBS sky130_hilas_nMirror03
+Xsky130_hilas_nMirror03_2 m2_n272_1014# VSUBS sky130_hilas_nMirror03
+Xsky130_hilas_nMirror03_1 m2_n272_422# VSUBS sky130_hilas_nMirror03
 .end
 

@@ -32,22 +32,22 @@
 
 * NGSPICE file created from sky130_hilas_nFETLargePart1.ext - technology: sky130A
 
-.subckt sky130_hilas_nFETmed a_84_n62# $SUB a_n24_n62#
-X0 a_84_n62# a_32_n88# a_n24_n62# $SUB sky130_fd_pr__nfet_01v8 w=2.46e+06u l=260000u
+.subckt sky130_hilas_nFETmed VSUBS a_84_n62# a_n24_n62#
+X0 a_84_n62# a_32_n88# a_n24_n62# VSUBS sky130_fd_pr__nfet_01v8 w=2.46e+06u l=260000u
 .ends
 
 
 * Top level circuit sky130_hilas_nFETLargePart1
 
-Xsky130_hilas_nFETmed_0 sky130_hilas_nFETmed_0/a_84_n62# $SUB sky130_hilas_nFETmed_4/a_84_n62#
+Xsky130_hilas_nFETmed_0 VSUBS sky130_hilas_nFETmed_0/a_84_n62# sky130_hilas_nFETmed_4/a_84_n62#
 + sky130_hilas_nFETmed
-Xsky130_hilas_nFETmed_1 sky130_hilas_nFETmed_1/a_84_n62# $SUB sky130_hilas_nFETmed_0/a_84_n62#
+Xsky130_hilas_nFETmed_1 VSUBS sky130_hilas_nFETmed_1/a_84_n62# sky130_hilas_nFETmed_0/a_84_n62#
 + sky130_hilas_nFETmed
-Xsky130_hilas_nFETmed_2 sky130_hilas_nFETmed_2/a_84_n62# $SUB sky130_hilas_nFETmed_1/a_84_n62#
+Xsky130_hilas_nFETmed_2 VSUBS sky130_hilas_nFETmed_2/a_84_n62# sky130_hilas_nFETmed_1/a_84_n62#
 + sky130_hilas_nFETmed
-Xsky130_hilas_nFETmed_3 sky130_hilas_nFETmed_3/a_84_n62# $SUB sky130_hilas_nFETmed_2/a_84_n62#
+Xsky130_hilas_nFETmed_3 VSUBS sky130_hilas_nFETmed_3/a_84_n62# sky130_hilas_nFETmed_2/a_84_n62#
 + sky130_hilas_nFETmed
-Xsky130_hilas_nFETmed_4 sky130_hilas_nFETmed_4/a_84_n62# $SUB sky130_hilas_nFETmed_4/a_n24_n62#
+Xsky130_hilas_nFETmed_4 VSUBS sky130_hilas_nFETmed_4/a_84_n62# sky130_hilas_nFETmed_4/a_n24_n62#
 + sky130_hilas_nFETmed
 .end
 

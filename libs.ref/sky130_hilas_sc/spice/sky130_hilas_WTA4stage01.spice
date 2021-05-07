@@ -32,17 +32,17 @@
 
 * NGSPICE file created from sky130_hilas_WTA4stage01.ext - technology: sky130A
 
-.subckt sky130_hilas_WTAsinglestage01 a_4_n68# a_216_n68# $SUB
-X0 a_4_n68# a_n126_n150# a_n94_n68# $SUB sky130_fd_pr__nfet_01v8 w=590000u l=200000u
-X1 $SUB a_4_n68# a_n126_n150# $SUB sky130_fd_pr__nfet_01v8 w=590000u l=200000u
+.subckt sky130_hilas_WTAsinglestage01 a_4_n68# sky130_hilas_li2m2_1/VSUBS
+X0 a_4_n68# a_n126_n150# a_n94_n68# sky130_hilas_li2m2_1/VSUBS sky130_fd_pr__nfet_01v8 w=590000u l=200000u
+X1 sky130_hilas_li2m2_1/VSUBS a_4_n68# a_n126_n150# sky130_hilas_li2m2_1/VSUBS sky130_fd_pr__nfet_01v8 w=590000u l=200000u
 .ends
 
 
 * Top level circuit sky130_hilas_WTA4stage01
 
-Xsky130_hilas_WTAsinglestage01_0 a_284_2# m1_380_516# $SUB sky130_hilas_WTAsinglestage01
-Xsky130_hilas_WTAsinglestage01_1 a_284_2# m1_380_516# $SUB sky130_hilas_WTAsinglestage01
-Xsky130_hilas_WTAsinglestage01_2 a_284_2# m1_380_516# $SUB sky130_hilas_WTAsinglestage01
-Xsky130_hilas_WTAsinglestage01_3 a_284_2# m1_380_516# $SUB sky130_hilas_WTAsinglestage01
+Xsky130_hilas_WTAsinglestage01_0 a_284_2# VSUBS sky130_hilas_WTAsinglestage01
+Xsky130_hilas_WTAsinglestage01_1 a_284_2# VSUBS sky130_hilas_WTAsinglestage01
+Xsky130_hilas_WTAsinglestage01_2 a_284_2# VSUBS sky130_hilas_WTAsinglestage01
+Xsky130_hilas_WTAsinglestage01_3 a_284_2# VSUBS sky130_hilas_WTAsinglestage01
 .end
 

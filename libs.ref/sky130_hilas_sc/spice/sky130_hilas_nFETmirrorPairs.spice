@@ -35,9 +35,9 @@
 
 * Top level circuit sky130_hilas_nFETmirrorPairs
 
-X0 $SUB a_n66_n378# a_n66_n378# $SUB sky130_fd_pr__nfet_01v8 w=330000u l=290000u
-X1 a_n16_80# a_n66_n378# $SUB $SUB sky130_fd_pr__nfet_01v8 w=330000u l=290000u
-X2 a_154_80# a_124_n238# $SUB $SUB sky130_fd_pr__nfet_01v8 w=330000u l=290000u
-X3 $SUB a_124_n238# a_124_n238# $SUB sky130_fd_pr__nfet_01v8 w=330000u l=290000u
+X0 a_n16_n180# a_n66_n378# a_n66_n378# a_n16_n180# sky130_fd_pr__nfet_01v8 w=330000u l=290000u
+X1 a_n16_80# a_n66_n378# a_n16_n180# a_n16_n180# sky130_fd_pr__nfet_01v8 w=330000u l=290000u
+X2 a_154_80# a_124_n238# a_n16_n180# a_n16_n180# sky130_fd_pr__nfet_01v8 w=330000u l=290000u
+X3 a_n16_n180# a_124_n238# a_124_n238# a_n16_n180# sky130_fd_pr__nfet_01v8 w=330000u l=290000u
 .end
 

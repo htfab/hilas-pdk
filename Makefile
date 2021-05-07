@@ -22,6 +22,7 @@ all:
 		-s \
 		-v \
 		-m \
+		-n \
 		-Y
 
 force:

@@ -32,21 +32,21 @@
 
 * NGSPICE file created from sky130_hilas_Trans2med.ext - technology: sky130A
 
-.subckt sky130_hilas_nFETmed a_32_n88# a_84_n62# $SUB a_n24_n62#
-X0 a_84_n62# a_32_n88# a_n24_n62# $SUB sky130_fd_pr__nfet_01v8 w=2.46e+06u l=260000u
+.subckt sky130_hilas_nFETmed VSUBS a_32_n88# a_84_n62# a_n24_n62#
+X0 a_84_n62# a_32_n88# a_n24_n62# VSUBS sky130_fd_pr__nfet_01v8 w=2.46e+06u l=260000u
 .ends
 
-.subckt sky130_hilas_pFETmed a_440_n8# w_294_n44# a_388_n34# $SUB a_330_n8#
+.subckt sky130_hilas_pFETmed VSUBS a_440_n8# w_294_n44# a_388_n34# a_330_n8#
 X0 a_440_n8# a_388_n34# a_330_n8# w_294_n44# sky130_fd_pr__pfet_01v8 w=2.51e+06u l=260000u
 .ends
 
 .subckt sky130_hilas_Trans2med NFET_GATE01 PET_GATE02 PFET_GATE01 NFET_GATE02 PFET_SOURCE1
 + PFET_SOURCE2 NFET_SOURCE2 NFET_SOURCE1 NFET_DRAIN1 NFET_DRAIN2 PFET_DRAIN01 PFET_DRAIN2
-Xsky130_hilas_nFETmed_0 NFET_GATE02 NFET_DRAIN2 $SUB NFET_SOURCE2 sky130_hilas_nFETmed
-Xsky130_hilas_nFETmed_1 NFET_GATE01 NFET_DRAIN1 $SUB NFET_SOURCE1 sky130_hilas_nFETmed
-Xsky130_hilas_pFETmed_0 PFET_DRAIN01 sky130_hilas_pFETmed_1/w_294_n44# PFET_GATE01
-+ $SUB PFET_SOURCE1 sky130_hilas_pFETmed
-Xsky130_hilas_pFETmed_1 PFET_DRAIN2 sky130_hilas_pFETmed_1/w_294_n44# PET_GATE02 $SUB
+Xsky130_hilas_nFETmed_0 VSUBS NFET_GATE02 NFET_DRAIN2 NFET_SOURCE2 sky130_hilas_nFETmed
+Xsky130_hilas_nFETmed_1 VSUBS NFET_GATE01 NFET_DRAIN1 NFET_SOURCE1 sky130_hilas_nFETmed
+Xsky130_hilas_pFETmed_0 VSUBS PFET_DRAIN01 sky130_hilas_pFETmed_1/w_294_n44# PFET_GATE01
++ PFET_SOURCE1 sky130_hilas_pFETmed
+Xsky130_hilas_pFETmed_1 VSUBS PFET_DRAIN2 sky130_hilas_pFETmed_1/w_294_n44# PET_GATE02
 + PFET_SOURCE2 sky130_hilas_pFETmed
 .ends
 
