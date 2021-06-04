@@ -35,7 +35,7 @@
 
 * Top level circuit sky130_hilas_WTAsinglestage01
 
-X0 a_4_n68# a_n126_n150# a_n94_n68# sky130_hilas_li2m2_1/VSUBS sky130_fd_pr__nfet_01v8 w=590000u l=200000u
-X1 sky130_hilas_li2m2_1/VSUBS a_4_n68# a_n126_n150# sky130_hilas_li2m2_1/VSUBS sky130_fd_pr__nfet_01v8 w=590000u l=200000u
+X0 sky130_hilas_li2m2_1/SUB a_4_n68# a_n126_n150# sky130_hilas_li2m2_1/SUB sky130_fd_pr__nfet_01v8 w=590000u l=200000u
+X1 a_4_n68# a_n126_n150# a_n94_n68# sky130_hilas_li2m2_1/SUB sky130_fd_pr__nfet_01v8 w=590000u l=200000u
 .end
 

@@ -32,30 +32,30 @@
 
 * NGSPICE file created from sky130_hilas_DAC6TransistorStack01c.ext - technology: sky130A
 
-.subckt sky130_hilas_pFETdevice01b VSUBS w_n158_n156#
+.subckt sky130_hilas_pFETdevice01b SUB w_n158_n156#
 X0 a_42_n38# a_n36_n84# a_n90_n38# w_n158_n156# sky130_fd_pr__pfet_01v8 w=390000u l=390000u
 .ends
 
-.subckt sky130_hilas_pFETdevice01 VSUBS w_n158_n156#
+.subckt sky130_hilas_pFETdevice01 SUB w_n158_n156#
 X0 a_42_n38# a_n158_36# a_n90_n38# w_n158_n156# sky130_fd_pr__pfet_01v8 w=390000u l=390000u
 .ends
 
-.subckt sky130_hilas_pFETdevice01aa VSUBS w_n160_n156#
+.subckt sky130_hilas_pFETdevice01aa SUB w_n160_n156#
 X0 a_42_n38# a_n160_36# a_n92_n38# w_n160_n156# sky130_fd_pr__pfet_01v8 w=390000u l=390000u
 .ends
 
-.subckt sky130_hilas_pFETdevice01a VSUBS w_n160_n84#
+.subckt sky130_hilas_pFETdevice01a SUB w_n160_n84#
 X0 a_42_n38# a_n160_36# a_n92_n38# w_n160_n84# sky130_fd_pr__pfet_01v8 w=390000u l=390000u
 .ends
 
 
 * Top level circuit sky130_hilas_DAC6TransistorStack01c
 
-Xsky130_hilas_pFETdevice01b_1 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01b
-Xsky130_hilas_pFETdevice01_0 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01
-Xsky130_hilas_pFETdevice01_3 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01
-Xsky130_hilas_pFETdevice01_6 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01
-Xsky130_hilas_pFETdevice01aa_0 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01aa
-Xsky130_hilas_pFETdevice01a_0 VSUBS sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01a
+Xsky130_hilas_pFETdevice01b_1 SUB sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01b
+Xsky130_hilas_pFETdevice01_0 SUB sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01
+Xsky130_hilas_pFETdevice01_3 SUB sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01
+Xsky130_hilas_pFETdevice01_6 SUB sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01
+Xsky130_hilas_pFETdevice01aa_0 SUB sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01aa
+Xsky130_hilas_pFETdevice01a_0 SUB sky130_hilas_pFETdevice01a_0/w_n160_n84# sky130_hilas_pFETdevice01a
 .end
 

@@ -32,55 +32,55 @@
 
 * NGSPICE file created from sky130_hilas_TA2SignalBiasCell.ext - technology: sky130A
 
-.subckt sky130_hilas_nFET03 VSUBS a_n62_n12# a_54_n12# a_0_n38#
-X0 a_54_n12# a_0_n38# a_n62_n12# VSUBS sky130_fd_pr__nfet_01v8 w=350000u l=270000u
+.subckt sky130_hilas_nFET03 a_n62_n12# SUB a_54_n12# a_0_n38#
+X0 a_54_n12# a_0_n38# a_n62_n12# SUB sky130_fd_pr__nfet_01v8 w=350000u l=270000u
 .ends
 
-.subckt sky130_hilas_nMirror03 sky130_hilas_nFET03_1/a_n62_n12# a_n92_86# sky130_hilas_li2m2_1/VSUBS
-Xsky130_hilas_nFET03_0 sky130_hilas_li2m2_1/VSUBS a_n92_86# sky130_hilas_li2m2_1/VSUBS
+.subckt sky130_hilas_nMirror03 sky130_hilas_nFET03_1/a_n62_n12# a_n92_86# sky130_hilas_li2m2_1/SUB
+Xsky130_hilas_nFET03_0 a_n92_86# sky130_hilas_li2m2_1/SUB sky130_hilas_li2m2_1/SUB
 + a_n92_86# sky130_hilas_nFET03
-Xsky130_hilas_nFET03_1 sky130_hilas_li2m2_1/VSUBS sky130_hilas_nFET03_1/a_n62_n12#
-+ sky130_hilas_li2m2_1/VSUBS a_n92_86# sky130_hilas_nFET03
+Xsky130_hilas_nFET03_1 sky130_hilas_nFET03_1/a_n62_n12# sky130_hilas_li2m2_1/SUB sky130_hilas_li2m2_1/SUB
++ a_n92_86# sky130_hilas_nFET03
 .ends
 
-.subckt sky130_hilas_pFETmirror02 VSUBS w_n122_178# a_n80_650# a_n80_262#
+.subckt sky130_hilas_pFETmirror02 w_n122_178# SUB a_n80_650# a_n80_262#
 X0 a_n80_650# a_n80_262# w_n122_178# w_n122_178# sky130_fd_pr__pfet_01v8 w=680000u l=300000u
 X1 w_n122_178# a_n80_262# a_n80_262# w_n122_178# sky130_fd_pr__pfet_01v8 w=680000u l=300000u
 .ends
 
-.subckt sky130_hilas_DualTACore01 VSUBS sky130_hilas_nMirror03_3/a_n92_86# sky130_hilas_nMirror03_2/a_n92_86#
-+ sky130_hilas_nMirror03_1/a_n92_86# sky130_hilas_nMirror03_0/a_n92_86# m2_n272_422#
+.subckt sky130_hilas_DualTACore01 sky130_hilas_nMirror03_3/a_n92_86# sky130_hilas_nMirror03_2/a_n92_86#
++ sky130_hilas_nMirror03_1/a_n92_86# sky130_hilas_nMirror03_0/a_n92_86# SUB m2_n272_422#
 + m1_52_n42# output1
-Xsky130_hilas_nMirror03_3 output1 sky130_hilas_nMirror03_3/a_n92_86# VSUBS sky130_hilas_nMirror03
-Xsky130_hilas_pFETmirror02_0 VSUBS m1_52_n42# m2_n272_422# m2_n274_n12# sky130_hilas_pFETmirror02
-Xsky130_hilas_pFETmirror02_1 VSUBS m1_52_n42# output1 m2_n272_1014# sky130_hilas_pFETmirror02
-Xsky130_hilas_nMirror03_0 m2_n274_n12# sky130_hilas_nMirror03_0/a_n92_86# VSUBS sky130_hilas_nMirror03
-Xsky130_hilas_nMirror03_2 m2_n272_1014# sky130_hilas_nMirror03_2/a_n92_86# VSUBS sky130_hilas_nMirror03
-Xsky130_hilas_nMirror03_1 m2_n272_422# sky130_hilas_nMirror03_1/a_n92_86# VSUBS sky130_hilas_nMirror03
+Xsky130_hilas_nMirror03_3 output1 sky130_hilas_nMirror03_3/a_n92_86# SUB sky130_hilas_nMirror03
+Xsky130_hilas_pFETmirror02_0 m1_52_n42# SUB m2_n272_422# m2_n274_n12# sky130_hilas_pFETmirror02
+Xsky130_hilas_pFETmirror02_1 m1_52_n42# SUB output1 m2_n272_1014# sky130_hilas_pFETmirror02
+Xsky130_hilas_nMirror03_0 m2_n274_n12# sky130_hilas_nMirror03_0/a_n92_86# SUB sky130_hilas_nMirror03
+Xsky130_hilas_nMirror03_2 m2_n272_1014# sky130_hilas_nMirror03_2/a_n92_86# SUB sky130_hilas_nMirror03
+Xsky130_hilas_nMirror03_1 m2_n272_422# sky130_hilas_nMirror03_1/a_n92_86# SUB sky130_hilas_nMirror03
 .ends
 
-.subckt sky130_hilas_pTransistorVert01 VSUBS a_n658_n792# a_n596_n822# a_n496_n792#
+.subckt sky130_hilas_pTransistorVert01 a_n658_n792# a_n596_n822# SUB a_n496_n792#
 + w_n726_n888#
 X0 a_n496_n792# a_n596_n822# a_n658_n792# w_n726_n888# sky130_fd_pr__pfet_g5v0d10v5 w=2.03e+06u l=500000u
 .ends
 
-.subckt sky130_hilas_pTransistorPair VSUBS m2_510_n704# m2_546_n498# a_454_n814# a_450_n208#
-+ w_534_n338# li_348_n384#
-Xsky130_hilas_pTransistorVert01_0 VSUBS li_348_n384# a_450_n208# m2_546_n498# w_534_n338#
+.subckt sky130_hilas_pTransistorPair m2_510_n704# m2_546_n498# a_454_n814# a_450_n208#
++ w_534_n338# li_348_n384# SUB
+Xsky130_hilas_pTransistorVert01_0 li_348_n384# a_450_n208# SUB m2_546_n498# w_534_n338#
 + sky130_hilas_pTransistorVert01
-Xsky130_hilas_pTransistorVert01_1 VSUBS li_348_n384# a_454_n814# m2_510_n704# w_534_n338#
+Xsky130_hilas_pTransistorVert01_1 li_348_n384# a_454_n814# SUB m2_510_n704# w_534_n338#
 + sky130_hilas_pTransistorVert01
 .ends
 
 .subckt sky130_hilas_TA2SignalBiasCell VOUT_AMP2 VOUT_AMP1 VGND VPWR VINN_AMP2 VINP_AMP2
 + VINP_AMP1 VINN_AMP1 VBIAS2 VBIAS1
-Xsky130_hilas_DualTACore01_0 VGND m2_n42_1070# m2_n48_1240# m2_n354_654# m2_n412_492#
+Xsky130_hilas_DualTACore01_0 m2_n42_1070# m2_n48_1240# m2_n354_654# m2_n412_492# VGND
 + VOUT_AMP1 VPWR VOUT_AMP2 sky130_hilas_DualTACore01
-Xsky130_hilas_pTransistorPair_0 VGND m2_n412_492# m2_n354_654# VINN_AMP1 VINP_AMP1
-+ w_n564_820# m2_n716_458# sky130_hilas_pTransistorPair
-Xsky130_hilas_pTransistorPair_1 VGND m2_n48_1240# m2_n42_1070# VINN_AMP2 VINP_AMP2
-+ w_n564_820# m2_n762_1142# sky130_hilas_pTransistorPair
-Xsky130_hilas_pTransistorPair_2 VGND m2_n716_458# m2_n762_1142# VBIAS2 VBIAS1 w_n564_820#
-+ VPWR sky130_hilas_pTransistorPair
+Xsky130_hilas_pTransistorPair_0 m2_n412_492# m2_n354_654# VINN_AMP1 VINP_AMP1 w_n564_820#
++ m2_n716_458# VGND sky130_hilas_pTransistorPair
+Xsky130_hilas_pTransistorPair_1 m2_n48_1240# m2_n42_1070# VINN_AMP2 VINP_AMP2 w_n564_820#
++ m2_n762_1142# VGND sky130_hilas_pTransistorPair
+Xsky130_hilas_pTransistorPair_2 m2_n716_458# m2_n762_1142# VBIAS2 VBIAS1 w_n564_820#
++ VPWR VGND sky130_hilas_pTransistorPair
 .ends
 

@@ -35,6 +35,6 @@
 
 * Top level circuit sky130_hilas_nFET03
 
-X0 a_54_n12# a_0_n38# a_n62_n12# VSUBS sky130_fd_pr__nfet_01v8 w=350000u l=270000u
+X0 a_54_n12# a_0_n38# a_n62_n12# SUB sky130_fd_pr__nfet_01v8 w=350000u l=270000u
 .end
 

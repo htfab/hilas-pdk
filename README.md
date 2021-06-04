@@ -266,15 +266,11 @@ Width: 28.100
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | VINP_AMP2            | metal2               | nsew,analog,default  |
-| 2                    | VINN_AMP2            | metal2               | n,analog,default     |
-| 3                    | VPWR                 | metal1               | nsew,power,default   |
-| 4                    | GATECOLSELECT        | metal1               | nsew,analog,default  |
-| 5                    | VINP_AMP1            | metal1               | nsew,analog,default  |
-| 6                    | VGND                 | metal1               | nsew,ground,default  |
-| 7                    | OUTPUT2              | metal2               | nsew                 |
-| 8                    | OUTPUT1              | metal2               | nsew,analog,default  |
-| 9                    | VINJ                 | metal1               | nsew,power,default   |
+| 1                    | VTUN                 | metal1               | nsew                 |
+| 2                    | VGATE2               | metal1               | nsew                 |
+| 3                    | PROG                 | metal1               | nsew                 |
+| 4                    | VGATE1               | metal1               | nsew                 |
+| 5                    | VINP_AMP1            | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="TA2Cell-NoFG"></a>
 ### `TA2Cell_NoFG`

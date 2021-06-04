@@ -35,10 +35,10 @@
 
 * Top level circuit sky130_hilas_TgateVinj01
 
-X0 a_n194_110# DrainSelect a_n354_n14# w_n420_n80# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
-X1 a_446_110# DrainSelect a_n194_110# VSUBS sky130_fd_pr__nfet_g5v0d10v5 w=310000u l=500000u
-X2 a_86_n14# a_n194_110# a_n194_n14# w_n420_n80# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
-X3 a_n194_n14# DrainSelect a_n354_n14# w_n420_n80# sky130_fd_pr__pfet_g5v0d10v5 w=320000u l=500000u
-X4 a_n194_n14# DrainSelect a_86_n14# VSUBS sky130_fd_pr__nfet_g5v0d10v5 w=310000u l=500000u
+X0 a_n194_n14# DrainSelect a_n354_n14# w_n420_n80# sky130_fd_pr__pfet_g5v0d10v5 w=320000u l=500000u
+X1 a_446_110# DrainSelect a_n194_110# SUB sky130_fd_pr__nfet_g5v0d10v5 w=310000u l=500000u
+X2 a_n194_n14# DrainSelect a_86_n14# SUB sky130_fd_pr__nfet_g5v0d10v5 w=310000u l=500000u
+X3 a_86_n14# a_n194_110# a_n194_n14# w_n420_n80# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
+X4 a_n194_110# DrainSelect a_n354_n14# w_n420_n80# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
 .end
 

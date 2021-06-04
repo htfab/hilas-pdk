@@ -35,22 +35,22 @@
 
 * Top level circuit sky130_hilas_swc2x2varactor
 
-X0 a_n2872_n666# w_n2932_350# w_n2932_350# sky130_fd_pr__cap_var w=590000u l=500000u
-X1 a_n2872_n466# w_n2932_350# w_n2932_350# sky130_fd_pr__cap_var w=590000u l=500000u
-X2 a_n2872_154# w_n2932_350# w_n2932_350# sky130_fd_pr__cap_var w=580000u l=580000u
-X3 a_n1042_n392# a_n1068_n492# a_n1042_n546# w_n1144_n880# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
-X4 a_n1042_n662# a_n1074_n762# a_n1042_n816# w_n1144_n880# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
-X5 w_n648_32# a_n300_134# a_n344_162# w_n648_32# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
-X6 a_n1042_60# a_n1110_n42# a_n1042_n84# w_n1144_n880# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=510000u
-X7 a_n1902_54# w_n1988_n506# w_n1988_n506# sky130_fd_pr__cap_var w=550000u l=730000u
-X8 a_n1854_n728# w_n1988_n506# w_n1988_n506# sky130_fd_pr__cap_var w=910000u l=1.14e+06u
-X9 a_n1042_n84# a_n1070_n188# a_n1042_n246# w_n1144_n880# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=520000u
-X10 a_n2870_n64# w_n2932_350# w_n2932_350# sky130_fd_pr__cap_var w=580000u l=570000u
-X11 a_n344_286# a_n444_132# a_n512_286# w_n648_32# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
-X12 a_n344_162# a_n444_132# a_n512_162# w_n648_32# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
-X13 a_n1042_n246# a_n1070_n188# a_n1042_n392# w_n1144_n880# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=520000u
+X0 a_n1042_60# a_n1110_n42# a_n1042_n84# w_n1144_n880# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=510000u
+X1 a_n2870_n266# w_n2932_350# w_n2932_350# sky130_fd_pr__cap_var w=580000u l=500000u
+X2 a_n1042_n662# a_n1074_n762# a_n1042_n816# w_n1144_n880# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
+X3 a_n1042_332# a_n1110_n42# a_n1042_176# w_n1144_n880# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
+X4 w_n648_32# a_n300_134# a_n344_162# w_n648_32# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
+X5 a_n1042_n392# a_n1068_n492# a_n1042_n546# w_n1144_n880# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
+X6 a_n344_286# a_n444_132# a_n512_286# w_n648_32# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
+X7 a_n2872_n666# w_n2932_350# w_n2932_350# sky130_fd_pr__cap_var w=590000u l=500000u
+X8 a_n1042_n84# a_n1070_n188# a_n1042_n246# w_n1144_n880# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=520000u
+X9 a_n2870_n64# w_n2932_350# w_n2932_350# sky130_fd_pr__cap_var w=580000u l=570000u
+X10 a_n1042_n246# a_n1070_n188# a_n1042_n392# w_n1144_n880# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=520000u
+X11 a_n1902_54# w_n1988_n506# w_n1988_n506# sky130_fd_pr__cap_var w=550000u l=730000u
+X12 a_n1854_n728# w_n1988_n506# w_n1988_n506# sky130_fd_pr__cap_var w=910000u l=1.14e+06u
+X13 a_n344_162# a_n444_132# a_n512_162# w_n648_32# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
 X14 a_n1830_n294# w_n1988_n506# w_n1988_n506# sky130_fd_pr__cap_var w=590000u l=750000u
-X15 a_n2870_n266# w_n2932_350# w_n2932_350# sky130_fd_pr__cap_var w=580000u l=500000u
-X16 a_n1042_332# a_n1110_n42# a_n1042_176# w_n1144_n880# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
+X15 a_n2872_154# w_n2932_350# w_n2932_350# sky130_fd_pr__cap_var w=580000u l=580000u
+X16 a_n2872_n466# w_n2932_350# w_n2932_350# sky130_fd_pr__cap_var w=590000u l=500000u
 .end
 

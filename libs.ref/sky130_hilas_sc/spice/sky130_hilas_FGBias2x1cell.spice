@@ -32,34 +32,34 @@
 
 * NGSPICE file created from sky130_hilas_FGBias2x1cell.ext - technology: sky130A
 
-.subckt sky130_hilas_TunCap01 VSUBS a_n2872_n666# w_n2902_n800#
+.subckt sky130_hilas_TunCap01 SUB a_n2872_n666# w_n2902_n800#
 X0 a_n2872_n666# w_n2902_n800# w_n2902_n800# sky130_fd_pr__cap_var w=590000u l=500000u
 .ends
 
-.subckt sky130_hilas_horizTransCell01 VSUBS a_n512_284# a_n952_238# a_n346_284# a_n654_438#
+.subckt sky130_hilas_horizTransCell01 a_n512_284# a_n952_238# SUB a_n346_284# a_n654_438#
 + a_n300_130# a_n512_162# w_n728_96# a_n654_596#
-X0 a_n654_438# a_n952_338# a_n654_284# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=390000u l=500000u
-X1 w_n728_96# a_n300_130# a_n344_162# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
-X2 a_n346_284# a_n952_238# a_n512_284# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=1.84e+06u l=510000u
-X3 a_n344_162# a_n952_238# a_n512_162# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
-X4 a_n926_596# a_n952_496# a_n926_438# VSUBS sky130_fd_pr__nfet_g5v0d10v5 w=400000u l=500000u
-X5 a_n926_438# a_n952_338# a_n926_284# VSUBS sky130_fd_pr__nfet_g5v0d10v5 w=400000u l=500000u
-X6 a_n654_596# a_n952_496# a_n654_438# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=390000u l=500000u
+X0 w_n728_96# a_n300_130# a_n344_162# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
+X1 a_n346_284# a_n952_238# a_n512_284# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=1.84e+06u l=510000u
+X2 a_n654_438# a_n952_338# a_n654_284# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=390000u l=500000u
+X3 a_n654_596# a_n952_496# a_n654_438# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=390000u l=500000u
+X4 a_n926_438# a_n952_338# a_n926_284# SUB sky130_fd_pr__nfet_g5v0d10v5 w=400000u l=500000u
+X5 a_n926_596# a_n952_496# a_n926_438# SUB sky130_fd_pr__nfet_g5v0d10v5 w=400000u l=500000u
+X6 a_n344_162# a_n952_238# a_n512_162# w_n728_96# sky130_fd_pr__pfet_g5v0d10v5 w=310000u l=500000u
 .ends
 
-.subckt sky130_hilas_FGVaractorCapacitor02 VSUBS a_n1882_n644# w_n2010_n760#
+.subckt sky130_hilas_FGVaractorCapacitor02 a_n1882_n644# SUB w_n2010_n760#
 X0 a_n1882_n644# w_n2010_n760# w_n2010_n760# sky130_fd_pr__cap_var w=1.11e+06u l=500000u
 .ends
 
 .subckt sky130_hilas_FGBias2x1cell VTUN VGND GATE_CONTROL DRAIN1 DRAIN4 VINJ OUTPUT1
 + OUTPUT2
 Xsky130_hilas_TunCap01_1 VGND a_n560_n620# VTUN sky130_hilas_TunCap01
-Xsky130_hilas_horizTransCell01_0 VGND OUTPUT2 a_n560_n620# VINJ li_934_n408# GateColSelect
+Xsky130_hilas_horizTransCell01_0 OUTPUT2 a_n560_n620# VGND VINJ li_934_n408# GateColSelect
 + DRAIN4 VINJ li_948_n216# sky130_hilas_horizTransCell01
 Xsky130_hilas_TunCap01_3 VGND a_n474_252# VTUN sky130_hilas_TunCap01
-Xsky130_hilas_horizTransCell01_1 VGND OUTPUT1 a_n474_252# VINJ li_934_56# GateColSelect
+Xsky130_hilas_horizTransCell01_1 OUTPUT1 a_n474_252# VGND VINJ li_934_56# GateColSelect
 + DRAIN1 VINJ li_948_n216# sky130_hilas_horizTransCell01
-Xsky130_hilas_FGVaractorCapacitor02_0 VGND a_n560_n620# GATE_CONTROL sky130_hilas_FGVaractorCapacitor02
-Xsky130_hilas_FGVaractorCapacitor02_2 VGND a_n474_252# GATE_CONTROL sky130_hilas_FGVaractorCapacitor02
+Xsky130_hilas_FGVaractorCapacitor02_0 a_n560_n620# VGND GATE_CONTROL sky130_hilas_FGVaractorCapacitor02
+Xsky130_hilas_FGVaractorCapacitor02_2 a_n474_252# VGND GATE_CONTROL sky130_hilas_FGVaractorCapacitor02
 .ends
 

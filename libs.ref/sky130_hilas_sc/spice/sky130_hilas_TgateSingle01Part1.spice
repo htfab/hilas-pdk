@@ -35,7 +35,7 @@
 
 * Top level circuit sky130_hilas_TgateSingle01Part1
 
-X0 sky130_hilas_m12m2_3/VSUBS a_514_n112# a_582_n188# sky130_hilas_m12m2_3/VSUBS sky130_fd_pr__nfet_01v8 w=300000u l=400000u
-X1 output a_514_n112# a_582_n314# sky130_hilas_m12m2_3/VSUBS sky130_fd_pr__nfet_01v8 w=310000u l=400000u
+X0 sky130_hilas_m12m2_3/SUB a_514_n112# a_582_n188# sky130_hilas_m12m2_3/SUB sky130_fd_pr__nfet_01v8 w=300000u l=400000u
+X1 output a_514_n112# a_582_n314# sky130_hilas_m12m2_3/SUB sky130_fd_pr__nfet_01v8 w=310000u l=400000u
 .end
 

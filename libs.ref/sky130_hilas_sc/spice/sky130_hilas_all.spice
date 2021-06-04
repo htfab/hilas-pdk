@@ -35,11 +35,11 @@
 
 * Top level circuit sky130_hilas_all
 
-X0 a_n1042_n392# a_n1100_n764# a_n1042_n546# w_n1204_n300# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
+X0 a_n1042_60# a_n1110_n42# a_n1042_n84# w_n1204_n300# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=510000u
 X1 a_n1042_n662# a_n1100_n764# a_n1042_n816# w_n1204_n300# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
-X2 a_n1042_60# a_n1110_n42# a_n1042_n84# w_n1204_n300# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=510000u
-X3 a_n1042_n84# a_n1068_n350# a_n1042_n246# w_n1204_n300# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=520000u
-X4 a_n1042_n246# a_n1068_n350# a_n1042_n392# w_n1204_n300# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=520000u
-X5 a_n1042_332# a_n1110_n42# a_n1042_176# w_n1204_n300# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
+X2 a_n1042_332# a_n1110_n42# a_n1042_176# w_n1204_n300# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
+X3 a_n1042_n392# a_n1100_n764# a_n1042_n546# w_n1204_n300# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=500000u
+X4 a_n1042_n84# a_n1068_n350# a_n1042_n246# w_n1204_n300# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=520000u
+X5 a_n1042_n246# a_n1068_n350# a_n1042_n392# w_n1204_n300# sky130_fd_pr__pfet_g5v0d10v5 w=300000u l=520000u
 .end
 
