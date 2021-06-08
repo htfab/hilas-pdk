@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1607365263
+timestamp 1622381024
 << error_s >>
 rect -1581 672 -1575 678
 rect -1528 672 -1522 678
@@ -39,10 +39,17 @@ rect 65 727 193 745
 rect 65 140 193 159
 << metal1 >>
 rect -2353 734 -2332 745
+rect -2306 737 -2287 745
+rect -2265 739 -2244 745
+rect -2157 738 -2139 745
+rect -1541 730 -1499 745
+rect -1438 730 -1396 745
+rect -1068 737 -1045 745
 rect -416 737 -397 745
 rect -372 737 -344 745
 rect -3 731 31 745
 rect 63 730 91 745
+rect -1541 716 -1396 730
 rect -2352 141 -2329 153
 rect -3 140 31 159
 rect 64 140 91 161
@@ -73,22 +80,22 @@ rect -1137 262 -1115 277
 rect -700 262 -113 267
 rect -1137 246 -113 262
 rect -1137 240 -661 246
-use sky130_hilas_FGtrans2x1cell  sky130_hilas_FGtrans2x1cell_0
-timestamp 1607356355
-transform -1 0 -1860 0 1 522
-box -395 -382 757 223
-use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1607346141
-transform 1 0 -1077 0 1 522
-box -396 -382 757 223
-use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
-timestamp 1607345152
-transform 1 0 -454 0 -1 305
-box 133 -440 320 165
 use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
-timestamp 1607268356
+timestamp 1608069483
 transform 1 0 38 0 1 181
 box -172 -22 155 550
+use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
+timestamp 1608069483
+transform 1 0 -454 0 -1 305
+box 133 -440 320 165
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1608069483
+transform 1 0 -1077 0 1 522
+box -396 -382 757 223
+use sky130_hilas_FGtrans2x1cell  sky130_hilas_FGtrans2x1cell_0
+timestamp 1608069483
+transform -1 0 -1860 0 1 522
+box -395 -382 757 223
 << labels >>
 rlabel metal1 -416 737 -397 745 0 GateColSelect
 rlabel metal1 -372 737 -344 745 0 Vdd
@@ -100,4 +107,16 @@ rlabel metal2 -252 451 -220 475 0 Vin+_Amp2
 rlabel metal2 -260 718 -229 742 1 Vin-_Amp2
 rlabel metal1 -2352 141 -2329 153 0 Vin-_Amp1
 rlabel metal1 -2353 734 -2332 745 0 Vin+_Amp1
+port 5 nsew
+rlabel metal1 -1438 738 -1396 745 0 Vtun
+port 1 nsew
+rlabel metal1 -1541 738 -1499 745 0 Vtun
+rlabel metal1 -1068 737 -1045 745 0 Vgate2
+port 2 nsew
+rlabel metal1 -2265 739 -2244 745 0 prog
+port 3 nsew
+rlabel metal1 -2157 738 -2139 745 0 prog
+port 3 nsew
+rlabel metal1 -2306 737 -2287 745 0 Vgate1
+port 4 nsew
 << end >>
