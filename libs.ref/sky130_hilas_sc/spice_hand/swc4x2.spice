@@ -1,0 +1,41 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/swx4x2.sch
+.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/swx4x2.sch
+M9 Vinj  GateSel1  _net0  Vinj MOSP
+M1 Col1  _net1  Row1  Vinj MOSP
+M10 _net0  _net1  Drain1  Vinj MOSP
+M17 _net2  _net3  Drain2  Vinj MOSP
+M18 Vinj  GateSel1  _net2  Vinj MOSP
+M21 Vinj  GateSel2  _net4  Vinj MOSP
+M20 _net4  _net5  Drain2  Vinj MOSP
+M19 Col2  _net5  Row2  Vinj MOSP
+M25 Col2  _net6  Row3  Vinj MOSP
+M26 _net7  _net6  Drain3  Vinj MOSP
+M22 Col1  _net8  Row3  Vinj MOSP
+M23 _net9  _net8  Drain3  Vinj MOSP
+M24 Vinj  GateSel1  _net9  Vinj MOSP
+M16 Col1  _net3  Row2  Vinj MOSP
+M13 Col2  _net10  Row1  Vinj MOSP
+M14 _net11  _net10  Drain1  Vinj MOSP
+M15 Vinj  GateSel2  _net11  Vinj MOSP
+M30 Vinj  GateSel1  _net12  Vinj MOSP
+M27 Vinj  GateSel2  _net7  Vinj MOSP
+M31 Col2  _net13  Row4  Vinj MOSP
+M33 Vinj  GateSel2  _net14  Vinj MOSP
+M32 _net14  _net13  Drain4  Vinj MOSP
+M28 Col1  _net15  Row4  Vinj MOSP
+M29 _net12  _net15  Drain4  Vinj MOSP
+C8 Gate2  _net13 10f
+C7 Gate1  _net15 10f
+C4 Gate2  _net5 10f
+C6 Gate2  _net6 10f
+C5 Gate1  _net8 10f
+C3 Gate1  _net3 10f
+C2 Gate2  _net10 10f
+C1 Gate1  _net1 10f
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

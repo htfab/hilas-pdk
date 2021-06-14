@@ -1,0 +1,33 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/2TA_0FGInput.sch
+.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/2TA_0FGInput.sch
+M27 _net0  Vin22  _net1  _net2 MOSP
+M28 _net3  Vin21  _net1  _net2 MOSP
+M20 _net0  _net0  0  0 MOSN
+M19 _net4  _net0  0  0 MOSN
+M25 _net5  Vin11  _net6  _net7 MOSP
+M26 _net8  Vin12  _net6  _net7 MOSP
+M14 _net8  _net8  0  0 MOSN
+M13 _net9  _net8  0  0 MOSN
+M17 Vdd  _net9  _net9  Vdd MOSP
+M16 _net5  _net5  0  0 MOSN
+M15 Out1  _net5  0  0 MOSN
+M18 Vdd  _net9  Out1  Vdd MOSP
+M23 Vdd  _net4  _net4  Vdd MOSP
+M24 Vdd  _net4  Out2  Vdd MOSP
+M22 _net3  _net3  0  0 MOSN
+M21 Out2  _net3  0  0 MOSN
+M6 Vdd  _net10  _net6  Vinj MOSP
+M7 _net11  _net10  Drain1  Vinj MOSP
+M8 Vinj  GateSel1  _net11  Vinj MOSP
+M1 Vdd  _net12  _net1  Vinj MOSP
+M2 _net13  _net12  Drain2  Vinj MOSP
+M3 Vinj  GateSel1  _net13  Vinj MOSP
+C1 Gate1  _net12 10f
+C2 Gate1  _net10 10f
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

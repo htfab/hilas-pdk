@@ -1,0 +1,15 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/Trans4small.sch
+.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/Trans4small.sch
+M4 Source2p  Gate2p  Drain2p  Well MOSP
+M6 Source3p  Gate3p  Drain3p  Well MOSP
+M5 Drain3n  Gate3n  Source3n  0 MOSN
+M3 Drain2n  Gate2n  Source2n  0 MOSN
+M1 Drain1n  Gate1n  Source1n  0 MOSN
+M2 Source1p  Gate1p  Drain1p  Well MOSP
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

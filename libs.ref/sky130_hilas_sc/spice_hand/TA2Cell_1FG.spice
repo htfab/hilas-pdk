@@ -1,0 +1,41 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/2TA_1WeakInput.sch
+.INCLUDE "/tmp/.mount_Qucs-SIfwe0Q/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/2TA_1WeakInput.sch
+C1 _net6  _net1 10f
+C6 _net17  _net8 10f
+C7 _net17  _net8 10f
+C3 _net6  _net1 10f
+C4 _net13  _net8 10f
+M24 _net0  _net22  _net23  _net0 MOSP
+M23 _net0  _net22  _net22  _net0 MOSP
+M16 _net0  _net18  _net20  _net0 MOSP
+M15 _net0  _net18  _net18  _net0 MOSP
+M19 _net22  _net15  0  0 MOSN
+M21 _net23  _net16  0  0 MOSN
+M22 _net16  _net16  0  0 MOSN
+M20 _net15  _net15  0  0 MOSN
+M17 _net20  _net21  0  0 MOSN
+M18 _net21  _net21  0  0 MOSN
+M13 _net18  _net19  0  0 MOSN
+M14 _net19  _net19  0  0 MOSN
+M26 _net19  _net26  _net9  _net25 MOSN
+M25 _net21  _net24  _net9  _net25 MOSN
+M10 _net2  _net8  _net16  _net3 MOSP
+M11 _net12  _net8  _net11  _net3 MOSP
+M12 _net3  _net8  _net12  _net3 MOSP
+M4 _net15  _net8  _net2  _net3 MOSP
+M5 _net7  _net8  _net5  _net3 MOSP
+M6 _net3  _net8  _net7  _net3 MOSP
+M7 _net0  _net1  _net9  _net3 MOSP
+M8 _net10  _net1  _net11  _net3 MOSP
+M9 _net3  _net1  _net10  _net3 MOSP
+M1 _net0  _net1  _net2  _net3 MOSP
+M2 _net4  _net1  _net5  _net3 MOSP
+M3 _net3  _net1  _net4  _net3 MOSP
+C5 _net14  _net8 10f
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

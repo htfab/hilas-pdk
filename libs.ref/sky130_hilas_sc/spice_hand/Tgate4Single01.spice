@@ -1,0 +1,25 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/TgateSingle01.sch
+.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/TgateSingle01.sch
+M2 Vdd  _net0  _net1  Vdd MOSP
+M3 _net1  _net0  0  0 MOSN
+M5 Out1  _net0  Node1_1  0 MOSN
+M6 Out1  _net1  Node1_1  Vdd MOSP
+M8 Vdd  _net2  _net3  Vdd MOSP
+M9 _net3  _net2  0  0 MOSN
+M11 Out2  _net2  Node1_2  0 MOSN
+M12 Out2  _net3  Node1_2  Vdd MOSP
+M14 Vdd  _net4  _net5  Vdd MOSP
+M15 _net5  _net4  0  0 MOSN
+M17 Out3  _net4  Node1_3  0 MOSN
+M18 Out3  _net5  Node1_3  Vdd MOSP
+M20 Vdd  _net6  _net7  Vdd MOSP
+M21 _net7  _net6  0  0 MOSN
+M23 Out4  _net6  Node1_4  0 MOSN
+M24 Out4  _net7  Node1_4  Vdd MOSP
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

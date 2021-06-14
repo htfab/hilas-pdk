@@ -1,0 +1,21 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/FGcharacterization01.sch
+.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/FGcharacterization01.sch
+M7 _net0  _net0  0  0 MOSN
+M8 _net1  _net0  0  0 MOSN
+M9 Vinj  _net1  _net1  Vinj MOSP
+M10 _net2  _net2  0  0 MOSN
+M11 Out1  _net2  0  0 MOSN
+M12 Vinj  _net1  Out1  Vinj MOSP
+M23 Vinj  Vbias  _net3  Vinj MOSP
+M5 _net3  Vfg  _net0  _net4 MOSP
+M6 _net3  Vref  _net2  _net4 MOSP
+C1 Vfg  Gate1 10f
+C2 Vfg  Gate2 10f
+M20 Source1  Vfg  Drain1  Vinj MOSP
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

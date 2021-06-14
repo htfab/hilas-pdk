@@ -1,0 +1,40 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/DAC5bit01.sch
+.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/DAC5bit01.sch
+M2 Vdd  A1  Out  Vdd MOSP
+M3 Out  A1  Vdd  Vdd MOSP
+M4 Vdd  A0  Out  Vdd MOSP
+M6 Vdd  A2  Out  Vdd MOSP
+M7 Out  A2  Vdd  Vdd MOSP
+M12 Vdd  A2  Out  Vdd MOSP
+M13 Out  A2  Vdd  Vdd MOSP
+M14 Vdd  A3  Out  Vdd MOSP
+M15 Out  A3  Vdd  Vdd MOSP
+M16 Vdd  A3  Out  Vdd MOSP
+M17 Out  A3  Vdd  Vdd MOSP
+M18 Vdd  A3  Out  Vdd MOSP
+M19 Out  A3  Vdd  Vdd MOSP
+M20 Vdd  A3  Out  Vdd MOSP
+M21 Out  A3  Vdd  Vdd MOSP
+M22 Vdd  A4  Out  Vdd MOSP
+M23 Out  A4  Vdd  Vdd MOSP
+M24 Vdd  A4  Out  Vdd MOSP
+M25 Out  A4  Vdd  Vdd MOSP
+M26 Vdd  A4  Out  Vdd MOSP
+M27 Out  A4  Vdd  Vdd MOSP
+M28 Vdd  A4  Out  Vdd MOSP
+M29 Out  A4  Vdd  Vdd MOSP
+M30 Vdd  A4  Out  Vdd MOSP
+M31 Out  A4  Vdd  Vdd MOSP
+M32 Vdd  A4  Out  Vdd MOSP
+M33 Out  A4  Vdd  Vdd MOSP
+M34 Vdd  A4  Out  Vdd MOSP
+M35 Out  A4  Vdd  Vdd MOSP
+M36 Vdd  A4  Out  Vdd MOSP
+M37 Out  A4  Vdd  Vdd MOSP
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

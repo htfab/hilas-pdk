@@ -1,0 +1,29 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/DrainSelect01.sch
+.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/DrainSelect01.sch
+M1 SelectDrain  Select1n  Drain1  0 NFET
+M2 Vinj  Vinj  Select1n  Vinj MOSP
+M3 Select1n  Vinj  0  0 MOSN
+M4 SelectDrain  Vinj  Drain1  Vinj MOSP
+M6 Drain1  Select1n  Vinj  Vinj MOSP
+M7 SelectDrain  _net0  Drain2  0 NFET
+M8 Vinj  Vinj  _net0  Vinj MOSP
+M9 _net0  Vinj  0  0 MOSN
+M10 SelectDrain  Vinj  Drain2  Vinj MOSP
+M12 Drain2  _net0  Vinj  Vinj MOSP
+M13 SelectDrain  Select3n  Drain3  0 NFET
+M14 Vinj  Vinj  Select3n  Vinj MOSP
+M15 Select3n  Vinj  0  0 MOSN
+M16 SelectDrain  Vinj  Drain3  Vinj MOSP
+M18 Drain3  Select3n  Vinj  Vinj MOSP
+M19 SelectDrain  Select4n  Drain4  0 NFET
+M20 Vinj  Vinj  Select4n  Vinj MOSP
+M21 Select4n  Vinj  0  0 MOSN
+M22 SelectDrain  Vinj  Drain4  Vinj MOSP
+M24 Drain4  Select4n  Vinj  Vinj MOSP
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

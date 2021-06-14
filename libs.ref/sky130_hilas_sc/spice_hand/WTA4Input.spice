@@ -1,0 +1,33 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/WTA4Input.sch
+.INCLUDE "/tmp/.mount_Qucs-SIfwe0Q/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/WTA4Input.sch
+M2 WTAin1  WTAMiddleNode  0  0 MOSN
+M1 WTAOut1  WTAin1  WTAMiddleNode  0 MOSN
+M15 WTAin2  WTAMiddleNode  0  0 MOSN
+M16 WTAOut2  WTAin2  WTAMiddleNode  0 MOSN
+M17 WTAin3  WTAMiddleNode  0  0 MOSN
+M18 WTAOut3  WTAin3  WTAMiddleNode  0 MOSN
+M19 WTAin4  WTAMiddleNode  0  0 MOSN
+M20 WTAOut4  WTAin4  WTAMiddleNode  0 MOSN
+M5 Vinj  GateSel1  _net1  Vinj MOSP
+M4 _net1  _net0  Drain1  Vinj MOSP
+M3 Col1  _net0  WTAOut1  Vinj MOSP
+M8 Vinj  GateSel1  _net3  Vinj MOSP
+M6 Col1  _net2  WTAOut2  Vinj MOSP
+M7 _net3  _net2  Drain2  Vinj MOSP
+M11 Vinj  GateSel1  _net5  Vinj MOSP
+M9 Col1  _net4  WTAOut3  Vinj MOSP
+M10 _net5  _net4  Drain3  Vinj MOSP
+M14 Vinj  GateSel1  _net7  Vinj MOSP
+M12 Col1  _net6  WTAOut4  Vinj MOSP
+M13 _net7  _net6  Drain4  Vinj MOSP
+C4 Gate1  _net6 10f
+C3 Gate1  _net4 10f
+C2 Gate1  _net2 10f
+C1 Gate1  _net0 10f
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

@@ -1,0 +1,10 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/pFETLarge.sch
+.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/pFETLarge.sch
+M2 Source1p  Gate1p  Drain1p  Well MOSP
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

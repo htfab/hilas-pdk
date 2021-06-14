@@ -1,0 +1,33 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/4TgateDoubleThrow.sch
+.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/4TgateDoubleThrow.sch
+M14 Node2_1  Select1n  Out1  0 NFET
+M9 Vdd  Vdd  Select1n  Vdd MOSP
+M10 Select1n  Vdd  0  0 MOSN
+M11 Node2_1  Vdd  Out1  Vdd MOSP
+M12 Out1  Vdd  Node1_1  0 MOSN
+M13 Out1  Select1n  Node1_1  Vdd MOSP
+M15 Node2_2  Select2n  Out2  0 NFET
+M16 Vdd  Vdd  Select2n  Vdd MOSP
+M17 Select2n  Vdd  0  0 MOSN
+M18 Node2_2  Vdd  Out2  Vdd MOSP
+M19 Out2  Vdd  Node1_2  0 MOSN
+M20 Out2  Select2n  Node1_2  Vdd MOSP
+M21 Node2_3  Select3n  Out3  0 NFET
+M22 Vdd  Vdd  Select3n  Vdd MOSP
+M23 Select3n  Vdd  0  0 MOSN
+M24 Node2_3  Vdd  Out3  Vdd MOSP
+M25 Out3  Vdd  Node1_3  0 MOSN
+M26 Out3  Select3n  Node1_3  Vdd MOSP
+M27 Node2_4  Select4n  Out4  0 NFET
+M28 Vdd  Vdd  Select4n  Vdd MOSP
+M29 Select4n  Vdd  0  0 MOSN
+M30 Node2_4  Vdd  Out4  Vdd MOSP
+M31 Out4  Vdd  Node1_4  0 MOSN
+M32 Out4  Select4n  Node1_4  Vdd MOSP
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

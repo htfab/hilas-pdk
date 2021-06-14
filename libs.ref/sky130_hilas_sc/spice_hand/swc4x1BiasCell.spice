@@ -1,0 +1,25 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/swc4x1BiasCell.sch
+.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/swc4x1BiasCell.sch
+M1 _net0  GateSel1  _net1  _net0 MOSP
+M2 Vdd  _net2  Row1  _net0 MOSP
+M3 _net1  _net2  Drain1  _net0 MOSP
+M4 _net3  _net4  Drain2  _net0 MOSP
+M5 _net0  GateSel1  _net3  _net0 MOSP
+M6 Vdd  _net5  Row3  _net0 MOSP
+M7 _net6  _net5  Drain3  _net0 MOSP
+M8 _net0  GateSel1  _net6  _net0 MOSP
+M9 Vdd  _net4  Row2  _net0 MOSP
+M10 _net0  GateSel1  _net7  _net0 MOSP
+M11 Vdd  _net8  Row4  _net0 MOSP
+M12 _net7  _net8  Drain4  _net0 MOSP
+C1 Gate1  _net8 10f
+C2 Gate1  _net5 10f
+C3 Gate1  _net4 10f
+C4 Gate1  _net2 10f
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

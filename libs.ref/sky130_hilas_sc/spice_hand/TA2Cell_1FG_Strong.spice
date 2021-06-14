@@ -1,0 +1,47 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/2TA_1StrongInput.sch
+.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/2TA_1StrongInput.sch
+C3 _net0  _net1 10fF
+C1 Gate1  _net2 10fF
+C2 Gate1  _net3 10fF
+M23 Vdd  _net4  _net4  Vdd MOSP
+M24 Vdd  _net4  Out2  Vdd MOSP
+M3 Vinj  GateSel1  _net5  Vinj MOSP
+M2 _net5  _net2  Drain2  Vinj MOSP
+M8 Vinj  GateSel1  _net6  Vinj MOSP
+M7 _net6  _net3  Drain1  Vinj MOSP
+M6 Vdd  _net3  _net7  Vinj MOSP
+M12 _net8  _net1  _net9  Vinj MOSP
+M11 _net10  _net11  _net8  Vinj MOSP
+M20 _net10  _net10  0  0 MOSN
+M17 Vdd  _net12  _net12  Vdd MOSP
+M18 Vdd  _net12  Out1  Vdd MOSP
+M13 _net12  _net13  0  0 MOSN
+M16 _net14  _net14  0  0 MOSN
+M15 Out1  _net14  0  0 MOSN
+M26 _net13  Vin22  _net7  _net15 MOSN
+M14 _net13  _net13  0  0 MOSN
+M25 _net14  Vin21  _net7  _net15 MOSN
+M21 Out2  _net9  0  0 MOSN
+M22 _net9  _net9  0  0 MOSN
+M19 _net4  _net10  0  0 MOSN
+M9 _net16  _net1  Drain1  Vinj MOSP
+M10 Vinj  GateSel2  _net16  Vinj MOSP
+M4 _net17  _net11  Drain2  Vinj MOSP
+M5 Vinj  GateSel2  _net17  Vinj MOSP
+M1 Vdd  _net2  _net8  Vinj MOSP
+M27 Vin11  Run  _net18  0 MOSN
+M28 _net18  Prog  Gate2  0 MOSN
+M34 _net0  Run  Gate2  _net19 MOSP
+M33 _net0  Prog  Gate2  0 MOSN
+M31 Vin12  Run  _net0  0 MOSN
+M29 Vin11  Prog  _net18  _net20 MOSP
+M30 _net18  Run  Gate2  _net20 MOSP
+M32 Vin12  Prog  _net0  _net19 MOSP
+C4 _net18  _net11 10fF
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

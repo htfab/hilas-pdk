@@ -1,0 +1,19 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/FGBiasWeakGate2x2cell.sch
+.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/FGBiasWeakGate2x2cell.sch
+C2 Gate1  GateSel1 10f
+C3 Gate1  GateSel1 10f
+C5 Vin1  GateSel1 10f
+M1 Col1  GateSel1  Row2  Vinj MOSP
+M2 _net0  GateSel1  Drain1  Vinj MOSP
+M3 Vinj  GateSel1  _net0  Vinj MOSP
+M4 Col1  GateSel1  Row1  Vinj MOSP
+M5 _net1  GateSel1  Drain2  Vinj MOSP
+M6 Vinj  GateSel1  _net1  Vinj MOSP
+C6 Vin2  GateSel1 10f
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END

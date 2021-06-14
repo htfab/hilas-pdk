@@ -1,0 +1,40 @@
+* Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/capacitorArray01.sch
+.INCLUDE "/tmp/.mount_Qucs-SkXfhOs/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/capacitorArray01.sch
+M1 Vinj  GateSel1  _net0  Vinj MOSP
+M2 CapTerm1  _net1  Row1  Vinj MOSP
+M3 _net0  _net1  Drain1  Vinj MOSP
+M4 _net2  _net3  Drain2  Vinj MOSP
+M5 Vinj  GateSel1  _net2  Vinj MOSP
+M6 CapTerm1  _net4  Row3  Vinj MOSP
+M7 _net5  _net4  Drain3  Vinj MOSP
+M8 Vinj  GateSel1  _net5  Vinj MOSP
+M9 CapTerm1  _net3  Row2  Vinj MOSP
+M10 Vinj  GateSel1  _net6  Vinj MOSP
+M11 CapTerm1  _net7  Row4  Vinj MOSP
+M12 _net6  _net7  Drain4  Vinj MOSP
+C1 Gate1  _net7 10f
+C2 Gate1  _net4 10f
+C3 Gate1  _net3 10f
+C4 Gate1  _net1 10f
+C10 Row1 CapTerm1  40F 
+C11 Row1 CapTerm1  40F 
+C8 CapTerm1 Row1  40F 
+C9 CapTerm1 Row1  40F 
+C12 Row1 CapTerm1  40F 
+C13 Row1 CapTerm1  40F 
+C6 CapTerm1 Row1  40F 
+C7 CapTerm1 Row1  40F 
+C14 Row2 CapTerm1  40F 
+C15 Row2 CapTerm1  40F 
+C20 CapTerm1 Row2  40F 
+C21 CapTerm1 Row2  40F 
+C26 CapTerm1 Row4  40F 
+C24 CapTerm1 Row3  40F 
+C25 CapTerm1 Row3  40F 
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+exit
+.endc
+.END
