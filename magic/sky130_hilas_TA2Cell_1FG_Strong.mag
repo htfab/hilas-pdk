@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1623696331
+timestamp 1623696928
 << error_s >>
 rect -1581 672 -1575 678
 rect -1528 672 -1522 678
@@ -86,7 +86,7 @@ timestamp 1608069483
 transform -1 0 -1860 0 1 522
 box -395 -382 757 223
 use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1608069483
+timestamp 1623696928
 transform 1 0 -1077 0 1 522
 box -396 -382 757 223
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
