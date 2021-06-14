@@ -86,7 +86,10 @@ LIB_PATH = {
     'cell_details': REF_ROOT / PDK_VARIANT / 'CELL_DETAILS.md'
 }
 for name in ['cdl', 'doc', 'gds', 'lef', 'lib', 'mag', 'spice', 'schem', 'techlef', 'verilog']:
-    LIB_PATH.update({name: REF_ROOT / PDK_VARIANT / name})
+    if name == 'spice':
+        LIB_PATH.update({name: REF_ROOT / PDK_VARIANT / 'spice_ext'})
+    else:
+        LIB_PATH.update({name: REF_ROOT / PDK_VARIANT / name})
 
 with open(THIS_DIR / 'templates' / 'license_head.txt', 'r') as f:
     LICENSE_HEAD = f.read() + '\n'
