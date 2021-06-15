@@ -1,0 +1,304 @@
+v {xschem version=2.9.9 file_version=1.2 }
+G {}
+K {}
+V {}
+S {}
+E {}
+N 790 -910 820 -910 { lab=#net1}
+N 750 -860 750 -850 { lab=#net2}
+N 750 -850 790 -850 { lab=#net2}
+N 630 -910 790 -910 { lab=#net1}
+N 630 -850 670 -850 { lab=#net3}
+N 630 -860 630 -850 { lab=#net3}
+N 600 -910 630 -910 { lab=#net1}
+N 560 -960 560 -940 { lab=#net4}
+N 900 -1040 900 -830 { lab=#net5}
+N 440 -800 940 -800 { lab=#net6}
+N 900 -830 900 -780 { lab=#net5}
+N 860 -880 860 -800 { lab=#net6}
+N 860 -940 900 -940 { lab=#net5}
+N 750 -850 750 -780 { lab=#net2}
+N 750 -1040 750 -850 { lab=#net2}
+N 670 -860 670 -850 { lab=#net3}
+N 670 -850 670 -780 { lab=#net3}
+N 670 -1040 670 -850 { lab=#net3}
+N 520 -1040 520 -990 { lab=#net7}
+N 520 -1040 520 -780 { lab=#net7}
+N 560 -880 560 -820 { lab=#net8}
+N 440 -820 560 -820 { lab=#net8}
+N 560 -820 710 -820 { lab=#net8}
+N 710 -820 810 -820 { lab=#net8}
+N 810 -820 880 -820 { lab=#net8}
+N 880 -820 940 -820 { lab=#net8}
+N 490 -1040 490 -780 { lab=#net9}
+N 490 -1020 560 -1020 { lab=#net9}
+N 790 -1170 820 -1170 { lab=#net10}
+N 750 -1120 750 -1110 { lab=#net2}
+N 750 -1110 790 -1110 { lab=#net2}
+N 630 -1170 790 -1170 { lab=#net10}
+N 630 -1110 670 -1110 { lab=#net3}
+N 630 -1120 630 -1110 { lab=#net3}
+N 600 -1170 630 -1170 { lab=#net10}
+N 560 -1220 560 -1200 { lab=#net11}
+N 900 -1300 900 -1090 { lab=#net5}
+N 440 -1060 940 -1060 { lab=#net12}
+N 900 -1090 900 -1040 { lab=#net5}
+N 860 -1140 860 -1060 { lab=#net12}
+N 860 -1200 900 -1200 { lab=#net5}
+N 750 -1110 750 -1040 { lab=#net2}
+N 750 -1300 750 -1110 { lab=#net2}
+N 670 -1120 670 -1110 { lab=#net3}
+N 670 -1110 670 -1040 { lab=#net3}
+N 670 -1300 670 -1110 { lab=#net3}
+N 520 -1300 520 -1250 { lab=#net7}
+N 520 -1300 520 -1040 { lab=#net7}
+N 560 -1140 560 -1080 { lab=#net13}
+N 440 -1080 560 -1080 { lab=#net13}
+N 560 -1080 710 -1080 { lab=#net13}
+N 710 -1080 810 -1080 { lab=#net13}
+N 810 -1080 880 -1080 { lab=#net13}
+N 880 -1080 940 -1080 { lab=#net13}
+N 490 -1300 490 -1040 { lab=#net9}
+N 490 -1280 560 -1280 { lab=#net9}
+N 790 -1430 820 -1430 { lab=#net14}
+N 750 -1380 750 -1370 { lab=#net2}
+N 750 -1370 790 -1370 { lab=#net2}
+N 630 -1430 790 -1430 { lab=#net14}
+N 630 -1370 670 -1370 { lab=#net3}
+N 630 -1380 630 -1370 { lab=#net3}
+N 600 -1430 630 -1430 { lab=#net14}
+N 560 -1480 560 -1460 { lab=#net15}
+N 900 -1560 900 -1350 { lab=#net5}
+N 440 -1320 940 -1320 { lab=#net16}
+N 900 -1350 900 -1300 { lab=#net5}
+N 860 -1400 860 -1320 { lab=#net16}
+N 860 -1460 900 -1460 { lab=#net5}
+N 750 -1370 750 -1300 { lab=#net2}
+N 750 -1560 750 -1370 { lab=#net2}
+N 670 -1380 670 -1370 { lab=#net3}
+N 670 -1370 670 -1300 { lab=#net3}
+N 670 -1560 670 -1370 { lab=#net3}
+N 520 -1560 520 -1510 { lab=#net7}
+N 520 -1560 520 -1300 { lab=#net7}
+N 560 -1400 560 -1340 { lab=#net17}
+N 440 -1340 560 -1340 { lab=#net17}
+N 560 -1340 710 -1340 { lab=#net17}
+N 710 -1340 810 -1340 { lab=#net17}
+N 810 -1340 880 -1340 { lab=#net17}
+N 880 -1340 940 -1340 { lab=#net17}
+N 490 -1560 490 -1300 { lab=#net9}
+N 490 -1540 560 -1540 { lab=#net9}
+N 790 -1690 820 -1690 { lab=#net18}
+N 750 -1640 750 -1630 { lab=#net2}
+N 750 -1630 790 -1630 { lab=#net2}
+N 630 -1690 790 -1690 { lab=#net18}
+N 630 -1630 670 -1630 { lab=#net3}
+N 630 -1640 630 -1630 { lab=#net3}
+N 600 -1690 630 -1690 { lab=#net18}
+N 560 -1740 560 -1720 { lab=#net19}
+N 900 -1820 900 -1610 { lab=#net5}
+N 440 -1580 940 -1580 { lab=#net20}
+N 900 -1610 900 -1560 { lab=#net5}
+N 860 -1660 860 -1580 { lab=#net20}
+N 860 -1720 900 -1720 { lab=#net5}
+N 750 -1630 750 -1560 { lab=#net2}
+N 750 -1820 750 -1630 { lab=#net2}
+N 670 -1640 670 -1630 { lab=#net3}
+N 670 -1630 670 -1560 { lab=#net3}
+N 670 -1820 670 -1630 { lab=#net3}
+N 520 -1820 520 -1770 { lab=#net7}
+N 520 -1820 520 -1560 { lab=#net7}
+N 560 -1660 560 -1600 { lab=#net21}
+N 440 -1600 560 -1600 { lab=#net21}
+N 560 -1600 710 -1600 { lab=#net21}
+N 710 -1600 810 -1600 { lab=#net21}
+N 810 -1600 880 -1600 { lab=#net21}
+N 880 -1600 940 -1600 { lab=#net21}
+N 490 -1820 490 -1560 { lab=#net9}
+N 490 -1800 560 -1800 { lab=#net9}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 840 -910 0 0 {name=M3
+L=0.5
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/cap_var_hvt.sym} 790 -880 0 0 {name=C1 model=cap_var_hvt W=0.5 L=0.5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 580 -910 0 1 {name=M5
+L=0.5
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/cap_var_hvt.sym} 630 -880 0 1 {name=C2 model=cap_var_hvt W=0.5 L=0.5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 540 -990 0 0 {name=M1
+L=0.5
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 840 -1170 0 0 {name=M2
+L=0.5
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/cap_var_hvt.sym} 790 -1140 0 0 {name=C3 model=cap_var_hvt W=0.5 L=0.5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 580 -1170 0 1 {name=M4
+L=0.5
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/cap_var_hvt.sym} 630 -1140 0 1 {name=C4 model=cap_var_hvt W=0.5 L=0.5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 540 -1250 0 0 {name=M6
+L=0.5
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 840 -1430 0 0 {name=M7
+L=0.5
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/cap_var_hvt.sym} 790 -1400 0 0 {name=C5 model=cap_var_hvt W=0.5 L=0.5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 580 -1430 0 1 {name=M8
+L=0.5
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/cap_var_hvt.sym} 630 -1400 0 1 {name=C6 model=cap_var_hvt W=0.5 L=0.5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 540 -1510 0 0 {name=M9
+L=0.5
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 840 -1690 0 0 {name=M10
+L=0.5
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/cap_var_hvt.sym} 790 -1660 0 0 {name=C7 model=cap_var_hvt W=0.5 L=0.5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 580 -1690 0 1 {name=M11
+L=0.5
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {sky130_fd_pr/cap_var_hvt.sym} 630 -1660 0 1 {name=C8 model=cap_var_hvt W=0.5 L=0.5 VM=1 spiceprefix=X}
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 540 -1770 0 0 {name=M12
+L=0.5
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_g5v0d10v5
+spiceprefix=X
+}
+C {devices} 980 -1480 0 0 {}
+C {devices/ipin.sym} 430 -1600 0 0 {name=p1 lab=xxx}
+C {devices/opin.sym} 1000 -1350 0 0 {name=p2 lab=xxx}
+C {devices/ipin.sym} 430 -1580 0 0 {name=p3 lab=xxx}
+C {devices/ipin.sym} 430 -1340 0 0 {name=p4 lab=xxx}
+C {devices/ipin.sym} 430 -1320 0 0 {name=p5 lab=xxx}
+C {devices/ipin.sym} 430 -1080 0 0 {name=p6 lab=xxx}
+C {devices/ipin.sym} 430 -1060 0 0 {name=p7 lab=xxx}
+C {devices/ipin.sym} 430 -820 0 0 {name=p8 lab=xxx}
+C {devices/ipin.sym} 430 -800 0 0 {name=p9 lab=xxx}
