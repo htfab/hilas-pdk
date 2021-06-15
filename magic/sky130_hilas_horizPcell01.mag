@@ -95,12 +95,12 @@ rect -85 47 -69 112
 rect -289 140 -280 158
 rect -250 140 -33 158
 rect -251 97 -33 115
-use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1607089160
-transform 1 0 -266 0 -1 156
-box -14 -15 20 18
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
 timestamp 1607089160
 transform 1 0 -266 0 -1 101
+box -14 -15 20 18
+use sky130_hilas_li2m2  sky130_hilas_li2m2_1
+timestamp 1607089160
+transform 1 0 -266 0 -1 156
 box -14 -15 20 18
 << end >>
