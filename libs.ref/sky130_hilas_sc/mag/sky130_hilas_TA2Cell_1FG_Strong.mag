@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1623843984
+timestamp 1623844940
 << error_s >>
 rect -1581 672 -1575 678
 rect -1528 672 -1522 678
@@ -39,6 +39,7 @@ rect 65 727 193 745
 rect 65 140 193 159
 << metal1 >>
 rect -2581 739 -2565 745
+rect -2540 739 -2521 745
 rect -2353 734 -2332 745
 rect -2306 737 -2287 745
 rect -2265 739 -2244 745
@@ -52,10 +53,13 @@ rect -3 731 31 745
 rect 63 730 91 745
 rect -1541 716 -1396 730
 rect -2352 141 -2329 153
+rect -416 140 -397 145
+rect -372 140 -344 145
 rect -3 140 31 159
 rect 64 140 91 161
 << metal2 >>
 rect -260 718 -229 742
+rect -2617 677 -2609 695
 rect -149 655 -127 657
 rect -154 621 -127 655
 rect -328 571 -293 593
@@ -67,11 +71,13 @@ rect -807 454 -785 455
 rect -1465 429 -782 454
 rect -689 450 -667 522
 rect -252 451 -220 475
+rect 182 474 193 497
 rect -1465 337 -1114 356
 rect -1137 277 -1114 337
 rect -811 312 -782 429
 rect -692 446 -667 450
 rect -692 382 -666 446
+rect 182 392 193 414
 rect -692 361 -279 382
 rect -300 347 -279 361
 rect -300 326 -113 347
@@ -81,14 +87,15 @@ rect -1137 262 -1115 277
 rect -700 262 -113 267
 rect -1137 246 -113 262
 rect -1137 240 -661 246
+rect -2617 190 -2609 208
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1623844940
+transform 1 0 -1077 0 1 522
+box -396 -382 757 223
 use sky130_hilas_FGtrans2x1cell  sky130_hilas_FGtrans2x1cell_0
 timestamp 1608384750
 transform -1 0 -1860 0 1 522
 box -395 -382 757 223
-use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1608384750
-transform 1 0 -1077 0 1 522
-box -396 -382 757 223
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
 timestamp 1608384750
 transform 1 0 -454 0 -1 305
@@ -98,19 +105,20 @@ timestamp 1608069483
 transform 1 0 38 0 1 181
 box -172 -22 155 550
 << labels >>
-rlabel metal1 -416 737 -397 745 0 GateColSelect
-port 7 nsew
 rlabel metal1 -3 739 31 745 0 GND
 port 11 nsew
 rlabel metal1 63 739 91 745 0 Vdd
 port 10 nsew
 rlabel metal1 64 140 91 146 0 Vdd
+port 10 nsew
 rlabel metal1 -3 140 31 146 0 GND
+port 11 nsew
 rlabel metal2 -252 451 -220 475 0 Vin+_Amp2
 port 9 nsew
 rlabel metal2 -260 718 -229 742 1 Vin-_Amp2
 port 8 n
 rlabel metal1 -2352 141 -2329 153 0 Vin-_Amp1
+port 18 nsew
 rlabel metal1 -2353 734 -2332 745 0 VINP_AMP1
 port 5 nsew
 rlabel metal1 -1438 738 -1396 745 0 VTUN
@@ -128,4 +136,20 @@ rlabel metal1 -2581 739 -2565 745 0 Vinj
 port 6 nsew
 rlabel metal1 -372 737 -344 745 0 Vinj
 port 6 nsew
+rlabel metal2 182 474 193 497 0 output1
+port 13 nsew
+rlabel metal2 182 392 193 414 0 output2
+port 12 nsew
+rlabel metal1 -2540 739 -2521 745 0 GateSel1
+port 14 nsew
+rlabel metal1 -416 140 -397 145 0 GateSel2
+port 15 nsew
+rlabel metal1 -372 140 -344 145 0 Vinj
+port 6 nsew
+rlabel metal1 -416 737 -397 745 0 GateSel2
+port 15 nsew
+rlabel metal2 -2617 677 -2609 695 0 Drain1
+port 16 nsew
+rlabel metal2 -2617 190 -2609 208 0 Drain2
+port 17 nsew
 << end >>
