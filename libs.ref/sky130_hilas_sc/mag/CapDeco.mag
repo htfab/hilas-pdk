@@ -1,0 +1,172 @@
+magic
+tech sky130A
+timestamp 1623107852
+<< nwell >>
+rect 82 43 390 189
+<< nmos >>
+rect 130 -55 341 5
+<< pmos >>
+rect 130 86 341 147
+<< ndiff >>
+rect 101 1 130 5
+rect 101 -16 107 1
+rect 124 -16 130 1
+rect 101 -33 130 -16
+rect 101 -50 107 -33
+rect 124 -50 130 -33
+rect 101 -55 130 -50
+rect 341 1 370 5
+rect 341 -16 347 1
+rect 364 -16 370 1
+rect 341 -33 370 -16
+rect 341 -50 347 -33
+rect 364 -50 370 -33
+rect 341 -55 370 -50
+<< pdiff >>
+rect 101 141 130 147
+rect 101 124 107 141
+rect 124 124 130 141
+rect 101 107 130 124
+rect 101 90 107 107
+rect 124 90 130 107
+rect 101 86 130 90
+rect 341 142 371 147
+rect 341 125 347 142
+rect 365 125 371 142
+rect 341 108 371 125
+rect 341 90 347 108
+rect 365 90 371 108
+rect 341 86 371 90
+<< ndiffc >>
+rect 107 -16 124 1
+rect 107 -50 124 -33
+rect 347 -16 364 1
+rect 347 -50 364 -33
+<< pdiffc >>
+rect 107 124 124 141
+rect 107 90 124 107
+rect 347 125 365 142
+rect 347 90 365 108
+<< poly >>
+rect 130 147 341 160
+rect 130 68 341 86
+rect 130 67 231 68
+rect 163 40 164 67
+rect 197 40 198 67
+rect 304 20 305 46
+rect 338 20 339 46
+rect 271 19 341 20
+rect 130 5 341 19
+rect 130 -68 341 -55
+<< locali >>
+rect 99 183 373 189
+rect 99 182 158 183
+rect 166 182 265 183
+rect 275 182 373 183
+rect 99 142 373 182
+rect 99 141 347 142
+rect 99 124 107 141
+rect 124 125 347 141
+rect 365 125 373 142
+rect 124 124 373 125
+rect 99 108 373 124
+rect 99 107 347 108
+rect 99 90 107 107
+rect 124 90 347 107
+rect 365 90 373 108
+rect 99 86 373 90
+rect 99 1 231 67
+rect 271 24 373 86
+rect 99 -16 107 1
+rect 124 -16 347 1
+rect 364 -16 373 1
+rect 99 -33 373 -16
+rect 99 -50 107 -33
+rect 124 -50 347 -33
+rect 364 -50 373 -33
+rect 99 -88 373 -50
+<< metal1 >>
+rect 99 141 373 189
+rect 99 -112 373 -50
+rect 99 -113 372 -112
+use sky130_hilas_li2m1  sky130_hilas_li2m1_1
+timestamp 1607179295
+transform 1 0 174 0 1 -83
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_0
+timestamp 1607179295
+transform 1 0 138 0 1 -83
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_3
+timestamp 1607179295
+transform 1 0 210 0 1 -83
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_2
+timestamp 1607179295
+transform 1 0 282 0 1 -83
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_5
+timestamp 1607179295
+transform 1 0 246 0 1 -83
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_7
+timestamp 1607179295
+transform 1 0 354 0 1 -83
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_4
+timestamp 1607179295
+transform 1 0 318 0 1 -83
+box -10 -8 13 21
+use sky130_hilas_poly2li  sky130_hilas_poly2li_4
+timestamp 1607178257
+transform 0 1 285 -1 0 37
+box -9 -14 18 19
+use sky130_hilas_poly2li  sky130_hilas_poly2li_3
+timestamp 1607178257
+transform 0 1 353 -1 0 37
+box -9 -14 18 19
+use sky130_hilas_poly2li  sky130_hilas_poly2li_0
+timestamp 1607178257
+transform 0 1 319 -1 0 37
+box -9 -14 18 19
+use sky130_hilas_poly2li  sky130_hilas_poly2li_1
+timestamp 1607178257
+transform 0 1 144 -1 0 58
+box -9 -14 18 19
+use sky130_hilas_poly2li  sky130_hilas_poly2li_2
+timestamp 1607178257
+transform 0 1 178 -1 0 58
+box -9 -14 18 19
+use sky130_hilas_poly2li  sky130_hilas_poly2li_5
+timestamp 1607178257
+transform 0 1 212 -1 0 58
+box -9 -14 18 19
+use sky130_hilas_li2m1  sky130_hilas_li2m1_15
+timestamp 1607179295
+transform 1 0 347 0 1 165
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_14
+timestamp 1607179295
+transform 1 0 303 0 1 165
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_13
+timestamp 1607179295
+transform 1 0 267 0 1 165
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_12
+timestamp 1607179295
+transform 1 0 231 0 1 165
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_11
+timestamp 1607179295
+transform 1 0 195 0 1 165
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_10
+timestamp 1607179295
+transform 1 0 159 0 1 165
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_9
+timestamp 1607179295
+transform 1 0 123 0 1 165
+box -10 -8 13 21
+<< end >>

@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1622381024
+timestamp 1623843984
 << error_s >>
 rect -1581 672 -1575 678
 rect -1528 672 -1522 678
@@ -38,6 +38,7 @@ rect -1356 208 -1350 214
 rect 65 727 193 745
 rect 65 140 193 159
 << metal1 >>
+rect -2581 739 -2565 745
 rect -2353 734 -2332 745
 rect -2306 737 -2287 745
 rect -2265 739 -2244 745
@@ -80,31 +81,35 @@ rect -1137 262 -1115 277
 rect -700 262 -113 267
 rect -1137 246 -113 262
 rect -1137 240 -661 246
+use sky130_hilas_FGtrans2x1cell  sky130_hilas_FGtrans2x1cell_0
+timestamp 1608384750
+transform -1 0 -1860 0 1 522
+box -395 -382 757 223
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1608384750
+transform 1 0 -1077 0 1 522
+box -396 -382 757 223
+use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
+timestamp 1608384750
+transform 1 0 -454 0 -1 305
+box 133 -440 320 165
 use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
 timestamp 1608069483
 transform 1 0 38 0 1 181
 box -172 -22 155 550
-use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
-timestamp 1608069483
-transform 1 0 -454 0 -1 305
-box 133 -440 320 165
-use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1608069483
-transform 1 0 -1077 0 1 522
-box -396 -382 757 223
-use sky130_hilas_FGtrans2x1cell  sky130_hilas_FGtrans2x1cell_0
-timestamp 1608069483
-transform -1 0 -1860 0 1 522
-box -395 -382 757 223
 << labels >>
 rlabel metal1 -416 737 -397 745 0 GateColSelect
-rlabel metal1 -372 737 -344 745 0 Vdd
+port 7 nsew
 rlabel metal1 -3 739 31 745 0 GND
+port 11 nsew
 rlabel metal1 63 739 91 745 0 Vdd
+port 10 nsew
 rlabel metal1 64 140 91 146 0 Vdd
 rlabel metal1 -3 140 31 146 0 GND
 rlabel metal2 -252 451 -220 475 0 Vin+_Amp2
+port 9 nsew
 rlabel metal2 -260 718 -229 742 1 Vin-_Amp2
+port 8 n
 rlabel metal1 -2352 141 -2329 153 0 Vin-_Amp1
 rlabel metal1 -2353 734 -2332 745 0 VINP_AMP1
 port 5 nsew
@@ -119,4 +124,8 @@ rlabel metal1 -2157 738 -2139 745 0 PROG
 port 3 nsew
 rlabel metal1 -2306 737 -2287 745 0 VGATE1
 port 4 nsew
+rlabel metal1 -2581 739 -2565 745 0 Vinj
+port 6 nsew
+rlabel metal1 -372 737 -344 745 0 Vinj
+port 6 nsew
 << end >>
