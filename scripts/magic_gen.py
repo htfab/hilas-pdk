@@ -964,6 +964,7 @@ def check_descriptions():
     for cn, cell in cd.all_cells.items():
         if 'description' not in cell or cell['description'] is None or cell['description'] == '':
             missing.append(cn)
+
     if missing:
         warn('######################################################################################################')
         warn('The following standard cells are missing descriptions in the \'{}\'file:'.format(CELL_DATA_FILE.name))

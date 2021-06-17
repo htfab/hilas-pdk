@@ -134,9 +134,6 @@ standard-cells:
 ##
 primitive-cells: ######################################################################
 
-  WTA4Stage01:
-    description:
-
   CapModule01a:
     description: primitive cap, variant 01a
 
