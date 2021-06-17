@@ -1056,6 +1056,8 @@ def check_lvs():
         instance = 'X999 ' + instance + '\n'
         modsrc = src + instance
 
+        os.makedirs(HILAS_PDK_ROOT / 'LVS_RESULTS', exist_ok=True)
+        
         with tempfile.NamedTemporaryFile(mode='w', suffix='.spice') as f:
             f.write(modsrc)
 
