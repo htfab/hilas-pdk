@@ -1089,14 +1089,15 @@ def check_dir_for_complete(directory, extension, set):
 
     if missing_in_dir:
         warn('######################################################################################################')
-        warn('    \'{}\' directory is missing the following files:'.format(directory))
+        warn('    \'{}\' directory is missing the following \'{}\' files:'.format(directory, extension))
         for m in missing_in_dir:
             warn('        {}'.format(m))
-        warn('######################################################################################################')
+        if not extra:
+            warn('######################################################################################################')
 
     if extra:
         warn('######################################################################################################')
-        warn('    \'{}\' directory contains the following extraneous files:'.format(directory))
+        warn('    \'{}\' directory contains the following extraneous \'{}\' files:'.format(directory, extension))
         for exx in extra:
             warn('        {}'.format(exx))
         warn('######################################################################################################')
@@ -1112,7 +1113,7 @@ def check_prefixes():
     ]:
         check_dir_for_prefixes(*set)
 
-        
+
 def check_file_presence():
     for set in [
         ('mag', 'mag', cd.all_cells),
