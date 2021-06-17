@@ -1,5 +1,4 @@
 * Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/capacitorArray01.sch
-.INCLUDE "/tmp/.mount_Qucs-SkXfhOs/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
 * Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/capacitorArray01.sch
 M1 Vinj  GateSel1  _net0  Vinj MOSP
 M2 CapTerm1  _net1  Row1  Vinj MOSP

@@ -1,5 +1,4 @@
 * Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/2TA_1WeakInput.sch
-.INCLUDE "/tmp/.mount_Qucs-SIfwe0Q/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
 * Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/2TA_1WeakInput.sch
 C1 _net6  _net1 10f
 C6 _net17  _net8 10f

@@ -1,5 +1,4 @@
 * Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/FGcharacterization01.sch
-.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
 * Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/FGcharacterization01.sch
 M7 _net0  _net0  0  0 MOSN
 M8 _net1  _net0  0  0 MOSN

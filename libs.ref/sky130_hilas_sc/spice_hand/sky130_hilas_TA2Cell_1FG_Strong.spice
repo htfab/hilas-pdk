@@ -1,5 +1,4 @@
 * Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/2TA_1StrongInput.sch
-.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
 * Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/2TA_1StrongInput.sch
 C3 _net0  _net1 10fF
 C1 Gate1  _net2 10fF

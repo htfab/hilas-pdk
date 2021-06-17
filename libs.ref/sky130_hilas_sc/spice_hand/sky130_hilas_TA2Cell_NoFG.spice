@@ -1,5 +1,4 @@
 * Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/2TA_0FGInput.sch
-.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
 * Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/2TA_0FGInput.sch
 M27 _net0  Vin22  _net1  _net2 MOSP
 M28 _net3  Vin21  _net1  _net2 MOSP

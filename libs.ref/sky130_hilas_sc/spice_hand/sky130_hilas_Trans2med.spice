@@ -1,5 +1,4 @@
 * Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/Trans2med.sch
-.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
 * Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/Trans2med.sch
 M1 _net0  Gate2p  Drain2p  Well MOSP
 M4 Drain2n  Gate2n  Source2n  0 MOSN

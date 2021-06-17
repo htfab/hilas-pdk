@@ -1,5 +1,4 @@
 * Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/WTA4Input.sch
-.INCLUDE "/tmp/.mount_Qucs-SIfwe0Q/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
 * Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/WTA4Input.sch
 M2 WTAin1  WTAMiddleNode  0  0 MOSN
 M1 WTAOut1  WTAin1  WTAMiddleNode  0 MOSN

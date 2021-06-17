@@ -1,5 +1,4 @@
 * Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/swc4x1BiasCell.sch
-.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
 * Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/swc4x1BiasCell.sch
 M1 _net0  GateSel1  _net1  _net0 MOSP
 M2 Vdd  _net2  Row1  _net0 MOSP

@@ -1,5 +1,4 @@
 * Qucs 0.0.22 /home/ubuntu/.qucs/Hilas_prj/4TgateDoubleThrow.sch
-.INCLUDE "/tmp/.mount_Qucs-S2Dcpy6/usr/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
 * Qucs 0.0.22  /home/ubuntu/.qucs/Hilas_prj/4TgateDoubleThrow.sch
 M14 Node2_1  Select1n  Out1  0 NFET
 M9 Vdd  Vdd  Select1n  Vdd MOSP
