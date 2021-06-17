@@ -85,11 +85,8 @@ LIB_PATH = {
     'cell_summary': REF_ROOT / PDK_VARIANT / 'CELL_SUMMARY.md',
     'cell_details': REF_ROOT / PDK_VARIANT / 'CELL_DETAILS.md'
 }
-for name in ['cdl', 'doc', 'gds', 'lef', 'lib', 'mag', 'spice', 'schem', 'techlef', 'verilog']:
-    if name == 'spice':
-        LIB_PATH.update({name: REF_ROOT / PDK_VARIANT / 'spice_ext'})
-    else:
-        LIB_PATH.update({name: REF_ROOT / PDK_VARIANT / name})
+for name in ['cdl', 'doc', 'gds', 'lef', 'lib', 'mag', 'png', 'spice_ext', 'spice_hand', 'schem', 'techlef', 'verilog', 'xschem']:
+    LIB_PATH.update({name: REF_ROOT / PDK_VARIANT / name})
 
 with open(THIS_DIR / 'templates' / 'license_head.txt', 'r') as f:
     LICENSE_HEAD = f.read() + '\n'
@@ -112,23 +109,23 @@ class CellData(OrderedDict):
 
     @property
     def all_cells(self):
-        return OrderedDict({cn: cell for cat, cells in self.items() for cn, cell in cells.items()})
+        return OrderedDict({cn: cell for cat, cells in self.items() for cn, cell in cells.items() if 'description' in cell})
 
     @property
     def standard_cells(self):
-        return OrderedDict({cn: cell for cn, cell in self['standard-cells'].items()})
+        return OrderedDict({cn: cell for cn, cell in self['standard-cells'].items() if 'description' in cell})
 
     @property
     def component_cells(self):
-        return OrderedDict({cn: cell for cn, cell in self['component-cells'].items()})
+        return OrderedDict({cn: cell for cn, cell in self['component-cells'].items() if 'description' in cell})
 
     @property
     def primitive_cells(self):
-        return OrderedDict({cn: cell for cn, cell in self['primitive-cells'].items()})
+        return OrderedDict({cn: cell for cn, cell in self['primitive-cells'].items() if 'description' in cell})
 
     @property
     def test_cells(self):
-        return OrderedDict({cn: cell for cn, cell in self['test-cells'].items()})
+        return OrderedDict({cn: cell for cn, cell in self['test-cells'].items() if 'description' in cell})
 
     def by_name(self, cell_name):
         if cell_name.startswith(CELL_PREFIX):
@@ -468,7 +465,7 @@ def make_lef():
 
 
 def make_spice(mf):
-    target = (LIB_PATH['spice'] / mf.long_name).with_suffix('.spice')
+    target = (LIB_PATH['spice_ext'] / mf.long_name).with_suffix('.spice')
 
     try:
         result = magic.make_spice(mf.file, target)
@@ -839,7 +836,7 @@ def target_check(magic_file, type):
     else:
         suffix = type
 
-    if type in ['gds', 'temp_lef', 'spice']:
+    if type in ['gds', 'temp_lef', 'spice_ext']:
         target = Path(LIB_PATH[type] / magic_file.long_name).with_suffix('.' + suffix)
         if not args.force and target.is_file() and os.path.getmtime(target) > os.path.getmtime(magic_file.file):
             # short circuit; don't do it
@@ -878,7 +875,7 @@ def handle_magic(magic_file):
     if not any([
         target_check(magic_file, 'gds'),
         target_check(magic_file, 'temp_lef'),
-        target_check(magic_file, 'spice')
+        target_check(magic_file, 'spice_ext')
     ]):
         return
 
@@ -891,8 +888,8 @@ def handle_magic(magic_file):
     if args.temp_lef and target_check(magic_file, 'temp_lef'):
         parent_check(LIB_PATH['temp_lef'])
         make_temp_lef(magic_file)
-    if args.spice and target_check(magic_file, 'spice'):
-        parent_check(LIB_PATH['spice'])
+    if args.spice and target_check(magic_file, 'spice_ext'):
+        parent_check(LIB_PATH['spice_ext'])
         make_spice(magic_file)
 
 
@@ -911,15 +908,14 @@ def check_count():
             warn('    ' + str(f))
         warn('######################################################################################################')
 
-    dl = all_cells
     ml = list(magic_files)
     mm = []
-    for cn, c in dl.items():
+    for cn, c in all_cells.items():
         mag_name = 'sky130_hilas_' + cn + '.mag'
         if mag_name in ml:
             ml.remove(mag_name)
         else:
-            mm.append(c)
+            mm.append(cn)
 
     if mm:
         warn('######################################################################################################')
@@ -937,38 +933,29 @@ def check_count():
 
 
 def check_depends():
-    missing = []
+    missing = {}
     for m in mag_files.values():
         deps = m.referenced_mods()
+        if m.long_name in deps:
+            warn('######################################################################################################')
+            warn('    Cell \'{}\' contains instances of itself!'.format(m.long_name))
+            warn('######################################################################################################')
+
         for d in deps:
             if not (LIB_PATH['mag'] / d).with_suffix('.mag').is_file():
-                missing.append(d)
+                if m.long_name in missing:
+                    missing[m.long_name] += [d]
+                else:
+                    missing.update({m.long_name: [d]})
 
     if missing:
         warn('######################################################################################################')
         warn('Referenced (sub)cells missing from the /mag/ path:')
-        for mf in missing:
-            warn('    ' + str(mf))
-        warn('######################################################################################################')
+        for mf, clist in missing.items():
+            warn('    {} is missing:'.format(mf))
+            for cell in clist:
+                warn('        {}'.format(cell))
 
-
-# def check_pins():
-#     for cell in cd.all_cells:
-#         mag_ports = MagData(MagData.name2file(cell)).ports()
-#         cd_ports = CellData.ports(cell)
-
-
-def check_schematics():
-    missing = []
-    avail_schem = [file.stem for file in LIB_PATH['schem'].glob('.*')]
-    for cell in cd.standard_cells:
-        if cell not in avail_schem:
-            missing.append(cell)
-    if missing:
-        warn('######################################################################################################')
-        warn('The following standard cells are missing schematics in the /schem/ path:')
-        for mf in missing:
-            warn('    ' + str(mf))
         warn('######################################################################################################')
 
 
@@ -1040,14 +1027,112 @@ def check_power_nets():
                 warn('wrote power-net-corrected version of {}'.format(m.file.name))
 
 
+def check_lvs():
+    for m in mag_files.values():
+        spicefile = Path(LIB_PATH['spice_hand']).glob(Path(m.file).stem + '.spice')
+
+
+def check_mag_names():
+    for m in Path(LIB_PATH['mag']).glob('*.mag'):
+        if not m.stem.startswith(CELL_PREFIX):
+            edie('cellname does not start with "{}":    {}'.format(CELL_PREFIX, m.name))
+
+
+def check_hand_spice():
+    for file in LIB_PATH['spice_hand'].glob('*.spice'):
+        if not file.stem.startswith(CELL_PREFIX):
+            warn('spice file {} missing prefix ({})'.format(file.name, CELL_PREFIX))
+            if confirm('fix it?', False):
+                shutil.move(file, file.with_name(CELL_PREFIX + file.name))
+
+
+def check_dir_for_prefixes(directory, extension):
+    if extension.startswith('*'):
+        extension = extension[1:]
+
+    if not extension.startswith('.'):
+        extension = '.' + extension
+
+    available = [c.name for c in LIB_PATH[directory].glob('*{}'.format(extension))]
+    mp = []
+    for avail in available:
+        if not avail.startswith(CELL_PREFIX):
+            mp += [avail]
+
+    if mp:
+        warn('######################################################################################################')
+        warn('    \'{}\' directory contains the following files which are missing the prefix \'{}\':'.format(directory, CELL_PREFIX))
+        for exx in mp:
+            warn('        {}'.format(exx))
+        warn('######################################################################################################')
+
+
+def check_dir_for_complete(directory, extension, set):
+    if extension.startswith('*'):
+        extension = extension[1:]
+
+    if not extension.startswith('.'):
+        extension = '.' + extension
+
+    targets = [CELL_PREFIX+c+extension for c in set]
+    available = [c.name for c in LIB_PATH[directory].glob('*{}'.format(extension))]
+    missing_in_dir = []
+    extra = []
+
+    for targ in targets:
+        if targ not in available:
+            missing_in_dir += [targ]
+
+    for avail in available:
+        if avail not in targets:
+            extra += [avail]
+
+    if missing_in_dir:
+        warn('######################################################################################################')
+        warn('    \'{}\' directory is missing the following files:'.format(directory))
+        for m in missing_in_dir:
+            warn('        {}'.format(m))
+        warn('######################################################################################################')
+
+    if extra:
+        warn('######################################################################################################')
+        warn('    \'{}\' directory contains the following extraneous files:'.format(directory))
+        for exx in extra:
+            warn('        {}'.format(exx))
+        warn('######################################################################################################')
+
+
+def check_prefixes():
+    for set in [
+        ('mag', 'mag'),
+        ('png', 'png'),
+        ('xschem', 'sch'),
+        ('xschem', 'sym'),
+        ('spice_hand', 'spice')
+    ]:
+        check_dir_for_prefixes(*set)
+
+        
+def check_file_presence():
+    for set in [
+        ('mag', 'mag', cd.all_cells),
+        ('png', 'png', cd.standard_cells),
+        ('xschem', 'sch', cd.standard_cells),
+        ('xschem', 'sym', cd.standard_cells),
+        ('spice_hand', 'spice', cd.standard_cells)
+    ]:
+        check_dir_for_complete(*set)
+
+
 def run_checks():
+    check_file_presence()
     check_count()
     check_depends()
-    # check_pins()
-    check_schematics()
+    check_hand_spice()
     check_descriptions()
     check_net_names()
     check_power_nets()
+    check_lvs()
 
 
 def main():
@@ -1059,6 +1144,7 @@ def main():
                     help='Create temporary individual LEF files', default=False)
     ap.add_argument('-e', '--lef', action='store_true', help='Create LEF file', default=False)
     ap.add_argument('-i', '--lib', action='store_true', help='Create LIB file', default=False)
+    ap.add_argument('-l', '--lvs', action='store_true', help='run LVS checks (with netgen)', default=False)
     ap.add_argument('-s', '--spice', action='store_true', help='Create Spice files', default=False)
     ap.add_argument('-m', '--markdown', action='store_true',
                     help='Create a pretty, human-readable markdown summary of cell pins',
@@ -1067,7 +1153,7 @@ def main():
     ap.add_argument('-v', '--verilog', action='store_true', help='Directory in which to put synthetic Verilog output',
                     default=False)
 
-    ap.add_argument('-C', '--checks-only', action='store_true', help='Run consistency checks and quit.')
+    ap.add_argument('-C', '--checks-only', action='store_true', help='Run consistency checks and quit.', default=True)
     ap.add_argument('-D', '--delete', action='store_true',
                     help='Delete temporary (individual) LEF files after consolidation', default=False)
     ap.add_argument('-F', '--force', action='store_true', help='Overwrite existing collateral.', default=False)
@@ -1092,6 +1178,7 @@ def main():
     except AssertionError:
         edie('didn\'t find any *.mag files on the source path')
 
+    check_mag_names()
     mag_files = MagicLibrary(source_files)
 
     if args.checks_only:
