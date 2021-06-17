@@ -1,0 +1,45 @@
+v {xschem version=2.9.9 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -60 130 -60 {}
+L 4 -130 60 130 60 {}
+L 4 -130 -60 -130 60 {}
+L 4 130 -60 130 60 {}
+L 4 -150 -50 -130 -50 {}
+L 4 -150 -30 -130 -30 {}
+L 4 -150 -10 -130 -10 {}
+L 4 -150 10 -130 10 {}
+L 7 130 -50 150 -50 {}
+L 7 130 -30 150 -30 {}
+L 7 130 -10 150 -10 {}
+L 7 130 10 150 10 {}
+L 7 130 30 150 30 {}
+L 7 130 50 150 50 {}
+B 5 147.5 -52.5 152.5 -47.5 {name=CapTerm2 dir=inout }
+B 5 147.5 -32.5 152.5 -27.5 {name=Vinj dir=inout }
+B 5 147.5 -12.5 152.5 -7.5 {name=ColSel1 dir=inout }
+B 5 147.5 7.5 152.5 12.5 {name=Vtun dir=inout }
+B 5 147.5 27.5 152.5 32.5 {name=Gate1 dir=inout }
+B 5 147.5 47.5 152.5 52.5 {name=CapTerm1 dir=inout }
+B 5 -152.5 -52.5 -147.5 -47.5 {name=Drain1 dir=in }
+B 5 -152.5 -32.5 -147.5 -27.5 {name=Drain2 dir=in }
+B 5 -152.5 -12.5 -147.5 -7.5 {name=Drain3 dir=in }
+B 5 -152.5 7.5 -147.5 12.5 {name=Drain4 dir=in }
+T {CapacitorArray01} -70 -16 0 0 0.3 0.3 {}
+T {@name} 135 -72 0 0 0.2 0.2 {}
+T {CapTerm2} 125 -54 0 1 0.2 0.2 {}
+T {Vinj} 125 -34 0 1 0.2 0.2 {}
+T {ColSel1} 125 -14 0 1 0.2 0.2 {}
+T {Vtun} 125 6 0 1 0.2 0.2 {}
+T {Gate1} 125 26 0 1 0.2 0.2 {}
+T {CapTerm1} 125 46 0 1 0.2 0.2 {}
+T {Drain1} -125 -54 0 0 0.2 0.2 {}
+T {Drain2} -125 -34 0 0 0.2 0.2 {}
+T {Drain3} -125 -14 0 0 0.2 0.2 {}
+T {Drain4} -125 6 0 0 0.2 0.2 {}
