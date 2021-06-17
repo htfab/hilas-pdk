@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "Using \'apt\' and \'pip\' to install required modules"
+echo 'Using "apt" and "pip" to install required modules'
 sudo apt-get install python3-pip
 pip3 install yamllint jinja2
