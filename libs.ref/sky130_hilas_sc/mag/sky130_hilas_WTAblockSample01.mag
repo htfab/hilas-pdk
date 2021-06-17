@@ -219,11 +219,11 @@ rect -572 55 -566 61
 rect -455 55 -449 61
 rect 506 55 512 61
 rect 623 55 629 61
-use sky130_hilas_WTA4stage01  sky130_hilas_WTA4stage01_1
+use sky130_hilas_WTA4Stage01  sky130_hilas_WTA4Stage01_1
 timestamp 1607392100
 transform 1 0 1106 0 1 636
 box -1121 -43 296 562
-use sky130_hilas_WTA4stage01  sky130_hilas_WTA4stage01_0
+use sky130_hilas_WTA4Stage01  sky130_hilas_WTA4Stage01_0
 timestamp 1607392100
 transform 1 0 1108 0 1 38
 box -1121 -43 296 562

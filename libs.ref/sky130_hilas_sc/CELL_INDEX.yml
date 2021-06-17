@@ -80,7 +80,7 @@ standard-cells:
   TA2SignalBiasCell:
     description:
 
-  WTA4stage01:
+  WTA4Stage01:
     description: >-
         4-input winner-take-all circuit. Connects directly to array of swc4x2cell.
         Can array vertically. Needs one nFET transistor current source.
@@ -127,9 +127,6 @@ standard-cells:
           5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit,
           and they would use this cell
 
-  DAC_bit6_01:
-    description: 6-bit DAC 
-
 
 #######################################################################################
 ##
@@ -142,6 +139,9 @@ primitive-cells: ###############################################################
 
   CapModule01a:
     description: primitive cap, variant 01a
+
+  FGVaractorCapacitor:
+    description: varactor cap for floating-gate charge storage
 
   FGVaractorCapacitor02:
     description: variant 2, varactor cap for floating-gate charge storage
@@ -172,9 +172,6 @@ primitive-cells: ###############################################################
     description:
 
   TACoreBlock:
-    description:
-
-  TAcoreblock:
     description:
 
   TACoreBlock2:
@@ -258,6 +255,12 @@ component-cells:
     These cells are components used to create the standard cells.
     They are not to be used directly
 #######################################################################################
+
+  decoup_cap_00:
+    description: decoupling cap (intended as fill)
+
+  decoup_cap_01:
+    description: decoupling cap (intended as fill), variant
 
   pTransistorVert01:
     description:
@@ -370,3 +373,5 @@ cells-to-be-sorted:
   swc2x2varactor:
     description:  ??  Is this part of the library?
 
+  all:
+    description: A design which contains all cells (?)
