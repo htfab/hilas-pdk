@@ -105,19 +105,19 @@ timestamp 1608069483
 transform 1 0 38 0 1 181
 box -172 -22 155 550
 << labels >>
-rlabel metal1 -3 739 31 745 0 GND
+rlabel metal1 -3 739 31 745 0 VGND
 port 11 nsew
-rlabel metal1 63 739 91 745 0 Vdd
+rlabel metal1 63 739 91 745 0 VPWR
 port 10 nsew
-rlabel metal1 64 140 91 146 0 Vdd
+rlabel metal1 64 140 91 146 0 VPWR
 port 10 nsew
-rlabel metal1 -3 140 31 146 0 GND
+rlabel metal1 -3 140 31 146 0 VGND
 port 11 nsew
-rlabel metal2 -252 451 -220 475 0 Vin+_Amp2
+rlabel metal2 -252 451 -220 475 0 VINP_AMP2
 port 9 nsew
-rlabel metal2 -260 718 -229 742 1 Vin-_Amp2
+rlabel metal2 -260 718 -229 742 1 VINN_AMP2
 port 8 n
-rlabel metal1 -2352 141 -2329 153 0 Vin-_Amp1
+rlabel metal1 -2352 141 -2329 153 0 VINN_AMP1
 port 18 nsew
 rlabel metal1 -2353 734 -2332 745 0 VINP_AMP1
 port 5 nsew
@@ -132,24 +132,24 @@ rlabel metal1 -2157 738 -2139 745 0 PROG
 port 3 nsew
 rlabel metal1 -2306 737 -2287 745 0 VGATE1
 port 4 nsew
-rlabel metal1 -2581 739 -2565 745 0 Vinj
+rlabel metal1 -2581 739 -2565 745 0 VINJ
 port 6 nsew
-rlabel metal1 -372 737 -344 745 0 Vinj
+rlabel metal1 -372 737 -344 745 0 VINJ
 port 6 nsew
-rlabel metal2 182 474 193 497 0 output1
+rlabel metal2 182 474 193 497 0 OUTPUT1
 port 13 nsew
-rlabel metal2 182 392 193 414 0 output2
+rlabel metal2 182 392 193 414 0 OUTPUT2
 port 12 nsew
-rlabel metal1 -2540 739 -2521 745 0 GateSel1
+rlabel metal1 -2540 739 -2521 745 0 GATESEL1
 port 14 nsew
-rlabel metal1 -416 140 -397 145 0 GateSel2
+rlabel metal1 -416 140 -397 145 0 GATESEL2
 port 15 nsew
-rlabel metal1 -372 140 -344 145 0 Vinj
+rlabel metal1 -372 140 -344 145 0 VINJ
 port 6 nsew
-rlabel metal1 -416 737 -397 745 0 GateSel2
+rlabel metal1 -416 737 -397 745 0 GATESEL2
 port 15 nsew
-rlabel metal2 -2617 677 -2609 695 0 Drain1
+rlabel metal2 -2617 677 -2609 695 0 DRAIN1
 port 16 nsew
-rlabel metal2 -2617 190 -2609 208 0 Drain2
+rlabel metal2 -2617 190 -2609 208 0 DRAIN2
 port 17 nsew
 << end >>

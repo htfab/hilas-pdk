@@ -138,34 +138,34 @@ timestamp 1607386385
 transform 1 0 777 0 -1 270
 box -289 47 -33 232
 << labels >>
-rlabel metal1 -228 211 -188 223 0 Vtun
+rlabel metal1 -228 211 -188 223 0 VTUN
 port 1 nsew
-rlabel metal1 692 218 708 223 0 Vinj
+rlabel metal1 692 218 708 223 0 VINJ
 port 2 nsew
-rlabel metal1 648 218 667 223 0 GateSel1
+rlabel metal1 648 218 667 223 0 GATESEL1
 port 3 nsew
-rlabel metal1 611 219 627 223 0 col1
+rlabel metal1 611 219 627 223 0 COL1
 port 4 nsew
-rlabel metal1 177 213 215 223 0 Gate1
+rlabel metal1 177 213 215 223 0 GATE1
 port 5 nsew
 rlabel poly 383 136 394 149 0 FG1
 rlabel poly 372 -9 389 6 0 FG2
 rlabel poly 379 -166 396 -151 0 FG3
 rlabel poly 389 -307 406 -292 0 FG4
-rlabel metal2 -263 155 -256 173 0 Drain1
+rlabel metal2 -263 155 -256 173 0 DRAIN1
 port 6 nsew
-rlabel metal2 -263 112 -256 130 0 Col1
+rlabel metal2 -263 112 -256 130 0 COL1
 port 7 nsew
-rlabel metal2 -264 12 -257 30 0 Col2
+rlabel metal2 -264 12 -257 30 0 COL2
 port 9 nsew
-rlabel metal2 -264 -31 -257 -13 0 Drain2
+rlabel metal2 -264 -31 -257 -13 0 DRAIN2
 port 8 nsew
-rlabel metal2 -262 -146 -256 -129 0 Drain3
+rlabel metal2 -262 -146 -256 -129 0 DRAIN3
 port 10 nsew
-rlabel metal2 -262 -188 -256 -171 0 Col1
+rlabel metal2 -262 -188 -256 -171 0 COL1
 port 7 nsew
-rlabel metal2 -262 -286 -256 -269 0 Col4
+rlabel metal2 -262 -286 -256 -269 0 COL4
 port 11 nsew
-rlabel metal2 -262 -330 -256 -313 0 Drain4
+rlabel metal2 -262 -330 -256 -313 0 DRAIN4
 port 12 nsew
 << end >>

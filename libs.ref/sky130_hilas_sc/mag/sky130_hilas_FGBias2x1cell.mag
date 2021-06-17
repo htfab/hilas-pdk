@@ -184,10 +184,10 @@ rlabel metal2 -396 155 -389 173 0 DRAIN1
 port 5 nsew analog default
 rlabel metal2 -396 -330 -390 -315 0 DRAIN4
 port 6 nsew analog default
-rlabel metal1 661 219 680 223 0 GateCol
+rlabel metal1 661 219 680 223 0 GATECOL
 port 10 nsew
-rlabel metal1 661 -382 680 -377 0 GateCol
+rlabel metal1 661 -382 680 -377 0 GATECOL
 port 10 nsew
-rlabel metal1 705 -382 733 -377 0 Vinj
+rlabel metal1 705 -382 733 -377 0 VINJ
 port 11 nsew
 << end >>
