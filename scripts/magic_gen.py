@@ -33,11 +33,14 @@
 import argparse
 import os
 import re
+import shlex
+import subprocess
 import tempfile
 import shutil
 import jinja2
 import yaml
 
+from yamllint import cli as yamllintcli
 from collections import OrderedDict
 from sys import stderr as STDERR
 from pexpect.replwrap import REPLWrapper
@@ -1029,8 +1032,43 @@ def check_power_nets():
 
 
 def check_lvs():
-    for m in mag_files.values():
-        spicefile = Path(LIB_PATH['spice_hand']).glob(Path(m.file).stem + '.spice')
+    NETGEN_TCL = TECH_ROOT / 'netgen' / 'sky130_setup.tcl'
+    warn('##################      Starting LVS      ##################')
+    for m in cd.standard_cells:
+        ext_spice = list(LIB_PATH['spice_ext'].glob(CELL_PREFIX + m + '.spice'))
+        hand_spice = list(LIB_PATH['spice_hand'].glob(CELL_PREFIX + m + '.spice'))
+
+        if not len(ext_spice) or not len(hand_spice):
+            if not len(ext_spice):
+                warn('could not find \'{}\''.format(ext_spice))
+            if not len(hand_spice):
+                warn('could not find \'{}\''.format(hand_spice))
+            continue
+
+        # make a temporary spice file for the _ext version which has a top-level instantiation of itself
+        with open(ext_spice[0], 'r') as f:
+            src = f.read()
+
+        instance = re.search(r'^[.]subckt ({} .*)'.format(CELL_PREFIX + m), src, re.MULTILINE).group(1)
+        if not instance:
+            continue
+
+        instance = 'X999 ' + instance + '\n'
+        modsrc = src + instance
+
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.spice') as f:
+            f.write(modsrc)
+
+            # consider adding the '-blackbox' option to keep empty subcells as meaningful entities
+            command = 'netgen -batch lvs {} {} {} {} -json -blackbox'.format(
+                f.name,
+                hand_spice[0],
+                NETGEN_TCL,
+                (HILAS_PDK_ROOT / 'LVS_RESULTS' / m).with_suffix('.lvs.log')
+            )
+            subprocess.run(shlex.split(command), check=False)
+
+    warn('##################        LVS Complete        ##################')
 
 
 def check_mag_names():
@@ -1134,7 +1172,6 @@ def run_checks():
     check_descriptions()
     check_net_names()
     check_power_nets()
-    check_lvs()
 
 
 def main():
@@ -1146,7 +1183,7 @@ def main():
                     help='Create temporary individual LEF files', default=False)
     ap.add_argument('-e', '--lef', action='store_true', help='Create LEF file', default=False)
     ap.add_argument('-i', '--lib', action='store_true', help='Create LIB file', default=False)
-    ap.add_argument('-l', '--lvs', action='store_true', help='run LVS checks (with netgen)', default=False)
+    ap.add_argument('--lvs', '-l', action='store_true', help='run LVS checks (with netgen)', default=False)
     ap.add_argument('-s', '--spice', action='store_true', help='Create Spice files', default=False)
     ap.add_argument('-m', '--markdown', action='store_true',
                     help='Create a pretty, human-readable markdown summary of cell pins',
@@ -1155,13 +1192,20 @@ def main():
     ap.add_argument('-v', '--verilog', action='store_true', help='Directory in which to put synthetic Verilog output',
                     default=False)
 
-    ap.add_argument('-C', '--checks-only', action='store_true', help='Run consistency checks and quit.', default=True)
+    ap.add_argument('-C', '--checks-only', action='store_true', help='Run consistency checks and quit.', default=False)
     ap.add_argument('-D', '--delete', action='store_true',
                     help='Delete temporary (individual) LEF files after consolidation', default=False)
     ap.add_argument('-F', '--force', action='store_true', help='Overwrite existing collateral.', default=False)
     ap.add_argument('-Y', '--yes', action='store_true', help='Assume a \'yes\' answer to all prompts.')
     ap.add_argument('-N', '--no', action='store_true', help='Assume a \'no\' answer to all prompts.')
     args = ap.parse_args()
+
+    warn('######   running linter on {}    ######'.format(CELL_DATA_FILE))
+    try:
+        yamllintcli.run([str(CELL_DATA_FILE)])
+    except:
+        pass
+    warn('##########################################################################################################')
 
     with open(CELL_DATA_FILE, 'r') as f:
         cd = CellData(yaml.load(f, Loader=yaml.SafeLoader))
@@ -1194,6 +1238,8 @@ def main():
         handle_magic(m)
 
     # The following items can be done on the batch level:
+    if args.lvs:
+        check_lvs()
 
     if args.lef and target_check(None, 'lef'):
         # consolidate all temp LEFs

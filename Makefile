@@ -26,7 +26,7 @@ all:
 		-Y
 
 force:
-	$(SCRIPTS)/magic_gen.py -F -g -t -e -i -s -v -m -n -Y
+	$(SCRIPTS)/magic_gen.py -F -L -g -t -e -i -s -v -m -n -Y
 
 check:
 	$(SCRIPTS)/magic_gen.py -C
@@ -49,6 +49,8 @@ markdown: lef
 nosynth:
 	$(SCRIPTS)/magic_gen.py -n -F
 
+lvs:
+	$(SCRIPTS)/magic_gen.py --lvs
 
 # vvvvvvvvv         CLEANING          vvvvvvvvvvvvvv
 

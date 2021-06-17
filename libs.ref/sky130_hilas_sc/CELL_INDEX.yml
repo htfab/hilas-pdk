@@ -3,8 +3,8 @@
 #      This file is part of HILAS.
 #
 #      HILAS is free software: you can redistribute it and/or modify
-#      it under the terms of the GNU Lesser General Public License as published by
-#      the Free Software Foundation, version 3 of the License.
+#      it under the terms of the GNU Lesser General Public License as published
+#      by the Free Software Foundation, version 3 of the License.
 #
 #      HILAS is distributed in the hope that it will be useful,
 #      but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -14,7 +14,8 @@
 #      You should have received a copy of the GNU Lesser General Public License
 #      along with HILAS.  If not, see <https://www.gnu.org/licenses/>.
 #
-#      Licensed under the Lesser General Public License, Version 3.0 (the "License");
+#      Licensed under the Lesser General Public License, Version 3.0
+#      (the "License");
 #      you may not use this file except in compliance with the License.
 #      You may obtain a copy of the License at
 #
@@ -28,14 +29,14 @@
 #
 #      SPDX-License-Identifier: LGPL-3.0
 
-
-#######################################################################################
+---
+###############################################################################
 ##
 ##    Standard CELLS
 ##
 standard-cells:
   description: Top-level cells for use in designs
-#########################################################################
+  ###############################################################################
 
   swc4x2cell:
     description: 4x2 array of FG switch cell, Varactor capacitor cell
@@ -47,13 +48,13 @@ standard-cells:
     description: 4x1 array of FG switch cell, Varactor capacitor cell
 
   swc4x1cellOverlap:
-    description: 4x1 array of FG switch cell using overlap capacitors  
+    description: 4x1 array of FG switch cell using overlap capacitors
 
   swc4x1cellOverlap2:
     description:
 
   swc4x1BiasCell:
-    description: 4x1 array of FG switch cell configured pFET as current sources 
+    description: 4x1 array of FG switch cell configured pFET as current sources
 
   FGBias2x1cell:
     description:
@@ -62,40 +63,42 @@ standard-cells:
     description:
 
   FGBiasWeakGate2x1cell:
-    description: 2x1 array of FG switch cells configured as pFET current sources with weak capacitive gate inputs
+    description: 2x1 array of FG switch cells configured as pFET current
+      sources with weak capacitive gate inputs
 
   TA2Cell_NoFG:
-    description: Two transimpedane amplifiers with no floating-gate inputs.  
+    description: Two transimpedane amplifiers with no floating-gate inputs.
 
   TA2Cell_1FG:
     description: >-
-      Two transimpedance amps with one (of two) amplifiers using floating-gate inputs.
-      FG amplifier with wide linear range.
+      Two transimpedance amps with one (of two) amplifiers using floating-gate
+        inputs. FG amplifier with wide linear range.
 
   TA2Cell_1FG_Strong:
     description: >-
-      Two transimpedance amps with one (of two) amplifiers using floating-gate inputs.
-      FG amplifier with normal linear range.
+      Two transimpedance amps with one (of two) amplifiers using floating-gate
+      inputs. FG amplifier with normal linear range.
 
   TA2SignalBiasCell:
     description:
 
   WTA4Stage01:
     description: >-
-        4-input winner-take-all circuit. Connects directly to array of swc4x2cell.
-        Can array vertically. Needs one nFET transistor current source.
+      4-input winner-take-all circuit. Connects directly to array of swc4x2cell.
+      Can array vertically. Needs one nFET transistor current source.
 
   Tgate4Double01:
-    description: 4 double-throw transmission gates 
+    description: 4 double-throw transmission gates
 
   Tgate4Single01:
     description: 4 single-throw transmission gates
 
   drainSelect01:
-    description: multiplexor for drain selection for 4 drain lines, pitch matched 
+    description: multiplexor for drain selection for 4 drain lines,
+      pitch matched
 
   Trans4small:
-    description: 3 small nFETs + 3 small pFETs 
+    description: 3 small nFETs + 3 small pFETs
 
   pFETmed:
     description: Medium-sized (W/L=10) pFET transistor
@@ -124,15 +127,16 @@ standard-cells:
 
   DAC5bit01:
     description: >- # '>-' indicates string wrapped over multiple lines
-          5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit,
-          and they would use this cell
+      5-bit digital-to-analog converter (under 6.05um at the moment;
+      thinking through expansion to 6bit and 7bit,
+      and they would use this cell
 
 
-#######################################################################################
+################################################################################
 ##
 ##    PRIMITIVE CELLS
 ##
-primitive-cells: ######################################################################
+primitive-cells:  ##############################################################
 
   CapModule01a:
     description: primitive cap, variant 01a
@@ -230,28 +234,28 @@ primitive-cells: ###############################################################
     description:
 
 
-#######################################################################################
+################################################################################
 ##
 ##    TEST CELLS
 ##
 test-cells:
   description: These cells are meant to be used for testing purposes
-#######################################################################################
+  ##############################################################################
 
   FGcharacterization01:
-    description: FG test strucure that uses a capacitor around a 
-           transconductance amplifier
+    description: FG test strucure that uses a capacitor around a
+      transconductance amplifier
 
 
-#######################################################################################
+################################################################################
 ##
-##   Component Cells 
+##   Component Cells
 ##
 component-cells:
   description: >-
     These cells are components used to create the standard cells.
     They are not to be used directly
-#######################################################################################
+  ##############################################################################
 
   decoup_cap_00:
     description: decoupling cap (intended as fill)
@@ -308,7 +312,8 @@ component-cells:
     description: Tunneling cpacitor using a standard varactor capacitor
 
   wellContact:
-    description: contact to a well block, typically used for contacting tunneling junctions in a well. 
+    description: contact to a well block, typically used for contacting
+      tunneling junctions in a well.
 
   overlapCap01:
     description: overlap capacitor based capacitor
@@ -359,16 +364,16 @@ component-cells:
     description:
 
 
-#######################################################################################
+################################################################################
 ##
 ##    CELLS TO BE SORTED
 ##
 cells-to-be-sorted:
   description: Holding area for cells which haven't been sorted
-#######################################################################################
+  ##############################################################################
 
   swc2x2varactor:
-    description:  ??  Is this part of the library?
+    description: ??  Is this part of the library?
 
   all:
     description: A design which contains all cells (?)
