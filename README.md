@@ -517,6 +517,7 @@ Width: 10.080
 | 3                    | GATESEL1             | metal1               | nsew                 |
 | 5                    | GATE1                | metal1               | nsew                 |
 | 6                    | DRAIN1               | metal2               | nsew                 |
+| 7                    | COL3                 | metal2               | nsew                 |
 | 7                    | COL1                 | metal2               | nsew                 |
 | 8                    | DRAIN2               | metal2               | nsew                 |
 | 9                    | COL2                 | metal2               | nsew                 |
