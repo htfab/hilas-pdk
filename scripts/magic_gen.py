@@ -99,6 +99,126 @@ cd = None
 mf = None
 
 
+class XschemLib(object):
+
+    def __init__(self, lib_root):
+        self.root = Path(lib_root)
+        self.schematics = [XschemSchematic(m, self.root) for m in self.root.glob('**/*.sch')]
+        self.symbols = [XschemSymbol(m, self.root) for m in self.root.glob('**/*.sym')]
+
+    def __contains__(self, item):
+        return item in [str(x.file.relative_to(self.root)) for x in self.symbols]
+
+    def _rename_modules(self, from_name, to_name):
+        for sch in self.schematics:
+            needs_save = False
+            stale_file = None
+
+            if sch.name == from_name:
+                stale_file = sch.file
+                sch._set_names(to_name)
+                needs_save = True
+
+            if from_name + '.sym' in sch.refs:
+                sch._rename_refs(from_name, to_name)
+                needs_save = True
+
+            if needs_save:
+                sch._save()
+                if stale_file:
+                    os.remove(stale_file)
+
+        for sym in self.symbols:
+            needs_save = False
+            stale_file = None
+
+            if sym.name == from_name:
+                stale_file = sym.file
+                sym._set_names(to_name)
+                needs_save = True
+
+            # if from_name + '.sym' in sym.refs:
+            #     sym._rename_refs(from_name, to_name)
+            #     needs_save = True
+
+            if needs_save:
+                sym._save()
+                if stale_file:
+                    os.remove(stale_file)
+
+
+class XschemSchematic(object):
+    def __init__(self, schematic_file, lib_root='/'):
+        self.name = schematic_file.stem
+        self.file = schematic_file
+        with open(self.file, 'r') as f:
+            self.c = f.read()
+        self.refs = {}
+        self._get_refs()
+        if lib_root:
+            self.lib_root = Path(lib_root)
+
+    def __str__(self):
+        return str(self.file.relative_to(self.lib_root))
+
+    def _get_refs(self):
+        for line in self.c.splitlines():
+            if line.startswith('C'):
+                refpath = re.search(r'^C {(.*?)}.*', line).group(1)
+                if refpath not in self.refs:
+                    self.refs[refpath] = 0
+                self.refs[refpath] += 1
+
+    def _rename_refs(self, oldname, newname):
+        c = self.c.splitlines()
+        touched = False
+        for i, line in enumerate(c):
+            match = re.search(r'^C {(.*?)}.*', line)
+            if match and match.group(1) == oldname +'.sym':
+                newline = line.replace(oldname+'.sym', newname+'.sym')
+                c[i] = newline
+                touched = True
+        if touched:
+            self.c = '\n'.join(c)
+
+    def _save(self, filename=''):
+        if not filename:
+            filename = self.file
+        with open(filename, 'w') as f:
+            f.write(self.c)
+
+    def _set_names(self, name):
+        if not name.endswith('.sch'):
+            name += '.sch'
+        self.name = name.split('.sch')[0]
+        self.file = self.file.with_name(name)
+
+
+class XschemSymbol(object):
+
+    def __init__(self, symbol_file, lib_root='/'):
+        self.name = symbol_file.stem
+        self.file = symbol_file
+        with open(self.file, 'r') as f:
+            self.c = f.read()
+        if lib_root:
+            self.lib_root = lib_root
+        else:
+            self.lib_root = '/'
+
+    def _set_names(self, name):
+        if not name.endswith('.sch'):
+            name += '.sch'
+        self.name = name.split('.sch')[0]
+        self.file = self.file.with_name(name)
+
+    def _save(self, filename=''):
+        if not filename:
+            filename = self.file
+        with open(filename, 'w') as f:
+            f.write(self.c)
+
+
 class CellData(OrderedDict):
 
     def __init__(self, yaml_dict):
@@ -905,11 +1025,11 @@ def check_count():
         dd = list(set(dl))
         for c in dd:
             dl.remove(c)
-        warn('######################################################################################################')
+        warn(stylize_head())
         warn('Found duplicate entries in {}:'.format(CELL_DATA_FILE.name))
         for f in dl:
             warn('    ' + str(f))
-        warn('######################################################################################################')
+        warn(stylize_head())
 
     ml = list(magic_files)
     mm = []
@@ -921,18 +1041,18 @@ def check_count():
             mm.append(cn)
 
     if mm:
-        warn('######################################################################################################')
+        warn(stylize_head())
         warn('Entries in {} without /mag/ files:'.format(CELL_DATA_FILE.name))
         for mf in mm:
             warn('    ' + str(mf))
-        warn('######################################################################################################')
+        warn(stylize_head())
 
     if ml:
-        warn('######################################################################################################')
+        warn(stylize_head())
         warn('Magic files missing entries in {}:'.format(CELL_DATA_FILE.name))
         for mf in ml:
             warn('    ' + str(mf))
-        warn('######################################################################################################')
+        warn(stylize_head())
 
 
 def check_depends():
@@ -940,9 +1060,9 @@ def check_depends():
     for m in mag_files.values():
         deps = m.referenced_mods()
         if m.long_name in deps:
-            warn('######################################################################################################')
+            warn(stylize_head())
             warn('    Cell \'{}\' contains instances of itself!'.format(m.long_name))
-            warn('######################################################################################################')
+            warn(stylize_head())
 
         for d in deps:
             if not (LIB_PATH['mag'] / d).with_suffix('.mag').is_file():
@@ -952,15 +1072,14 @@ def check_depends():
                     missing.update({m.long_name: [d]})
 
     if missing:
-        warn('######################################################################################################')
+        warn(stylize_head())
         warn('Referenced (sub)cells missing from the /mag/ path:')
         for mf, clist in missing.items():
             warn('    {} is missing:'.format(mf))
             for cell in clist:
                 warn('        {}'.format(cell))
 
-        warn('######################################################################################################')
-
+        warn(stylize_head())
 
 def check_descriptions():
     missing = []
@@ -969,12 +1088,11 @@ def check_descriptions():
             missing.append(cn)
 
     if missing:
-        warn('######################################################################################################')
+        warn(stylize_head())
         warn('The following standard cells are missing descriptions in the \'{}\'file:'.format(CELL_DATA_FILE.name))
         for mf in missing:
             warn('    ' + str(mf))
-        warn('######################################################################################################')
-
+        warn(stylize_head())
 
 def check_net_names():
     for m in mag_files.values():
@@ -1033,7 +1151,7 @@ def check_power_nets():
 
 def check_lvs():
     NETGEN_TCL = TECH_ROOT / 'netgen' / 'sky130_setup.tcl'
-    warn('##################      Starting LVS      ##################')
+    warn(stylize_head('Starting LVS'))
     for m in cd.standard_cells:
         ext_spice = list(LIB_PATH['spice_ext'].glob(CELL_PREFIX + m + '.spice'))
         hand_spice = list(LIB_PATH['spice_hand'].glob(CELL_PREFIX + m + '.spice'))
@@ -1070,7 +1188,7 @@ def check_lvs():
             )
             subprocess.run(shlex.split(command), check=False)
 
-    warn('##################        LVS Complete        ##################')
+    warn(stylize_head('LVS Complete'))
 
 
 def check_mag_names():
@@ -1101,12 +1219,11 @@ def check_dir_for_prefixes(directory, extension):
             mp += [avail]
 
     if mp:
-        warn('######################################################################################################')
+        warn(stylize_head())
         warn('    \'{}\' directory contains the following files which are missing the prefix \'{}\':'.format(directory, CELL_PREFIX))
         for exx in mp:
             warn('        {}'.format(exx))
-        warn('######################################################################################################')
-
+        warn(stylize_head())
 
 def check_dir_for_complete(directory, extension, set):
     if extension.startswith('*'):
@@ -1129,19 +1246,19 @@ def check_dir_for_complete(directory, extension, set):
             extra += [avail]
 
     if missing_in_dir:
-        warn('######################################################################################################')
+        warn(stylize_head())
         warn('    \'{}\' directory is missing the following \'{}\' files:'.format(directory, extension))
         for m in missing_in_dir:
             warn('        {}'.format(m))
         if not extra:
-            warn('######################################################################################################')
+            warn(stylize_head())
 
     if extra:
-        warn('######################################################################################################')
+        warn(stylize_head())
         warn('    \'{}\' directory contains the following extraneous \'{}\' files:'.format(directory, extension))
         for exx in extra:
             warn('        {}'.format(exx))
-        warn('######################################################################################################')
+        warn(stylize_head())
 
 
 def check_prefixes():
@@ -1166,7 +1283,35 @@ def check_file_presence():
         check_dir_for_complete(*set)
 
 
-def run_checks():
+def check_xschem():
+    warn(stylize_head('Xschem Consistency Check'))
+    xsch_lib = XschemLib(LIB_PATH['xschem'])
+    for sch in xsch_lib.schematics:
+        mm = []
+        for rr in sch.refs:
+            if rr not in xsch_lib and not re.search(r'^devices/\w+[.]sym', rr) \
+                    and not rr =='devices' and not re.search(r'^sky130_fd_pr/\w+[.]sym', rr):
+                mm.append(rr)
+
+        if mm:
+            warn('Schematic {} is missing the following refs:'.format(sch))
+            for mmm in mm:
+                warn('    {}'.format(mmm))
+
+    warn(stylize_head())
+    return xsch_lib
+
+
+def run_rename_xschem(spec_string):
+    old_n, new_n = [x.strip() for x in spec_string.strip().split(':')]
+    xsch_lib = check_xschem()
+    xsch_lib._rename_modules(from_name=old_n, to_name=new_n)
+
+
+
+
+def run_basic_checks():
+    check_mag_names()
     check_file_presence()
     check_count()
     check_depends()
@@ -1180,34 +1325,46 @@ def main():
     global magic, args, rel_root, cd, mag_files
 
     ap = argparse.ArgumentParser()
-    ap.add_argument('-g', '--gds', action='store_true', help='Create GDS files', default=False)
-    ap.add_argument('-t', '--temp-lef', action='store_true',
-                    help='Create temporary individual LEF files', default=False)
+
     ap.add_argument('-e', '--lef', action='store_true', help='Create LEF file', default=False)
+    ap.add_argument('-g', '--gds', action='store_true', help='Create GDS files', default=False)
     ap.add_argument('-i', '--lib', action='store_true', help='Create LIB file', default=False)
-    ap.add_argument('--lvs', '-l', action='store_true', help='run LVS checks (with netgen)', default=False)
-    ap.add_argument('-s', '--spice', action='store_true', help='Create Spice files', default=False)
+    ap.add_argument('-l', '--lvs', action='store_true', help='run LVS checks (with netgen)', default=False)
     ap.add_argument('-m', '--markdown', action='store_true',
                     help='Create a pretty, human-readable markdown summary of cell pins',
                     default=False)
     ap.add_argument('-n', '--nosynth', action='store_true', help='Create \"no_synth.cells\" file')
+    ap.add_argument('-s', '--spice', action='store_true', help='Create Spice files', default=False)
+    ap.add_argument('-t', '--temp-lef', action='store_true',
+                    help='Create temporary individual LEF files', default=False)
     ap.add_argument('-v', '--verilog', action='store_true', help='Directory in which to put synthetic Verilog output',
                     default=False)
 
-    ap.add_argument('-C', '--checks-only', action='store_true', help='Run consistency checks and quit.', default=False)
+    ap.add_argument('-C', '--basic-checks', action='store_true', help='Run basic cell consistency checks.', default=False)
     ap.add_argument('-D', '--delete', action='store_true',
-                    help='Delete temporary (individual) LEF files after consolidation', default=False)
+                    help='Delete temporary (individual) LEF files after consolidation', default=True)
     ap.add_argument('-F', '--force', action='store_true', help='Overwrite existing collateral.', default=False)
-    ap.add_argument('-Y', '--yes', action='store_true', help='Assume a \'yes\' answer to all prompts.')
+    ap.add_argument('-L', '--lint-yaml', help='Run linter on the CELL_INDEX.yml file')
     ap.add_argument('-N', '--no', action='store_true', help='Assume a \'no\' answer to all prompts.')
+    ap.add_argument('-X', '--xschem', action='store_true', help='Parse Xschem files looking for dangling nets and modules')
+    ap.add_argument('-Y', '--yes', action='store_true', help='Assume a \'yes\' answer to all prompts.')
+
+    ap.add_argument('--rename-xschem', action='store', help='Rename modules in xschem library and update references.  '
+                                                            'Usage: \'--rename-xschem \"<fromname>:<toname>\"\'')
+
     args = ap.parse_args()
 
-    warn('######   running linter on {}    ######'.format(CELL_DATA_FILE))
-    try:
-        yamllintcli.run([str(CELL_DATA_FILE)])
-    except:
-        pass
-    warn('##########################################################################################################')
+    if args.lint_yaml:
+
+        warn(stylize_head('Linting {}'.format(CELL_DATA_FILE.name)))
+        try:
+            yamllintcli.run([str(CELL_DATA_FILE)])
+
+        except:
+            pass
+
+        finally:
+            warn(stylize_head())
 
     with open(CELL_DATA_FILE, 'r') as f:
         cd = CellData(yaml.load(f, Loader=yaml.SafeLoader))
@@ -1226,13 +1383,13 @@ def main():
     except AssertionError:
         edie('didn\'t find any *.mag files on the source path')
 
-    check_mag_names()
     mag_files = MagicLibrary(source_files)
 
-    if args.checks_only:
-        exit(run_checks())
-    else:
-        run_checks()
+    if args.basic_checks:
+        run_basic_checks()
+
+    if args.rename_xschem:
+        exit(run_rename_xschem(args.rename_xschem))
 
     # Items here on done on a per-cell basis with Magic opening each one
     magic = Magic()
@@ -1242,6 +1399,9 @@ def main():
     # The following items can be done on the batch level:
     if args.lvs:
         check_lvs()
+
+    if args.xschem:
+        check_xschem()
 
     if args.lef and target_check(None, 'lef'):
         # consolidate all temp LEFs
@@ -1263,6 +1423,15 @@ def main():
 
     if args.nosynth:
         make_nosynth()
+
+
+def stylize_head(text=''):
+    if text:
+        cblock = '  ' + text + '  '
+    else:
+        cblock = ''
+    hashlen = int((80-len(cblock))/2)
+    return '#'*hashlen + cblock + '#'*hashlen
 
 
 if __name__ == '__main__':
