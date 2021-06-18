@@ -162,7 +162,7 @@ rlabel metal2 -264 -31 -257 -13 0 DRAIN2
 port 8 nsew
 rlabel metal2 -262 -146 -256 -129 0 DRAIN3
 port 10 nsew
-rlabel metal2 -262 -188 -256 -171 0 COL1
+rlabel metal2 -262 -188 -256 -171 0 COL3
 port 7 nsew
 rlabel metal2 -262 -286 -256 -269 0 COL4
 port 11 nsew
