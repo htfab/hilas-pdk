@@ -1,5 +1,4 @@
 DAC5bit01
-DAC_bit6_01
 FGBias2x1cell
 FGBiasWeakGate2x1cell
 FGtrans2x1cell
@@ -10,14 +9,13 @@ TA2SignalBiasCell
 Tgate4Double01
 Tgate4Single01
 Trans4small
-WTA4stage01
+WTA4Stage01
 capacitorArray01
 capacitorSize01
 capacitorSize02
 capacitorSize03
 capacitorSize04
 cellAttempt01
-description
 drainSelect01
 nFETLarge
 pFETLarge
@@ -39,16 +37,15 @@ DAC6bit01
 DoubleTGate01
 DualTACore01
 FGHugeVaractorCapacitor01
+FGVaractorCapacitor
 FGVaractorCapacitor02
 TACoreBlock
 TACoreBlock2
-TAcoreblock
 TgateDouble01
 TgateSingle01
 TgateSingle01Part1
 TgateSingle01Part2
 TgateVinj01
-WTA4Stage01
 WTAblockSample01
 WTAsinglestage01
 invert01
@@ -64,6 +61,8 @@ FGVaractorTunnelCap01
 Trans2med
 TunCap01
 TunVaractorCapcitor
+decoup_cap_00
+decoup_cap_01
 horizPcell01
 horizTransCell01
 li2m1
@@ -93,4 +92,5 @@ poly2li
 poly2m1
 poly2m2
 wellContact
+all
 swc2x2varactor

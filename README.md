@@ -51,18 +51,18 @@ idea to start by taking a look at the [Fastlane Page](https://gitlab.com/um-ece/
 | Block Name                | Description                                             |
 |---------------------------|---------------------------------------------------------|
 | [`DAC5bit01`](#DAC5bit01) | 5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit, and they would use this cell |
-| [`DAC_bit6_01`](#DAC-bit6-01) | 6-bit DAC                                               |
 | [`FGBias2x1cell`](#FGBias2x1cell) |                                                         |
 | [`FGBiasWeakGate2x1cell`](#FGBiasWeakGate2x1cell) | 2x1 array of FG switch cells configured as pFET current sources with weak capacitive gate inputs |
 | [`FGtrans2x1cell`](#FGtrans2x1cell) |                                                         |
-| [`TA2Cell_1FG`](#TA2Cell-1FG) | Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with wide linear range. |
+| [`TA2Cell_1FG`](#TA2Cell-1FG) | Two transimpedance amps with one (of two) amplifiers using floating-gate
+  inputs. FG amplifier with wide linear range. |
 | [`TA2Cell_1FG_Strong`](#TA2Cell-1FG-Strong) | Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with normal linear range. |
 | [`TA2Cell_NoFG`](#TA2Cell-NoFG) | Two transimpedane amplifiers with no floating-gate inputs. |
 | [`TA2SignalBiasCell`](#TA2SignalBiasCell) |                                                         |
 | [`Tgate4Double01`](#Tgate4Double01) | 4 double-throw transmission gates                       |
 | [`Tgate4Single01`](#Tgate4Single01) | 4 single-throw transmission gates                       |
 | [`Trans4small`](#Trans4small) | 3 small nFETs + 3 small pFETs                           |
-| [`WTA4stage01`](#WTA4stage01) | 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one nFET transistor current source. |
+| [`WTA4Stage01`](#WTA4Stage01) | 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one nFET transistor current source. |
 | [`capacitorArray01`](#capacitorArray01) | selectable capacitor array                              |
 | [`capacitorSize01`](#capacitorSize01) |                                                         |
 | [`capacitorSize02`](#capacitorSize02) |                                                         |
@@ -95,16 +95,15 @@ idea to start by taking a look at the [Fastlane Page](https://gitlab.com/um-ece/
 | [`DoubleTGate01`](#DoubleTGate01) | 2x1 array of transmission gates                         |
 | [`DualTACore01`](#DualTACore01) |                                                         |
 | [`FGHugeVaractorCapacitor01`](#FGHugeVaractorCapacitor01) | one large varactor cap                                  |
+| [`FGVaractorCapacitor`](#FGVaractorCapacitor) | varactor cap for floating-gate charge storage           |
 | [`FGVaractorCapacitor02`](#FGVaractorCapacitor02) | variant 2, varactor cap for floating-gate charge storage |
 | [`TACoreBlock`](#TACoreBlock) |                                                         |
 | [`TACoreBlock2`](#TACoreBlock2) |                                                         |
-| [`TAcoreblock`](#TAcoreblock) |                                                         |
 | [`TgateDouble01`](#TgateDouble01) |                                                         |
 | [`TgateSingle01`](#TgateSingle01) |                                                         |
 | [`TgateSingle01Part1`](#TgateSingle01Part1) |                                                         |
 | [`TgateSingle01Part2`](#TgateSingle01Part2) |                                                         |
 | [`TgateVinj01`](#TgateVinj01) |                                                         |
-| [`WTA4Stage01`](#WTA4Stage01) |                                                         |
 | [`WTAblockSample01`](#WTAblockSample01) |                                                         |
 | [`WTAsinglestage01`](#WTAsinglestage01) |                                                         |
 | [`invert01`](#invert01) |                                                         |
@@ -149,18 +148,6 @@ Width: 16.580
 | 6                    | VPWR                 | metal2               | nsew,analog,default  |
 | 7                    | DRAIN                | metal1               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="DAC-bit6-01"></a>
-### `DAC_bit6_01`
-
-Description: 6-bit DAC
-
-Height: 13.680
-<br>
-Width: 16.380
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
 <a name="FGBias2x1cell"></a>
 ### `FGBias2x1cell`
 
@@ -177,9 +164,10 @@ Width: 11.530
 | 4                    | GATE_CONTROL         | metal1               | nsew,analog,default  |
 | 5                    | DRAIN1               | metal2               | nsew,analog,default  |
 | 6                    | DRAIN4               | metal2               | nsew,analog,default  |
-| 7                    | VINJ                 | metal1               | nsew,power,default   |
 | 8                    | OUTPUT1              | metal2               | nsew,analog,default  |
 | 9                    | OUTPUT2              | metal2               | nsew,analog,default  |
+| 10                   | GATECOL              | metal1               | nsew                 |
+| 11                   | VINJ                 | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="FGBiasWeakGate2x1cell"></a>
 ### `FGBiasWeakGate2x1cell`
@@ -236,7 +224,8 @@ Width: 11.520
 <a name="TA2Cell-1FG"></a>
 ### `TA2Cell_1FG`
 
-Description: Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with wide linear range.
+Description: Two transimpedance amps with one (of two) amplifiers using floating-gate
+  inputs. FG amplifier with wide linear range.
 
 Height: 6.050
 <br>
@@ -271,6 +260,18 @@ Width: 28.100
 | 3                    | PROG                 | metal1               | nsew                 |
 | 4                    | VGATE1               | metal1               | nsew                 |
 | 5                    | VINP_AMP1            | metal1               | nsew                 |
+| 6                    | VINJ                 | metal1               | nsew                 |
+| 8                    | VINN_AMP2            | metal2               | n                    |
+| 9                    | VINP_AMP2            | metal2               | nsew                 |
+| 10                   | VPWR                 | metal1               | nsew                 |
+| 11                   | VGND                 | metal1               | nsew                 |
+| 12                   | OUTPUT2              | metal2               | nsew                 |
+| 13                   | OUTPUT1              | metal2               | nsew                 |
+| 14                   | GATESEL1             | metal1               | nsew                 |
+| 15                   | GATESEL2             | metal1               | nsew                 |
+| 16                   | DRAIN1               | metal2               | nsew                 |
+| 17                   | DRAIN2               | metal2               | nsew                 |
+| 18                   | VINN_AMP1            | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="TA2Cell-NoFG"></a>
 ### `TA2Cell_NoFG`
@@ -401,17 +402,28 @@ Width: 2.800
 | 19                   | NFET_DRAIN2          | metal2               | nsew,analog,default  |
 | 20                   | NFET_DRAIN1          | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="WTA4stage01"></a>
-### `WTA4stage01`
+<a name="WTA4Stage01"></a>
+### `WTA4Stage01`
 
 Description: 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one nFET transistor current source.
 
-Height: 5.340
+Height: 6.050
 <br>
-Width: 2.830
+Width: 14.170
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
+| 1                    | VGND                 | metal1               | nsew,ground,default  |
+| 2                    | COMMONNODE           | metal1               | nsew,analog,default  |
+| 3                    | COMMONMODE           | poly                 | nsew,analog,default  |
+| 4                    | OUTPUT1              | metal2               | nsew,analog,default  |
+| 5                    | OUTPUT2              | metal2               | nsew,analog,default  |
+| 6                    | OUTPUT3              | metal2               | nsew,analog,default  |
+| 7                    | OUTPUT4              | metal2               | nsew,analog,default  |
+| 8                    | INPUT1               | metal2               | nsew,analog,default  |
+| 9                    | INPUT2               | metal2               | nsew,analog,default  |
+| 10                   | INPUT3               | metal2               | nsew,analog,default  |
+| 11                   | INPUT4               | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
 <a name="capacitorArray01"></a>
 ### `capacitorArray01`
@@ -500,6 +512,17 @@ Width: 10.080
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
+| 1                    | VTUN                 | metal1               | nsew                 |
+| 2                    | VINJ                 | metal1               | nsew                 |
+| 3                    | GATESEL1             | metal1               | nsew                 |
+| 5                    | GATE1                | metal1               | nsew                 |
+| 6                    | DRAIN1               | metal2               | nsew                 |
+| 7                    | COL1                 | metal2               | nsew                 |
+| 8                    | DRAIN2               | metal2               | nsew                 |
+| 9                    | COL2                 | metal2               | nsew                 |
+| 10                   | DRAIN3               | metal2               | nsew                 |
+| 11                   | COL4                 | metal2               | nsew                 |
+| 12                   | DRAIN4               | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="drainSelect01"></a>
 ### `drainSelect01`
@@ -783,7 +806,7 @@ Description: None
 
 Height: 13.680
 <br>
-Width: 33.400
+Width: 16.380
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -824,6 +847,18 @@ Width: 10.290
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
+<a name="FGVaractorCapacitor"></a>
+### `FGVaractorCapacitor`
+
+Description: varactor cap for floating-gate charge storage
+
+Height: 1.860
+<br>
+Width: 2.230
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
 <a name="FGVaractorCapacitor02"></a>
 ### `FGVaractorCapacitor02`
 
@@ -850,18 +885,6 @@ Width: 9.540
 --------------------------------------------------------------------------------------------
 <a name="TACoreBlock2"></a>
 ### `TACoreBlock2`
-
-Description: None
-
-Height: 4.770
-<br>
-Width: 2.190
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
---------------------------------------------------------------------------------------------
-<a name="TAcoreblock"></a>
-### `TAcoreblock`
 
 Description: None
 
@@ -932,29 +955,6 @@ Width: 5.420
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="WTA4Stage01"></a>
-### `WTA4Stage01`
-
-Description: None
-
-Height: 6.050
-<br>
-Width: 14.170
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | VGND                 | metal1               | nsew,ground,default  |
-| 2                    | COMMONNODE           | metal1               | nsew,analog,default  |
-| 3                    | COMMONMODE           | poly                 | nsew,analog,default  |
-| 4                    | OUTPUT1              | metal2               | nsew,analog,default  |
-| 5                    | OUTPUT2              | metal2               | nsew,analog,default  |
-| 6                    | OUTPUT3              | metal2               | nsew,analog,default  |
-| 7                    | OUTPUT4              | metal2               | nsew,analog,default  |
-| 8                    | INPUT1               | metal2               | nsew,analog,default  |
-| 9                    | INPUT2               | metal2               | nsew,analog,default  |
-| 10                   | INPUT3               | metal2               | nsew,analog,default  |
-| 11                   | INPUT4               | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
 <a name="WTAblockSample01"></a>
 ### `WTAblockSample01`
 
@@ -962,7 +962,7 @@ Description: None
 
 Height: 12.030
 <br>
-Width: 33.420
+Width: 34.090
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1159,6 +1159,30 @@ Description: Tunneling capacitor using a standard varactor capacitor
 Height: 7.010
 <br>
 Width: 10.430
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="decoup-cap-00"></a>
+### `decoup_cap_00`
+
+Description: decoupling cap (intended as fill)
+
+Height: 3.020
+<br>
+Width: 3.080
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="decoup-cap-01"></a>
+### `decoup_cap_01`
+
+Description: decoupling cap (intended as fill), variant
+
+Height: 6.040
+<br>
+Width: 3.080
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1512,6 +1536,18 @@ Width: 1.740
 |----------------------|----------------------|----------------------|----------------------|
 ## CELLS-TO-BE-SORTED
 
+--------------------------------------------------------------------------------------------
+<a name="all"></a>
+### `all`
+
+Description: A design which contains all cells (?)
+
+Height: 6.670
+<br>
+Width: 1.770
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
 <a name="swc2x2varactor"></a>
 ### `swc2x2varactor`
