@@ -107,17 +107,17 @@ class StructuredTextFile:
             self.c = f.read()
 
     def __getattr__(self, item):
-        try:
-            return self.path.item
-
-        except:
-            return None
+        return getattr(self.path, item)
 
     def _save(self, filename=''):
         if not filename:
             filename = self.path
         with open(filename, 'w') as f:
             f.write(self.c)
+
+    @property
+    def file(self):
+        return self.path
 
 
 class XschemLib:
@@ -128,7 +128,7 @@ class XschemLib:
         self.symbols = [XschemSymbol(m, self.root) for m in self.root.glob('**/*.sym')]
 
     def __contains__(self, item):
-        return item in [str(x.file.relative_to(self.root)) for x in self.symbols]
+        return item in [str(x.path.relative_to(self.root)) for x in self.symbols]
 
     def _rename_modules(self, from_name, to_name):
 
@@ -137,7 +137,7 @@ class XschemLib:
             stale_file = None
 
             if sch.name == from_name:
-                stale_file = sch.file
+                stale_file = sch.path
                 sch._set_names(to_name)
                 needs_save = True
 
@@ -174,14 +174,13 @@ class XschemSchematic(StructuredTextFile):
     def __init__(self, schematic_file, lib_root='/'):
         super().__init__(schematic_file)
         self.name = schematic_file.stem
-        self.file = schematic_file
         self.refs = {}
         self._get_refs()
         if lib_root:
             self.lib_root = Path(lib_root)
 
     def __str__(self):
-        return str(self.file.relative_to(self.lib_root))
+        return str(self.path.relative_to(self.lib_root))
 
     def _get_refs(self):
         for line in self.c.splitlines():
@@ -207,7 +206,7 @@ class XschemSchematic(StructuredTextFile):
         if not name.endswith('.sch'):
             name += '.sch'
         self.name = name.split('.sch')[0]
-        self.file = self.file.with_name(name)
+        self.path = self.path.with_name(name)
 
 
 class XschemSymbol(StructuredTextFile):
@@ -215,7 +214,6 @@ class XschemSymbol(StructuredTextFile):
     def __init__(self, symbol_file, lib_root='/'):
         super().__init__(symbol_file)
         self.name = symbol_file.stem
-        self.file = symbol_file
         if lib_root:
             self.lib_root = lib_root
         else:
@@ -225,7 +223,7 @@ class XschemSymbol(StructuredTextFile):
         if not name.endswith('.sym'):
             name += '.sym'
         self.name = name.split('.sym')[0]
-        self.file = self.file.with_name(name)
+        self.path = self.path.with_name(name)
 
 
 class CellData(OrderedDict):
