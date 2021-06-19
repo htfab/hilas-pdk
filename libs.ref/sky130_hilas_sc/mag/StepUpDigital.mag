@@ -1,0 +1,112 @@
+magic
+tech sky130A
+timestamp 1624113415
+<< nwell >>
+rect 19 -40 270 119
+<< mvpmos >>
+rect 84 55 134 86
+rect 155 -7 205 24
+<< mvpdiff >>
+rect 53 79 84 86
+rect 53 62 61 79
+rect 78 62 84 79
+rect 53 55 84 62
+rect 134 80 168 86
+rect 134 63 140 80
+rect 157 63 168 80
+rect 134 55 168 63
+rect 124 16 155 24
+rect 124 -1 130 16
+rect 148 -1 155 16
+rect 124 -7 155 -1
+rect 205 18 237 24
+rect 205 1 211 18
+rect 229 1 237 18
+rect 205 -7 237 1
+<< mvpdiffc >>
+rect 61 62 78 79
+rect 140 63 157 80
+rect 130 -1 148 16
+rect 211 1 229 18
+<< mvnsubdiff >>
+rect 54 16 124 24
+rect 54 -1 80 16
+rect 97 -1 124 16
+rect 54 -7 124 -1
+<< mvnsubdiffcont >>
+rect 80 -1 97 16
+<< poly >>
+rect 84 88 255 104
+rect 84 86 134 88
+rect 228 60 255 88
+rect 84 40 134 55
+rect 228 43 233 60
+rect 250 43 255 60
+rect 155 24 205 39
+rect 228 35 255 43
+rect 155 -10 205 -7
+rect 155 -25 285 -10
+<< polycont >>
+rect 233 43 250 60
+<< locali >>
+rect 147 87 370 95
+rect 147 80 164 87
+rect 53 62 61 79
+rect 78 62 86 79
+rect 132 63 140 80
+rect 157 70 164 80
+rect 181 78 370 87
+rect 181 70 192 78
+rect 157 63 192 70
+rect 60 52 78 62
+rect 77 35 78 52
+rect 60 17 78 35
+rect 225 43 233 60
+rect 250 43 258 60
+rect 225 18 250 43
+rect 77 16 78 17
+rect 77 0 80 16
+rect 60 -1 80 0
+rect 97 -1 130 16
+rect 148 -1 156 16
+rect 203 1 211 18
+rect 229 8 250 18
+rect 229 7 267 8
+rect 229 1 285 7
+rect 211 -10 285 1
+<< viali >>
+rect 164 70 181 87
+rect 60 35 77 52
+rect 60 0 77 17
+<< metal1 >>
+rect 53 52 82 119
+rect 157 92 189 95
+rect 157 66 160 92
+rect 186 66 189 92
+rect 157 65 189 66
+rect 53 35 60 52
+rect 77 35 82 52
+rect 53 17 82 35
+rect 53 0 60 17
+rect 77 0 82 17
+rect 53 -40 82 0
+<< via1 >>
+rect 160 87 186 92
+rect 160 70 164 87
+rect 164 70 181 87
+rect 181 70 186 87
+rect 160 66 186 70
+<< metal2 >>
+rect 157 87 160 92
+rect 26 67 160 87
+rect 157 66 160 67
+rect 186 66 189 92
+use StepUpDigitalPart1  StepUpDigitalPart1_0
+timestamp 1624113415
+transform 1 0 7 0 1 0
+box 278 -40 892 119
+<< labels >>
+rlabel metal2 26 67 33 87 0 Output
+rlabel metal1 53 111 82 119 0 Vinj
+rlabel metal1 53 -40 82 -32 0 Vinj
+<< end >>
