@@ -11,7 +11,7 @@ for f in $(find . -maxdepth 1 -iname "*.sch" -or -iname "*.sym" ); do
 
         set -x
         python3 ../../../scripts/magic_gen.py --rename-xschem "${oname}:${newname}"
-        unset -x
+        set +x
 
     fi
 done
