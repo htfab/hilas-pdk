@@ -1,0 +1,217 @@
+magic
+tech sky130A
+timestamp 1624147000
+<< error_s >>
+rect -330 594 -329 597
+rect -330 443 -329 446
+rect -330 292 -329 295
+rect 202 225 254 226
+rect 412 225 462 226
+<< nwell >>
+rect 32 659 54 665
+rect 32 64 54 69
+<< metal1 >>
+rect -576 658 -554 666
+rect -319 657 -296 666
+rect -270 631 -243 660
+rect 32 659 54 665
+rect 529 661 556 666
+rect -274 604 -271 631
+rect -244 604 -241 631
+rect -178 612 -151 617
+rect -270 526 -243 604
+rect -271 523 -243 526
+rect -244 496 -243 523
+rect -271 493 -243 496
+rect -270 490 -243 493
+rect -224 563 -197 570
+rect -224 358 -197 536
+rect -178 471 -151 585
+rect -83 567 -54 572
+rect -85 564 -54 567
+rect -56 535 -54 564
+rect -85 532 -54 535
+rect -183 444 -180 471
+rect -153 444 -150 471
+rect -225 355 -197 358
+rect -198 328 -197 355
+rect -225 325 -197 328
+rect -224 208 -197 325
+rect -178 313 -151 444
+rect -180 310 -151 313
+rect -153 283 -151 310
+rect -180 280 -151 283
+rect -178 278 -151 280
+rect -131 417 -104 423
+rect -131 414 -103 417
+rect -131 387 -130 414
+rect -131 384 -103 387
+rect -83 410 -54 532
+rect -83 384 -81 410
+rect -55 384 -54 410
+rect -224 205 -194 208
+rect -224 178 -221 205
+rect -224 175 -194 178
+rect -224 170 -197 175
+rect -131 163 -104 384
+rect -133 160 -104 163
+rect -106 133 -104 160
+rect -133 130 -104 133
+rect -131 127 -104 130
+rect -83 267 -54 384
+rect -83 264 -53 267
+rect -83 235 -82 264
+rect -83 232 -53 235
+rect -83 110 -54 232
+rect -83 78 -54 81
+rect 32 64 54 69
+rect 529 64 556 69
+<< via1 >>
+rect -271 604 -244 631
+rect -178 585 -151 612
+rect -271 496 -244 523
+rect -224 536 -197 563
+rect -85 535 -56 564
+rect -180 444 -153 471
+rect -225 328 -198 355
+rect -180 283 -153 310
+rect -130 387 -103 414
+rect -81 384 -55 410
+rect -221 178 -194 205
+rect -133 133 -106 160
+rect -82 235 -53 264
+rect -83 81 -54 110
+<< metal2 >>
+rect -266 650 -29 651
+rect -268 635 -29 650
+rect -268 634 -241 635
+rect -271 631 -241 634
+rect -637 609 -626 627
+rect -294 609 -271 627
+rect -244 609 -241 631
+rect -271 601 -244 604
+rect -181 585 -178 612
+rect -151 606 -148 612
+rect -151 590 -29 606
+rect -151 585 -148 590
+rect -227 560 -224 563
+rect -294 542 -224 560
+rect -227 536 -224 542
+rect -197 560 -194 563
+rect -197 541 -192 560
+rect -197 536 -194 541
+rect -88 535 -85 564
+rect -56 557 -53 564
+rect -56 541 -29 557
+rect -56 535 -53 541
+rect 645 537 658 554
+rect -274 496 -271 523
+rect -244 517 -241 523
+rect -244 501 -110 517
+rect -244 496 -241 501
+rect -126 500 -110 501
+rect -126 484 -30 500
+rect -637 458 -626 476
+rect -294 474 -158 476
+rect -294 471 -153 474
+rect -294 458 -180 471
+rect -153 444 -152 455
+rect -180 441 -152 444
+rect -175 439 -152 441
+rect -125 439 -29 455
+rect -125 414 -109 439
+rect -133 409 -130 414
+rect -294 391 -130 409
+rect -133 387 -130 391
+rect -103 387 -100 414
+rect -84 384 -81 410
+rect -55 406 -52 410
+rect -55 390 -29 406
+rect -55 384 -52 390
+rect 645 386 658 403
+rect -228 328 -225 355
+rect -198 349 -195 355
+rect -198 333 -29 349
+rect -198 328 -195 333
+rect -637 307 -626 325
+rect -183 283 -180 310
+rect -153 304 -150 310
+rect -153 288 -29 304
+rect -153 283 -150 288
+rect -85 258 -82 264
+rect -294 240 -82 258
+rect -85 235 -82 240
+rect -53 258 -50 264
+rect -53 255 -36 258
+rect -53 239 -29 255
+rect -53 235 -50 239
+rect 645 235 658 252
+rect -224 178 -221 205
+rect -194 199 -191 205
+rect -194 183 -29 199
+rect -194 178 -191 183
+rect -136 133 -133 160
+rect -106 154 -103 160
+rect -106 138 -29 154
+rect -106 133 -103 138
+rect -86 81 -83 110
+rect -54 105 -51 110
+rect -54 89 -29 105
+rect -54 81 -51 89
+rect 645 85 658 102
+use VinjInv2  VinjInv2_2
+timestamp 1624141468
+transform 1 0 -301 0 1 60
+box -336 144 25 308
+use VinjInv2  VinjInv2_1
+timestamp 1624141468
+transform 1 0 -301 0 1 211
+box -336 144 25 308
+use VinjInv2  VinjInv2_0
+timestamp 1624141468
+transform 1 0 -301 0 1 362
+box -336 144 25 308
+use VinjNOR3  VinjNOR3_0
+timestamp 1624138502
+transform 1 0 307 0 1 -90
+box -337 144 351 308
+use VinjNOR3  VinjNOR3_3
+timestamp 1624138502
+transform 1 0 307 0 1 362
+box -337 144 351 308
+use VinjNOR3  VinjNOR3_1
+timestamp 1624138502
+transform 1 0 307 0 1 60
+box -337 144 351 308
+use VinjNOR3  VinjNOR3_2
+timestamp 1624138502
+transform 1 0 307 0 1 211
+box -337 144 351 308
+<< labels >>
+rlabel metal2 645 537 658 554 0 Output00
+port 1 nsew
+rlabel metal2 645 386 658 403 0 Output01
+port 2 nsew
+rlabel metal2 645 235 658 252 0 Output10
+port 3 nsew
+rlabel metal2 645 85 658 102 0 Output11
+port 4 nsew
+rlabel metal1 529 661 556 666 0 GND
+port 5 nsew
+rlabel metal1 529 64 556 69 0 GND
+port 5 nsew
+rlabel metal1 32 64 54 69 0 Vinj
+port 6 nsew
+rlabel metal1 32 659 54 665 0 Vinj
+port 6 nsew
+rlabel metal2 -637 609 -626 627 0 In1
+port 8 nsew
+rlabel metal2 -637 458 -626 476 0 In2
+port 7 nsew
+rlabel metal2 -637 307 -626 325 0 Enable
+port 9 nsew
+rlabel metal1 -576 658 -554 666 0 Vinj
+port 6 nsew
+rlabel metal1 -319 657 -296 666 0 GND
+port 5 nsew
+<< end >>
