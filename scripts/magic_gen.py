@@ -99,7 +99,28 @@ cd = None
 mf = None
 
 
-class XschemLib(object):
+class StructuredTextFile:
+
+    def __init__(self, path):
+        self.path = Path(path)
+        with open(path, 'r') as f:
+            self.c = f.read()
+
+    def __getattr__(self, item):
+        try:
+            return self.path.item
+
+        except:
+            return None
+
+    def _save(self, filename=''):
+        if not filename:
+            filename = self.path
+        with open(filename, 'w') as f:
+            f.write(self.c)
+
+
+class XschemLib:
 
     def __init__(self, lib_root):
         self.root = Path(lib_root)
@@ -110,6 +131,7 @@ class XschemLib(object):
         return item in [str(x.file.relative_to(self.root)) for x in self.symbols]
 
     def _rename_modules(self, from_name, to_name):
+
         for sch in self.schematics:
             needs_save = False
             stale_file = None
@@ -147,12 +169,12 @@ class XschemLib(object):
                     os.remove(stale_file)
 
 
-class XschemSchematic(object):
+class XschemSchematic(StructuredTextFile):
+
     def __init__(self, schematic_file, lib_root='/'):
+        super().__init__(schematic_file)
         self.name = schematic_file.stem
         self.file = schematic_file
-        with open(self.file, 'r') as f:
-            self.c = f.read()
         self.refs = {}
         self._get_refs()
         if lib_root:
@@ -181,12 +203,6 @@ class XschemSchematic(object):
         if touched:
             self.c = '\n'.join(c)
 
-    def _save(self, filename=''):
-        if not filename:
-            filename = self.file
-        with open(filename, 'w') as f:
-            f.write(self.c)
-
     def _set_names(self, name):
         if not name.endswith('.sch'):
             name += '.sch'
@@ -194,29 +210,22 @@ class XschemSchematic(object):
         self.file = self.file.with_name(name)
 
 
-class XschemSymbol(object):
+class XschemSymbol(StructuredTextFile):
 
     def __init__(self, symbol_file, lib_root='/'):
+        super().__init__(symbol_file)
         self.name = symbol_file.stem
         self.file = symbol_file
-        with open(self.file, 'r') as f:
-            self.c = f.read()
         if lib_root:
             self.lib_root = lib_root
         else:
             self.lib_root = '/'
 
     def _set_names(self, name):
-        if not name.endswith('.sch'):
-            name += '.sch'
-        self.name = name.split('.sch')[0]
+        if not name.endswith('.sym'):
+            name += '.sym'
+        self.name = name.split('.sym')[0]
         self.file = self.file.with_name(name)
-
-    def _save(self, filename=''):
-        if not filename:
-            filename = self.file
-        with open(filename, 'w') as f:
-            f.write(self.c)
 
 
 class CellData(OrderedDict):
