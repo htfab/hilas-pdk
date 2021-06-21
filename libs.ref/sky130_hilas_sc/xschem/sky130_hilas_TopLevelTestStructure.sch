@@ -402,22 +402,22 @@ N -880 -860 1070 -860 { lab=Vdd}
 N -880 -860 -880 -420 { lab=Vdd}
 N 820 90 820 100 { lab=Vdd}
 N -880 -350 -850 -350 { lab=Vdd}
-C {sky130_hilas_swc4x2.sym} 180 100 0 0 {name=x1}
-C {sky130_hilas_drainSelect01.sym} -320 100 0 0 {name=x2}
-C {sky130_hilas_WTA4input.sym} 180 320 0 0 {name=x3}
-C {sky130_hilas_TA2Cell_1FG_Strong.sym} 180 -470 0 0 {name=x4}
-C {sky130_hilas_TA2Cell_1FG.sym} 180 -170 0 0 {name=x6}
-C {sky130_hilas_Tgate4Single01.sym} 770 -320 0 1 {name=x7}
-C {sky130_hilas_Trans2med.sym} -1630 150 0 0 {name=x8}
-C {sky130_hilas_Trans4small.sym} -1630 -160 0 0 {name=x9}
-C {sky130_hilas_nFETLarge.sym} -1630 340 0 0 {name=x10}
-C {sky130_hilas_pFETLarge.sym} -1630 460 0 0 {name=x11}
-C {sky130_hilas_FGcharacterization01.sym} 180 630 0 0 {name=x12}
-C {sky130_hilas_DAC5bit01.sym} 1000 740 0 0 {name=x14}
-C {sky130_hilas_drainSelect01.sym} -320 300 0 0 {name=x16}
+C {sky130_hilas_swc4x2_bb.sym} 180 100 0 0 {name=x1}
+C {sky130_hilas_drainSelect01_bb.sym} -320 100 0 0 {name=x2}
+C {sky130_hilas_WTA4input_bb.sym} 180 320 0 0 {name=x3}
+C {sky130_hilas_TA2Cell_1FG_Strong_bb.sym} 180 -470 0 0 {name=x4}
+C {sky130_hilas_TA2Cell_1FG_bb.sym} 180 -170 0 0 {name=x6}
+C {sky130_hilas_Tgate4Single01_bb.sym} 770 -320 0 1 {name=x7}
+C {sky130_hilas_Trans2med_bb.sym} -1630 150 0 0 {name=x8}
+C {sky130_hilas_Trans4small_bb.sym} -1630 -160 0 0 {name=x9}
+C {sky130_hilas_nFETLarge_bb.sym} -1630 340 0 0 {name=x10}
+C {sky130_hilas_pFETLarge_bb.sym} -1630 460 0 0 {name=x11}
+C {sky130_hilas_FGcharacterization01_bb.sym} 180 630 0 0 {name=x12}
+C {sky130_hilas_DAC5bit01_bb.sym} 1000 740 0 0 {name=x14}
+C {sky130_hilas_drainSelect01_bb.sym} -320 300 0 0 {name=x16}
 C {devices/gnd.sym} 330 500 0 0 {name=l1 lab=GND}
-C {sky130_hilas_nFETLarge.sym} 180 470 0 0 {name=x17}
-C {sky130_hilas_drainSelect01.sym} -320 -310 0 0 {name=x18}
+C {sky130_hilas_nFETLarge_bb.sym} 180 470 0 0 {name=x17}
+C {sky130_hilas_drainSelect01_bb.sym} -320 -310 0 0 {name=x18}
 C {devices/iopin.sym} 350 720 0 1 {name=Vtun lab=Vtun}
 C {devices/iopin.sym} 350 760 0 1 {name=Vinj lab=Vinj}
 C {devices/iopin.sym} 590 640 0 0 {name=GateNFET1 lab=GateNFET1}
@@ -465,9 +465,9 @@ C {devices/iopin.sym} 570 330 0 0 {name=WTAOutput1 lab=WTAOutput1}
 C {devices/iopin.sym} 570 350 0 0 {name=WTAOutput2 lab=WTAOutput2}
 C {devices/iopin.sym} 570 370 0 0 {name=WTAOutput3 lab=WTAOutput3}
 C {devices/iopin.sym} 570 390 0 0 {name=WTAOutput4 lab=WTAOutput4}
-C {sky130_hilas_LevelShift4InputUp.sym} -700 -310 0 0 {name=x5}
-C {sky130_hilas_LevelShift4InputUp.sym} -710 100 0 0 {name=x13}
-C {sky130_hilas_LevelShift4InputUp.sym} -710 300 0 0 {name=x15}
+C {sky130_hilas_LevelShift4InputUp_bb.sym} -700 -310 0 0 {name=x5}
+C {sky130_hilas_LevelShift4InputUp_bb.sym} -710 100 0 0 {name=x13}
+C {sky130_hilas_LevelShift4InputUp_bb.sym} -710 300 0 0 {name=x15}
 C {devices/iopin.sym} -1170 -500 0 1 {name=Dig01 lab=Dig01}
 C {devices/iopin.sym} -1170 -520 0 1 {name=Dig02 lab=Dig02}
 C {devices/iopin.sym} -1170 -540 0 1 {name=Dig03 lab=Dig03}
