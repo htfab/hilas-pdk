@@ -465,9 +465,9 @@ C {devices/iopin.sym} 570 330 0 0 {name=WTAOutput1 lab=WTAOutput1}
 C {devices/iopin.sym} 570 350 0 0 {name=WTAOutput2 lab=WTAOutput2}
 C {devices/iopin.sym} 570 370 0 0 {name=WTAOutput3 lab=WTAOutput3}
 C {devices/iopin.sym} 570 390 0 0 {name=WTAOutput4 lab=WTAOutput4}
-C {/home/ubuntu/MasterStdCells130nm/libs.ref/sky130_hilas_sc/xschem/sky130_hilas_LevelShift4InputUp.sym} -700 -310 0 0 {name=x5}
-C {/home/ubuntu/MasterStdCells130nm/libs.ref/sky130_hilas_sc/xschem/sky130_hilas_LevelShift4InputUp.sym} -710 100 0 0 {name=x13}
-C {/home/ubuntu/MasterStdCells130nm/libs.ref/sky130_hilas_sc/xschem/sky130_hilas_LevelShift4InputUp.sym} -710 300 0 0 {name=x15}
+C {sky130_hilas_LevelShift4InputUp.sym} -700 -310 0 0 {name=x5}
+C {sky130_hilas_LevelShift4InputUp.sym} -710 100 0 0 {name=x13}
+C {sky130_hilas_LevelShift4InputUp.sym} -710 300 0 0 {name=x15}
 C {devices/iopin.sym} -1170 -500 0 1 {name=Dig01 lab=Dig01}
 C {devices/iopin.sym} -1170 -520 0 1 {name=Dig02 lab=Dig02}
 C {devices/iopin.sym} -1170 -540 0 1 {name=Dig03 lab=Dig03}
