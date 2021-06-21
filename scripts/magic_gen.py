@@ -356,7 +356,10 @@ class MagData(object):
 
         self.file = mag_file
         self.long_name = mag_file.stem
-        self.short_name = mag_file.stem.split(CELL_PREFIX)[1]
+        try:
+            self.short_name = mag_file.stem.split(CELL_PREFIX)[1]
+        except:
+            self.short_name = mag_file.stem
 
     def referenced_mods(self):
         return list(set(re.findall(self.CELL_REF_REGEX, self.c)))
@@ -375,7 +378,10 @@ class MagData(object):
 
     @staticmethod
     def file2name(file):
-        return file.stem.split(CELL_PREFIX)[1]
+        try:
+            return file.stem.split(CELL_PREFIX)[1]
+        except:
+            return file.stem
 
     @staticmethod
     def name2file(name):
@@ -1174,8 +1180,10 @@ def check_lvs():
         with open(ext_spice[0], 'r') as f:
             src = f.read()
 
-        instance = re.search(r'^[.]subckt ({} .*)'.format(CELL_PREFIX + m), src, re.MULTILINE).group(1)
-        if not instance:
+        match = re.search(r'^[.]subckt ({} .*)'.format(CELL_PREFIX + m), src, re.MULTILINE)
+        if match:
+            instance = match.group(1)
+        else:
             continue
 
         instance = 'X999 ' + instance + '\n'
@@ -1336,7 +1344,6 @@ def main():
     ap.add_argument('-e', '--lef', action='store_true', help='Create LEF file', default=False)
     ap.add_argument('-g', '--gds', action='store_true', help='Create GDS files', default=False)
     ap.add_argument('-i', '--lib', action='store_true', help='Create LIB file', default=False)
-    ap.add_argument('-l', '--lvs', action='store_true', help='run LVS checks (with netgen)', default=False)
     ap.add_argument('-m', '--markdown', action='store_true',
                     help='Create a pretty, human-readable markdown summary of cell pins',
                     default=False)
@@ -1347,6 +1354,7 @@ def main():
     ap.add_argument('-v', '--verilog', action='store_true', help='Directory in which to put synthetic Verilog output',
                     default=False)
 
+    ap.add_argument('-l', '--lvs', action='store_true', help='run LVS checks (with netgen)', default=False)
     ap.add_argument('-C', '--basic-checks', action='store_true', help='Run basic cell consistency checks.', default=False)
     ap.add_argument('-D', '--delete', action='store_true',
                     help='Delete temporary (individual) LEF files after consolidation', default=True)
