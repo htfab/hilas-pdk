@@ -188,30 +188,30 @@ timestamp 1624138502
 transform 1 0 307 0 1 211
 box -337 144 351 308
 << labels >>
-rlabel metal2 645 537 658 554 0 Output00
+rlabel metal2 645 537 658 554 0 OUTPUT00
 port 1 nsew
-rlabel metal2 645 386 658 403 0 Output01
+rlabel metal2 645 386 658 403 0 OUTPUT01
 port 2 nsew
-rlabel metal2 645 235 658 252 0 Output10
+rlabel metal2 645 235 658 252 0 OUTPUT10
 port 3 nsew
-rlabel metal2 645 85 658 102 0 Output11
+rlabel metal2 645 85 658 102 0 OUTPUT11
 port 4 nsew
-rlabel metal1 529 661 556 666 0 GND
+rlabel metal1 529 661 556 666 0 VGND
 port 5 nsew
-rlabel metal1 529 64 556 69 0 GND
+rlabel metal1 529 64 556 69 0 VGND
 port 5 nsew
-rlabel metal1 32 64 54 69 0 Vinj
+rlabel metal1 32 64 54 69 0 VINJ
 port 6 nsew
-rlabel metal1 32 659 54 665 0 Vinj
+rlabel metal1 32 659 54 665 0 VINJ
 port 6 nsew
-rlabel metal2 -637 609 -626 627 0 In1
+rlabel metal2 -637 609 -626 627 0 IN1
 port 8 nsew
-rlabel metal2 -637 458 -626 476 0 In2
+rlabel metal2 -637 458 -626 476 0 IN2
 port 7 nsew
-rlabel metal2 -637 307 -626 325 0 Enable
+rlabel metal2 -637 307 -626 325 0 ENABLE
 port 9 nsew
-rlabel metal1 -576 658 -554 666 0 Vinj
+rlabel metal1 -576 658 -554 666 0 VINJ
 port 6 nsew
-rlabel metal1 -319 657 -296 666 0 GND
+rlabel metal1 -319 657 -296 666 0 VGND
 port 5 nsew
 << end >>
