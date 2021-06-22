@@ -101,7 +101,7 @@ rect 157 87 160 92
 rect 26 67 160 87
 rect 157 66 160 67
 rect 186 66 189 92
-use StepUpDigitalPart1  StepUpDigitalPart1_0
+use sky130_hilas_StepUpDigitalPart1  StepUpDigitalPart1_0
 timestamp 1624113415
 transform 1 0 7 0 1 0
 box 278 -40 892 119
