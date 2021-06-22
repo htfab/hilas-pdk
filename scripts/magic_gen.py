@@ -1278,8 +1278,8 @@ def check_depends():
     for m in magic_lib.values():
         deps = m.references()
         if m.long_name in deps:
-            warn(stylize_head())
-            warn('    Cell \'{}\' contains instances of itself!'.format(m.long_name))
+            # warn(stylize_head())
+            warn('**  Cell \'{}\' contains instances of itself!  **'.format(m.long_name))
             warn(stylize_head())
 
         for d in deps:
@@ -1290,7 +1290,7 @@ def check_depends():
                     missing.update({m.long_name: [d]})
 
     if missing:
-        warn(stylize_head())
+        # warn(stylize_head())
         warn('Referenced (sub)cells missing from the /mag/ path:')
         for mf, clist in missing.items():
             warn('    {} is missing:'.format(mf))
@@ -1522,17 +1522,17 @@ def check_dir_for_complete(directory, extension, set):
 
     if missing_in_dir:
         warn(stylize_head())
-        warn('    \'{}\' directory is missing the following \'{}\' files:'.format(directory, extension))
+        warn('\'{}\' directory is missing the following \'{}\' files:'.format(directory, extension))
         for m in missing_in_dir:
-            warn('        {}'.format(m))
+            warn('    {}'.format(m))
         if not extra:
             warn(stylize_head())
 
     if extra:
         warn(stylize_head())
-        warn('    \'{}\' directory contains the following extraneous \'{}\' files:'.format(directory, extension))
+        warn('\'{}\' directory contains the following extraneous \'{}\' files:'.format(directory, extension))
         for exx in extra:
-            warn('        {}'.format(exx))
+            warn('    {}'.format(exx))
         warn(stylize_head())
 
 
