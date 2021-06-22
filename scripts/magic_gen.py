@@ -1302,7 +1302,7 @@ def check_depends():
 
 def check_descriptions():
     missing = []
-    for cn, cell in cd.all_cells.items():
+    for cn, cell in cd.standard_cells.items():
         if 'description' not in cell or cell['description'] is None or cell['description'] == '':
             missing.append(cn)
 
@@ -1562,7 +1562,7 @@ def check_xschem_lib():
     warn(stylize_head('Xschem Consistency Check'))
 
     mc = []
-    for cn, c in cd.all_cells.items():
+    for cn, c in cd.standard_cells.items():
         if c.long_name+'.sym' not in xschem_lib:
             mc.append(c)
 

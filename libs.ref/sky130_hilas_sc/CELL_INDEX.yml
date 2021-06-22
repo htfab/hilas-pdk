@@ -38,6 +38,21 @@ standard-cells:
   description: Top-level cells for use in designs
   ###############################################################################
 
+  VinjNOR3:
+    description: 3-input NOR gate capable of VING voltage
+
+  LevelShift4InputUp:
+    description: 4-channel level shifter
+
+  VinjDecode2to4:
+    description: a 2-to-4 decoder capable of handling VINJ voltage
+
+  StepUpDigital:
+    description: a single level shifter
+
+  VinjInv2:
+    description: logical inverter for VINJ-level voltages
+
   swc4x2cell:
     description: 4x2 array of FG switch cell, Varactor capacitor cell
 
@@ -51,7 +66,7 @@ standard-cells:
     description: 4x1 array of FG switch cell using overlap capacitors
 
   swc4x1cellOverlap2:
-    description:
+    description: 4x1 analog mux with overlap
 
   swc4x1BiasCell:
     description: 4x1 array of FG switch cell configured pFET as current sources
@@ -110,16 +125,16 @@ standard-cells:
     description: Single Large (W/L=100) pFET Transistor
 
   capacitorSize01:
-    description:
+    description: smallest cap
 
   capacitorSize02:
-    description:
+    description: mid-small cap
 
   capacitorSize03:
-    description:
+    description: mid-large cap
 
   capacitorSize04:
-    description:
+    description: large cap
 
   capacitorArray01:
     description: selectable capacitor array
@@ -167,7 +182,6 @@ primitive-cells:  ##############################################################
 
   TgateSingle01Part1:
     description:
-
 
   DualTACore01:
     description:
@@ -256,6 +270,9 @@ component-cells:
     These cells are components used to create the standard cells.
     They are not to be used directly
   ##############################################################################
+
+  StepUpDigitalPart1:
+    description: step-up level shifter part
 
   decoup_cap_00:
     description: decoupling cap (intended as fill)
