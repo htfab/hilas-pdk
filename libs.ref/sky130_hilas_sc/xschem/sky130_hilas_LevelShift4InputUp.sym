@@ -21,25 +21,25 @@ L 7 130 -20 150 -20 {}
 L 7 130 0 150 0 {}
 L 7 130 20 150 20 {}
 L 7 130 40 150 40 {}
-B 5 147.5 -42.5 152.5 -37.5 {name=Vinj dir=inout }
-B 5 -152.5 -42.5 -147.5 -37.5 {name=Vdd dir=in }
-B 5 -152.5 -22.5 -147.5 -17.5 {name=Input1 dir=in }
-B 5 147.5 -22.5 152.5 -17.5 {name=Output1 dir=inout }
-B 5 -152.5 -2.5 -147.5 2.5 {name=Input2 dir=in }
-B 5 147.5 -2.5 152.5 2.5 {name=Output2 dir=inout }
-B 5 -152.5 17.5 -147.5 22.5 {name=Input3 dir=in }
-B 5 147.5 17.5 152.5 22.5 {name=Output3 dir=inout }
-B 5 -152.5 37.5 -147.5 42.5 {name=Input4 dir=in }
-B 5 147.5 37.5 152.5 42.5 {name=Output4 dir=inout }
+B 5 147.5 -42.5 152.5 -37.5 {name=VINJ dir=inout }
+B 5 -152.5 -42.5 -147.5 -37.5 {name=VPWR dir=in }
+B 5 -152.5 -22.5 -147.5 -17.5 {name=INPUT1 dir=in }
+B 5 147.5 -22.5 152.5 -17.5 {name=OUTPUT1 dir=inout }
+B 5 -152.5 -2.5 -147.5 2.5 {name=INPUT2 dir=in }
+B 5 147.5 -2.5 152.5 2.5 {name=OUTPUT2 dir=inout }
+B 5 -152.5 17.5 -147.5 22.5 {name=INPUT3 dir=in }
+B 5 147.5 17.5 152.5 22.5 {name=OUTPUT3 dir=inout }
+B 5 -152.5 37.5 -147.5 42.5 {name=INPUT4 dir=in }
+B 5 147.5 37.5 152.5 42.5 {name=OUTPUT4 dir=inout }
 T {LevelShift4InputUp} -79 -6 0 0 0.3 0.3 {}
 T {@name} 135 -62 0 0 0.2 0.2 {}
-T {Vinj} 125 -44 0 1 0.2 0.2 {}
-T {Vdd} -125 -44 0 0 0.2 0.2 {}
-T {Input1} -125 -24 0 0 0.2 0.2 {}
-T {Output1} 125 -24 0 1 0.2 0.2 {}
-T {Input2} -125 -4 0 0 0.2 0.2 {}
-T {Output2} 125 -4 0 1 0.2 0.2 {}
-T {Input3} -125 16 0 0 0.2 0.2 {}
-T {Output3} 125 16 0 1 0.2 0.2 {}
-T {Input4} -125 36 0 0 0.2 0.2 {}
-T {Output4} 125 36 0 1 0.2 0.2 {}
+T {VINJ} 125 -44 0 1 0.2 0.2 {}
+T {VPWR} -125 -44 0 0 0.2 0.2 {}
+T {INPUT1} -125 -24 0 0 0.2 0.2 {}
+T {OUTPUT1} 125 -24 0 1 0.2 0.2 {}
+T {INPUT2} -125 -4 0 0 0.2 0.2 {}
+T {OUTPUT2} 125 -4 0 1 0.2 0.2 {}
+T {INPUT3} -125 16 0 0 0.2 0.2 {}
+T {OUTPUT3} 125 16 0 1 0.2 0.2 {}
+T {INPUT4} -125 36 0 0 0.2 0.2 {}
+T {OUTPUT4} 125 36 0 1 0.2 0.2 {}
