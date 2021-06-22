@@ -120,7 +120,7 @@ class StructuredTextFile:
         return self.path
 
 
-class XschemLib:
+class XschemLibrary:
 
     def __init__(self, lib_root):
         self.root = Path(lib_root)
@@ -130,7 +130,7 @@ class XschemLib:
     def __contains__(self, item):
         return item in [str(x.path.relative_to(self.root)) for x in self.symbols]
 
-    def _rename_modules(self, from_name, to_name):
+    def _rename_module(self, from_name, to_name):
 
         for sch in self.schematics:
             needs_save = False
@@ -332,17 +332,50 @@ class LefData(object):
 
 
 class MagicLibrary(dict):
-    def __init__(self, list_of_mag_files):
-        super().__init__({MagData.file2name(f): MagData(f) for f in list_of_mag_files})
+    def __init__(self, library_root):
+        if isinstance(library_root, str):
+            library_root = Path(library_root)
+        if isinstance(library_root, Path):
+            list_of_mag_files = library_root.glob('*.mag')
+        elif isinstance(library_root, list):
+            list_of_mag_files = library_root
 
-    def byname(self, name):
-        return [m for mname, m in self.items() if mname == name][0]
+        super().__init__({MagicDesign.file2name(f): MagicDesign(f) for f in list_of_mag_files})
 
-    def byfile(self, file):
-        return [m for name, m in self.items() if m.file == file][0]
+    def __contains__(self, item):
+        return item in [m.long_name for m in self.values()]
+
+    def by_shortname(self, name):
+        try:
+            return [m for mname, m in self.items() if mname == name][0]
+        except IndexError:
+            return None
+
+    def by_longname(self, name):
+        try:
+            return [m for _, m in self.items() if m.long_name == name][0]
+        except IndexError:
+            return None
+
+    def by_file(self, file):
+        try:
+            return [m for name, m in self.items() if m.file == file][0]
+        except IndexError:
+            return None
+
+    def rename_module(self, from_name, to_name):
+
+        for mn, m in self.items():
+            if m.long_name == from_name:
+                continue
+            m.rename_refs(from_name, to_name)
+
+        targ = self.by_longname(from_name)
+        if targ:
+            targ.rename(to_name)
 
 
-class MagData(object):
+class MagicDesign(object):
     MAGIC_PIN_REGEX = re.compile(r'^\s*\wlabel\s+(\S+).*\s+(\S+)\s*\n\s*port\s+(\d+)\s+(.*)$', re.MULTILINE)
     CELL_REF_REGEX = re.compile(r'^\s?use (\w+)', re.MULTILINE)
 
@@ -354,14 +387,14 @@ class MagData(object):
         else:
             self.c = mag_file
 
-        self.file = mag_file
+        self.file = Path(mag_file)
         self.long_name = mag_file.stem
         try:
             self.short_name = mag_file.stem.split(CELL_PREFIX)[1]
         except:
             self.short_name = mag_file.stem
 
-    def referenced_mods(self):
+    def references(self):
         return list(set(re.findall(self.CELL_REF_REGEX, self.c)))
 
     def ports(self):
@@ -372,6 +405,22 @@ class MagData(object):
         self.c = re.sub(r'(\n\s*[fr]label\s+.*\s+){}\s*\n'.format(re.escape(old_name)),
                         r'\g<1>{}\n'.format(re.escape(new_name)), self.c, re.MULTILINE)
 
+    def rename(self, new_name):
+        old_file = self.file
+        new_file = self.file.with_name(new_name).with_suffix('.mag')
+        self.file = new_file
+        self.write_file()
+        os.remove(old_file)
+
+    def rename_refs(self, old_name, new_name):
+        match_pref = r'^use '
+        match_suff = r'\s*\w*\s*$'
+        need_save = False
+        match = re.search(match_pref + old_name + match_suff, self.c, re.MULTILINE)
+        if match:
+            self.c = re.sub(match_pref + old_name, 'use ' + new_name, self.c, flags=re.MULTILINE)
+            self.write_file()
+
     def write_file(self):
         with open(self.file, 'w') as f:
             f.write(self.c)
@@ -379,9 +428,9 @@ class MagData(object):
     @staticmethod
     def file2name(file):
         try:
-            return file.stem.split(CELL_PREFIX)[1]
+            return str(file.stem.split(CELL_PREFIX)[1])
         except:
-            return file.stem
+            return str(file.stem)
 
     @staticmethod
     def name2file(name):
@@ -1071,7 +1120,7 @@ def check_count():
 def check_depends():
     missing = {}
     for m in mag_files.values():
-        deps = m.referenced_mods()
+        deps = m.references()
         if m.long_name in deps:
             warn(stylize_head())
             warn('    Cell \'{}\' contains instances of itself!'.format(m.long_name))
@@ -1106,6 +1155,7 @@ def check_descriptions():
         for mf in missing:
             warn('    ' + str(mf))
         warn(stylize_head())
+
 
 def check_net_names():
     for m in mag_files.values():
@@ -1212,6 +1262,12 @@ def check_mag_names():
             edie('cellname does not start with "{}":    {}'.format(CELL_PREFIX, m.name))
 
 
+def check_xschem_names():
+    for m in Path(LIB_PATH['xschem']).glob('*.sym'):
+        if not m.stem.startswith(CELL_PREFIX):
+            edie('symbol name does not start with "{}":    {}'.format(CELL_PREFIX, m.name))
+
+
 def check_hand_spice():
     for file in LIB_PATH['spice_hand'].glob('*.spice'):
         if not file.stem.startswith(CELL_PREFIX):
@@ -1239,6 +1295,7 @@ def check_dir_for_prefixes(directory, extension):
         for exx in mp:
             warn('        {}'.format(exx))
         warn(stylize_head())
+
 
 def check_dir_for_complete(directory, extension, set):
     if extension.startswith('*'):
@@ -1298,9 +1355,9 @@ def check_file_presence():
         check_dir_for_complete(*set)
 
 
-def check_xschem():
+def check_xschem_lib():
     warn(stylize_head('Xschem Consistency Check'))
-    xsch_lib = XschemLib(LIB_PATH['xschem'])
+    xsch_lib = XschemLibrary(LIB_PATH['xschem'])
     for sch in xsch_lib.schematics:
         mm = []
         for rr in sch.refs:
@@ -1317,16 +1374,39 @@ def check_xschem():
     return xsch_lib
 
 
+def check_magic_lib():
+    warn(stylize_head('Magic File Consistency Check'))
+    mag_lib = MagicLibrary(LIB_PATH['mag'])
+    for mn, c in mag_lib.items():
+        mm = []
+        for rr in c.references():
+            if rr not in mag_lib:
+                mm.append(rr)
+
+        if mm:
+            warn('Magic design {} is missing the following refs:'.format(c.file))
+            for mmm in mm:
+                warn('    {}'.format(mmm))
+
+    warn(stylize_head())
+    return mag_lib
+
+
+def run_rename_magic(spec_string):
+    old_n, new_n = [x.strip() for x in spec_string.strip().split(':')]
+    mag_lib = check_magic_lib()
+    mag_lib.rename_module(from_name=old_n, to_name=new_n)
+
+
 def run_rename_xschem(spec_string):
     old_n, new_n = [x.strip() for x in spec_string.strip().split(':')]
-    xsch_lib = check_xschem()
-    xsch_lib._rename_modules(from_name=old_n, to_name=new_n)
-
-
+    xsch_lib = check_xschem_lib()
+    xsch_lib._rename_module(from_name=old_n, to_name=new_n)
 
 
 def run_basic_checks():
     check_mag_names()
+    check_xspice_names()
     check_file_presence()
     check_count()
     check_depends()
@@ -1366,6 +1446,8 @@ def main():
 
     ap.add_argument('--rename-xschem', action='store', help='Rename modules in xschem library and update references.  '
                                                             'Usage: \'--rename-xschem \"<fromname>:<toname>\"\'')
+    ap.add_argument('--rename-magic', action='store', help='Rename magic modules and update references.'
+                                                           '    Usage: \'--rename-magic \"<fromname>:<toname>\"\'')
 
     args = ap.parse_args()
 
@@ -1403,8 +1485,12 @@ def main():
     if args.basic_checks:
         run_basic_checks()
 
+    if args.rename_magic:
+        exit(run_rename_magic(args.rename_magic))
+
     if args.rename_xschem:
         exit(run_rename_xschem(args.rename_xschem))
+
 
     # Items here on done on a per-cell basis with Magic opening each one
     magic = Magic()
@@ -1416,7 +1502,7 @@ def main():
         check_lvs()
 
     if args.xschem:
-        check_xschem()
+        check_xschem_lib()
 
     if args.lef and target_check(None, 'lef'):
         # consolidate all temp LEFs

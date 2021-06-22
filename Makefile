@@ -25,7 +25,7 @@ all:
 		-n \
 		-Y
 
-force:
+force: clean-all
 	$(SCRIPTS)/magic_gen.py -F -L -g -t -e -i -s -v -m -n -Y
 
 check:
