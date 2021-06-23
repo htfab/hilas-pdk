@@ -170,6 +170,9 @@ class XschemLibrary(dict):
     def get_schematic(self, name):
         return self[name].schematic
 
+    def rename_pin(self, module, old_name, new_name):
+        self[module].rename_pin(old_name, new_name)
+
     def _rename_module(self, from_name, to_name):
 
         for cir in self:
@@ -211,6 +214,9 @@ class XschemLibrary(dict):
                     os.remove(stale_file)
 
     def check(self):
+        for m in xschem_lib.values():
+            m.check_names()
+
         message = []
 
         mc = []
@@ -290,6 +296,10 @@ class XschemCircuit:
         if self.schematic:
             self.schematic.check_net_names()
 
+    def _save(self):
+        self.symbol._save()
+        self.schematic._save()
+
 
 class XschemSchematic(StructuredTextFile):
 
@@ -333,7 +343,7 @@ class XschemSchematic(StructuredTextFile):
     @property
     def pins(self):
         pins = {}
-        pinlist = re.findall(r'^C\s+{(?:devices/)?(?:ipin|opin|iopin)[.]sym}.*?{(.*)}', self.c, re.M)
+        pinlist = re.findall(r'^C\s+{(?:.*[/])?(?:ipin|opin|iopin)[.]sym}.*?{(.*)}', self.c, re.M)
         for string in pinlist:
             pairs = dict(tuple(x.split('=')) for x in string.split())
             pins.update({pairs['lab']: {k: v for k, v in pairs.items() if k != 'lab'}})
@@ -341,15 +351,18 @@ class XschemSchematic(StructuredTextFile):
 
     @property
     def nets(self):
-        nets = {}
-        listonets = re.findall('^.*{.*\s*lab=(\w+)\s*.*}.*$', self.c, re.M)
+        listonets = re.findall(r'^.*{.*\s*lab=(\w+)\s*.*}.*$', self.c, re.M)
         return list(set(listonets))
 
     def rename_net(self, old_name, new_name):
         mp1 = r'(^C\s+{{.*?}}.*?{{.*\s*lab=){}(\s*.*}})'.format(old_name)
         self.c = re.sub(mp1, r'\1{}\2'.format(new_name), self.c, flags=re.M)
 
-        mp2 = r'(^N\s+.*?{{.*\s*lab=){}(\s*.*}})'.format(old_name)
+        mp3 = r'(^N\s+.*?{{.*\s*lab=){}(\s*.*}})'.format(old_name)
+        self.c = re.sub(mp3, r'\1{}\2'.format(new_name), self.c, flags=re.M)
+
+    def rename_pinname(self, old_name, new_name):
+        mp2 = r'(^C\s+{{.*?}}.*?{{.*\s*name=){}(\s*.*}})'.format(old_name)
         self.c = re.sub(mp2, r'\1{}\2'.format(new_name), self.c, flags=re.M)
 
     def check_net_names(self):
@@ -361,6 +374,14 @@ class XschemSchematic(StructuredTextFile):
                 warn('Found net in \'{}\' whose name should probably be corrected: \'{}\'->\'{}\''.format(
                     self.file.name, net, fnet))
 
+                write = True
+
+        for pin_name, pin_attrs in self.pins.items():
+            fnet = CONVENTIONS.net_name(pin_attrs['name'])
+            if fnet:
+                self.rename_pinname(pin_attrs['name'], fnet)
+                warn('Found pin name in \'{}\' whose name should probably be corrected: \'{}\'->\'{}\''.format(
+                    self.file.name, pin_attrs['name'], fnet))
                 write = True
 
         if write:
@@ -588,7 +609,7 @@ class MagicLibrary(dict):
         elif isinstance(library_root, list):
             list_of_mag_files = library_root
 
-        super().__init__({MagicDesign.file2name(f): MagicDesign(f) for f in list_of_mag_files})
+        super().__init__({f.stem: MagicDesign(f) for f in list_of_mag_files})
 
     def __contains__(self, item):
         return item in [m.long_name for m in self.values()]
@@ -625,6 +646,8 @@ class MagicLibrary(dict):
     def check(self):
         self.check_complete()
         self.check_depends()
+        for m in magic_lib.values():
+            m.check_port_names()
 
     def check_complete(self):
         message = []
@@ -681,19 +704,13 @@ class MagicLibrary(dict):
             warn(stylize_head())
 
 
-class MagicDesign(object):
+class MagicDesign(StructuredTextFile):
+
     MAGIC_PIN_REGEX = re.compile(r'^\s*\wlabel\s+(\S+).*\s+(\S+)\s*\n\s*port\s+(\d+)\s+(.*)$', re.MULTILINE)
     CELL_REF_REGEX = re.compile(r'^\s?use (\w+)', re.MULTILINE)
 
     def __init__(self, mag_file):
-        if isinstance(mag_file, Path) or (
-                isinstance(mag_file, str) and '\n' not in mag_file and os.path.isfile(mag_file)):
-            with open(mag_file, 'r') as f:
-                self.c = f.read()
-        else:
-            self.c = mag_file
-
-        self.file = Path(mag_file)
+        super().__init__(mag_file)
         self.long_name = mag_file.stem
         try:
             self.short_name = mag_file.stem.split(CONVENTIONS.CELL_PREFIX)[1]
@@ -713,6 +730,9 @@ class MagicDesign(object):
         self.c = re.sub(r'(\n\s*[fr]label\s+.*\s+){}\s*\n'.format(re.escape(old_name)),
                         r'\g<1>{}\n'.format(re.escape(new_name)), self.c, re.MULTILINE)
 
+    def rename_port(self, old_name, new_name):
+        self.rename_net(old_name, new_name)
+
     def rename(self, new_name):
         old_file = self.file
         new_file = self.file.with_name(new_name).with_suffix('.mag')
@@ -729,9 +749,9 @@ class MagicDesign(object):
             self.c = re.sub(match_pref + old_name, 'use ' + new_name, self.c, flags=re.MULTILINE)
             self.write_file()
 
-    def write_file(self):
-        with open(self.file, 'w') as f:
-            f.write(self.c)
+    # def write_file(self):
+    #     with open(self.file, 'w') as f:
+    #         f.write(self.c)
 
     @staticmethod
     def file2name(file):
@@ -766,7 +786,7 @@ class MagicDesign(object):
             elif args.yes or confirm(
                     'Would you like to write the capitalized-net-corrected file {} ?'.format(self.file.name),
                     False):
-                self.write_file()
+                self._save()
                 warn('wrote capitalized-net-corrected version of {}'.format(self.file.name))
 
 
@@ -893,7 +913,7 @@ def error(msg):
 
 
 def edie(msg, code=1):
-    print(msg)
+    print(msg, file=STDERR)
     exit(code)
 
 
@@ -1407,17 +1427,10 @@ def handle_magic(magic_file):
         make_spice(magic_file)
 
 
-def check_net_names():
-    for _, m in magic_lib.items():
-        m.check_port_names()
-    for m in xschem_lib.values():
-        m.check_names()
-
-
 def check_port_pin_mapping():
 
     for cn, c in cd.standard_cells.items():
-        amp = magic_lib[c.short_name].ports
+        amp = magic_lib[c.long_name].ports
         try:
             symb = xschem_lib[c.long_name].symbol
         except KeyError:
@@ -1597,16 +1610,33 @@ def check_file_presence():
         check_dir_for_complete(*set)
 
 
-def run_rename_magic(spec_string):
+def run_rename_magic_module(spec_string):
     old_n, new_n = [x.strip() for x in spec_string.strip().split(':')]
     magic_lib.check()
     magic_lib.rename_module(from_name=old_n, to_name=new_n)
 
 
-def run_rename_xschem(spec_string):
+def run_rename_xschem_circuit(spec_string):
     old_n, new_n = [x.strip() for x in spec_string.strip().split(':')]
     xschem_lib.check()
     xschem_lib._rename_module(from_name=old_n, to_name=new_n)
+
+
+def run_rename_xschem_pin(module, old_name, new_name):
+    if old_name not in xschem_lib[module].symbol.pins:
+        edie('\'{}\' is not a pin of \'{}.sym\'.'.format(old_name, module))
+    if xschem_lib[module].schematic and old_name not in xschem_lib[module].schematic.pins:
+        edie('\'{}\' is not a pin of \'{}.sch\'.'.format(old_name, module))
+
+    xschem_lib[module].rename_pin(old_name, new_name)
+    xschem_lib[module]._save()
+
+
+def run_rename_magic_port(module, old_name, new_name):
+    if old_name not in magic_lib[module].ports:
+        edie('\'{}\' is not a port of \'{}\'.'.format(old_name, module))
+    magic_lib[module].rename_port(old_name, new_name)
+    magic_lib[module]._save()
 
 
 def run_basic_checks():
@@ -1676,10 +1706,13 @@ def main():
     ap.add_argument('-N', '--no', action='store_true', help='Assume a \'no\' answer to all prompts.')
     ap.add_argument('-Y', '--yes', action='store_true', help='Assume a \'yes\' answer to all prompts.')
 
-    ap.add_argument('--rename-xschem', action='store', help='Rename modules in xschem library and update references.  '
-                                                            'Usage: \'--rename-xschem \"<fromname>:<toname>\"\'')
-    ap.add_argument('--rename-magic', action='store', help='Rename magic modules and update references.'
-                                                           '    Usage: \'--rename-magic \"<fromname>:<toname>\"\'')
+    ap.add_argument('--rename-xschem-circuit', nargs=2, action='store', help='Rename modules in xschem library and update references.  '
+                                                            'Usage: \'--rename-xschem <fromname> <toname>\'')
+    ap.add_argument('--rename-magic-module', nargs=2, action='store', help='Rename magic modules and update references.'
+                                                           '    Usage: \'--rename-magic <fromname> <toname>\'')
+
+    ap.add_argument('--rename-magic-port', nargs=3, help='rename port in magic cell. Usage: --rename-magic-port <cell-name> <old-name> <new-name>')
+    ap.add_argument('--rename-xschem-pin', nargs=3, help='rename pin in xschem circuit. Usage: --rename-xschem-pin <circuit-name> <old-name> <new-name>')
 
     args = ap.parse_args()
 
@@ -1692,12 +1725,17 @@ def main():
     if args.basic_checks:
         run_basic_checks()
 
-    if args.rename_magic:
-        exit(run_rename_magic(args.rename_magic))
+    if args.rename_magic_module:
+        exit(run_rename_magic_module(args.rename_magic))
 
-    if args.rename_xschem:
-        exit(run_rename_xschem(args.rename_xschem))
+    if args.rename_xschem_circuit:
+        exit(run_rename_xschem_circuit(args.rename_xschem))
 
+    if args.rename_magic_port:
+        exit(run_rename_magic_port(*args.rename_magic_port))
+
+    if args.rename_xschem_pin:
+        exit(run_rename_xschem_pin(*args.rename_xschem_pin))
     # Items here on done on a per-cell basis with Magic opening each one
     magic = Magic()
     for m in magic_lib.values():
