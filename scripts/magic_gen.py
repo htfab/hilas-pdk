@@ -1407,9 +1407,6 @@ def handle_magic(magic_file):
         make_spice(magic_file)
 
 
-
-
-
 def check_net_names():
     for _, m in magic_lib.items():
         m.check_port_names()
