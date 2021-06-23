@@ -12,11 +12,11 @@ N 630 -850 670 -850 { lab=VTUN}
 N 630 -860 630 -850 { lab=VTUN}
 N 600 -910 630 -910 { lab=#net1}
 N 560 -960 560 -940 { lab=#net2}
-N 900 -1040 900 -830 { lab=VDD}
+N 900 -1040 900 -830 { lab=VPWR}
 N 440 -800 940 -800 { lab=ROW4}
-N 900 -830 900 -780 { lab=VDD}
+N 900 -830 900 -780 { lab=VPWR}
 N 860 -880 860 -800 { lab=ROW4}
-N 860 -940 900 -940 { lab=VDD}
+N 860 -940 900 -940 { lab=VPWR}
 N 750 -850 750 -780 { lab=GATE1}
 N 750 -1040 750 -850 { lab=GATE1}
 N 670 -860 670 -850 { lab=VTUN}
@@ -40,11 +40,11 @@ N 630 -1110 670 -1110 { lab=VTUN}
 N 630 -1120 630 -1110 { lab=VTUN}
 N 600 -1170 630 -1170 { lab=#net3}
 N 560 -1220 560 -1200 { lab=#net4}
-N 900 -1300 900 -1090 { lab=VDD}
+N 900 -1300 900 -1090 { lab=VPWR}
 N 440 -1060 940 -1060 { lab=ROW3}
-N 900 -1090 900 -1040 { lab=VDD}
+N 900 -1090 900 -1040 { lab=VPWR}
 N 860 -1140 860 -1060 { lab=ROW3}
-N 860 -1200 900 -1200 { lab=VDD}
+N 860 -1200 900 -1200 { lab=VPWR}
 N 750 -1110 750 -1040 { lab=GATE1}
 N 750 -1300 750 -1110 { lab=GATE1}
 N 670 -1120 670 -1110 { lab=VTUN}
@@ -68,11 +68,11 @@ N 630 -1370 670 -1370 { lab=VTUN}
 N 630 -1380 630 -1370 { lab=VTUN}
 N 600 -1430 630 -1430 { lab=#net5}
 N 560 -1480 560 -1460 { lab=#net6}
-N 900 -1560 900 -1350 { lab=VDD}
+N 900 -1560 900 -1350 { lab=VPWR}
 N 440 -1320 940 -1320 { lab=ROW2}
-N 900 -1350 900 -1300 { lab=VDD}
+N 900 -1350 900 -1300 { lab=VPWR}
 N 860 -1400 860 -1320 { lab=ROW2}
-N 860 -1460 900 -1460 { lab=VDD}
+N 860 -1460 900 -1460 { lab=VPWR}
 N 750 -1370 750 -1300 { lab=GATE1}
 N 750 -1560 750 -1370 { lab=GATE1}
 N 670 -1380 670 -1370 { lab=VTUN}
@@ -96,11 +96,11 @@ N 630 -1630 670 -1630 { lab=VTUN}
 N 630 -1640 630 -1630 { lab=VTUN}
 N 600 -1690 630 -1690 { lab=#net7}
 N 560 -1740 560 -1720 { lab=#net8}
-N 900 -1820 900 -1610 { lab=VDD}
+N 900 -1820 900 -1610 { lab=VPWR}
 N 440 -1580 940 -1580 { lab=ROW1}
-N 900 -1610 900 -1560 { lab=VDD}
+N 900 -1610 900 -1560 { lab=VPWR}
 N 860 -1660 860 -1580 { lab=ROW1}
-N 860 -1720 900 -1720 { lab=VDD}
+N 860 -1720 900 -1720 { lab=VPWR}
 N 750 -1630 750 -1560 { lab=GATE1}
 N 750 -1820 750 -1630 { lab=GATE1}
 N 670 -1640 670 -1630 { lab=VTUN}
@@ -125,7 +125,7 @@ N 420 -1080 450 -1080 { lab=DRAIN3}
 N 420 -1060 450 -1060 { lab=ROW3}
 N 420 -820 450 -820 { lab=DRAIN4}
 N 420 -800 450 -800 { lab=ROW4}
-N 900 -1830 900 -1810 { lab=VDD}
+N 900 -1830 900 -1810 { lab=VPWR}
 N 750 -1830 750 -1810 { lab=GATE1}
 N 670 -1830 670 -1810 { lab=VTUN}
 N 520 -1830 520 -1810 { lab=COLSEL1}
@@ -163,7 +163,7 @@ N 880 -1690 880 -1610 { lab=VINJ}
 N 490 -1610 880 -1610 { lab=VINJ}
 N 520 -1840 520 -1830 { lab=COLSEL1}
 N 520 -1840 550 -1840 { lab=COLSEL1}
-N 900 -1830 920 -1830 { lab=VDD}
+N 900 -1830 920 -1830 { lab=VPWR}
 N 670 -1840 670 -1830 { lab=VTUN}
 N 670 -1840 680 -1840 { lab=VTUN}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 840 -910 0 0 {name=M3
@@ -351,7 +351,7 @@ C {devices/ipin.sym} 430 -1080 0 0 {name=Drain3 lab=DRAIN3}
 C {devices/ipin.sym} 430 -1060 0 0 {name=Row3 lab=ROW3}
 C {devices/ipin.sym} 430 -820 0 0 {name=Drain4 lab=DRAIN4}
 C {devices/ipin.sym} 430 -800 0 0 {name=Drain5 lab=ROW4}
-C {devices/iopin.sym} 920 -1830 0 0 {name=Vdd lab=VDD}
+C {devices/iopin.sym} 920 -1830 0 0 {name=Vdd lab=VPWR}
 C {devices/iopin.sym} 750 -1830 0 0 {name=Gate1 lab=GATE1}
 C {devices/iopin.sym} 680 -1840 0 0 {name=Vtun lab=VTUN}
 C {devices/iopin.sym} 550 -1840 0 0 {name=ColSel1 lab=COLSEL1}

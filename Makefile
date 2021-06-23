@@ -29,7 +29,7 @@ force: clean-all
 	$(SCRIPTS)/magic_gen.py -F -L -g -t -e -i -s -v -m -n -Y
 
 check:
-	$(SCRIPTS)/magic_gen.py -C
+	$(SCRIPTS)/magic_gen.py -C -L
 
 gds: $(MAG_CELLS)
 	$(SCRIPTS)/magic_gen.py -g

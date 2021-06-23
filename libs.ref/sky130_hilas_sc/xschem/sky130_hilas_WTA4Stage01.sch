@@ -12,11 +12,11 @@ N 630 -850 670 -850 { lab=VTUN}
 N 630 -860 630 -850 { lab=VTUN}
 N 600 -910 630 -910 { lab=#net1}
 N 560 -960 560 -940 { lab=#net2}
-N 900 -1040 900 -830 { lab=VDD}
+N 900 -1040 900 -830 { lab=VPWR}
 N 440 -800 940 -800 { lab=WTAOUT4}
-N 900 -830 900 -780 { lab=VDD}
+N 900 -830 900 -780 { lab=VPWR}
 N 860 -880 860 -800 { lab=WTAOUT4}
-N 860 -940 900 -940 { lab=VDD}
+N 860 -940 900 -940 { lab=VPWR}
 N 750 -850 750 -780 { lab=GATE1}
 N 750 -1040 750 -850 { lab=GATE1}
 N 670 -860 670 -850 { lab=VTUN}
@@ -40,11 +40,11 @@ N 630 -1110 670 -1110 { lab=VTUN}
 N 630 -1120 630 -1110 { lab=VTUN}
 N 600 -1170 630 -1170 { lab=#net3}
 N 560 -1220 560 -1200 { lab=#net4}
-N 900 -1300 900 -1090 { lab=VDD}
+N 900 -1300 900 -1090 { lab=VPWR}
 N 440 -1060 940 -1060 { lab=WTAOUT3}
-N 900 -1090 900 -1040 { lab=VDD}
+N 900 -1090 900 -1040 { lab=VPWR}
 N 860 -1140 860 -1060 { lab=WTAOUT3}
-N 860 -1200 900 -1200 { lab=VDD}
+N 860 -1200 900 -1200 { lab=VPWR}
 N 750 -1110 750 -1040 { lab=GATE1}
 N 750 -1300 750 -1110 { lab=GATE1}
 N 670 -1120 670 -1110 { lab=VTUN}
@@ -68,11 +68,11 @@ N 630 -1370 670 -1370 { lab=VTUN}
 N 630 -1380 630 -1370 { lab=VTUN}
 N 600 -1430 630 -1430 { lab=#net5}
 N 560 -1480 560 -1460 { lab=#net6}
-N 900 -1560 900 -1350 { lab=VDD}
+N 900 -1560 900 -1350 { lab=VPWR}
 N 440 -1320 940 -1320 { lab=WTAOUT2}
-N 900 -1350 900 -1300 { lab=VDD}
+N 900 -1350 900 -1300 { lab=VPWR}
 N 860 -1400 860 -1320 { lab=WTAOUT2}
-N 860 -1460 900 -1460 { lab=VDD}
+N 860 -1460 900 -1460 { lab=VPWR}
 N 750 -1370 750 -1300 { lab=GATE1}
 N 750 -1560 750 -1370 { lab=GATE1}
 N 670 -1380 670 -1370 { lab=VTUN}
@@ -96,11 +96,11 @@ N 630 -1630 670 -1630 { lab=VTUN}
 N 630 -1640 630 -1630 { lab=VTUN}
 N 600 -1690 630 -1690 { lab=#net7}
 N 560 -1740 560 -1720 { lab=#net8}
-N 900 -1820 900 -1610 { lab=VDD}
+N 900 -1820 900 -1610 { lab=VPWR}
 N 440 -1580 940 -1580 { lab=WTAOUT1}
-N 900 -1610 900 -1560 { lab=VDD}
+N 900 -1610 900 -1560 { lab=VPWR}
 N 860 -1660 860 -1580 { lab=WTAOUT1}
-N 860 -1720 900 -1720 { lab=VDD}
+N 860 -1720 900 -1720 { lab=VPWR}
 N 750 -1630 750 -1560 { lab=GATE1}
 N 750 -1820 750 -1630 { lab=GATE1}
 N 670 -1640 670 -1630 { lab=VTUN}
@@ -125,7 +125,7 @@ N 420 -1080 450 -1080 { lab=DRAIN3}
 N 420 -1060 450 -1060 { lab=WTAOUT3}
 N 420 -820 450 -820 { lab=DRAIN4}
 N 420 -800 450 -800 { lab=WTAOUT4}
-N 900 -1830 900 -1810 { lab=VDD}
+N 900 -1830 900 -1810 { lab=VPWR}
 N 750 -1830 750 -1810 { lab=GATE1}
 N 670 -1830 670 -1810 { lab=VTUN}
 N 520 -1830 520 -1810 { lab=COLSEL1}
@@ -163,39 +163,39 @@ N 880 -1690 880 -1610 { lab=VINJ}
 N 490 -1610 880 -1610 { lab=VINJ}
 N 520 -1840 520 -1830 { lab=COLSEL1}
 N 520 -1840 550 -1840 { lab=COLSEL1}
-N 900 -1830 920 -1830 { lab=VDD}
+N 900 -1830 920 -1830 { lab=VPWR}
 N 670 -1840 670 -1830 { lab=VTUN}
 N 670 -1840 680 -1840 { lab=VTUN}
 N 60 -1520 140 -1520 { lab=WTAMIDDLENODE}
 N 20 -1550 100 -1550 { lab=WTAIN1}
 N 20 -1600 20 -1550 { lab=WTAIN1}
-N 20 -1490 20 -1480 { lab=GND}
+N 20 -1490 20 -1480 { lab=VGND}
 N 140 -1520 240 -1520 { lab=WTAMIDDLENODE}
-N 140 -1550 160 -1550 { lab=GND}
+N 140 -1550 160 -1550 { lab=VGND}
 N 140 -1580 310 -1580 { lab=WTAOUT1}
 N 240 -1520 280 -1520 { lab=WTAMIDDLENODE}
 N 60 -1260 140 -1260 { lab=WTAMIDDLENODE}
 N 20 -1290 100 -1290 { lab=WTAIN2}
 N 20 -1340 20 -1290 { lab=WTAIN2}
-N 20 -1230 20 -1220 { lab=GND}
+N 20 -1230 20 -1220 { lab=VGND}
 N 140 -1260 240 -1260 { lab=WTAMIDDLENODE}
-N 140 -1290 160 -1290 { lab=GND}
+N 140 -1290 160 -1290 { lab=VGND}
 N 140 -1320 310 -1320 { lab=WTAOUT2}
 N 240 -1260 280 -1260 { lab=WTAMIDDLENODE}
 N 60 -1000 140 -1000 { lab=WTAMIDDLENODE}
 N 20 -1030 100 -1030 { lab=WTAIN3}
 N 20 -1080 20 -1030 { lab=WTAIN3}
-N 20 -970 20 -960 { lab=GND}
+N 20 -970 20 -960 { lab=VGND}
 N 140 -1000 240 -1000 { lab=WTAMIDDLENODE}
-N 140 -1030 160 -1030 { lab=GND}
+N 140 -1030 160 -1030 { lab=VGND}
 N 140 -1060 310 -1060 { lab=WTAOUT3}
 N 240 -1000 280 -1000 { lab=WTAMIDDLENODE}
 N 60 -740 140 -740 { lab=WTAMIDDLENODE}
 N 20 -770 100 -770 { lab=WTAIN4}
 N 20 -820 20 -770 { lab=WTAIN4}
-N 20 -710 20 -700 { lab=GND}
+N 20 -710 20 -700 { lab=VGND}
 N 140 -740 240 -740 { lab=WTAMIDDLENODE}
-N 140 -770 160 -770 { lab=GND}
+N 140 -770 160 -770 { lab=VGND}
 N 140 -800 310 -800 { lab=WTAOUT4}
 N 240 -740 280 -740 { lab=WTAMIDDLENODE}
 N 310 -1580 420 -1580 { lab=WTAOUT1}
@@ -209,14 +209,14 @@ N 280 -1260 280 -740 { lab=WTAMIDDLENODE}
 N 140 -1350 140 -1320 { lab=WTAOUT2}
 N 140 -1100 140 -1060 { lab=WTAOUT3}
 N 140 -830 140 -800 { lab=WTAOUT4}
-N -10 -740 20 -740 { lab=GND}
-N -10 -740 -10 -730 { lab=GND}
-N -10 -1000 20 -1000 { lab=GND}
-N -10 -1000 -10 -990 { lab=GND}
-N -10 -1260 20 -1260 { lab=GND}
-N -10 -1260 -10 -1250 { lab=GND}
-N -10 -1520 20 -1520 { lab=GND}
-N -10 -1520 -10 -1510 { lab=GND}
+N -10 -740 20 -740 { lab=VGND}
+N -10 -740 -10 -730 { lab=VGND}
+N -10 -1000 20 -1000 { lab=VGND}
+N -10 -1000 -10 -990 { lab=VGND}
+N -10 -1260 20 -1260 { lab=VGND}
+N -10 -1260 -10 -1250 { lab=VGND}
+N -10 -1520 20 -1520 { lab=VGND}
+N -10 -1520 -10 -1510 { lab=VGND}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 840 -910 0 0 {name=M3
 L=0.5
 W=1
@@ -399,7 +399,7 @@ C {devices/ipin.sym} 20 -1600 0 0 {name=WTAIn1 lab=WTAIN1}
 C {devices/ipin.sym} 430 -1340 0 0 {name=Drain2 lab=DRAIN2}
 C {devices/ipin.sym} 430 -1080 0 0 {name=Drain3 lab=DRAIN3}
 C {devices/ipin.sym} 430 -820 0 0 {name=Drain4 lab=DRAIN4}
-C {devices/iopin.sym} 920 -1830 0 0 {name=Vdd lab=VDD}
+C {devices/iopin.sym} 920 -1830 0 0 {name=Vdd lab=VPWR}
 C {devices/iopin.sym} 750 -1830 0 0 {name=Gate1 lab=GATE1}
 C {devices/iopin.sym} 680 -1840 0 0 {name=Vtun lab=VTUN}
 C {devices/iopin.sym} 550 -1840 0 0 {name=ColSel1 lab=COLSEL1}
@@ -418,7 +418,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/gnd.sym} 160 -1550 0 0 {name=l1 lab=GND}
+C {devices/gnd.sym} 160 -1550 0 0 {name=l1 lab=VGND}
 C {sky130_fd_pr/nfet_01v8.sym} 40 -1520 0 1 {name=M14
 L=0.15
 W=1
@@ -433,7 +433,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/gnd.sym} 20 -1480 0 0 {name=l2 lab=GND}
+C {devices/gnd.sym} 20 -1480 0 0 {name=l2 lab=VGND}
 C {devices/iopin.sym} 140 -1610 0 0 {name=WTAOut1 lab=WTAOUT1}
 C {devices/ipin.sym} 20 -1340 0 0 {name=WTAIn2 lab=WTAIN2}
 C {sky130_fd_pr/nfet_01v8.sym} 120 -1290 0 0 {name=M15
@@ -450,7 +450,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/gnd.sym} 160 -1290 0 0 {name=l3 lab=GND}
+C {devices/gnd.sym} 160 -1290 0 0 {name=l3 lab=VGND}
 C {sky130_fd_pr/nfet_01v8.sym} 40 -1260 0 1 {name=M16
 L=0.15
 W=1
@@ -465,7 +465,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/gnd.sym} 20 -1220 0 0 {name=l4 lab=GND}
+C {devices/gnd.sym} 20 -1220 0 0 {name=l4 lab=VGND}
 C {devices/iopin.sym} 140 -1350 0 0 {name=WTAOut2 lab=WTAOUT2}
 C {devices/ipin.sym} 20 -1080 0 0 {name=WTAIn3 lab=WTAIN3}
 C {sky130_fd_pr/nfet_01v8.sym} 120 -1030 0 0 {name=M17
@@ -482,7 +482,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/gnd.sym} 160 -1030 0 0 {name=l5 lab=GND}
+C {devices/gnd.sym} 160 -1030 0 0 {name=l5 lab=VGND}
 C {sky130_fd_pr/nfet_01v8.sym} 40 -1000 0 1 {name=M18
 L=0.15
 W=1
@@ -497,7 +497,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/gnd.sym} 20 -960 0 0 {name=l6 lab=GND}
+C {devices/gnd.sym} 20 -960 0 0 {name=l6 lab=VGND}
 C {devices/iopin.sym} 140 -1100 0 0 {name=WTAOut3 lab=WTAOUT3}
 C {devices/ipin.sym} 20 -820 0 0 {name=WTAIn4 lab=WTAIN4}
 C {sky130_fd_pr/nfet_01v8.sym} 120 -770 0 0 {name=M19
@@ -514,7 +514,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/gnd.sym} 160 -770 0 0 {name=l7 lab=GND}
+C {devices/gnd.sym} 160 -770 0 0 {name=l7 lab=VGND}
 C {sky130_fd_pr/nfet_01v8.sym} 40 -740 0 1 {name=M20
 L=0.15
 W=1
@@ -529,10 +529,10 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/gnd.sym} 20 -700 0 0 {name=l8 lab=GND}
+C {devices/gnd.sym} 20 -700 0 0 {name=l8 lab=VGND}
 C {devices/iopin.sym} 140 -830 0 0 {name=WTAOut4 lab=WTAOUT4}
 C {devices/iopin.sym} 280 -1770 0 0 {name=WTAMiddleNode lab=WTAMIDDLENODE}
-C {devices/gnd.sym} -10 -1510 0 0 {name=l9 lab=GND}
-C {devices/gnd.sym} -10 -1250 0 0 {name=l10 lab=GND}
-C {devices/gnd.sym} -10 -990 0 0 {name=l11 lab=GND}
-C {devices/gnd.sym} -10 -730 0 0 {name=l12 lab=GND}
+C {devices/gnd.sym} -10 -1510 0 0 {name=l9 lab=VGND}
+C {devices/gnd.sym} -10 -1250 0 0 {name=l10 lab=VGND}
+C {devices/gnd.sym} -10 -990 0 0 {name=l11 lab=VGND}
+C {devices/gnd.sym} -10 -730 0 0 {name=l12 lab=VGND}

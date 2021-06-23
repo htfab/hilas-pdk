@@ -26,17 +26,17 @@ N 2200 -1520 2240 -1520 { lab=#net2}
 N 2200 -1520 2200 -1480 { lab=#net2}
 N 2380 -1520 2380 -1380 { lab=OUTPUT}
 N 2380 -1430 2400 -1430 { lab=OUTPUT}
-N 2380 -1280 2400 -1280 { lab=GND}
+N 2380 -1280 2400 -1280 { lab=VGND}
 N 2380 -1380 2380 -1310 { lab=OUTPUT}
 N 2200 -1480 2200 -1360 { lab=#net2}
-N 2200 -1330 2230 -1330 { lab=GND}
-N 1800 -1280 1830 -1280 { lab=GND}
+N 2200 -1330 2230 -1330 { lab=VGND}
+N 1800 -1280 1830 -1280 { lab=VGND}
 N 1870 -1280 1930 -1280 { lab=#net3}
 N 1890 -1310 1890 -1280 { lab=#net3}
 N 1830 -1310 1890 -1310 { lab=#net3}
 N 1830 -1340 1830 -1310 { lab=#net3}
 N 1940 -1280 2340 -1280 { lab=#net3}
-N 1950 -1330 1980 -1330 { lab=GND}
+N 1950 -1330 1980 -1330 { lab=VGND}
 N 2020 -1330 2080 -1330 { lab=#net4}
 N 2040 -1360 2040 -1330 { lab=#net4}
 N 1980 -1360 2040 -1360 { lab=#net4}
@@ -193,7 +193,7 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/gnd.sym} 2400 -1280 0 0 {name=l3 lab=GND}
+C {devices/gnd.sym} 2400 -1280 0 0 {name=l3 lab=VGND}
 C {devices/iopin.sym} 2400 -1430 0 0 {name=Output lab=OUTPUT}
 C {devices/iopin.sym} 2030 -1420 0 0 {name=Vbias1 lab=VBIAS}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 2180 -1330 0 0 {name=M7
@@ -210,11 +210,11 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/gnd.sym} 2380 -1250 0 0 {name=l1 lab=GND}
-C {devices/gnd.sym} 2200 -1300 0 0 {name=l2 lab=GND}
-C {devices/gnd.sym} 2230 -1330 0 0 {name=l7 lab=GND}
-C {devices/gnd.sym} 1830 -1250 0 0 {name=l8 lab=GND}
-C {devices/gnd.sym} 1800 -1280 0 0 {name=l9 lab=GND}
+C {devices/gnd.sym} 2380 -1250 0 0 {name=l1 lab=VGND}
+C {devices/gnd.sym} 2200 -1300 0 0 {name=l2 lab=VGND}
+C {devices/gnd.sym} 2230 -1330 0 0 {name=l7 lab=VGND}
+C {devices/gnd.sym} 1830 -1250 0 0 {name=l8 lab=VGND}
+C {devices/gnd.sym} 1800 -1280 0 0 {name=l9 lab=VGND}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 2000 -1330 0 1 {name=M8
 L=0.5
 W=1
@@ -229,8 +229,8 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/gnd.sym} 1980 -1300 0 0 {name=l10 lab=GND}
-C {devices/gnd.sym} 1950 -1330 0 0 {name=l11 lab=GND}
+C {devices/gnd.sym} 1980 -1300 0 0 {name=l10 lab=VGND}
+C {devices/gnd.sym} 1950 -1330 0 0 {name=l11 lab=VGND}
 C {devices/capa.sym} 1210 -1390 0 0 {name=C2
 m=1
 value=1p
