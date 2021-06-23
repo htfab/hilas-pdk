@@ -48,7 +48,6 @@ from pathlib import Path
 
 #######################################################################################
 PDK_VARIANT = 'sky130_hilas_sc'
-CELL_PREFIX = 'sky130_hilas_'
 ###########################################################################################
 
 THIS_DIR = Path(__file__).parent
@@ -88,7 +87,7 @@ with open(THIS_DIR / 'templates' / 'license_head.txt', 'r') as f:
 
 
 class Conventions:
-
+    CELL_PREFIX = 'sky130_hilas_'
     PG_PIN_NAMES = {'VPB': [],  # net names appearing in the lists will be converted to the key
                     'VPWRIN': [],
                     'LOWLVPWR': [],
@@ -153,11 +152,11 @@ class StructuredTextFile:
         return self.path
 
 
-class XschemLibrary:
+class XschemLibrary(dict):
 
     def __init__(self, lib_root):
+        super().__init__({m.stem: XschemCircuit(m, lib_root) for m in lib_root.glob('**/*.sym')})
         self.root = Path(lib_root)
-        self.circuits = [XschemCircuit(m, self.root) for m in self.root.glob('**/*.sym')]
 
     def __contains__(self, item):
         if isinstance(item, Path):
@@ -165,21 +164,17 @@ class XschemLibrary:
         return len(list(self.root.glob('**/'+item))) != 0
         # return item in [str(x.path.relative_to(self.root)) for x in self.symbols]
 
-    def get_circuit(self, name):
-        return [x for x in self.circuits if x.name == name][0]
-
     def get_symbol(self, name):
-        return self.get_circuit(name).symbol
+        return self[name].symbol
 
     def get_schematic(self, name):
-        try:
-            return [x for x in self.schematics if x.name==name][0]
-        except IndexError:
-            return None
+        return self[name].schematic
 
     def _rename_module(self, from_name, to_name):
 
-        for sch in self.schematics:
+        for cir in self:
+
+            sch = cir.schematic
             needs_save = False
             stale_file = None
 
@@ -197,7 +192,7 @@ class XschemLibrary:
                 if stale_file:
                     os.remove(stale_file)
 
-        for sym in self.symbols:
+            sym = cir.sybol
             needs_save = False
             stale_file = None
 
@@ -214,6 +209,64 @@ class XschemLibrary:
                 sym._save()
                 if stale_file:
                     os.remove(stale_file)
+
+    def check(self):
+        message = []
+
+        mc = []
+        for cn, c in cd.standard_cells.items():
+            if c.long_name + '.sym' not in self:
+                mc.append(c)
+
+        if mc:
+            message.append(
+                'The following cells are defined in the Cell Index YAML, but are missing symbols in the Xschem library:')
+            for mmc in mc:
+                message.append('    ' + mmc.long_name)
+
+        for cir in self.values():
+            if cir.schematic:
+                sch = cir.schematic
+            else:
+                continue
+            mm = []
+            for rr in sch.refs:
+                if rr not in self \
+                        and not sch.path.parent / rr in self \
+                        and not rr == 'devices' \
+                        and not re.search(r'^devices/\w+[.]sym', rr, re.M) \
+                        and not re.search(r'^sky130_fd_pr/\w+[.]sym', rr, re.M):
+                    mm.append(rr)
+
+            if mm:
+                message.append(stylize_head())
+                message.append('Schematic {} is missing the following refs:'.format(sch))
+                for mmm in mm:
+                    message.append('    {}'.format(mmm))
+
+        for cir in self.values():
+            if not cir.schematic:
+                continue
+            sch_pins = cir.schematic.pins
+            sym_pins = cir.symbol.pins
+
+            sch_only = set(sch_pins.keys()) - set(sym_pins.keys())
+            sym_only = set(sym_pins.keys()) - set(sch_pins.keys())
+            if not sch_only and not sym_only:
+                continue
+            else:  ## mismatch
+                message.append(stylize_head())
+                message.append('xschem symbol \'{}\' missing the following pins:'.format(cir.name))
+                for pin in sch_only:
+                    message.append('    {}'.format(pin))
+                message.append('xschem schematic \'{}\' missing the following pins:'.format(cir.name))
+                for pin in sym_only:
+                    message.append('    {}'.format(pin))
+
+        if message:
+            warn(stylize_head('Xschem Consistency Check'))
+            warn('\n'.join(message))
+            warn(stylize_head())
 
 
 class XschemCircuit:
@@ -372,7 +425,7 @@ class CellInfo(dict):
     def __init__(self, name, prop_dict):
         super().__init__(prop_dict)
         self['short_name'] = name
-        self['long_name'] = CELL_PREFIX + name
+        self['long_name'] = CONVENTIONS.CELL_PREFIX + name
 
     # @property
     # def short_name(self):
@@ -428,8 +481,8 @@ class LibraryInfo(OrderedDict):
         return OrderedDict({cn: cell for cn, cell in self['test-cells'].items() if 'description' in cell})
 
     def by_name(self, cell_name):
-        if cell_name.startswith(CELL_PREFIX):
-            cell_name = cell_name.split(CELL_PREFIX)[1]
+        if cell_name.startswith(CONVENTIONS.CELL_PREFIX):
+            cell_name = cell_name.split(CONVENTIONS.CELL_PREFIX)[1]
         try:
             return [cell for cat in self.values() for cn, cell in cat.items() if cn == cell_name][0]
         except IndexError:
@@ -438,6 +491,31 @@ class LibraryInfo(OrderedDict):
     def by_cat(self, category_name):
         return OrderedDict({cn: cell for cn, cell in self[category_name].items() if cn != 'description'})
 
+    def check_yaml(self):
+        all_cells = self.all_cells
+
+        if len(all_cells) != len(set(list(all_cells.keys()))):
+            dl = list(all_cells.keys())
+            dd = list(set(dl))
+            for c in dd:
+                dl.remove(c)
+            warn(stylize_head())
+            warn('Found duplicate entries in {}:'.format(CELL_DATA_FILE.name))
+            for f in dl:
+                warn('    ' + str(f))
+            warn(stylize_head())
+
+        missing = []
+        for cn, cell in self.standard_cells.items():
+            if 'description' not in cell or cell['description'] is None or cell['description'] == '':
+                missing.append(cn)
+
+        if missing:
+            warn(stylize_head())
+            warn('The following standard cells are missing descriptions in the \'{}\'file:'.format(CELL_DATA_FILE.name))
+            for mf in missing:
+                warn('    ' + str(mf))
+            warn(stylize_head())
 
 class LefData(object):
     SIZE_REGEX = re.compile(r'^\s*SIZE\s+(\S+)\s+BY\s+(\S+)\s*;\s*$', re.MULTILINE)
@@ -544,6 +622,64 @@ class MagicLibrary(dict):
         if targ:
             targ.rename(to_name)
 
+    def check(self):
+        self.check_complete()
+        self.check_depends()
+
+    def check_complete(self):
+        message = []
+        mc = []
+        for cn, c in cd.all_cells.items():
+            if c.long_name not in magic_lib:
+                mc.append(c)
+
+        if mc:
+            message += ['The following cells are defined in the Cell Index YAML, but are missing in the magic library:']
+            for mmc in mc:
+                message += ['    ' + mmc.long_name]
+
+        if message:
+            warn(stylize_head())
+            warn('\n'.join(message))
+
+    def check_depends(self):
+
+        # for mn, c in magic_lib.items():
+        #     mm = []
+        #     for rr in c.references:
+        #         if rr not in magic_lib:
+        #             mm.append(rr)
+        #
+        #     if mm:
+        #         message += ['Magic design {} is missing the following refs:'.format(c.file)]
+        #         for mmm in mm:
+        #             message += ['    {}'.format(mmm)]
+
+        missing = {}
+        for m in self.values():
+            deps = m.references
+            if m.long_name in deps:
+                # warn(stylize_head())
+                warn('Cell \'{}\' contains instances of itself!'.format(m.long_name))
+                warn(stylize_head())
+
+            for d in deps:
+                if not (LIB_PATH['mag'] / d).with_suffix('.mag').is_file():
+                    if m.long_name in missing:
+                        missing[m.long_name] += [d]
+                    else:
+                        missing.update({m.long_name: [d]})
+
+        if missing:
+            # warn(stylize_head())
+            warn('Referenced (sub)cells missing from the /mag/ path:')
+            for mf, clist in missing.items():
+                warn('    {} is missing:'.format(mf))
+                for cell in clist:
+                    warn('        {}'.format(cell))
+
+            warn(stylize_head())
+
 
 class MagicDesign(object):
     MAGIC_PIN_REGEX = re.compile(r'^\s*\wlabel\s+(\S+).*\s+(\S+)\s*\n\s*port\s+(\d+)\s+(.*)$', re.MULTILINE)
@@ -560,7 +696,7 @@ class MagicDesign(object):
         self.file = Path(mag_file)
         self.long_name = mag_file.stem
         try:
-            self.short_name = mag_file.stem.split(CELL_PREFIX)[1]
+            self.short_name = mag_file.stem.split(CONVENTIONS.CELL_PREFIX)[1]
         except:
             self.short_name = mag_file.stem
 
@@ -600,14 +736,14 @@ class MagicDesign(object):
     @staticmethod
     def file2name(file):
         try:
-            return str(file.stem.split(CELL_PREFIX)[1])
+            return str(file.stem.split(CONVENTIONS.CELL_PREFIX)[1])
         except:
             return str(file.stem)
 
     @staticmethod
     def name2file(name):
-        if not name.startswith(CELL_PREFIX):
-            name = CELL_PREFIX + name
+        if not name.startswith(CONVENTIONS.CELL_PREFIX):
+            name = CONVENTIONS.CELL_PREFIX + name
         if not name.endswith('.mag'):
             name = name + '.mag'
         return LIB_PATH['mag'] / name
@@ -816,7 +952,7 @@ def make_lef():
 
     # only standard cells make it into the merged LEF
     for sf in LIB_PATH['temp_lef'].glob('*.lef'):
-        sh_name = sf.stem.split(CELL_PREFIX)[1]
+        sh_name = sf.stem.split(CONVENTIONS.CELL_PREFIX)[1]
         if sh_name not in cd.standard_cells:
             continue
 
@@ -919,8 +1055,8 @@ def make_verilog():
 
             if pins:
                 fake = True
-            pg_pins = [p['name'] for p in pins if p['name'] in PG_PIN_NAMES]
-            pins = [p['name'] for p in pins if p['name'] not in PG_PIN_NAMES]
+            pg_pins = [p['name'] for p in pins if p['name'] in CONVENTIONS.PG_PIN_NAMES]
+            pins = [p['name'] for p in pins if p['name'] not in CONVENTIONS.PG_PIN_NAMES]
             pg_pins.extend(["VNB", "VPB"])
 
             descr = cd.by_name(cn)
@@ -987,8 +1123,8 @@ def make_lib():
             if not pins:
                 continue
 
-            pg_pins = [p for p in pins if p['name'] in PG_PIN_NAMES]
-            pins = [p for p in pins if p['name'] not in PG_PIN_NAMES]
+            pg_pins = [p for p in pins if p['name'] in CONVENTIONS.PG_PIN_NAMES]
+            pins = [p for p in pins if p['name'] not in CONVENTIONS.PG_PIN_NAMES]
 
             for pgp in pg_pins:
                 pgp.update({
@@ -1271,90 +1407,13 @@ def handle_magic(magic_file):
         make_spice(magic_file)
 
 
-def check_count():
-    all_cells = cd.all_cells
-    magic_files = [f.name for f in LIB_PATH['mag'].glob('*.mag')]
 
-    if len(all_cells) != len(set(list(all_cells.keys()))):
-        dl = list(all_cells.keys())
-        dd = list(set(dl))
-        for c in dd:
-            dl.remove(c)
-        warn(stylize_head())
-        warn('Found duplicate entries in {}:'.format(CELL_DATA_FILE.name))
-        for f in dl:
-            warn('    ' + str(f))
-        warn(stylize_head())
-
-    ml = list(magic_files)
-    mm = []
-    for cn, c in all_cells.items():
-        mag_name = 'sky130_hilas_' + cn + '.mag'
-        if mag_name in ml:
-            ml.remove(mag_name)
-        else:
-            mm.append(cn)
-
-    if mm:
-        warn(stylize_head())
-        warn('Entries in {} without /mag/ files:'.format(CELL_DATA_FILE.name))
-        for mf in mm:
-            warn('    ' + str(mf))
-        warn(stylize_head())
-
-    if ml:
-        warn(stylize_head())
-        warn('Magic files missing entries in {}:'.format(CELL_DATA_FILE.name))
-        for mf in ml:
-            warn('    ' + str(mf))
-        warn(stylize_head())
-
-
-def check_depends():
-    missing = {}
-    for m in magic_lib.values():
-        deps = m.references
-        if m.long_name in deps:
-            # warn(stylize_head())
-            warn('**  Cell \'{}\' contains instances of itself!  **'.format(m.long_name))
-            warn(stylize_head())
-
-        for d in deps:
-            if not (LIB_PATH['mag'] / d).with_suffix('.mag').is_file():
-                if m.long_name in missing:
-                    missing[m.long_name] += [d]
-                else:
-                    missing.update({m.long_name: [d]})
-
-    if missing:
-        # warn(stylize_head())
-        warn('Referenced (sub)cells missing from the /mag/ path:')
-        for mf, clist in missing.items():
-            warn('    {} is missing:'.format(mf))
-            for cell in clist:
-                warn('        {}'.format(cell))
-
-        warn(stylize_head())
-
-
-def check_descriptions():
-    missing = []
-    for cn, cell in cd.standard_cells.items():
-        if 'description' not in cell or cell['description'] is None or cell['description'] == '':
-            missing.append(cn)
-
-    if missing:
-        warn(stylize_head())
-        warn('The following standard cells are missing descriptions in the \'{}\'file:'.format(CELL_DATA_FILE.name))
-        for mf in missing:
-            warn('    ' + str(mf))
-        warn(stylize_head())
 
 
 def check_net_names():
     for _, m in magic_lib.items():
         m.check_port_names()
-    for m in xschem_lib.circuits:
+    for m in xschem_lib.values():
         m.check_names()
 
 
@@ -1363,8 +1422,8 @@ def check_port_pin_mapping():
     for cn, c in cd.standard_cells.items():
         amp = magic_lib[c.short_name].ports
         try:
-            symb = xschem_lib.get_symbol(c.long_name)
-        except IndexError:
+            symb = xschem_lib[c.long_name].symbol
+        except KeyError:
             continue
 
         axp = symb.pins
@@ -1401,8 +1460,8 @@ def check_lvs():
     NETGEN_TCL = TECH_ROOT / 'netgen' / 'sky130_setup.tcl'
     warn(stylize_head('Starting LVS'))
     for m in cd.standard_cells:
-        ext_spice = list(LIB_PATH['spice_ext'].glob(CELL_PREFIX + m + '.spice'))
-        hand_spice = list(LIB_PATH['spice_hand'].glob(CELL_PREFIX + m + '.spice'))
+        ext_spice = list(LIB_PATH['spice_ext'].glob(CONVENTIONS.CELL_PREFIX + m + '.spice'))
+        hand_spice = list(LIB_PATH['spice_hand'].glob(CONVENTIONS.CELL_PREFIX + m + '.spice'))
 
         if not len(ext_spice) or not len(hand_spice):
             if not len(ext_spice):
@@ -1415,7 +1474,7 @@ def check_lvs():
         with open(ext_spice[0], 'r') as f:
             src = f.read()
 
-        match = re.search(r'^[.]subckt ({} .*)'.format(CELL_PREFIX + m), src, re.MULTILINE)
+        match = re.search(r'^[.]subckt ({} .*)'.format(CONVENTIONS.CELL_PREFIX + m), src, re.MULTILINE)
         if match:
             instance = match.group(1)
         else:
@@ -1449,16 +1508,16 @@ def check_file_names(path, suffix):
             suffix='*.'+suffix
 
     for m in Path(path).glob(suffix):
-        if not m.stem.startswith(CELL_PREFIX):
-            edie('filename does not start with "{}":    {}'.format(CELL_PREFIX, m.name))
+        if not m.stem.startswith(CONVENTIONS.CELL_PREFIX):
+            edie('filename does not start with "{}":    {}'.format(CONVENTIONS.CELL_PREFIX, m.name))
 
 
 def check_hand_spice():
     for file in LIB_PATH['spice_hand'].glob('*.spice'):
-        if not file.stem.startswith(CELL_PREFIX):
-            warn('spice file {} missing prefix ({})'.format(file.name, CELL_PREFIX))
+        if not file.stem.startswith(CONVENTIONS.CELL_PREFIX):
+            warn('spice file {} missing prefix ({})'.format(file.name, CONVENTIONS.CELL_PREFIX))
             if confirm('fix it?', False):
-                shutil.move(file, file.with_name(CELL_PREFIX + file.name))
+                shutil.move(file, file.with_name(CONVENTIONS.CELL_PREFIX + file.name))
 
 
 def check_dir_for_prefixes(directory, extension):
@@ -1471,12 +1530,12 @@ def check_dir_for_prefixes(directory, extension):
     available = [c.name for c in LIB_PATH[directory].glob('*{}'.format(extension))]
     mp = []
     for avail in available:
-        if not avail.startswith(CELL_PREFIX):
+        if not avail.startswith(CONVENTIONS.CELL_PREFIX):
             mp += [avail]
 
     if mp:
         warn(stylize_head())
-        warn('    \'{}\' directory contains the following files which are missing the prefix \'{}\':'.format(directory, CELL_PREFIX))
+        warn('    \'{}\' directory contains the following files which are missing the prefix \'{}\':'.format(directory, CONVENTIONS.CELL_PREFIX))
         for exx in mp:
             warn('        {}'.format(exx))
         warn(stylize_head())
@@ -1541,98 +1600,29 @@ def check_file_presence():
         check_dir_for_complete(*set)
 
 
-def check_xschem_lib():
-    message = []
-
-    mc = []
-    for cn, c in cd.standard_cells.items():
-        if c.long_name+'.sym' not in xschem_lib:
-            mc.append(c)
-
-    if mc:
-        message.append('The following cells are defined in the Cell Index YAML, but are missing symbols in the Xschem library:')
-        for mmc in mc:
-            message.append('    '+mmc.long_name)
-
-    for cir in xschem_lib.circuits:
-        if cir.schematic:
-            sch = cir.schematic
-        else:
-            continue
-        mm = []
-        for rr in sch.refs:
-            if rr not in xschem_lib \
-                    and not sch.path.parent / rr in xschem_lib \
-                    and not rr == 'devices' \
-                    and not re.search(r'^devices/\w+[.]sym', rr, re.M) \
-                    and not re.search(r'^sky130_fd_pr/\w+[.]sym', rr, re.M):
-                mm.append(rr)
-
-        if mm:
-            message.append(stylize_head())
-            message.append('Schematic {} is missing the following refs:'.format(sch))
-            for mmm in mm:
-                message.append('    {}'.format(mmm))
-
-    if message:
-        warn(stylize_head('Xschem Consistency Check'))
-        warn('\n'.join(message))
-        warn(stylize_head())
-
-
-def check_magic_lib():
-    message = []
-    mc = []
-    for cn, c in cd.all_cells.items():
-        if c.long_name not in magic_lib:
-            mc.append(c)
-
-    if mc:
-        message += ['The following cells are defined in the Cell Index YAML, but are missing in the magic library:']
-        for mmc in mc:
-            message += ['    '+mmc.long_name]
-
-    for mn, c in magic_lib.items():
-        mm = []
-        for rr in c.references:
-            if rr not in magic_lib:
-                mm.append(rr)
-
-        if mm:
-            message += ['Magic design {} is missing the following refs:'.format(c.file)]
-            for mmm in mm:
-                message += ['    {}'.format(mmm)]
-
-    if message:
-        warn(stylize_head())
-        warn('\n'.join(message))
-
-
 def run_rename_magic(spec_string):
     old_n, new_n = [x.strip() for x in spec_string.strip().split(':')]
-    check_magic_lib()
+    magic_lib.check()
     magic_lib.rename_module(from_name=old_n, to_name=new_n)
 
 
 def run_rename_xschem(spec_string):
     old_n, new_n = [x.strip() for x in spec_string.strip().split(':')]
-    check_xschem_lib()
+    xschem_lib.check()
     xschem_lib._rename_module(from_name=old_n, to_name=new_n)
 
 
 def run_basic_checks():
-    check_net_names()
-    check_port_pin_mapping()
     check_file_names(LIB_PATH['mag'], '.mag')
     check_file_names(LIB_PATH['xschem'], '.sym')
     check_file_names(LIB_PATH['xschem'], '.sch')
-    check_magic_lib()
-    check_xschem_lib()
     check_file_presence()
-    check_count()
-    check_depends()
+    cd.check_yaml()
+    magic_lib.check()
+    xschem_lib.check()
+    check_port_pin_mapping()
     check_hand_spice()
-    check_descriptions()
+
 
 ERRORS = []
 cd = None
@@ -1642,6 +1632,24 @@ magic_lib = None
 xschem_lib = None
 args = None
 rel_root = None
+
+
+def read_cell_index():
+    global cd
+
+    if args.lint_yaml:
+
+        warn(stylize_head('Running YAML linter on {}'.format(CELL_DATA_FILE.name)))
+        try:
+            yamllintcli.run([str(CELL_DATA_FILE)])
+
+        except:
+            pass
+
+        finally:
+            warn(stylize_head())
+
+    cd = LibraryInfo(CELL_DATA_FILE)
 
 
 def main():
@@ -1667,9 +1675,8 @@ def main():
     ap.add_argument('-D', '--delete', action='store_true',
                     help='Delete temporary (individual) LEF files after consolidation', default=True)
     ap.add_argument('-F', '--force', action='store_true', help='Overwrite existing collateral.', default=False)
-    ap.add_argument('-L', '--lint-yaml', help='Run linter on the CELL_INDEX.yml file')
+    ap.add_argument('-L', '--lint-yaml', action='store_true', help='Run linter on the CELL_INDEX.yml file')
     ap.add_argument('-N', '--no', action='store_true', help='Assume a \'no\' answer to all prompts.')
-    ap.add_argument('-X', '--xschem', action='store_true', help='Parse Xschem files looking for dangling nets and modules')
     ap.add_argument('-Y', '--yes', action='store_true', help='Assume a \'yes\' answer to all prompts.')
 
     ap.add_argument('--rename-xschem', action='store', help='Rename modules in xschem library and update references.  '
@@ -1679,21 +1686,9 @@ def main():
 
     args = ap.parse_args()
 
-    if args.lint_yaml:
-
-        warn(stylize_head('Linting {}'.format(CELL_DATA_FILE.name)))
-        try:
-            yamllintcli.run([str(CELL_DATA_FILE)])
-
-        except:
-            pass
-
-        finally:
-            warn(stylize_head())
-
-    cd = LibraryInfo(CELL_DATA_FILE)
-
     rel_root = Path.cwd()
+
+    read_cell_index()
     magic_lib = MagicLibrary(LIB_PATH['mag'])
     xschem_lib = XschemLibrary(LIB_PATH['xschem'])
 
@@ -1706,7 +1701,6 @@ def main():
     if args.rename_xschem:
         exit(run_rename_xschem(args.rename_xschem))
 
-
     # Items here on done on a per-cell basis with Magic opening each one
     magic = Magic()
     for m in magic_lib.values():
@@ -1715,9 +1709,6 @@ def main():
     # The following items can be done on the batch level:
     if args.lvs:
         check_lvs()
-
-    if args.xschem:
-        check_xschem_lib()
 
     if args.lef and target_check(None, 'lef'):
         # consolidate all temp LEFs
