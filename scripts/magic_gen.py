@@ -166,17 +166,10 @@ class XschemLibrary:
         # return item in [str(x.path.relative_to(self.root)) for x in self.symbols]
 
     def get_circuit(self, name):
-        try:
-            return [x for x in self.circuits if x.name == name][0]
-        except IndexError:
-            warn('no symbol named \'{}\' in xschem library'.format(name))
+        return [x for x in self.circuits if x.name == name][0]
 
     def get_symbol(self, name):
-        c = self.get_circuit(name)
-        if c:
-            return c.symbol
-        else:
-            return None
+        return self.get_circuit(name).symbol
 
     def get_schematic(self, name):
         try:
@@ -1369,9 +1362,11 @@ def check_port_pin_mapping():
 
     for cn, c in cd.standard_cells.items():
         amp = magic_lib[c.short_name].ports
-        symb = xschem_lib.get_symbol(c.long_name)
-        if not symb:
+        try:
+            symb = xschem_lib.get_symbol(c.long_name)
+        except IndexError:
             continue
+
         axp = symb.pins
 
         mpo = []
