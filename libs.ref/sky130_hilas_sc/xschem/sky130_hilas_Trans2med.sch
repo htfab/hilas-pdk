@@ -5,8 +5,8 @@ V {}
 S {}
 E {}
 N 1030 -1170 1110 -1170 { lab=DRAIN1N}
-N 1030 -1140 1050 -1140 { lab=GND}
-N 1030 -1030 1050 -1030 { lab=GND}
+N 1030 -1140 1050 -1140 { lab=VGND}
+N 1030 -1030 1050 -1030 { lab=VGND}
 N 950 -1140 990 -1140 { lab=GATE1N}
 N 960 -1030 990 -1030 { lab=GATE2N}
 N 1380 -1150 1420 -1150 { lab=GATE1P}
@@ -52,7 +52,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/gnd.sym} 1050 -1140 0 0 {name=l4 lab=GND}
+C {devices/gnd.sym} 1050 -1140 0 0 {name=l4 lab=VGND}
 C {devices/ipin.sym} 950 -1140 0 0 {name=Gate1n lab=GATE1N}
 C {devices/iopin.sym} 1110 -1170 0 0 {name=Drain1n lab=DRAIN1N}
 C {sky130_fd_pr/pfet_01v8.sym} 1440 -1030 0 0 {name=M7
@@ -83,7 +83,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/gnd.sym} 1050 -1030 0 0 {name=l6 lab=GND}
+C {devices/gnd.sym} 1050 -1030 0 0 {name=l6 lab=VGND}
 C {devices/iopin.sym} 1100 -1060 0 0 {name=Drain2n lab=DRAIN2N}
 C {devices/ipin.sym} 1380 -1030 0 0 {name=Gate2p lab=GATE2P}
 C {devices/iopin.sym} 1540 -1120 0 0 {name=Source1p lab=SOURCE1P}

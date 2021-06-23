@@ -49,14 +49,6 @@ from pathlib import Path
 #######################################################################################
 PDK_VARIANT = 'sky130_hilas_sc'
 CELL_PREFIX = 'sky130_hilas_'
-PG_PIN_NAMES = {'VPB': [],  # net names appearing in the lists will be converted to the key
-                'VPWRIN': [],
-                'LOWLVPWR': [],
-                'VGND': ['GND'],
-                'VPWR': ['VDD'],
-                'VNB': [],
-                'KAPWR': []
-                }
 ###########################################################################################
 
 THIS_DIR = Path(__file__).parent
@@ -95,6 +87,51 @@ with open(THIS_DIR / 'templates' / 'license_head.txt', 'r') as f:
     LICENSE_HEAD = f.read() + '\n'
 
 
+class Conventions:
+
+    PG_PIN_NAMES = {'VPB': [],  # net names appearing in the lists will be converted to the key
+                    'VPWRIN': [],
+                    'LOWLVPWR': [],
+                    'VGND': ['GND'],
+                    'VPWR': ['VDD'],
+                    'VNB': [],
+                    'KAPWR': []
+                    }
+
+    def __init__(self):
+        self._pg_pin_map={item: parent for parent,ll in self.PG_PIN_NAMES.items() for item in ll}
+
+    def pg_pin_lookup(self, net):
+        if net in self._pg_pin_map:
+            return self._pg_pin_map[net]
+        else:
+            return None
+
+    def net_name(self, net):
+        oname = str(net)
+
+        if '+' in net:
+            net = net.replace('+', 'P')
+
+        if '-' in net:
+            net = net.replace('-', 'N')
+
+        if net.upper() != net:
+            net = net.upper()
+
+        pnet = self.pg_pin_lookup(net)
+        if pnet:
+            net = pnet
+
+        if net != oname:
+            return net
+        else:
+            return None
+
+
+CONVENTIONS=Conventions()
+
+
 class StructuredTextFile:
 
     def __init__(self, path):
@@ -128,16 +165,23 @@ class XschemLibrary:
         return len(list(self.root.glob('**/'+item))) != 0
         # return item in [str(x.path.relative_to(self.root)) for x in self.symbols]
 
-    def get_symbol(self, name):
+    def get_circuit(self, name):
         try:
-            return [x for x in self.symbols if x.name == name][0]
-        except:
+            return [x for x in self.circuits if x.name == name][0]
+        except IndexError:
+            warn('no symbol named \'{}\' in xschem library'.format(name))
+
+    def get_symbol(self, name):
+        c = self.get_circuit(name)
+        if c:
+            return c.symbol
+        else:
             return None
 
     def get_schematic(self, name):
         try:
             return [x for x in self.schematics if x.name==name][0]
-        except:
+        except IndexError:
             return None
 
     def _rename_module(self, from_name, to_name):
@@ -184,6 +228,7 @@ class XschemCircuit:
         assert symbol_file.is_file()
         self.lib_root = library_root
         self.symbol = XschemSymbol(symbol_file, library_root)
+        self.name = self.symbol.name
         try:
             self.schematic = XschemSchematic(symbol_file.with_suffix('.sch'), library_root)
         except FileNotFoundError:
@@ -194,10 +239,10 @@ class XschemCircuit:
         if self.schematic:
             self.schematic.rename_pin(old_name, new_name)
 
-    def check_pin_names(self):
-        self.symbol.check_pin_name_caps()
+    def check_names(self):
+        self.symbol.check_pin_names()
         if self.schematic:
-            self.schematic.check_pin_name_caps()
+            self.schematic.check_net_names()
 
 
 class XschemSchematic(StructuredTextFile):
@@ -248,42 +293,35 @@ class XschemSchematic(StructuredTextFile):
             pins.update({pairs['lab']: {k: v for k, v in pairs.items() if k != 'lab'}})
         return pins
 
-    def rename_pin(self, old_name, new_name):
+    @property
+    def nets(self):
+        nets = {}
+        listonets = re.findall('^.*{.*\s*lab=(\w+)\s*.*}.*$', self.c, re.M)
+        return list(set(listonets))
+
+    def rename_net(self, old_name, new_name):
         mp1 = r'(^C\s+{{.*?}}.*?{{.*\s*lab=){}(\s*.*}})'.format(old_name)
         self.c = re.sub(mp1, r'\1{}\2'.format(new_name), self.c, flags=re.M)
 
         mp2 = r'(^N\s+.*?{{.*\s*lab=){}(\s*.*}})'.format(old_name)
         self.c = re.sub(mp2, r'\1{}\2'.format(new_name), self.c, flags=re.M)
 
-    def check_pin_name_caps(self):
+    def check_net_names(self):
         write = False
-        for net in self.pins:
+        for net in self.nets:
+            fnet = CONVENTIONS.net_name(net)
+            if fnet:
+                self.rename_net(net, fnet)
+                warn('Found net in \'{}\' whose name should probably be corrected: \'{}\'->\'{}\''.format(
+                    self.file.name, net, fnet))
 
-            if '+' in net:
-                warn('Found \'+\' in net name \'{}\' in {}'.format(net, self.file.name))
-                newname = net.replace('+', 'P')
-                self.rename_pin(net, newname)
-                net = newname
-                write = True
-
-            if '-' in net:
-                warn('Found \'-\' in net name \'{}\' in {}'.format(net, self.file.name))
-                newname = net.replace('-', 'N')
-                self.rename_pin(net, newname)
-                net = newname
-                write = True
-
-            if net.upper() != net:
-                warn('Found non-capitalized pin name \'{}\' in {}'.format(net, self.file.name))
-                newname = net.upper()
-                self.rename_pin(net, newname)
                 write = True
 
         if write:
             if args.no:
                 pass
             elif args.yes or confirm(
-                    'Would you like to write the capitalized-net-corrected file {} ?'.format(self.file.name), False):
+                    'Would you like to write the net-name-corrected file {} ?'.format(self.file.name), False):
                 self._save()
                 warn('wrote capitalized-net-corrected version of {}'.format(self.file.name))
 
@@ -310,30 +348,13 @@ class XschemSymbol(StructuredTextFile):
         self.c = re.sub(mp1, r'\1{}\2'.format(new_name), self.c, flags=re.M)
         self.c = re.sub(mp2, r'\1{}\2'.format(new_name), self.c, flags=re.M)
 
-    def check_pin_name_caps(self):
+    def check_pin_names(self):
         write = False
 
-        for net in self.pins:
-
-            if '+' in net:
-                warn('Found \'+\' in net name \'{}\' in {}'.format(net, self.file.name))
-                newname = net.replace('+', 'P')
-                self.rename_pin(net, newname)
-                net = newname
-                write = True
-
-            if '-' in net:
-                warn('Found \'-\' in net name \'{}\' in {}'.format(net, self.file.name))
-                newname = net.replace('-', 'N')
-                self.rename_pin(net, newname)
-                net = newname
-                write = True
-
-            if net.upper() != net:
-                warn('Found non-capitalized pin name \'{}\' in {}'.format(net, self.file.name))
-                newname = net.upper()
-                self.rename_pin(net, newname)
-                net = newname
+        for pin in self.pins:
+            fpin = CONVENTIONS.net_name(pin)
+            if fpin:
+                self.rename_pin(pin, fpin)
                 write = True
 
         if write:
@@ -550,9 +571,11 @@ class MagicDesign(object):
         except:
             self.short_name = mag_file.stem
 
+    @property
     def references(self):
         return list(set(re.findall(self.CELL_REF_REGEX, self.c)))
 
+    @property
     def ports(self):
         match = re.findall(self.MAGIC_PIN_REGEX, self.c)
         return {item[1]: (item[0], item[2], item[3]) for item in match}
@@ -595,6 +618,27 @@ class MagicDesign(object):
         if not name.endswith('.mag'):
             name = name + '.mag'
         return LIB_PATH['mag'] / name
+
+    def check_port_names(self):
+
+        write = False
+
+        for net in self.ports:
+            fnet = CONVENTIONS.net_name(net)
+            if fnet:
+                warn('Found port in \'{}\' whose name should probably be corrected: \'{}\'->\'{}\''.format(
+                    self.file,net,fnet))
+                self.rename_net(net, fnet)
+                write = True
+
+        if write:
+            if args.no:
+                pass
+            elif args.yes or confirm(
+                    'Would you like to write the capitalized-net-corrected file {} ?'.format(self.file.name),
+                    False):
+                self.write_file()
+                warn('wrote capitalized-net-corrected version of {}'.format(self.file.name))
 
 
 class Magic:
@@ -1276,7 +1320,7 @@ def check_count():
 def check_depends():
     missing = {}
     for m in magic_lib.values():
-        deps = m.references()
+        deps = m.references
         if m.long_name in deps:
             # warn(stylize_head())
             warn('**  Cell \'{}\' contains instances of itself!  **'.format(m.long_name))
@@ -1315,102 +1359,47 @@ def check_descriptions():
 
 
 def check_net_names():
-    check_net_name_caps()
-    check_power_net_names()
-
-
-def check_net_name_caps():
-    check_net_name_caps_magic()
-    check_net_name_caps_xschem()
-
-
-def check_net_name_caps_magic():
-    for m in magic_lib.values():
-        write = False
-        nets = m.ports()
-        for net in nets:
-            if '+' in net:
-                warn('Found \'+\' in net name \'{}\' in {}'.format(net, m.file.name))
-                newname = net.replace('+', 'P')
-                m.rename_net(net, newname)
-                net = newname
-                write = True
-            if '-' in net:
-                warn('Found \'-\' in net name \'{}\' in {}'.format(net, m.file.name))
-                newname = net.replace('-', 'N')
-                m.rename_net(net, newname)
-                net = newname
-                write = True
-            if net.upper() != net:
-                warn('Found non-capitalized net name \'{}\' in {}'.format(net, m.file.name))
-                newname = net.upper()
-                m.rename_net(net, newname)
-                net = newname
-                write = True
-        if write:
-            if args.no:
-                pass
-            elif args.yes or confirm(
-                    'Would you like to write the capitalized-net-corrected file {} ?'.format(m.file.name), False):
-                m.write_file()
-                warn('wrote capitalized-net-corrected version of {}'.format(m.file.name))
-
-
-def check_net_name_caps_xschem():
+    for _, m in magic_lib.items():
+        m.check_port_names()
     for m in xschem_lib.circuits:
-        m.check_pin_names()
+        m.check_names()
 
 
-def check_power_net_names():
-    check_power_net_names_magic()
-    check_power_net_names_xschem()
+def check_port_pin_mapping():
 
+    for cn, c in cd.standard_cells.items():
+        amp = magic_lib[c.short_name].ports
+        symb = xschem_lib.get_symbol(c.long_name)
+        if not symb:
+            continue
+        axp = symb.pins
 
-def check_power_net_names_magic():
-    for m in magic_lib.values():
-        write = False
-        hit_list = [item for list in PG_PIN_NAMES.values() for item in list]
-        for old_net in m.ports():
-            if old_net in hit_list:
-                for new_net, list in PG_PIN_NAMES.items():
-                    if old_net in list:
-                        break
-                warn(
-                    'Found net \'{}\' in {} which is probably meant to be \'{}\''.format(old_net, m.file.name, new_net))
-                m.rename_net(old_net, new_net)
-                write = True
+        mpo = []
+        xpo = []
+        message = []
 
-        if write:
-            if args.no:
-                pass
-            elif args.yes or confirm(
-                    'Would you like to write the power-net-corrected file {} ?'.format(m.file.name), False):
-                m.write_file()
-                warn('wrote power-net-corrected version of {}'.format(m.file.name))
+        for mag_pin in amp:
+            if mag_pin not in axp:
+                mpo.append(mag_pin)
 
+        for xsch_pin in axp:
+            if xsch_pin not in amp:
+                xpo.append(xsch_pin)
 
-def check_power_net_names_xschem():
-    for cir in xschem_lib.circuits:
-        m = cir.symbol
-        write = False
-        hit_list = [item for list in PG_PIN_NAMES.values() for item in list]
-        for old_net in m.pins:
-            if old_net in hit_list:
-                for new_net, list in PG_PIN_NAMES.items():
-                    if old_net in list:
-                        break
-                warn(
-                    'Found net \'{}\' in {} which is probably meant to be \'{}\''.format(old_net, m.file.name, new_net))
-                cir.rename_pin(old_net, new_net)
-                write = True
+        if mpo:
+            message.append('Magic file for \'{}\' defines ports which are not pins in Xschem symbol:'.format(c.long_name))
+            for mmpo in mpo:
+                message.append('    {}'.format(mmpo))
 
-        if write:
-            if args.no:
-                pass
-            elif args.yes or confirm(
-                    'Would you like to write the power-net-corrected file {} ?'.format(m.file.name), False):
-                m._save()
-                warn('wrote power-net-corrected version of {}'.format(m.file.name))
+        if xpo:
+            message.append('Xschem symbol for \'{}\' defines pins which are not ports in Magic file:'.format(c.long_name))
+            for xxpo in xpo:
+                message.append('    {}'.format(xxpo))
+
+        if message:
+            warn(stylize_head())
+            warn('\n'.join(message))
+            warn(stylize_head())
 
 
 def check_lvs():
@@ -1529,7 +1518,6 @@ def check_dir_for_complete(directory, extension, set):
             warn(stylize_head())
 
     if extra:
-        warn(stylize_head())
         warn('\'{}\' directory contains the following extraneous \'{}\' files:'.format(directory, extension))
         for exx in extra:
             warn('    {}'.format(exx))
@@ -1559,7 +1547,7 @@ def check_file_presence():
 
 
 def check_xschem_lib():
-    warn(stylize_head('Xschem Consistency Check'))
+    message = []
 
     mc = []
     for cn, c in cd.standard_cells.items():
@@ -1567,9 +1555,9 @@ def check_xschem_lib():
             mc.append(c)
 
     if mc:
-        warn('The following cells are defined in the Cell Index YAML, but are missing symbols in the Xschem library:')
+        message.append('The following cells are defined in the Cell Index YAML, but are missing symbols in the Xschem library:')
         for mmc in mc:
-            warn('    '+mmc.long_name)
+            message.append('    '+mmc.long_name)
 
     for cir in xschem_lib.circuits:
         if cir.schematic:
@@ -1586,70 +1574,43 @@ def check_xschem_lib():
                 mm.append(rr)
 
         if mm:
-            warn('Schematic {} is missing the following refs:'.format(sch))
+            message.append(stylize_head())
+            message.append('Schematic {} is missing the following refs:'.format(sch))
             for mmm in mm:
-                warn('    {}'.format(mmm))
+                message.append('    {}'.format(mmm))
 
-    warn(stylize_head())
-    return xschem_lib
+    if message:
+        warn(stylize_head('Xschem Consistency Check'))
+        warn('\n'.join(message))
+        warn(stylize_head())
 
 
 def check_magic_lib():
-    warn(stylize_head('Magic File Consistency Check'))
-
+    message = []
     mc = []
     for cn, c in cd.all_cells.items():
         if c.long_name not in magic_lib:
             mc.append(c)
 
     if mc:
-        warn('The following cells are defined in the Cell Index YAML, but are missing in the magic library:')
+        message += ['The following cells are defined in the Cell Index YAML, but are missing in the magic library:']
         for mmc in mc:
-            warn('    '+mmc.long_name)
+            message += ['    '+mmc.long_name]
 
     for mn, c in magic_lib.items():
         mm = []
-        for rr in c.references():
+        for rr in c.references:
             if rr not in magic_lib:
                 mm.append(rr)
 
         if mm:
-            warn('Magic design {} is missing the following refs:'.format(c.file))
+            message += ['Magic design {} is missing the following refs:'.format(c.file)]
             for mmm in mm:
-                warn('    {}'.format(mmm))
+                message += ['    {}'.format(mmm)]
 
-    warn(stylize_head())
-
-
-def check_pin_names():
-
-    for cn, c in cd.standard_cells.items():
-        try:
-            amp = magic_lib[c.short_name].ports()
-            axp = xschem_lib.get_symbol(c.long_name).pins
-        except:
-            continue
-
-        mpo = []
-        xpo = []
-
-        for mag_pin in amp:
-            if mag_pin not in axp:
-                mpo.append(mag_pin)
-
-        for xsch_pin in axp:
-            if xsch_pin not in amp:
-                xpo.append(xsch_pin)
-
-        if mpo:
-            warn('Magic file for {} defines pins which are not in Xschem symbol:'.format(c.long_name))
-            for mmpo in mpo:
-                warn('    {}'.format(mmpo))
-
-        if xpo:
-            warn('Xschem symbol for {} defines pins which are not in Magic file:'.format(c.long_name))
-            for xxpo in xpo:
-                warn('    {}'.format(xxpo))
+    if message:
+        warn(stylize_head())
+        warn('\n'.join(message))
 
 
 def run_rename_magic(spec_string):
@@ -1666,12 +1627,12 @@ def run_rename_xschem(spec_string):
 
 def run_basic_checks():
     check_net_names()
+    check_port_pin_mapping()
     check_file_names(LIB_PATH['mag'], '.mag')
     check_file_names(LIB_PATH['xschem'], '.sym')
     check_file_names(LIB_PATH['xschem'], '.sch')
     check_magic_lib()
     check_xschem_lib()
-    check_pin_names()
     check_file_presence()
     check_count()
     check_depends()

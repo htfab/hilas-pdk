@@ -28,7 +28,7 @@ N 1080 -2090 1080 -2070 { lab=VINJ}
 N 1080 -2110 1080 -2090 { lab=VINJ}
 N 1060 -2110 1080 -2110 { lab=VINJ}
 N 720 -2110 740 -2110 { lab=VINJ}
-N 1190 -2110 1210 -2110 { lab=GND}
+N 1190 -2110 1210 -2110 { lab=VGND}
 N 1210 -2080 1320 -2080 { lab=DRAIN1}
 N 1060 -1950 1060 -1920 { lab=VINJ}
 N 1170 -2160 1460 -2160 { lab=SELECTDRAIN}
@@ -38,8 +38,8 @@ N 550 -2140 720 -2140 { lab=VINJ}
 N 1080 -1930 1080 -1920 { lab=VINJ}
 N 1060 -1920 1080 -1920 { lab=VINJ}
 N 550 -1920 1060 -1920 { lab=VINJ}
-N 720 -1950 720 -1940 { lab=GND}
-N 720 -1980 740 -1980 { lab=GND}
+N 720 -1950 720 -1940 { lab=VGND}
+N 720 -1980 740 -1980 { lab=VGND}
 N 720 -2060 770 -2060 { lab=#net1}
 N 660 -2110 660 -1980 { lab=SELECT1}
 N 660 -2160 660 -2110 { lab=SELECT1}
@@ -67,7 +67,7 @@ N 1080 -1790 1080 -1770 { lab=VINJ}
 N 1080 -1810 1080 -1790 { lab=VINJ}
 N 1060 -1810 1080 -1810 { lab=VINJ}
 N 720 -1810 740 -1810 { lab=VINJ}
-N 1190 -1810 1210 -1810 { lab=GND}
+N 1190 -1810 1210 -1810 { lab=VGND}
 N 1210 -1780 1320 -1780 { lab=DRAIN2}
 N 1060 -1650 1060 -1620 { lab=VINJ}
 N 1170 -1860 1460 -1860 { lab=SELECTDRAIN}
@@ -77,8 +77,8 @@ N 550 -1840 720 -1840 { lab=VINJ}
 N 1080 -1630 1080 -1620 { lab=VINJ}
 N 1060 -1620 1080 -1620 { lab=VINJ}
 N 550 -1620 1060 -1620 { lab=VINJ}
-N 720 -1650 720 -1640 { lab=GND}
-N 720 -1680 740 -1680 { lab=GND}
+N 720 -1650 720 -1640 { lab=VGND}
+N 720 -1680 740 -1680 { lab=VGND}
 N 720 -1760 770 -1760 { lab=#net2}
 N 660 -1810 660 -1680 { lab=SELECT2}
 N 660 -1860 660 -1810 { lab=SELECT2}
@@ -106,7 +106,7 @@ N 1080 -1500 1080 -1480 { lab=VINJ}
 N 1080 -1520 1080 -1500 { lab=VINJ}
 N 1060 -1520 1080 -1520 { lab=VINJ}
 N 720 -1520 740 -1520 { lab=VINJ}
-N 1190 -1520 1210 -1520 { lab=GND}
+N 1190 -1520 1210 -1520 { lab=VGND}
 N 1210 -1490 1320 -1490 { lab=DRAIN3}
 N 1060 -1360 1060 -1330 { lab=VINJ}
 N 1170 -1570 1460 -1570 { lab=SELECTDRAIN}
@@ -116,8 +116,8 @@ N 550 -1550 720 -1550 { lab=VINJ}
 N 1080 -1340 1080 -1330 { lab=VINJ}
 N 1060 -1330 1080 -1330 { lab=VINJ}
 N 550 -1330 1060 -1330 { lab=VINJ}
-N 720 -1360 720 -1350 { lab=GND}
-N 720 -1390 740 -1390 { lab=GND}
+N 720 -1360 720 -1350 { lab=VGND}
+N 720 -1390 740 -1390 { lab=VGND}
 N 720 -1470 770 -1470 { lab=#net3}
 N 660 -1520 660 -1390 { lab=SELECT3}
 N 660 -1570 660 -1520 { lab=SELECT3}
@@ -145,7 +145,7 @@ N 1080 -1200 1080 -1180 { lab=VINJ}
 N 1080 -1220 1080 -1200 { lab=VINJ}
 N 1060 -1220 1080 -1220 { lab=VINJ}
 N 720 -1220 740 -1220 { lab=VINJ}
-N 1190 -1220 1210 -1220 { lab=GND}
+N 1190 -1220 1210 -1220 { lab=VGND}
 N 1210 -1190 1320 -1190 { lab=DRAIN4}
 N 1060 -1060 1060 -1030 { lab=VINJ}
 N 1170 -1270 1460 -1270 { lab=SELECTDRAIN}
@@ -155,8 +155,8 @@ N 550 -1250 720 -1250 { lab=VINJ}
 N 1080 -1040 1080 -1030 { lab=VINJ}
 N 1060 -1030 1080 -1030 { lab=VINJ}
 N 550 -1030 1060 -1030 { lab=VINJ}
-N 720 -1060 720 -1050 { lab=GND}
-N 720 -1090 740 -1090 { lab=GND}
+N 720 -1060 720 -1050 { lab=VGND}
+N 720 -1090 740 -1090 { lab=VGND}
 N 720 -1170 770 -1170 { lab=#net4}
 N 660 -1220 660 -1090 { lab=SELECT4}
 N 660 -1270 660 -1220 { lab=SELECT4}
@@ -241,9 +241,9 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/gnd.sym} 1190 -2110 0 0 {name=l4 lab=GND}
-C {devices/gnd.sym} 740 -1980 0 0 {name=l5 lab=GND}
-C {devices/gnd.sym} 720 -1940 0 0 {name=l6 lab=GND}
+C {devices/gnd.sym} 1190 -2110 0 0 {name=l4 lab=VGND}
+C {devices/gnd.sym} 740 -1980 0 0 {name=l5 lab=VGND}
+C {devices/gnd.sym} 720 -1940 0 0 {name=l6 lab=VGND}
 C {devices/iopin.sym} 1320 -2080 0 0 {name=Drain1 lab=DRAIN1}
 C {devices/ipin.sym} 540 -2190 0 0 {name=Vinj lab=VINJ}
 C {devices/ipin.sym} 650 -1810 0 0 {name=Select2 lab=SELECT2}
@@ -317,9 +317,9 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/gnd.sym} 1190 -1810 0 0 {name=l1 lab=GND}
-C {devices/gnd.sym} 740 -1680 0 0 {name=l2 lab=GND}
-C {devices/gnd.sym} 720 -1640 0 0 {name=l3 lab=GND}
+C {devices/gnd.sym} 1190 -1810 0 0 {name=l1 lab=VGND}
+C {devices/gnd.sym} 740 -1680 0 0 {name=l2 lab=VGND}
+C {devices/gnd.sym} 720 -1640 0 0 {name=l3 lab=VGND}
 C {devices/iopin.sym} 1320 -1780 0 0 {name=Drain2 lab=DRAIN2}
 C {devices/ipin.sym} 650 -1520 0 0 {name=Select3 lab=SELECT3}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 700 -1390 0 0 {name=M6
@@ -392,9 +392,9 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/gnd.sym} 1190 -1520 0 0 {name=l7 lab=GND}
-C {devices/gnd.sym} 740 -1390 0 0 {name=l8 lab=GND}
-C {devices/gnd.sym} 720 -1350 0 0 {name=l9 lab=GND}
+C {devices/gnd.sym} 1190 -1520 0 0 {name=l7 lab=VGND}
+C {devices/gnd.sym} 740 -1390 0 0 {name=l8 lab=VGND}
+C {devices/gnd.sym} 720 -1350 0 0 {name=l9 lab=VGND}
 C {devices/iopin.sym} 1320 -1490 0 0 {name=Drain3 lab=DRAIN3}
 C {devices/ipin.sym} 650 -1220 0 0 {name=Select4 lab=SELECT4}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 700 -1090 0 0 {name=M11
@@ -467,7 +467,7 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/gnd.sym} 1190 -1220 0 0 {name=l10 lab=GND}
-C {devices/gnd.sym} 740 -1090 0 0 {name=l11 lab=GND}
-C {devices/gnd.sym} 720 -1050 0 0 {name=l12 lab=GND}
+C {devices/gnd.sym} 1190 -1220 0 0 {name=l10 lab=VGND}
+C {devices/gnd.sym} 740 -1090 0 0 {name=l11 lab=VGND}
+C {devices/gnd.sym} 720 -1050 0 0 {name=l12 lab=VGND}
 C {devices/iopin.sym} 1320 -1190 0 0 {name=Drain4 lab=DRAIN4}

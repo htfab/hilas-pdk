@@ -114,10 +114,10 @@ N 1030 -1120 1030 -1100 { lab=VINJ}
 N 1030 -1140 1030 -1120 { lab=VINJ}
 N 1030 -1180 1030 -1140 { lab=VINJ}
 N 1010 -1180 1030 -1180 { lab=VINJ}
-N 1120 -1050 1150 -1050 { lab=GND}
-N 1130 -1180 1150 -1180 { lab=GND}
-N 1480 -1180 1500 -1180 { lab=GND}
-N 1480 -1050 1500 -1050 { lab=GND}
+N 1120 -1050 1150 -1050 { lab=VGND}
+N 1130 -1180 1150 -1180 { lab=VGND}
+N 1480 -1180 1500 -1180 { lab=VGND}
+N 1480 -1050 1500 -1050 { lab=VGND}
 N 1300 -1610 1390 -1610 { lab=VINJ}
 N 1210 -1610 1300 -1610 { lab=VINJ}
 N 1130 -1610 1210 -1610 { lab=VINJ}
@@ -222,7 +222,6 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices} 980 -1480 0 0 {}
 C {devices/ipin.sym} 940 -1600 0 0 {name=Drain1 lab=DRAIN1}
 C {devices/ipin.sym} 940 -1340 0 0 {name=Drain2 lab=DRAIN2}
 C {devices/ipin.sym} 930 -1070 0 0 {name=Run lab=RUN}
@@ -345,10 +344,10 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/gnd.sym} 1480 -1050 0 0 {name=l3 lab=GND}
-C {devices/gnd.sym} 1480 -1180 0 0 {name=l4 lab=GND}
-C {devices/gnd.sym} 1130 -1180 0 0 {name=l5 lab=GND}
-C {devices/gnd.sym} 1120 -1050 0 0 {name=l6 lab=GND}
+C {devices/gnd.sym} 1480 -1050 0 0 {name=l3 lab=VGND}
+C {devices/gnd.sym} 1480 -1180 0 0 {name=l4 lab=VGND}
+C {devices/gnd.sym} 1130 -1180 0 0 {name=l5 lab=VGND}
+C {devices/gnd.sym} 1120 -1050 0 0 {name=l6 lab=VGND}
 C {devices/iopin.sym} 1410 -1770 0 0 {name=Col1 lab=COL1}
 C {devices/iopin.sym} 1450 -1400 0 0 {name=Row1 lab=ROW2}
 C {devices/iopin.sym} 1460 -1660 0 0 {name=Row2 lab=ROW1}
