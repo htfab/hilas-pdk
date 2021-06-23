@@ -394,16 +394,16 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices} 980 -1480 0 0 {}
-C {devices/ipin.sym} 430 -1600 0 0 {name=Drain1 lab=DRAIN1}
-C {devices/ipin.sym} 20 -1600 0 0 {name=WTAIn1 lab=WTAIN1}
-C {devices/ipin.sym} 430 -1340 0 0 {name=Drain2 lab=DRAIN2}
-C {devices/ipin.sym} 430 -1080 0 0 {name=Drain3 lab=DRAIN3}
-C {devices/ipin.sym} 430 -820 0 0 {name=Drain4 lab=DRAIN4}
-C {devices/iopin.sym} 920 -1830 0 0 {name=Vdd lab=VPWR}
-C {devices/iopin.sym} 750 -1830 0 0 {name=Gate1 lab=GATE1}
-C {devices/iopin.sym} 680 -1840 0 0 {name=Vtun lab=VTUN}
-C {devices/iopin.sym} 550 -1840 0 0 {name=ColSel1 lab=COLSEL1}
-C {devices/iopin.sym} 480 -1850 0 0 {name=Vinj lab=VINJ}
+C {devices/ipin.sym} 430 -1600 0 0 {name=DRAIN1 lab=DRAIN1}
+C {devices/ipin.sym} 20 -1600 0 0 {name=WTAIN1 lab=WTAIN1}
+C {devices/ipin.sym} 430 -1340 0 0 {name=DRAIN2 lab=DRAIN2}
+C {devices/ipin.sym} 430 -1080 0 0 {name=DRAIN3 lab=DRAIN3}
+C {devices/ipin.sym} 430 -820 0 0 {name=DRAIN4 lab=DRAIN4}
+C {devices/iopin.sym} 920 -1830 0 0 {name=VPWR lab=VPWR}
+C {devices/iopin.sym} 750 -1830 0 0 {name=GATE1 lab=GATE1}
+C {devices/iopin.sym} 680 -1840 0 0 {name=VTUN lab=VTUN}
+C {devices/iopin.sym} 550 -1840 0 0 {name=COLSEL1 lab=COLSEL1}
+C {devices/iopin.sym} 480 -1850 0 0 {name=VINJ lab=VINJ}
 C {sky130_fd_pr/nfet_01v8.sym} 120 -1550 0 0 {name=M13
 L=0.15
 W=1
@@ -434,8 +434,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/gnd.sym} 20 -1480 0 0 {name=l2 lab=VGND}
-C {devices/iopin.sym} 140 -1610 0 0 {name=WTAOut1 lab=WTAOUT1}
-C {devices/ipin.sym} 20 -1340 0 0 {name=WTAIn2 lab=WTAIN2}
+C {devices/iopin.sym} 140 -1610 0 0 {name=WTAOUT1 lab=WTAOUT1}
+C {devices/ipin.sym} 20 -1340 0 0 {name=WTAIN2 lab=WTAIN2}
 C {sky130_fd_pr/nfet_01v8.sym} 120 -1290 0 0 {name=M15
 L=0.15
 W=1
@@ -466,8 +466,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/gnd.sym} 20 -1220 0 0 {name=l4 lab=VGND}
-C {devices/iopin.sym} 140 -1350 0 0 {name=WTAOut2 lab=WTAOUT2}
-C {devices/ipin.sym} 20 -1080 0 0 {name=WTAIn3 lab=WTAIN3}
+C {devices/iopin.sym} 140 -1350 0 0 {name=WTAOUT2 lab=WTAOUT2}
+C {devices/ipin.sym} 20 -1080 0 0 {name=WTAIN3 lab=WTAIN3}
 C {sky130_fd_pr/nfet_01v8.sym} 120 -1030 0 0 {name=M17
 L=0.15
 W=1
@@ -498,8 +498,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/gnd.sym} 20 -960 0 0 {name=l6 lab=VGND}
-C {devices/iopin.sym} 140 -1100 0 0 {name=WTAOut3 lab=WTAOUT3}
-C {devices/ipin.sym} 20 -820 0 0 {name=WTAIn4 lab=WTAIN4}
+C {devices/iopin.sym} 140 -1100 0 0 {name=WTAOUT3 lab=WTAOUT3}
+C {devices/ipin.sym} 20 -820 0 0 {name=WTAIN4 lab=WTAIN4}
 C {sky130_fd_pr/nfet_01v8.sym} 120 -770 0 0 {name=M19
 L=0.15
 W=1
@@ -530,8 +530,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/gnd.sym} 20 -700 0 0 {name=l8 lab=VGND}
-C {devices/iopin.sym} 140 -830 0 0 {name=WTAOut4 lab=WTAOUT4}
-C {devices/iopin.sym} 280 -1770 0 0 {name=WTAMiddleNode lab=WTAMIDDLENODE}
+C {devices/iopin.sym} 140 -830 0 0 {name=WTAOUT4 lab=WTAOUT4}
+C {devices/iopin.sym} 280 -1770 0 0 {name=WTAMIDDLENODE lab=WTAMIDDLENODE}
 C {devices/gnd.sym} -10 -1510 0 0 {name=l9 lab=VGND}
 C {devices/gnd.sym} -10 -1250 0 0 {name=l10 lab=VGND}
 C {devices/gnd.sym} -10 -990 0 0 {name=l11 lab=VGND}

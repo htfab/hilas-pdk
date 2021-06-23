@@ -189,8 +189,8 @@ N 2670 -1010 2670 -980 { lab=#net5}
 N 2650 -1010 2670 -1010 { lab=#net5}
 N 2410 -860 2430 -860 { lab=VGND}
 N 2430 -860 2430 -840 { lab=VGND}
-C {devices/iopin.sym} 2950 -890 0 0 {name=Output00 lab=OUTPUT00}
-C {devices/ipin.sym} 2110 -1350 0 0 {name=Vinj lab=VINJ}
+C {devices/iopin.sym} 2950 -890 0 0 {name=OUTPUT00 lab=OUTPUT00}
+C {devices/ipin.sym} 2110 -1350 0 0 {name=VINJ lab=VINJ}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 2830 -860 0 0 {name=M11
 L=0.5
 W=1
@@ -247,7 +247,7 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/ipin.sym} 2200 -1260 0 0 {name=In1 lab=IN1}
+C {devices/ipin.sym} 2200 -1260 0 0 {name=IN1 lab=IN1}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 2260 -1190 0 0 {name=M18
 L=0.5
 W=1
@@ -278,7 +278,7 @@ spiceprefix=X
 }
 C {devices/gnd.sym} 2300 -1190 0 0 {name=l13 lab=VGND}
 C {devices/gnd.sym} 2280 -1150 0 0 {name=l14 lab=VGND}
-C {devices/ipin.sym} 2440 -1260 0 0 {name=In2 lab=IN2}
+C {devices/ipin.sym} 2440 -1260 0 0 {name=IN2 lab=IN2}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 2500 -1190 0 0 {name=M20
 L=0.5
 W=1
@@ -309,7 +309,7 @@ spiceprefix=X
 }
 C {devices/gnd.sym} 2540 -1190 0 0 {name=l15 lab=VGND}
 C {devices/gnd.sym} 2520 -1150 0 0 {name=l16 lab=VGND}
-C {devices/ipin.sym} 2680 -1260 0 0 {name=Enable lab=ENABLE}
+C {devices/ipin.sym} 2680 -1260 0 0 {name=ENABLE lab=ENABLE}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 2740 -1190 0 0 {name=M22
 L=0.5
 W=1
@@ -374,7 +374,7 @@ C {devices/gnd.sym} 2670 -860 0 0 {name=l21 lab=VGND}
 C {devices/gnd.sym} 2870 -860 0 0 {name=l22 lab=VGND}
 C {devices/gnd.sym} 2650 -820 0 0 {name=l23 lab=VGND}
 C {devices/gnd.sym} 2850 -820 0 0 {name=l24 lab=VGND}
-C {devices/iopin.sym} 2950 -590 0 0 {name=Output01 lab=OUTPUT01}
+C {devices/iopin.sym} 2950 -590 0 0 {name=OUTPUT01 lab=OUTPUT01}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 2830 -560 0 0 {name=M25
 L=0.5
 W=1
@@ -465,7 +465,7 @@ C {devices/gnd.sym} 2670 -560 0 0 {name=l27 lab=VGND}
 C {devices/gnd.sym} 2870 -560 0 0 {name=l28 lab=VGND}
 C {devices/gnd.sym} 2650 -520 0 0 {name=l29 lab=VGND}
 C {devices/gnd.sym} 2850 -520 0 0 {name=l30 lab=VGND}
-C {devices/iopin.sym} 2950 -290 0 0 {name=Output10 lab=OUTPUT10}
+C {devices/iopin.sym} 2950 -290 0 0 {name=OUTPUT10 lab=OUTPUT10}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 2830 -260 0 0 {name=M33
 L=0.5
 W=1
@@ -556,7 +556,7 @@ C {devices/gnd.sym} 2670 -260 0 0 {name=l33 lab=VGND}
 C {devices/gnd.sym} 2870 -260 0 0 {name=l34 lab=VGND}
 C {devices/gnd.sym} 2650 -220 0 0 {name=l35 lab=VGND}
 C {devices/gnd.sym} 2850 -220 0 0 {name=l36 lab=VGND}
-C {devices/iopin.sym} 2950 10 0 0 {name=Output11 lab=OUTPUT11}
+C {devices/iopin.sym} 2950 10 0 0 {name=OUTPUT11 lab=OUTPUT11}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 2830 40 0 0 {name=M40
 L=0.5
 W=1

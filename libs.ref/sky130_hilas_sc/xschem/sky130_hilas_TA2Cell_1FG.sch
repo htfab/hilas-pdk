@@ -447,15 +447,15 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices} 980 -1480 0 0 {}
-C {devices/ipin.sym} 430 -1600 0 0 {name=Drain1 lab=DRAIN1}
-C {devices/ipin.sym} 430 -1340 0 0 {name=Drain2 lab=DRAIN2}
-C {devices/iopin.sym} 920 -1830 0 0 {name=Vdd lab=VPWR}
-C {devices/iopin.sym} 750 -1830 0 0 {name=Gate1 lab=GATE1}
-C {devices/iopin.sym} 680 -1840 0 0 {name=Vtun lab=VTUN}
-C {devices/iopin.sym} 550 -1840 0 0 {name=ColSel1 lab=COLSEL1}
-C {devices/iopin.sym} 480 -1850 0 0 {name=Vinj lab=VINJ}
-C {devices/iopin.sym} 1030 -1820 0 0 {name=ColSel2 lab=COLSEL2}
-C {devices/iopin.sym} 1260 -1820 0 0 {name=Gate2 lab=GATE2}
+C {devices/ipin.sym} 430 -1600 0 0 {name=DRAIN1 lab=DRAIN1}
+C {devices/ipin.sym} 430 -1340 0 0 {name=DRAIN2 lab=DRAIN2}
+C {devices/iopin.sym} 920 -1830 0 0 {name=VPWR lab=VPWR}
+C {devices/iopin.sym} 750 -1830 0 0 {name=GATE1 lab=GATE1}
+C {devices/iopin.sym} 680 -1840 0 0 {name=VTUN lab=VTUN}
+C {devices/iopin.sym} 550 -1840 0 0 {name=COLSEL1 lab=COLSEL1}
+C {devices/iopin.sym} 480 -1850 0 0 {name=VINJ lab=VINJ}
+C {devices/iopin.sym} 1030 -1820 0 0 {name=COLSEL2 lab=COLSEL2}
+C {devices/iopin.sym} 1260 -1820 0 0 {name=GATE2 lab=GATE2}
 C {sky130_fd_pr/pfet_01v8.sym} 1850 -1780 0 0 {name=M18
 L=0.15
 W=1
@@ -540,7 +540,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 1910 -1740 0 0 {name=Output1 lab=OUTPUT1}
+C {devices/iopin.sym} 1910 -1740 0 0 {name=OUTPUT1 lab=OUTPUT1}
 C {sky130_fd_pr/pfet_01v8.sym} 1960 -1500 0 0 {name=M24
 L=0.15
 W=1
@@ -625,11 +625,11 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 2020 -1460 0 0 {name=Output2 lab=OUTPUT2}
-C {devices/iopin.sym} 1160 -1770 0 0 {name=Vin11 lab=VIN11}
-C {devices/iopin.sym} 1550 -1360 0 0 {name=Vin21 lab=VIN21}
-C {devices/iopin.sym} 1120 -1540 0 0 {name=Vin12 lab=VIN12}
-C {devices/iopin.sym} 1730 -1470 0 0 {name=Vin22 lab=VIN22}
+C {devices/iopin.sym} 2020 -1460 0 0 {name=OUTPUT2 lab=OUTPUT2}
+C {devices/iopin.sym} 1160 -1770 0 0 {name=VIN11 lab=VIN11}
+C {devices/iopin.sym} 1550 -1360 0 0 {name=VIN21 lab=VIN21}
+C {devices/iopin.sym} 1120 -1540 0 0 {name=VIN12 lab=VIN12}
+C {devices/iopin.sym} 1730 -1470 0 0 {name=VIN22 lab=VIN22}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 1580 -1420 0 0 {name=M13
 L=0.5
 W=1

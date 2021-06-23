@@ -4,10 +4,10 @@ K {}
 V {}
 S {}
 E {}
-N 1030 -1170 1110 -1170 { lab=DRAIN1N}
-N 1030 -1140 1050 -1140 { lab=VGND}
-N 950 -1140 990 -1140 { lab=GATE1N}
-N 1030 -1110 1110 -1110 { lab=SOURCE1N}
+N 1030 -1170 1110 -1170 {lab=DRAIN}
+N 1030 -1140 1050 -1140 {lab=VGND}
+N 950 -1140 990 -1140 {lab=GATE1N}
+N 1030 -1110 1110 -1110 {lab=SOURCE1N}
 C {sky130_fd_pr/nfet_01v8.sym} 1010 -1140 0 0 {name=M3
 L=0.15
 W=1
@@ -23,6 +23,6 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/gnd.sym} 1050 -1140 0 0 {name=l4 lab=VGND}
-C {devices/ipin.sym} 950 -1140 0 0 {name=Gate1n lab=GATE1N}
-C {devices/iopin.sym} 1110 -1170 0 0 {name=Drain1n lab=DRAIN1N}
-C {devices/iopin.sym} 1110 -1110 0 0 {name=Source1n lab=SOURCE1N}
+C {devices/ipin.sym} 950 -1140 0 0 {name=GATE1N lab=GATE1N}
+C {devices/iopin.sym} 1110 -1170 0 0 {name=DRAIN1N lab=DRAIN}
+C {devices/iopin.sym} 1110 -1110 0 0 {name=SOURCE1N lab=SOURCE1N}

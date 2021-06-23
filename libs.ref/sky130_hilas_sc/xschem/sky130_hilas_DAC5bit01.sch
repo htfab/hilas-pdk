@@ -194,9 +194,9 @@ N 1100 -1110 1100 -1100 { lab=VPWR}
 N 890 -1110 890 -1040 { lab=VPWR}
 N 790 -100 1730 -100 { lab=OUT}
 N 1240 -1010 1240 -950 { lab=A2}
-C {devices/iopin.sym} 750 -1110 0 1 {name=Vdd lab=VPWR}
+C {devices/iopin.sym} 750 -1110 0 1 {name=VPWR lab=VPWR}
 C {devices/ipin.sym} 1680 -1140 0 0 {name=A4 lab=A4}
-C {devices/iopin.sym} 1730 -100 0 0 {name=Out lab=OUT}
+C {devices/iopin.sym} 1730 -100 0 0 {name=OUT lab=OUT}
 C {sky130_fd_pr/pfet_01v8.sym} 840 -1010 0 0 {name=M1
 L=0.15
 W=1

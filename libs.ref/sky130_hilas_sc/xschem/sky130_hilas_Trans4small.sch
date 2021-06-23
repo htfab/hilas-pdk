@@ -29,9 +29,9 @@ N 1460 -880 1530 -880 { lab=SOURCE3P}
 N 1030 -1110 1110 -1110 { lab=SOURCE1N}
 N 1030 -1000 1110 -1000 { lab=SOURCE2N}
 N 1040 -870 1100 -870 { lab=SOURCE3N}
-C {devices/ipin.sym} 960 -1030 0 0 {name=Gate2n lab=GATE2N}
-C {devices/iopin.sym} 1510 -1150 0 0 {name=Well lab=WELL}
-C {devices/iopin.sym} 1530 -1000 0 0 {name=Source2p lab=SOURCE2P}
+C {devices/ipin.sym} 960 -1030 0 0 {name=GATE2N lab=GATE2N}
+C {devices/iopin.sym} 1510 -1150 0 0 {name=WELL lab=WELL}
+C {devices/iopin.sym} 1530 -1000 0 0 {name=SOURCE2P lab=SOURCE2P}
 C {sky130_fd_pr/pfet_01v8.sym} 1440 -1150 0 0 {name=M1
 L=0.15
 W=1
@@ -90,9 +90,9 @@ spiceprefix=X
 }
 C {devices/gnd.sym} 1060 -900 0 0 {name=l2 lab=VGND}
 C {devices/gnd.sym} 1050 -1140 0 0 {name=l4 lab=VGND}
-C {devices/ipin.sym} 950 -1140 0 0 {name=Gate1n lab=GATE1N}
-C {devices/iopin.sym} 1110 -1170 0 0 {name=Drain1n lab=DRAIN1N}
-C {devices/iopin.sym} 1530 -880 0 0 {name=Source3p lab=SOURCE3P}
+C {devices/ipin.sym} 950 -1140 0 0 {name=GATE1N lab=GATE1N}
+C {devices/iopin.sym} 1110 -1170 0 0 {name=DRAIN1N lab=DRAIN1N}
+C {devices/iopin.sym} 1530 -880 0 0 {name=SOURCE3P lab=SOURCE3P}
 C {sky130_fd_pr/pfet_01v8.sym} 1440 -1030 0 0 {name=M7
 L=0.15
 W=1
@@ -122,16 +122,16 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/gnd.sym} 1050 -1030 0 0 {name=l6 lab=VGND}
-C {devices/ipin.sym} 1390 -910 0 0 {name=Gate3p lab=GATE3P}
-C {devices/iopin.sym} 1100 -930 0 0 {name=Drain3n lab=DRAIN3N}
-C {devices/iopin.sym} 1100 -1060 0 0 {name=Drain2n lab=DRAIN2N}
-C {devices/ipin.sym} 1380 -1030 0 0 {name=Gate2p lab=GATE2P}
-C {devices/iopin.sym} 1540 -1120 0 0 {name=Source1p lab=SOURCE1P}
-C {devices/ipin.sym} 1380 -1150 0 0 {name=Gate1p lab=GATE1P}
-C {devices/ipin.sym} 970 -900 0 0 {name=Gate3n lab=GATE3N}
-C {devices/iopin.sym} 1540 -1180 0 0 {name=Drain1p lab=DRAIN1P}
-C {devices/iopin.sym} 1530 -940 0 0 {name=Drain3p lab=DRAIN3P}
-C {devices/iopin.sym} 1530 -1060 0 0 {name=Drain2p lab=DRAIN2P}
-C {devices/iopin.sym} 1100 -1000 0 0 {name=Source2n lab=SOURCE2N}
-C {devices/iopin.sym} 1100 -870 0 0 {name=Source3n lab=SOURCE3N}
-C {devices/iopin.sym} 1110 -1110 0 0 {name=Source1n lab=SOURCE1N}
+C {devices/ipin.sym} 1390 -910 0 0 {name=GATE3P lab=GATE3P}
+C {devices/iopin.sym} 1100 -930 0 0 {name=DRAIN3N lab=DRAIN3N}
+C {devices/iopin.sym} 1100 -1060 0 0 {name=DRAIN2N lab=DRAIN2N}
+C {devices/ipin.sym} 1380 -1030 0 0 {name=GATE2P lab=GATE2P}
+C {devices/iopin.sym} 1540 -1120 0 0 {name=SOURCE1P lab=SOURCE1P}
+C {devices/ipin.sym} 1380 -1150 0 0 {name=GATE1P lab=GATE1P}
+C {devices/ipin.sym} 970 -900 0 0 {name=GATE3N lab=GATE3N}
+C {devices/iopin.sym} 1540 -1180 0 0 {name=DRAIN1P lab=DRAIN1P}
+C {devices/iopin.sym} 1530 -940 0 0 {name=DRAIN3P lab=DRAIN3P}
+C {devices/iopin.sym} 1530 -1060 0 0 {name=DRAIN2P lab=DRAIN2P}
+C {devices/iopin.sym} 1100 -1000 0 0 {name=SOURCE2N lab=SOURCE2N}
+C {devices/iopin.sym} 1100 -870 0 0 {name=SOURCE3N lab=SOURCE3N}
+C {devices/iopin.sym} 1110 -1110 0 0 {name=SOURCE1N lab=SOURCE1N}

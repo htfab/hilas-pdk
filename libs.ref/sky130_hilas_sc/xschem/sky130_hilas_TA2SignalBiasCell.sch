@@ -125,7 +125,7 @@ N 1310 -1810 1330 -1810 { lab=VPWR}
 N 1440 -1530 1460 -1530 { lab=VBIAS2}
 N 1240 -1810 1270 -1810 { lab=VBIAS1}
 N 1330 -1810 1330 -1800 { lab=VPWR}
-C {devices/iopin.sym} 1750 -1860 0 0 {name=Vdd lab=VPWR}
+C {devices/iopin.sym} 1750 -1860 0 0 {name=VPWR lab=VPWR}
 C {sky130_fd_pr/pfet_01v8.sym} 1850 -1780 0 0 {name=M18
 L=0.15
 W=1
@@ -210,7 +210,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 1910 -1740 0 0 {name=Output1 lab=OUTPUT1}
+C {devices/iopin.sym} 1910 -1740 0 0 {name=OUTPUT1 lab=OUTPUT1}
 C {sky130_fd_pr/pfet_01v8.sym} 1960 -1500 0 0 {name=M24
 L=0.15
 W=1
@@ -295,13 +295,13 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 2020 -1460 0 0 {name=Output2 lab=OUTPUT2}
-C {devices/iopin.sym} 1550 -1360 0 0 {name=Vin21 lab=VIN21}
-C {devices/iopin.sym} 1730 -1470 0 0 {name=Vin22 lab=VIN22}
+C {devices/iopin.sym} 2020 -1460 0 0 {name=OUTPUT2 lab=OUTPUT2}
+C {devices/iopin.sym} 1550 -1360 0 0 {name=VIN21 lab=VIN21}
+C {devices/iopin.sym} 1730 -1470 0 0 {name=VIN22 lab=VIN22}
 C {devices/gnd.sym} 1800 -1330 0 0 {name=l1 lab=VGND}
 C {devices/gnd.sym} 1710 -1610 0 0 {name=l2 lab=VGND}
-C {devices/iopin.sym} 1360 -1640 0 0 {name=Vin11 lab=VIN11}
-C {devices/iopin.sym} 1540 -1750 0 0 {name=Vin12 lab=VIN12}
+C {devices/iopin.sym} 1360 -1640 0 0 {name=VIN11 lab=VIN11}
+C {devices/iopin.sym} 1540 -1750 0 0 {name=VIN12 lab=VIN12}
 C {sky130_fd_pr/pfet_01v8.sym} 1510 -1750 0 1 {name=M3
 L=0.15
 W=1
@@ -386,5 +386,5 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 1240 -1810 0 1 {name=Vbias1 lab=VBIAS1}
-C {devices/iopin.sym} 1440 -1530 0 1 {name=Vbias2 lab=VBIAS2}
+C {devices/iopin.sym} 1240 -1810 0 1 {name=VBIAS1 lab=VBIAS1}
+C {devices/iopin.sym} 1440 -1530 0 1 {name=VBIAS2 lab=VBIAS2}

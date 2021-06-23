@@ -130,8 +130,8 @@ N 1110 -1150 1140 -1150 { lab=VGND}
 N 1110 -990 1130 -990 { lab=VGND}
 N 430 -1780 430 -930 { lab=VPWR}
 N 420 -1780 430 -1780 { lab=VPWR}
-C {devices/ipin.sym} 600 -1370 0 0 {name=Select2 lab=SELECT2}
-C {devices/iopin.sym} 420 -1780 0 1 {name=Vdd lab=VPWR}
+C {devices/ipin.sym} 600 -1370 0 0 {name=SELECT2 lab=SELECT2}
+C {devices/iopin.sym} 420 -1780 0 1 {name=VPWR lab=VPWR}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -1430 0 0 {name=M18
 L=0.15
 W=1
@@ -160,9 +160,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 1240 -1240 0 0 {name=Node1_2 lab=NODE1_2}
-C {devices/iopin.sym} 1310 -1400 0 0 {name=Out2 lab=OUT2}
-C {devices/iopin.sym} 1240 -1460 0 0 {name=Node2_2 lab=NODE2_2}
+C {devices/iopin.sym} 1240 -1240 0 0 {name=NODE1_2 lab=NODE1_2}
+C {devices/iopin.sym} 1310 -1400 0 0 {name=OUT2 lab=OUT2}
+C {devices/iopin.sym} 1240 -1460 0 0 {name=NODE2_2 lab=NODE2_2}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -1270 0 0 {name=M1
 L=0.15
 W=1
@@ -223,7 +223,7 @@ C {devices/gnd.sym} 1140 -1430 0 0 {name=l1 lab=VGND}
 C {devices/gnd.sym} 1130 -1270 0 0 {name=l2 lab=VGND}
 C {devices/gnd.sym} 740 -1240 0 0 {name=l3 lab=VGND}
 C {devices/gnd.sym} 760 -1290 0 0 {name=l4 lab=VGND}
-C {devices/ipin.sym} 600 -1640 0 0 {name=Select1 lab=SELECT1}
+C {devices/ipin.sym} 600 -1640 0 0 {name=SELECT1 lab=SELECT1}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -1700 0 0 {name=M5
 L=0.15
 W=1
@@ -252,9 +252,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 1240 -1510 0 0 {name=Node1_1 lab=NODE1_1}
-C {devices/iopin.sym} 1310 -1670 0 0 {name=Out1 lab=OUT1}
-C {devices/iopin.sym} 1240 -1730 0 0 {name=Node2_1 lab=NODE2_1}
+C {devices/iopin.sym} 1240 -1510 0 0 {name=NODE1_1 lab=NODE1_1}
+C {devices/iopin.sym} 1310 -1670 0 0 {name=OUT1 lab=OUT1}
+C {devices/iopin.sym} 1240 -1730 0 0 {name=NODE2_1 lab=NODE2_1}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -1540 0 0 {name=M7
 L=0.15
 W=1
@@ -315,7 +315,7 @@ C {devices/gnd.sym} 1140 -1700 0 0 {name=l5 lab=VGND}
 C {devices/gnd.sym} 1130 -1540 0 0 {name=l6 lab=VGND}
 C {devices/gnd.sym} 740 -1510 0 0 {name=l7 lab=VGND}
 C {devices/gnd.sym} 760 -1560 0 0 {name=l8 lab=VGND}
-C {devices/ipin.sym} 600 -820 0 0 {name=Select4 lab=SELECT4}
+C {devices/ipin.sym} 600 -820 0 0 {name=SELECT4 lab=SELECT4}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -880 0 0 {name=M11
 L=0.15
 W=1
@@ -344,9 +344,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 1240 -690 0 0 {name=Node1_4 lab=NODE1_4}
-C {devices/iopin.sym} 1310 -850 0 0 {name=Out4 lab=OUT4}
-C {devices/iopin.sym} 1240 -910 0 0 {name=Node2_4 lab=NODE2_4}
+C {devices/iopin.sym} 1240 -690 0 0 {name=NODE1_4 lab=NODE1_4}
+C {devices/iopin.sym} 1310 -850 0 0 {name=OUT4 lab=OUT4}
+C {devices/iopin.sym} 1240 -910 0 0 {name=NODE2_4 lab=NODE2_4}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -720 0 0 {name=M13
 L=0.15
 W=1
@@ -407,7 +407,7 @@ C {devices/gnd.sym} 1140 -880 0 0 {name=l9 lab=VGND}
 C {devices/gnd.sym} 1130 -720 0 0 {name=l10 lab=VGND}
 C {devices/gnd.sym} 740 -690 0 0 {name=l11 lab=VGND}
 C {devices/gnd.sym} 760 -740 0 0 {name=l12 lab=VGND}
-C {devices/ipin.sym} 600 -1090 0 0 {name=Select3 lab=SELECT3}
+C {devices/ipin.sym} 600 -1090 0 0 {name=SELECT3 lab=SELECT3}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -1150 0 0 {name=M17
 L=0.15
 W=1
@@ -436,9 +436,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 1240 -960 0 0 {name=Node1_3 lab=NODE1_3}
-C {devices/iopin.sym} 1310 -1120 0 0 {name=Out3 lab=OUT3}
-C {devices/iopin.sym} 1240 -1180 0 0 {name=Node2_3 lab=NODE2_3}
+C {devices/iopin.sym} 1240 -960 0 0 {name=NODE1_3 lab=NODE1_3}
+C {devices/iopin.sym} 1310 -1120 0 0 {name=OUT3 lab=OUT3}
+C {devices/iopin.sym} 1240 -1180 0 0 {name=NODE2_3 lab=NODE2_3}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -990 0 0 {name=M20
 L=0.15
 W=1

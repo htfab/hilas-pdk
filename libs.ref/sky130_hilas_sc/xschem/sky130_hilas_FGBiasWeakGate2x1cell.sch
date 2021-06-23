@@ -157,17 +157,17 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices} 980 -1480 0 0 {}
-C {devices/ipin.sym} 880 -1600 0 0 {name=Drain1 lab=DRAIN1}
-C {devices/ipin.sym} 880 -1340 0 0 {name=Drain2 lab=DRAIN2}
-C {devices/iopin.sym} 1260 -1820 0 0 {name=Gate1 lab=GATE1}
-C {devices/iopin.sym} 1180 -1300 0 0 {name=Vtun lab=VTUN}
-C {devices/iopin.sym} 1030 -1820 0 0 {name=ColSel1 lab=COLSEL1}
-C {devices/iopin.sym} 1000 -1850 0 0 {name=Vinj lab=VINJ}
-C {devices/iopin.sym} 1410 -1790 0 0 {name=Col1 lab=COL1}
-C {devices/iopin.sym} 1470 -1580 0 0 {name=Row1 lab=ROW1}
-C {devices/iopin.sym} 1470 -1320 0 0 {name=Row2 lab=ROW2}
-C {devices/iopin.sym} 1160 -1770 0 0 {name=Vin11 lab=VIN11}
-C {devices/iopin.sym} 1120 -1540 0 0 {name=Vin12 lab=VIN12}
+C {devices/ipin.sym} 880 -1600 0 0 {name=DRAIN1 lab=DRAIN1}
+C {devices/ipin.sym} 880 -1340 0 0 {name=DRAIN2 lab=DRAIN2}
+C {devices/iopin.sym} 1260 -1820 0 0 {name=GATE1 lab=GATE1}
+C {devices/iopin.sym} 1180 -1300 0 0 {name=VTUN lab=VTUN}
+C {devices/iopin.sym} 1030 -1820 0 0 {name=COLSEL1 lab=COLSEL1}
+C {devices/iopin.sym} 1000 -1850 0 0 {name=VINJ lab=VINJ}
+C {devices/iopin.sym} 1410 -1790 0 0 {name=COL1 lab=COL1}
+C {devices/iopin.sym} 1470 -1580 0 0 {name=ROW1 lab=ROW1}
+C {devices/iopin.sym} 1470 -1320 0 0 {name=ROW2 lab=ROW2}
+C {devices/iopin.sym} 1160 -1770 0 0 {name=VIN11 lab=VIN11}
+C {devices/iopin.sym} 1120 -1540 0 0 {name=VIN12 lab=VIN12}
 C {devices/capa.sym} 1120 -1460 0 0 {name=C9
 value=10f
 }

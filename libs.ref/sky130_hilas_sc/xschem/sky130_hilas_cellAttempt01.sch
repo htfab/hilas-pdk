@@ -343,16 +343,16 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices} 980 -1480 0 0 {}
-C {devices/ipin.sym} 430 -1600 0 0 {name=Drain1 lab=DRAIN1}
-C {devices/ipin.sym} 430 -1580 0 0 {name=Row1 lab=ROW1}
-C {devices/ipin.sym} 430 -1340 0 0 {name=Drain2 lab=DRAIN2}
-C {devices/ipin.sym} 430 -1320 0 0 {name=Row2 lab=ROW2}
-C {devices/ipin.sym} 430 -1080 0 0 {name=Drain3 lab=DRAIN3}
-C {devices/ipin.sym} 430 -1060 0 0 {name=Row3 lab=ROW3}
-C {devices/ipin.sym} 430 -820 0 0 {name=Drain4 lab=DRAIN4}
-C {devices/ipin.sym} 430 -800 0 0 {name=Drain5 lab=ROW4}
-C {devices/iopin.sym} 920 -1830 0 0 {name=Col1 lab=COL1}
-C {devices/iopin.sym} 750 -1830 0 0 {name=Gate1 lab=GATE1}
-C {devices/iopin.sym} 680 -1840 0 0 {name=Vtun lab=VTUN}
-C {devices/iopin.sym} 550 -1840 0 0 {name=ColSel1 lab=COLSEL1}
-C {devices/iopin.sym} 480 -1850 0 0 {name=Vinj lab=VINJ}
+C {devices/ipin.sym} 430 -1600 0 0 {name=DRAIN1 lab=DRAIN1}
+C {devices/ipin.sym} 430 -1580 0 0 {name=ROW1 lab=ROW1}
+C {devices/ipin.sym} 430 -1340 0 0 {name=DRAIN2 lab=DRAIN2}
+C {devices/ipin.sym} 430 -1320 0 0 {name=ROW2 lab=ROW2}
+C {devices/ipin.sym} 430 -1080 0 0 {name=DRAIN3 lab=DRAIN3}
+C {devices/ipin.sym} 430 -1060 0 0 {name=ROW3 lab=ROW3}
+C {devices/ipin.sym} 430 -820 0 0 {name=DRAIN4 lab=DRAIN4}
+C {devices/ipin.sym} 430 -800 0 0 {name=DRAIN5 lab=ROW4}
+C {devices/iopin.sym} 920 -1830 0 0 {name=COL1 lab=COL1}
+C {devices/iopin.sym} 750 -1830 0 0 {name=GATE1 lab=GATE1}
+C {devices/iopin.sym} 680 -1840 0 0 {name=VTUN lab=VTUN}
+C {devices/iopin.sym} 550 -1840 0 0 {name=COLSEL1 lab=COLSEL1}
+C {devices/iopin.sym} 480 -1850 0 0 {name=VINJ lab=VINJ}

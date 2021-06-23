@@ -270,8 +270,8 @@ spiceprefix=X
 C {devices/gnd.sym} 2320 -1040 0 0 {name=l10 lab=VGND}
 C {devices/gnd.sym} 2180 -1040 0 0 {name=l11 lab=VGND}
 C {devices/gnd.sym} 2160 -1000 0 0 {name=l12 lab=VGND}
-C {devices/iopin.sym} 2430 -1100 0 0 {name=Output1 lab=OUTPUT1}
-C {devices/ipin.sym} 1730 -1110 0 0 {name=Input1 lab=INPUT1}
+C {devices/iopin.sym} 2430 -1100 0 0 {name=OUTPUT1 lab=OUTPUT1}
+C {devices/ipin.sym} 1730 -1110 0 0 {name=INPUT1 lab=INPUT1}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 2320 -1170 0 0 {name=M19
 L=0.5
 W=1
@@ -316,7 +316,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/ipin.sym} 1610 -1210 0 0 {name=Vdd lab=VPWR}
+C {devices/ipin.sym} 1610 -1210 0 0 {name=VPWR lab=VPWR}
 C {devices/gnd.sym} 1960 -1050 0 0 {name=l15 lab=VGND}
 C {devices/gnd.sym} 1940 -1010 0 0 {name=l16 lab=VGND}
 C {sky130_fd_pr/nfet_01v8.sym} 1920 -1050 0 0 {name=M22
@@ -393,8 +393,8 @@ spiceprefix=X
 C {devices/gnd.sym} 2330 -720 0 0 {name=l1 lab=VGND}
 C {devices/gnd.sym} 2190 -720 0 0 {name=l2 lab=VGND}
 C {devices/gnd.sym} 2170 -680 0 0 {name=l3 lab=VGND}
-C {devices/iopin.sym} 2440 -780 0 0 {name=Output2 lab=OUTPUT2}
-C {devices/ipin.sym} 1740 -790 0 0 {name=Input2 lab=INPUT2}
+C {devices/iopin.sym} 2440 -780 0 0 {name=OUTPUT2 lab=OUTPUT2}
+C {devices/ipin.sym} 1740 -790 0 0 {name=INPUT2 lab=INPUT2}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 2330 -850 0 0 {name=M4
 L=0.5
 W=1
@@ -515,8 +515,8 @@ spiceprefix=X
 C {devices/gnd.sym} 2320 -400 0 0 {name=l9 lab=VGND}
 C {devices/gnd.sym} 2180 -400 0 0 {name=l18 lab=VGND}
 C {devices/gnd.sym} 2160 -360 0 0 {name=l19 lab=VGND}
-C {devices/iopin.sym} 2430 -460 0 0 {name=Output3 lab=OUTPUT3}
-C {devices/ipin.sym} 1730 -470 0 0 {name=Input3 lab=INPUT3}
+C {devices/iopin.sym} 2430 -460 0 0 {name=OUTPUT3 lab=OUTPUT3}
+C {devices/ipin.sym} 1730 -470 0 0 {name=INPUT3 lab=INPUT3}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 2320 -530 0 0 {name=M14
 L=0.5
 W=1
@@ -637,8 +637,8 @@ spiceprefix=X
 C {devices/gnd.sym} 2330 -80 0 0 {name=l25 lab=VGND}
 C {devices/gnd.sym} 2190 -80 0 0 {name=l26 lab=VGND}
 C {devices/gnd.sym} 2170 -40 0 0 {name=l27 lab=VGND}
-C {devices/iopin.sym} 2440 -140 0 0 {name=Output4 lab=OUTPUT4}
-C {devices/ipin.sym} 1740 -150 0 0 {name=Input4 lab=INPUT4}
+C {devices/iopin.sym} 2440 -140 0 0 {name=OUTPUT4 lab=OUTPUT4}
+C {devices/ipin.sym} 1740 -150 0 0 {name=INPUT4 lab=INPUT4}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 2330 -210 0 0 {name=M28
 L=0.5
 W=1
@@ -714,4 +714,4 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/gnd.sym} 2350 -40 0 0 {name=l32 lab=VGND}
-C {devices/iopin.sym} 2130 -1240 0 1 {name=Vinj lab=VINJ}
+C {devices/iopin.sym} 2130 -1240 0 1 {name=VINJ lab=VINJ}

@@ -376,16 +376,16 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices} 980 -1480 0 0 {}
-C {devices/ipin.sym} 430 -1600 0 0 {name=Drain1 lab=DRAIN1}
-C {devices/ipin.sym} 430 -1340 0 0 {name=Drain2 lab=DRAIN2}
-C {devices/ipin.sym} 430 -1080 0 0 {name=Drain3 lab=DRAIN3}
-C {devices/ipin.sym} 430 -820 0 0 {name=Drain4 lab=DRAIN4}
-C {devices/iopin.sym} 920 -1830 0 0 {name=CapTerm1 lab=CAPTERM1}
-C {devices/iopin.sym} 750 -1830 0 0 {name=Gate1 lab=GATE1}
-C {devices/iopin.sym} 680 -1840 0 0 {name=Vtun lab=VTUN}
-C {devices/iopin.sym} 550 -1840 0 0 {name=ColSel1 lab=COLSEL1}
-C {devices/iopin.sym} 480 -1850 0 0 {name=Vinj lab=VINJ}
-C {devices/iopin.sym} -360 -1870 0 0 {name=CapTerm2 lab=CAPTERM2}
+C {devices/ipin.sym} 430 -1600 0 0 {name=DRAIN1 lab=DRAIN1}
+C {devices/ipin.sym} 430 -1340 0 0 {name=DRAIN2 lab=DRAIN2}
+C {devices/ipin.sym} 430 -1080 0 0 {name=DRAIN3 lab=DRAIN3}
+C {devices/ipin.sym} 430 -820 0 0 {name=DRAIN4 lab=DRAIN4}
+C {devices/iopin.sym} 920 -1830 0 0 {name=CAPTERM1 lab=CAPTERM1}
+C {devices/iopin.sym} 750 -1830 0 0 {name=GATE1 lab=GATE1}
+C {devices/iopin.sym} 680 -1840 0 0 {name=VTUN lab=VTUN}
+C {devices/iopin.sym} 550 -1840 0 0 {name=COLSEL1 lab=COLSEL1}
+C {devices/iopin.sym} 480 -1850 0 0 {name=VINJ lab=VINJ}
+C {devices/iopin.sym} -360 -1870 0 0 {name=CAPTERM2 lab=CAPTERM2}
 C {sky130_fd_pr/cap_mim_m3_1.sym} -30 -830 0 0 {name=C9 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
 C {sky130_fd_pr/cap_mim_m3_1.sym} -100 -1090 0 0 {name=C10 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 50 -1090 0 0 {name=C11 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}

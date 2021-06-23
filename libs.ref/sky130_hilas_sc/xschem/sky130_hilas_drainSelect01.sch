@@ -169,7 +169,7 @@ N 550 -1250 550 -1030 { lab=VINJ}
 N 1460 -1930 1460 -1530 { lab=SELECTDRAIN}
 N 1460 -2160 1460 -1930 { lab=SELECTDRAIN}
 N 1460 -2160 1510 -2160 { lab=SELECTDRAIN}
-C {devices/ipin.sym} 650 -2110 0 0 {name=Select1 lab=SELECT1}
+C {devices/ipin.sym} 650 -2110 0 0 {name=SELECT1 lab=SELECT1}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 700 -1980 0 0 {name=M15
 L=0.5
 W=1
@@ -198,7 +198,7 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/iopin.sym} 1510 -2160 0 0 {name=SelectDrain lab=SELECTDRAIN}
+C {devices/iopin.sym} 1510 -2160 0 0 {name=SELECTDRAIN lab=SELECTDRAIN}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 1040 -1980 0 0 {name=M30
 L=0.5
 W=1
@@ -244,9 +244,9 @@ spiceprefix=X
 C {devices/gnd.sym} 1190 -2110 0 0 {name=l4 lab=VGND}
 C {devices/gnd.sym} 740 -1980 0 0 {name=l5 lab=VGND}
 C {devices/gnd.sym} 720 -1940 0 0 {name=l6 lab=VGND}
-C {devices/iopin.sym} 1320 -2080 0 0 {name=Drain1 lab=DRAIN1}
-C {devices/ipin.sym} 540 -2190 0 0 {name=Vinj lab=VINJ}
-C {devices/ipin.sym} 650 -1810 0 0 {name=Select2 lab=SELECT2}
+C {devices/iopin.sym} 1320 -2080 0 0 {name=DRAIN1 lab=DRAIN1}
+C {devices/ipin.sym} 540 -2190 0 0 {name=VINJ lab=VINJ}
+C {devices/ipin.sym} 650 -1810 0 0 {name=SELECT2 lab=SELECT2}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 700 -1680 0 0 {name=M1
 L=0.5
 W=1
@@ -320,8 +320,8 @@ spiceprefix=X
 C {devices/gnd.sym} 1190 -1810 0 0 {name=l1 lab=VGND}
 C {devices/gnd.sym} 740 -1680 0 0 {name=l2 lab=VGND}
 C {devices/gnd.sym} 720 -1640 0 0 {name=l3 lab=VGND}
-C {devices/iopin.sym} 1320 -1780 0 0 {name=Drain2 lab=DRAIN2}
-C {devices/ipin.sym} 650 -1520 0 0 {name=Select3 lab=SELECT3}
+C {devices/iopin.sym} 1320 -1780 0 0 {name=DRAIN2 lab=DRAIN2}
+C {devices/ipin.sym} 650 -1520 0 0 {name=SELECT3 lab=SELECT3}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 700 -1390 0 0 {name=M6
 L=0.5
 W=1
@@ -395,8 +395,8 @@ spiceprefix=X
 C {devices/gnd.sym} 1190 -1520 0 0 {name=l7 lab=VGND}
 C {devices/gnd.sym} 740 -1390 0 0 {name=l8 lab=VGND}
 C {devices/gnd.sym} 720 -1350 0 0 {name=l9 lab=VGND}
-C {devices/iopin.sym} 1320 -1490 0 0 {name=Drain3 lab=DRAIN3}
-C {devices/ipin.sym} 650 -1220 0 0 {name=Select4 lab=SELECT4}
+C {devices/iopin.sym} 1320 -1490 0 0 {name=DRAIN3 lab=DRAIN3}
+C {devices/ipin.sym} 650 -1220 0 0 {name=SELECT4 lab=SELECT4}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 700 -1090 0 0 {name=M11
 L=0.5
 W=1
@@ -470,4 +470,4 @@ spiceprefix=X
 C {devices/gnd.sym} 1190 -1220 0 0 {name=l10 lab=VGND}
 C {devices/gnd.sym} 740 -1090 0 0 {name=l11 lab=VGND}
 C {devices/gnd.sym} 720 -1050 0 0 {name=l12 lab=VGND}
-C {devices/iopin.sym} 1320 -1190 0 0 {name=Drain4 lab=DRAIN4}
+C {devices/iopin.sym} 1320 -1190 0 0 {name=DRAIN4 lab=DRAIN4}

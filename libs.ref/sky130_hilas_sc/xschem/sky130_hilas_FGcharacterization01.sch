@@ -144,13 +144,13 @@ spiceprefix=X
 }
 C {sky130_fd_pr/cap_var_hvt.sym} 1650 -1390 0 1 {name=C4 model=cap_var_hvt W=0.5 L=0.5 VM=1 spiceprefix=X}
 C {devices/ipin.sym} 1840 -1510 0 0 {name=Vbias lab=VBIAS}
-C {devices/ipin.sym} 1600 -1560 0 0 {name=Drain1 lab=DRAIN1}
-C {devices/ipin.sym} 1210 -1320 0 0 {name=Gate3 lab=GATE3}
-C {devices/ipin.sym} 1320 -1320 0 0 {name=Gate2 lab=GATE2}
-C {devices/iopin.sym} 1690 -1390 0 0 {name=Vtun lab=VTUN}
-C {devices/iopin.sym} 1600 -1460 0 0 {name=Source1 lab=SOURCE1}
-C {devices/iopin.sym} 2470 -1580 0 0 {name=Vinj lab=VINJ}
-C {devices/iopin.sym} 1500 -1310 0 1 {name=Gate1 lab=GATE1}
+C {devices/ipin.sym} 1600 -1560 0 0 {name=DRAIN1 lab=DRAIN1}
+C {devices/ipin.sym} 1210 -1320 0 0 {name=GATE3 lab=GATE3}
+C {devices/ipin.sym} 1320 -1320 0 0 {name=GATE2 lab=GATE2}
+C {devices/iopin.sym} 1690 -1390 0 0 {name=VTUN lab=VTUN}
+C {devices/iopin.sym} 1600 -1460 0 0 {name=SOURCE1 lab=SOURCE1}
+C {devices/iopin.sym} 2470 -1580 0 0 {name=VINJ lab=VINJ}
+C {devices/iopin.sym} 1500 -1310 0 1 {name=GATE1 lab=GATE1}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 2360 -1550 0 0 {name=M31
 L=0.5
 W=1
@@ -194,8 +194,8 @@ model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices/gnd.sym} 2400 -1280 0 0 {name=l3 lab=VGND}
-C {devices/iopin.sym} 2400 -1430 0 0 {name=Output lab=OUTPUT}
-C {devices/iopin.sym} 2030 -1420 0 0 {name=Vbias1 lab=VBIAS}
+C {devices/iopin.sym} 2400 -1430 0 0 {name=OUTPUT lab=OUTPUT}
+C {devices/iopin.sym} 2030 -1420 0 0 {name=VBIAS1 lab=VBIAS}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 2180 -1330 0 0 {name=M7
 L=0.5
 W=1
@@ -246,5 +246,5 @@ m=1
 value=1p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/ipin.sym} 1110 -1320 0 0 {name=Gate4 lab=GATE4}
-C {devices/ipin.sym} 1020 -1320 0 0 {name=Gate5 lab=GATE5}
+C {devices/ipin.sym} 1110 -1320 0 0 {name=GATE4 lab=GATE4}
+C {devices/ipin.sym} 1020 -1320 0 0 {name=GATE5 lab=GATE5}
