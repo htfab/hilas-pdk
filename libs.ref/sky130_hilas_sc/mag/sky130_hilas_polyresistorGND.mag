@@ -93,8 +93,8 @@ rect -2725 -112 2762 -88
 rect -2725 -113 -2565 -112
 rect 2713 -113 2745 -112
 << labels >>
-rlabel poly -2677 -10 -2651 7 0 GND
-rlabel metal1 -2725 -113 -2696 -9 0 GND
+rlabel poly -2677 -10 -2651 7 0 VGND
+rlabel metal1 -2725 -113 -2696 -9 0 VGND
 port 1 nsew
 rlabel metal1 -2879 326 -2850 385 0 Input
 << end >>
