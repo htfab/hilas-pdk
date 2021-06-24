@@ -175,6 +175,6 @@ rlabel metal2 382 603 390 623 0 A0
 port 1 nsew analog default
 rlabel metal2 1653 1107 1728 1121 0 VPWR
 port 6 nsew analog default
-rlabel metal1 2028 525 2040 548 0 DRAIN
+rlabel metal1 2028 525 2040 548 0 OUT
 port 7 nsew analog default
 << end >>
