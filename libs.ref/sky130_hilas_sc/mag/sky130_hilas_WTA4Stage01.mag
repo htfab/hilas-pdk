@@ -154,9 +154,9 @@ rlabel metal2 291 56 296 72 0 OUTPUT4
 port 7 nsew analog default
 rlabel metal1 257 556 280 562 0 VGND
 port 1 nsew ground default
-rlabel metal1 131 556 154 562 0 COMMONNODE
+rlabel metal1 131 556 154 562 0 WTAMIDDLENODE
 port 2 nsew analog default
-rlabel metal1 131 -43 154 -37 0 COMMONMODE
+rlabel metal1 131 -43 154 -37 0 WTAMIDDLENODE
 port 3 nsew analog default
 rlabel metal1 257 -43 280 -37 0 VGND
 port 1 nsew ground default
