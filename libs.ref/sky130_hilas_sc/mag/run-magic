@@ -1,0 +1,3 @@
+#!/bin/bash
+
+magic -rcfile "../../../libs.tech/magic/current/sky130A.magicrc" -T "../../../libs.tech/magic/current/sky130A.tech" ${@}
