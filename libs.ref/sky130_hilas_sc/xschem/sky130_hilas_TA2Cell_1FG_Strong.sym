@@ -31,10 +31,10 @@ L 7 130 100 150 100 {}
 L 7 130 120 150 120 {}
 B 5 147.5 -122.5 152.5 -117.5 {name=VINJ dir=inout }
 B 5 147.5 -102.5 152.5 -97.5 {name=VTUN dir=inout }
-B 5 147.5 -82.5 152.5 -77.5 {name=COLSEL1 dir=inout }
+B 5 147.5 -82.5 152.5 -77.5 {name=GATESEL1 dir=inout }
 B 5 147.5 -62.5 152.5 -57.5 {name=VPWR dir=inout }
 B 5 147.5 -42.5 152.5 -37.5 {name=GATE1 dir=inout }
-B 5 147.5 -22.5 152.5 -17.5 {name=COLSEL2 dir=inout }
+B 5 147.5 -22.5 152.5 -17.5 {name=GATESEL2 dir=inout }
 B 5 147.5 -2.5 152.5 2.5 {name=OUTPUT1 dir=inout }
 B 5 -152.5 -122.5 -147.5 -117.5 {name=DRAIN1 dir=in }
 B 5 147.5 17.5 152.5 22.5 {name=VIN22 dir=inout }
@@ -50,10 +50,10 @@ T {TA2Cell_1FG_Strong} -99 -6 0 0 0.3 0.3 {}
 T {@name} 135 -142 0 0 0.2 0.2 {}
 T {VINJ} 125 -124 0 1 0.2 0.2 {}
 T {VTUN} 125 -104 0 1 0.2 0.2 {}
-T {COLSEL1} 125 -84 0 1 0.2 0.2 {}
+T {GATESEL1} 125 -84 0 1 0.2 0.2 {}
 T {VPWR} 125 -64 0 1 0.2 0.2 {}
 T {GATE1} 125 -44 0 1 0.2 0.2 {}
-T {COLSEL2} 125 -24 0 1 0.2 0.2 {}
+T {GATESEL2} 125 -24 0 1 0.2 0.2 {}
 T {OUTPUT1} 125 -4 0 1 0.2 0.2 {}
 T {DRAIN1} -125 -124 0 0 0.2 0.2 {}
 T {VIN22} 125 16 0 1 0.2 0.2 {}

@@ -144,19 +144,19 @@ rlabel metal1 -968 -4 -952 2 0 VINJ
 port 6 nsew power default
 rlabel metal1 -927 -3 -908 3 0 GATESELECT1
 port 10 nsew analog default
-rlabel metal1 -887 596 -871 601 0 VERT1
+rlabel metal1 -887 596 -871 601 0 COL1
 port 12 nsew analog default
-rlabel metal1 -887 -3 -871 3 0 VERT1
+rlabel metal1 -887 -3 -871 3 0 COL1
 port 12 nsew analog default
 rlabel metal1 912 -3 931 3 0 GATESELECT2
 port 11 nsew analog default
-rlabel metal1 875 -3 891 3 0 VERT2
+rlabel metal1 875 -3 891 3 0 COL2
 port 13 nsew analog default
-rlabel metal1 875 596 891 601 0 VERT2
+rlabel metal1 875 596 891 601 0 COL2
 port 13 nsew analog default
-rlabel space -1004 490 -997 509 0 HORIZ1
+rlabel space -1004 490 -997 509 0 ROW1
 port 14 nsew analog default
-rlabel metal2 -1004 390 -997 409 0 HORIZ2
+rlabel metal2 -1004 390 -997 409 0 ROW2
 port 15 nsew analog default
 rlabel metal2 -1004 533 -997 552 0 DRAIN1
 port 16 nsew analog default
@@ -164,24 +164,24 @@ rlabel metal2 -1004 347 -997 365 0 DRAIN2
 port 17 nsew analog default
 rlabel metal2 -1004 232 -997 250 0 DRAIN3
 port 18 nsew analog default
-rlabel metal2 -1004 189 -997 207 0 HORIZ3
+rlabel metal2 -1004 189 -997 207 0 ROW3
 port 19 nsew analog default
-rlabel metal2 -1004 90 -997 108 0 HORIZ4
+rlabel metal2 -1004 90 -997 108 0 ROW4
 port 20 nsew analog default
 rlabel metal2 -1004 47 -997 65 0 DRAIN4
 port 21 nsew analog default
 rlabel metal2 999 533 1008 551 0 DRAIN1
 port 16 nsew analog default
-rlabel metal2 999 490 1008 508 0 HORIZ1
+rlabel metal2 999 490 1008 508 0 ROW1
 port 14 nsew analog default
-rlabel metal2 1000 390 1009 408 0 HORIZ2
+rlabel metal2 1000 390 1009 408 0 ROW2
 rlabel metal2 1000 347 1009 365 0 DRAIN2
 port 17 nsew analog default
 rlabel metal2 1000 232 1009 250 0 DRAIN3
 port 18 nsew analog default
-rlabel metal2 1000 189 1009 207 0 HORIZ3
+rlabel metal2 1000 189 1009 207 0 ROW3
 port 19 nsew analog default
-rlabel metal2 1000 90 1009 108 0 HORIZ4
+rlabel metal2 1000 90 1009 108 0 ROW4
 port 20 nsew analog default
 rlabel metal2 1000 47 1009 65 0 DRAIN2
 port 17 nsew analog default

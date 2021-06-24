@@ -152,9 +152,9 @@ timestamp 1607949437
 transform 1 0 -428 0 1 524
 box -9 -10 23 22
 << labels >>
-rlabel metal2 2354 222 2366 263 0 CAPTERMINAL2
+rlabel metal2 2354 222 2366 263 0 CAPTERM2
 port 1 nsew analog default
-rlabel metal2 -230 535 -179 548 0 CAPTERM01
+rlabel metal2 -230 535 -179 548 0 CAPTERM1
 port 2 nsew analog default
 rlabel metal1 -392 543 -373 548 0 GATESELECT
 port 4 nsew
@@ -167,6 +167,6 @@ port 5 nsew
 rlabel metal1 -1268 -57 -1229 -45 0 VTUN
 rlabel metal1 -864 -56 -825 -44 0 GATE
 rlabel metal1 -348 -56 -332 -50 0 VINJ
-rlabel metal1 -429 -56 -413 -50 0 CAPTERM01
+rlabel metal1 -429 -56 -413 -50 0 CAPTERM1
 rlabel metal1 -392 -56 -373 -50 0 GATESELECT
 << end >>

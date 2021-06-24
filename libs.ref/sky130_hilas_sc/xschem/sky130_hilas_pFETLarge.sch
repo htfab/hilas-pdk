@@ -4,10 +4,10 @@ K {}
 V {}
 S {}
 E {}
-N 1380 -1150 1420 -1150 { lab=GATE1P}
+N 1380 -1150 1420 -1150 { lab=GATE}
 N 1460 -1150 1510 -1150 { lab=WELL}
-N 1460 -1180 1540 -1180 { lab=DRAIN1P}
-N 1460 -1120 1540 -1120 { lab=SOURCE1P}
+N 1460 -1180 1540 -1180 { lab=DRAIN}
+N 1460 -1120 1540 -1120 { lab=SOURCE}
 C {devices/iopin.sym} 1510 -1150 0 0 {name=WELL lab=WELL}
 C {sky130_fd_pr/pfet_01v8.sym} 1440 -1150 0 0 {name=M1
 L=0.15
@@ -23,6 +23,6 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 1540 -1120 0 0 {name=SOURCE1P lab=SOURCE1P}
-C {devices/ipin.sym} 1380 -1150 0 0 {name=GATE1P lab=GATE1P}
-C {devices/iopin.sym} 1540 -1180 0 0 {name=DRAIN1P lab=DRAIN1P}
+C {devices/iopin.sym} 1540 -1120 0 0 {name=SOURCE lab=SOURCE}
+C {devices/ipin.sym} 1380 -1150 0 0 {name=GATE lab=GATE}
+C {devices/iopin.sym} 1540 -1180 0 0 {name=DRAIN lab=DRAIN}

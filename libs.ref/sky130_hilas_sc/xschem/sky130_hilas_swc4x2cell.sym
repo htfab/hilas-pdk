@@ -30,8 +30,8 @@ L 7 130 50 150 50 {}
 L 7 130 70 150 70 {}
 B 5 147.5 -72.5 152.5 -67.5 {name=VINJ dir=inout }
 B 5 147.5 -52.5 152.5 -47.5 {name=VTUN dir=inout }
-B 5 147.5 -32.5 152.5 -27.5 {name=COLSEL2 dir=inout }
-B 5 147.5 -12.5 152.5 -7.5 {name=COLSEL1 dir=inout }
+B 5 147.5 -32.5 152.5 -27.5 {name=GATESELECT2 dir=inout }
+B 5 147.5 -12.5 152.5 -7.5 {name=GATESELECT1 dir=inout }
 B 5 147.5 7.5 152.5 12.5 {name=COL2 dir=inout }
 B 5 147.5 27.5 152.5 32.5 {name=GATE2 dir=inout }
 B 5 147.5 47.5 152.5 52.5 {name=GATE1 dir=inout }
@@ -48,8 +48,8 @@ T {swc4x2} -35 -6 0 0 0.3 0.3 {}
 T {@name} 135 -92 0 0 0.2 0.2 {}
 T {VINJ} 125 -74 0 1 0.2 0.2 {}
 T {VTUN} 125 -54 0 1 0.2 0.2 {}
-T {COLSEL2} 125 -34 0 1 0.2 0.2 {}
-T {COLSEL1} 125 -14 0 1 0.2 0.2 {}
+T {GATESELECT2} 125 -34 0 1 0.2 0.2 {}
+T {GATESELECT1} 125 -14 0 1 0.2 0.2 {}
 T {COL2} 125 6 0 1 0.2 0.2 {}
 T {GATE2} 125 26 0 1 0.2 0.2 {}
 T {GATE1} 125 46 0 1 0.2 0.2 {}

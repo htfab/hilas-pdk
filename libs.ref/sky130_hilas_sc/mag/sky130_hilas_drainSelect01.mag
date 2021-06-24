@@ -45,13 +45,13 @@ rlabel metal2 1107 241 1112 258 0 DRAIN3
 port 2 nsew
 rlabel metal2 1107 57 1112 74 0 DRAIN4
 port 1 nsew
-rlabel metal1 1607 498 1614 522 0 DRAINSELECT1
+rlabel metal1 1607 498 1614 522 0 SELECT1
 port 5 nsew analog default
-rlabel metal1 1607 386 1614 410 0 DRAINSELECT2
+rlabel metal1 1607 386 1614 410 0 SELECT2
 port 6 nsew analog default
-rlabel metal1 1608 205 1614 229 0 DRAINSELECT3
+rlabel metal1 1608 205 1614 229 0 SELECT3
 port 7 nsew analog default
-rlabel metal1 1608 93 1614 117 0 DRAINSELECT4
+rlabel metal1 1608 93 1614 117 0 SELECT4
 port 8 nsew analog default
 rlabel metal1 1108 603 1133 610 0 VINJ
 port 9 nsew power default

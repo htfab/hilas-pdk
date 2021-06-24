@@ -124,13 +124,13 @@ port 5 nsew
 rlabel metal1 -1438 738 -1396 745 0 VTUN
 port 1 nsew
 rlabel metal1 -1541 738 -1499 745 0 VTUN
-rlabel metal1 -1068 737 -1045 745 0 VGATE2
+rlabel metal1 -1068 737 -1045 745 0 GATE2
 port 2 nsew
 rlabel metal1 -2265 739 -2244 745 0 PROG
 port 3 nsew
 rlabel metal1 -2157 738 -2139 745 0 PROG
 port 3 nsew
-rlabel metal1 -2306 737 -2287 745 0 VGATE1
+rlabel metal1 -2306 737 -2287 745 0 GATE1
 port 4 nsew
 rlabel metal1 -2581 739 -2565 745 0 VINJ
 port 6 nsew

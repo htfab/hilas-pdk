@@ -12,8 +12,8 @@ N 1760 -1810 1870 -1810 { lab=VPWR}
 N 1740 -1810 1760 -1810 { lab=VPWR}
 N 1740 -1810 1740 -1780 { lab=VPWR}
 N 1740 -1780 1760 -1780 { lab=VPWR}
-N 1870 -1750 1870 -1720 { lab=OUTPUT1}
-N 1870 -1740 1910 -1740 { lab=OUTPUT1}
+N 1870 -1750 1870 -1720 { lab=VOUT_AMP1}
+N 1870 -1740 1910 -1740 { lab=VOUT_AMP1}
 N 1760 -1750 1760 -1670 { lab=#net1}
 N 1710 -1690 1830 -1690 { lab=#net2}
 N 1710 -1720 1710 -1690 { lab=#net2}
@@ -47,8 +47,8 @@ N 1870 -1530 1980 -1530 { lab=VPWR}
 N 1850 -1530 1870 -1530 { lab=VPWR}
 N 1850 -1530 1850 -1500 { lab=VPWR}
 N 1850 -1500 1870 -1500 { lab=VPWR}
-N 1980 -1470 1980 -1440 { lab=OUTPUT2}
-N 1980 -1460 2020 -1460 { lab=OUTPUT2}
+N 1980 -1470 1980 -1440 { lab=VOUT_AMP2}
+N 1980 -1460 2020 -1460 { lab=VOUT_AMP2}
 N 1870 -1470 1870 -1390 { lab=#net4}
 N 1820 -1410 1940 -1410 { lab=#net5}
 N 1820 -1440 1820 -1410 { lab=#net5}
@@ -210,7 +210,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 1910 -1740 0 0 {name=OUTPUT1 lab=OUTPUT1}
+C {devices/iopin.sym} 1910 -1740 0 0 {name=OUTPUT1 lab=VOUT_AMP1}
 C {sky130_fd_pr/pfet_01v8.sym} 1960 -1500 0 0 {name=M24
 L=0.15
 W=1
@@ -295,7 +295,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 2020 -1460 0 0 {name=OUTPUT2 lab=OUTPUT2}
+C {devices/iopin.sym} 2020 -1460 0 0 {name=VOUT_AMP2 lab=VOUT_AMP2}
 C {devices/iopin.sym} 1550 -1360 0 0 {name=VIN21 lab=VIN21}
 C {devices/iopin.sym} 1730 -1470 0 0 {name=VIN22 lab=VIN22}
 C {devices/gnd.sym} 1800 -1330 0 0 {name=l1 lab=VGND}

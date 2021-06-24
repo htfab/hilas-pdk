@@ -4,12 +4,12 @@ K {}
 V {}
 S {}
 E {}
-N 900 -1460 1240 -1460 { lab=NODE2_2}
-N 900 -1240 1240 -1240 { lab=NODE1_2}
-N 1110 -1400 1110 -1300 { lab=OUT2}
-N 900 -1400 900 -1300 { lab=OUT2}
-N 900 -1400 1110 -1400 { lab=OUT2}
-N 1110 -1400 1310 -1400 { lab=OUT2}
+N 900 -1460 1240 -1460 { lab=INPUT2_2}
+N 900 -1240 1240 -1240 { lab=INPUT1_2}
+N 1110 -1400 1110 -1300 { lab=OUTPUT2}
+N 900 -1400 900 -1300 { lab=OUTPUT2}
+N 900 -1400 1110 -1400 { lab=OUTPUT2}
+N 1110 -1400 1310 -1400 { lab=OUTPUT2}
 N 1070 -1430 1070 -1320 { lab=#net1}
 N 820 -1320 1070 -1320 { lab=#net1}
 N 860 -1320 860 -1270 { lab=#net1}
@@ -35,12 +35,12 @@ N 740 -1450 770 -1450 { lab=VPWR}
 N 770 -1480 770 -1450 { lab=VPWR}
 N 1110 -1430 1140 -1430 { lab=VGND}
 N 1110 -1270 1130 -1270 { lab=VGND}
-N 900 -1730 1240 -1730 { lab=NODE2_1}
-N 900 -1510 1240 -1510 { lab=NODE1_1}
-N 1110 -1670 1110 -1570 { lab=OUT1}
-N 900 -1670 900 -1570 { lab=OUT1}
-N 900 -1670 1110 -1670 { lab=OUT1}
-N 1110 -1670 1310 -1670 { lab=OUT1}
+N 900 -1730 1240 -1730 { lab=INPUT2_1}
+N 900 -1510 1240 -1510 { lab=INPUT1_1}
+N 1110 -1670 1110 -1570 { lab=OUTPUT1}
+N 900 -1670 900 -1570 { lab=OUTPUT1}
+N 900 -1670 1110 -1670 { lab=OUTPUT1}
+N 1110 -1670 1310 -1670 { lab=OUTPUT1}
 N 1070 -1700 1070 -1590 { lab=#net2}
 N 820 -1590 1070 -1590 { lab=#net2}
 N 860 -1590 860 -1540 { lab=#net2}
@@ -66,12 +66,12 @@ N 740 -1720 770 -1720 { lab=VPWR}
 N 770 -1750 770 -1720 { lab=VPWR}
 N 1110 -1700 1140 -1700 { lab=VGND}
 N 1110 -1540 1130 -1540 { lab=VGND}
-N 900 -910 1240 -910 { lab=NODE2_4}
+N 900 -910 1240 -910 { lab=INPUT2_4}
 N 900 -690 1240 -690 { lab=NODE1_4}
-N 1110 -850 1110 -750 { lab=OUT4}
-N 900 -850 900 -750 { lab=OUT4}
-N 900 -850 1110 -850 { lab=OUT4}
-N 1110 -850 1310 -850 { lab=OUT4}
+N 1110 -850 1110 -750 { lab=OUTPUT4}
+N 900 -850 900 -750 { lab=OUTPUT4}
+N 900 -850 1110 -850 { lab=OUTPUT4}
+N 1110 -850 1310 -850 { lab=OUTPUT4}
 N 1070 -880 1070 -770 { lab=#net3}
 N 820 -770 1070 -770 { lab=#net3}
 N 860 -770 860 -720 { lab=#net3}
@@ -97,12 +97,12 @@ N 740 -900 770 -900 { lab=VPWR}
 N 770 -930 770 -900 { lab=VPWR}
 N 1110 -880 1140 -880 { lab=VGND}
 N 1110 -720 1130 -720 { lab=VGND}
-N 900 -1180 1240 -1180 { lab=NODE2_3}
+N 900 -1180 1240 -1180 { lab=INPUT2_3}
 N 900 -960 1240 -960 { lab=NODE1_3}
-N 1110 -1120 1110 -1020 { lab=OUT3}
-N 900 -1120 900 -1020 { lab=OUT3}
-N 900 -1120 1110 -1120 { lab=OUT3}
-N 1110 -1120 1310 -1120 { lab=OUT3}
+N 1110 -1120 1110 -1020 { lab=OUTPUT3}
+N 900 -1120 900 -1020 { lab=OUTPUT3}
+N 900 -1120 1110 -1120 { lab=OUTPUT3}
+N 1110 -1120 1310 -1120 { lab=OUTPUT3}
 N 1070 -1150 1070 -1040 { lab=#net4}
 N 820 -1040 1070 -1040 { lab=#net4}
 N 860 -1040 860 -990 { lab=#net4}
@@ -160,9 +160,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 1240 -1240 0 0 {name=NODE1_2 lab=NODE1_2}
-C {devices/iopin.sym} 1310 -1400 0 0 {name=OUT2 lab=OUT2}
-C {devices/iopin.sym} 1240 -1460 0 0 {name=NODE2_2 lab=NODE2_2}
+C {devices/iopin.sym} 1240 -1240 0 0 {name=INPUT1_2 lab=INPUT1_2}
+C {devices/iopin.sym} 1310 -1400 0 0 {name=OUTPUT2 lab=OUTPUT2}
+C {devices/iopin.sym} 1240 -1460 0 0 {name=INPUT2_2 lab=INPUT2_2}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -1270 0 0 {name=M1
 L=0.15
 W=1
@@ -252,9 +252,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/iopin.sym} 1240 -1510 0 0 {name=NODE1_1 lab=NODE1_1}
-C {devices/iopin.sym} 1310 -1670 0 0 {name=OUT1 lab=OUT1}
-C {devices/iopin.sym} 1240 -1730 0 0 {name=NODE2_1 lab=NODE2_1}
+C {devices/iopin.sym} 1240 -1510 0 0 {name=INPUT1_1 lab=INPUT1_1}
+C {devices/iopin.sym} 1310 -1670 0 0 {name=OUTPUT1 lab=OUTPUT1}
+C {devices/iopin.sym} 1240 -1730 0 0 {name=INPUT2_1 lab=INPUT2_1}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -1540 0 0 {name=M7
 L=0.15
 W=1
@@ -345,8 +345,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/iopin.sym} 1240 -690 0 0 {name=NODE1_4 lab=NODE1_4}
-C {devices/iopin.sym} 1310 -850 0 0 {name=OUT4 lab=OUT4}
-C {devices/iopin.sym} 1240 -910 0 0 {name=NODE2_4 lab=NODE2_4}
+C {devices/iopin.sym} 1310 -850 0 0 {name=OUTPUT4 lab=OUTPUT4}
+C {devices/iopin.sym} 1240 -910 0 0 {name=INPUT2_4 lab=INPUT2_4}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -720 0 0 {name=M13
 L=0.15
 W=1
@@ -437,8 +437,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/iopin.sym} 1240 -960 0 0 {name=NODE1_3 lab=NODE1_3}
-C {devices/iopin.sym} 1310 -1120 0 0 {name=OUT3 lab=OUT3}
-C {devices/iopin.sym} 1240 -1180 0 0 {name=NODE2_3 lab=NODE2_3}
+C {devices/iopin.sym} 1310 -1120 0 0 {name=OUTPUT3 lab=OUTPUT3}
+C {devices/iopin.sym} 1240 -1180 0 0 {name=INPUT2_3 lab=INPUT2_3}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -990 0 0 {name=M20
 L=0.15
 W=1

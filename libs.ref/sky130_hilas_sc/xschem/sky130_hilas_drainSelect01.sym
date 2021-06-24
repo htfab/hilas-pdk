@@ -23,7 +23,7 @@ L 7 130 0 150 0 {}
 L 7 130 20 150 20 {}
 L 7 130 40 150 40 {}
 B 5 -152.5 -42.5 -147.5 -37.5 {name=VINJ dir=in }
-B 5 147.5 -42.5 152.5 -37.5 {name=SELECTDRAIN dir=inout }
+B 5 147.5 -42.5 152.5 -37.5 {name=DRAIN_MUX dir=inout }
 B 5 -152.5 -22.5 -147.5 -17.5 {name=SELECT1 dir=in }
 B 5 147.5 -22.5 152.5 -17.5 {name=DRAIN1 dir=inout }
 B 5 -152.5 -2.5 -147.5 2.5 {name=SELECT2 dir=in }
@@ -35,7 +35,7 @@ B 5 147.5 37.5 152.5 42.5 {name=DRAIN4 dir=inout }
 T {drainSelect01} -56.5 -6 0 0 0.3 0.3 {}
 T {@name} 135 -62 0 0 0.2 0.2 {}
 T {VINJ} -125 -44 0 0 0.2 0.2 {}
-T {SELECTDRAIN} 125 -44 0 1 0.2 0.2 {}
+T {DRAIN_MUX} 125 -44 0 1 0.2 0.2 {}
 T {SELECT1} -125 -24 0 0 0.2 0.2 {}
 T {DRAIN1} 125 -24 0 1 0.2 0.2 {}
 T {SELECT2} -125 -4 0 0 0.2 0.2 {}
