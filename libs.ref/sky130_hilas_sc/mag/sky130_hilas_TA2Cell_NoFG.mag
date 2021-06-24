@@ -69,17 +69,17 @@ port 7 nsew ground default
 rlabel metal1 190 740 217 745 0 VPWR
 port 8 nsew power default
 rlabel metal2 -282 410 -259 434 0 Vin+_amp1
-rlabel metal2 -126 451 -101 474 0 VINP_AMP2
+rlabel metal2 -126 451 -101 474 0 VIN21
 port 3 nsew
-rlabel metal2 -286 142 -263 167 0 VINN_AMP1
+rlabel metal2 -286 142 -263 167 0 VIN12
 port 2 nsew analog default
-rlabel metal2 -130 718 -105 744 0 VINN_AMP2
+rlabel metal2 -130 718 -105 744 0 VIN22
 port 4 nsew
-rlabel metal2 304 392 319 414 0 VOUT_AMP1
+rlabel metal2 304 392 319 414 0 OUTPUT1
 port 5 nsew
-rlabel metal2 304 474 319 496 0 VOUT_AMP2
+rlabel metal2 304 474 319 496 0 OUTPUT2
 port 6 nsew
-rlabel metal1 -416 737 -397 745 0 GATECOLSELECT
+rlabel metal1 -416 737 -397 745 0 COLSEL1
 port 1 nsew
 rlabel metal1 -372 737 -344 745 0 VPWR
 << end >>

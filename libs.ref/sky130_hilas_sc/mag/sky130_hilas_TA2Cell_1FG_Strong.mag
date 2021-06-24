@@ -113,13 +113,13 @@ rlabel metal1 64 140 91 146 0 VPWR
 port 10 nsew
 rlabel metal1 -3 140 31 146 0 VGND
 port 11 nsew
-rlabel metal2 -252 451 -220 475 0 VINP_AMP2
+rlabel metal2 -252 451 -220 475 0 VIN21
 port 9 nsew
-rlabel metal2 -260 718 -229 742 1 VINN_AMP2
+rlabel metal2 -260 718 -229 742 1 VIN22
 port 8 n
-rlabel metal1 -2352 141 -2329 153 0 VINN_AMP1
+rlabel metal1 -2352 141 -2329 153 0 VIN12
 port 18 nsew
-rlabel metal1 -2353 734 -2332 745 0 VINP_AMP1
+rlabel metal1 -2353 734 -2332 745 0 VIN11
 port 5 nsew
 rlabel metal1 -1438 738 -1396 745 0 VTUN
 port 1 nsew

@@ -249,13 +249,13 @@ rlabel metal2 -395 0 -389 19 0 DRAIN1
 port 3 nsew analog default
 flabel metal2 -395 -186 -389 -167 3 FreeMono 1 0 0 0 DRAIN
 port 13 e analog default
-rlabel metal2 -395 -330 -391 -315 3 FGDRAINPROGRAM2
+rlabel metal2 -395 -330 -391 -315 3 DRAIN2
 port 12 e analog default
-rlabel metal2 -395 155 -389 173 0 FGDRAINPROGRAM1
+rlabel metal2 -395 155 -389 173 0 DRAIN1
 port 15 nsew analog default
-rlabel metal1 427 217 446 223 0 PROGGATE
+rlabel metal1 427 217 446 223 0 GATE1
 port 9 nsew analog default
-rlabel metal1 469 -381 492 -357 0 GATE1
+rlabel metal1 469 -381 492 -357 0 VIN2
 port 7 nsew analog default
 rlabel metal1 279 -382 297 -375 0 RUN
 port 6 nsew analog default
@@ -265,19 +265,19 @@ rlabel metal1 279 216 297 223 0 RUN
 port 6 nsew analog default
 rlabel metal1 384 217 405 223 0 PROG
 port 5 nsew analog default
-rlabel metal1 472 191 493 222 0 GATE2
+rlabel metal1 472 191 493 222 0 VIN1
 port 8 nsew analog default
-rlabel metal1 661 217 680 223 0 GATESELECT
+rlabel metal1 661 217 680 223 0 COLSEL1
 port 1 nsew analog default
-rlabel metal1 661 -382 680 -377 0 GATESELECT
+rlabel metal1 661 -382 680 -377 0 COLSEL1
 port 1 nsew analog default
 rlabel metal1 705 -382 721 -377 0 VINJ
 port 2 nsew analog default
 rlabel metal2 749 155 757 173 0 DRAIN1
 port 3 nsew analog default
-rlabel metal2 749 -332 757 -314 0 DRAIN4
+rlabel metal2 749 -332 757 -314 0 DRAIN2
 port 4 nsew analog default
-rlabel metal1 427 -381 446 -376 0 PROGGATE
+rlabel metal1 427 -381 446 -376 0 GATE1
 port 9 nsew analog default
 rlabel metal1 -113 -382 -90 -375 0 VGND
 port 10 nsew ground default
