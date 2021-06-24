@@ -31,7 +31,7 @@ N 1140 -1640 1140 -1630 { lab=VTUN}
 N 1110 -1690 1140 -1690 { lab=#net3}
 N 1070 -1740 1070 -1720 { lab=#net4}
 N 1370 -1660 1370 -1580 { lab=ROW1}
-N 1370 -1720 1410 -1720 { lab=COL1}
+N 1370 -1720 1410 -1720 { lab=COMMONSOURCE}
 N 1260 -1630 1260 -1560 { lab=GATE1}
 N 1180 -1640 1180 -1630 { lab=VTUN}
 N 1180 -1630 1180 -1560 { lab=VTUN}
@@ -63,9 +63,9 @@ N 1260 -1820 1260 -1630 { lab=GATE1}
 N 1260 -1560 1260 -1370 { lab=GATE1}
 N 1160 -1770 1160 -1750 { lab=VIN11}
 N 1120 -1540 1120 -1490 { lab=VIN12}
-N 1410 -1790 1410 -1720 { lab=COL1}
-N 1410 -1790 1410 -1460 { lab=COL1}
-N 1370 -1460 1410 -1460 { lab=COL1}
+N 1410 -1790 1410 -1720 { lab=COMMONSOURCE}
+N 1410 -1790 1410 -1460 { lab=COMMONSOURCE}
+N 1370 -1460 1410 -1460 { lab=COMMONSOURCE}
 N 1390 -1610 1390 -1430 { lab=VINJ}
 N 1370 -1580 1470 -1580 { lab=ROW1}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 1350 -1430 0 0 {name=M3
@@ -163,7 +163,7 @@ C {devices/iopin.sym} 1260 -1820 0 0 {name=GATE1 lab=GATE1}
 C {devices/iopin.sym} 1180 -1300 0 0 {name=VTUN lab=VTUN}
 C {devices/iopin.sym} 1030 -1820 0 0 {name=COLSEL1 lab=COLSEL1}
 C {devices/iopin.sym} 1000 -1850 0 0 {name=VINJ lab=VINJ}
-C {devices/iopin.sym} 1410 -1790 0 0 {name=COL1 lab=COL1}
+C {devices/iopin.sym} 1410 -1790 0 0 {name=COMMONSOURCE lab=COMMONSOURCE}
 C {devices/iopin.sym} 1470 -1580 0 0 {name=ROW1 lab=ROW1}
 C {devices/iopin.sym} 1470 -1320 0 0 {name=ROW2 lab=ROW2}
 C {devices/iopin.sym} 1160 -1770 0 0 {name=VIN11 lab=VIN11}

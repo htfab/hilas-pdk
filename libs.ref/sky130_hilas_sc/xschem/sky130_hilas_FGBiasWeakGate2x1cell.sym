@@ -26,7 +26,7 @@ L 7 130 80 150 80 {}
 B 5 147.5 -82.5 152.5 -77.5 {name=VINJ dir=inout }
 B 5 147.5 -62.5 152.5 -57.5 {name=COLSEL1 dir=inout }
 B 5 147.5 -42.5 152.5 -37.5 {name=GATE1 dir=inout }
-B 5 147.5 -22.5 152.5 -17.5 {name=COL1 dir=inout }
+B 5 147.5 -22.5 152.5 -17.5 {name=COMMONSOURCE dir=inout }
 B 5 147.5 -2.5 152.5 2.5 {name=VIN11 dir=inout }
 B 5 -152.5 -82.5 -147.5 -77.5 {name=DRAIN1 dir=in }
 B 5 147.5 17.5 152.5 22.5 {name=ROW1 dir=inout }
@@ -39,7 +39,7 @@ T {@name} 135 -102 0 0 0.2 0.2 {}
 T {VINJ} 125 -84 0 1 0.2 0.2 {}
 T {COLSEL1} 125 -64 0 1 0.2 0.2 {}
 T {GATE1} 125 -44 0 1 0.2 0.2 {}
-T {COL1} 125 -24 0 1 0.2 0.2 {}
+T {COMMONSOURCE} 125 -24 0 1 0.2 0.2 {}
 T {VIN11} 125 -4 0 1 0.2 0.2 {}
 T {DRAIN1} -125 -84 0 0 0.2 0.2 {}
 T {ROW1} 125 16 0 1 0.2 0.2 {}
