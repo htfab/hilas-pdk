@@ -289,7 +289,8 @@ class XschemCircuit:
     def rename_pin(self, old_name, new_name):
         self.symbol.rename_pin(old_name, new_name)
         if self.schematic:
-            self.schematic.rename_pin(old_name, new_name)
+            self.schematic.rename_net(old_name, new_name)
+            self.schematic.rename_pinname(old_name, new_name)
 
     def check_names(self):
         self.symbol.check_pin_names()
