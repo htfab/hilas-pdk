@@ -157,32 +157,32 @@ timestamp 1607386385
 transform 1 0 777 0 -1 270
 box -289 47 -33 232
 << labels >>
-rlabel metal2 -264 111 -252 130 0 BIAS1
+rlabel metal2 -264 111 -252 130 0 ROW1
 port 1 nsew analog default
-rlabel metal2 -266 13 -254 32 0 BIAS2
+rlabel metal2 -266 13 -254 32 0 ROW2
 port 2 nsew analog default
-rlabel metal2 -263 -187 -251 -171 0 BIAS3
+rlabel metal2 -263 -187 -251 -171 0 ROW3
 port 3 nsew analog default
-rlabel metal2 -263 -285 -249 -270 0 BIAS4
+rlabel metal2 -263 -285 -249 -270 0 ROW4
 port 4 nsew analog default
 rlabel metal1 -228 209 -188 223 0 VTUN
 port 5 nsew analog default
 rlabel metal1 -228 -382 -188 -372 0 VTUN
 port 5 nsew analog default
-rlabel metal1 177 -382 215 -372 0 GATE
+rlabel metal1 177 -382 215 -372 0 GATE1
 port 6 nsew analog default
-rlabel metal1 177 213 215 223 0 GATE
+rlabel metal1 177 213 215 223 0 GATE1
 port 6 nsew analog default
 rlabel metal1 692 216 708 223 0 VINJ
 port 7 nsew power default
 rlabel metal1 611 216 627 223 0 VPWR
 port 8 nsew power default
-rlabel metal1 648 216 667 223 0 GATESELECT
+rlabel metal1 648 216 667 223 0 COLSEL1
 rlabel metal1 692 -381 708 -374 0 VINJ
 port 7 nsew power default
 rlabel metal1 611 -381 627 -374 0 VPWR
 port 8 nsew power default
-rlabel metal1 648 -381 667 -374 0 GATESELECT
+rlabel metal1 648 -381 667 -374 0 COLSEL1
 port 9 nsew analog default
 rlabel metal2 735 155 744 173 0 DRAIN1
 port 10 nsew analog default

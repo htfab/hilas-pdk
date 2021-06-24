@@ -142,7 +142,7 @@ rlabel metal1 -228 211 -188 223 0 VTUN
 port 1 nsew
 rlabel metal1 692 218 708 223 0 VINJ
 port 2 nsew
-rlabel metal1 648 218 667 223 0 GATESEL1
+rlabel metal1 648 218 667 223 0 COLSEL1
 port 3 nsew
 rlabel metal1 611 219 627 223 0 COL1
 port 4 nsew
@@ -156,15 +156,15 @@ rlabel metal2 -263 155 -256 173 0 DRAIN1
 port 6 nsew
 rlabel metal2 -263 112 -256 130 0 COL1
 port 7 nsew
-rlabel metal2 -264 12 -257 30 0 COL2
+rlabel metal2 -264 12 -257 30 0 ROW2
 port 9 nsew
 rlabel metal2 -264 -31 -257 -13 0 DRAIN2
 port 8 nsew
 rlabel metal2 -262 -146 -256 -129 0 DRAIN3
 port 10 nsew
-rlabel metal2 -262 -188 -256 -171 0 COL3
+rlabel metal2 -262 -188 -256 -171 0 ROW3
 port 7 nsew
-rlabel metal2 -262 -286 -256 -269 0 COL4
+rlabel metal2 -262 -286 -256 -269 0 ROW4
 port 11 nsew
 rlabel metal2 -262 -330 -256 -313 0 DRAIN4
 port 12 nsew
