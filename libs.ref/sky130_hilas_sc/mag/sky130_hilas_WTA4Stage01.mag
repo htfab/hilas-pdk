@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1608384750
+timestamp 1624568705
 << error_s >>
 rect -596 499 -590 505
 rect -491 499 -485 505
@@ -47,19 +47,22 @@ rect 209 -43 229 -18
 << locali >>
 rect -1115 -22 -1097 67
 << metal1 >>
-rect -1025 561 -1009 562
-rect -944 561 -928 562
+rect -1025 555 -1009 562
+rect -984 555 -965 562
+rect -944 555 -928 562
+rect -129 548 -89 562
 rect -762 399 -740 537
 rect 131 516 154 562
 rect 257 516 280 562
 rect -1112 254 -1091 369
 rect -772 122 -745 212
+rect -532 -43 -494 -33
 rect 131 -43 154 -18
 rect 257 -43 280 -18
 << metal2 >>
 rect -738 530 7 531
 rect -751 512 7 530
-rect -1100 494 -1061 512
+rect -1116 494 -1061 512
 rect -751 510 24 512
 rect -14 491 24 510
 rect -1112 418 -1097 469
@@ -71,7 +74,7 @@ rect -1112 352 -1086 378
 rect -1107 351 -1090 352
 rect -55 351 66 371
 rect 170 333 296 349
-rect -1100 308 -1061 326
+rect -1118 308 -1061 326
 rect -791 304 -768 305
 rect -791 301 -34 304
 rect -791 284 -28 301
@@ -81,7 +84,8 @@ rect -47 264 24 284
 rect -1112 254 -775 256
 rect -767 234 -32 236
 rect -767 214 24 234
-rect -1100 193 -1061 211
+rect -1116 193 -1061 211
+rect -1116 192 -1100 193
 rect -1118 118 -1098 168
 rect -56 152 44 168
 rect 170 149 296 165
@@ -90,7 +94,8 @@ rect -1119 47 -1091 74
 rect -55 54 45 71
 rect 172 56 296 72
 rect -55 53 39 54
-rect -1100 8 -1061 26
+rect -1114 26 -1098 27
+rect -1114 8 -1061 26
 rect -32 8 23 9
 rect -790 -14 23 8
 rect -790 -15 -31 -14
@@ -149,13 +154,9 @@ rlabel metal2 291 56 296 72 0 OUTPUT4
 port 7 nsew analog default
 rlabel metal1 257 556 280 562 0 VGND
 port 1 nsew ground default
-rlabel poly 209 556 229 562 0 COMMONNODE
-port 2 nsew analog default
 rlabel metal1 131 556 154 562 0 COMMONNODE
 port 2 nsew analog default
 rlabel metal1 131 -43 154 -37 0 COMMONMODE
-port 3 nsew analog default
-rlabel poly 209 -43 229 -37 0 COMMONMODE
 port 3 nsew analog default
 rlabel metal1 257 -43 280 -37 0 VGND
 port 1 nsew ground default
@@ -167,4 +168,22 @@ rlabel metal2 -1118 151 -1098 168 0 INPUT3
 port 10 nsew analog default
 rlabel metal2 -1119 47 -1091 74 0 INPUT4
 port 11 nsew analog default
+rlabel metal2 -1116 494 -1100 512 0 DRAIN1
+port 12 nsew
+rlabel metal2 -1118 308 -1100 326 0 DRAIN2
+port 13 nsew
+rlabel metal2 -1116 192 -1100 211 0 DRAIN3
+port 14 nsew
+rlabel metal2 -1114 8 -1098 27 0 DRAIN4
+port 15 nsew
+rlabel metal1 -532 -43 -494 -33 0 GATE1
+port 17 nsew
+rlabel metal1 -984 555 -965 562 0 COLSEL1
+port 19 nsew
+rlabel metal1 -944 555 -928 562 0 VPWR
+port 20 nsew
+rlabel metal1 -1025 555 -1009 562 0 VINJ
+port 18 nsew
+rlabel metal1 -129 548 -89 562 0 VTUN
+port 21 nsew
 << end >>

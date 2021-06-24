@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1608249223
+timestamp 1624566400
 << error_s >>
 rect -872 485 -866 491
 rect -767 485 -761 491
@@ -59,18 +59,22 @@ rect -230 536 -174 543
 rect -416 517 -174 536
 rect -187 515 -174 517
 rect -146 515 -137 543
+rect -1303 480 -1296 498
 rect -406 480 2366 498
 rect -412 437 2366 455
 rect -406 337 2366 355
 rect 2265 312 2366 313
+rect -1304 294 -1297 312
 rect -410 294 2366 312
 rect 2297 256 2366 263
 rect 2297 228 2304 256
 rect 2333 228 2366 256
 rect 2297 222 2366 228
+rect -1302 179 -1296 196
 rect -427 179 2366 196
 rect -417 137 2366 154
 rect -419 39 2366 56
+rect -1302 -5 -1296 12
 rect -423 -5 2366 12
 << via2 >>
 rect -174 515 -146 543
@@ -122,35 +126,35 @@ rect -170 22 -119 52
 rect -149 -2 -119 22
 rect 2064 -2 2094 79
 rect -149 -32 2094 -2
-use sky130_hilas_CapModule01  sky130_hilas_CapModule01_0
-array 0 7 284 0 1 286
-timestamp 1607800460
-transform 1 0 390 0 1 205
-box -443 -245 -159 41
-use sky130_hilas_m22m4  sky130_hilas_m22m4_0
-timestamp 1607701799
-transform 1 0 -160 0 1 413
-box -36 -36 43 39
-use sky130_hilas_m22m4  sky130_hilas_m22m4_1
-timestamp 1607701799
-transform 1 0 -302 0 1 348
-box -36 -36 43 39
-use sky130_hilas_m22m4  sky130_hilas_m22m4_2
-timestamp 1607701799
-transform 1 0 -306 0 1 139
-box -36 -36 43 39
-use sky130_hilas_m22m4  sky130_hilas_m22m4_3
-timestamp 1607701799
-transform 1 0 -197 0 1 52
-box -36 -36 43 39
 use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_0
-timestamp 1608069483
+timestamp 1623769153
 transform 1 0 -1040 0 1 325
 box -264 -382 744 223
 use sky130_hilas_m12m2  sky130_hilas_m12m2_0
 timestamp 1607949437
 transform 1 0 -428 0 1 524
 box -9 -10 23 22
+use sky130_hilas_m22m4  sky130_hilas_m22m4_3
+timestamp 1607701799
+transform 1 0 -197 0 1 52
+box -36 -36 43 39
+use sky130_hilas_m22m4  sky130_hilas_m22m4_2
+timestamp 1607701799
+transform 1 0 -306 0 1 139
+box -36 -36 43 39
+use sky130_hilas_m22m4  sky130_hilas_m22m4_1
+timestamp 1607701799
+transform 1 0 -302 0 1 348
+box -36 -36 43 39
+use sky130_hilas_m22m4  sky130_hilas_m22m4_0
+timestamp 1607701799
+transform 1 0 -160 0 1 413
+box -36 -36 43 39
+use sky130_hilas_CapModule01  sky130_hilas_CapModule01_0
+array 0 7 284 0 1 286
+timestamp 1607800460
+transform 1 0 390 0 1 205
+box -443 -245 -159 41
 << labels >>
 rlabel metal2 2354 222 2366 263 0 CAPTERM2
 port 1 nsew analog default
@@ -169,4 +173,12 @@ rlabel metal1 -864 -56 -825 -44 0 GATE
 rlabel metal1 -348 -56 -332 -50 0 VINJ
 rlabel metal1 -429 -56 -413 -50 0 CAPTERM1
 rlabel metal1 -392 -56 -373 -50 0 GATESELECT
+rlabel metal2 -1303 480 -1296 498 0 DRAIN1
+port 7 nsew
+rlabel metal2 -1304 294 -1297 312 0 DRAIN2
+port 8 nsew
+rlabel metal2 -1302 179 -1296 196 0 DRAIN3
+port 9 nsew
+rlabel metal2 -1302 -5 -1296 12 0 DRAIN4
+port 10 nsew
 << end >>

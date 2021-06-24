@@ -186,17 +186,17 @@ rlabel metal1 648 -381 667 -374 0 COLSEL1
 port 9 nsew analog default
 rlabel metal2 735 155 744 173 0 DRAIN1
 port 10 nsew analog default
-rlabel metal2 735 112 744 130 0 HORIZ1
+rlabel metal2 735 112 744 130 0 ROW1
 port 11 nsew analog default
 rlabel metal2 735 -31 744 -13 0 DRAIN2
 port 13 nsew
-rlabel metal2 736 12 745 30 0 HORIZ2
+rlabel metal2 736 12 745 30 0 ROW2
 port 12 nsew analog default
 rlabel metal2 734 -146 745 -128 0 DRAIN3
 port 14 nsew analog default
-rlabel metal2 733 -189 744 -171 0 HORIZ3
+rlabel metal2 733 -189 744 -171 0 ROW3
 port 15 nsew analog default
-rlabel metal2 733 -288 744 -270 0 HORIZ4
+rlabel metal2 733 -288 744 -270 0 ROW4
 port 16 nsew analog default
 rlabel metal2 733 -331 744 -313 0 DRAIN4
 port 17 nsew analog default
