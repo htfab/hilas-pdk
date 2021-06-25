@@ -475,22 +475,22 @@ N 740 700 760 700 {}
 N 710 720 780 720 {}
 N 780 680 780 720 {}
 N 1500 90 1500 100 {}
-C {sky130_hilas_swc4x2_bb.sym} 610 100 0 0 {name=x1}
-C {sky130_hilas_drainSelect01_bb.sym} -320 100 0 0 {name=x2}
-C {sky130_hilas_WTA4input_bb.sym} 610 320 0 0 {name=x3}
-C {sky130_hilas_TA2Cell_1FG_Strong_bb.sym} 610 -470 0 0 {name=x4}
-C {sky130_hilas_TA2Cell_1FG_bb.sym} 610 -170 0 0 {name=x6}
-C {sky130_hilas_Tgate4Single01_bb.sym} 1200 -320 0 1 {name=x7}
-C {sky130_hilas_Trans2med_bb.sym} -1630 150 0 0 {name=x8}
-C {sky130_hilas_Trans4small_bb.sym} -1630 -160 0 0 {name=x9}
-C {sky130_hilas_nFETLarge_bb.sym} -1630 340 0 0 {name=x10}
-C {sky130_hilas_pFETLarge_bb.sym} -1630 460 0 0 {name=x11}
-C {sky130_hilas_FGcharacterization01_bb.sym} 610 630 0 0 {name=x12}
-C {sky130_hilas_DAC5bit01_bb.sym} 1430 740 0 0 {name=x14}
-C {sky130_hilas_drainSelect01_bb.sym} -320 300 0 0 {name=x16}
+C {sky130_hilas_swc4x2cell.sym} 610 100 0 0 {name=x1}
+C {sky130_hilas_drainSelect01.sym} -320 100 0 0 {name=x2}
+C {sky130_hilas_WTA4Stage01.sym} 610 320 0 0 {name=x3}
+C {sky130_hilas_TA2Cell_1FG_Strong.sym} 610 -470 0 0 {name=x4}
+C {sky130_hilas_TA2Cell_1FG.sym} 610 -170 0 0 {name=x6}
+C {sky130_hilas_Tgate4Single01.sym} 1200 -320 0 1 {name=x7}
+C {sky130_hilas_Trans2med.sym} -1630 150 0 0 {name=x8}
+C {sky130_hilas_Trans4small.sym} -1630 -160 0 0 {name=x9}
+C {sky130_hilas_nFETLarge.sym} -1630 340 0 0 {name=x10}
+C {sky130_hilas_pFETLarge.sym} -1630 460 0 0 {name=x11}
+C {sky130_hilas_FGcharacterization01.sym} 610 630 0 0 {name=x12}
+C {sky130_hilas_DAC5bit01.sym} 1430 740 0 0 {name=x14}
+C {sky130_hilas_drainSelect01.sym} -320 300 0 0 {name=x16}
 C {devices/gnd.sym} 760 500 0 0 {name=l1 lab=GND}
-C {sky130_hilas_nFETLarge_bb.sym} 610 470 0 0 {name=x17}
-C {sky130_hilas_drainSelect01_bb.sym} -320 -310 0 0 {name=x18}
+C {sky130_hilas_nFETLarge.sym} 610 470 0 0 {name=x17}
+C {sky130_hilas_drainSelect01.sym} -320 -310 0 0 {name=x18}
 C {devices/iopin.sym} 780 740 0 1 {name=Vtun lab=Vtun}
 C {devices/iopin.sym} 780 760 0 1 {name=Vinj lab=Vinj}
 C {devices/iopin.sym} 1020 640 0 0 {name=GateNFET1 lab=GateNFET1}
@@ -526,9 +526,9 @@ C {devices/iopin.sym} 440 90 0 1 {name=RowTerm2 lab=RowTerm2}
 C {devices/iopin.sym} 1000 180 0 0 {name=Column1 lab=Column1}
 C {devices/iopin.sym} 1000 100 0 0 {name=Column2 lab=Column2}
 C {devices/iopin.sym} 1600 720 0 0 {name=DacOutput lab=DacOutput}
-C {sky130_hilas_LevelShift4InputUp_bb.sym} -700 -310 0 0 {name=x5}
-C {sky130_hilas_LevelShift4InputUp_bb.sym} -710 100 0 0 {name=x13}
-C {sky130_hilas_LevelShift4InputUp_bb.sym} -710 300 0 0 {name=x15}
+C {sky130_hilas_LevelShift4InputUp.sym} -700 -310 0 0 {name=x5}
+C {sky130_hilas_LevelShift4InputUp.sym} -710 100 0 0 {name=x13}
+C {sky130_hilas_LevelShift4InputUp.sym} -710 300 0 0 {name=x15}
 C {devices/iopin.sym} -1170 -500 0 1 {name=Dig01 lab=Dig01}
 C {devices/iopin.sym} -1170 -520 0 1 {name=Dig02 lab=Dig02}
 C {devices/iopin.sym} -1170 -540 0 1 {name=Dig03 lab=Dig03}
@@ -545,12 +545,12 @@ C {devices/iopin.sym} 1370 -680 0 1 {name=Dig16 lab=Dig16}
 C {devices/iopin.sym} 1370 -700 0 1 {name=Dig15 lab=Dig15}
 C {devices/iopin.sym} 1370 -720 0 1 {name=Dig14 lab=Dig14}
 C {devices/iopin.sym} 1370 -740 0 1 {name=Dig13 lab=Dig13}
-C {sky130_hilas_LevelShift4InputUp_bb.sym} 240 -700 0 0 {name=x19}
+C {sky130_hilas_LevelShift4InputUp.sym} 240 -700 0 0 {name=x19}
 C {devices/iopin.sym} 1160 330 0 0 {name=Dig21 lab=Dig21}
 C {devices/iopin.sym} 1160 350 0 0 {name=Dig22 lab=Dig22}
 C {devices/iopin.sym} 1160 370 0 0 {name=Dig23 lab=Dig23}
 C {devices/iopin.sym} 1160 390 0 0 {name=Dig24 lab=Dig24}
-C {sky130_hilas_pFETLarge_bb.sym} 220 460 0 0 {name=x20}
+C {sky130_hilas_pFETLarge.sym} 220 460 0 0 {name=x20}
 C {devices/iopin.sym} 1260 720 0 1 {name=Dig25 lab=Dig25}
 C {devices/iopin.sym} 1260 780 0 1 {name=Dig26 lab=Dig26}
 C {devices/iopin.sym} 1260 760 0 1 {name=Dig27 lab=Dig27}
@@ -560,6 +560,6 @@ C {devices/iopin.sym} -10 -660 0 1 {name=Dig17 lab=Dig17}
 C {devices/iopin.sym} -10 -680 0 1 {name=Dig18 lab=Dig18}
 C {devices/iopin.sym} -10 -700 0 1 {name=Dig19 lab=Dig19}
 C {devices/iopin.sym} -10 -720 0 1 {name=Dig20 lab=Dig20}
-C {sky130_hilas_pFETLarge_bb.sym} 220 390 0 0 {name=x21}
-C {sky130_hilas_pFETLarge_bb.sym} 220 320 0 0 {name=x22}
-C {sky130_hilas_pFETLarge_bb.sym} 220 250 0 0 {name=x23}
+C {sky130_hilas_pFETLarge.sym} 220 390 0 0 {name=x21}
+C {sky130_hilas_pFETLarge.sym} 220 320 0 0 {name=x22}
+C {sky130_hilas_pFETLarge.sym} 220 250 0 0 {name=x23}
