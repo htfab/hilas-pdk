@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1623769153
+timestamp 1624567800
 << error_s >>
 rect 168 160 174 166
 rect 273 160 279 166
@@ -154,8 +154,6 @@ rlabel poly 379 -166 396 -151 0 FG3
 rlabel poly 389 -307 406 -292 0 FG4
 rlabel metal2 -263 155 -256 173 0 DRAIN1
 port 6 nsew
-rlabel metal2 -263 112 -256 130 0 COL1
-port 7 nsew
 rlabel metal2 -264 12 -257 30 0 ROW2
 port 9 nsew
 rlabel metal2 -264 -31 -257 -13 0 DRAIN2
@@ -168,4 +166,6 @@ rlabel metal2 -262 -286 -256 -269 0 ROW4
 port 11 nsew
 rlabel metal2 -262 -330 -256 -313 0 DRAIN4
 port 12 nsew
+rlabel metal2 -263 112 -256 130 0 ROW1
+port 13 nsew
 << end >>
