@@ -129,7 +129,7 @@ rlabel metal1 -475 591 -437 601 0 GATE1
 port 3 nsew analog default
 rlabel metal1 -475 -4 -437 5 0 GATE1
 port 3 nsew analog default
-rlabel metal1 956 -3 972 3 0 VPWR
+rlabel metal1 956 -3 972 3 0 VINJ
 port 4 nsew power default
 rlabel metal1 441 -4 479 11 0 GATE2
 port 1 nsew analog default
