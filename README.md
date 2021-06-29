@@ -50,76 +50,83 @@ idea to start by taking a look at the [Fastlane Page](https://gitlab.com/um-ece/
 
 | Block Name                | Description                                             |
 |---------------------------|---------------------------------------------------------|
-| [`DAC5bit01`](#DAC5bit01) | 5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit, and they would use this cell |
-| [`FGBias2x1cell`](#FGBias2x1cell) |                                                         |
-| [`FGBiasWeakGate2x1cell`](#FGBiasWeakGate2x1cell) | 2x1 array of FG switch cells configured as pFET current sources with weak capacitive gate inputs |
-| [`FGtrans2x1cell`](#FGtrans2x1cell) |                                                         |
-| [`TA2Cell_1FG`](#TA2Cell-1FG) | Two transimpedance amps with one (of two) amplifiers using floating-gate
+| [`sky130_hilas_DAC5bit01`](#sky130-hilas-DAC5bit01) | 5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit, and they would use this cell |
+| [`sky130_hilas_FGBias2x1cell`](#sky130-hilas-FGBias2x1cell) |                                                         |
+| [`sky130_hilas_FGBiasWeakGate2x1cell`](#sky130-hilas-FGBiasWeakGate2x1cell) | 2x1 array of FG switch cells configured as pFET current sources with weak capacitive gate inputs |
+| [`sky130_hilas_FGtrans2x1cell`](#sky130-hilas-FGtrans2x1cell) |                                                         |
+| [`sky130_hilas_LevelShift4InputUp`](#sky130-hilas-LevelShift4InputUp) | 4-channel level shifter                                 |
+| [`sky130_hilas_StepUpDigital`](#sky130-hilas-StepUpDigital) | a single level shifter                                  |
+| [`sky130_hilas_TA2Cell_1FG`](#sky130-hilas-TA2Cell-1FG) | Two transimpedance amps with one (of two) amplifiers using floating-gate
   inputs. FG amplifier with wide linear range. |
-| [`TA2Cell_1FG_Strong`](#TA2Cell-1FG-Strong) | Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with normal linear range. |
-| [`TA2Cell_NoFG`](#TA2Cell-NoFG) | Two transimpedane amplifiers with no floating-gate inputs. |
-| [`TA2SignalBiasCell`](#TA2SignalBiasCell) |                                                         |
-| [`Tgate4Double01`](#Tgate4Double01) | 4 double-throw transmission gates                       |
-| [`Tgate4Single01`](#Tgate4Single01) | 4 single-throw transmission gates                       |
-| [`Trans4small`](#Trans4small) | 3 small nFETs + 3 small pFETs                           |
-| [`WTA4Stage01`](#WTA4Stage01) | 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one nFET transistor current source. |
-| [`capacitorArray01`](#capacitorArray01) | selectable capacitor array                              |
-| [`capacitorSize01`](#capacitorSize01) |                                                         |
-| [`capacitorSize02`](#capacitorSize02) |                                                         |
-| [`capacitorSize03`](#capacitorSize03) |                                                         |
-| [`capacitorSize04`](#capacitorSize04) |                                                         |
-| [`cellAttempt01`](#cellAttempt01) | 4x1 array of FG switch cell, Varactor capacitor cell    |
-| [`drainSelect01`](#drainSelect01) | multiplexor for drain selection for 4 drain lines, pitch matched |
-| [`nFETLarge`](#nFETLarge) | Single Large (W//L=100) nFET Transistor                 |
-| [`pFETLarge`](#pFETLarge) | Single Large (W/L=100) pFET Transistor                  |
-| [`pFETmed`](#pFETmed) | Medium-sized (W/L=10) pFET transistor                   |
-| [`swc4x1BiasCell`](#swc4x1BiasCell) | 4x1 array of FG switch cell configured pFET as current sources |
-| [`swc4x1cellOverlap`](#swc4x1cellOverlap) | 4x1 array of FG switch cell using overlap capacitors    |
-| [`swc4x1cellOverlap2`](#swc4x1cellOverlap2) |                                                         |
-| [`swc4x2cell`](#swc4x2cell) | 4x2 array of FG switch cell, Varactor capacitor cell    |
-| [`swc4x2cellOverlap`](#swc4x2cellOverlap) | Core switch cell, built with overlap capacitor          |
+| [`sky130_hilas_TA2Cell_1FG_Strong`](#sky130-hilas-TA2Cell-1FG-Strong) | Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with normal linear range. |
+| [`sky130_hilas_TA2Cell_NoFG`](#sky130-hilas-TA2Cell-NoFG) | Two transimpedane amplifiers with no floating-gate inputs. |
+| [`sky130_hilas_TA2SignalBiasCell`](#sky130-hilas-TA2SignalBiasCell) |                                                         |
+| [`sky130_hilas_Tgate4Double01`](#sky130-hilas-Tgate4Double01) | 4 double-throw transmission gates                       |
+| [`sky130_hilas_Tgate4Single01`](#sky130-hilas-Tgate4Single01) | 4 single-throw transmission gates                       |
+| [`sky130_hilas_Trans4small`](#sky130-hilas-Trans4small) | 3 small nFETs + 3 small pFETs                           |
+| [`sky130_hilas_VinjDecode2to4`](#sky130-hilas-VinjDecode2to4) | a 2-to-4 decoder capable of handling VINJ voltage       |
+| [`sky130_hilas_VinjDiodeProtect01`](#sky130-hilas-VinjDiodeProtect01) | protective ESD diode for VINJ line                      |
+| [`sky130_hilas_VinjInv2`](#sky130-hilas-VinjInv2) | logical inverter for VINJ-level voltages                |
+| [`sky130_hilas_VinjNOR3`](#sky130-hilas-VinjNOR3) | 3-input NOR gate capable of VING voltage                |
+| [`sky130_hilas_WTA4Stage01`](#sky130-hilas-WTA4Stage01) | 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one nFET transistor current source. |
+| [`sky130_hilas_capacitorArray01`](#sky130-hilas-capacitorArray01) | selectable capacitor array                              |
+| [`sky130_hilas_capacitorSize01`](#sky130-hilas-capacitorSize01) | smallest cap                                            |
+| [`sky130_hilas_capacitorSize02`](#sky130-hilas-capacitorSize02) | mid-small cap                                           |
+| [`sky130_hilas_capacitorSize03`](#sky130-hilas-capacitorSize03) | mid-large cap                                           |
+| [`sky130_hilas_capacitorSize04`](#sky130-hilas-capacitorSize04) | large cap                                               |
+| [`sky130_hilas_cellAttempt01`](#sky130-hilas-cellAttempt01) | 4x1 array of FG switch cell, Varactor capacitor cell    |
+| [`sky130_hilas_drainSelect01`](#sky130-hilas-drainSelect01) | multiplexor for drain selection for 4 drain lines, pitch matched |
+| [`sky130_hilas_nFETLarge`](#sky130-hilas-nFETLarge) | Single Large (W//L=100) nFET Transistor                 |
+| [`sky130_hilas_pFETLarge`](#sky130-hilas-pFETLarge) | Single Large (W/L=100) pFET Transistor                  |
+| [`sky130_hilas_pFETmed`](#sky130-hilas-pFETmed) | Medium-sized (W/L=10) pFET transistor                   |
+| [`sky130_hilas_polyresistorGND`](#sky130-hilas-polyresistorGND) | protective current-limiting resistor to ground          |
+| [`sky130_hilas_swc4x1BiasCell`](#sky130-hilas-swc4x1BiasCell) | 4x1 array of FG switch cell configured pFET as current sources |
+| [`sky130_hilas_swc4x1cellOverlap`](#sky130-hilas-swc4x1cellOverlap) | 4x1 array of FG switch cell using overlap capacitors    |
+| [`sky130_hilas_swc4x1cellOverlap2`](#sky130-hilas-swc4x1cellOverlap2) | 4x1 analog mux with overlap                             |
+| [`sky130_hilas_swc4x2cell`](#sky130-hilas-swc4x2cell) | 4x2 array of FG switch cell, Varactor capacitor cell    |
+| [`sky130_hilas_swc4x2cellOverlap`](#sky130-hilas-swc4x2cellOverlap) | Core switch cell, built with overlap capacitor          |
 
 # Primitive Cells in this Library:
 
 | Block Name                | Description                                             |
 |---------------------------|---------------------------------------------------------|
-| [`CapModule01`](#CapModule01) |                                                         |
-| [`CapModule01a`](#CapModule01a) | primitive cap, variant 01a                              |
-| [`CapModule02`](#CapModule02) |                                                         |
-| [`CapModule03`](#CapModule03) |                                                         |
-| [`DAC6TransistorStack01`](#DAC6TransistorStack01) |                                                         |
-| [`DAC6TransistorStack01a`](#DAC6TransistorStack01a) |                                                         |
-| [`DAC6TransistorStack01b`](#DAC6TransistorStack01b) |                                                         |
-| [`DAC6TransistorStack01c`](#DAC6TransistorStack01c) |                                                         |
-| [`DAC6bit01`](#DAC6bit01) |                                                         |
-| [`DoubleTGate01`](#DoubleTGate01) | 2x1 array of transmission gates                         |
-| [`DualTACore01`](#DualTACore01) |                                                         |
-| [`FGHugeVaractorCapacitor01`](#FGHugeVaractorCapacitor01) | one large varactor cap                                  |
-| [`FGVaractorCapacitor`](#FGVaractorCapacitor) | varactor cap for floating-gate charge storage           |
-| [`FGVaractorCapacitor02`](#FGVaractorCapacitor02) | variant 2, varactor cap for floating-gate charge storage |
-| [`TACoreBlock`](#TACoreBlock) |                                                         |
-| [`TACoreBlock2`](#TACoreBlock2) |                                                         |
-| [`TgateDouble01`](#TgateDouble01) |                                                         |
-| [`TgateSingle01`](#TgateSingle01) |                                                         |
-| [`TgateSingle01Part1`](#TgateSingle01Part1) |                                                         |
-| [`TgateSingle01Part2`](#TgateSingle01Part2) |                                                         |
-| [`TgateVinj01`](#TgateVinj01) |                                                         |
-| [`WTAblockSample01`](#WTAblockSample01) |                                                         |
-| [`WTAsinglestage01`](#WTAsinglestage01) |                                                         |
-| [`invert01`](#invert01) |                                                         |
-| [`nFETLargePart1`](#nFETLargePart1) |                                                         |
-| [`nFETmirrorPairs`](#nFETmirrorPairs) | pairs of nFET current mirrors                           |
-| [`nFETmirrorPairs2`](#nFETmirrorPairs2) |                                                         |
-| [`nMirror03`](#nMirror03) |                                                         |
-| [`pFETmirror`](#pFETmirror) | pFET current mirror                                     |
-| [`pFETmirror02`](#pFETmirror02) | second pFET current mirror                              |
-| [`pTransistorPair`](#pTransistorPair) |                                                         |
+| [`sky130_hilas_CapModule01`](#sky130-hilas-CapModule01) |                                                         |
+| [`sky130_hilas_CapModule01a`](#sky130-hilas-CapModule01a) | primitive cap, variant 01a                              |
+| [`sky130_hilas_CapModule02`](#sky130-hilas-CapModule02) |                                                         |
+| [`sky130_hilas_CapModule03`](#sky130-hilas-CapModule03) |                                                         |
+| [`sky130_hilas_DAC6TransistorStack01`](#sky130-hilas-DAC6TransistorStack01) |                                                         |
+| [`sky130_hilas_DAC6TransistorStack01a`](#sky130-hilas-DAC6TransistorStack01a) |                                                         |
+| [`sky130_hilas_DAC6TransistorStack01b`](#sky130-hilas-DAC6TransistorStack01b) |                                                         |
+| [`sky130_hilas_DAC6TransistorStack01c`](#sky130-hilas-DAC6TransistorStack01c) |                                                         |
+| [`sky130_hilas_DAC6bit01`](#sky130-hilas-DAC6bit01) |                                                         |
+| [`sky130_hilas_DoubleTGate01`](#sky130-hilas-DoubleTGate01) | 2x1 array of transmission gates                         |
+| [`sky130_hilas_DualTACore01`](#sky130-hilas-DualTACore01) |                                                         |
+| [`sky130_hilas_FGHugeVaractorCapacitor01`](#sky130-hilas-FGHugeVaractorCapacitor01) | one large varactor cap                                  |
+| [`sky130_hilas_FGVaractorCapacitor`](#sky130-hilas-FGVaractorCapacitor) | varactor cap for floating-gate charge storage           |
+| [`sky130_hilas_FGVaractorCapacitor02`](#sky130-hilas-FGVaractorCapacitor02) | variant 2, varactor cap for floating-gate charge storage |
+| [`sky130_hilas_TACoreBlock`](#sky130-hilas-TACoreBlock) |                                                         |
+| [`sky130_hilas_TACoreBlock2`](#sky130-hilas-TACoreBlock2) |                                                         |
+| [`sky130_hilas_TgateDouble01`](#sky130-hilas-TgateDouble01) |                                                         |
+| [`sky130_hilas_TgateSingle01`](#sky130-hilas-TgateSingle01) |                                                         |
+| [`sky130_hilas_TgateSingle01Part1`](#sky130-hilas-TgateSingle01Part1) |                                                         |
+| [`sky130_hilas_TgateSingle01Part2`](#sky130-hilas-TgateSingle01Part2) |                                                         |
+| [`sky130_hilas_TgateVinj01`](#sky130-hilas-TgateVinj01) |                                                         |
+| [`sky130_hilas_WTAblockSample01`](#sky130-hilas-WTAblockSample01) |                                                         |
+| [`sky130_hilas_WTAsinglestage01`](#sky130-hilas-WTAsinglestage01) |                                                         |
+| [`sky130_hilas_invert01`](#sky130-hilas-invert01) |                                                         |
+| [`sky130_hilas_nFETLargePart1`](#sky130-hilas-nFETLargePart1) |                                                         |
+| [`sky130_hilas_nFETmirrorPairs`](#sky130-hilas-nFETmirrorPairs) | pairs of nFET current mirrors                           |
+| [`sky130_hilas_nFETmirrorPairs2`](#sky130-hilas-nFETmirrorPairs2) |                                                         |
+| [`sky130_hilas_nMirror03`](#sky130-hilas-nMirror03) |                                                         |
+| [`sky130_hilas_pFETmirror`](#sky130-hilas-pFETmirror) | pFET current mirror                                     |
+| [`sky130_hilas_pFETmirror02`](#sky130-hilas-pFETmirror02) | second pFET current mirror                              |
+| [`sky130_hilas_pTransistorPair`](#sky130-hilas-pTransistorPair) |                                                         |
 
 # Test Cells in this Library:
 
 | Block Name                | Description                                             |
 |---------------------------|---------------------------------------------------------|
-| [`FGcharacterization01`](#FGcharacterization01) | FG test strucure that uses a capacitor around a transconductance amplifier |
+| [`sky130_hilas_FGcharacterization01`](#sky130-hilas-FGcharacterization01) | FG test strucure that uses a capacitor around a transconductance amplifier |
 
 <!--
     This Markdown text is autogenerated. Do not Modify here. 
@@ -129,8 +136,8 @@ idea to start by taking a look at the [Fastlane Page](https://gitlab.com/um-ece/
 ## STANDARD-CELLS
 
 --------------------------------------------------------------------------------------------
-<a name="DAC5bit01"></a>
-### `DAC5bit01`
+<a name="sky130-hilas-DAC5bit01"></a>
+### `sky130_hilas_DAC5bit01`
 
 Description: 5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit, and they would use this cell
 
@@ -146,10 +153,10 @@ Width: 16.580
 | 4                    | A3                   | metal2               | nsew,analog,default  |
 | 5                    | A4                   | metal2               | nsew,analog,default  |
 | 6                    | VPWR                 | metal2               | nsew,analog,default  |
-| 7                    | DRAIN                | metal1               | nsew,analog,default  |
+| 7                    | OUT                  | metal1               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="FGBias2x1cell"></a>
-### `FGBias2x1cell`
+<a name="sky130-hilas-FGBias2x1cell"></a>
+### `sky130_hilas_FGBias2x1cell`
 
 Description: None
 
@@ -169,8 +176,8 @@ Width: 11.530
 | 10                   | GATECOL              | metal1               | nsew                 |
 | 11                   | VINJ                 | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
-<a name="FGBiasWeakGate2x1cell"></a>
-### `FGBiasWeakGate2x1cell`
+<a name="sky130-hilas-FGBiasWeakGate2x1cell"></a>
+### `sky130_hilas_FGBiasWeakGate2x1cell`
 
 Description: 2x1 array of FG switch cells configured as pFET current sources with weak capacitive gate inputs
 
@@ -181,21 +188,20 @@ Width: 11.530
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 | 1                    | DRAIN1               | metal2               | nsew,analog,default  |
-| 2                    | INPUT1               | metal2               | nsew                 |
-| 3                    | OUTPUT1              | metal2               | nsew,analog,default  |
-| 4                    | OUTPUT2              | metal2               | nsew,analog,default  |
+| 2                    | VIN11                | metal2               | nsew                 |
+| 3                    | ROW1                 | metal2               | nsew,analog,default  |
+| 4                    | ROW2                 | metal2               | nsew,analog,default  |
 | 5                    | VINJ                 | metal1               | nsew,power,default   |
-| 6                    | GATESELECT           | metal1               | nsew,analog,default  |
+| 6                    | COLSEL1              | metal1               | nsew,analog,default  |
 | 7                    | VGND                 | metal1               | nsew,ground,default  |
-| 8                    | GATE_CONTROL         | metal1               | nsew,analog,default  |
 | 9                    | VTUN                 | metal1               | nsew,analog,default  |
-| 10                   | GATECONTROL          | metal1               | nsew,analog,default  |
-| 11                   | DRAIN4               | metal2               | nsew,analog,default  |
-| 12                   | INPUT2               | metal2               | nsew,analog,default  |
+| 10                   | GATE1                | metal1               | nsew,analog,default  |
+| 11                   | DRAIN2               | metal2               | nsew,analog,default  |
+| 12                   | VIN12                | metal2               | nsew,analog,default  |
 | 13                   | COMMONSOURCE         | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="FGtrans2x1cell"></a>
-### `FGtrans2x1cell`
+<a name="sky130-hilas-FGtrans2x1cell"></a>
+### `sky130_hilas_FGtrans2x1cell`
 
 Description: None
 
@@ -205,24 +211,58 @@ Width: 11.520
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | GATESELECT           | metal1               | nsew,analog,default  |
+| 1                    | COLSEL1              | metal1               | nsew,analog,default  |
 | 2                    | VINJ                 | metal1               | nsew,analog,default  |
 | 3                    | DRAIN1               | metal2               | nsew,analog,default  |
-| 4                    | DRAIN4               | metal2               | nsew,analog,default  |
+| 4                    | DRAIN2               | metal2               | nsew,analog,default  |
 | 5                    | PROG                 | metal1               | nsew,analog,default  |
 | 6                    | RUN                  | metal1               | nsew,analog,default  |
-| 7                    | GATE1                | metal1               | nsew,analog,default  |
-| 8                    | GATE2                | metal1               | nsew,analog,default  |
-| 9                    | PROGGATE             | metal1               | nsew,analog,default  |
+| 7                    | VIN2                 | metal1               | nsew,analog,default  |
+| 8                    | VIN1                 | metal1               | nsew,analog,default  |
+| 9                    | GATE1                | metal1               | nsew,analog,default  |
 | 10                   | VGND                 | metal1               | nsew,ground,default  |
 | 11                   | VTUN                 | metal1               | nsew,analog,default  |
-| 12                   | FGDRAINPROGRAM2      | metal2               | e,analog,default     |
-| 13                   | DRAIN                | metal2               | e,analog,default     |
-| 14                   | VS                   | metal2               | nsew,analog,default  |
-| 15                   | FGDRAINPROGRAM1      | metal2               | nsew,analog,default  |
+| 16                   | COL1                 | metal2               | nsew                 |
+| 17                   | ROW1                 | metal2               | nsew                 |
+| 18                   | ROW2                 | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
-<a name="TA2Cell-1FG"></a>
-### `TA2Cell_1FG`
+<a name="sky130-hilas-LevelShift4InputUp"></a>
+### `sky130_hilas_LevelShift4InputUp`
+
+Description: 4-channel level shifter
+
+Height: 6.240
+<br>
+Width: 8.800
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | INPUT1               | metal2               | nsew                 |
+| 2                    | INPUT2               | metal2               | nsew                 |
+| 3                    | INPUT3               | metal2               | nsew                 |
+| 4                    | INPUT4               | metal2               | nsew                 |
+| 5                    | VPWR                 | metal1               | nsew                 |
+| 6                    | VINJ                 | metal1               | nsew                 |
+| 7                    | OUTPUT1              | metal2               | nsew                 |
+| 8                    | OUTPUT2              | metal2               | nsew                 |
+| 9                    | OUTPUT3              | metal2               | nsew                 |
+| 10                   | OUTPUT4              | metal2               | nsew                 |
+| 11                   | VGND                 | metal1               | nsew                 |
+--------------------------------------------------------------------------------------------
+<a name="sky130-hilas-StepUpDigital"></a>
+### `sky130_hilas_StepUpDigital`
+
+Description: a single level shifter
+
+Height: 1.590
+<br>
+Width: 8.800
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="sky130-hilas-TA2Cell-1FG"></a>
+### `sky130_hilas_TA2Cell_1FG`
 
 Description: Two transimpedance amps with one (of two) amplifiers using floating-gate
   inputs. FG amplifier with wide linear range.
@@ -233,19 +273,25 @@ Width: 28.090
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | VINN_AMP1            | space                | nsew,analog,default  |
-| 2                    | VINP_AMP1            | metal2               | nsew,analog,default  |
-| 3                    | VINP_AMP2            | metal2               | nsew,analog,default  |
-| 4                    | VINN_AMP2            | metal2               | n,analog,default     |
-| 5                    | GATECOLSELECT        | metal1               | nsew,analog,default  |
+| 1                    | VIN12                | space                | nsew,analog,default  |
+| 2                    | VIN11                | metal2               | nsew,analog,default  |
+| 3                    | VIN21                | metal2               | nsew,analog,default  |
+| 4                    | VIN22                | metal2               | n,analog,default     |
 | 6                    | VPWR                 | metal1               | nsew,power,default   |
-| 7                    | VGND                 | metal1               | nsew,ground,default  |
-| 8                    | VINJ                 | metal1               | nsew,power,default   |
+| 7                    | VGND                 | metal1               | nsew                 |
+| 8                    | VINJ                 | metal1               | nsew                 |
 | 9                    | OUTPUT1              | metal2               | nsew,analog,default  |
 | 10                   | OUTPUT2              | metal2               | nsew,analog,default  |
+| 11                   | DRAIN1               | metal2               | nsew                 |
+| 12                   | DRAIN2               | metal2               | nsew                 |
+| 13                   | COLSEL2              | metal1               | nsew                 |
+| 14                   | GATE2                | metal1               | nsew                 |
+| 15                   | GATE1                | metal1               | nsew                 |
+| 16                   | COLSEL1              | metal1               | nsew                 |
+| 17                   | VTUN                 | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
-<a name="TA2Cell-1FG-Strong"></a>
-### `TA2Cell_1FG_Strong`
+<a name="sky130-hilas-TA2Cell-1FG-Strong"></a>
+### `sky130_hilas_TA2Cell_1FG_Strong`
 
 Description: Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with normal linear range.
 
@@ -256,13 +302,12 @@ Width: 28.100
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 | 1                    | VTUN                 | metal1               | nsew                 |
-| 2                    | VGATE2               | metal1               | nsew                 |
 | 3                    | PROG                 | metal1               | nsew                 |
-| 4                    | VGATE1               | metal1               | nsew                 |
-| 5                    | VINP_AMP1            | metal1               | nsew                 |
+| 4                    | GATE1                | metal1               | nsew                 |
+| 5                    | VIN11                | metal1               | nsew                 |
 | 6                    | VINJ                 | metal1               | nsew                 |
-| 8                    | VINN_AMP2            | metal2               | n                    |
-| 9                    | VINP_AMP2            | metal2               | nsew                 |
+| 8                    | VIN22                | metal2               | n                    |
+| 9                    | VIN21                | metal2               | nsew                 |
 | 10                   | VPWR                 | metal1               | nsew                 |
 | 11                   | VGND                 | metal1               | nsew                 |
 | 12                   | OUTPUT2              | metal2               | nsew                 |
@@ -271,10 +316,12 @@ Width: 28.100
 | 15                   | GATESEL2             | metal1               | nsew                 |
 | 16                   | DRAIN1               | metal2               | nsew                 |
 | 17                   | DRAIN2               | metal2               | nsew                 |
-| 18                   | VINN_AMP1            | metal1               | nsew                 |
+| 18                   | VIN12                | metal1               | nsew                 |
+| 19                   | GATE2                | metal1               | nsew                 |
+| 20                   | RUN                  | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
-<a name="TA2Cell-NoFG"></a>
-### `TA2Cell_NoFG`
+<a name="sky130-hilas-TA2Cell-NoFG"></a>
+### `sky130_hilas_TA2Cell_NoFG`
 
 Description: Two transimpedane amplifiers with no floating-gate inputs.
 
@@ -284,17 +331,23 @@ Width: 17.920
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | GATECOLSELECT        | metal1               | nsew                 |
-| 2                    | VINN_AMP1            | metal2               | nsew,analog,default  |
-| 3                    | VINP_AMP2            | metal2               | nsew                 |
-| 4                    | VINN_AMP2            | metal2               | nsew                 |
-| 5                    | VOUT_AMP1            | metal2               | nsew                 |
-| 6                    | VOUT_AMP2            | metal2               | nsew                 |
+| 1                    | COLSEL1              | metal1               | nsew                 |
+| 2                    | VIN12                | metal2               | nsew,analog,default  |
+| 3                    | VIN21                | metal2               | nsew                 |
+| 4                    | VIN22                | metal2               | nsew                 |
+| 5                    | OUTPUT1              | metal2               | nsew                 |
+| 6                    | OUTPUT2              | metal2               | nsew                 |
 | 7                    | VGND                 | metal1               | nsew,ground,default  |
 | 8                    | VPWR                 | metal1               | nsew,power,default   |
+| 9                    | DRAIN1               | metal2               | nsew                 |
+| 10                   | DRAIN2               | metal2               | nsew                 |
+| 11                   | VTUN                 | metal1               | nsew                 |
+| 12                   | GATE1                | metal1               | nsew                 |
+| 13                   | VINJ                 | metal1               | nsew                 |
+| 14                   | VIN11                | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
-<a name="TA2SignalBiasCell"></a>
-### `TA2SignalBiasCell`
+<a name="sky130-hilas-TA2SignalBiasCell"></a>
+### `sky130_hilas_TA2SignalBiasCell`
 
 Description: None
 
@@ -308,15 +361,15 @@ Width: 8.450
 | 2                    | VOUT_AMP1            | metal2               | nsew,analog,default  |
 | 3                    | VGND                 | metal1               | nsew,ground,default  |
 | 4                    | VPWR                 | metal2               | nsew,power,default   |
-| 5                    | VINN_AMP2            | metal2               | nsew,analog,default  |
-| 6                    | VINP_AMP2            | metal2               | nsew,analog,default  |
-| 7                    | VINP_AMP1            | metal2               | nsew,analog,default  |
-| 8                    | VINN_AMP1            | metal2               | nsew,analog,default  |
+| 5                    | VIN22                | metal2               | nsew,analog,default  |
+| 6                    | VIN21                | metal2               | nsew,analog,default  |
+| 7                    | VIN11                | metal2               | nsew,analog,default  |
+| 8                    | VIN12                | metal2               | nsew,analog,default  |
 | 9                    | VBIAS2               | metal2               | nsew,analog,default  |
 | 10                   | VBIAS1               | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="Tgate4Double01"></a>
-### `Tgate4Double01`
+<a name="sky130-hilas-Tgate4Double01"></a>
+### `sky130_hilas_Tgate4Double01`
 
 Description: 4 double-throw transmission gates
 
@@ -328,7 +381,6 @@ Width: 7.080
 |----------------------|----------------------|----------------------|----------------------|
 | 1                    | VGND                 | metal1               | nsew                 |
 | 2                    | INPUT1_1             | metal2               | nsew                 |
-| 3                    | INPUT2_1             | metal2               | nsew                 |
 | 4                    | SELECT1              | metal2               | nsew                 |
 | 5                    | SELECT2              | metal2               | nsew                 |
 | 6                    | INPUT2_2             | metal2               | nsew                 |
@@ -343,9 +395,11 @@ Width: 7.080
 | 15                   | OUTPUT3              | metal2               | nsew                 |
 | 16                   | OUTPUT2              | metal2               | nsew                 |
 | 17                   | OUTPUT1              | metal2               | nsew                 |
+| 18                   | INPUT2_1             | metal2               | nsew                 |
+| 19                   | INPUT1_3             | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
-<a name="Tgate4Single01"></a>
-### `Tgate4Single01`
+<a name="sky130-hilas-Tgate4Single01"></a>
+### `sky130_hilas_Tgate4Single01`
 
 Description: 4 single-throw transmission gates
 
@@ -370,8 +424,8 @@ Width: 4.760
 | 13                   | OUTPUT3              | metal2               | nsew,analog,default  |
 | 14                   | OUTPUT4              | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="Trans4small"></a>
-### `Trans4small`
+<a name="sky130-hilas-Trans4small"></a>
+### `sky130_hilas_Trans4small`
 
 Description: 3 small nFETs + 3 small pFETs
 
@@ -402,8 +456,65 @@ Width: 2.800
 | 19                   | NFET_DRAIN2          | metal2               | nsew,analog,default  |
 | 20                   | NFET_DRAIN1          | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="WTA4Stage01"></a>
-### `WTA4Stage01`
+<a name="sky130-hilas-VinjDecode2to4"></a>
+### `sky130_hilas_VinjDecode2to4`
+
+Description: a 2-to-4 decoder capable of handling VINJ voltage
+
+Height: 6.160
+<br>
+Width: 12.950
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | OUTPUT00             | metal2               | nsew                 |
+| 2                    | OUTPUT01             | metal2               | nsew                 |
+| 3                    | OUTPUT10             | metal2               | nsew                 |
+| 4                    | OUTPUT11             | metal2               | nsew                 |
+| 5                    | VGND                 | metal1               | nsew                 |
+| 6                    | VINJ                 | metal1               | nsew                 |
+| 7                    | IN2                  | metal2               | nsew                 |
+| 8                    | IN1                  | metal2               | nsew                 |
+| 9                    | ENABLE               | metal2               | nsew                 |
+--------------------------------------------------------------------------------------------
+<a name="sky130-hilas-VinjDiodeProtect01"></a>
+### `sky130_hilas_VinjDiodeProtect01`
+
+Description: protective ESD diode for VINJ line
+
+Height: 6.780
+<br>
+Width: 11.650
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="sky130-hilas-VinjInv2"></a>
+### `sky130_hilas_VinjInv2`
+
+Description: logical inverter for VINJ-level voltages
+
+Height: 1.640
+<br>
+Width: 3.610
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="sky130-hilas-VinjNOR3"></a>
+### `sky130_hilas_VinjNOR3`
+
+Description: 3-input NOR gate capable of VING voltage
+
+Height: 1.640
+<br>
+Width: 6.880
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="sky130-hilas-WTA4Stage01"></a>
+### `sky130_hilas_WTA4Stage01`
 
 Description: 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one nFET transistor current source.
 
@@ -414,8 +525,6 @@ Width: 14.170
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 | 1                    | VGND                 | metal1               | nsew,ground,default  |
-| 2                    | COMMONNODE           | metal1               | nsew,analog,default  |
-| 3                    | COMMONMODE           | poly                 | nsew,analog,default  |
 | 4                    | OUTPUT1              | metal2               | nsew,analog,default  |
 | 5                    | OUTPUT2              | metal2               | nsew,analog,default  |
 | 6                    | OUTPUT3              | metal2               | nsew,analog,default  |
@@ -424,9 +533,19 @@ Width: 14.170
 | 9                    | INPUT2               | metal2               | nsew,analog,default  |
 | 10                   | INPUT3               | metal2               | nsew,analog,default  |
 | 11                   | INPUT4               | metal2               | nsew,analog,default  |
+| 12                   | DRAIN1               | metal2               | nsew                 |
+| 13                   | DRAIN2               | metal2               | nsew                 |
+| 14                   | DRAIN3               | metal2               | nsew                 |
+| 15                   | DRAIN4               | metal2               | nsew                 |
+| 16                   | GATE1                | metal1               | nsew                 |
+| 17                   | VTUN                 | metal1               | nsew                 |
+| 18                   | WTAMIDDLENODE        | metal1               | nsew                 |
+| 19                   | COLSEL1              | metal1               | nsew                 |
+| 20                   | VPWR                 | metal1               | nsew                 |
+| 21                   | VINJ                 | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
-<a name="capacitorArray01"></a>
-### `capacitorArray01`
+<a name="sky130-hilas-capacitorArray01"></a>
+### `sky130_hilas_capacitorArray01`
 
 Description: selectable capacitor array
 
@@ -436,17 +555,21 @@ Width: 36.700
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | CAPTERMINAL2         | metal2               | nsew,analog,default  |
-| 2                    | CAPTERM01            | metal2               | nsew,analog,default  |
+| 1                    | CAPTERM2             | metal2               | nsew,analog,default  |
+| 2                    | CAPTERM1             | metal2               | nsew,analog,default  |
 | 3                    | VINJ                 | metal1               | nsew,power,default   |
 | 4                    | GATESELECT           | metal1               | nsew                 |
 | 5                    | VTUN                 | metal1               | nsew                 |
 | 6                    | GATE                 | metal1               | nsew,analog,default  |
+| 7                    | DRAIN2               | metal2               | nsew                 |
+| 8                    | DRAIN1               | metal2               | nsew                 |
+| 10                   | DRAIN4               | metal2               | nsew                 |
+| 11                   | DRAIN3               | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
-<a name="capacitorSize01"></a>
-### `capacitorSize01`
+<a name="sky130-hilas-capacitorSize01"></a>
+### `sky130_hilas_capacitorSize01`
 
-Description: None
+Description: smallest cap
 
 Height: 5.830
 <br>
@@ -457,10 +580,10 @@ Width: 10.420
 | 1                    | CAPTERM02            | metal2               | nsew,analog,default  |
 | 2                    | CAPTERM01            | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="capacitorSize02"></a>
-### `capacitorSize02`
+<a name="sky130-hilas-capacitorSize02"></a>
+### `sky130_hilas_capacitorSize02`
 
-Description: None
+Description: mid-small cap
 
 Height: 5.830
 <br>
@@ -471,10 +594,10 @@ Width: 7.970
 | 1                    | CAPTERM02            | metal2               | nsew,analog,default  |
 | 2                    | CAPTERM01            | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="capacitorSize03"></a>
-### `capacitorSize03`
+<a name="sky130-hilas-capacitorSize03"></a>
+### `sky130_hilas_capacitorSize03`
 
-Description: None
+Description: mid-large cap
 
 Height: 5.870
 <br>
@@ -485,10 +608,10 @@ Width: 5.790
 | 1                    | CAPTERM02            | metal2               | nsew,analog,default  |
 | 2                    | CAPTERM01            | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="capacitorSize04"></a>
-### `capacitorSize04`
+<a name="sky130-hilas-capacitorSize04"></a>
+### `sky130_hilas_capacitorSize04`
 
-Description: None
+Description: large cap
 
 Height: 5.290
 <br>
@@ -501,8 +624,8 @@ Width: 5.780
 | 3                    | CAP2TERM01           | metal2               | nsew,analog,default  |
 | 4                    | CAP1TERM01           | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="cellAttempt01"></a>
-### `cellAttempt01`
+<a name="sky130-hilas-cellAttempt01"></a>
+### `sky130_hilas_cellAttempt01`
 
 Description: 4x1 array of FG switch cell, Varactor capacitor cell
 
@@ -514,19 +637,20 @@ Width: 10.080
 |----------------------|----------------------|----------------------|----------------------|
 | 1                    | VTUN                 | metal1               | nsew                 |
 | 2                    | VINJ                 | metal1               | nsew                 |
-| 3                    | GATESEL1             | metal1               | nsew                 |
+| 3                    | COLSEL1              | metal1               | nsew                 |
+| 4                    | COL1                 | metal1               | nsew                 |
 | 5                    | GATE1                | metal1               | nsew                 |
 | 6                    | DRAIN1               | metal2               | nsew                 |
-| 7                    | COL3                 | metal2               | nsew                 |
-| 7                    | COL1                 | metal2               | nsew                 |
+| 7                    | ROW3                 | metal2               | nsew                 |
 | 8                    | DRAIN2               | metal2               | nsew                 |
-| 9                    | COL2                 | metal2               | nsew                 |
+| 9                    | ROW2                 | metal2               | nsew                 |
 | 10                   | DRAIN3               | metal2               | nsew                 |
-| 11                   | COL4                 | metal2               | nsew                 |
+| 11                   | ROW4                 | metal2               | nsew                 |
 | 12                   | DRAIN4               | metal2               | nsew                 |
+| 13                   | ROW1                 | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
-<a name="drainSelect01"></a>
-### `drainSelect01`
+<a name="sky130-hilas-drainSelect01"></a>
+### `sky130_hilas_drainSelect01`
 
 Description: multiplexor for drain selection for 4 drain lines, pitch matched
 
@@ -540,16 +664,16 @@ Width: 5.420
 | 2                    | DRAIN3               | metal2               | nsew                 |
 | 3                    | DRAIN2               | metal2               | nsew,analog,default  |
 | 4                    | DRAIN1               | metal2               | nsew,analog,default  |
-| 5                    | DRAINSELECT1         | metal1               | nsew,analog,default  |
-| 6                    | DRAINSELECT2         | metal1               | nsew,analog,default  |
-| 7                    | DRAINSELECT3         | metal1               | nsew,analog,default  |
-| 8                    | DRAINSELECT4         | metal1               | nsew,analog,default  |
+| 5                    | SELECT1              | metal1               | nsew,analog,default  |
+| 6                    | SELECT2              | metal1               | nsew,analog,default  |
+| 7                    | SELECT3              | metal1               | nsew,analog,default  |
+| 8                    | SELECT4              | metal1               | nsew,analog,default  |
 | 9                    | VINJ                 | metal1               | nsew,power,default   |
 | 10                   | DRAIN_MUX            | metal1               | nsew,analog,default  |
 | 11                   | VGND                 | metal1               | nsew,ground,default  |
 --------------------------------------------------------------------------------------------
-<a name="nFETLarge"></a>
-### `nFETLarge`
+<a name="sky130-hilas-nFETLarge"></a>
+### `sky130_hilas_nFETLarge`
 
 Description: Single Large (W//L=100) nFET Transistor
 
@@ -563,8 +687,8 @@ Width: 4.370
 | 2                    | SOURCE               | metal2               | nsew,analog,default  |
 | 3                    | DRAIN                | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="pFETLarge"></a>
-### `pFETLarge`
+<a name="sky130-hilas-pFETLarge"></a>
+### `sky130_hilas_pFETLarge`
 
 Description: Single Large (W/L=100) pFET Transistor
 
@@ -579,8 +703,8 @@ Width: 4.640
 | 3                    | DRAIN                | metal2               | nsew,analog,default  |
 | 4                    | WELL                 | metal1               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="pFETmed"></a>
-### `pFETmed`
+<a name="sky130-hilas-pFETmed"></a>
+### `sky130_hilas_pFETmed`
 
 Description: Medium-sized (W/L=10) pFET transistor
 
@@ -591,8 +715,21 @@ Width: 1.190
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="swc4x1BiasCell"></a>
-### `swc4x1BiasCell`
+<a name="sky130-hilas-polyresistorGND"></a>
+### `sky130_hilas_polyresistorGND`
+
+Description: protective current-limiting resistor to ground
+
+Height: 4.980
+<br>
+Width: 56.410
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | VGND                 | metal1               | nsew                 |
+--------------------------------------------------------------------------------------------
+<a name="sky130-hilas-swc4x1BiasCell"></a>
+### `sky130_hilas_swc4x1BiasCell`
 
 Description: 4x1 array of FG switch cell configured pFET as current sources
 
@@ -602,26 +739,22 @@ Width: 10.110
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | BIAS1                | metal2               | nsew,analog,default  |
-| 2                    | BIAS2                | metal2               | nsew,analog,default  |
-| 3                    | BIAS3                | metal2               | nsew,analog,default  |
-| 4                    | BIAS4                | metal2               | nsew,analog,default  |
 | 5                    | VTUN                 | metal1               | nsew,analog,default  |
-| 6                    | GATE                 | metal1               | nsew,analog,default  |
+| 6                    | GATE1                | metal1               | nsew,analog,default  |
 | 7                    | VINJ                 | metal1               | nsew,power,default   |
 | 8                    | VPWR                 | metal1               | nsew,power,default   |
-| 9                    | GATESELECT           | metal1               | nsew,analog,default  |
+| 9                    | COLSEL1              | metal1               | nsew,analog,default  |
 | 10                   | DRAIN1               | metal2               | nsew,analog,default  |
-| 11                   | HORIZ1               | metal2               | nsew,analog,default  |
-| 12                   | HORIZ2               | metal2               | nsew,analog,default  |
+| 11                   | ROW1                 | metal2               | nsew,analog,default  |
+| 12                   | ROW2                 | metal2               | nsew,analog,default  |
 | 13                   | DRAIN2               | metal2               | nsew                 |
 | 14                   | DRAIN3               | metal2               | nsew,analog,default  |
-| 15                   | HORIZ3               | metal2               | nsew,analog,default  |
-| 16                   | HORIZ4               | metal2               | nsew,analog,default  |
+| 15                   | ROW3                 | metal2               | nsew,analog,default  |
+| 16                   | ROW4                 | metal2               | nsew,analog,default  |
 | 17                   | DRAIN4               | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="swc4x1cellOverlap"></a>
-### `swc4x1cellOverlap`
+<a name="sky130-hilas-swc4x1cellOverlap"></a>
+### `sky130_hilas_swc4x1cellOverlap`
 
 Description: 4x1 array of FG switch cell using overlap capacitors
 
@@ -632,10 +765,10 @@ Width: 10.080
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="swc4x1cellOverlap2"></a>
-### `swc4x1cellOverlap2`
+<a name="sky130-hilas-swc4x1cellOverlap2"></a>
+### `sky130_hilas_swc4x1cellOverlap2`
 
-Description: None
+Description: 4x1 analog mux with overlap
 
 Height: 6.050
 <br>
@@ -644,8 +777,8 @@ Width: 9.350
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="swc4x2cell"></a>
-### `swc4x2cell`
+<a name="sky130-hilas-swc4x2cell"></a>
+### `sky130_hilas_swc4x2cell`
 
 Description: 4x2 array of FG switch cell, Varactor capacitor cell
 
@@ -658,23 +791,22 @@ Width: 20.130
 | 1                    | GATE2                | metal1               | nsew,analog,default  |
 | 2                    | VTUN                 | metal1               | nsew,power,default   |
 | 3                    | GATE1                | metal1               | nsew,analog,default  |
-| 4                    | VPWR                 | metal1               | nsew,power,default   |
 | 6                    | VINJ                 | metal1               | nsew,power,default   |
 | 10                   | GATESELECT1          | metal1               | nsew,analog,default  |
 | 11                   | GATESELECT2          | metal1               | nsew,analog,default  |
-| 12                   | VERT1                | metal1               | nsew,analog,default  |
-| 13                   | VERT2                | metal1               | nsew,analog,default  |
-| 14                   | HORIZ1               | metal2               | nsew,analog,default  |
-| 15                   | HORIZ2               | metal2               | nsew,analog,default  |
+| 12                   | COL1                 | metal1               | nsew,analog,default  |
+| 13                   | COL2                 | metal1               | nsew,analog,default  |
+| 14                   | ROW1                 | metal2               | nsew,analog,default  |
+| 15                   | ROW2                 | metal2               | nsew,analog,default  |
 | 16                   | DRAIN1               | metal2               | nsew,analog,default  |
 | 17                   | DRAIN2               | metal2               | nsew,analog,default  |
 | 18                   | DRAIN3               | metal2               | nsew,analog,default  |
-| 19                   | HORIZ3               | metal2               | nsew,analog,default  |
-| 20                   | HORIZ4               | metal2               | nsew,analog,default  |
+| 19                   | ROW3                 | metal2               | nsew,analog,default  |
+| 20                   | ROW4                 | metal2               | nsew,analog,default  |
 | 21                   | DRAIN4               | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="swc4x2cellOverlap"></a>
-### `swc4x2cellOverlap`
+<a name="sky130-hilas-swc4x2cellOverlap"></a>
+### `sky130_hilas_swc4x2cellOverlap`
 
 Description: Core switch cell, built with overlap capacitor
 
@@ -704,8 +836,8 @@ Width: 17.980
 ## PRIMITIVE-CELLS
 
 --------------------------------------------------------------------------------------------
-<a name="CapModule01"></a>
-### `CapModule01`
+<a name="sky130-hilas-CapModule01"></a>
+### `sky130_hilas_CapModule01`
 
 Description: None
 
@@ -716,8 +848,8 @@ Width: 2.840
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="CapModule01a"></a>
-### `CapModule01a`
+<a name="sky130-hilas-CapModule01a"></a>
+### `sky130_hilas_CapModule01a`
 
 Description: primitive cap, variant 01a
 
@@ -728,8 +860,8 @@ Width: 2.300
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="CapModule02"></a>
-### `CapModule02`
+<a name="sky130-hilas-CapModule02"></a>
+### `sky130_hilas_CapModule02`
 
 Description: None
 
@@ -740,8 +872,8 @@ Width: 7.200
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="CapModule03"></a>
-### `CapModule03`
+<a name="sky130-hilas-CapModule03"></a>
+### `sky130_hilas_CapModule03`
 
 Description: None
 
@@ -752,8 +884,8 @@ Width: 4.230
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="DAC6TransistorStack01"></a>
-### `DAC6TransistorStack01`
+<a name="sky130-hilas-DAC6TransistorStack01"></a>
+### `sky130_hilas_DAC6TransistorStack01`
 
 Description: None
 
@@ -764,8 +896,8 @@ Width: 1.720
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="DAC6TransistorStack01a"></a>
-### `DAC6TransistorStack01a`
+<a name="sky130-hilas-DAC6TransistorStack01a"></a>
+### `sky130_hilas_DAC6TransistorStack01a`
 
 Description: None
 
@@ -776,8 +908,8 @@ Width: 1.720
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="DAC6TransistorStack01b"></a>
-### `DAC6TransistorStack01b`
+<a name="sky130-hilas-DAC6TransistorStack01b"></a>
+### `sky130_hilas_DAC6TransistorStack01b`
 
 Description: None
 
@@ -788,8 +920,8 @@ Width: 1.850
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="DAC6TransistorStack01c"></a>
-### `DAC6TransistorStack01c`
+<a name="sky130-hilas-DAC6TransistorStack01c"></a>
+### `sky130_hilas_DAC6TransistorStack01c`
 
 Description: None
 
@@ -800,8 +932,8 @@ Width: 1.870
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="DAC6bit01"></a>
-### `DAC6bit01`
+<a name="sky130-hilas-DAC6bit01"></a>
+### `sky130_hilas_DAC6bit01`
 
 Description: None
 
@@ -812,8 +944,8 @@ Width: 16.380
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="DoubleTGate01"></a>
-### `DoubleTGate01`
+<a name="sky130-hilas-DoubleTGate01"></a>
+### `sky130_hilas_DoubleTGate01`
 
 Description: 2x1 array of transmission gates
 
@@ -824,8 +956,8 @@ Width: 5.420
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="DualTACore01"></a>
-### `DualTACore01`
+<a name="sky130-hilas-DualTACore01"></a>
+### `sky130_hilas_DualTACore01`
 
 Description: None
 
@@ -836,8 +968,8 @@ Width: 3.270
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="FGHugeVaractorCapacitor01"></a>
-### `FGHugeVaractorCapacitor01`
+<a name="sky130-hilas-FGHugeVaractorCapacitor01"></a>
+### `sky130_hilas_FGHugeVaractorCapacitor01`
 
 Description: one large varactor cap
 
@@ -848,8 +980,8 @@ Width: 10.290
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="FGVaractorCapacitor"></a>
-### `FGVaractorCapacitor`
+<a name="sky130-hilas-FGVaractorCapacitor"></a>
+### `sky130_hilas_FGVaractorCapacitor`
 
 Description: varactor cap for floating-gate charge storage
 
@@ -860,8 +992,8 @@ Width: 2.230
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="FGVaractorCapacitor02"></a>
-### `FGVaractorCapacitor02`
+<a name="sky130-hilas-FGVaractorCapacitor02"></a>
+### `sky130_hilas_FGVaractorCapacitor02`
 
 Description: variant 2, varactor cap for floating-gate charge storage
 
@@ -872,8 +1004,8 @@ Width: 2.720
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="TACoreBlock"></a>
-### `TACoreBlock`
+<a name="sky130-hilas-TACoreBlock"></a>
+### `sky130_hilas_TACoreBlock`
 
 Description: None
 
@@ -884,8 +1016,8 @@ Width: 9.540
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="TACoreBlock2"></a>
-### `TACoreBlock2`
+<a name="sky130-hilas-TACoreBlock2"></a>
+### `sky130_hilas_TACoreBlock2`
 
 Description: None
 
@@ -896,8 +1028,8 @@ Width: 2.190
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="TgateDouble01"></a>
-### `TgateDouble01`
+<a name="sky130-hilas-TgateDouble01"></a>
+### `sky130_hilas_TgateDouble01`
 
 Description: None
 
@@ -908,8 +1040,8 @@ Width: 7.080
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="TgateSingle01"></a>
-### `TgateSingle01`
+<a name="sky130-hilas-TgateSingle01"></a>
+### `sky130_hilas_TgateSingle01`
 
 Description: None
 
@@ -920,8 +1052,8 @@ Width: 4.760
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="TgateSingle01Part1"></a>
-### `TgateSingle01Part1`
+<a name="sky130-hilas-TgateSingle01Part1"></a>
+### `sky130_hilas_TgateSingle01Part1`
 
 Description: None
 
@@ -932,8 +1064,8 @@ Width: 1.880
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="TgateSingle01Part2"></a>
-### `TgateSingle01Part2`
+<a name="sky130-hilas-TgateSingle01Part2"></a>
+### `sky130_hilas_TgateSingle01Part2`
 
 Description: None
 
@@ -944,8 +1076,8 @@ Width: 1.630
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="TgateVinj01"></a>
-### `TgateVinj01`
+<a name="sky130-hilas-TgateVinj01"></a>
+### `sky130_hilas_TgateVinj01`
 
 Description: None
 
@@ -956,8 +1088,8 @@ Width: 5.420
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="WTAblockSample01"></a>
-### `WTAblockSample01`
+<a name="sky130-hilas-WTAblockSample01"></a>
+### `sky130_hilas_WTAblockSample01`
 
 Description: None
 
@@ -968,8 +1100,8 @@ Width: 34.090
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="WTAsinglestage01"></a>
-### `WTAsinglestage01`
+<a name="sky130-hilas-WTAsinglestage01"></a>
+### `sky130_hilas_WTAsinglestage01`
 
 Description: None
 
@@ -980,8 +1112,8 @@ Width: 2.830
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="invert01"></a>
-### `invert01`
+<a name="sky130-hilas-invert01"></a>
+### `sky130_hilas_invert01`
 
 Description: None
 
@@ -992,8 +1124,8 @@ Width: 0.520
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="nFETLargePart1"></a>
-### `nFETLargePart1`
+<a name="sky130-hilas-nFETLargePart1"></a>
+### `sky130_hilas_nFETLargePart1`
 
 Description: None
 
@@ -1004,8 +1136,8 @@ Width: 3.020
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="nFETmirrorPairs"></a>
-### `nFETmirrorPairs`
+<a name="sky130-hilas-nFETmirrorPairs"></a>
+### `sky130_hilas_nFETmirrorPairs`
 
 Description: pairs of nFET current mirrors
 
@@ -1016,8 +1148,8 @@ Width: 1.660
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="nFETmirrorPairs2"></a>
-### `nFETmirrorPairs2`
+<a name="sky130-hilas-nFETmirrorPairs2"></a>
+### `sky130_hilas_nFETmirrorPairs2`
 
 Description: None
 
@@ -1028,8 +1160,8 @@ Width: 4.670
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="nMirror03"></a>
-### `nMirror03`
+<a name="sky130-hilas-nMirror03"></a>
+### `sky130_hilas_nMirror03`
 
 Description: None
 
@@ -1040,8 +1172,8 @@ Width: 1.840
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="pFETmirror"></a>
-### `pFETmirror`
+<a name="sky130-hilas-pFETmirror"></a>
+### `sky130_hilas_pFETmirror`
 
 Description: pFET current mirror
 
@@ -1052,8 +1184,8 @@ Width: 2.190
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="pFETmirror02"></a>
-### `pFETmirror02`
+<a name="sky130-hilas-pFETmirror02"></a>
+### `sky130_hilas_pFETmirror02`
 
 Description: second pFET current mirror
 
@@ -1064,8 +1196,8 @@ Width: 1.280
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="pTransistorPair"></a>
-### `pTransistorPair`
+<a name="sky130-hilas-pTransistorPair"></a>
+### `sky130_hilas_pTransistorPair`
 
 Description: None
 
@@ -1078,8 +1210,8 @@ Width: 1.870
 ## TEST-CELLS
 
 --------------------------------------------------------------------------------------------
-<a name="FGcharacterization01"></a>
-### `FGcharacterization01`
+<a name="sky130-hilas-FGcharacterization01"></a>
+### `sky130_hilas_FGcharacterization01`
 
 Description: FG test strucure that uses a capacitor around a transconductance amplifier
 
@@ -1104,8 +1236,8 @@ Width: 29.950
 ## COMPONENT-CELLS
 
 --------------------------------------------------------------------------------------------
-<a name="FGVaractorTunnelCap01"></a>
-### `FGVaractorTunnelCap01`
+<a name="sky130-hilas-FGVaractorTunnelCap01"></a>
+### `sky130_hilas_FGVaractorTunnelCap01`
 
 Description: Tunneling cpacitor using a standard varactor capacitor
 
@@ -1116,8 +1248,20 @@ Width: 2.220
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="Trans2med"></a>
-### `Trans2med`
+<a name="sky130-hilas-StepUpDigitalPart1"></a>
+### `sky130_hilas_StepUpDigitalPart1`
+
+Description: step-up level shifter part
+
+Height: 1.590
+<br>
+Width: 6.140
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="sky130-hilas-Trans2med"></a>
+### `sky130_hilas_Trans2med`
 
 Description: None
 
@@ -1140,8 +1284,8 @@ Width: 3.530
 | 11                   | PFET_DRAIN01         | metal2               | nsew,analog,default  |
 | 12                   | PFET_DRAIN2          | metal2               | nsew,analog,default  |
 --------------------------------------------------------------------------------------------
-<a name="TunCap01"></a>
-### `TunCap01`
+<a name="sky130-hilas-TunCap01"></a>
+### `sky130_hilas_TunCap01`
 
 Description: None
 
@@ -1152,8 +1296,8 @@ Width: 1.730
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="TunVaractorCapcitor"></a>
-### `TunVaractorCapcitor`
+<a name="sky130-hilas-TunVaractorCapcitor"></a>
+### `sky130_hilas_TunVaractorCapcitor`
 
 Description: Tunneling capacitor using a standard varactor capacitor
 
@@ -1164,8 +1308,20 @@ Width: 10.430
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="decoup-cap-00"></a>
-### `decoup_cap_00`
+<a name="sky130-hilas-WTA4stage01"></a>
+### `sky130_hilas_WTA4stage01`
+
+Description: single-element of WTA circuit
+
+Height: 5.340
+<br>
+Width: 2.830
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+--------------------------------------------------------------------------------------------
+<a name="sky130-hilas-decoup-cap-00"></a>
+### `sky130_hilas_decoup_cap_00`
 
 Description: decoupling cap (intended as fill)
 
@@ -1176,8 +1332,8 @@ Width: 3.080
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="decoup-cap-01"></a>
-### `decoup_cap_01`
+<a name="sky130-hilas-decoup-cap-01"></a>
+### `sky130_hilas_decoup_cap_01`
 
 Description: decoupling cap (intended as fill), variant
 
@@ -1188,8 +1344,8 @@ Width: 3.080
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="horizPcell01"></a>
-### `horizPcell01`
+<a name="sky130-hilas-horizPcell01"></a>
+### `sky130_hilas_horizPcell01`
 
 Description: None
 
@@ -1200,8 +1356,8 @@ Width: 2.560
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="horizTransCell01"></a>
-### `horizTransCell01`
+<a name="sky130-hilas-horizTransCell01"></a>
+### `sky130_hilas_horizTransCell01`
 
 Description: None
 
@@ -1212,8 +1368,8 @@ Width: 4.430
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="li2m1"></a>
-### `li2m1`
+<a name="sky130-hilas-li2m1"></a>
+### `sky130_hilas_li2m1`
 
 Description: local interconnect to m1 contact
 
@@ -1224,8 +1380,8 @@ Width: 0.230
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="li2m2"></a>
-### `li2m2`
+<a name="sky130-hilas-li2m2"></a>
+### `sky130_hilas_li2m2`
 
 Description: local interconnect to m2 contact
 
@@ -1236,8 +1392,8 @@ Width: 0.340
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="m12m2"></a>
-### `m12m2`
+<a name="sky130-hilas-m12m2"></a>
+### `sky130_hilas_m12m2`
 
 Description: m1 to m2 contact
 
@@ -1248,8 +1404,8 @@ Width: 0.320
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="m22m4"></a>
-### `m22m4`
+<a name="sky130-hilas-m22m4"></a>
+### `sky130_hilas_m22m4`
 
 Description: m2 to m4 contact
 
@@ -1260,8 +1416,8 @@ Width: 0.790
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="mcap2m4"></a>
-### `mcap2m4`
+<a name="sky130-hilas-mcap2m4"></a>
+### `sky130_hilas_mcap2m4`
 
 Description: metal capacitor layer contact to m4
 
@@ -1272,8 +1428,8 @@ Width: 0.790
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="nDiffThOxContact"></a>
-### `nDiffThOxContact`
+<a name="sky130-hilas-nDiffThOxContact"></a>
+### `sky130_hilas_nDiffThOxContact`
 
 Description: None
 
@@ -1284,8 +1440,8 @@ Width: 0.670
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="nFET03"></a>
-### `nFET03`
+<a name="sky130-hilas-nFET03"></a>
+### `sky130_hilas_nFET03`
 
 Description: None
 
@@ -1296,8 +1452,8 @@ Width: 0.890
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="nFET03a"></a>
-### `nFET03a`
+<a name="sky130-hilas-nFET03a"></a>
+### `sky130_hilas_nFET03a`
 
 Description: None
 
@@ -1308,8 +1464,8 @@ Width: 2.080
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="nFETmed"></a>
-### `nFETmed`
+<a name="sky130-hilas-nFETmed"></a>
+### `sky130_hilas_nFETmed`
 
 Description: None
 
@@ -1320,8 +1476,8 @@ Width: 0.820
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="nOverlapCap01"></a>
-### `nOverlapCap01`
+<a name="sky130-hilas-nOverlapCap01"></a>
+### `sky130_hilas_nOverlapCap01`
 
 Description: overlap capacitor based capacitor (nFET)
 
@@ -1332,8 +1488,8 @@ Width: 1.290
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="overlapCap01"></a>
-### `overlapCap01`
+<a name="sky130-hilas-overlapCap01"></a>
+### `sky130_hilas_overlapCap01`
 
 Description: overlap capacitor based capacitor
 
@@ -1344,8 +1500,8 @@ Width: 2.870
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="overlapCap02"></a>
-### `overlapCap02`
+<a name="sky130-hilas-overlapCap02"></a>
+### `sky130_hilas_overlapCap02`
 
 Description: overlap capacitor based capacitor)
 
@@ -1356,8 +1512,8 @@ Width: 4.320
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="overlapCap02a"></a>
-### `overlapCap02a`
+<a name="sky130-hilas-overlapCap02a"></a>
+### `sky130_hilas_overlapCap02a`
 
 Description: overlap capacitor based capacitor
 
@@ -1368,8 +1524,8 @@ Width: 4.000
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="pFETLargePart1"></a>
-### `pFETLargePart1`
+<a name="sky130-hilas-pFETLargePart1"></a>
+### `sky130_hilas_pFETLargePart1`
 
 Description: Part of the W/L=100 pFET transistor
 
@@ -1380,8 +1536,8 @@ Width: 3.390
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="pFETdevice01"></a>
-### `pFETdevice01`
+<a name="sky130-hilas-pFETdevice01"></a>
+### `sky130_hilas_pFETdevice01`
 
 Description: pFET transistor used in DAC block
 
@@ -1392,8 +1548,8 @@ Width: 1.610
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="pFETdevice01a"></a>
-### `pFETdevice01a`
+<a name="sky130-hilas-pFETdevice01a"></a>
+### `sky130_hilas_pFETdevice01a`
 
 Description: pFET transistor used in DAC block
 
@@ -1404,8 +1560,8 @@ Width: 1.610
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="pFETdevice01aa"></a>
-### `pFETdevice01aa`
+<a name="sky130-hilas-pFETdevice01aa"></a>
+### `sky130_hilas_pFETdevice01aa`
 
 Description: pFET transistor used in DAC block
 
@@ -1416,8 +1572,8 @@ Width: 1.720
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="pFETdevice01b"></a>
-### `pFETdevice01b`
+<a name="sky130-hilas-pFETdevice01b"></a>
+### `sky130_hilas_pFETdevice01b`
 
 Description: pFET transistor used in DAC block
 
@@ -1428,8 +1584,8 @@ Width: 1.870
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="pFETdevice01ba"></a>
-### `pFETdevice01ba`
+<a name="sky130-hilas-pFETdevice01ba"></a>
+### `sky130_hilas_pFETdevice01ba`
 
 Description: pFET transistor used in DAC block
 
@@ -1440,8 +1596,8 @@ Width: 1.870
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="pFETdevice01c"></a>
-### `pFETdevice01c`
+<a name="sky130-hilas-pFETdevice01c"></a>
+### `sky130_hilas_pFETdevice01c`
 
 Description: pFET transistor used in DAC block
 
@@ -1452,8 +1608,8 @@ Width: 1.870
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="pFETdevice01d"></a>
-### `pFETdevice01d`
+<a name="sky130-hilas-pFETdevice01d"></a>
+### `sky130_hilas_pFETdevice01d`
 
 Description: pFET transistor used in DAC block
 
@@ -1464,8 +1620,8 @@ Width: 1.840
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="pFETdevice01e"></a>
-### `pFETdevice01e`
+<a name="sky130-hilas-pFETdevice01e"></a>
+### `sky130_hilas_pFETdevice01e`
 
 Description: pFET transistor used in DAC block
 
@@ -1476,8 +1632,8 @@ Width: 2.030
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="pTransistorVert01"></a>
-### `pTransistorVert01`
+<a name="sky130-hilas-pTransistorVert01"></a>
+### `sky130_hilas_pTransistorVert01`
 
 Description: None
 
@@ -1488,8 +1644,8 @@ Width: 1.860
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="poly2li"></a>
-### `poly2li`
+<a name="sky130-hilas-poly2li"></a>
+### `sky130_hilas_poly2li`
 
 Description: polysilicon layer to li contact
 
@@ -1500,8 +1656,8 @@ Width: 0.270
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="poly2m1"></a>
-### `poly2m1`
+<a name="sky130-hilas-poly2m1"></a>
+### `sky130_hilas_poly2m1`
 
 Description: polysilicon layer to m1 contact
 
@@ -1512,8 +1668,8 @@ Width: 0.330
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="poly2m2"></a>
-### `poly2m2`
+<a name="sky130-hilas-poly2m2"></a>
+### `sky130_hilas_poly2m2`
 
 Description: polysilicon layer to m2 contact
 
@@ -1524,8 +1680,8 @@ Width: 0.330
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="wellContact"></a>
-### `wellContact`
+<a name="sky130-hilas-wellContact"></a>
+### `sky130_hilas_wellContact`
 
 Description: contact to a well block, typically used for contacting tunneling junctions in a well.
 
@@ -1538,8 +1694,8 @@ Width: 1.740
 ## CELLS-TO-BE-SORTED
 
 --------------------------------------------------------------------------------------------
-<a name="all"></a>
-### `all`
+<a name="sky130-hilas-all"></a>
+### `sky130_hilas_all`
 
 Description: A design which contains all cells (?)
 
@@ -1550,8 +1706,8 @@ Width: 1.770
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 --------------------------------------------------------------------------------------------
-<a name="swc2x2varactor"></a>
-### `swc2x2varactor`
+<a name="sky130-hilas-swc2x2varactor"></a>
+### `sky130_hilas_swc2x2varactor`
 
 Description: ??  Is this part of the library?
 
