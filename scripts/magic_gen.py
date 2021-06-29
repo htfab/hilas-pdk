@@ -446,8 +446,12 @@ class XschemSymbol(StructuredTextFile):
 class CellInfo(dict):
     def __init__(self, name, prop_dict):
         super().__init__(prop_dict)
-        self['short_name'] = name
-        self['long_name'] = CONVENTIONS.CELL_PREFIX + name
+        if name.startswith(CONVENTIONS.CELL_PREFIX):
+            self['short_name'] = name.split(CONVENTIONS.CELL_PREFIX)[1]
+            self['long_name'] = name
+        else:
+            self['short_name'] = name
+            self['long_name'] = CONVENTIONS.CELL_PREFIX + name
 
     # @property
     # def short_name(self):
@@ -477,41 +481,44 @@ class LibraryInfo(OrderedDict):
             sorted_keys = sorted(yaml_dict[cat].keys())
             for k in sorted_keys:
                 if k == 'description':
-                    cd[cat].update({k: yaml_dict[cat][k]})
+                    pass
                 else:
-                    cd[cat].update({k: CellInfo(k, yaml_dict[cat][k])})
+                    cell = CellInfo(k, yaml_dict[cat][k])
+                    cd[cat].update({cell.long_name: cell})
         super().__init__(cd)
 
     @property
     def all_cells(self):
         return OrderedDict({cn: cell for cat, cells in self.items() for cn, cell in cells.items() if 'description' in cell})
 
+    def by_category(self, category_name):
+        return OrderedDict({cn: cell for cn, cell in self[category_name].items() if cn != 'description'})
+
     @property
     def standard_cells(self):
-        return OrderedDict({cn: cell for cn, cell in self['standard-cells'].items() if 'description' in cell})
+        return self.by_category('standard-cells')
 
     @property
     def component_cells(self):
-        return OrderedDict({cn: cell for cn, cell in self['component-cells'].items() if 'description' in cell})
+        return self.by_category('component-cells')
 
     @property
     def primitive_cells(self):
-        return OrderedDict({cn: cell for cn, cell in self['primitive-cells'].items() if 'description' in cell})
+        return self.by_category('primitive-cells')
 
     @property
     def test_cells(self):
-        return OrderedDict({cn: cell for cn, cell in self['test-cells'].items() if 'description' in cell})
+        return self.by_category('test-cells')
 
     def by_name(self, cell_name):
         if cell_name.startswith(CONVENTIONS.CELL_PREFIX):
-            cell_name = cell_name.split(CONVENTIONS.CELL_PREFIX)[1]
+            pass
+        else:
+            cell_name = CONVENTIONS.CELL_PREFIX + cell_name
         try:
             return [cell for cat in self.values() for cn, cell in cat.items() if cn == cell_name][0]
         except IndexError:
             return None
-
-    def by_cat(self, category_name):
-        return OrderedDict({cn: cell for cn, cell in self[category_name].items() if cn != 'description'})
 
     def check_yaml(self):
         all_cells = self.all_cells
@@ -538,6 +545,7 @@ class LibraryInfo(OrderedDict):
             for mf in missing:
                 warn('    ' + str(mf))
             warn(stylize_head())
+
 
 class LefData(object):
     SIZE_REGEX = re.compile(r'^\s*SIZE\s+(\S+)\s+BY\s+(\S+)\s*;\s*$', re.MULTILINE)
@@ -973,23 +981,24 @@ def make_lef():
 
     # only standard cells make it into the merged LEF
     for sf in LIB_PATH['temp_lef'].glob('*.lef'):
-        sh_name = sf.stem.split(CONVENTIONS.CELL_PREFIX)[1]
-        if sh_name not in cd.standard_cells:
+
+        if sf.stem not in cd.standard_cells:
             continue
 
+        cell = cd.by_name(sf.stem)
         try:
             with open(sf, 'r') as f:
                 st = f.read()
-            cn = sf.stem
             blocks.append(
-                re.search(r'(MACRO\s+{}[\s\S\n]*?\n\s*END\s+{})'.format(re.escape(cn), re.escape(cn)), st).group()
+                re.search(r'(MACRO\s+{}[\s\S\n]*?\n\s*END\s+{})'.format(re.escape(cell.long_name), re.escape(cell.long_name)), st).group()
             )
-        except:
-            pass
 
-        if args.delete:
-            os.remove(sf)
-            print('removed individual LEF at {}'.format(sf))
+            if args.delete:
+                os.remove(sf)
+                print('removed individual LEF at {}'.format(sf))
+
+        except:
+            warn('Did not find a matching MACRO block in temporary LEF file: {}'.format(sf))
 
     tot_file = header + '\n\n'.join(blocks + ['END LIBRARY'])
 
@@ -1247,7 +1256,7 @@ def make_lib_summary_md():
 
     for cat in ['standard-cells', 'primitive-cells', 'test-cells']:
         rows = []
-        for cn, cell in cd.by_cat(cat).items():
+        for cn, cell in cd.by_category(cat).items():
             if cell['description']:
                 rows.append('| {:<25} | {:<55} |'.format(
                     '[`{}`]({}#{})'.format(cn, LIB_PATH['cell_details'].relative_to(LIB_PATH['cell_summary'].parent),
@@ -1298,16 +1307,16 @@ def make_cell_details_md():
 
     for cat in CELL_CATEGORIES:
         tables += '## {}\n\n'.format(cat.upper())
-        cells = cd.by_cat(cat)
+        cells = cd.by_category(cat)
 
         for cn, cell in cells.items():
             rows = []
-            matches = [(k, v) for k, v in magic_lib[cn].ports().items()]
+            matches = [(k, v) for k, v in magic_lib[cell.long_name].ports.items()]
             matches = sorted(list(set(matches)), key=lambda x: int(x[1][1]))
             for m in matches:
                 rows.append(
                     '| {:<20} | {:<20} | {:<20} | {:<20} |'.format(m[1][1], m[0], m[1][0], ','.join(m[1][2].split())))
-            ld = LefData((LIB_PATH['temp_lef'] / magic_lib[cn].file.name).with_suffix('.lef'))
+            ld = LefData((LIB_PATH['temp_lef'] / magic_lib[cell.long_name].file.name).with_suffix('.lef'))
             tables += cell_template.render(
                 cell_name=cn,
                 description=cell['description'],
@@ -1685,6 +1694,7 @@ def main():
 
     ap = argparse.ArgumentParser()
 
+    ############  Target Selection  ####################################################################################
     ap.add_argument('-e', '--lef', action='store_true', help='Create LEF file', default=False)
     ap.add_argument('-g', '--gds', action='store_true', help='Create GDS files', default=False)
     ap.add_argument('-i', '--lib', action='store_true', help='Create LIB file', default=False)
@@ -1697,16 +1707,20 @@ def main():
                     help='Create temporary individual LEF files', default=False)
     ap.add_argument('-v', '--verilog', action='store_true', help='Directory in which to put synthetic Verilog output',
                     default=False)
+    ap.add_argument('--refresh', action='store_true', help='Same as: -egimnstvDF')
 
+    ############  Checking  ############################################################################################
     ap.add_argument('-l', '--lvs', action='store_true', help='run LVS checks (with netgen)', default=False)
     ap.add_argument('-C', '--basic-checks', action='store_true', help='Run basic cell consistency checks.', default=False)
-    ap.add_argument('-D', '--delete', action='store_true',
-                    help='Delete temporary (individual) LEF files after consolidation', default=True)
-    ap.add_argument('-F', '--force', action='store_true', help='Overwrite existing collateral.', default=False)
     ap.add_argument('-L', '--lint-yaml', action='store_true', help='Run linter on the CELL_INDEX.yml file')
+
+    ############  Basic Options ########################################################################################
+    ap.add_argument('--delete', action='store_true', help='Delete temporary (individual) LEF files after consolidation')
+    ap.add_argument('-F', '--force', action='store_true', help='Overwrite existing collateral.', default=False)
     ap.add_argument('-N', '--no', action='store_true', help='Assume a \'no\' answer to all prompts.')
     ap.add_argument('-Y', '--yes', action='store_true', help='Assume a \'yes\' answer to all prompts.')
 
+    ############  Naming Tools  ########################################################################################
     ap.add_argument('--rename-xschem-circuit', nargs=2, action='store', help='Rename modules in xschem library and update references.  '
                                                             'Usage: \'--rename-xschem <fromname> <toname>\'')
     ap.add_argument('--rename-magic-module', nargs=2, action='store', help='Rename magic modules and update references.'
@@ -1716,6 +1730,19 @@ def main():
     ap.add_argument('--rename-xschem-pin', nargs=3, help='rename pin in xschem circuit. Usage: --rename-xschem-pin <circuit-name> <old-name> <new-name>')
 
     args = ap.parse_args()
+    if args.refresh:
+        for arg in [
+        'lef',
+        'gds',
+        'lib',
+        'markdown',
+        'nosynth',
+        'spice',
+        'temp_lef',
+        'verilog',
+        'force'
+        ]:
+            setattr(args, arg, True)
 
     rel_root = Path.cwd()
 
