@@ -309,41 +309,39 @@ endmodule
 
 `celldefine
 module sky130_hilas_swc4x2cell (
-    GATE2,
-    VTUN,
-    GATE1,
-    VINJ,
-    VINJ,
-    GATESELECT1,
-    GATESELECT2,
     COL1,
     COL2,
-    ROW1,
-    ROW2,
     DRAIN1,
     DRAIN2,
     DRAIN3,
+    GATE1,
+    GATE2,
+    GATESELECT1,
+    GATESELECT2,
+    ROW1,
+    ROW2,
     ROW3,
     ROW4,
+    VINJ,
+    VTUN,
     VNB,
     VPB
 );
-        inout GATE2;
-        inout VTUN;
-        inout GATE1;
-        inout VINJ;
-        inout VINJ;
-        inout GATESELECT1;
-        inout GATESELECT2;
         inout COL1;
         inout COL2;
-        inout ROW1;
-        inout ROW2;
         inout DRAIN1;
         inout DRAIN2;
         inout DRAIN3;
+        inout GATE1;
+        inout GATE2;
+        inout GATESELECT1;
+        inout GATESELECT2;
+        inout ROW1;
+        inout ROW2;
         inout ROW3;
         inout ROW4;
+        inout VINJ;
+        inout VTUN;
         inout VNB;
         inout VPB;
 endmodule
@@ -355,39 +353,37 @@ endmodule
 
 `celldefine
 module sky130_hilas_swc4x2cell (
-    GATE2,
-    VTUN,
-    GATE1,
-    VINJ,
-    VINJ,
-    GATESELECT1,
-    GATESELECT2,
     COL1,
     COL2,
-    ROW1,
-    ROW2,
     DRAIN1,
     DRAIN2,
     DRAIN3,
+    GATE1,
+    GATE2,
+    GATESELECT1,
+    GATESELECT2,
+    ROW1,
+    ROW2,
     ROW3,
-    ROW4
+    ROW4,
+    VINJ,
+    VTUN
 );
-        inout GATE2;
-        inout VTUN;
-        inout GATE1;
-        inout VINJ;
-        inout VINJ;
-        inout GATESELECT1;
-        inout GATESELECT2;
         inout COL1;
         inout COL2;
-        inout ROW1;
-        inout ROW2;
         inout DRAIN1;
         inout DRAIN2;
         inout DRAIN3;
+        inout GATE1;
+        inout GATE2;
+        inout GATESELECT1;
+        inout GATESELECT2;
+        inout ROW1;
+        inout ROW2;
         inout ROW3;
         inout ROW4;
+        inout VINJ;
+        inout VTUN;
 endmodule
 `endcelldefine
 
