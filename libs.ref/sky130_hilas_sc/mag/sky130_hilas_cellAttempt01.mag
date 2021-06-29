@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1624567800
+timestamp 1624818512
 << error_s >>
 rect 168 160 174 166
 rect 273 160 279 166
@@ -36,6 +36,7 @@ rect 162 -322 168 -316
 rect 279 -322 285 -316
 << nwell >>
 rect 112 222 335 223
+rect -263 112 -256 130
 rect 632 -72 667 -71
 rect 632 -88 649 -72
 rect 666 -88 667 -72

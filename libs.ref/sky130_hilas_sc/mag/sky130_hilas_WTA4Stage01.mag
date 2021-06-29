@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1624568705
+timestamp 1624821464
 << error_s >>
 rect -596 499 -590 505
 rect -491 499 -485 505
@@ -37,6 +37,8 @@ rect -485 17 -479 23
 << nwell >>
 rect -1101 561 -805 562
 rect -1101 546 -1060 561
+rect -532 552 -494 562
+rect -129 548 -89 562
 rect -1101 545 -1042 546
 rect -1101 369 -1060 545
 rect -1112 254 -1060 369
@@ -50,6 +52,7 @@ rect -1115 -22 -1097 67
 rect -1025 555 -1009 562
 rect -984 555 -965 562
 rect -944 555 -928 562
+rect -532 552 -494 562
 rect -129 548 -89 562
 rect -762 399 -740 537
 rect 131 516 154 562
@@ -154,10 +157,6 @@ rlabel metal2 291 56 296 72 0 OUTPUT4
 port 7 nsew analog default
 rlabel metal1 257 556 280 562 0 VGND
 port 1 nsew ground default
-rlabel metal1 131 556 154 562 0 WTAMIDDLENODE
-port 2 nsew analog default
-rlabel metal1 131 -43 154 -37 0 WTAMIDDLENODE
-port 3 nsew analog default
 rlabel metal1 257 -43 280 -37 0 VGND
 port 1 nsew ground default
 rlabel metal2 -1112 449 -1097 469 0 INPUT1
@@ -168,22 +167,26 @@ rlabel metal2 -1118 151 -1098 168 0 INPUT3
 port 10 nsew analog default
 rlabel metal2 -1119 47 -1091 74 0 INPUT4
 port 11 nsew analog default
-rlabel metal2 -1116 494 -1100 512 0 DRAIN1
+rlabel metal2 -1100 494 -1088 512 0 DRAIN1
 port 12 nsew
-rlabel metal2 -1118 308 -1100 326 0 DRAIN2
+rlabel metal2 -1100 308 -1088 326 0 DRAIN2
 port 13 nsew
-rlabel metal2 -1116 192 -1100 211 0 DRAIN3
+rlabel metal2 -1100 193 -1088 211 0 DRAIN3
 port 14 nsew
-rlabel metal2 -1114 8 -1098 27 0 DRAIN4
+rlabel metal2 -1100 8 -1088 26 0 DRAIN4
 port 15 nsew
-rlabel metal1 -532 -43 -494 -33 0 GATE1
+rlabel metal1 -531 552 -495 562 0 GATE1
+port 16 nsew
+rlabel metal1 -129 548 -89 562 0 VTUN
 port 17 nsew
+rlabel metal1 131 -43 154 -37 0 WTAMIDDLENODE
+port 18 nsew
+rlabel metal1 131 556 154 562 0 WTAMIDDLENODE
+port 18 nsew
 rlabel metal1 -984 555 -965 562 0 COLSEL1
 port 19 nsew
+rlabel metal1 -1025 555 -1009 562 0 VINJ
+port 21 nsew
 rlabel metal1 -944 555 -928 562 0 VPWR
 port 20 nsew
-rlabel metal1 -1025 555 -1009 562 0 VINJ
-port 18 nsew
-rlabel metal1 -129 548 -89 562 0 VTUN
-port 21 nsew
 << end >>

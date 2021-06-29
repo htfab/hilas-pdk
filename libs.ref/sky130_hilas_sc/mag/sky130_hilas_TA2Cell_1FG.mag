@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1608384750
+timestamp 1624824229
 << error_s >>
 rect -1580 672 -1574 678
 rect -1527 672 -1521 678
@@ -36,8 +36,17 @@ rect -1421 208 -1415 214
 rect -1356 208 -1350 214
 << nwell >>
 rect 65 727 193 745
+rect -2616 677 -2609 695
+rect -2616 190 -2608 208
 rect 65 140 193 159
 << metal1 >>
+rect -2592 738 -2564 745
+rect -2539 739 -2520 745
+rect -1891 736 -1868 744
+rect -1769 736 -1746 744
+rect -1540 729 -1396 745
+rect -1190 736 -1167 745
+rect -1068 737 -1045 745
 rect -416 737 -397 745
 rect -372 737 -344 745
 rect -3 731 31 745
@@ -48,6 +57,7 @@ rect -3 140 31 159
 rect 64 140 91 161
 << metal2 >>
 rect -260 718 -229 742
+rect -2616 677 -2609 695
 rect -149 655 -127 657
 rect -1726 617 -1642 637
 rect -154 621 -127 655
@@ -74,13 +84,10 @@ rect -807 290 -522 312
 rect -700 262 -113 267
 rect -1137 246 -113 262
 rect -1137 240 -661 246
+rect -2616 190 -2608 208
 use sky130_hilas_FGBiasWeakGate2x1cell  sky130_hilas_FGBiasWeakGate2x1cell_0
 timestamp 1608384750
 transform -1 0 -1859 0 1 522
-box -396 -382 757 223
-use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1608384750
-transform 1 0 -1077 0 1 522
 box -396 -382 757 223
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
 timestamp 1608384750
@@ -90,9 +97,11 @@ use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
 timestamp 1608069483
 transform 1 0 38 0 1 181
 box -172 -22 155 550
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1623844940
+transform 1 0 -1077 0 1 522
+box -396 -382 757 223
 << labels >>
-rlabel metal1 -416 737 -397 745 0 GATECOLSELECT
-port 5 nsew analog default
 rlabel metal2 -1726 617 -1690 636 0 VIN11
 port 2 nsew analog default
 rlabel space -1731 241 -1695 266 0 VIN12
@@ -111,12 +120,32 @@ rlabel metal2 -260 718 -229 742 1 VIN22
 port 4 n analog default
 rlabel metal1 -372 737 -344 745 0 VINJ
 port 8 nsew power default
-rlabel metal1 -416 140 -397 145 0 GATECOLSELECT
-port 5 nsew analog default
 rlabel metal1 -372 140 -344 145 0 VINJ
 port 8 nsew power default
 rlabel metal2 182 474 193 497 0 OUTPUT1
 port 9 nsew analog default
 rlabel metal2 182 392 193 414 0 OUTPUT2
 port 10 nsew analog default
+rlabel metal2 -2616 677 -2609 695 0 DRAIN1
+port 11 nsew
+rlabel metal2 -2616 190 -2608 208 0 DRAIN2
+port 12 nsew
+rlabel metal1 -2592 738 -2564 745 0 VINJ
+port 8 nsew
+rlabel metal1 -2539 739 -2520 745 0 COLSEL2
+port 13 nsew
+rlabel metal1 -1891 736 -1868 744 0 GATE2
+port 14 nsew
+rlabel metal1 -1769 736 -1746 744 0 VGND
+port 7 nsew
+rlabel metal1 -1068 737 -1045 745 0 GATE1
+port 15 nsew
+rlabel metal1 -1190 737 -1167 745 0 VGND
+port 7 nsew
+rlabel metal1 -416 737 -397 745 0 COLSEL1
+port 16 nsew
+rlabel metal1 -416 140 -397 145 0 COLSEL1
+port 16 nsew
+rlabel metal1 -1498 733 -1438 745 0 VTUN
+port 17 nsew
 << end >>
