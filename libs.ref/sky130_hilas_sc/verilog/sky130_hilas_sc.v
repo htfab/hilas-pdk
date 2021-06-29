@@ -32,6 +32,10 @@
  */
 
 
+
+
+`define USE_POWER_PINS 1
+
 `ifndef SKY130_HILAS_OVERLAPCAP02
 `define SKY130_HILAS_OVERLAPCAP02
 

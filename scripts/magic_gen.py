@@ -1103,7 +1103,9 @@ def make_verilog():
             ))
             print('appended VERILOG info for {}'.format(cn))
 
-    result = '/** ' + LICENSE_HEAD.replace('\n', '\n * ') + '\n */\n\n\n' + '\n\n'.join(cell_block)
+    result = '/** ' + LICENSE_HEAD.replace('\n', '\n * ') + '\n */\n\n\n'
+    result += '\n\n`define USE_POWER_PINS 1\n\n'
+    result += '\n\n'.join(cell_block)
 
     with open(target, 'w') as f:
         f.write(result)
