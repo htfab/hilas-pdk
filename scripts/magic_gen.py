@@ -602,7 +602,8 @@ class LefData(object):
 
         for pinfo in re.findall(r'(^\s*PIN\s+(?P<name>\S*)\n(?:.*\n)*?\s*END\s+\2)', cell_text, re.MULTILINE):
             # found a pin
-            pi.append(LefData.read_pin(pinfo[1], pinfo[0]))
+            pd = LefData.read_pin(pinfo[1], pinfo[0])
+            pi.append(pd)
             # elif re.match('^\s*pg_pin \("(.*)"\)', line):
             #     # found a pg_pin
             #     pi.append(read_pg_pin(cc, i))
@@ -1082,9 +1083,12 @@ def make_verilog():
             print('reading cell info: {}'.format(cn))
 
             pins = ld.cell_info(cn)
+            names = sorted([p['name'] for p in pins])
+            unames = sorted(list(set(names)))
 
-            if pins:
-                fake = True
+            if unames != names:
+                pins = [[p for p in pins if p['name'] == pn][0] for pn in unames]
+
             pg_pins = [p['name'] for p in pins if p['name'] in CONVENTIONS.PG_PIN_NAMES]
             pins = [p['name'] for p in pins if p['name'] not in CONVENTIONS.PG_PIN_NAMES]
             pg_pins.extend(["VNB", "VPB"])
