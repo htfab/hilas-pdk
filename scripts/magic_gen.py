@@ -658,6 +658,7 @@ class MagicLibrary(dict):
         self.check_depends()
         for m in magic_lib.values():
             m.check_port_names()
+            m.check_port_layers()
 
     def check_complete(self):
         message = []
@@ -777,6 +778,18 @@ class MagicDesign(StructuredTextFile):
         if not name.endswith('.mag'):
             name = name + '.mag'
         return LIB_PATH['mag'] / name
+
+    def check_port_layers(self):
+        floating = []
+        for name, info in self.ports.items():
+            if info[0] == 'space':
+                floating += [name]
+
+        if floating:
+            warn(stylize_head())
+            warn('Magic file for \'{}\' has the following floating ports (not connected to a metal layer or li):'.format(self.long_name))
+            for net in floating:
+                warn('    {}'.format(net))
 
     def check_port_names(self):
 
