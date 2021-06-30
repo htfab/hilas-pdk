@@ -40,7 +40,7 @@
 `define SKY130_HILAS_OVERLAPCAP02
 
 /**
- * sky130_hilas_overlapCap02: overlap capacitor based capacitor)
+ * sky130_hilas_overlapCap02: 
  *
  * Verilog wrapper for sky130_hilas_overlapCap02.
  *
@@ -88,7 +88,7 @@ endmodule
 `define SKY130_HILAS_FGVARACTORCAPACITOR02
 
 /**
- * sky130_hilas_FGVaractorCapacitor02: variant 2, varactor cap for floating-gate charge storage
+ * sky130_hilas_FGVaractorCapacitor02: 
  *
  * Verilog wrapper for sky130_hilas_FGVaractorCapacitor02.
  *
@@ -136,7 +136,7 @@ endmodule
 `define SKY130_HILAS_TGATE4DOUBLE01
 
 /**
- * sky130_hilas_Tgate4Double01: 4 double-throw transmission gates
+ * sky130_hilas_Tgate4Double01: 
  *
  * Verilog wrapper for sky130_hilas_Tgate4Double01.
  *
@@ -249,7 +249,7 @@ endmodule
 `define SKY130_HILAS_PTRANSISTORPAIR
 
 /**
- * sky130_hilas_pTransistorPair: None
+ * sky130_hilas_pTransistorPair: 
  *
  * Verilog wrapper for sky130_hilas_pTransistorPair.
  *
@@ -297,7 +297,7 @@ endmodule
 `define SKY130_HILAS_SWC4X2CELL
 
 /**
- * sky130_hilas_swc4x2cell: 4x2 array of FG switch cell, Varactor capacitor cell
+ * sky130_hilas_swc4x2cell: 
  *
  * Verilog wrapper for sky130_hilas_swc4x2cell.
  *
@@ -404,7 +404,7 @@ endmodule
 `define SKY130_HILAS_M12M2
 
 /**
- * sky130_hilas_m12m2: m1 to m2 contact
+ * sky130_hilas_m12m2: 
  *
  * Verilog wrapper for sky130_hilas_m12m2.
  *
@@ -452,7 +452,7 @@ endmodule
 `define SKY130_HILAS_FGCHARACTERIZATION01
 
 /**
- * sky130_hilas_FGcharacterization01: FG test strucure that uses a capacitor around a transconductance amplifier
+ * sky130_hilas_FGcharacterization01: 
  *
  * Verilog wrapper for sky130_hilas_FGcharacterization01.
  *
@@ -541,7 +541,7 @@ endmodule
 `define SKY130_HILAS_TUNCAP01
 
 /**
- * sky130_hilas_TunCap01: None
+ * sky130_hilas_TunCap01: 
  *
  * Verilog wrapper for sky130_hilas_TunCap01.
  *
@@ -589,7 +589,7 @@ endmodule
 `define SKY130_HILAS_OVERLAPCAP02A
 
 /**
- * sky130_hilas_overlapCap02a: overlap capacitor based capacitor
+ * sky130_hilas_overlapCap02a: 
  *
  * Verilog wrapper for sky130_hilas_overlapCap02a.
  *
@@ -637,7 +637,7 @@ endmodule
 `define SKY130_HILAS_DOUBLETGATE01
 
 /**
- * sky130_hilas_DoubleTGate01: 2x1 array of transmission gates
+ * sky130_hilas_DoubleTGate01: 
  *
  * Verilog wrapper for sky130_hilas_DoubleTGate01.
  *
@@ -685,7 +685,7 @@ endmodule
 `define SKY130_HILAS_LEVELSHIFT4INPUTUP
 
 /**
- * sky130_hilas_LevelShift4InputUp: 4-channel level shifter
+ * sky130_hilas_LevelShift4InputUp: 
  *
  * Verilog wrapper for sky130_hilas_LevelShift4InputUp.
  *
@@ -772,7 +772,7 @@ endmodule
 `define SKY130_HILAS_TGATEDOUBLE01
 
 /**
- * sky130_hilas_TgateDouble01: None
+ * sky130_hilas_TgateDouble01: 
  *
  * Verilog wrapper for sky130_hilas_TgateDouble01.
  *
@@ -820,7 +820,7 @@ endmodule
 `define SKY130_HILAS_FGHUGEVARACTORCAPACITOR01
 
 /**
- * sky130_hilas_FGHugeVaractorCapacitor01: one large varactor cap
+ * sky130_hilas_FGHugeVaractorCapacitor01: 
  *
  * Verilog wrapper for sky130_hilas_FGHugeVaractorCapacitor01.
  *
@@ -868,7 +868,7 @@ endmodule
 `define SKY130_HILAS_TGATEVINJ01
 
 /**
- * sky130_hilas_TgateVinj01: None
+ * sky130_hilas_TgateVinj01: 
  *
  * Verilog wrapper for sky130_hilas_TgateVinj01.
  *
@@ -916,7 +916,7 @@ endmodule
 `define SKY130_HILAS_TACOREBLOCK2
 
 /**
- * sky130_hilas_TACoreBlock2: None
+ * sky130_hilas_TACoreBlock2: 
  *
  * Verilog wrapper for sky130_hilas_TACoreBlock2.
  *
@@ -964,7 +964,7 @@ endmodule
 `define SKY130_HILAS_DAC6TRANSISTORSTACK01
 
 /**
- * sky130_hilas_DAC6TransistorStack01: None
+ * sky130_hilas_DAC6TransistorStack01: 
  *
  * Verilog wrapper for sky130_hilas_DAC6TransistorStack01.
  *
@@ -1012,7 +1012,7 @@ endmodule
 `define SKY130_HILAS_CAPACITORSIZE01
 
 /**
- * sky130_hilas_capacitorSize01: smallest cap
+ * sky130_hilas_capacitorSize01: 
  *
  * Verilog wrapper for sky130_hilas_capacitorSize01.
  *
@@ -1067,7 +1067,7 @@ endmodule
 `define SKY130_HILAS_DAC6TRANSISTORSTACK01C
 
 /**
- * sky130_hilas_DAC6TransistorStack01c: None
+ * sky130_hilas_DAC6TransistorStack01c: 
  *
  * Verilog wrapper for sky130_hilas_DAC6TransistorStack01c.
  *
@@ -1115,7 +1115,7 @@ endmodule
 `define SKY130_HILAS_FGBIASWEAKGATE2X1CELL
 
 /**
- * sky130_hilas_FGBiasWeakGate2x1cell: 2x1 array of FG switch cells configured as pFET current sources with weak capacitive gate inputs
+ * sky130_hilas_FGBiasWeakGate2x1cell: 
  *
  * Verilog wrapper for sky130_hilas_FGBiasWeakGate2x1cell.
  *
@@ -1208,7 +1208,7 @@ endmodule
 `define SKY130_HILAS_INVERT01
 
 /**
- * sky130_hilas_invert01: None
+ * sky130_hilas_invert01: 
  *
  * Verilog wrapper for sky130_hilas_invert01.
  *
@@ -1256,7 +1256,7 @@ endmodule
 `define SKY130_HILAS_HORIZPCELL01
 
 /**
- * sky130_hilas_horizPcell01: None
+ * sky130_hilas_horizPcell01: 
  *
  * Verilog wrapper for sky130_hilas_horizPcell01.
  *
@@ -1304,7 +1304,7 @@ endmodule
 `define SKY130_HILAS_NFETMED
 
 /**
- * sky130_hilas_nFETmed: None
+ * sky130_hilas_nFETmed: 
  *
  * Verilog wrapper for sky130_hilas_nFETmed.
  *
@@ -1352,7 +1352,7 @@ endmodule
 `define SKY130_HILAS_DAC5BIT01
 
 /**
- * sky130_hilas_DAC5bit01: 5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit, and they would use this cell
+ * sky130_hilas_DAC5bit01: 
  *
  * Verilog wrapper for sky130_hilas_DAC5bit01.
  *
@@ -1421,7 +1421,7 @@ endmodule
 `define SKY130_HILAS_CAPACITORSIZE02
 
 /**
- * sky130_hilas_capacitorSize02: mid-small cap
+ * sky130_hilas_capacitorSize02: 
  *
  * Verilog wrapper for sky130_hilas_capacitorSize02.
  *
@@ -1476,7 +1476,7 @@ endmodule
 `define SKY130_HILAS_DECOUP_CAP_00
 
 /**
- * sky130_hilas_decoup_cap_00: decoupling cap (intended as fill)
+ * sky130_hilas_decoup_cap_00: 
  *
  * Verilog wrapper for sky130_hilas_decoup_cap_00.
  *
@@ -1524,7 +1524,7 @@ endmodule
 `define SKY130_HILAS_PFETDEVICE01BA
 
 /**
- * sky130_hilas_pFETdevice01ba: pFET transistor used in DAC block
+ * sky130_hilas_pFETdevice01ba: 
  *
  * Verilog wrapper for sky130_hilas_pFETdevice01ba.
  *
@@ -1572,7 +1572,7 @@ endmodule
 `define SKY130_HILAS_NFETLARGEPART1
 
 /**
- * sky130_hilas_nFETLargePart1: None
+ * sky130_hilas_nFETLargePart1: 
  *
  * Verilog wrapper for sky130_hilas_nFETLargePart1.
  *
@@ -1620,7 +1620,7 @@ endmodule
 `define SKY130_HILAS_TGATE4SINGLE01
 
 /**
- * sky130_hilas_Tgate4Single01: 4 single-throw transmission gates
+ * sky130_hilas_Tgate4Single01: 
  *
  * Verilog wrapper for sky130_hilas_Tgate4Single01.
  *
@@ -1719,7 +1719,7 @@ endmodule
 `define SKY130_HILAS_TA2CELL_NOFG
 
 /**
- * sky130_hilas_TA2Cell_NoFG: Two transimpedane amplifiers with no floating-gate inputs.
+ * sky130_hilas_TA2Cell_NoFG: 
  *
  * Verilog wrapper for sky130_hilas_TA2Cell_NoFG.
  *
@@ -1818,7 +1818,7 @@ endmodule
 `define SKY130_HILAS_PTRANSISTORVERT01
 
 /**
- * sky130_hilas_pTransistorVert01: None
+ * sky130_hilas_pTransistorVert01: 
  *
  * Verilog wrapper for sky130_hilas_pTransistorVert01.
  *
@@ -1866,7 +1866,7 @@ endmodule
 `define SKY130_HILAS_LI2M2
 
 /**
- * sky130_hilas_li2m2: local interconnect to m2 contact
+ * sky130_hilas_li2m2: 
  *
  * Verilog wrapper for sky130_hilas_li2m2.
  *
@@ -1914,7 +1914,7 @@ endmodule
 `define SKY130_HILAS_TGATESINGLE01PART1
 
 /**
- * sky130_hilas_TgateSingle01Part1: None
+ * sky130_hilas_TgateSingle01Part1: 
  *
  * Verilog wrapper for sky130_hilas_TgateSingle01Part1.
  *
@@ -1962,7 +1962,7 @@ endmodule
 `define SKY130_HILAS_SWC4X1BIASCELL
 
 /**
- * sky130_hilas_swc4x1BiasCell: 4x1 array of FG switch cell configured pFET as current sources
+ * sky130_hilas_swc4x1BiasCell: 
  *
  * Verilog wrapper for sky130_hilas_swc4x1BiasCell.
  *
@@ -2059,7 +2059,7 @@ endmodule
 `define SKY130_HILAS_PFETDEVICE01B
 
 /**
- * sky130_hilas_pFETdevice01b: pFET transistor used in DAC block
+ * sky130_hilas_pFETdevice01b: 
  *
  * Verilog wrapper for sky130_hilas_pFETdevice01b.
  *
@@ -2107,7 +2107,7 @@ endmodule
 `define SKY130_HILAS_VINJDIODEPROTECT01
 
 /**
- * sky130_hilas_VinjDiodeProtect01: protective ESD diode for VINJ line
+ * sky130_hilas_VinjDiodeProtect01: 
  *
  * Verilog wrapper for sky130_hilas_VinjDiodeProtect01.
  *
@@ -2155,7 +2155,7 @@ endmodule
 `define SKY130_HILAS_STEPUPDIGITAL
 
 /**
- * sky130_hilas_StepUpDigital: a single level shifter
+ * sky130_hilas_StepUpDigital: 
  *
  * Verilog wrapper for sky130_hilas_StepUpDigital.
  *
@@ -2203,7 +2203,7 @@ endmodule
 `define SKY130_HILAS_TGATESINGLE01
 
 /**
- * sky130_hilas_TgateSingle01: None
+ * sky130_hilas_TgateSingle01: 
  *
  * Verilog wrapper for sky130_hilas_TgateSingle01.
  *
@@ -2251,7 +2251,7 @@ endmodule
 `define SKY130_HILAS_VINJNOR3
 
 /**
- * sky130_hilas_VinjNOR3: 3-input NOR gate capable of VING voltage
+ * sky130_hilas_VinjNOR3: 
  *
  * Verilog wrapper for sky130_hilas_VinjNOR3.
  *
@@ -2299,7 +2299,7 @@ endmodule
 `define SKY130_HILAS_WTASINGLESTAGE01
 
 /**
- * sky130_hilas_WTAsinglestage01: None
+ * sky130_hilas_WTAsinglestage01: 
  *
  * Verilog wrapper for sky130_hilas_WTAsinglestage01.
  *
@@ -2347,7 +2347,7 @@ endmodule
 `define SKY130_HILAS_TGATESINGLE01PART2
 
 /**
- * sky130_hilas_TgateSingle01Part2: None
+ * sky130_hilas_TgateSingle01Part2: 
  *
  * Verilog wrapper for sky130_hilas_TgateSingle01Part2.
  *
@@ -2395,7 +2395,7 @@ endmodule
 `define SKY130_HILAS_VINJDECODE2TO4
 
 /**
- * sky130_hilas_VinjDecode2to4: a 2-to-4 decoder capable of handling VINJ voltage
+ * sky130_hilas_VinjDecode2to4: 
  *
  * Verilog wrapper for sky130_hilas_VinjDecode2to4.
  *
@@ -2476,7 +2476,7 @@ endmodule
 `define SKY130_HILAS_DAC6TRANSISTORSTACK01A
 
 /**
- * sky130_hilas_DAC6TransistorStack01a: None
+ * sky130_hilas_DAC6TransistorStack01a: 
  *
  * Verilog wrapper for sky130_hilas_DAC6TransistorStack01a.
  *
@@ -2524,7 +2524,7 @@ endmodule
 `define SKY130_HILAS_NFET03A
 
 /**
- * sky130_hilas_nFET03a: None
+ * sky130_hilas_nFET03a: 
  *
  * Verilog wrapper for sky130_hilas_nFET03a.
  *
@@ -2572,7 +2572,7 @@ endmodule
 `define SKY130_HILAS_DRAINSELECT01
 
 /**
- * sky130_hilas_drainSelect01: multiplexor for drain selection for 4 drain lines, pitch matched
+ * sky130_hilas_drainSelect01: 
  *
  * Verilog wrapper for sky130_hilas_drainSelect01.
  *
@@ -2661,7 +2661,7 @@ endmodule
 `define SKY130_HILAS_CAPACITORARRAY01
 
 /**
- * sky130_hilas_capacitorArray01: selectable capacitor array
+ * sky130_hilas_capacitorArray01: 
  *
  * Verilog wrapper for sky130_hilas_capacitorArray01.
  *
@@ -2748,7 +2748,7 @@ endmodule
 `define SKY130_HILAS_POLY2M1
 
 /**
- * sky130_hilas_poly2m1: polysilicon layer to m1 contact
+ * sky130_hilas_poly2m1: 
  *
  * Verilog wrapper for sky130_hilas_poly2m1.
  *
@@ -2796,7 +2796,7 @@ endmodule
 `define SKY130_HILAS_PFETDEVICE01
 
 /**
- * sky130_hilas_pFETdevice01: pFET transistor used in DAC block
+ * sky130_hilas_pFETdevice01: 
  *
  * Verilog wrapper for sky130_hilas_pFETdevice01.
  *
@@ -2844,7 +2844,7 @@ endmodule
 `define SKY130_HILAS_FGVARACTORTUNNELCAP01
 
 /**
- * sky130_hilas_FGVaractorTunnelCap01: Tunneling cpacitor using a standard varactor capacitor
+ * sky130_hilas_FGVaractorTunnelCap01: 
  *
  * Verilog wrapper for sky130_hilas_FGVaractorTunnelCap01.
  *
@@ -2892,7 +2892,7 @@ endmodule
 `define SKY130_HILAS_SWC4X1CELLOVERLAP2
 
 /**
- * sky130_hilas_swc4x1cellOverlap2: 4x1 analog mux with overlap
+ * sky130_hilas_swc4x1cellOverlap2: 
  *
  * Verilog wrapper for sky130_hilas_swc4x1cellOverlap2.
  *
@@ -2940,7 +2940,7 @@ endmodule
 `define SKY130_HILAS_VINJINV2
 
 /**
- * sky130_hilas_VinjInv2: logical inverter for VINJ-level voltages
+ * sky130_hilas_VinjInv2: 
  *
  * Verilog wrapper for sky130_hilas_VinjInv2.
  *
@@ -2988,7 +2988,7 @@ endmodule
 `define SKY130_HILAS_TRANS4SMALL
 
 /**
- * sky130_hilas_Trans4small: 3 small nFETs + 3 small pFETs
+ * sky130_hilas_Trans4small: 
  *
  * Verilog wrapper for sky130_hilas_Trans4small.
  *
@@ -3113,7 +3113,7 @@ endmodule
 `define SKY130_HILAS_TRANS2MED
 
 /**
- * sky130_hilas_Trans2med: None
+ * sky130_hilas_Trans2med: 
  *
  * Verilog wrapper for sky130_hilas_Trans2med.
  *
@@ -3208,7 +3208,7 @@ endmodule
 `define SKY130_HILAS_SWC4X1CELLOVERLAP
 
 /**
- * sky130_hilas_swc4x1cellOverlap: 4x1 array of FG switch cell using overlap capacitors
+ * sky130_hilas_swc4x1cellOverlap: 
  *
  * Verilog wrapper for sky130_hilas_swc4x1cellOverlap.
  *
@@ -3256,8 +3256,7 @@ endmodule
 `define SKY130_HILAS_TA2CELL_1FG
 
 /**
- * sky130_hilas_TA2Cell_1FG: Two transimpedance amps with one (of two) amplifiers using floating-gate
-  inputs. FG amplifier with wide linear range.
+ * sky130_hilas_TA2Cell_1FG: 
  *
  * Verilog wrapper for sky130_hilas_TA2Cell_1FG.
  *
@@ -3360,7 +3359,7 @@ endmodule
 `define SKY130_HILAS_SWC2X2VARACTOR
 
 /**
- * sky130_hilas_swc2x2varactor: ??  Is this part of the library?
+ * sky130_hilas_swc2x2varactor: 
  *
  * Verilog wrapper for sky130_hilas_swc2x2varactor.
  *
@@ -3408,7 +3407,7 @@ endmodule
 `define SKY130_HILAS_POLYRESISTORGND
 
 /**
- * sky130_hilas_polyresistorGND: protective current-limiting resistor to ground
+ * sky130_hilas_polyresistorGND: 
  *
  * Verilog wrapper for sky130_hilas_polyresistorGND.
  *
@@ -3458,7 +3457,7 @@ endmodule
 `define SKY130_HILAS_PFETDEVICE01A
 
 /**
- * sky130_hilas_pFETdevice01a: pFET transistor used in DAC block
+ * sky130_hilas_pFETdevice01a: 
  *
  * Verilog wrapper for sky130_hilas_pFETdevice01a.
  *
@@ -3506,7 +3505,7 @@ endmodule
 `define SKY130_HILAS_TACOREBLOCK
 
 /**
- * sky130_hilas_TACoreBlock: None
+ * sky130_hilas_TACoreBlock: 
  *
  * Verilog wrapper for sky130_hilas_TACoreBlock.
  *
@@ -3554,7 +3553,7 @@ endmodule
 `define SKY130_HILAS_NOVERLAPCAP01
 
 /**
- * sky130_hilas_nOverlapCap01: overlap capacitor based capacitor (nFET)
+ * sky130_hilas_nOverlapCap01: 
  *
  * Verilog wrapper for sky130_hilas_nOverlapCap01.
  *
@@ -3602,7 +3601,7 @@ endmodule
 `define SKY130_HILAS_POLY2LI
 
 /**
- * sky130_hilas_poly2li: polysilicon layer to li contact
+ * sky130_hilas_poly2li: 
  *
  * Verilog wrapper for sky130_hilas_poly2li.
  *
@@ -3650,7 +3649,7 @@ endmodule
 `define SKY130_HILAS_MCAP2M4
 
 /**
- * sky130_hilas_mcap2m4: metal capacitor layer contact to m4
+ * sky130_hilas_mcap2m4: 
  *
  * Verilog wrapper for sky130_hilas_mcap2m4.
  *
@@ -3698,7 +3697,7 @@ endmodule
 `define SKY130_HILAS_LI2M1
 
 /**
- * sky130_hilas_li2m1: local interconnect to m1 contact
+ * sky130_hilas_li2m1: 
  *
  * Verilog wrapper for sky130_hilas_li2m1.
  *
@@ -3746,7 +3745,7 @@ endmodule
 `define SKY130_HILAS_POLY2M2
 
 /**
- * sky130_hilas_poly2m2: polysilicon layer to m2 contact
+ * sky130_hilas_poly2m2: 
  *
  * Verilog wrapper for sky130_hilas_poly2m2.
  *
@@ -3794,7 +3793,7 @@ endmodule
 `define SKY130_HILAS_CAPMODULE02
 
 /**
- * sky130_hilas_CapModule02: None
+ * sky130_hilas_CapModule02: 
  *
  * Verilog wrapper for sky130_hilas_CapModule02.
  *
@@ -3842,7 +3841,7 @@ endmodule
 `define SKY130_HILAS_PFETMIRROR
 
 /**
- * sky130_hilas_pFETmirror: pFET current mirror
+ * sky130_hilas_pFETmirror: 
  *
  * Verilog wrapper for sky130_hilas_pFETmirror.
  *
@@ -3890,7 +3889,7 @@ endmodule
 `define SKY130_HILAS_NFET03
 
 /**
- * sky130_hilas_nFET03: None
+ * sky130_hilas_nFET03: 
  *
  * Verilog wrapper for sky130_hilas_nFET03.
  *
@@ -3938,7 +3937,7 @@ endmodule
 `define SKY130_HILAS_WELLCONTACT
 
 /**
- * sky130_hilas_wellContact: contact to a well block, typically used for contacting tunneling junctions in a well.
+ * sky130_hilas_wellContact: 
  *
  * Verilog wrapper for sky130_hilas_wellContact.
  *
@@ -3986,7 +3985,7 @@ endmodule
 `define SKY130_HILAS_PFETMIRROR02
 
 /**
- * sky130_hilas_pFETmirror02: second pFET current mirror
+ * sky130_hilas_pFETmirror02: 
  *
  * Verilog wrapper for sky130_hilas_pFETmirror02.
  *
@@ -4034,7 +4033,7 @@ endmodule
 `define SKY130_HILAS_FGTRANS2X1CELL
 
 /**
- * sky130_hilas_FGtrans2x1cell: None
+ * sky130_hilas_FGtrans2x1cell: 
  *
  * Verilog wrapper for sky130_hilas_FGtrans2x1cell.
  *
@@ -4135,7 +4134,7 @@ endmodule
 `define SKY130_HILAS_SWC4X2CELLOVERLAP
 
 /**
- * sky130_hilas_swc4x2cellOverlap: Core switch cell, built with overlap capacitor
+ * sky130_hilas_swc4x2cellOverlap: 
  *
  * Verilog wrapper for sky130_hilas_swc4x2cellOverlap.
  *
@@ -4246,7 +4245,7 @@ endmodule
 `define SKY130_HILAS_HORIZTRANSCELL01
 
 /**
- * sky130_hilas_horizTransCell01: None
+ * sky130_hilas_horizTransCell01: 
  *
  * Verilog wrapper for sky130_hilas_horizTransCell01.
  *
@@ -4294,7 +4293,7 @@ endmodule
 `define SKY130_HILAS_NMIRROR03
 
 /**
- * sky130_hilas_nMirror03: None
+ * sky130_hilas_nMirror03: 
  *
  * Verilog wrapper for sky130_hilas_nMirror03.
  *
@@ -4342,7 +4341,7 @@ endmodule
 `define SKY130_HILAS_CAPMODULE03
 
 /**
- * sky130_hilas_CapModule03: None
+ * sky130_hilas_CapModule03: 
  *
  * Verilog wrapper for sky130_hilas_CapModule03.
  *
@@ -4390,7 +4389,7 @@ endmodule
 `define SKY130_HILAS_CAPACITORSIZE04
 
 /**
- * sky130_hilas_capacitorSize04: large cap
+ * sky130_hilas_capacitorSize04: 
  *
  * Verilog wrapper for sky130_hilas_capacitorSize04.
  *
@@ -4453,7 +4452,7 @@ endmodule
 `define SKY130_HILAS_TA2CELL_1FG_STRONG
 
 /**
- * sky130_hilas_TA2Cell_1FG_Strong: Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with normal linear range.
+ * sky130_hilas_TA2Cell_1FG_Strong: 
  *
  * Verilog wrapper for sky130_hilas_TA2Cell_1FG_Strong.
  *
@@ -4568,7 +4567,7 @@ endmodule
 `define SKY130_HILAS_TA2SIGNALBIASCELL
 
 /**
- * sky130_hilas_TA2SignalBiasCell: None
+ * sky130_hilas_TA2SignalBiasCell: 
  *
  * Verilog wrapper for sky130_hilas_TA2SignalBiasCell.
  *
@@ -4651,7 +4650,7 @@ endmodule
 `define SKY130_HILAS_CAPMODULE01A
 
 /**
- * sky130_hilas_CapModule01a: primitive cap, variant 01a
+ * sky130_hilas_CapModule01a: 
  *
  * Verilog wrapper for sky130_hilas_CapModule01a.
  *
@@ -4699,7 +4698,7 @@ endmodule
 `define SKY130_HILAS_FGVARACTORCAPACITOR
 
 /**
- * sky130_hilas_FGVaractorCapacitor: varactor cap for floating-gate charge storage
+ * sky130_hilas_FGVaractorCapacitor: 
  *
  * Verilog wrapper for sky130_hilas_FGVaractorCapacitor.
  *
@@ -4747,7 +4746,7 @@ endmodule
 `define SKY130_HILAS_M22M4
 
 /**
- * sky130_hilas_m22m4: m2 to m4 contact
+ * sky130_hilas_m22m4: 
  *
  * Verilog wrapper for sky130_hilas_m22m4.
  *
@@ -4795,7 +4794,7 @@ endmodule
 `define SKY130_HILAS_CELLATTEMPT01
 
 /**
- * sky130_hilas_cellAttempt01: 4x1 array of FG switch cell, Varactor capacitor cell
+ * sky130_hilas_cellAttempt01: 
  *
  * Verilog wrapper for sky130_hilas_cellAttempt01.
  *
@@ -4894,7 +4893,7 @@ endmodule
 `define SKY130_HILAS_PFETLARGE
 
 /**
- * sky130_hilas_pFETLarge: Single Large (W/L=100) pFET Transistor
+ * sky130_hilas_pFETLarge: 
  *
  * Verilog wrapper for sky130_hilas_pFETLarge.
  *
@@ -4957,7 +4956,7 @@ endmodule
 `define SKY130_HILAS_WTA4STAGE01
 
 /**
- * sky130_hilas_WTA4Stage01: 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one nFET transistor current source.
+ * sky130_hilas_WTA4Stage01: 
  *
  * Verilog wrapper for sky130_hilas_WTA4Stage01.
  *
@@ -5076,7 +5075,7 @@ endmodule
 `define SKY130_HILAS_STEPUPDIGITALPART1
 
 /**
- * sky130_hilas_StepUpDigitalPart1: step-up level shifter part
+ * sky130_hilas_StepUpDigitalPart1: 
  *
  * Verilog wrapper for sky130_hilas_StepUpDigitalPart1.
  *
@@ -5124,7 +5123,7 @@ endmodule
 `define SKY130_HILAS_PFETMED
 
 /**
- * sky130_hilas_pFETmed: Medium-sized (W/L=10) pFET transistor
+ * sky130_hilas_pFETmed: 
  *
  * Verilog wrapper for sky130_hilas_pFETmed.
  *
@@ -5172,7 +5171,7 @@ endmodule
 `define SKY130_HILAS_DUALTACORE01
 
 /**
- * sky130_hilas_DualTACore01: None
+ * sky130_hilas_DualTACore01: 
  *
  * Verilog wrapper for sky130_hilas_DualTACore01.
  *
@@ -5220,7 +5219,7 @@ endmodule
 `define SKY130_HILAS_NFETMIRRORPAIRS2
 
 /**
- * sky130_hilas_nFETmirrorPairs2: None
+ * sky130_hilas_nFETmirrorPairs2: 
  *
  * Verilog wrapper for sky130_hilas_nFETmirrorPairs2.
  *
@@ -5268,7 +5267,7 @@ endmodule
 `define SKY130_HILAS_FGBIAS2X1CELL
 
 /**
- * sky130_hilas_FGBias2x1cell: None
+ * sky130_hilas_FGBias2x1cell: 
  *
  * Verilog wrapper for sky130_hilas_FGBias2x1cell.
  *
@@ -5349,7 +5348,7 @@ endmodule
 `define SKY130_HILAS_NDIFFTHOXCONTACT
 
 /**
- * sky130_hilas_nDiffThOxContact: None
+ * sky130_hilas_nDiffThOxContact: 
  *
  * Verilog wrapper for sky130_hilas_nDiffThOxContact.
  *
@@ -5397,7 +5396,7 @@ endmodule
 `define SKY130_HILAS_PFETLARGEPART1
 
 /**
- * sky130_hilas_pFETLargePart1: Part of the W/L=100 pFET transistor
+ * sky130_hilas_pFETLargePart1: 
  *
  * Verilog wrapper for sky130_hilas_pFETLargePart1.
  *
@@ -5445,7 +5444,7 @@ endmodule
 `define SKY130_HILAS_NFETMIRRORPAIRS
 
 /**
- * sky130_hilas_nFETmirrorPairs: pairs of nFET current mirrors
+ * sky130_hilas_nFETmirrorPairs: 
  *
  * Verilog wrapper for sky130_hilas_nFETmirrorPairs.
  *
@@ -5493,7 +5492,7 @@ endmodule
 `define SKY130_HILAS_DAC6BIT01
 
 /**
- * sky130_hilas_DAC6bit01: None
+ * sky130_hilas_DAC6bit01: 
  *
  * Verilog wrapper for sky130_hilas_DAC6bit01.
  *
@@ -5541,7 +5540,7 @@ endmodule
 `define SKY130_HILAS_PFETDEVICE01D
 
 /**
- * sky130_hilas_pFETdevice01d: pFET transistor used in DAC block
+ * sky130_hilas_pFETdevice01d: 
  *
  * Verilog wrapper for sky130_hilas_pFETdevice01d.
  *
@@ -5589,7 +5588,7 @@ endmodule
 `define SKY130_HILAS_NFETLARGE
 
 /**
- * sky130_hilas_nFETLarge: Single Large (W//L=100) nFET Transistor
+ * sky130_hilas_nFETLarge: 
  *
  * Verilog wrapper for sky130_hilas_nFETLarge.
  *
@@ -5648,7 +5647,7 @@ endmodule
 `define SKY130_HILAS_PFETDEVICE01E
 
 /**
- * sky130_hilas_pFETdevice01e: pFET transistor used in DAC block
+ * sky130_hilas_pFETdevice01e: 
  *
  * Verilog wrapper for sky130_hilas_pFETdevice01e.
  *
@@ -5696,7 +5695,7 @@ endmodule
 `define SKY130_HILAS_TUNVARACTORCAPCITOR
 
 /**
- * sky130_hilas_TunVaractorCapcitor: Tunneling capacitor using a standard varactor capacitor
+ * sky130_hilas_TunVaractorCapcitor: 
  *
  * Verilog wrapper for sky130_hilas_TunVaractorCapcitor.
  *
@@ -5744,7 +5743,7 @@ endmodule
 `define SKY130_HILAS_DECOUP_CAP_01
 
 /**
- * sky130_hilas_decoup_cap_01: decoupling cap (intended as fill), variant
+ * sky130_hilas_decoup_cap_01: 
  *
  * Verilog wrapper for sky130_hilas_decoup_cap_01.
  *
@@ -5792,7 +5791,7 @@ endmodule
 `define SKY130_HILAS_CAPACITORSIZE03
 
 /**
- * sky130_hilas_capacitorSize03: mid-large cap
+ * sky130_hilas_capacitorSize03: 
  *
  * Verilog wrapper for sky130_hilas_capacitorSize03.
  *
@@ -5847,7 +5846,7 @@ endmodule
 `define SKY130_HILAS_PFETDEVICE01C
 
 /**
- * sky130_hilas_pFETdevice01c: pFET transistor used in DAC block
+ * sky130_hilas_pFETdevice01c: 
  *
  * Verilog wrapper for sky130_hilas_pFETdevice01c.
  *
@@ -5895,7 +5894,7 @@ endmodule
 `define SKY130_HILAS_ALL
 
 /**
- * sky130_hilas_all: A design which contains all cells (?)
+ * sky130_hilas_all: 
  *
  * Verilog wrapper for sky130_hilas_all.
  *
@@ -5943,7 +5942,7 @@ endmodule
 `define SKY130_HILAS_OVERLAPCAP01
 
 /**
- * sky130_hilas_overlapCap01: overlap capacitor based capacitor
+ * sky130_hilas_overlapCap01: 
  *
  * Verilog wrapper for sky130_hilas_overlapCap01.
  *
@@ -5991,7 +5990,7 @@ endmodule
 `define SKY130_HILAS_WTA4STAGE01
 
 /**
- * sky130_hilas_WTA4stage01: single-element of WTA circuit
+ * sky130_hilas_WTA4stage01: 
  *
  * Verilog wrapper for sky130_hilas_WTA4stage01.
  *
@@ -6039,7 +6038,7 @@ endmodule
 `define SKY130_HILAS_WTABLOCKSAMPLE01
 
 /**
- * sky130_hilas_WTAblockSample01: None
+ * sky130_hilas_WTAblockSample01: 
  *
  * Verilog wrapper for sky130_hilas_WTAblockSample01.
  *
@@ -6087,7 +6086,7 @@ endmodule
 `define SKY130_HILAS_DAC6TRANSISTORSTACK01B
 
 /**
- * sky130_hilas_DAC6TransistorStack01b: None
+ * sky130_hilas_DAC6TransistorStack01b: 
  *
  * Verilog wrapper for sky130_hilas_DAC6TransistorStack01b.
  *
@@ -6135,7 +6134,7 @@ endmodule
 `define SKY130_HILAS_PFETDEVICE01AA
 
 /**
- * sky130_hilas_pFETdevice01aa: pFET transistor used in DAC block
+ * sky130_hilas_pFETdevice01aa: 
  *
  * Verilog wrapper for sky130_hilas_pFETdevice01aa.
  *
@@ -6183,7 +6182,7 @@ endmodule
 `define SKY130_HILAS_CAPMODULE01
 
 /**
- * sky130_hilas_CapModule01: None
+ * sky130_hilas_CapModule01: 
  *
  * Verilog wrapper for sky130_hilas_CapModule01.
  *
