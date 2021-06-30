@@ -511,9 +511,9 @@ rect 1942 19 1953 307
 rect 1942 -10 2114 19
 rect -744 -121 2114 -10
 << labels >>
-rlabel metal1 511 703 901 773 0 Output
+rlabel metal1 511 703 901 773 0 OUTPUT
 port 1 nsew
-rlabel metal1 508 -229 903 -152 0 Input
+rlabel metal1 508 -229 903 -152 0 INPUT
 port 2 nsew
 rlabel space -744 508 -721 649 0 VGND
 port 3 nsew
