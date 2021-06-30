@@ -58,25 +58,19 @@ N 870 120 880 120 { lab=#net12}
 N 820 440 820 550 { lab=Vinj}
 N 820 550 820 720 { lab=Vinj}
 N 800 440 800 660 { lab=Vtun}
-N 760 660 800 660 { lab=Vtun}
+N 760 650 800 650 { lab=Vtun}
 N 760 580 820 580 { lab=Vinj}
 N 820 720 820 740 { lab=Vinj}
 N 800 660 800 720 { lab=Vtun}
 N 820 740 820 760 { lab=Vinj}
 N 780 760 820 760 { lab=Vinj}
-N 460 460 460 540 { lab=GateNFET1}
-N 460 540 780 540 { lab=GateNFET1}
-N 780 540 780 640 { lab=GateNFET1}
-N 760 640 780 640 { lab=GateNFET1}
-N 780 640 1020 640 { lab=GateNFET1}
-N 760 620 1000 620 { lab=CharOutput}
-N 760 580 760 600 { lab=Vinj}
-N 430 680 460 680 { lab=#net13}
-N 430 660 460 660 { lab=GateAndCap1}
-N 430 640 460 640 { lab=Cap2}
-N 430 620 460 620 { lab=Cap3}
-N 430 600 460 600 { lab=VrefChar}
-N 430 580 460 580 { lab=DrainInject}
+N 770 630 790 630 { lab=GateNFET1}
+N 430 690 460 690 { lab=GeneralGate02}
+N 430 670 460 670 { lab=GateAndCap1}
+N 430 650 460 650 { lab=Cap2}
+N 430 610 460 610 { lab=LargeCapacitor}
+N 430 590 460 590 { lab=VrefChar}
+N 430 570 460 570 { lab=DrainInject}
 N 800 -520 800 -70 { lab=Vtun}
 N 820 -520 820 -70 { lab=Vinj}
 N 860 -520 860 -10 { lab=Gate1}
@@ -88,22 +82,22 @@ N 820 -70 820 -10 { lab=Vinj}
 N -150 -450 -150 -10 { lab=DrainOut}
 N -150 -610 -150 -450 { lab=DrainOut}
 N -170 -350 -150 -350 { lab=DrainOut}
-N 300 -270 460 -270 { lab=#net14}
-N 300 -290 460 -290 { lab=#net15}
-N -170 -290 -130 -290 { lab=#net15}
-N -170 -270 -130 -270 { lab=#net14}
+N 300 -270 460 -270 { lab=#net13}
+N 300 -290 460 -290 { lab=#net14}
+N -170 -290 -130 -290 { lab=#net14}
+N -170 -270 -130 -270 { lab=#net13}
 N -500 -350 -500 -10 { lab=#net1}
 N -500 -350 -470 -350 { lab=#net1}
-N 430 -610 430 -550 { lab=#net16}
-N 410 -610 410 -530 { lab=#net17}
-N 430 -550 460 -550 { lab=#net16}
-N 410 -530 460 -530 { lab=#net17}
-N -170 -330 -130 -330 { lab=#net18}
-N 300 -590 300 -330 { lab=#net18}
-N 300 -590 460 -590 { lab=#net18}
-N -170 -310 -110 -310 { lab=#net19}
-N 320 -570 320 -310 { lab=#net19}
-N 320 -570 460 -570 { lab=#net19}
+N 430 -610 430 -550 { lab=#net15}
+N 410 -610 410 -530 { lab=#net16}
+N 430 -550 460 -550 { lab=#net15}
+N 410 -530 460 -530 { lab=#net16}
+N -170 -330 -130 -330 { lab=#net17}
+N 300 -590 300 -330 { lab=#net17}
+N 300 -590 460 -590 { lab=#net17}
+N -170 -310 -110 -310 { lab=#net18}
+N 320 -570 320 -310 { lab=#net18}
+N 320 -570 460 -570 { lab=#net18}
 N 800 -620 800 -520 { lab=Vtun}
 N 820 -620 820 -520 { lab=Vinj}
 N 860 -620 860 -520 { lab=Gate1}
@@ -131,47 +125,46 @@ N 1030 -300 1050 -300 { lab=OutputTA1}
 N 1030 -340 1050 -340 { lab=OutputTA1}
 N 1030 -380 1050 -380 { lab=OutputTA1}
 N 780 -400 1050 -400 { lab=Vdd}
-N 1050 -240 1050 -60 { lab=#net20}
-N 760 -70 780 -70 { lab=#net20}
-N 780 -70 940 -60 { lab=#net20}
-N 940 -60 1050 -60 { lab=#net20}
-N 760 -130 940 -120 { lab=#net21}
-N 940 -120 1010 -120 { lab=#net21}
-N 1010 -280 1010 -120 { lab=#net21}
-N 1010 -280 1050 -280 { lab=#net21}
-N 1020 -460 1020 -360 { lab=#net22}
-N 760 -470 1020 -460 { lab=#net22}
-N 760 -430 990 -420 { lab=#net23}
-N 1020 -360 1050 -360 { lab=#net22}
-N 1010 -320 1050 -320 { lab=#net23}
-N 1010 -420 1010 -320 { lab=#net23}
-N 990 -420 1010 -420 { lab=#net23}
+N 1050 -240 1050 -60 { lab=#net19}
+N 760 -70 780 -70 { lab=#net19}
+N 780 -70 940 -60 { lab=#net19}
+N 940 -60 1050 -60 { lab=#net19}
+N 760 -130 940 -120 { lab=#net20}
+N 940 -120 1010 -120 { lab=#net20}
+N 1010 -280 1010 -120 { lab=#net20}
+N 1010 -280 1050 -280 { lab=#net20}
+N 1020 -460 1020 -360 { lab=#net21}
+N 760 -470 1020 -460 { lab=#net21}
+N 760 -430 990 -420 { lab=#net22}
+N 1020 -360 1050 -360 { lab=#net21}
+N 1010 -320 1050 -320 { lab=#net22}
+N 1010 -420 1010 -320 { lab=#net22}
+N 990 -420 1010 -420 { lab=#net22}
 N 1030 -440 1110 -440 { lab=OutputTA1}
 N 1110 -440 1130 -440 { lab=OutputTA1}
-N 760 680 1010 680 { lab=GeneralGate01}
-N 760 700 1010 700 { lab=GeneralGate02}
-N 1000 620 1020 620 { lab=CharOutput}
-N 960 -560 960 520 { lab=GeneralGate02}
+N 760 670 1010 670 { lab=GeneralGate01}
+N 760 710 1010 710 { lab=GeneralGate02}
+N 960 -560 960 520 { lab=#net23}
 N 980 -560 980 520 { lab=GeneralGate01}
 N 980 520 980 680 { lab=GeneralGate01}
-N 960 520 960 700 { lab=GeneralGate02}
+N 960 520 960 700 { lab=#net23}
 N 840 440 840 580 { lab=Vdd}
 N 840 580 1020 580 { lab=Vdd}
-N 760 -50 940 -40 { lab=GeneralGate02}
-N 940 -40 960 -40 { lab=GeneralGate02}
+N 760 -50 940 -40 { lab=#net23}
+N 940 -40 960 -40 { lab=#net23}
 N 760 -90 940 -80 { lab=GeneralGate01}
 N 940 -80 980 -80 { lab=GeneralGate01}
 N 760 -110 940 -100 { lab=GeneralGate01}
 N 940 -100 980 -100 { lab=GeneralGate01}
-N 760 -150 940 -140 { lab=GeneralGate02}
-N 940 -140 960 -140 { lab=GeneralGate02}
+N 760 -150 940 -140 { lab=#net23}
+N 940 -140 960 -140 { lab=#net23}
 N 760 -450 940 -440 { lab=GeneralGate01}
 N 940 -440 980 -440 { lab=GeneralGate01}
 N 760 -370 940 -360 { lab=GeneralGate01}
 N 940 -360 980 -360 { lab=GeneralGate01}
-N 760 -390 940 -380 { lab=GeneralGate02}
-N 940 -380 960 -380 { lab=GeneralGate02}
-N 760 -410 960 -410 { lab=GeneralGate02}
+N 760 -390 940 -380 { lab=#net23}
+N 940 -380 960 -380 { lab=#net23}
+N 760 -410 960 -410 { lab=#net23}
 N 860 540 1020 540 { lab=Gate1}
 N 860 500 860 540 { lab=Gate1}
 N 880 500 880 520 { lab=#net12}
@@ -210,7 +203,7 @@ N -1480 230 -1400 230 { lab=SourceP}
 N -1480 210 -1360 210 { lab=SourceN}
 N -1480 350 -1360 350 { lab=SourceN}
 N -1480 480 -1400 480 { lab=SourceP}
-N 320 660 430 660 { lab=GateAndCap1}
+N 320 670 430 670 { lab=GateAndCap1}
 N -470 690 -80 690 { lab=GateAndCap1}
 N -540 690 -470 690 { lab=GateAndCap1}
 N -1820 690 -1190 690 { lab=GateAndCap1}
@@ -230,7 +223,7 @@ N -1480 440 -1320 440 { lab=Drain6p}
 N -1360 -330 -1360 -310 { lab=SourceN}
 N -1400 -360 -1400 -310 { lab=SourceP}
 N -1440 -400 -1440 -310 { lab=Well}
-N 410 -640 410 -610 { lab=#net17}
+N 410 -640 410 -610 { lab=#net16}
 N 440 270 460 270 { lab=#net24}
 N 440 230 460 230 { lab=#net25}
 N 440 350 460 350 { lab=#net26}
@@ -240,14 +233,14 @@ N 1000 560 1000 580 { lab=Vdd}
 N 1000 560 1590 560 { lab=Vdd}
 N 1590 560 1590 690 { lab=Vdd}
 N 1580 690 1590 690 { lab=Vdd}
-N 960 700 960 720 { lab=GeneralGate02}
+N 960 700 960 720 { lab=#net23}
 N 1270 720 1280 720 { lab=Dig25}
 N 1580 700 1590 700 { lab=Vdd}
 N 1590 670 1590 700 { lab=Vdd}
-N 370 640 430 640 { lab=Cap2}
-N 320 640 370 640 { lab=Cap2}
-N 390 620 430 620 { lab=Cap3}
-N 320 620 390 620 { lab=Cap3}
+N 370 650 430 650 { lab=Cap2}
+N 320 650 370 650 { lab=Cap2}
+N 390 610 430 610 { lab=LargeCapacitor}
+N 320 610 390 610 { lab=LargeCapacitor}
 N 1580 720 1610 720 { lab=DacOutput}
 N 760 350 1000 330 { lab=Dig21}
 N 760 370 1000 350 { lab=Dig22}
@@ -361,10 +354,10 @@ N -880 -860 1070 -860 { lab=Vdd}
 N -880 -860 -880 -420 { lab=Vdd}
 N -880 -350 -850 -350 { lab=Vdd}
 N 90 -860 90 -740 { lab=Vdd}
-N 410 -660 410 -640 { lab=#net17}
-N 390 -660 410 -660 { lab=#net17}
-N 430 -680 430 -610 { lab=#net16}
-N 390 -680 430 -680 { lab=#net16}
+N 410 -660 410 -640 { lab=#net16}
+N 390 -660 410 -660 { lab=#net16}
+N 430 -680 430 -610 { lab=#net15}
+N 390 -680 430 -680 { lab=#net15}
 N -500 -610 -500 -350 { lab=#net1}
 N -140 -810 460 -810 { lab=#net1}
 N 460 -810 460 -740 { lab=#net1}
@@ -394,10 +387,10 @@ N 80 -680 90 -680 { lab=Dig18}
 N 80 -660 90 -660 { lab=Dig17}
 N -500 -810 -140 -810 { lab=#net1}
 N -500 -810 -500 -610 { lab=#net1}
-N -130 -330 300 -330 { lab=#net18}
-N -110 -310 320 -310 { lab=#net19}
-N -130 -290 300 -290 { lab=#net15}
-N -130 -270 300 -270 { lab=#net14}
+N -130 -330 300 -330 { lab=#net17}
+N -110 -310 320 -310 { lab=#net18}
+N -130 -290 300 -290 { lab=#net14}
+N -130 -270 300 -270 { lab=#net13}
 N -130 30 300 30 { lab=#net3}
 N -120 100 310 100 { lab=#net6}
 N -130 110 300 110 { lab=#net5}
@@ -445,36 +438,59 @@ N 410 350 440 350 { lab=#net26}
 N 410 350 410 420 { lab=#net26}
 N 370 440 410 440 { lab=#net26}
 N 410 420 410 440 { lab=#net26}
-N -40 660 -20 660 { lab=GateAndCap1}
+N -40 670 -20 670 { lab=GateAndCap1}
 N -20 660 -20 690 { lab=GateAndCap1}
 N -80 690 -20 690 { lab=GateAndCap1}
-N -40 640 -30 640 { lab=Cap2}
+N -40 650 -30 650 { lab=Cap2}
 N -30 230 -30 640 { lab=Cap2}
 N -30 230 70 230 { lab=Cap2}
 N -20 300 -20 660 { lab=GateAndCap1}
 N -20 300 70 300 { lab=GateAndCap1}
-N -30 640 320 640 { lab=Cap2}
-N -20 660 320 660 { lab=GateAndCap1}
-N -10 370 70 370 { lab=#net13}
-N -10 370 -10 680 { lab=#net13}
-N -10 680 370 680 { lab=#net13}
-N -0 440 70 440 { lab=#net40}
-N -0 440 0 720 { lab=#net40}
-N 0 720 370 720 { lab=#net40}
+N -30 650 320 650 { lab=Cap2}
+N -20 670 320 670 { lab=GateAndCap1}
+N -10 370 70 370 { lab=GeneralGate02}
+N -10 370 -10 680 { lab=GeneralGate02}
+N -10 690 370 690 { lab=GeneralGate02}
+N -0 440 70 440 { lab=GeneralGate01}
+N -0 440 0 720 { lab=GeneralGate01}
+N 0 720 370 720 { lab=GeneralGate01}
 N 780 -860 780 -620 { lab=Vdd}
 N -880 260 -880 490 { lab=Vdd}
 N -880 490 -880 500 { lab=Vdd}
 N -880 500 380 500 { lab=Vdd}
-N 370 680 430 680 { lab=#net13}
-N 430 680 430 700 { lab=#net13}
-N 430 700 740 700 { lab=#net13}
-N 370 720 710 720 { lab=#net40}
-N 800 720 800 740 {}
-N 780 740 800 740 {}
-N 740 700 760 700 {}
-N 710 720 780 720 {}
-N 780 680 780 720 {}
-N 1500 90 1500 100 {}
+N 370 690 430 690 { lab=GeneralGate02}
+N 430 680 430 700 { lab=GeneralGate02}
+N 430 710 740 710 { lab=GeneralGate02}
+N 370 720 710 720 { lab=GeneralGate01}
+N 800 720 800 740 { lab=Vtun}
+N 780 740 800 740 { lab=Vtun}
+N 740 710 760 710 { lab=GeneralGate02}
+N 710 720 780 720 { lab=GeneralGate01}
+N 780 680 780 720 { lab=GeneralGate01}
+N 1500 90 1500 100 { lab=Vdd}
+N -1780 -60 -1780 -30 { lab=GND}
+N -860 360 -860 390 { lab=GND}
+N -860 160 -860 190 { lab=GND}
+N -850 -250 -850 -220 { lab=GND}
+N 90 -640 90 -610 { lab=GND}
+N 430 -370 460 -370 { lab=GND}
+N 430 -60 460 -60 { lab=GND}
+N 440 400 460 400 { lab=GND}
+N 740 500 760 500 { lab=GND}
+N 760 570 760 590 { lab=Vinj}
+N 440 460 440 590 { lab=VrefChar}
+N 440 460 460 460 { lab=VrefChar}
+N 760 610 830 610 { lab=CharOutput}
+N 760 630 830 630 { lab=GateNFET1}
+N 780 670 780 680 { lab=GeneralGate01}
+N 980 670 980 680 { lab=GeneralGate01}
+N 430 700 430 710 { lab=GeneralGate02}
+N 760 690 840 690 { lab=GND}
+N -10 680 -10 690 { lab=GeneralGate02}
+N -30 640 -30 650 { lab=Cap2}
+N 430 630 460 630 { lab=Cap2}
+N 430 630 430 650 { lab=Cap2}
+N 1350 -260 1380 -260 {}
 C {sky130_hilas_swc4x2cell.sym} 610 100 0 0 {name=x1}
 C {sky130_hilas_drainSelect01.sym} -320 100 0 0 {name=x2}
 C {sky130_hilas_WTA4Stage01.sym} 610 320 0 0 {name=x3}
@@ -488,20 +504,20 @@ C {sky130_hilas_pFETLarge.sym} -1630 460 0 0 {name=x11}
 C {sky130_hilas_FGcharacterization01.sym} 610 630 0 0 {name=x12}
 C {sky130_hilas_DAC5bit01.sym} 1430 740 0 0 {name=x14}
 C {sky130_hilas_drainSelect01.sym} -320 300 0 0 {name=x16}
-C {devices/gnd.sym} 760 500 0 0 {name=l1 lab=GND}
+C {devices/iopin.sym} 760 500 0 0 {name=l1 lab=GND}
 C {sky130_hilas_nFETLarge.sym} 610 470 0 0 {name=x17}
 C {sky130_hilas_drainSelect01.sym} -320 -310 0 0 {name=x18}
 C {devices/iopin.sym} 780 740 0 1 {name=Vtun lab=Vtun}
 C {devices/iopin.sym} 780 760 0 1 {name=Vinj lab=Vinj}
-C {devices/iopin.sym} 1020 640 0 0 {name=GateNFET1 lab=GateNFET1}
-C {devices/iopin.sym} 1020 620 0 0 {name=CharOutput lab=CharOutput}
-C {devices/iopin.sym} 430 580 0 1 {name=DrainInject lab=DrainInject}
-C {devices/iopin.sym} 430 600 0 1 {name=VrefChar lab=VrefChar}
-C {devices/iopin.sym} 320 620 0 1 {name=Cap3 lab=Cap3}
-C {devices/iopin.sym} -40 640 0 1 {name=Cap2 lab=Cap2}
-C {devices/iopin.sym} -40 660 0 1 {name=GateAndCap1 lab=GateAndCap1}
-C {devices/iopin.sym} 1010 680 0 0 {name=GeneralGate01 lab=GeneralGate01}
-C {devices/iopin.sym} 1010 700 0 0 {name=GeneralGate02 lab=GeneralGate02}
+C {devices/iopin.sym} 830 630 0 0 {name=GateNFET1 lab=GateNFET1}
+C {devices/iopin.sym} 830 610 0 0 {name=CharOutput lab=CharOutput}
+C {devices/iopin.sym} 430 570 0 1 {name=DrainInject lab=DrainInject}
+C {devices/iopin.sym} 430 590 0 1 {name=VrefChar lab=VrefChar}
+C {devices/iopin.sym} 320 610 0 1 {name=LargeCapacitor lab=LargeCapacitor}
+C {devices/iopin.sym} -40 650 0 1 {name=Cap2 lab=Cap2}
+C {devices/iopin.sym} -40 670 0 1 {name=GateAndCap1 lab=GateAndCap1}
+C {devices/iopin.sym} 1010 670 0 0 {name=GeneralGate01 lab=GeneralGate01}
+C {devices/iopin.sym} 1010 710 0 0 {name=GeneralGate02 lab=GeneralGate02}
 C {devices/iopin.sym} 1130 -440 0 0 {name=OutputTA1 lab=OutputTA1}
 C {devices/iopin.sym} 1020 580 0 0 {name=Vdd lab=Vdd}
 C {devices/iopin.sym} 1020 540 0 0 {name=Gate1 lab=Gate1}
@@ -563,3 +579,14 @@ C {devices/iopin.sym} -10 -720 0 1 {name=Dig20 lab=Dig20}
 C {sky130_hilas_pFETLarge.sym} 220 390 0 0 {name=x21}
 C {sky130_hilas_pFETLarge.sym} 220 320 0 0 {name=x22}
 C {sky130_hilas_pFETLarge.sym} 220 250 0 0 {name=x23}
+C {devices/gnd.sym} -1780 -30 0 0 {name=l2 lab=GND}
+C {devices/gnd.sym} -850 -220 0 0 {name=l3 lab=GND}
+C {devices/gnd.sym} -860 190 0 0 {name=l4 lab=GND}
+C {devices/gnd.sym} -860 390 0 0 {name=l5 lab=GND}
+C {devices/gnd.sym} 90 -610 0 0 {name=l6 lab=GND}
+C {devices/gnd.sym} 430 -370 0 0 {name=l7 lab=GND}
+C {devices/gnd.sym} 430 -60 0 0 {name=l8 lab=GND}
+C {devices/gnd.sym} 440 400 0 0 {name=l9 lab=GND}
+C {devices/gnd.sym} 740 500 0 0 {name=l10 lab=GND}
+C {devices/gnd.sym} 840 690 0 0 {name=l11 lab=GND}
+C {devices/gnd.sym} 1380 -260 0 0 {name=l12 lab=GND}
