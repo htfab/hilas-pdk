@@ -18,7 +18,7 @@ Width: 16.580
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 | 1                    | A0                   | metal2               | nsew,analog,default  |
-| 2                    | A1                   | space                | nsew,analog,default  |
+| 2                    | A1                   | metal2               | nsew,analog,default  |
 | 3                    | A2                   | metal2               | nsew,analog,default  |
 | 4                    | A3                   | metal2               | nsew,analog,default  |
 | 5                    | A4                   | metal2               | nsew,analog,default  |
@@ -143,7 +143,7 @@ Width: 28.090
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | VIN12                | space                | nsew,analog,default  |
+| 1                    | VIN12                | metal2               | nsew,analog,default  |
 | 2                    | VIN11                | metal2               | nsew,analog,default  |
 | 3                    | VIN21                | metal2               | nsew,analog,default  |
 | 4                    | VIN22                | metal2               | n,analog,default     |
@@ -352,12 +352,16 @@ Width: 12.950
 
 Description: protective ESD diode for VINJ line
 
-Height: 6.780
+Height: 10.020
 <br>
-Width: 11.650
+Width: 28.590
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
+| 1                    | OUTPUT               | metal1               | nsew                 |
+| 2                    | INPUT                | metal1               | nsew                 |
+| 3                    | VGND                 | metal2               | nsew                 |
+| 4                    | VINJ                 | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-VinjInv2"></a>
 ### `sky130_hilas_VinjInv2`
@@ -590,9 +594,9 @@ Width: 1.190
 
 Description: protective current-limiting resistor to ground
 
-Height: 4.980
+Height: 9.630
 <br>
-Width: 56.410
+Width: 54.920
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1094,7 +1098,7 @@ Width: 29.950
 | 1                    | VTUNVARACTOR01       | metal1               | nsew,analog,default  |
 | 2                    | VARACTORCAP01        | metal1               | nsew,analog,default  |
 | 3                    | OVERLAPCAP01         | metal1               | nsew,analog,default  |
-| 4                    | VTUNOVERLAP01        | space                | nsew,analog,default  |
+| 4                    | VTUNOVERLAP01        | metal1               | nsew,analog,default  |
 | 5                    | VARACTORCAP02        | metal1               | nsew,analog,default  |
 | 6                    | OVERLAPCAP02         | metal1               | nsew,analog,default  |
 | 7                    | LARGECAPACITOR       | metal1               | nsew,analog,default  |

@@ -471,6 +471,7 @@ module sky130_hilas_FGcharacterization01 (
     VTUNVARACTOR01,
     VARACTORCAP01,
     OVERLAPCAP01,
+    VTUNOVERLAP01,
     VARACTORCAP02,
     OVERLAPCAP02,
     LARGECAPACITOR,
@@ -485,6 +486,7 @@ module sky130_hilas_FGcharacterization01 (
         inout VTUNVARACTOR01;
         inout VARACTORCAP01;
         inout OVERLAPCAP01;
+        inout VTUNOVERLAP01;
         inout VARACTORCAP02;
         inout OVERLAPCAP02;
         inout LARGECAPACITOR;
@@ -507,6 +509,7 @@ module sky130_hilas_FGcharacterization01 (
     VTUNVARACTOR01,
     VARACTORCAP01,
     OVERLAPCAP01,
+    VTUNOVERLAP01,
     VARACTORCAP02,
     OVERLAPCAP02,
     LARGECAPACITOR,
@@ -518,6 +521,7 @@ module sky130_hilas_FGcharacterization01 (
         inout VTUNVARACTOR01;
         inout VARACTORCAP01;
         inout OVERLAPCAP01;
+        inout VTUNOVERLAP01;
         inout VARACTORCAP02;
         inout OVERLAPCAP02;
         inout LARGECAPACITOR;
@@ -1369,6 +1373,7 @@ endmodule
 `celldefine
 module sky130_hilas_DAC5bit01 (
     A0,
+    A1,
     A2,
     A3,
     A4,
@@ -1378,6 +1383,7 @@ module sky130_hilas_DAC5bit01 (
     VPB
 );
         inout A0;
+        inout A1;
         inout A2;
         inout A3;
         inout A4;
@@ -1395,12 +1401,14 @@ endmodule
 `celldefine
 module sky130_hilas_DAC5bit01 (
     A0,
+    A1,
     A2,
     A3,
     A4,
     OUT
 );
         inout A0;
+        inout A1;
         inout A2;
         inout A3;
         inout A4;
@@ -2123,9 +2131,15 @@ endmodule
 
 `celldefine
 module sky130_hilas_VinjDiodeProtect01 (
+    OUTPUT,
+    VINJ,
+    VGND,
     VNB,
     VPB
 );
+        inout OUTPUT;
+        inout VINJ;
+        inout VGND;
         inout VNB;
         inout VPB;
 endmodule
@@ -2137,8 +2151,11 @@ endmodule
 
 `celldefine
 module sky130_hilas_VinjDiodeProtect01 (
-    
+    OUTPUT,
+    VINJ
 );
+        inout OUTPUT;
+        inout VINJ;
 endmodule
 `endcelldefine
 
@@ -3273,6 +3290,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_TA2Cell_1FG (
+    VIN12,
     VIN11,
     VIN21,
     VIN22,
@@ -3291,6 +3309,7 @@ module sky130_hilas_TA2Cell_1FG (
     VNB,
     VPB
 );
+        inout VIN12;
         inout VIN11;
         inout VIN21;
         inout VIN22;
@@ -3317,6 +3336,7 @@ endmodule
 
 `celldefine
 module sky130_hilas_TA2Cell_1FG (
+    VIN12,
     VIN11,
     VIN21,
     VIN22,
@@ -3331,6 +3351,7 @@ module sky130_hilas_TA2Cell_1FG (
     COLSEL1,
     VTUN
 );
+        inout VIN12;
         inout VIN11;
         inout VIN21;
         inout VIN22;
