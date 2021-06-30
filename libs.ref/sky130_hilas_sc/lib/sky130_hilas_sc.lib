@@ -138,14 +138,6 @@ cell ("sky130_hilas_Tgate4Double01") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("INPUT2_1") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
     pin ("SELECT1") {
         clock : "false";
         direction : "inout";
@@ -250,6 +242,22 @@ cell ("sky130_hilas_Tgate4Double01") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
+    pin ("INPUT2_1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("INPUT1_3") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
 }
 
 
@@ -270,21 +278,6 @@ cell ("sky130_hilas_swc4x2cell") {
         voltage_name : "VGND";
         related_bias_pin : VPB;
     }
-    pg_pin ("VPWR") {
-        pg_type : "primary_power";
-        voltage_name : "VPWR";
-        related_bias_pin : VNB;
-    }
-    pg_pin ("VPWR") {
-        pg_type : "primary_power";
-        voltage_name : "VPWR";
-        related_bias_pin : VNB;
-    }
-    pg_pin ("VGND") {
-        pg_type : "primary_ground";
-        voltage_name : "VGND";
-        related_bias_pin : VPB;
-    }
     pg_pin ("VGND") {
         pg_type : "primary_ground";
         voltage_name : "VGND";
@@ -314,6 +307,36 @@ cell ("sky130_hilas_swc4x2cell") {
         pg_type : "primary_power";
         voltage_name : "VPWR";
         related_bias_pin : VNB;
+    }
+    pg_pin ("VPWR") {
+        pg_type : "primary_power";
+        voltage_name : "VPWR";
+        related_bias_pin : VNB;
+    }
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
+    pg_pin ("VPWR") {
+        pg_type : "primary_power";
+        voltage_name : "VPWR";
+        related_bias_pin : VNB;
+    }
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
     }
     pg_pin ("VGND") {
         pg_type : "primary_ground";
@@ -368,6 +391,14 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
+    pin ("VINJ") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
     pin ("GATESELECT1") {
         clock : "false";
         direction : "inout";
@@ -384,7 +415,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VERT1") {
+    pin ("COL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -392,7 +423,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VERT2") {
+    pin ("COL2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -400,7 +431,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("HORIZ1") {
+    pin ("ROW1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -408,7 +439,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("HORIZ2") {
+    pin ("ROW2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -440,7 +471,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("HORIZ3") {
+    pin ("ROW3") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -448,7 +479,79 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("HORIZ4") {
+    pin ("ROW4") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("INPUT1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("INPUT2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("INPUT3") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("INPUT4") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VINJ") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT3") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT4") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -480,7 +583,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("INPUT1") {
+    pin ("VIN11") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -488,7 +591,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("OUTPUT1") {
+    pin ("ROW1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -496,7 +599,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("OUTPUT2") {
+    pin ("ROW2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -512,7 +615,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("GATESELECT") {
+    pin ("COLSEL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -520,7 +623,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("GATE_CONTROL") {
+    pin ("GATE1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -536,7 +639,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAIN4") {
+    pin ("DRAIN2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -544,7 +647,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("INPUT2") {
+    pin ("VIN12") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -592,7 +695,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAIN") {
+    pin ("OUT") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -712,7 +815,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("GATECOLSELECT") {
+    pin ("COLSEL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -720,7 +823,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINN_AMP1") {
+    pin ("VIN12") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -728,7 +831,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINP_AMP2") {
+    pin ("VIN21") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -736,7 +839,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINN_AMP2") {
+    pin ("VIN22") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -744,7 +847,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VOUT_AMP1") {
+    pin ("OUTPUT1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -752,7 +855,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VOUT_AMP2") {
+    pin ("OUTPUT2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -760,7 +863,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("BIAS1") {
+    pin ("DRAIN1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -768,23 +871,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("BIAS2") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
-    pin ("BIAS3") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
-    pin ("BIAS4") {
+    pin ("DRAIN2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -800,7 +887,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("GATE") {
+    pin ("GATE1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -816,7 +903,71 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("GATESELECT") {
+    pin ("VIN11") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("ROW1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("ROW2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("ROW3") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("ROW4") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VTUN") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("GATE1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VINJ") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("COLSEL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -856,6 +1007,70 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
+    pin ("OUTPUT00") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT01") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT10") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT11") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VINJ") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("IN2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("IN1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("ENABLE") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
     pin ("DRAIN4") {
         clock : "false";
         direction : "inout";
@@ -888,7 +1103,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAINSELECT1") {
+    pin ("SELECT1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -896,7 +1111,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAINSELECT2") {
+    pin ("SELECT2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -904,7 +1119,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAINSELECT3") {
+    pin ("SELECT3") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -912,7 +1127,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAINSELECT4") {
+    pin ("SELECT4") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -936,7 +1151,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("CAPTERMINAL2") {
+    pin ("CAPTERM2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -944,7 +1159,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("CAPTERM01") {
+    pin ("CAPTERM1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -977,6 +1192,38 @@ cell ("sky130_hilas_swc4x2cell") {
         related_power_pin : "VPWR";
     }
     pin ("GATE") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN4") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN3") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1136,7 +1383,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINP_AMP1") {
+    pin ("VIN11") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1144,7 +1391,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINP_AMP2") {
+    pin ("VIN21") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1152,15 +1399,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINN_AMP2") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
-    pin ("GATECOLSELECT") {
+    pin ("VIN22") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1192,7 +1431,63 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("GATESELECT") {
+    pin ("DRAIN1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("COLSEL2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("GATE2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("GATE1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("COLSEL1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VTUN") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("COLSEL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1216,7 +1511,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAIN4") {
+    pin ("DRAIN2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1240,23 +1535,23 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
+    pin ("VIN2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VIN1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
     pin ("GATE1") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
-    pin ("GATE2") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
-    pin ("PROGGATE") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1272,7 +1567,7 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAIN") {
+    pin ("COL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1280,7 +1575,15 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VS") {
+    pin ("ROW1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("ROW2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1421,6 +1724,109 @@ cell ("sky130_hilas_swc4x2cell") {
 
 
 
+cell ("sky130_hilas_LevelShift4InputUp") {
+    cell_footprint : "sky130_hilas_LevelShift4InputUp";
+    driver_waveform_fall : "ramp";
+    driver_waveform_rise : "ramp";
+
+    pg_pin ("VPWR") {
+        pg_type : "primary_power";
+        voltage_name : "VPWR";
+        related_bias_pin : VNB;
+    }
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
+    pg_pin ("VNB") {
+        pg_type : "nwell";
+        voltage_name : "VNB";
+        physical_connection : "device_layer"
+    }
+    pg_pin ("VPB") {
+        pg_type : "pwell";
+        voltage_name : "VPB";
+        physical_connection : "device_layer"
+    }
+
+    pin ("INPUT1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("INPUT2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("INPUT3") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("INPUT4") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VINJ") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT3") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT4") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+}
+
+
+
+
 cell ("sky130_hilas_capacitorSize01") {
     cell_footprint : "sky130_hilas_capacitorSize01";
     driver_waveform_fall : "ramp";
@@ -1487,7 +1893,7 @@ cell ("sky130_hilas_FGBiasWeakGate2x1cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("INPUT1") {
+    pin ("VIN11") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1495,7 +1901,7 @@ cell ("sky130_hilas_FGBiasWeakGate2x1cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("OUTPUT1") {
+    pin ("ROW1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1503,7 +1909,7 @@ cell ("sky130_hilas_FGBiasWeakGate2x1cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("OUTPUT2") {
+    pin ("ROW2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1519,7 +1925,7 @@ cell ("sky130_hilas_FGBiasWeakGate2x1cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("GATESELECT") {
+    pin ("COLSEL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1527,7 +1933,7 @@ cell ("sky130_hilas_FGBiasWeakGate2x1cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("GATE_CONTROL") {
+    pin ("GATE1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1543,7 +1949,7 @@ cell ("sky130_hilas_FGBiasWeakGate2x1cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAIN4") {
+    pin ("DRAIN2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1551,7 +1957,7 @@ cell ("sky130_hilas_FGBiasWeakGate2x1cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("INPUT2") {
+    pin ("VIN12") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1625,7 +2031,7 @@ cell ("sky130_hilas_DAC5bit01") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAIN") {
+    pin ("OUT") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1828,7 +2234,7 @@ cell ("sky130_hilas_TA2Cell_NoFG") {
         physical_connection : "device_layer"
     }
 
-    pin ("GATECOLSELECT") {
+    pin ("COLSEL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1836,7 +2242,7 @@ cell ("sky130_hilas_TA2Cell_NoFG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINN_AMP1") {
+    pin ("VIN12") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1844,7 +2250,7 @@ cell ("sky130_hilas_TA2Cell_NoFG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINP_AMP2") {
+    pin ("VIN21") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1852,7 +2258,7 @@ cell ("sky130_hilas_TA2Cell_NoFG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINN_AMP2") {
+    pin ("VIN22") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1860,7 +2266,7 @@ cell ("sky130_hilas_TA2Cell_NoFG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VOUT_AMP1") {
+    pin ("OUTPUT1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1868,7 +2274,55 @@ cell ("sky130_hilas_TA2Cell_NoFG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VOUT_AMP2") {
+    pin ("OUTPUT2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VTUN") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("GATE1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VINJ") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VIN11") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1902,7 +2356,7 @@ cell ("sky130_hilas_swc4x1BiasCell") {
         physical_connection : "device_layer"
     }
 
-    pin ("BIAS1") {
+    pin ("ROW1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1910,7 +2364,7 @@ cell ("sky130_hilas_swc4x1BiasCell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("BIAS2") {
+    pin ("ROW2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1918,7 +2372,7 @@ cell ("sky130_hilas_swc4x1BiasCell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("BIAS3") {
+    pin ("ROW3") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1926,7 +2380,7 @@ cell ("sky130_hilas_swc4x1BiasCell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("BIAS4") {
+    pin ("ROW4") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1942,7 +2396,7 @@ cell ("sky130_hilas_swc4x1BiasCell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("GATE") {
+    pin ("GATE1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1958,7 +2412,7 @@ cell ("sky130_hilas_swc4x1BiasCell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("GATESELECT") {
+    pin ("COLSEL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1991,6 +2445,96 @@ cell ("sky130_hilas_swc4x1BiasCell") {
         related_power_pin : "VPWR";
     }
     pin ("DRAIN4") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+}
+
+
+
+
+cell ("sky130_hilas_VinjDecode2to4") {
+    cell_footprint : "sky130_hilas_VinjDecode2to4";
+    driver_waveform_fall : "ramp";
+    driver_waveform_rise : "ramp";
+
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
+    pg_pin ("VNB") {
+        pg_type : "nwell";
+        voltage_name : "VNB";
+        physical_connection : "device_layer"
+    }
+    pg_pin ("VPB") {
+        pg_type : "pwell";
+        voltage_name : "VPB";
+        physical_connection : "device_layer"
+    }
+
+    pin ("OUTPUT00") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT01") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT10") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT11") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VINJ") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("IN2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("IN1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("ENABLE") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2056,7 +2600,7 @@ cell ("sky130_hilas_drainSelect01") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAINSELECT1") {
+    pin ("SELECT1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2064,7 +2608,7 @@ cell ("sky130_hilas_drainSelect01") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAINSELECT2") {
+    pin ("SELECT2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2072,7 +2616,7 @@ cell ("sky130_hilas_drainSelect01") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAINSELECT3") {
+    pin ("SELECT3") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2080,7 +2624,7 @@ cell ("sky130_hilas_drainSelect01") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAINSELECT4") {
+    pin ("SELECT4") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2125,7 +2669,7 @@ cell ("sky130_hilas_capacitorArray01") {
         physical_connection : "device_layer"
     }
 
-    pin ("CAPTERMINAL2") {
+    pin ("CAPTERM2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2133,7 +2677,7 @@ cell ("sky130_hilas_capacitorArray01") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("CAPTERM01") {
+    pin ("CAPTERM1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2166,6 +2710,38 @@ cell ("sky130_hilas_capacitorArray01") {
         related_power_pin : "VPWR";
     }
     pin ("GATE") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN4") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN3") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2554,6 +3130,11 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         voltage_name : "VGND";
         related_bias_pin : VPB;
     }
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
     pg_pin ("VPWR") {
         pg_type : "primary_power";
         voltage_name : "VPWR";
@@ -2575,7 +3156,7 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         physical_connection : "device_layer"
     }
 
-    pin ("VINP_AMP1") {
+    pin ("VIN11") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2583,7 +3164,7 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINP_AMP2") {
+    pin ("VIN21") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2591,15 +3172,7 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINN_AMP2") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
-    pin ("GATECOLSELECT") {
+    pin ("VIN22") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2631,7 +3204,63 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("GATESELECT") {
+    pin ("DRAIN1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("COLSEL2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("GATE2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("GATE1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("COLSEL1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VTUN") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("COLSEL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2655,7 +3284,7 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAIN4") {
+    pin ("DRAIN2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2679,23 +3308,23 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
+    pin ("VIN2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VIN1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
     pin ("GATE1") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
-    pin ("GATE2") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
-    pin ("PROGGATE") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2711,7 +3340,7 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAIN") {
+    pin ("COL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2719,7 +3348,15 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VS") {
+    pin ("ROW1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("ROW2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2895,14 +3532,6 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VGATE2") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
     pin ("PROG") {
         clock : "false";
         direction : "inout";
@@ -2911,7 +3540,7 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VGATE1") {
+    pin ("GATE1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2919,7 +3548,7 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINP_AMP1") {
+    pin ("VIN11") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2935,7 +3564,7 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINN_AMP2") {
+    pin ("VIN22") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2943,7 +3572,7 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINP_AMP2") {
+    pin ("VIN21") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2999,7 +3628,7 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINN_AMP1") {
+    pin ("VIN12") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3007,6 +3636,48 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
+    pin ("GATE2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("RUN") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+}
+
+
+
+
+cell ("sky130_hilas_polyresistorGND") {
+    cell_footprint : "sky130_hilas_polyresistorGND";
+    driver_waveform_fall : "ramp";
+    driver_waveform_rise : "ramp";
+
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
+    pg_pin ("VNB") {
+        pg_type : "nwell";
+        voltage_name : "VNB";
+        physical_connection : "device_layer"
+    }
+    pg_pin ("VPB") {
+        pg_type : "pwell";
+        voltage_name : "VPB";
+        physical_connection : "device_layer"
+    }
+
 }
 
 
@@ -3033,7 +3704,7 @@ cell ("sky130_hilas_FGtrans2x1cell") {
         physical_connection : "device_layer"
     }
 
-    pin ("GATESELECT") {
+    pin ("COLSEL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3057,7 +3728,7 @@ cell ("sky130_hilas_FGtrans2x1cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAIN4") {
+    pin ("DRAIN2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3081,23 +3752,23 @@ cell ("sky130_hilas_FGtrans2x1cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
+    pin ("VIN2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VIN1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
     pin ("GATE1") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
-    pin ("GATE2") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
-    pin ("PROGGATE") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3113,7 +3784,7 @@ cell ("sky130_hilas_FGtrans2x1cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("DRAIN") {
+    pin ("COL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3121,7 +3792,15 @@ cell ("sky130_hilas_FGtrans2x1cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VS") {
+    pin ("ROW1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("ROW2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3370,14 +4049,6 @@ cell ("sky130_hilas_TA2Cell_1FG_Strong") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VGATE2") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
     pin ("PROG") {
         clock : "false";
         direction : "inout";
@@ -3386,7 +4057,7 @@ cell ("sky130_hilas_TA2Cell_1FG_Strong") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VGATE1") {
+    pin ("GATE1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3394,7 +4065,7 @@ cell ("sky130_hilas_TA2Cell_1FG_Strong") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINP_AMP1") {
+    pin ("VIN11") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3410,7 +4081,7 @@ cell ("sky130_hilas_TA2Cell_1FG_Strong") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINN_AMP2") {
+    pin ("VIN22") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3418,7 +4089,7 @@ cell ("sky130_hilas_TA2Cell_1FG_Strong") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINP_AMP2") {
+    pin ("VIN21") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3474,7 +4145,23 @@ cell ("sky130_hilas_TA2Cell_1FG_Strong") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINN_AMP1") {
+    pin ("VIN12") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("GATE2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("RUN") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3529,7 +4216,7 @@ cell ("sky130_hilas_TA2SignalBiasCell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINN_AMP2") {
+    pin ("VIN22") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3537,7 +4224,7 @@ cell ("sky130_hilas_TA2SignalBiasCell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINP_AMP2") {
+    pin ("VIN21") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3545,7 +4232,7 @@ cell ("sky130_hilas_TA2SignalBiasCell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINP_AMP1") {
+    pin ("VIN11") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3553,7 +4240,7 @@ cell ("sky130_hilas_TA2SignalBiasCell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("VINN_AMP1") {
+    pin ("VIN12") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3614,7 +4301,7 @@ cell ("sky130_hilas_cellAttempt01") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("GATESEL1") {
+    pin ("COLSEL1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3646,7 +4333,7 @@ cell ("sky130_hilas_cellAttempt01") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("COL1") {
+    pin ("ROW3") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3662,7 +4349,7 @@ cell ("sky130_hilas_cellAttempt01") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("COL2") {
+    pin ("ROW2") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3678,7 +4365,7 @@ cell ("sky130_hilas_cellAttempt01") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("COL4") {
+    pin ("ROW4") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3687,6 +4374,14 @@ cell ("sky130_hilas_cellAttempt01") {
         related_power_pin : "VPWR";
     }
     pin ("DRAIN4") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("ROW1") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3762,6 +4457,11 @@ cell ("sky130_hilas_WTA4Stage01") {
         voltage_name : "VGND";
         related_bias_pin : VPB;
     }
+    pg_pin ("VPWR") {
+        pg_type : "primary_power";
+        voltage_name : "VPWR";
+        related_bias_pin : VNB;
+    }
     pg_pin ("VNB") {
         pg_type : "nwell";
         voltage_name : "VNB";
@@ -3773,22 +4473,6 @@ cell ("sky130_hilas_WTA4Stage01") {
         physical_connection : "device_layer"
     }
 
-    pin ("COMMONNODE") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
-    pin ("COMMONMODE") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
     pin ("OUTPUT1") {
         clock : "false";
         direction : "inout";
@@ -3846,6 +4530,78 @@ cell ("sky130_hilas_WTA4Stage01") {
         related_power_pin : "VPWR";
     }
     pin ("INPUT4") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN2") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN3") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN4") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("GATE1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VTUN") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("WTAMIDDLENODE") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("COLSEL1") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("VINJ") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;

@@ -38,6 +38,12 @@ standard-cells:
   description: Top-level cells for use in designs
   ###############################################################################
 
+  polyresistorGND:
+    description: protective current-limiting resistor to ground
+
+  VinjDiodeProtect01:
+    description: protective ESD diode for VINJ line
+
   VinjNOR3:
     description: 3-input NOR gate capable of VING voltage
 
@@ -270,6 +276,9 @@ component-cells:
     These cells are components used to create the standard cells.
     They are not to be used directly
   ##############################################################################
+
+  WTA4stage01:
+    description: single-element of WTA circuit
 
   StepUpDigitalPart1:
     description: step-up level shifter part
