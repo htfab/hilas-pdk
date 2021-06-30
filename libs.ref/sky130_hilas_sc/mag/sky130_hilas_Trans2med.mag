@@ -1,17 +1,52 @@
 magic
 tech sky130A
-timestamp 1608245216
+timestamp 1625086323
+<< nwell >>
+rect -83 185 -27 382
+<< nsubdiff >>
+rect -73 298 -45 310
+rect -73 281 -69 298
+rect -52 281 -45 298
+rect -73 264 -45 281
+rect -73 247 -69 264
+rect -52 247 -45 264
+rect -73 218 -45 247
+<< nsubdiffcont >>
+rect -69 281 -52 298
+rect -69 247 -52 264
 << poly >>
 rect -326 160 -247 175
 rect -155 160 -76 175
 rect -327 124 -248 139
 rect -155 124 -76 139
+<< locali >>
+rect -69 298 -52 306
+rect -69 239 -52 247
+<< viali >>
+rect -69 264 -52 281
+<< metal1 >>
+rect -75 288 -48 305
+rect -77 285 -45 288
+rect -77 259 -74 285
+rect -48 259 -45 285
+rect -77 256 -45 259
+rect -75 238 -48 256
+<< via1 >>
+rect -74 281 -48 285
+rect -74 264 -69 281
+rect -69 264 -52 281
+rect -52 264 -48 281
+rect -74 259 -48 264
 << metal2 >>
 rect -380 392 -184 414
 rect -95 400 -27 421
 rect -380 315 -305 336
 rect -210 317 -27 338
 rect -380 314 -353 315
+rect -77 285 -45 288
+rect -77 259 -74 285
+rect -48 259 -45 285
+rect -77 256 -45 259
 rect -380 215 -355 237
 rect -380 159 -82 180
 rect -380 119 -82 140
@@ -20,6 +55,8 @@ rect -380 -74 -309 -53
 rect -214 -72 -27 -50
 rect -380 -119 -181 -97
 rect -96 -116 -27 -95
+<< rmetal2 >>
+rect -45 261 -27 282
 use sky130_hilas_m12m2  sky130_hilas_m12m2_1
 timestamp 1607949437
 transform 1 0 -349 0 1 66
@@ -117,4 +154,6 @@ rlabel metal2 -34 -72 -27 -50 0 DRAIN1N
 port 9 nsew analog default
 rlabel metal2 -34 -116 -27 -95 0 DRAIN2N
 port 10 nsew analog default
+rlabel nwell -37 261 -27 282 0 WELL
+port 13 nsew
 << end >>
