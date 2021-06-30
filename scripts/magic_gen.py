@@ -119,68 +119,66 @@ class StructuredTextFile:
         return self.path
 
 
-# class XschemLibrary(dict):
-#
-#     def __init__(self, lib_root):
-#         super().__init__({m.stem: XschemCircuit(m, lib_root) for m in lib_root.glob('**/*.sym')})
-#         self.root = Path(lib_root)
-#
-#     def __contains__(self, item):
-#         if isinstance(item, Path):
-#             item = str(item.relative_to(self.root))
-#         return len(list(self.root.glob('**/'+item))) != 0
-#         # return item in [str(x.path.relative_to(self.root)) for x in self.symbols]
-#
-#     def get_symbol(self, name):
-#         return self[name].symbol
-#
-#     def get_schematic(self, name):
-#         return self[name].schematic
-#
-#     def rename_pin(self, module, old_name, new_name):
-#         self[module].rename_pin(old_name, new_name)
-#
-#     def _rename_module(self, from_name, to_name):
-#
-#         for cir in self:
-#
-#             sch = cir.schematic
-#             needs_save = False
-#             stale_file = None
-#
-#             if sch.name == from_name:
-#                 stale_file = sch.path
-#                 sch._set_names(to_name)
-#                 needs_save = True
-#
-#             if from_name + '.sym' in sch.refs:
-#                 sch._rename_refs(from_name, to_name)
-#                 needs_save = True
-#
-#             if needs_save:
-#                 sch._save()
-#                 if stale_file:
-#                     os.remove(stale_file)
-#
-#             sym = cir.sybol
-#             needs_save = False
-#             stale_file = None
-#
-#             if sym.name == from_name:
-#                 stale_file = sym.file
-#                 sym._set_names(to_name)
-#                 needs_save = True
-#
-#             # if from_name + '.sym' in sym.refs:
-#             #     sym._rename_refs(from_name, to_name)
-#             #     needs_save = True
-#
-#             if needs_save:
-#                 sym._save()
-#                 if stale_file:
-#                     os.remove(stale_file)
-#
-#
+class XschemLibrary(dict):
+
+    def __init__(self, lib_root):
+        super().__init__({m.stem: XschemCircuit(m, lib_root) for m in lib_root.glob('**/*.sym')})
+        self.root = Path(lib_root)
+
+    def __contains__(self, item):
+        if isinstance(item, Path):
+            item = str(item.relative_to(self.root))
+        return len(list(self.root.glob('**/'+item))) != 0
+        # return item in [str(x.path.relative_to(self.root)) for x in self.symbols]
+
+    def get_symbol(self, name):
+        return self[name].symbol
+
+    def get_schematic(self, name):
+        return self[name].schematic
+
+    def rename_pin(self, module, old_name, new_name):
+        self[module].rename_pin(old_name, new_name)
+
+    def _rename_module(self, from_name, to_name):
+
+        for cir in self:
+
+            sch = cir.schematic
+            needs_save = False
+            stale_file = None
+
+            if sch.name == from_name:
+                stale_file = sch.path
+                sch._set_names(to_name)
+                needs_save = True
+
+            if from_name + '.sym' in sch.refs:
+                sch._rename_refs(from_name, to_name)
+                needs_save = True
+
+            if needs_save:
+                sch._save()
+                if stale_file:
+                    os.remove(stale_file)
+
+            sym = cir.sybol
+            needs_save = False
+            stale_file = None
+
+            if sym.name == from_name:
+                stale_file = sym.file
+                sym._set_names(to_name)
+                needs_save = True
+
+            # if from_name + '.sym' in sym.refs:
+            #     sym._rename_refs(from_name, to_name)
+            #     needs_save = True
+
+            if needs_save:
+                sym._save()
+                if stale_file:
+                    os.remove(stale_file)
 
 
 class XschemCircuit:
@@ -352,7 +350,7 @@ class XschemSymbol(StructuredTextFile):
 
 
 class Cell(dict):
-    def __init__(self, name, prop_dict, parent_lib):
+    def __init__(self, name, prop_dict):
         super().__init__(prop_dict)
         if name.startswith(CONVENTIONS.CELL_PREFIX):
             self['short_name'] = name.split(CONVENTIONS.CELL_PREFIX)[1]
@@ -361,26 +359,40 @@ class Cell(dict):
             self['short_name'] = name
             self['long_name'] = CONVENTIONS.CELL_PREFIX + name
 
-        mag_file = parent_lib.paths['mag'] / (self['long_name'] +'.mag')
-        xsymb_file = parent_lib.paths['xschem'] / (self['long_name'] +'.sym')
+        # mag_file = cell_lib.paths['mag'] / (self['long_name'] +'.mag')
+        # xsymb_file = cell_lib.paths['xschem'] / (self['long_name'] +'.sym')
+        #
+        # if mag_file.is_file():
+        #     self.magic = MagicLayout(mag_file)
+        # else:
+        #     self.magic = None
+        #
+        # if xsymb_file.is_file():
+        #     self.xschem = XschemCircuit(xsymb_file)
+        # else:
+        #     self.xschem = None
 
-        if mag_file.is_file():
-            self.magic = MagicLayout(mag_file)
-        else:
-            self.magic = None
+    @property
+    def magic(self):
+        try:
+            return cell_lib.magic_lib[self.long_name]
+        except KeyError:
+            return None
 
-        if xsymb_file.is_file():
-            self.xschem = XschemCircuit(xsymb_file)
-        else:
-            self.xschem = None
+    @property
+    def xschem(self):
+        try:
+            return cell_lib.xschem_lib[self.long_name]
+        except KeyError:
+            return None
 
-    # @property
-    # def short_name(self):
-    #     return self['short_name']
-    #
-    # @property
-    # def long_name(self):
-    #     return self['long_name']
+    @property
+    def short_name(self):
+        return self['short_name']
+
+    @property
+    def long_name(self):
+        return self['long_name']
 
     def __getattr__(self, item):
         return self[item]
@@ -397,6 +409,176 @@ class Cell(dict):
 
         except BaseException:
             error("There was a problem during Magic's processing of {}:".format(self.magic.file))
+
+    def handle_magic(self):
+
+        magic_file = self.magic.file
+
+        if not any([
+            target_check(magic_file, 'gds'),
+            target_check(magic_file, 'temp_lef'),
+            target_check(magic_file, 'spice_ext')
+        ]):
+            return
+
+        magic.renew(magic_file)
+        print('loaded file {}'.format(magic_file.relative_to(rel_root)))
+
+        if args.gds and target_check(magic_file, 'gds'):
+            parent_check(cell_lib.paths['gds'])
+            target = (cell_lib.paths['gds'] / self.long_name).with_suffix('.gds')
+            self.make_gds(target)
+
+        if args.temp_lef and target_check(magic_file, 'temp_lef'):
+            parent_check(cell_lib.paths['temp_lef'])
+            self.make_temp_lef()
+
+        if args.spice and target_check(magic_file, 'spice_ext'):
+            parent_check(cell_lib.paths['spice_ext'])
+            self.make_spice()
+
+    def make_temp_lef(self):
+        self.magic.make_temp_lef()
+
+    def check_magic_depends(self):
+        # for mn, c in magic_lib.items():
+        #     mm = []
+        #     for rr in c.references:
+        #         if rr not in magic_lib:
+        #             mm.append(rr)
+        #
+        #     if mm:
+        #         message += ['Magic design {} is missing the following refs:'.format(c.file)]
+        #         for mmm in mm:
+        #             message += ['    {}'.format(mmm)]
+
+        missing = {}
+
+        deps = self.magic.references
+
+        if self.long_name in deps:
+            # warn(stylize_head())
+            warn('Cell \'{}\' contains instances of itself!'.format(self.long_name))
+            warn(stylize_head())
+
+        for d in deps:
+            if d not in cell_lib.magic_lib :
+                if self.long_name in missing:
+                    missing[self.long_name] += [d]
+                else:
+                    missing.update({self.long_name: [d]})
+
+        if missing:
+            # warn(stylize_head())
+            warn('Referenced (sub)cells missing from the /mag/ path:')
+            for mf, clist in missing.items():
+                warn('    {} is missing:'.format(mf))
+                for cell in clist:
+                    warn('        {}'.format(cell))
+
+            warn(stylize_head())
+
+    def check_xschem_depends(self):
+
+        if hasattr(self, 'xschem') and hasattr(self.xschem, 'schematic'):
+            sch = self.xschem.schematic
+        else:
+            return None
+
+        message = []
+        mm = []
+
+        for rr in sch.refs:
+            if rr not in self \
+                    and not sch.path.parent / rr in self \
+                    and not rr == 'devices' \
+                    and not re.search(r'^devices/\w+[.]sym', rr, re.M) \
+                    and not re.search(r'^sky130_fd_pr/\w+[.]sym', rr, re.M):
+                mm.append(rr)
+
+        if mm:
+            message.append(stylize_head())
+            message.append('Schematic {} is missing the following refs:'.format(sch))
+            for mmm in mm:
+                message.append('    {}'.format(mmm))
+
+        if message:
+            warn('\n'.join(message))
+
+    def check_xschem_pin_consistency(self):
+
+        message = []
+
+        if not (hasattr(self, 'xschem') and hasattr(self.xschem, 'schematic')):
+            return
+        sch_pins = self.xschem.schematic.pins
+        sym_pins = self.xschem.symbol.pins
+
+        sch_only = set(sch_pins.keys()) - set(sym_pins.keys())
+        sym_only = set(sym_pins.keys()) - set(sch_pins.keys())
+
+        if not sch_only and not sym_only:
+            return
+
+        else:  ## mismatch
+            message.append(stylize_head())
+            message.append('xschem symbol \'{}\' missing the following pins:'.format(self.name))
+            for pin in sch_only:
+                message.append('    {}'.format(pin))
+            message.append('xschem schematic \'{}\' missing the following pins:'.format(self.name))
+            for pin in sym_only:
+                message.append('    {}'.format(pin))
+
+        if message:
+            warn('\n'.join(message))
+
+    def check_magic_port_names(self):
+        self.magic.check_port_names()
+
+    def check_magic_port_layers(self):
+        self.magic.check_port_layers()
+
+    def check_magic_port2xschem_pin_mapping(self):
+        mpo = []
+        xpo = []
+        message = []
+
+        try:
+            amp = self.magic.ports
+        except AttributeError:
+            return
+
+        try:
+            symb = self.xschem.symbol
+        except AttributeError:
+            return
+
+        axp = symb.pins
+
+        for mag_pin in amp:
+            if mag_pin not in axp:
+                mpo.append(mag_pin)
+
+        for xsch_pin in axp:
+            if xsch_pin not in amp:
+                xpo.append(xsch_pin)
+
+        if mpo:
+            message.append(
+                'Magic file for \'{}\' defines ports which are not pins in Xschem symbol:'.format(self.long_name))
+            for mmpo in mpo:
+                message.append('    {}'.format(mmpo))
+
+        if xpo:
+            message.append(
+                'Xschem symbol for \'{}\' defines pins which are not ports in Magic file:'.format(self.long_name))
+            for xxpo in xpo:
+                message.append('    {}'.format(xxpo))
+
+        if message:
+            warn(stylize_head())
+            warn('\n'.join(message))
+            warn(stylize_head())
 
 
 class CellLibrary(OrderedDict):
@@ -462,10 +644,12 @@ class CellLibrary(OrderedDict):
                 if k == 'description':
                     pass
                 else:
-                    cell = Cell(k, {**yaml_dict[cat][k], **{'category': cat}}, self)
+                    cell = Cell(k, {**yaml_dict[cat][k], **{'category': cat}})
                     cd.update({cell.long_name: cell})
 
         super().__init__(cd)
+        self.magic_lib = MagicLibrary(self.paths['mag'])
+        self.xschem_lib = XschemLibrary(self.paths['xschem'])
 
     @property
     def all_cells(self):
@@ -502,10 +686,9 @@ class CellLibrary(OrderedDict):
             return None
 
     def check_yaml(self):
-        all_cells = self.all_cells
 
-        if len(all_cells) != len(set(list(all_cells.keys()))):
-            dl = list(all_cells.keys())
+        if len(self) != len(set(list(self))):
+            dl = list(self.keys())
             dd = list(set(dl))
             for c in dd:
                 dl.remove(c)
@@ -576,23 +759,23 @@ class CellLibrary(OrderedDict):
             warn(stylize_head())
 
     def check_file_presence(self):
-        for set in [
-            ('mag', 'mag', cell_lib.all_cells),
-            ('png', 'png', cell_lib.standard_cells),
-            ('xschem', 'sch', cell_lib.standard_cells),
-            ('xschem', 'sym', cell_lib.standard_cells),
-            ('spice_hand', 'spice', cell_lib.standard_cells)
+        for cset in [
+            ('mag', 'mag', self.all_cells),
+            ('png', 'png', self.standard_cells),
+            ('xschem', 'sch', self.standard_cells),
+            ('xschem', 'sym', self.standard_cells),
+            ('spice_hand', 'spice', self.standard_cells)
         ]:
-            self.check_dir_for_complete(*set)
+            self.check_dir_for_complete(*cset)
 
     def check_magic_lib(self):
-        self.check_magic_complete()
+        self.check_magic_completeness()
         self.check_magic_depends()
-        for m in self.values():
-            m.magic.check_port_names()
-            m.magic.check_port_layers()
+        for c in self.values():
+            c.check_magic_port_names()
+            c.check_magic_port_layers()
 
-    def check_magic_complete(self):
+    def check_magic_completeness(self):
         message = []
         mc = []
         for cn, c in self.items():
@@ -609,144 +792,53 @@ class CellLibrary(OrderedDict):
             warn('\n'.join(message))
 
     def check_magic_depends(self):
-
-        # for mn, c in magic_lib.items():
-        #     mm = []
-        #     for rr in c.references:
-        #         if rr not in magic_lib:
-        #             mm.append(rr)
-        #
-        #     if mm:
-        #         message += ['Magic design {} is missing the following refs:'.format(c.file)]
-        #         for mmm in mm:
-        #             message += ['    {}'.format(mmm)]
-
-        missing = {}
-        for m in self.values():
-            deps = m.magic.references
-            if m.long_name in deps:
-                # warn(stylize_head())
-                warn('Cell \'{}\' contains instances of itself!'.format(m.long_name))
-                warn(stylize_head())
-
-            for d in deps:
-                if not (self.paths['mag'] / d).with_suffix('.mag').is_file():
-                    if m.long_name in missing:
-                        missing[m.long_name] += [d]
-                    else:
-                        missing.update({m.long_name: [d]})
-
-        if missing:
-            # warn(stylize_head())
-            warn('Referenced (sub)cells missing from the /mag/ path:')
-            for mf, clist in missing.items():
-                warn('    {} is missing:'.format(mf))
-                for cell in clist:
-                    warn('        {}'.format(cell))
-
-            warn(stylize_head())
+        for c in self.values():
+            c.check_magic_depends()
 
     def check_xschem_lib(self):
-        for m in self.values():
-            if m.xschem:
-                m.xschem.check_names()
+
+        warn(stylize_head('Xschem Consistency Check'))
+
+        for c in self.values():
+            if c.xschem:
+                c.xschem.check_names()
 
         message = []
 
         mc = []
-        for cn, c in cell_lib.standard_cells.items():
-            if c.long_name + '.sym' not in [x.name for x in self.paths['xschem'].glob('*.sym')]:
-                mc.append(c)
+        for cn in cell_lib:
+            if cn + '.sym' not in cell_lib.xschem_lib:
+                mc.append(cn)
 
         if mc:
             message.append(
                 'The following cells are missing symbols in the Xschem library:')
             for mmc in mc:
-                message.append('    ' + mmc.long_name)
+                message.append('    ' + mmc)
 
         for cir in self.values():
-            if hasattr(cir, 'xschem') and hasattr(cir.xschem, 'schematic'):
-                sch = cir.xschem.schematic
-            else:
-                continue
-            mm = []
-            for rr in sch.refs:
-                if rr not in self \
-                        and not sch.path.parent / rr in self \
-                        and not rr == 'devices' \
-                        and not re.search(r'^devices/\w+[.]sym', rr, re.M) \
-                        and not re.search(r'^sky130_fd_pr/\w+[.]sym', rr, re.M):
-                    mm.append(rr)
-
-            if mm:
-                message.append(stylize_head())
-                message.append('Schematic {} is missing the following refs:'.format(sch))
-                for mmm in mm:
-                    message.append('    {}'.format(mmm))
-
-        for cir in self.values():
-            if not (hasattr(cir, 'xschem') and hasattr(cir.xschem,'schematic')):
-                continue
-            sch_pins = cir.xschem.schematic.pins
-            sym_pins = cir.xschem.symbol.pins
-
-            sch_only = set(sch_pins.keys()) - set(sym_pins.keys())
-            sym_only = set(sym_pins.keys()) - set(sch_pins.keys())
-            if not sch_only and not sym_only:
-                continue
-            else:  ## mismatch
-                message.append(stylize_head())
-                message.append('xschem symbol \'{}\' missing the following pins:'.format(cir.name))
-                for pin in sch_only:
-                    message.append('    {}'.format(pin))
-                message.append('xschem schematic \'{}\' missing the following pins:'.format(cir.name))
-                for pin in sym_only:
-                    message.append('    {}'.format(pin))
+            cir.check_xschem_depends()
+            cir.check_xschem_pin_consistency()
 
         if message:
-            warn(stylize_head('Xschem Consistency Check'))
             warn('\n'.join(message))
             warn(stylize_head())
 
-    def check_port_pin_mapping(self):
+    def check_magic_port2xschem_pin_mapping(self):
 
-        for cn, c in self.standard_cells.items():
-            amp = c.magic.ports
-            try:
-                symb = c.xschem.symbol
-            except AttributeError:
-                continue
+        for c in self.values():
+            c.check_magic_port2xschem_pin_mapping()
 
-            axp = symb.pins
-
-            mpo = []
-            xpo = []
-            message = []
-
-            for mag_pin in amp:
-                if mag_pin not in axp:
-                    mpo.append(mag_pin)
-
-            for xsch_pin in axp:
-                if xsch_pin not in amp:
-                    xpo.append(xsch_pin)
-
-            if mpo:
-                message.append(
-                    'Magic file for \'{}\' defines ports which are not pins in Xschem symbol:'.format(c.long_name))
-                for mmpo in mpo:
-                    message.append('    {}'.format(mmpo))
-
-            if xpo:
-                message.append(
-                    'Xschem symbol for \'{}\' defines pins which are not ports in Magic file:'.format(c.long_name))
-                for xxpo in xpo:
-                    message.append('    {}'.format(xxpo))
-
-            if message:
-                warn(stylize_head())
-                warn('\n'.join(message))
-                warn(stylize_head())
+    @staticmethod
+    def check_prefixes():
+        for set in [
+            ('mag', 'mag'),
+            ('png', 'png'),
+            ('xschem', 'sch'),
+            ('xschem', 'sym'),
+            ('spice_hand', 'spice')
+        ]:
+            check_dir_for_prefixes(*set)
 
     def check_hand_spice(self):
         for file in self.paths['spice_hand'].glob('*.spice'):
@@ -754,6 +846,410 @@ class CellLibrary(OrderedDict):
                 warn('spice file {} missing prefix ({})'.format(file.name, CONVENTIONS.CELL_PREFIX))
                 if confirm('fix it?', False):
                     shutil.move(file, file.with_name(CONVENTIONS.CELL_PREFIX + file.name))
+
+    @staticmethod
+    def check_lvs():
+        NETGEN_TCL = cell_lib.TECH_ROOT / 'netgen' / 'sky130_setup.tcl'
+        warn(stylize_head('Starting LVS'))
+        for m in cell_lib.standard_cells:
+            ext_spice = list(cell_lib.paths['spice_ext'].glob(CONVENTIONS.CELL_PREFIX + m + '.spice'))
+            hand_spice = list(cell_lib.paths['spice_hand'].glob(CONVENTIONS.CELL_PREFIX + m + '.spice'))
+
+            if not len(ext_spice) or not len(hand_spice):
+                if not len(ext_spice):
+                    warn('could not find \'{}\''.format(ext_spice))
+                if not len(hand_spice):
+                    warn('could not find \'{}\''.format(hand_spice))
+                continue
+
+            # make a temporary spice file for the _ext version which has a top-level instantiation of itself
+            with open(ext_spice[0], 'r') as f:
+                src = f.read()
+
+            match = re.search(r'^[.]subckt ({} .*)'.format(CONVENTIONS.CELL_PREFIX + m), src, re.MULTILINE)
+            if match:
+                instance = match.group(1)
+            else:
+                continue
+
+            instance = 'X999 ' + instance + '\n'
+            modsrc = src + instance
+
+            os.makedirs(cell_lib.root / 'LVS_RESULTS', exist_ok=True)
+
+            with tempfile.NamedTemporaryFile(mode='w', suffix='.spice') as f:
+                f.write(modsrc)
+
+                # consider adding the '-blackbox' option to keep empty subcells as meaningful entities
+                command = 'netgen -batch lvs {} {} {} {} -json -blackbox'.format(
+                    f.name,
+                    hand_spice[0],
+                    NETGEN_TCL,
+                    (cell_lib.root / 'LVS_RESULTS' / m).with_suffix('.lvs.log')
+                )
+                subprocess.run(shlex.split(command), check=False)
+
+        warn(stylize_head('LVS Complete'))
+
+
+    @staticmethod
+    def make_lef():
+        target = (cell_lib.paths['lef'] / PDK_VARIANT_NAME).with_suffix('.lef')
+
+        for sf in cell_lib.paths['temp_lef'].glob('*.lef'):
+
+            example_ = cell_lib.paths['temp_lef'] / sf
+
+            with open(example_, 'r') as f:
+                ef = f.read()
+
+            header = re.findall(r'[\S\s\n]*(?=MACRO)', ef)[0]
+            if header:
+                break
+
+        blocks = []
+
+        # only standard cells make it into the merged LEF
+        for sf in cell_lib.paths['temp_lef'].glob('*.lef'):
+
+            if sf.stem not in cell_lib.standard_cells:
+                continue
+
+            cell = cell_lib.by_name(sf.stem)
+            try:
+                with open(sf, 'r') as f:
+                    st = f.read()
+                blocks.append(
+                    re.search(r'(MACRO\s+{}[\s\S\n]*?\n\s*END\s+{})'.format(re.escape(cell.long_name),
+                                                                            re.escape(cell.long_name)), st).group()
+                )
+
+                if args.delete:
+                    os.remove(sf)
+                    print('removed individual LEF at {}'.format(sf))
+
+            except:
+                warn('Did not find a matching MACRO block in temporary LEF file: {}'.format(sf))
+
+        tot_file = header + '\n\n'.join(blocks + ['END LIBRARY'])
+
+        with open(target, 'w') as f:
+            f.write(tot_file)
+
+        print('wrote compiled LEF at {}'.format(cell_lib.paths['lef']))
+
+    @staticmethod
+    def make_verilog():
+        """
+        make a skeletal verilog module def for each cell with ports
+        :return:
+        """
+
+        target = (cell_lib.paths['verilog'] / PDK_VARIANT_NAME).with_suffix('.v')
+
+        if cell_lib.paths['temp_lef'] and cell_lib.paths['temp_lef'].is_dir():
+            lef_path = cell_lib.paths['temp_lef']
+        else:
+            edie('Must specify \'--temp-lef\' path in order to generate VERILOG.')
+
+        print('deriving VERILOG info from LEF file(s) at {}'.format(lef_path))
+
+        if lef_path.is_dir():
+            lef_files = list(lef_path.glob('*.lef'))
+        elif lef_path.is_file():
+            lef_files = [lef_path]
+
+        cell_names = {}
+        for lf in lef_files:
+            with open(lf, 'r') as f:
+                cc = f.read()
+            cell_names.update({lf: re.findall(r'\n\s*MACRO\s+(\S+)', cc)})
+
+        template_loader = jinja2.FileSystemLoader(cell_lib.TEMPLATE_PATH)
+        template_env = jinja2.Environment(
+            trim_blocks=True,
+            lstrip_blocks=True,
+            loader=template_loader,
+            autoescape=jinja2.select_autoescape(
+                disabled_extensions=('.v',),
+                default_for_string=True,
+                default=True,
+            ))
+
+        v_template = template_env.get_template(cell_lib.V_CELL_TEPLATE)
+
+        cell_block = []
+
+        for lef_file, macros in cell_names.items():
+
+            ld = LefFile(lef_file)
+
+            for cn in macros:
+                print('reading cell info: {}'.format(cn))
+
+                pins = ld.cell_info(cn)
+                names = sorted([p['name'] for p in pins])
+                unames = sorted(list(set(names)))
+
+                if unames != names:
+                    pins = [[p for p in pins if p['name'] == pn][0] for pn in unames]
+
+                pg_pins = [p['name'] for p in pins if p['name'] in CONVENTIONS.PG_PIN_NAMES]
+                pins = [p['name'] for p in pins if p['name'] not in CONVENTIONS.PG_PIN_NAMES]
+                pg_pins.extend(["VNB", "VPB"])
+
+                descr = cell_lib.by_name(cn)
+                cell_block.append(v_template.render(
+                    cell_name=cn,
+                    pins=pins,
+                    pg_pins=pg_pins,
+                    shortname=cn,
+                    description=descr['description'] if descr else ''
+                ))
+                print('appended VERILOG info for {}'.format(cn))
+
+        result = '/** ' + cell_lib.LICENSE_HEAD.replace('\n', '\n * ') + '\n */\n\n\n'
+        result += '\n\n`define USE_POWER_PINS 1\n\n'
+        result += '\n\n'.join(cell_block)
+
+        with open(target, 'w') as f:
+            f.write(result)
+
+        print('wrote VERILOG file to {}'.format(target))
+
+    @staticmethod
+    def make_lib():
+        target = (cell_lib.paths['lib'] / PDK_VARIANT_NAME).with_suffix('.lib')
+        lef_path = (cell_lib.paths['lef'] / PDK_VARIANT_NAME).with_suffix('.lef')
+
+        print('gen_lib deriving info from LEF file(s) at {}'.format(lef_path))
+
+        if lef_path.is_dir():
+            lef_files = list(lef_path.glob('*.lef'))
+        elif lef_path.is_file():
+            lef_files = [lef_path]
+        else:
+            raise BaseException('lef source not found')
+
+        cell_names = {}
+        for lf in lef_files:
+            with open(lf, 'r') as f:
+                cc = f.read()
+            cell_names.update({lf: re.findall(r'\n\s*MACRO\s+(\S+)', cc)})
+
+        template_loader = jinja2.FileSystemLoader(cell_lib.TEMPLATE_PATH)
+        template_env = jinja2.Environment(
+            trim_blocks=True,
+            lstrip_blocks=True,
+            loader=template_loader,
+            autoescape=jinja2.select_autoescape(
+                disabled_extensions=('.lib',),
+                default_for_string=True,
+                default=True,
+            ))
+
+        lib_template = template_env.get_template(cell_lib.LIB_HEAD_TEMPLATE)
+        cell_template = template_env.get_template(cell_lib.LIB_CELL_TEMPLATE)
+
+        cell_block = []
+
+        for file, macros in cell_names.items():
+
+            ld = LefFile(file)
+
+            for cn in macros:
+                print('reading cell info: {}'.format(cn))
+
+                pins = ld.cell_info(cn)
+                if not pins:
+                    continue
+
+                pg_pins = [p for p in pins if p['name'] in CONVENTIONS.PG_PIN_NAMES]
+                pins = [p for p in pins if p['name'] not in CONVENTIONS.PG_PIN_NAMES]
+
+                for pgp in pg_pins:
+                    pgp.update({
+                        'pg_type': 'primary_ground' if pgp['name'] == 'VGND' else 'primary_power',
+                        'related_bias_pin': 'VPB' if pgp['name'] == 'VGND' else 'VNB',
+                        'voltage_name': pgp['name'],
+                    })
+
+                pg_pins.append({
+                    'name': "VNB",
+                    'pg_type': "nwell",
+                    'physical_connection': "device_layer",
+                    'voltage_name': "VNB",
+                })
+
+                pg_pins.append({
+                    'name': "VPB",
+                    'pg_type': "pwell",
+                    'physical_connection': "device_layer",
+                    'voltage_name': "VPB",
+                })
+
+                for p in pins:
+                    # output pins:
+                    # max_capacitance: 0.1300150000;
+                    # max_transition: 1.5061030000;
+                    # input pins:
+                    # capacitance: 0.0021030000;
+                    # fall_capacitance: 0.0020150000;
+                    # max_transition: 1.5000000000;
+                    p.update({
+                        'isclock': 'false',
+                        'direction': 'inout',
+                        'is_analog': 'true',
+                        'function': None,
+                        'capacitance': 0.0021030000,
+                        'max_transition': 1.5061030000,
+                        'related_ground_pin': 'VGND',
+                        'related_power_pin': 'VPWR'
+                    })
+
+                cell_block.append(cell_template.render(
+                    cell_name=cn,
+                    leakage_power=None,
+                    area=None,
+                    cell_leakage_power=None,
+                    pg_pins=pg_pins,
+                    pins=pins,
+                ))
+                print('appended LIB info for {}'.format(cn))
+
+        result = lib_template.render(cells='\n\n'.join(cell_block))
+
+        with open(target, 'w') as f:
+            f.write(result)
+        print('wrote LIB file to {}'.format(target))
+
+    @staticmethod
+    def make_nosynth():
+        with open(cell_lib.NO_SYNTH_FILE, 'w') as f:
+            for cellname in cell_lib:
+                f.write(cellname + '\n')
+
+    @staticmethod
+    def make_markdown():
+        """
+        Create markdown summary of Magic cells in library
+        :return:
+        """
+        cell_lib.make_cell_details_md()
+        cell_lib.make_lib_summary_md()
+        cell_lib.merge_lib_summary_and_readme()
+
+    @staticmethod
+    def merge_lib_summary_and_readme():
+        with open(cell_lib.README_HEADER, 'r') as f:
+            rh = f.read()
+        with open(cell_lib.paths['cell_summary'], 'r') as f:
+            cs = f.read()
+        with open(cell_lib.paths['cell_details'], 'r') as f:
+            cd = f.read()
+        with open(cell_lib.MAIN_README, 'w') as f:
+            f.write(rh)
+            f.write('\n')
+            f.write(cs.replace('CELL_DETAILS.md', ''))
+            f.write('\n')
+            f.write(cd)
+        print('markdown written to {}'.format(cell_lib.MAIN_README))
+
+    @staticmethod
+    def make_lib_summary_md():
+        template_env = jinja2.Environment(
+            trim_blocks=True,
+            lstrip_blocks=True,
+            loader=jinja2.FileSystemLoader(cell_lib.TEMPLATE_PATH),
+            autoescape=jinja2.select_autoescape(
+                disabled_extensions=('.v',),
+                default_for_string=True,
+                default=True,
+            ))
+
+        lib_template = template_env.get_template(cell_lib.MD_LIB_TEMPLATE)
+
+        tables = []
+
+        for cat in ['standard-cells', 'primitive-cells', 'test-cells']:
+            rows = []
+            for cn, cell in cell_lib.by_category(cat).items():
+                if cell['description']:
+                    rows.append('| {:<25} | {:<55} |'.format(
+                        '[`{}`]({}#{})'.format(cn, cell_lib.paths['cell_details'].relative_to(
+                            cell_lib.paths['cell_summary'].parent),
+                                               cn.replace('_', '-')),
+                        cell['description']
+                    ))
+                else:
+                    rows.append('| {:<25} | {:<55} |'.format(
+                        '[`{}`]({}#{})'.format(cn, cell_lib.paths['cell_details'].relative_to(
+                            cell_lib.paths['cell_summary'].parent),
+                                               cn.replace('_', '-')),
+                        ''
+                    ))
+
+            tables.append(rows)
+
+        tables = lib_template.render(
+            pub_rows=tables[0],
+            prim_rows=tables[1],
+            test_rows=tables[2],
+        )
+
+        # print(tables)
+        with open(cell_lib.paths['cell_summary'], 'w') as f:
+            f.write(tables)
+        with open(cell_lib.REF_ROOT / PDK_VARIANT_NAME / 'README.md', 'w') as f:
+            f.write(tables)
+        print('markdown written to {}'.format(cell_lib.paths['cell_summary']))
+        print('markdown written to {}'.format(cell_lib.REF_ROOT / PDK_VARIANT_NAME / 'README.md'))
+
+    @staticmethod
+    def make_cell_details_md():
+        template_env = jinja2.Environment(
+            trim_blocks=True,
+            lstrip_blocks=True,
+            loader=jinja2.FileSystemLoader(cell_lib.TEMPLATE_PATH),
+            autoescape=jinja2.select_autoescape(
+                disabled_extensions=('.v',),
+                default_for_string=True,
+                default=True,
+            ))
+
+        cell_template = template_env.get_template(cell_lib.MD_CELL_TEMPLATE)
+
+        tables = '<!--\n' + \
+                 '    This Markdown text is autogenerated. Do not Modify here. \n' + \
+                 '-->\n'
+        tables += '# Cell Details\n\n'
+
+        for cat in cell_lib.CELL_CATEGORIES:
+            tables += '## {}\n\n'.format(cat.upper())
+            cells = cell_lib.by_category(cat)
+
+            for cn, cell in cells.items():
+                rows = []
+                matches = [(k, v) for k, v in cell.magic.ports.items()]
+                matches = sorted(list(set(matches)), key=lambda x: int(x[1][1]))
+                for m in matches:
+                    rows.append(
+                        '| {:<20} | {:<20} | {:<20} | {:<20} |'.format(m[1][1], m[0], m[1][0],
+                                                                       ','.join(m[1][2].split())))
+                ld = LefFile((cell_lib.paths['temp_lef'] / cell.magic.file.name).with_suffix('.lef'))
+                tables += cell_template.render(
+                    cell_name=cn,
+                    description=cell['description'],
+                    height=ld.height,
+                    width=ld.width,
+                    table_rows=rows if rows else ''
+                )
+
+        # print(tables)
+        with open(cell_lib.paths['cell_details'], 'w') as f:
+            f.write(tables)
+
+        print('markdown written to {}'.format(cell_lib.paths['cell_details']))
 
 
 class LefFile(StructuredTextFile):
@@ -819,49 +1315,49 @@ class LefFile(StructuredTextFile):
         return pi
 
 
-# class MagicLibrary(dict):
-#     def __init__(self, library_root):
-#         if isinstance(library_root, str):
-#             library_root = Path(library_root)
-#         if isinstance(library_root, Path):
-#             list_of_mag_files = library_root.glob('*.mag')
-#         elif isinstance(library_root, list):
-#             list_of_mag_files = library_root
-#
-#         super().__init__({f.stem: MagicLayout(f) for f in list_of_mag_files})
-#
-#     def __contains__(self, item):
-#         return item in [m.long_name for m in self.values()]
-#
-#     def by_shortname(self, name):
-#         try:
-#             return [m for mname, m in self.items() if mname == name][0]
-#         except IndexError:
-#             return None
-#
-#     def by_longname(self, name):
-#         try:
-#             return [m for _, m in self.items() if m.long_name == name][0]
-#         except IndexError:
-#             return None
-#
-#     def by_file(self, file):
-#         try:
-#             return [m for name, m in self.items() if m.file == file][0]
-#         except IndexError:
-#             return None
-#
-#     def rename_module(self, from_name, to_name):
-#
-#         for mn, m in self.items():
-#             if m.long_name == from_name:
-#                 continue
-#             m.rename_refs(from_name, to_name)
-#
-#         targ = self.by_longname(from_name)
-#         if targ:
-#             targ.rename(to_name)
-#
+class MagicLibrary(dict):
+    def __init__(self, library_root):
+        if isinstance(library_root, str):
+            library_root = Path(library_root)
+        if isinstance(library_root, Path):
+            list_of_mag_files = library_root.glob('*.mag')
+        elif isinstance(library_root, list):
+            list_of_mag_files = library_root
+
+        super().__init__({f.stem: MagicLayout(f) for f in list_of_mag_files})
+
+    def __contains__(self, item):
+        return item in [m.long_name for m in self.values()]
+
+    def by_shortname(self, name):
+        try:
+            return [m for mname, m in self.items() if mname == name][0]
+        except IndexError:
+            return None
+
+    def by_longname(self, name):
+        try:
+            return [m for _, m in self.items() if m.long_name == name][0]
+        except IndexError:
+            return None
+
+    def by_file(self, file):
+        try:
+            return [m for name, m in self.items() if m.file == file][0]
+        except IndexError:
+            return None
+
+    def rename_module(self, from_name, to_name):
+
+        for mn, m in self.items():
+            if m.long_name == from_name:
+                continue
+            m.rename_refs(from_name, to_name)
+
+        targ = self.by_longname(from_name)
+        if targ:
+            targ.rename(to_name)
+
 
 
 class MagicLayout(StructuredTextFile):
@@ -961,6 +1457,48 @@ class MagicLayout(StructuredTextFile):
                 self._save()
                 warn('wrote capitalized-net-corrected version of {}'.format(self.file.name))
 
+    def make_temp_lef(self):
+
+        target = (cell_lib.paths['temp_lef'] / self.file.name).with_suffix('.lef')
+
+        # try:
+
+        result = magic.make_lef(self.file)
+        if not magic.is_alive():
+            print(result)
+            error("There was a problem during the processing of {}: ".format(self.file))
+
+        shutil.copy(self.file.parent / (self.file.stem + '.lef'), target)
+        os.remove(self.file.parent / (self.file.stem + '.lef'))
+        print('wrote LEF: {}'.format(target.relative_to(rel_root)))
+
+        # except BaseException:
+        #     error("There was a problem (Magic crash?) during the processing of {}:".format(self.file))
+
+    def make_spice(self):
+
+        target = (cell_lib.paths['spice_ext'] / self.file.long_name).with_suffix('.spice')
+
+        try:
+            result = magic.make_spice(self.file, target)
+
+            if not magic.is_alive():
+                print(result)
+                error("There was a problem during the processing of {}: ".format(self.file))
+
+            for df in cell_lib.paths['mag'].glob('*.ext'):
+                os.remove(df)
+            print('wrote SPICE: {}'.format(target.relative_to(rel_root)))
+
+            with open(target, 'r') as f:
+                tt = f.read()
+            with open(target, 'w') as f:
+                f.write('* ' + cell_lib.LICENSE_HEAD.replace('\n', '\n* '))
+                f.write('\n\n')
+                f.write(tt)
+
+        except BaseException:
+            error("There was a problem during the processing of {}:".format(self.file))
 
 class Magic:
     def __init__(self):
@@ -1080,7 +1618,7 @@ def confirm(prompt=None, resp=False):
 
 
 def error(msg):
-    print('[ERROR] ' + msg)
+    print('[ERROR] ' + msg, file=STDERR)
     ERRORS.append('[ERROR] ' + msg)
 
 
@@ -1090,407 +1628,17 @@ def edie(msg, code=1):
 
 
 def warn(msg):
-    print(msg, file=STDERR)
+    # print(msg, file=STDERR)
+    print(msg)
 
 
-
-
-def make_temp_lef(mf):
-    target = (cell_lib.paths['temp_lef'] / mf.long_name).with_suffix('.lef')
-
-    # try:
-
-    result = magic.make_lef(mf.file)
-    if not magic.is_alive():
-        print(result)
-        error("There was a problem during the processing of {}: ".format(mf))
-
-    shutil.copy(mf.file.parent / (mf.long_name + '.lef'), target)
-    os.remove(mf.file.parent / (mf.long_name + '.lef'))
-    print('wrote LEF: {}'.format(target.relative_to(rel_root)))
-
-    # except BaseException:
-    #     error("There was a problem (Magic crash?) during the processing of {}:".format(mf))
-
-
-def make_lef():
-    target = (cell_lib.paths['lef'] / PDK_VARIANT_NAME).with_suffix('.lef')
-
-    for sf in cell_lib.paths['temp_lef'].glob('*.lef'):
-
-        example_ = cell_lib.paths['temp_lef'] / sf
-
-        with open(example_, 'r') as f:
-            ef = f.read()
-
-        header = re.findall(r'[\S\s\n]*(?=MACRO)', ef)[0]
-        if header:
-            break
-
-    blocks = []
-
-    # only standard cells make it into the merged LEF
-    for sf in cell_lib.paths['temp_lef'].glob('*.lef'):
-
-        if sf.stem not in cell_lib.standard_cells:
-            continue
-
-        cell = cell_lib.by_name(sf.stem)
-        try:
-            with open(sf, 'r') as f:
-                st = f.read()
-            blocks.append(
-                re.search(r'(MACRO\s+{}[\s\S\n]*?\n\s*END\s+{})'.format(re.escape(cell.long_name), re.escape(cell.long_name)), st).group()
-            )
-
-            if args.delete:
-                os.remove(sf)
-                print('removed individual LEF at {}'.format(sf))
-
-        except:
-            warn('Did not find a matching MACRO block in temporary LEF file: {}'.format(sf))
-
-    tot_file = header + '\n\n'.join(blocks + ['END LIBRARY'])
-
-    with open(target, 'w') as f:
-        f.write(tot_file)
-
-    print('wrote compiled LEF at {}'.format(cell_lib.paths['lef']))
-
-
-def make_spice(mf):
-    target = (cell_lib.paths['spice_ext'] / mf.long_name).with_suffix('.spice')
-
-    try:
-        result = magic.make_spice(mf.file, target)
-
-        if not magic.is_alive():
-            print(result)
-            error("There was a problem during the processing of {}: ".format(mf))
-
-        for df in cell_lib.paths['mag'].glob('*.ext'):
-            os.remove(df)
-        print('wrote SPICE: {}'.format(target.relative_to(rel_root)))
-
-        with open(target, 'r') as f:
-            tt = f.read()
-        with open(target, 'w') as f:
-            f.write('* ' + cell_lib.LICENSE_HEAD.replace('\n', '\n* '))
-            f.write('\n\n')
-            f.write(tt)
-
-    except BaseException:
-        error("There was a problem during the processing of {}:".format(mf))
-
-
-def make_verilog():
-    """
-    make a skeletal verilog module def for each cell with ports
-    :return:
-    """
-
-    target = (cell_lib.paths['verilog'] / PDK_VARIANT_NAME).with_suffix('.v')
-
-    if cell_lib.paths['temp_lef'] and cell_lib.paths['temp_lef'].is_dir():
-        lef_path = cell_lib.paths['temp_lef']
+def stylize_head(text=''):
+    if text:
+        cblock = '  ' + text + '  '
     else:
-        edie('Must specify \'--temp-lef\' path in order to generate VERILOG.')
-
-    print('deriving VERILOG info from LEF file(s) at {}'.format(lef_path))
-
-    if lef_path.is_dir():
-        lef_files = list(lef_path.glob('*.lef'))
-    elif lef_path.is_file():
-        lef_files = [lef_path]
-
-    cell_names = {}
-    for lf in lef_files:
-        with open(lf, 'r') as f:
-            cc = f.read()
-        cell_names.update({lf: re.findall(r'\n\s*MACRO\s+(\S+)', cc)})
-
-    template_loader = jinja2.FileSystemLoader(cell_lib.TEMPLATE_PATH)
-    template_env = jinja2.Environment(
-        trim_blocks=True,
-        lstrip_blocks=True,
-        loader=template_loader,
-        autoescape=jinja2.select_autoescape(
-            disabled_extensions=('.v',),
-            default_for_string=True,
-            default=True,
-        ))
-
-    v_template = template_env.get_template(cell_lib.V_CELL_TEPLATE)
-
-    cell_block = []
-
-    for lef_file, macros in cell_names.items():
-
-        ld = LefFile(lef_file)
-
-        for cn in macros:
-            print('reading cell info: {}'.format(cn))
-
-            pins = ld.cell_info(cn)
-            names = sorted([p['name'] for p in pins])
-            unames = sorted(list(set(names)))
-
-            if unames != names:
-                pins = [[p for p in pins if p['name'] == pn][0] for pn in unames]
-
-            pg_pins = [p['name'] for p in pins if p['name'] in CONVENTIONS.PG_PIN_NAMES]
-            pins = [p['name'] for p in pins if p['name'] not in CONVENTIONS.PG_PIN_NAMES]
-            pg_pins.extend(["VNB", "VPB"])
-
-            descr = cell_lib.by_name(cn)
-            cell_block.append(v_template.render(
-                cell_name=cn,
-                pins=pins,
-                pg_pins=pg_pins,
-                shortname=cn,
-                description=descr['description'] if descr else ''
-            ))
-            print('appended VERILOG info for {}'.format(cn))
-
-    result = '/** ' + cell_lib.LICENSE_HEAD.replace('\n', '\n * ') + '\n */\n\n\n'
-    result += '\n\n`define USE_POWER_PINS 1\n\n'
-    result += '\n\n'.join(cell_block)
-
-    with open(target, 'w') as f:
-        f.write(result)
-
-    print('wrote VERILOG file to {}'.format(target))
-
-
-def make_lib():
-    target = (cell_lib.paths['lib'] / PDK_VARIANT_NAME).with_suffix('.lib')
-    lef_path = (cell_lib.paths['lef'] / PDK_VARIANT_NAME).with_suffix('.lef')
-
-    print('gen_lib deriving info from LEF file(s) at {}'.format(lef_path))
-
-    if lef_path.is_dir():
-        lef_files = list(lef_path.glob('*.lef'))
-    elif lef_path.is_file():
-        lef_files = [lef_path]
-    else:
-        raise BaseException('lef source not found')
-
-    cell_names = {}
-    for lf in lef_files:
-        with open(lf, 'r') as f:
-            cc = f.read()
-        cell_names.update({lf: re.findall(r'\n\s*MACRO\s+(\S+)', cc)})
-
-    template_loader = jinja2.FileSystemLoader(cell_lib.TEMPLATE_PATH)
-    template_env = jinja2.Environment(
-        trim_blocks=True,
-        lstrip_blocks=True,
-        loader=template_loader,
-        autoescape=jinja2.select_autoescape(
-            disabled_extensions=('.lib',),
-            default_for_string=True,
-            default=True,
-        ))
-
-    lib_template = template_env.get_template(cell_lib.LIB_HEAD_TEMPLATE)
-    cell_template = template_env.get_template(cell_lib.LIB_CELL_TEMPLATE)
-
-    cell_block = []
-
-    for file, macros in cell_names.items():
-
-        ld = LefFile(file)
-
-        for cn in macros:
-            print('reading cell info: {}'.format(cn))
-
-            pins = ld.cell_info(cn)
-            if not pins:
-                continue
-
-            pg_pins = [p for p in pins if p['name'] in CONVENTIONS.PG_PIN_NAMES]
-            pins = [p for p in pins if p['name'] not in CONVENTIONS.PG_PIN_NAMES]
-
-            for pgp in pg_pins:
-                pgp.update({
-                    'pg_type': 'primary_ground' if pgp['name'] == 'VGND' else 'primary_power',
-                    'related_bias_pin': 'VPB' if pgp['name'] == 'VGND' else 'VNB',
-                    'voltage_name': pgp['name'],
-                })
-
-            pg_pins.append({
-                'name': "VNB",
-                'pg_type': "nwell",
-                'physical_connection': "device_layer",
-                'voltage_name': "VNB",
-            })
-
-            pg_pins.append({
-                'name': "VPB",
-                'pg_type': "pwell",
-                'physical_connection': "device_layer",
-                'voltage_name': "VPB",
-            })
-
-            for p in pins:
-                # output pins:
-                # max_capacitance: 0.1300150000;
-                # max_transition: 1.5061030000;
-                # input pins:
-                # capacitance: 0.0021030000;
-                # fall_capacitance: 0.0020150000;
-                # max_transition: 1.5000000000;
-                p.update({
-                    'isclock': 'false',
-                    'direction': 'inout',
-                    'is_analog': 'true',
-                    'function': None,
-                    'capacitance': 0.0021030000,
-                    'max_transition': 1.5061030000,
-                    'related_ground_pin': 'VGND',
-                    'related_power_pin': 'VPWR'
-                })
-
-            cell_block.append(cell_template.render(
-                cell_name=cn,
-                leakage_power=None,
-                area=None,
-                cell_leakage_power=None,
-                pg_pins=pg_pins,
-                pins=pins,
-            ))
-            print('appended LIB info for {}'.format(cn))
-
-    result = lib_template.render(cells='\n\n'.join(cell_block))
-
-    with open(target, 'w') as f:
-        f.write(result)
-    print('wrote LIB file to {}'.format(target))
-
-
-def merge_lib_summary_and_readme():
-    with open(cell_lib.README_HEADER, 'r') as f:
-        rh = f.read()
-    with open(cell_lib.paths['cell_summary'], 'r') as f:
-        cs = f.read()
-    with open(cell_lib.paths['cell_details'], 'r') as f:
-        cd = f.read()
-    with open(cell_lib.MAIN_README, 'w') as f:
-        f.write(rh)
-        f.write('\n')
-        f.write(cs.replace('CELL_DETAILS.md', ''))
-        f.write('\n')
-        f.write(cd)
-    print('markdown written to {}'.format(cell_lib.MAIN_README))
-
-
-def make_markdown():
-    """
-    Create markdown summary of Magic cells in library
-    :return:
-    """
-    make_cell_details_md()
-    make_lib_summary_md()
-    merge_lib_summary_and_readme()
-
-
-def make_lib_summary_md():
-    template_env = jinja2.Environment(
-        trim_blocks=True,
-        lstrip_blocks=True,
-        loader=jinja2.FileSystemLoader(cell_lib.TEMPLATE_PATH),
-        autoescape=jinja2.select_autoescape(
-            disabled_extensions=('.v',),
-            default_for_string=True,
-            default=True,
-        ))
-
-    lib_template = template_env.get_template(cell_lib.MD_LIB_TEMPLATE)
-
-    tables = []
-
-    for cat in ['standard-cells', 'primitive-cells', 'test-cells']:
-        rows = []
-        for cn, cell in cell_lib.by_category(cat).items():
-            if cell['description']:
-                rows.append('| {:<25} | {:<55} |'.format(
-                    '[`{}`]({}#{})'.format(cn, cell_lib.paths['cell_details'].relative_to(cell_lib.paths['cell_summary'].parent),
-                                           cn.replace('_', '-')),
-                    cell['description']
-                ))
-            else:
-                rows.append('| {:<25} | {:<55} |'.format(
-                    '[`{}`]({}#{})'.format(cn, cell_lib.paths['cell_details'].relative_to(cell_lib.paths['cell_summary'].parent),
-                                           cn.replace('_', '-')),
-                    ''
-                ))
-
-        tables.append(rows)
-
-    tables = lib_template.render(
-        pub_rows=tables[0],
-        prim_rows=tables[1],
-        test_rows=tables[2],
-    )
-
-    # print(tables)
-    with open(cell_lib.paths['cell_summary'], 'w') as f:
-        f.write(tables)
-    with open(cell_lib.REF_ROOT / PDK_VARIANT_NAME / 'README.md', 'w') as f:
-        f.write(tables)
-    print('markdown written to {}'.format(cell_lib.paths['cell_summary']))
-    print('markdown written to {}'.format(cell_lib.REF_ROOT / PDK_VARIANT_NAME / 'README.md'))
-
-
-def make_cell_details_md():
-    template_env = jinja2.Environment(
-        trim_blocks=True,
-        lstrip_blocks=True,
-        loader=jinja2.FileSystemLoader(cell_lib.TEMPLATE_PATH),
-        autoescape=jinja2.select_autoescape(
-            disabled_extensions=('.v',),
-            default_for_string=True,
-            default=True,
-        ))
-
-    cell_template = template_env.get_template(cell_lib.MD_CELL_TEMPLATE)
-
-    tables = '<!--\n' + \
-             '    This Markdown text is autogenerated. Do not Modify here. \n' + \
-             '-->\n'
-    tables += '# Cell Details\n\n'
-
-    for cat in cell_lib.CELL_CATEGORIES:
-        tables += '## {}\n\n'.format(cat.upper())
-        cells = cell_lib.by_category(cat)
-
-        for cn, cell in cells.items():
-            rows = []
-            matches = [(k, v) for k, v in cell.magic.ports.items()]
-            matches = sorted(list(set(matches)), key=lambda x: int(x[1][1]))
-            for m in matches:
-                rows.append(
-                    '| {:<20} | {:<20} | {:<20} | {:<20} |'.format(m[1][1], m[0], m[1][0], ','.join(m[1][2].split())))
-            ld = LefFile((cell_lib.paths['temp_lef'] / cell.magic.file.name).with_suffix('.lef'))
-            tables += cell_template.render(
-                cell_name=cn,
-                description=cell['description'],
-                height=ld.height,
-                width=ld.width,
-                table_rows=rows if rows else ''
-            )
-
-    # print(tables)
-    with open(cell_lib.paths['cell_details'], 'w') as f:
-        f.write(tables)
-
-    print('markdown written to {}'.format(cell_lib.paths['cell_details']))
-
-
-def make_nosynth():
-    with open(cell_lib.NO_SYNTH_FILE, 'w') as f:
-        for cellname in cell_lib.all_cells.keys():
-            f.write(cellname+'\n')
+        cblock = ''
+    hashlen = int((80-len(cblock))/2)
+    return '#'*hashlen + cblock + '#'*hashlen
 
 
 def parent_check(path):
@@ -1536,7 +1684,7 @@ def target_check(magic_file, type):
         suffix = type
 
     if type in ['gds', 'temp_lef', 'spice_ext']:
-        target = Path(cell_lib.paths[type] / magic_file.long_name).with_suffix('.' + suffix)
+        target = (cell_lib.paths[type] / magic_file.name).with_suffix('.' + suffix)
         if not args.force and target.is_file() and os.path.getmtime(target) > os.path.getmtime(magic_file.file):
             # short circuit; don't do it
             return False
@@ -1571,76 +1719,6 @@ def target_check(magic_file, type):
         return True
 
 
-def handle_magic(cell):
-
-    magic_file = cell.magic
-
-    if not any([
-        target_check(magic_file, 'gds'),
-        target_check(magic_file, 'temp_lef'),
-        target_check(magic_file, 'spice_ext')
-    ]):
-        return
-
-    magic.renew(magic_file.file)
-    print('loaded file {}'.format(magic_file.file.relative_to(rel_root)))
-
-    if args.gds and target_check(magic_file, 'gds'):
-        parent_check(cell_lib.paths['gds'])
-        target = (cell_lib.paths['gds'] / cell.long_name).with_suffix('.gds')
-        cell.make_gds(target)
-    if args.temp_lef and target_check(magic_file, 'temp_lef'):
-        parent_check(cell_lib.paths['temp_lef'])
-        make_temp_lef(magic_file)
-    if args.spice and target_check(magic_file, 'spice_ext'):
-        parent_check(cell_lib.paths['spice_ext'])
-        make_spice(magic_file)
-
-
-def check_lvs():
-    NETGEN_TCL = cell_lib.TECH_ROOT / 'netgen' / 'sky130_setup.tcl'
-    warn(stylize_head('Starting LVS'))
-    for m in cell_lib.standard_cells:
-        ext_spice = list(cell_lib.paths['spice_ext'].glob(CONVENTIONS.CELL_PREFIX + m + '.spice'))
-        hand_spice = list(cell_lib.paths['spice_hand'].glob(CONVENTIONS.CELL_PREFIX + m + '.spice'))
-
-        if not len(ext_spice) or not len(hand_spice):
-            if not len(ext_spice):
-                warn('could not find \'{}\''.format(ext_spice))
-            if not len(hand_spice):
-                warn('could not find \'{}\''.format(hand_spice))
-            continue
-
-        # make a temporary spice file for the _ext version which has a top-level instantiation of itself
-        with open(ext_spice[0], 'r') as f:
-            src = f.read()
-
-        match = re.search(r'^[.]subckt ({} .*)'.format(CONVENTIONS.CELL_PREFIX + m), src, re.MULTILINE)
-        if match:
-            instance = match.group(1)
-        else:
-            continue
-
-        instance = 'X999 ' + instance + '\n'
-        modsrc = src + instance
-
-        os.makedirs(cell_lib.root / 'LVS_RESULTS', exist_ok=True)
-        
-        with tempfile.NamedTemporaryFile(mode='w', suffix='.spice') as f:
-            f.write(modsrc)
-
-            # consider adding the '-blackbox' option to keep empty subcells as meaningful entities
-            command = 'netgen -batch lvs {} {} {} {} -json -blackbox'.format(
-                f.name,
-                hand_spice[0],
-                NETGEN_TCL,
-                (cell_lib.root / 'LVS_RESULTS' / m).with_suffix('.lvs.log')
-            )
-            subprocess.run(shlex.split(command), check=False)
-
-    warn(stylize_head('LVS Complete'))
-
-
 def check_dir_for_prefixes(directory, extension):
     if extension.startswith('*'):
         extension = extension[1:]
@@ -1660,17 +1738,6 @@ def check_dir_for_prefixes(directory, extension):
         for exx in mp:
             warn('        {}'.format(exx))
         warn(stylize_head())
-
-
-def check_prefixes():
-    for set in [
-        ('mag', 'mag'),
-        ('png', 'png'),
-        ('xschem', 'sch'),
-        ('xschem', 'sym'),
-        ('spice_hand', 'spice')
-    ]:
-        check_dir_for_prefixes(*set)
 
 
 def run_rename_magic_module(spec_string):
@@ -1710,7 +1777,7 @@ def run_basic_checks():
     cell_lib.check_yaml()
     cell_lib.check_magic_lib()
     cell_lib.check_xschem_lib()
-    cell_lib.check_port_pin_mapping()
+    cell_lib.check_magic_port2xschem_pin_mapping()
     cell_lib.check_hand_spice()
 
 
@@ -1719,12 +1786,6 @@ cell_lib = None
 magic = None
 args = None
 rel_root = None
-
-
-def load_cell_library(library_root):
-    global cell_lib
-
-    cell_lib = CellLibrary(library_root)
 
 
 def main():
@@ -1784,7 +1845,7 @@ def main():
 
     rel_root = Path.cwd()
 
-    load_cell_library(rel_root)
+    cell_lib = CellLibrary(rel_root)
 
     if args.basic_checks:
         run_basic_checks()
@@ -1803,41 +1864,32 @@ def main():
     # Items here on done on a per-cell basis with Magic opening each one
     magic = Magic()
     for c in cell_lib.values():
-        handle_magic(c)
+        c.handle_magic()
 
     # The following items can be done on the batch level:
     if args.lvs:
-        check_lvs()
+        cell_lib.check_lvs()
 
     if args.lef and target_check(None, 'lef'):
         # consolidate all temp LEFs
         parent_check(cell_lib.paths['lef'])
-        make_lef()
+        cell_lib.make_lef()
 
     if args.lib and target_check(None, 'lib'):
         # make single LIB from single LEF
         parent_check(cell_lib.paths['lib'])
-        make_lib()
+        cell_lib.make_lib()
 
     if args.verilog and target_check(None, 'verilog'):
         parent_check(cell_lib.paths['verilog'])
-        make_verilog()
+        cell_lib.make_verilog()
 
     if args.markdown and target_check(None, 'markdown'):
         # make a markdown pin summary file based on the Magic file source (text)
-        make_markdown()
+        cell_lib.make_markdown()
 
     if args.nosynth:
-        make_nosynth()
-
-
-def stylize_head(text=''):
-    if text:
-        cblock = '  ' + text + '  '
-    else:
-        cblock = ''
-    hashlen = int((80-len(cblock))/2)
-    return '#'*hashlen + cblock + '#'*hashlen
+        cell_lib.make_nosynth()
 
 
 if __name__ == '__main__':
