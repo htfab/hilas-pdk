@@ -36,7 +36,7 @@ N 1900 -1450 1980 -1450 { lab=#net5}
 N 1900 -1580 1900 -1540 { lab=VINJ}
 N 1900 -1480 1900 -1450 { lab=#net5}
 N 1840 -1510 1860 -1510 { lab=VBIAS}
-N 2020 -1420 2030 -1420 { lab=VBIAS}
+N 2020 -1420 2030 -1420 { lab=VREF}
 N 1560 -1420 1790 -1420 { lab=#net1}
 N 1640 -1580 1900 -1580 { lab=VINJ}
 N 1640 -1580 1640 -1510 { lab=VINJ}
@@ -69,6 +69,10 @@ N 1830 -1420 1960 -1420 { lab=VINJ}
 N 1910 -1580 1960 -1580 { lab=VINJ}
 N 1830 -1250 1830 -1220 { lab=VGND}
 N 2040 -1330 2160 -1330 { lab=#net4}
+N 830 -1370 830 -1360 { lab=LARGECAPACITOR}
+N 830 -1360 870 -1360 { lab=LARGECAPACITOR}
+N 830 -1360 830 -1290 { lab=LARGECAPACITOR}
+N 870 -1420 1020 -1420 { lab=#net1}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 1880 -1510 0 0 {name=M3
 L=0.5
 W=1
@@ -194,7 +198,7 @@ spiceprefix=X
 }
 C {devices/gnd.sym} 2400 -1280 0 0 {name=l3 lab=VGND}
 C {devices/iopin.sym} 2400 -1430 0 0 {name=OUTPUT lab=OUTPUT}
-C {devices/iopin.sym} 2030 -1420 0 0 {name=VBIAS1 lab=VBIAS}
+C {devices/iopin.sym} 2030 -1420 0 0 {name=VREF lab=VREF}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 2180 -1330 0 0 {name=M7
 L=0.5
 W=1
@@ -246,5 +250,7 @@ value=1p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/ipin.sym} 1110 -1320 0 0 {name=GATE4 lab=GATE4}
-C {devices/ipin.sym} 1020 -1320 0 0 {name=GATE5 lab=GATE5}
+C {devices/ipin.sym} 1020 -1320 0 0 {name=VTUNOVERLAP01 lab=VTUNOVERLAP01}
 C {devices/iopin.sym} 1890 -1220 0 0 {name=p1 lab=VGND}
+C {sky130_fd_pr/cap_var_hvt.sym} 870 -1390 0 0 {name=C7 model=cap_var_hvt W=0.5 L=0.5 VM=1 spiceprefix=X}
+C {devices/ipin.sym} 830 -1320 0 0 {name=LARGECAPACITOR lab=LARGECAPACITOR}
