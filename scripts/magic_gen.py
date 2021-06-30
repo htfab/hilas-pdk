@@ -260,11 +260,15 @@ class XschemLibrary(dict):
             sym_only = set(sym_pins.keys()) - set(sch_pins.keys())
             if not sch_only and not sym_only:
                 continue
-            else:  ## mismatch
+            else:
                 message.append(stylize_head())
+
+            if sch_only:
                 message.append('xschem symbol \'{}\' missing the following pins:'.format(cir.name))
                 for pin in sch_only:
                     message.append('    {}'.format(pin))
+
+            if sym_only:
                 message.append('xschem schematic \'{}\' missing the following pins:'.format(cir.name))
                 for pin in sym_only:
                     message.append('    {}'.format(pin))
@@ -378,9 +382,9 @@ class XschemSchematic(StructuredTextFile):
                 write = True
 
         for pin_name, pin_attrs in self.pins.items():
-            fnet = CONVENTIONS.net_name(pin_attrs['name'])
+            fnet = CONVENTIONS.net_name(pin_name)
             if fnet:
-                self.rename_pinname(pin_attrs['name'], fnet)
+                self.rename_pinname(pin_name, fnet)
                 warn('Found pin name in \'{}\' whose name should probably be corrected: \'{}\'->\'{}\''.format(
                     self.file.name, pin_attrs['name'], fnet))
                 write = True
@@ -436,7 +440,7 @@ class XschemSymbol(StructuredTextFile):
     @property
     def pins(self):
         pins = {}
-        pinlist = re.findall(r'^B \S+ \S+ \S+ \S+ \S+ {\s*(.*?)\s*}', self.c, re.M)
+        pinlist = re.findall(r'^B \S+ \S+ \S+ \S+ \S+ {\s*(.*?)\s*}', self.c, re.M|re.S)
         for string in pinlist:
             pairs = dict(tuple(x.split('=')) for x in string.split())
             pins.update({pairs['name']: {k:v for k,v in pairs.items() if k!='name'}})

@@ -161,5 +161,5 @@ value=10f
 C {devices/capa.sym} 1160 -1720 0 0 {name=C10
 value=10f
 }
-C {devices/gnd.sym} 1610 -1420 0 0 {name=l1 lab=VGND}
-C {devices/iopin.sym} 1640 -1450 0 0 {name=p1 lab=VGND}
+C {devices/gnd.sym} 1610 -1420 0 0 {name=l199 lab=VGND}
+C {devices/iopin.sym} 1640 -1450 0 0 {name=p199 lab=VGND}

@@ -4,12 +4,11 @@ K {}
 V {}
 S {}
 E {}
-N 1060 -1260 1140 -1260 {lab=OUTPUT}
-N 1050 -1180 1050 -1140 { lab=VGND}
-N 1050 -1190 1050 -1180 { lab=VGND}
+N 1050 -1170 1050 -1140 { lab=VGND}
+N 1050 -1190 1050 -1170 { lab=VGND}
 N 1050 -1260 1050 -1250 { lab=OUTPUT}
-N 1050 -1260 1060 -1260 { lab=OUTPUT}
-N 1050 -1170 1130 -1170 { lab=xxx}
+N 1050 -1260 1140 -1260 { lab=OUTPUT}
+N 1050 -1170 1130 -1170 { lab=VGND}
 C {devices/gnd.sym} 1050 -1140 0 0 {name=l4 lab=VGND}
 C {devices/iopin.sym} 1140 -1260 0 0 {name=OUTPUT lab=OUTPUT}
 C {devices/res.sym} 1050 -1220 0 0 {name=R1

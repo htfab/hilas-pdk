@@ -4,60 +4,47 @@ K {}
 V {}
 S {}
 E {}
-N 1360 -1420 1390 -1420 { lab=#net1}
 N 1320 -1370 1320 -1360 { lab=GATE2}
 N 1320 -1360 1360 -1360 { lab=GATE2}
-N 1200 -1420 1360 -1420 { lab=#net1}
 N 1320 -1360 1320 -1290 { lab=GATE2}
 N 1470 -1370 1470 -1360 { lab=GATE1}
-N 1470 -1360 1510 -1360 { lab=GATE1}
+N 1500 -1360 1510 -1360 { lab=GATE1}
 N 1650 -1360 1690 -1360 { lab=VTUN}
 N 1650 -1370 1650 -1360 { lab=VTUN}
-N 1690 -1370 1690 -1360 { lab=VTUN}
 N 1500 -1360 1500 -1310 { lab=GATE1}
-N 1470 -1420 1510 -1420 { lab=#net1}
-N 1020 -1420 1200 -1420 { lab=#net1}
-N 2380 -1580 2470 -1580 { lab=VINJ}
-N 2200 -1580 2380 -1580 { lab=VINJ}
-N 1890 -1580 2200 -1580 { lab=VINJ}
+N 1020 -1420 1560 -1420 { lab=#net1}
+N 2390 -1580 2470 -1580 { lab=VINJ}
+N 2180 -1580 2390 -1580 { lab=VINJ}
 N 2240 -1550 2340 -1550 { lab=#net2}
 N 2240 -1550 2240 -1520 { lab=#net2}
 N 2200 -1520 2240 -1520 { lab=#net2}
-N 2200 -1520 2200 -1480 { lab=#net2}
-N 2380 -1520 2380 -1380 { lab=OUTPUT}
+N 2200 -1520 2200 -1360 { lab=#net2}
+N 2380 -1430 2380 -1310 { lab=OUTPUT}
 N 2380 -1430 2400 -1430 { lab=OUTPUT}
 N 2380 -1280 2400 -1280 { lab=VGND}
-N 2380 -1380 2380 -1310 { lab=OUTPUT}
-N 2200 -1480 2200 -1360 { lab=#net2}
 N 2200 -1330 2230 -1330 { lab=VGND}
 N 1800 -1280 1830 -1280 { lab=VGND}
-N 1870 -1280 1930 -1280 { lab=#net3}
+N 1890 -1280 2340 -1280 { lab=#net3}
 N 1890 -1310 1890 -1280 { lab=#net3}
 N 1830 -1310 1890 -1310 { lab=#net3}
-N 1830 -1340 1830 -1310 { lab=#net3}
-N 1940 -1280 2340 -1280 { lab=#net3}
 N 1950 -1330 1980 -1330 { lab=VGND}
-N 2020 -1330 2080 -1330 { lab=#net4}
 N 2040 -1360 2040 -1330 { lab=#net4}
 N 1980 -1360 2040 -1360 { lab=#net4}
 N 1980 -1390 1980 -1360 { lab=#net4}
-N 1930 -1280 1940 -1280 { lab=#net3}
-N 2070 -1330 2160 -1330 { lab=#net4}
-N 1830 -1390 1830 -1340 { lab=#net3}
-N 1830 -1450 1980 -1450 { lab=#net5}
+N 1830 -1390 1830 -1310 { lab=#net3}
+N 1900 -1450 1980 -1450 { lab=#net5}
 N 1900 -1580 1900 -1540 { lab=VINJ}
 N 1900 -1480 1900 -1450 { lab=#net5}
 N 1840 -1510 1860 -1510 { lab=VBIAS}
 N 2020 -1420 2030 -1420 { lab=VBIAS}
-N 1500 -1420 1790 -1420 { lab=#net1}
-N 1640 -1580 1890 -1580 { lab=VINJ}
+N 1560 -1420 1790 -1420 { lab=#net1}
+N 1640 -1580 1900 -1580 { lab=VINJ}
 N 1640 -1580 1640 -1510 { lab=VINJ}
 N 1600 -1510 1640 -1510 { lab=VINJ}
-N 1690 -1390 1690 -1370 { lab=VTUN}
+N 1690 -1390 1690 -1360 { lab=VTUN}
 N 1560 -1510 1560 -1420 { lab=#net1}
 N 1600 -1480 1600 -1460 { lab=SOURCE1}
 N 1600 -1560 1600 -1540 { lab=DRAIN1}
-N 1390 -1420 1470 -1420 { lab=#net1}
 N 1210 -1360 1210 -1320 { lab=GATE3}
 N 1110 -1360 1110 -1320 { lab=GATE4}
 N 1020 -1360 1020 -1320 { lab=GATE5}
@@ -67,9 +54,21 @@ N 2180 -1550 2200 -1550 { lab=VINJ}
 N 2180 -1580 2180 -1550 { lab=VINJ}
 N 1900 -1510 1910 -1510 { lab=VINJ}
 N 1910 -1580 1910 -1510 { lab=VINJ}
-N 1830 -1420 1980 -1420 { lab=VINJ}
 N 1960 -1420 1980 -1420 { lab=VINJ}
 N 1960 -1580 1960 -1420 { lab=VINJ}
+N 1830 -1220 1830 -1200 { lab=VGND}
+N 1830 -1220 1900 -1220 { lab=VGND}
+N 1470 -1360 1500 -1360 { lab=GATE1}
+N 2380 -1520 2380 -1430 { lab=OUTPUT}
+N 1870 -1280 1890 -1280 { lab=#net3}
+N 2020 -1330 2040 -1330 { lab=#net4}
+N 1830 -1450 1900 -1450 { lab=#net5}
+N 1960 -1580 2180 -1580 { lab=VINJ}
+N 1900 -1580 1910 -1580 { lab=VINJ}
+N 1830 -1420 1960 -1420 { lab=VINJ}
+N 1910 -1580 1960 -1580 { lab=VINJ}
+N 1830 -1250 1830 -1220 { lab=VGND}
+N 2040 -1330 2160 -1330 { lab=#net4}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 1880 -1510 0 0 {name=M3
 L=0.5
 W=1
@@ -213,7 +212,7 @@ spiceprefix=X
 C {devices/gnd.sym} 2380 -1250 0 0 {name=l1 lab=VGND}
 C {devices/gnd.sym} 2200 -1300 0 0 {name=l2 lab=VGND}
 C {devices/gnd.sym} 2230 -1330 0 0 {name=l7 lab=VGND}
-C {devices/gnd.sym} 1830 -1250 0 0 {name=l8 lab=VGND}
+C {devices/gnd.sym} 1830 -1200 0 0 {name=l8 lab=VGND}
 C {devices/gnd.sym} 1800 -1280 0 0 {name=l9 lab=VGND}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 2000 -1330 0 1 {name=M8
 L=0.5
@@ -248,3 +247,4 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/ipin.sym} 1110 -1320 0 0 {name=GATE4 lab=GATE4}
 C {devices/ipin.sym} 1020 -1320 0 0 {name=GATE5 lab=GATE5}
+C {devices/iopin.sym} 1890 -1220 0 0 {name=p1 lab=VGND}

@@ -327,5 +327,5 @@ C {devices/gnd.sym} 1120 -1050 0 0 {name=l6 lab=VGND}
 C {devices/iopin.sym} 1410 -1770 0 0 {name=COL1 lab=COL1}
 C {devices/iopin.sym} 1450 -1400 0 0 {name=ROW1 lab=ROW2}
 C {devices/iopin.sym} 1460 -1660 0 0 {name=ROW2 lab=ROW1}
-C {devices/gnd.sym} 1740 -1270 0 0 {name=l1 lab=VGND}
-C {devices/iopin.sym} 1740 -1320 0 0 {name=GATE2 lab=VGND}
+C {devices/gnd.sym} 1740 -1270 0 0 {name=l199 lab=VGND}
+C {devices/iopin.sym} 1730 -1320 0 0 {name=pground lab=VGND}
