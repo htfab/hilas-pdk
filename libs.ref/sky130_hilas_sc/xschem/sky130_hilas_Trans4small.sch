@@ -29,6 +29,7 @@ N 1460 -880 1530 -880 { lab=PFET_SOURCE3}
 N 1030 -1110 1110 -1110 { lab=NFET_SOURCE1}
 N 1030 -1000 1110 -1000 { lab=NFET_SOURCE2}
 N 1040 -870 1100 -870 { lab=NFET_SOURCE3}
+N 1210 -1230 1360 -1230 { lab=VGND}
 C {devices/ipin.sym} 960 -1030 0 0 {name=NFET_GATE2 lab=NFET_GATE2}
 C {devices/iopin.sym} 1510 -1150 0 0 {name=WELL lab=WELL}
 C {devices/iopin.sym} 1530 -1000 0 0 {name=PFET_SOURCE2 lab=PFET_SOURCE2}
@@ -135,3 +136,5 @@ C {devices/iopin.sym} 1530 -1060 0 0 {name=PFET_DRAIN2 lab=PFET_DRAIN2}
 C {devices/iopin.sym} 1100 -1000 0 0 {name=NFET_SOURCE2 lab=NFET_SOURCE2}
 C {devices/iopin.sym} 1100 -870 0 0 {name=NFET_SOURCE3 lab=NFET_SOURCE3}
 C {devices/iopin.sym} 1110 -1110 0 0 {name=NFET_SOURCE1 lab=NFET_SOURCE1}
+C {devices/iopin.sym} 1350 -1230 0 0 {name=p1 lab=VGND}
+C {devices/lab_pin.sym} 1210 -1230 0 0 {name=l1 sig_type=std_logic lab=VGND}

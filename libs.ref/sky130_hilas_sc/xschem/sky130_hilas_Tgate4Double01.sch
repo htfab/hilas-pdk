@@ -89,7 +89,6 @@ N 600 -820 820 -820 { lab=SELECT4}
 N 740 -770 820 -770 { lab=#net3}
 N 740 -870 740 -770 { lab=#net3}
 N 740 -740 760 -740 { lab=VGND}
-N 740 -710 740 -690 { lab=VGND}
 N 700 -820 700 -740 { lab=SELECT4}
 N 700 -900 700 -820 { lab=SELECT4}
 N 430 -930 520 -930 { lab=VPWR}
@@ -130,6 +129,8 @@ N 1110 -1150 1140 -1150 { lab=VGND}
 N 1110 -990 1130 -990 { lab=VGND}
 N 430 -1780 430 -930 { lab=VPWR}
 N 420 -1780 430 -1780 { lab=VPWR}
+N 540 -590 740 -590 { lab=VGND}
+N 740 -710 740 -560 { lab=VGND}
 C {devices/ipin.sym} 600 -1370 0 0 {name=SELECT2 lab=SELECT2}
 C {devices/iopin.sym} 420 -1780 0 1 {name=VPWR lab=VPWR}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -1430 0 0 {name=M18
@@ -405,7 +406,7 @@ spiceprefix=X
 }
 C {devices/gnd.sym} 1140 -880 0 0 {name=l9 lab=VGND}
 C {devices/gnd.sym} 1130 -720 0 0 {name=l10 lab=VGND}
-C {devices/gnd.sym} 740 -690 0 0 {name=l11 lab=VGND}
+C {devices/gnd.sym} 740 -560 0 0 {name=l11 lab=VGND}
 C {devices/gnd.sym} 760 -740 0 0 {name=l12 lab=VGND}
 C {devices/ipin.sym} 600 -1090 0 0 {name=SELECT3 lab=SELECT3}
 C {sky130_fd_pr/pfet_01v8.sym} 880 -1150 0 0 {name=M17
@@ -499,3 +500,5 @@ C {devices/gnd.sym} 1140 -1150 0 0 {name=l13 lab=VGND}
 C {devices/gnd.sym} 1130 -990 0 0 {name=l14 lab=VGND}
 C {devices/gnd.sym} 740 -960 0 0 {name=l15 lab=VGND}
 C {devices/gnd.sym} 760 -1010 0 0 {name=l16 lab=VGND}
+C {devices/iopin.sym} 530 -590 0 0 {name=p1 lab=VGND}
+C {devices/lab_pin.sym} 740 -650 0 0 {name=l17 sig_type=std_logic lab=VGND}

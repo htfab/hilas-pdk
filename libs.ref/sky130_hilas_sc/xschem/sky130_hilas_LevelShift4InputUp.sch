@@ -225,6 +225,8 @@ N 2390 -30 2390 10 { lab=#net10}
 N 2380 -350 2380 -310 { lab=#net7}
 N 2390 -670 2390 -630 { lab=#net4}
 N 2380 -990 2380 -950 { lab=#net1}
+N 2090 110 2110 110 {}
+N 2110 110 2110 140 {}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 2140 -1040 0 0 {name=M11
 L=0.5
 W=1
@@ -715,3 +717,5 @@ spiceprefix=X
 }
 C {devices/gnd.sym} 2350 -40 0 0 {name=l32 lab=VGND}
 C {devices/iopin.sym} 2130 -1240 0 1 {name=VINJ lab=VINJ}
+C {devices/gnd.sym} 2110 140 0 0 {name=l33 lab=VGND}
+C {devices/ipin.sym} 2100 110 0 0 {name=VGND lab=VGND}
