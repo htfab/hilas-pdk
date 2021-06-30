@@ -1458,7 +1458,7 @@ def handle_magic(magic_file):
 
 def check_port_pin_mapping():
 
-    for cn, c in cd.standard_cells.items():
+    for cn, c in cd.all_cells.items():
         amp = magic_lib[c.long_name].ports
         try:
             symb = xschem_lib[c.long_name].symbol
