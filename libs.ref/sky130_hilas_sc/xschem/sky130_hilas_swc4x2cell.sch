@@ -682,7 +682,6 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices} 1480 -1480 0 0 {}
 C {devices/iopin.sym} 1420 -1830 0 0 {name=COL2 lab=COL2}
 C {devices/iopin.sym} 1250 -1830 0 0 {name=GATE2 lab=GATE2}
 C {devices/iopin.sym} 1050 -1840 0 0 {name=GATESELECT2 lab=GATESELECT2}

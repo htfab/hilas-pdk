@@ -331,7 +331,6 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices} 980 -1480 0 0 {}
 C {devices/ipin.sym} 430 -1600 0 0 {name=DRAIN1 lab=DRAIN1}
 C {devices/ipin.sym} 20 -1600 0 0 {name=INPUT1 lab=INPUT1}
 C {devices/ipin.sym} 430 -1340 0 0 {name=DRAIN2 lab=DRAIN2}
