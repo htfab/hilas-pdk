@@ -718,4 +718,4 @@ spiceprefix=X
 C {devices/gnd.sym} 2350 -40 0 0 {name=l32 lab=VGND}
 C {devices/iopin.sym} 2130 -1240 0 1 {name=VINJ lab=VINJ}
 C {devices/gnd.sym} 2110 140 0 0 {name=l33 lab=VGND}
-C {devices/ipin.sym} 2100 110 0 0 {name=VGND lab=VGND}
+C {devices/iopin.sym} 2100 110 0 0 {name=VGND lab=VGND}

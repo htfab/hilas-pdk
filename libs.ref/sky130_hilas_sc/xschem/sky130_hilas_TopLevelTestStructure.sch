@@ -468,13 +468,13 @@ N 740 710 760 710 { lab=GeneralGate02}
 N 710 720 780 720 { lab=GeneralGate01}
 N 780 680 780 720 { lab=GeneralGate01}
 N 1500 90 1500 100 { lab=Vdd}
-N -1780 -60 -1780 -30 { lab=GND}
-N -860 360 -860 390 { lab=GND}
-N -860 160 -860 190 { lab=GND}
-N -850 -250 -850 -220 { lab=GND}
-N 90 -640 90 -610 { lab=GND}
-N 430 -370 460 -370 { lab=GND}
-N 430 -60 460 -60 { lab=GND}
+N -1780 -60 -1780 -30 { lab=VGND}
+N -710 370 -710 400 { lab=VGND}
+N -710 170 -710 200 { lab=VGND}
+N -700 -240 -700 -210 { lab=VGND}
+N 240 -630 240 -600 { lab=VGND}
+N 430 -360 460 -360 { lab=VGND}
+N 430 -70 460 -70 { lab=VGND}
 N 440 400 460 400 { lab=GND}
 N 740 500 760 500 { lab=GND}
 N 760 570 760 590 { lab=Vinj}
@@ -490,7 +490,12 @@ N -10 680 -10 690 { lab=GeneralGate02}
 N -30 640 -30 650 { lab=Cap2}
 N 430 630 460 630 { lab=Cap2}
 N 430 630 430 650 { lab=Cap2}
-N 1350 -260 1380 -260 {}
+N 1350 -260 1380 -260 { lab=GND}
+N 460 400 560 440 { lab=GND}
+N -320 -240 -320 -210 { lab=VGND}
+N -320 370 -320 380 { lab=VGND}
+N -710 380 -320 380 { lab=VGND}
+N -710 170 -320 170 { lab=VGND}
 C {sky130_hilas_swc4x2cell.sym} 610 100 0 0 {name=x1}
 C {sky130_hilas_drainSelect01.sym} -320 100 0 0 {name=x2}
 C {sky130_hilas_WTA4Stage01.sym} 610 320 0 0 {name=x3}
@@ -579,14 +584,15 @@ C {devices/iopin.sym} -10 -720 0 1 {name=Dig20 lab=Dig20}
 C {sky130_hilas_pFETLarge.sym} 220 390 0 0 {name=x21}
 C {sky130_hilas_pFETLarge.sym} 220 320 0 0 {name=x22}
 C {sky130_hilas_pFETLarge.sym} 220 250 0 0 {name=x23}
-C {devices/gnd.sym} -1780 -30 0 0 {name=l2 lab=GND}
-C {devices/gnd.sym} -850 -220 0 0 {name=l3 lab=GND}
-C {devices/gnd.sym} -860 190 0 0 {name=l4 lab=GND}
-C {devices/gnd.sym} -860 390 0 0 {name=l5 lab=GND}
-C {devices/gnd.sym} 90 -610 0 0 {name=l6 lab=GND}
-C {devices/gnd.sym} 430 -370 0 0 {name=l7 lab=GND}
-C {devices/gnd.sym} 430 -60 0 0 {name=l8 lab=GND}
+C {devices/gnd.sym} -1780 -30 0 0 {name=l2 lab=VGND}
+C {devices/gnd.sym} -700 -210 0 0 {name=l3 lab=VGND}
+C {devices/gnd.sym} -710 200 0 0 {name=l4 lab=VGND}
+C {devices/gnd.sym} -710 400 0 0 {name=l5 lab=VGND}
+C {devices/gnd.sym} 240 -600 0 0 {name=l6 lab=VGND}
+C {devices/gnd.sym} 430 -360 0 0 {name=l7 lab=VGND}
+C {devices/gnd.sym} 430 -70 0 0 {name=l8 lab=VGND}
 C {devices/gnd.sym} 440 400 0 0 {name=l9 lab=GND}
 C {devices/gnd.sym} 740 500 0 0 {name=l10 lab=GND}
 C {devices/gnd.sym} 840 690 0 0 {name=l11 lab=GND}
 C {devices/gnd.sym} 1380 -260 0 0 {name=l12 lab=GND}
+C {devices/gnd.sym} -320 -210 0 0 {name=l13 lab=VGND}
