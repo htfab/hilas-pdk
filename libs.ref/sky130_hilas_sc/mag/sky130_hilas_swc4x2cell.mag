@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1608303107
+timestamp 1625319526
 << error_s >>
 rect -539 538 -533 544
 rect -434 538 -428 544
@@ -26,7 +26,6 @@ rect 58 419 64 425
 rect 111 419 117 425
 rect 432 421 438 427
 rect 537 421 543 427
-rect -997 408 -990 409
 rect -119 369 -113 375
 rect -54 369 -48 375
 rect 52 369 58 375
@@ -89,15 +88,14 @@ rect 875 -3 891 3
 rect 912 -3 931 3
 rect 956 -3 972 3
 << metal2 >>
-rect -1004 551 -990 552
-rect -1004 533 -997 551
+rect -1004 533 -990 552
 rect 999 533 1008 551
-rect -1004 490 -997 508
+rect -1004 490 -990 509
 rect 999 490 1008 508
-rect -1004 390 -997 409
-rect 1000 390 1009 408
-rect -1004 347 -997 365
-rect 1000 347 1009 365
+rect -1004 390 -989 409
+rect 996 390 1009 408
+rect -1004 347 -991 365
+rect 995 347 1009 365
 rect -1004 232 -997 250
 rect 1000 232 1009 250
 rect -1004 189 -997 207
@@ -107,11 +105,11 @@ rect 1000 90 1009 108
 rect -1004 47 -997 65
 rect 1000 47 1009 65
 use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_0
-timestamp 1608303107
+timestamp 1624818512
 transform 1 0 264 0 1 378
 box -264 -382 744 223
 use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_1
-timestamp 1608303107
+timestamp 1624818512
 transform -1 0 -260 0 1 378
 box -264 -382 744 223
 << labels >>
@@ -154,7 +152,7 @@ rlabel metal1 875 -3 891 3 0 COL2
 port 13 nsew analog default
 rlabel metal1 875 596 891 601 0 COL2
 port 13 nsew analog default
-rlabel space -1004 490 -997 509 0 ROW1
+rlabel metal2 -1004 490 -997 509 0 ROW1
 port 14 nsew analog default
 rlabel metal2 -1004 390 -997 409 0 ROW2
 port 15 nsew analog default
@@ -175,6 +173,7 @@ port 16 nsew analog default
 rlabel metal2 999 490 1008 508 0 ROW1
 port 14 nsew analog default
 rlabel metal2 1000 390 1009 408 0 ROW2
+port 15 nsew
 rlabel metal2 1000 347 1009 365 0 DRAIN2
 port 17 nsew analog default
 rlabel metal2 1000 232 1009 250 0 DRAIN3
@@ -183,6 +182,6 @@ rlabel metal2 1000 189 1009 207 0 ROW3
 port 19 nsew analog default
 rlabel metal2 1000 90 1009 108 0 ROW4
 port 20 nsew analog default
-rlabel metal2 1000 47 1009 65 0 DRAIN2
-port 17 nsew analog default
+rlabel metal2 1000 47 1009 65 0 DRAIN4
+port 21 nsew
 << end >>
