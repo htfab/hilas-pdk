@@ -1,8 +1,18 @@
 magic
 tech sky130A
-timestamp 1625086323
+timestamp 1625425852
+<< error_s >>
+rect -68 -34 -51 -31
 << nwell >>
 rect -83 185 -27 382
+<< psubdiff >>
+rect -74 34 -45 63
+rect -74 17 -68 34
+rect -51 17 -45 34
+rect -74 0 -45 17
+rect -74 -17 -68 0
+rect -51 -17 -45 0
+rect -74 -30 -45 -17
 << nsubdiff >>
 rect -73 298 -45 310
 rect -73 281 -69 298
@@ -11,6 +21,9 @@ rect -73 264 -45 281
 rect -73 247 -69 264
 rect -52 247 -45 264
 rect -73 218 -45 247
+<< psubdiffcont >>
+rect -68 17 -51 34
+rect -68 -17 -51 0
 << nsubdiffcont >>
 rect -69 281 -52 298
 rect -69 247 -52 264
@@ -24,6 +37,9 @@ rect -69 298 -52 306
 rect -69 239 -52 247
 << viali >>
 rect -69 264 -52 281
+rect -68 34 -51 51
+rect -68 0 -51 17
+rect -68 -34 -51 -17
 << metal1 >>
 rect -75 288 -48 305
 rect -77 285 -45 288
@@ -31,12 +47,27 @@ rect -77 259 -74 285
 rect -48 259 -45 285
 rect -77 256 -45 259
 rect -75 238 -48 256
+rect -28 111 -27 134
+rect -74 51 -45 54
+rect -74 34 -68 51
+rect -51 34 -45 51
+rect -74 23 -45 34
+rect -74 -3 -72 23
+rect -46 -3 -45 23
+rect -74 -17 -45 -3
+rect -74 -34 -68 -17
+rect -51 -34 -45 -17
 << via1 >>
 rect -74 281 -48 285
 rect -74 264 -69 281
 rect -69 264 -52 281
 rect -52 264 -48 281
 rect -74 259 -48 264
+rect -72 17 -46 23
+rect -72 0 -68 17
+rect -68 0 -51 17
+rect -51 0 -46 17
+rect -72 -3 -46 0
 << metal2 >>
 rect -380 392 -184 414
 rect -95 400 -27 421
@@ -51,6 +82,12 @@ rect -380 215 -355 237
 rect -380 159 -82 180
 rect -380 119 -82 140
 rect -380 61 -355 83
+rect -75 23 -43 26
+rect -75 -3 -72 23
+rect -46 21 -43 23
+rect -46 0 -27 21
+rect -46 -3 -43 0
+rect -75 -6 -43 -3
 rect -380 -74 -309 -53
 rect -214 -72 -27 -50
 rect -380 -119 -181 -97
@@ -156,4 +193,6 @@ rlabel metal2 -34 -116 -27 -95 0 DRAIN2N
 port 10 nsew analog default
 rlabel nwell -37 261 -27 282 0 WELL
 port 13 nsew
+rlabel metal2 -38 0 -27 21 0 VGND
+port 14 nsew
 << end >>
