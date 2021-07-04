@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1624820198
+timestamp 1625405899
 << error_s >>
 rect -872 485 -866 491
 rect -767 485 -761 491
@@ -35,7 +35,6 @@ rect -1252 10 -1246 16
 rect -1187 10 -1181 16
 rect -878 3 -872 9
 rect -761 3 -755 9
-rect -864 -44 -863 -42
 << nwell >>
 rect -297 547 2238 548
 rect -296 540 2238 547
@@ -47,11 +46,18 @@ rect -297 -56 2238 -51
 rect -104 -57 2238 -56
 << metal1 >>
 rect -1268 534 -1228 548
-rect -862 535 -825 548
+rect -1024 542 -1000 548
+rect -862 540 -825 548
+rect -631 541 -607 548
 rect -392 543 -373 548
 rect -348 543 -332 548
+rect -863 535 -825 540
+rect -864 -44 -863 -42
 rect -1268 -57 -1229 -45
+rect -1024 -57 -1000 -50
 rect -864 -56 -825 -44
+rect -864 -57 -863 -56
+rect -631 -57 -607 -50
 rect -429 -56 -413 -50
 rect -392 -56 -373 -50
 rect -348 -56 -332 -50
@@ -129,34 +135,34 @@ rect -170 22 -119 52
 rect -149 -2 -119 22
 rect 2064 -2 2094 79
 rect -149 -32 2094 -2
+use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_1
+timestamp 1625402619
+transform 1 0 -1040 0 1 325
+box -264 -382 744 223
 use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_0
-timestamp 1623769153
+timestamp 1625402619
 transform 1 0 -1040 0 1 325
 box -264 -382 744 223
 use sky130_hilas_m12m2  sky130_hilas_m12m2_0
 timestamp 1607949437
 transform 1 0 -428 0 1 524
 box -9 -10 23 22
-use sky130_hilas_m22m4  sky130_hilas_m22m4_3
+use sky130_hilas_m22m4  sky130_hilas_m22m4_1
 timestamp 1607701799
-transform 1 0 -197 0 1 52
+transform 1 0 -302 0 1 348
 box -36 -36 43 39
 use sky130_hilas_m22m4  sky130_hilas_m22m4_2
 timestamp 1607701799
 transform 1 0 -306 0 1 139
 box -36 -36 43 39
-use sky130_hilas_m22m4  sky130_hilas_m22m4_1
+use sky130_hilas_m22m4  sky130_hilas_m22m4_3
 timestamp 1607701799
-transform 1 0 -302 0 1 348
+transform 1 0 -197 0 1 52
 box -36 -36 43 39
-use sky130_hilas_m12m2  sky130_hilas_m12m2_0
+use sky130_hilas_m12m2  sky130_hilas_m12m2_1
 timestamp 1607949437
 transform 1 0 -428 0 1 524
 box -9 -10 23 22
-use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_0
-timestamp 1624818512
-transform 1 0 -1040 0 1 325
-box -264 -382 744 223
 << labels >>
 rlabel metal2 2354 222 2366 263 0 CAPTERM2
 port 1 nsew analog default
@@ -171,7 +177,9 @@ port 6 nsew analog default
 rlabel metal1 -1268 534 -1228 548 0 VTUN
 port 5 nsew
 rlabel metal1 -1268 -57 -1229 -45 0 VTUN
+port 5 nsew
 rlabel metal1 -864 -56 -825 -44 0 GATE
+port 6 nsew
 rlabel metal1 -348 -56 -332 -50 0 VINJ
 rlabel metal1 -429 -56 -413 -50 0 CAPTERM1
 rlabel metal1 -392 -56 -373 -50 0 GATESELECT
@@ -191,4 +199,12 @@ rlabel metal2 -1302 179 -1292 196 0 DRAIN3
 port 11 nsew
 rlabel metal2 -1302 -5 -1292 12 0 DRAIN4
 port 10 nsew
+rlabel metal1 -1024 542 -1000 548 0 VGND
+port 12 nsew
+rlabel metal1 -631 541 -607 548 0 VGND
+port 12 nsew
+rlabel metal1 -1024 -57 -1000 -50 0 VGND
+port 12 nsew
+rlabel metal1 -631 -57 -607 -50 0 VGND
+port 12 nsew
 << end >>

@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1625328011
+timestamp 1625360156
 << nwell >>
 rect 663 213 744 505
 << psubdiff >>
@@ -139,18 +139,22 @@ rect 418 392 447 418
 rect 474 392 744 419
 rect 418 391 744 392
 rect 355 385 744 391
-rect 355 379 647 385
-rect 355 314 372 379
-rect 607 368 647 379
+rect 355 368 647 385
 rect 664 368 681 385
 rect 698 368 744 385
-rect 607 350 744 368
+rect 355 350 744 368
+rect 355 335 647 350
+rect 355 334 447 335
+rect 355 315 392 334
+rect 355 314 372 315
 rect 355 307 392 314
+rect 419 315 447 334
 rect 419 308 447 314
-rect 607 333 647 350
+rect 474 333 647 335
 rect 664 333 681 350
 rect 698 333 744 350
-rect 607 314 744 333
+rect 474 315 744 333
+rect 607 314 744 315
 rect 474 308 744 314
 rect 419 307 744 308
 rect 355 284 744 307
@@ -234,33 +238,33 @@ rect 585 90 615 116
 rect 641 90 664 116
 rect 690 90 715 116
 rect 585 57 715 90
-use sky130_hilas_decoup_cap_00  CapDeco_0
-timestamp 1623107852
-transform 1 0 273 0 -1 548
-box 82 -113 390 189
 use sky130_hilas_decoup_cap_00  CapDeco_1
 timestamp 1623107852
 transform 1 0 273 0 1 170
+box 82 -113 390 189
+use sky130_hilas_decoup_cap_00  CapDeco_0
+timestamp 1623107852
+transform 1 0 273 0 -1 548
 box 82 -113 390 189
 << labels >>
 rlabel metal1 355 311 372 407 0 VPWR
 port 1 nsew
 rlabel metal1 727 313 744 407 0 VPWR
 port 1 nsew
-rlabel metal1 734 598 744 661 0 VPWR
+rlabel metal1 734 598 744 661 0 VGND
 port 1 nsew
-rlabel metal1 355 598 363 661 0 VPWR
+rlabel metal1 355 598 363 661 0 VGND
 port 1 nsew
-rlabel metal1 355 57 364 120 0 VPWR
+rlabel metal1 355 57 364 120 0 VGND
 port 1 nsew
-rlabel metal1 729 57 744 120 0 VPWR
+rlabel metal1 729 57 744 120 0 VGND
 port 1 nsew
 rlabel metal2 377 651 507 661 0 VPWR
 port 1 nsew
-rlabel metal2 585 653 715 661 0 GND
+rlabel metal2 585 653 715 661 0 VGND
 port 2 nsew
 rlabel metal2 377 57 507 69 0 VPWR
 port 1 nsew
-rlabel metal2 585 57 715 69 0 GND
+rlabel metal2 585 57 715 69 0 VGND
 port 2 nsew
 << end >>
