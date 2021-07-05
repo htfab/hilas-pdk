@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1624823545
+timestamp 1625491312
 << error_s >>
 rect -1581 672 -1575 678
 rect -1528 672 -1522 678
@@ -35,10 +35,17 @@ rect -1522 208 -1516 214
 rect -1421 208 -1415 214
 rect -1356 208 -1350 214
 << nwell >>
+rect -2617 744 -2286 745
+rect -320 744 -186 745
+rect -2597 713 -2565 743
+rect -370 713 -338 743
 rect 65 727 193 745
 rect 65 140 193 159
 << metal1 >>
-rect -2581 739 -2565 745
+rect -2581 743 -2565 745
+rect -2597 741 -2565 743
+rect -2597 715 -2594 741
+rect -2568 715 -2565 741
 rect -2540 739 -2521 745
 rect -2353 734 -2332 745
 rect -2306 737 -2287 745
@@ -48,17 +55,51 @@ rect -1541 730 -1499 745
 rect -1438 730 -1396 745
 rect -1068 737 -1045 745
 rect -416 737 -397 745
-rect -372 737 -344 745
+rect -372 743 -344 745
+rect -372 741 -338 743
+rect -372 737 -367 741
+rect -1541 716 -1396 730
+rect -2597 713 -2565 715
+rect -370 715 -367 737
+rect -341 715 -338 741
 rect -3 731 31 745
 rect 63 730 91 745
-rect -1541 716 -1396 730
+rect -370 713 -338 715
+rect -156 188 -124 190
+rect -1775 173 -1743 175
 rect -2352 141 -2329 153
+rect -1775 147 -1772 173
+rect -1746 147 -1743 173
+rect -1775 145 -1743 147
+rect -1195 173 -1163 175
+rect -1195 147 -1192 173
+rect -1166 147 -1163 173
+rect -1195 145 -1163 147
+rect -156 162 -153 188
+rect -127 162 -124 188
+rect -156 160 -124 162
+rect -156 159 -2 160
+rect -156 146 31 159
 rect -416 140 -397 145
 rect -372 140 -344 145
-rect -3 140 31 159
+rect -3 140 31 146
 rect 64 140 91 161
+<< via1 >>
+rect -2594 715 -2568 741
+rect -367 715 -341 741
+rect -1772 147 -1746 173
+rect -1192 147 -1166 173
+rect -153 162 -127 188
 << metal2 >>
+rect -2597 741 -2565 743
+rect -2597 715 -2594 741
+rect -2568 731 -2565 741
+rect -370 741 -338 743
+rect -370 731 -367 741
+rect -2568 715 -367 731
+rect -341 715 -338 741
 rect -260 718 -229 742
+rect -2597 713 -338 715
 rect -2617 677 -2609 695
 rect -149 655 -127 657
 rect -154 621 -127 655
@@ -88,22 +129,35 @@ rect -700 262 -113 267
 rect -1137 246 -113 262
 rect -1137 240 -661 246
 rect -2617 190 -2609 208
+rect -156 188 -124 190
+rect -156 175 -153 188
+rect -1775 173 -153 175
+rect -1775 147 -1772 173
+rect -1746 160 -1192 173
+rect -1746 147 -1743 160
+rect -1775 145 -1743 147
+rect -1195 147 -1192 160
+rect -1166 162 -153 173
+rect -127 162 -124 188
+rect -1166 160 -124 162
+rect -1166 147 -1163 160
+rect -1195 145 -1163 147
+use sky130_hilas_FGtrans2x1cell  sky130_hilas_FGtrans2x1cell_0
+timestamp 1625491133
+transform -1 0 -1860 0 1 522
+box -395 -382 757 223
 use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1623844940
+timestamp 1625491133
 transform 1 0 -1077 0 1 522
 box -396 -382 757 223
-use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
-timestamp 1608069483
-transform 1 0 38 0 1 181
-box -172 -22 155 550
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
 timestamp 1608384750
 transform 1 0 -454 0 -1 305
 box 133 -440 320 165
-use sky130_hilas_FGtrans2x1cell  sky130_hilas_FGtrans2x1cell_0
-timestamp 1608384750
-transform -1 0 -1860 0 1 522
-box -395 -382 757 223
+use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
+timestamp 1608069483
+transform 1 0 38 0 1 181
+box -172 -22 155 550
 << labels >>
 rlabel metal1 -3 739 31 745 0 VGND
 port 11 nsew

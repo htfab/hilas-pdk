@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1625490352
+timestamp 1625491133
 << error_s >>
 rect -1580 672 -1574 678
 rect -1527 672 -1521 678
@@ -179,8 +179,12 @@ rect -1169 159 -121 161
 rect -1169 158 -1129 159
 rect -1169 148 -1166 158
 rect -1198 146 -1166 148
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1625491133
+transform 1 0 -1077 0 1 522
+box -396 -382 757 223
 use sky130_hilas_FGBiasWeakGate2x1cell  sky130_hilas_FGBiasWeakGate2x1cell_0
-timestamp 1625488718
+timestamp 1625491133
 transform -1 0 -1859 0 1 522
 box -396 -382 757 223
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
@@ -191,10 +195,6 @@ use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
 timestamp 1608069483
 transform 1 0 38 0 1 181
 box -172 -22 155 550
-use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1625488718
-transform 1 0 -1077 0 1 522
-box -396 -382 757 223
 << labels >>
 rlabel metal2 -1726 617 -1690 636 0 VIN11
 port 2 nsew analog default

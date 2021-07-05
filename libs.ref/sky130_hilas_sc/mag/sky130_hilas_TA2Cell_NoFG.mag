@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1625488718
+timestamp 1625491133
 << error_s >>
 rect -1415 672 -1409 678
 rect -1362 672 -1356 678
@@ -86,6 +86,10 @@ rect -334 278 -318 318
 rect -206 246 0 267
 rect -1473 192 -1465 207
 rect -286 142 -260 167
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1625491133
+transform 1 0 -1077 0 1 522
+box -396 -382 757 223
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_0
 timestamp 1608384750
 transform 1 0 -484 0 1 580
@@ -98,10 +102,6 @@ use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
 timestamp 1608069483
 transform 1 0 164 0 1 181
 box -172 -22 155 550
-use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1625488718
-transform 1 0 -1077 0 1 522
-box -396 -382 757 223
 << labels >>
 rlabel metal1 123 140 157 146 0 VGND
 port 7 nsew ground default
