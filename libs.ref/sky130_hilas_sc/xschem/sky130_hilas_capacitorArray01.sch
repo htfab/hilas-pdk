@@ -199,6 +199,8 @@ N -390 -1380 -140 -1380 { lab=CAPTERM2}
 N -390 -1640 -190 -1640 { lab=CAPTERM2}
 N 200 -1700 260 -1700 { lab=#net12}
 N 260 -1700 260 -1580 { lab=#net12}
+N 240 -1890 280 -1890 {}
+N 240 -1890 240 -1870 {}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 840 -910 0 0 {name=M3
 L=0.5
 W=1
@@ -400,3 +402,5 @@ C {sky130_fd_pr/cap_mim_m3_1.sym} -190 -1670 0 0 {name=C20 model=cap_mim_m3_1 W=
 C {sky130_fd_pr/cap_mim_m3_1.sym} -70 -1670 0 0 {name=C21 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 50 -1670 0 0 {name=C22 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 170 -1670 0 0 {name=C23 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}
+C {devices/iopin.sym} 280 -1890 0 0 {name=VGND lab=VGND}
+C {devices/gnd.sym} 240 -1870 0 0 {name=l1 lab=VGND}

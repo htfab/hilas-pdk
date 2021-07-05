@@ -21,6 +21,11 @@ N 1460 -1120 1540 -1120 { lab=SOURCE1P}
 N 1460 -1000 1530 -1000 { lab=SOURCE2P}
 N 1030 -1110 1110 -1110 { lab=SOURCE1N}
 N 1030 -1000 1110 -1000 { lab=SOURCE2N}
+N 1220 -1030 1220 -950 {}
+N 1050 -1030 1220 -1030 {}
+N 1050 -1140 1230 -1140 {}
+N 1230 -1140 1230 -1030 {}
+N 1220 -1030 1230 -1030 {}
 C {devices/ipin.sym} 960 -1030 0 0 {name=GATE2N lab=GATE2N}
 C {devices/iopin.sym} 1510 -1150 0 0 {name=WELL lab=WELL}
 C {devices/iopin.sym} 1530 -1000 0 0 {name=SOURCE2P lab=SOURCE2P}
@@ -92,3 +97,4 @@ C {devices/iopin.sym} 1540 -1180 0 0 {name=DRAIN1P lab=DRAIN1P}
 C {devices/iopin.sym} 1530 -1060 0 0 {name=DRAIN2P lab=DRAIN2P}
 C {devices/iopin.sym} 1100 -1000 0 0 {name=SOURCE2N lab=SOURCE2N}
 C {devices/iopin.sym} 1110 -1110 0 0 {name=SOURCE1N lab=SOURCE1N}
+C {devices/iopin.sym} 1220 -950 0 0 {name=VGND lab=VGND}

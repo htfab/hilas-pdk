@@ -317,6 +317,8 @@ N 880 -1690 990 -1690 { lab=VINJ}
 N 1170 -1870 1170 -1820 { lab=VTUN}
 N 670 -1870 1170 -1870 { lab=VTUN}
 N 670 -1870 670 -1840 { lab=VTUN}
+N 340 -1780 370 -1780 {}
+N 340 -1780 340 -1730 {}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 840 -910 0 0 {name=M3
 L=0.5
 W=1
@@ -685,3 +687,5 @@ spiceprefix=X
 C {devices/iopin.sym} 1420 -1830 0 0 {name=COL2 lab=COL2}
 C {devices/iopin.sym} 1250 -1830 0 0 {name=GATE2 lab=GATE2}
 C {devices/iopin.sym} 1050 -1840 0 0 {name=GATESELECT2 lab=GATESELECT2}
+C {devices/iopin.sym} 370 -1780 0 0 {name=VGND lab=VGND}
+C {devices/gnd.sym} 340 -1730 0 0 {name=l1 lab=VGND}

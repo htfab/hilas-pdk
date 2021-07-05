@@ -166,6 +166,8 @@ N 520 -1840 550 -1840 { lab=COLSEL1}
 N 900 -1830 920 -1830 { lab=COL1}
 N 670 -1840 670 -1830 { lab=VTUN}
 N 670 -1840 680 -1840 { lab=VTUN}
+N 360 -1760 380 -1760 {}
+N 360 -1760 360 -1730 {}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 840 -910 0 0 {name=M3
 L=0.5
 W=1
@@ -355,3 +357,5 @@ C {devices/iopin.sym} 750 -1830 0 0 {name=GATE1 lab=GATE1}
 C {devices/iopin.sym} 680 -1840 0 0 {name=VTUN lab=VTUN}
 C {devices/iopin.sym} 550 -1840 0 0 {name=COLSEL1 lab=COLSEL1}
 C {devices/iopin.sym} 480 -1850 0 0 {name=VINJ lab=VINJ}
+C {devices/iopin.sym} 380 -1760 0 0 {name=VGND lab=VGND}
+C {devices/gnd.sym} 360 -1730 0 0 {name=l1 lab=VGND}
