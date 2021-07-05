@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1608384750
+timestamp 1625488718
 << error_s >>
 rect -338 150 -332 156
 rect -285 150 -279 156
@@ -105,7 +105,6 @@ rect 661 217 680 223
 rect 661 -382 680 -376
 rect 705 -382 733 223
 << metal2 >>
-rect 484 173 516 175
 rect -396 155 516 173
 rect -217 113 -171 114
 rect -396 97 -171 113
@@ -158,11 +157,11 @@ timestamp 1607089160
 transform 1 0 -188 0 1 101
 box -14 -15 20 18
 use sky130_hilas_horizTransCell01  sky130_hilas_horizTransCell01_1
-timestamp 1607269823
+timestamp 1625488390
 transform 1 0 790 0 -1 270
 box -476 48 -33 359
 use sky130_hilas_horizTransCell01  sky130_hilas_horizTransCell01_0
-timestamp 1607269823
+timestamp 1625488390
 transform 1 0 790 0 1 -429
 box -476 48 -33 359
 use sky130_hilas_m12m2  sky130_hilas_m12m2_1
