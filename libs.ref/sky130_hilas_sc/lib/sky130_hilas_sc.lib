@@ -268,25 +268,10 @@ cell ("sky130_hilas_swc4x2cell") {
     driver_waveform_fall : "ramp";
     driver_waveform_rise : "ramp";
 
-    pg_pin ("VPWR") {
-        pg_type : "primary_power";
-        voltage_name : "VPWR";
-        related_bias_pin : VNB;
-    }
     pg_pin ("VGND") {
         pg_type : "primary_ground";
         voltage_name : "VGND";
         related_bias_pin : VPB;
-    }
-    pg_pin ("VGND") {
-        pg_type : "primary_ground";
-        voltage_name : "VGND";
-        related_bias_pin : VPB;
-    }
-    pg_pin ("VPWR") {
-        pg_type : "primary_power";
-        voltage_name : "VPWR";
-        related_bias_pin : VNB;
     }
     pg_pin ("VPWR") {
         pg_type : "primary_power";
@@ -323,6 +308,36 @@ cell ("sky130_hilas_swc4x2cell") {
         voltage_name : "VGND";
         related_bias_pin : VPB;
     }
+    pg_pin ("VPWR") {
+        pg_type : "primary_power";
+        voltage_name : "VPWR";
+        related_bias_pin : VNB;
+    }
+    pg_pin ("VPWR") {
+        pg_type : "primary_power";
+        voltage_name : "VPWR";
+        related_bias_pin : VNB;
+    }
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
     pg_pin ("VGND") {
         pg_type : "primary_ground";
         voltage_name : "VGND";
@@ -337,11 +352,6 @@ cell ("sky130_hilas_swc4x2cell") {
         pg_type : "primary_power";
         voltage_name : "VPWR";
         related_bias_pin : VNB;
-    }
-    pg_pin ("VGND") {
-        pg_type : "primary_ground";
-        voltage_name : "VGND";
-        related_bias_pin : VPB;
     }
     pg_pin ("VGND") {
         pg_type : "primary_ground";
@@ -485,6 +495,14 @@ cell ("sky130_hilas_swc4x2cell") {
         related_power_pin : "VPWR";
     }
     pin ("ROW4") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN4") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -1020,14 +1038,6 @@ cell ("sky130_hilas_swc4x2cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
-    pin ("OUTPUT") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
     pin ("VINJ") {
         clock : "false";
         direction : "inout";
@@ -1517,6 +1527,22 @@ cell ("sky130_hilas_swc4x2cell") {
         related_power_pin : "VPWR";
     }
     pin ("VTUN") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("INPUT") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -2390,6 +2416,11 @@ cell ("sky130_hilas_swc4x1BiasCell") {
         voltage_name : "VPWR";
         related_bias_pin : VNB;
     }
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
     pg_pin ("VNB") {
         pg_type : "nwell";
         voltage_name : "VNB";
@@ -2523,14 +2554,6 @@ cell ("sky130_hilas_VinjDiodeProtect01") {
         physical_connection : "device_layer"
     }
 
-    pin ("OUTPUT") {
-        clock : "false";
-        direction : "inout";
-        capacitance : 0.002103;
-        max_transition : 1.506103;
-        related_ground_pin : "VGND";
-        related_power_pin : "VPWR";
-    }
     pin ("VINJ") {
         clock : "false";
         direction : "inout";
@@ -2745,6 +2768,11 @@ cell ("sky130_hilas_capacitorArray01") {
     driver_waveform_fall : "ramp";
     driver_waveform_rise : "ramp";
 
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
     pg_pin ("VNB") {
         pg_type : "nwell";
         voltage_name : "VNB";
@@ -3217,11 +3245,6 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         voltage_name : "VGND";
         related_bias_pin : VPB;
     }
-    pg_pin ("VGND") {
-        pg_type : "primary_ground";
-        voltage_name : "VGND";
-        related_bias_pin : VPB;
-    }
     pg_pin ("VPWR") {
         pg_type : "primary_power";
         voltage_name : "VPWR";
@@ -3348,6 +3371,22 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_power_pin : "VPWR";
     }
     pin ("VTUN") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("INPUT") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;
@@ -3757,11 +3796,6 @@ cell ("sky130_hilas_polyresistorGND") {
     driver_waveform_fall : "ramp";
     driver_waveform_rise : "ramp";
 
-    pg_pin ("VGND") {
-        pg_type : "primary_ground";
-        voltage_name : "VGND";
-        related_bias_pin : VPB;
-    }
     pg_pin ("VNB") {
         pg_type : "nwell";
         voltage_name : "VNB";
@@ -3773,6 +3807,22 @@ cell ("sky130_hilas_polyresistorGND") {
         physical_connection : "device_layer"
     }
 
+    pin ("INPUT") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("OUTPUT") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
 }
 
 
@@ -4369,6 +4419,11 @@ cell ("sky130_hilas_cellAttempt01") {
     driver_waveform_fall : "ramp";
     driver_waveform_rise : "ramp";
 
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
     pg_pin ("VNB") {
         pg_type : "nwell";
         voltage_name : "VNB";
@@ -4794,6 +4849,14 @@ cell ("sky130_hilas_FGBias2x1cell") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
+    pin ("VINJ") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
 }
 
 
@@ -4804,6 +4867,11 @@ cell ("sky130_hilas_nFETLarge") {
     driver_waveform_fall : "ramp";
     driver_waveform_rise : "ramp";
 
+    pg_pin ("VGND") {
+        pg_type : "primary_ground";
+        voltage_name : "VGND";
+        related_bias_pin : VPB;
+    }
     pg_pin ("VNB") {
         pg_type : "nwell";
         voltage_name : "VNB";

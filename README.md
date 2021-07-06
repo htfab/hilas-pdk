@@ -353,7 +353,7 @@ Description: None
 
 Height: 6.050
 <br>
-Width: 8.450
+Width: 8.880
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -482,16 +482,16 @@ Width: 12.950
 
 Description: protective ESD diode for VINJ line
 
-Height: 10.020
+Height: 10.870
 <br>
 Width: 28.590
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | OUTPUT               | metal1               | nsew                 |
-| 2                    | INPUT                | metal1               | nsew                 |
+| 2                    | OUTPUT               | metal1               | nsew                 |
 | 3                    | VGND                 | metal2               | nsew                 |
 | 4                    | VINJ                 | metal2               | nsew                 |
+| 5                    | INPUT                | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-VinjInv2"></a>
 ### `sky130_hilas_VinjInv2`
@@ -564,11 +564,12 @@ Width: 36.700
 | 3                    | VINJ                 | metal1               | nsew,power,default   |
 | 4                    | GATESELECT           | metal1               | nsew                 |
 | 5                    | VTUN                 | metal1               | nsew                 |
-| 6                    | GATE                 | metal1               | nsew,analog,default  |
+| 6                    | GATE                 | metal1               | nsew                 |
 | 7                    | DRAIN2               | metal2               | nsew                 |
 | 8                    | DRAIN1               | metal2               | nsew                 |
 | 10                   | DRAIN4               | metal2               | nsew                 |
 | 11                   | DRAIN3               | metal2               | nsew                 |
+| 12                   | VGND                 | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-capacitorSize01"></a>
 ### `sky130_hilas_capacitorSize01`
@@ -652,6 +653,7 @@ Width: 10.080
 | 11                   | ROW4                 | metal2               | nsew                 |
 | 12                   | DRAIN4               | metal2               | nsew                 |
 | 13                   | ROW1                 | metal2               | nsew                 |
+| 14                   | VGND                 | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-drainSelect01"></a>
 ### `sky130_hilas_drainSelect01`
@@ -660,7 +662,7 @@ Description: multiplexor for drain selection for 4 drain lines, pitch matched
 
 Height: 6.050
 <br>
-Width: 5.420
+Width: 5.640
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -690,6 +692,7 @@ Width: 4.370
 | 1                    | GATE                 | metal2               | nsew,analog,default  |
 | 2                    | SOURCE               | metal2               | nsew,analog,default  |
 | 3                    | DRAIN                | metal2               | nsew,analog,default  |
+| 4                    | VGND                 | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-pFETLarge"></a>
 ### `sky130_hilas_pFETLarge`
@@ -724,13 +727,14 @@ Width: 1.190
 
 Description: protective current-limiting resistor to ground
 
-Height: 9.630
+Height: 10.890
 <br>
-Width: 54.920
+Width: 55.470
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | VGND                 | metal1               | nsew                 |
+| 2                    | INPUT                | metal1               | nsew                 |
+| 3                    | OUTPUT               | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-swc4x1BiasCell"></a>
 ### `sky130_hilas_swc4x1BiasCell`
@@ -756,6 +760,7 @@ Width: 10.110
 | 15                   | ROW3                 | metal2               | nsew,analog,default  |
 | 16                   | ROW4                 | metal2               | nsew,analog,default  |
 | 17                   | DRAIN4               | metal2               | nsew,analog,default  |
+| 18                   | VGND                 | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-swc4x1cellOverlap"></a>
 ### `sky130_hilas_swc4x1cellOverlap`
@@ -801,13 +806,14 @@ Width: 20.130
 | 12                   | COL1                 | metal1               | nsew,analog,default  |
 | 13                   | COL2                 | metal1               | nsew,analog,default  |
 | 14                   | ROW1                 | metal2               | nsew,analog,default  |
-| 15                   | ROW2                 | metal2               | nsew,analog,default  |
+| 15                   | ROW2                 | metal2               | nsew                 |
 | 16                   | DRAIN1               | metal2               | nsew,analog,default  |
 | 17                   | DRAIN2               | metal2               | nsew,analog,default  |
 | 18                   | DRAIN3               | metal2               | nsew,analog,default  |
 | 19                   | ROW3                 | metal2               | nsew,analog,default  |
 | 20                   | ROW4                 | metal2               | nsew,analog,default  |
-| 21                   | DRAIN4               | metal2               | nsew,analog,default  |
+| 21                   | DRAIN4               | metal2               | nsew                 |
+| 22                   | VGND                 | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-swc4x2cellOverlap"></a>
 ### `sky130_hilas_swc4x2cellOverlap`
@@ -955,7 +961,7 @@ Description: 2x1 array of transmission gates
 
 Height: 6.050
 <br>
-Width: 5.420
+Width: 5.640
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1087,7 +1093,7 @@ Description: None
 
 Height: 1.590
 <br>
-Width: 5.420
+Width: 5.640
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1225,18 +1231,20 @@ Width: 29.950
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | VTUNVARACTOR01       | metal1               | nsew,analog,default  |
-| 2                    | VARACTORCAP01        | metal1               | nsew,analog,default  |
-| 3                    | OVERLAPCAP01         | metal1               | nsew,analog,default  |
+| 1                    | VTUN                 | metal1               | nsew,analog,default  |
+| 2                    | GATE1                | metal1               | nsew,analog,default  |
+| 3                    | GATE3                | metal1               | nsew,analog,default  |
 | 4                    | VTUNOVERLAP01        | metal1               | nsew,analog,default  |
-| 5                    | VARACTORCAP02        | metal1               | nsew,analog,default  |
-| 6                    | OVERLAPCAP02         | metal1               | nsew,analog,default  |
+| 5                    | GATE2                | metal1               | nsew,analog,default  |
+| 6                    | GATE4                | metal1               | nsew,analog,default  |
 | 7                    | LARGECAPACITOR       | metal1               | nsew,analog,default  |
 | 8                    | VGND                 | metal2               | nsew,ground,default  |
 | 9                    | VINJ                 | metal2               | nsew,power,default   |
 | 10                   | OUTPUT               | metal2               | nsew,analog,default  |
 | 11                   | VREF                 | metal2               | nsew,analog,default  |
-| 12                   | AMPLIFIERBIAS        | metal2               | nsew,analog,default  |
+| 12                   | VBIAS                | metal2               | nsew,analog,default  |
+| 13                   | DRAIN1               | metal2               | nsew                 |
+| 14                   | SOURCE1              | metal2               | nsew                 |
 ## COMPONENT-CELLS
 
 --------------------------------------------------------------------------------------------
@@ -1275,18 +1283,20 @@ Width: 3.530
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | NFET_GATE01          | metal2               | nsew,analog,default  |
-| 2                    | PET_GATE02           | metal2               | nsew,analog,default  |
-| 3                    | PFET_GATE01          | metal2               | nsew,analog,default  |
-| 4                    | NFET_GATE02          | metal2               | nsew,analog,default  |
-| 5                    | PFET_SOURCE1         | metal2               | nsew,analog,default  |
-| 6                    | PFET_SOURCE2         | metal2               | nsew,analog,default  |
-| 7                    | NFET_SOURCE2         | metal2               | nsew,analog,default  |
-| 8                    | NFET_SOURCE1         | metal2               | nsew,analog,default  |
-| 9                    | NFET_DRAIN1          | metal2               | nsew,analog,default  |
-| 10                   | NFET_DRAIN2          | metal2               | nsew,analog,default  |
-| 11                   | PFET_DRAIN01         | metal2               | nsew,analog,default  |
-| 12                   | PFET_DRAIN2          | metal2               | nsew,analog,default  |
+| 1                    | GATE1N               | metal2               | nsew,analog,default  |
+| 2                    | GATE2P               | metal2               | nsew,analog,default  |
+| 3                    | GATE1P               | metal2               | nsew,analog,default  |
+| 4                    | GATE2N               | metal2               | nsew,analog,default  |
+| 5                    | SOURCE1P             | metal2               | nsew,analog,default  |
+| 6                    | SOURCE2P             | metal2               | nsew,analog,default  |
+| 7                    | SOURCE2N             | metal2               | nsew,analog,default  |
+| 8                    | SOURCE1N             | metal2               | nsew,analog,default  |
+| 9                    | DRAIN1N              | metal2               | nsew,analog,default  |
+| 10                   | DRAIN2N              | metal2               | nsew,analog,default  |
+| 11                   | DRAIN1P              | metal2               | nsew,analog,default  |
+| 12                   | DRAIN2P              | metal2               | nsew,analog,default  |
+| 13                   | WELL                 | nwell                | nsew                 |
+| 14                   | VGND                 | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-TunCap01"></a>
 ### `sky130_hilas_TunCap01`
@@ -1343,10 +1353,12 @@ Description: decoupling cap (intended as fill), variant
 
 Height: 6.040
 <br>
-Width: 3.080
+Width: 3.890
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
+| 1                    | VPWR                 | metal2               | nsew                 |
+| 2                    | VGND                 | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-horizPcell01"></a>
 ### `sky130_hilas_horizPcell01`
