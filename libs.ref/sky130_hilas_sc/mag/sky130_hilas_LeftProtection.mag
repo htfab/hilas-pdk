@@ -107,9 +107,9 @@ rlabel metal1 -2063 -4809 -1982 -4419 0 IO36
 port 12 nsew
 rlabel metal1 -2065 -7668 -1984 -7278 0 IO37
 port 13 nsew
-rlabel metal1 -898 27122 -834 27516 0 Pin1
+rlabel metal1 -898 27122 -834 27516 0 PIN1
 port 14 nsew
-rlabel metal1 -898 24264 -834 24658 0 Pin2
+rlabel metal1 -898 24264 -834 24658 0 PIN2
 port 15 nsew
 rlabel metal1 -897 21403 -833 21797 0 PIN3
 rlabel metal1 -898 18545 -834 18939 0 PIN4
