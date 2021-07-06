@@ -877,7 +877,8 @@ class Magic:
 
     def make_lef(self, source):
         result = self.renew(source)
-        result += self.p.run_command('lef write')
+        # result += self.p.run_command('lef write -toplayer -hide')
+        result += self.p.run_command('lef write -toplayer')
         # result += self.p.run_command('lef write')
         return result
 
