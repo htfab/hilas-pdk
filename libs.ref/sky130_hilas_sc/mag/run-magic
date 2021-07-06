@@ -1,3 +1,4 @@
 #!/bin/bash
 
-magic -rcfile "../../../libs.tech/magic/current/sky130A.magicrc" -T "../../../libs.tech/magic/current/sky130A.tech" ${@}
+export PDKPATH="$PWD/../../../"
+magic -rcfile "$PDKPATH/libs.tech/magic/current/sky130A.magicrc" -T "$PDKPATH/libs.tech/magic/current/sky130A.tech" ${@}
