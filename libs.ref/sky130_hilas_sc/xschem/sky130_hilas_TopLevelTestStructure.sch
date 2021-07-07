@@ -503,9 +503,9 @@ N 310 60 310 70 { lab=#net6}
 N 460 100 460 110 { lab=#net5}
 N 760 180 780 180 { lab=VGND}
 N 760 490 760 510 { lab=VGND}
-N -1480 250 -1460 250 {}
-N -1460 340 -1460 380 {}
-N -1480 340 -1460 340 {}
+N -1480 250 -1460 250 { lab=VGND}
+N -1460 340 -1460 380 { lab=VGND}
+N -1480 340 -1460 340 { lab=VGND}
 C {sky130_hilas_swc4x2cell.sym} 610 100 0 0 {name=x1}
 C {sky130_hilas_drainSelect01.sym} -320 100 0 0 {name=x2}
 C {sky130_hilas_WTA4Stage01.sym} 610 320 0 0 {name=x3}
@@ -533,7 +533,7 @@ C {devices/iopin.sym} -40 670 0 1 {name=GateAndCap1 lab=GateAndCap1}
 C {devices/iopin.sym} 1010 670 0 0 {name=GeneralGate01 lab=GeneralGate01}
 C {devices/iopin.sym} 1010 710 0 0 {name=GeneralGate02 lab=GeneralGate02}
 C {devices/iopin.sym} 1130 -440 0 0 {name=OutputTA1 lab=OutputTA1}
-C {devices/iopin.sym} 1020 580 0 0 {name=Vdd lab=Vdd}
+C {devices/iopin.sym} 1020 580 0 0 {name=VPWR lab=VPWR}
 C {devices/iopin.sym} 1020 540 0 0 {name=Gate1 lab=Gate1}
 C {devices/iopin.sym} 1020 500 0 0 {name=Gate2 lab=Gate2}
 C {devices/iopin.sym} -1320 -280 0 0 {name=Drain1p lab=Drain1p}
