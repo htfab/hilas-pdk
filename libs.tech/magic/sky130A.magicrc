@@ -11,9 +11,10 @@ if {[lindex $scalefac 1] < 2} {
 # drc off
 drc euclidean on
 
+
 # Allow override of PDK path from environment variable PDKPATH
 if {[catch {set PDKPATH $env(PDKPATH)}]} {
-    set PDKPATH "/home/bjmuld/work/hilas/fastlane/pdks/sky130A_hilas"
+    set PDKPATH [file normalize [info script]]
 }
 
 # debug output:
