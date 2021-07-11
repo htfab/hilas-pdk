@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1625405026
+timestamp 1625970418
 << nwell >>
 rect -232 -40 110 119
 << mvnmos >>
@@ -169,10 +169,10 @@ rect -59 -4 -54 -2
 rect -28 17 -25 22
 rect 125 17 148 119
 rect 260 31 279 119
-rect 294 69 332 72
-rect 294 52 300 69
-rect 317 52 332 69
-rect 294 48 332 52
+rect 293 74 325 75
+rect 293 48 296 74
+rect 322 48 325 74
+rect 293 47 325 48
 rect -28 0 -13 17
 rect 125 0 128 17
 rect 145 0 148 17
@@ -194,11 +194,21 @@ rect 260 -18 307 -12
 rect 260 -40 279 -18
 << via1 >>
 rect -54 -4 -28 22
+rect 296 69 322 74
+rect 296 52 300 69
+rect 300 52 317 69
+rect 317 52 322 69
+rect 296 48 322 52
 rect 187 17 213 22
 rect 187 0 203 17
 rect 203 0 213 17
 rect 187 -4 213 0
 << metal2 >>
+rect 292 74 326 76
+rect 292 48 296 74
+rect 322 69 326 74
+rect 322 48 336 69
+rect 292 46 336 48
 rect 184 22 216 25
 rect -57 -4 -54 22
 rect -28 17 -25 22
@@ -212,6 +222,4 @@ use sky130_hilas_li2m1  sky130_hilas_li2m1_0
 timestamp 1607179295
 transform 1 0 266 0 1 65
 box -10 -8 13 21
-<< labels >>
-rlabel metal1 327 48 332 72 0 DrainSelect
 << end >>
