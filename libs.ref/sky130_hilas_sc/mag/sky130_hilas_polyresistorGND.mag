@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1625574216
+timestamp 1626100607
 << psubdiff >>
 rect -2715 816 2607 820
 rect -2715 799 -2677 816
@@ -183,11 +183,13 @@ rect -641 833 -600 857
 rect -62 861 43 875
 rect 60 875 73 878
 rect 60 861 174 875
-rect -2716 810 -279 816
-rect -2716 795 -2667 810
-rect -2716 778 -2677 795
+rect -2716 814 -279 816
+rect -2722 810 -279 814
+rect -2722 795 -2667 810
+rect -2722 778 -2677 795
 rect -287 778 -279 810
-rect -2716 775 -279 778
+rect -2722 775 -279 778
+rect -2722 -50 -2681 775
 rect -62 25 174 861
 rect 601 815 2630 816
 rect 595 814 2630 815
@@ -224,4 +226,6 @@ rlabel metal1 -642 983 -404 1022 0 INPUT
 port 2 nsew
 rlabel metal1 -74 -57 174 -30 0 OUTPUT
 port 3 nsew
+rlabel metal1 -2722 -50 -2681 -39 0 VGND
+port 4 nsew
 << end >>
