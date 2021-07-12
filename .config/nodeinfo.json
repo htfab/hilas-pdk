@@ -11,6 +11,6 @@
         "REDISTRIBUTION"
     ],
     "stdcells" : [
-	"sky103_hilas_sc",
+	"sky130_hilas_sc",
     ],
 }
