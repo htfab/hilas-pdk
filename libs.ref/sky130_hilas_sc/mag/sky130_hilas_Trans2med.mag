@@ -1,8 +1,6 @@
 magic
 tech sky130A
-timestamp 1625425852
-<< error_s >>
-rect -68 -34 -51 -31
+timestamp 1626027626
 << nwell >>
 rect -83 185 -27 382
 << psubdiff >>
@@ -57,6 +55,7 @@ rect -46 -3 -45 23
 rect -74 -17 -45 -3
 rect -74 -34 -68 -17
 rect -51 -34 -45 -17
+rect -74 -37 -45 -34
 << via1 >>
 rect -74 281 -48 285
 rect -74 264 -69 281
@@ -76,7 +75,9 @@ rect -210 317 -27 338
 rect -380 314 -353 315
 rect -77 285 -45 288
 rect -77 259 -74 285
-rect -48 259 -45 285
+rect -48 282 -45 285
+rect -48 261 -27 282
+rect -48 259 -45 261
 rect -77 256 -45 259
 rect -380 215 -355 237
 rect -380 159 -82 180
@@ -92,8 +93,6 @@ rect -380 -74 -309 -53
 rect -214 -72 -27 -50
 rect -380 -119 -181 -97
 rect -96 -116 -27 -95
-<< rmetal2 >>
-rect -45 261 -27 282
 use sky130_hilas_m12m2  sky130_hilas_m12m2_1
 timestamp 1607949437
 transform 1 0 -349 0 1 66
@@ -191,8 +190,8 @@ rlabel metal2 -34 -72 -27 -50 0 DRAIN1N
 port 9 nsew analog default
 rlabel metal2 -34 -116 -27 -95 0 DRAIN2N
 port 10 nsew analog default
-rlabel nwell -37 261 -27 282 0 WELL
-port 13 nsew
 rlabel metal2 -38 0 -27 21 0 VGND
 port 14 nsew
+rlabel metal2 -36 261 -27 282 0 WELL
+port 15 nsew
 << end >>
