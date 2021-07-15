@@ -38,6 +38,9 @@ standard-cells:
   description: Top-level cells for use in designs
   ###############################################################################
 
+  TopLevelTestStructure:
+    description: top level test structure
+
   polyresistorGND:
     description: protective current-limiting resistor to ground
 
