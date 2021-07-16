@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1626459754
+timestamp 1626460134
 << error_s >>
 rect 2364 6133 2393 6149
 rect 2443 6133 2472 6149
@@ -208,8 +208,6 @@ rect 6880 4144 6886 4150
 rect 6489 4081 6493 4092
 rect 6489 4067 6490 4078
 rect 6598 4077 6599 4130
-rect 8080 4082 8085 4090
-rect 8066 4068 8071 4076
 rect 6656 4005 6662 4011
 rect 6709 4005 6715 4011
 rect 6821 4005 6827 4011
@@ -3043,7 +3041,7 @@ timestamp 1625970648
 transform -1 0 6601 0 -1 4345
 box 1050 5 1622 610
 use sky130_hilas_TA2Cell_1FG_Strong  sky130_hilas_TA2Cell_1FG_Strong_0
-timestamp 1625491312
+timestamp 1626460134
 transform 1 0 8236 0 1 3936
 box -2617 140 193 745
 use sky130_hilas_TA2Cell_1FG  sky130_hilas_TA2Cell_1FG_0

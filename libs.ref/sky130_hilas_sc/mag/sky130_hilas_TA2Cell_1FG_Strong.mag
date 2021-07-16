@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1625491312
+timestamp 1626460134
 << error_s >>
 rect -1581 672 -1575 678
 rect -1528 672 -1522 678
@@ -74,12 +74,13 @@ rect -1775 145 -1743 147
 rect -1195 173 -1163 175
 rect -1195 147 -1192 173
 rect -1166 147 -1163 173
-rect -1195 145 -1163 147
 rect -156 162 -153 188
 rect -127 162 -124 188
 rect -156 160 -124 162
 rect -156 159 -2 160
-rect -156 146 31 159
+rect -156 154 31 159
+rect -1195 145 -1163 147
+rect -151 146 31 154
 rect -416 140 -397 145
 rect -372 140 -344 145
 rect -3 140 31 146
@@ -142,22 +143,22 @@ rect -127 162 -124 188
 rect -1166 160 -124 162
 rect -1166 147 -1163 160
 rect -1195 145 -1163 147
-use sky130_hilas_FGtrans2x1cell  sky130_hilas_FGtrans2x1cell_0
-timestamp 1625491133
-transform -1 0 -1860 0 1 522
-box -395 -382 757 223
-use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1625491133
-transform 1 0 -1077 0 1 522
-box -396 -382 757 223
-use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
-timestamp 1608384750
-transform 1 0 -454 0 -1 305
-box 133 -440 320 165
 use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
 timestamp 1608069483
 transform 1 0 38 0 1 181
 box -172 -22 155 550
+use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
+timestamp 1608384750
+transform 1 0 -454 0 -1 305
+box 133 -440 320 165
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1625491133
+transform 1 0 -1077 0 1 522
+box -396 -382 757 223
+use sky130_hilas_FGtrans2x1cell  sky130_hilas_FGtrans2x1cell_0
+timestamp 1625491133
+transform -1 0 -1860 0 1 522
+box -395 -382 757 223
 << labels >>
 rlabel metal1 -3 739 31 745 0 VGND
 port 11 nsew
