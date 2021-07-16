@@ -2907,7 +2907,7 @@ rlabel metal2 1379 192 1416 233 0 DRAIN6P
 port 48 nsew
 rlabel metal2 1383 1884 1420 1925 0 DRAIN5P
 port 49 nsew
-rlabel metal2 1383 1980 1420 2021 0 DARIN4P
+rlabel metal2 1383 1980 1420 2021 0 DRAIN4P
 port 50 nsew
 rlabel metal2 1383 2350 1420 2391 0 DRAIN5N
 port 51 nsew
