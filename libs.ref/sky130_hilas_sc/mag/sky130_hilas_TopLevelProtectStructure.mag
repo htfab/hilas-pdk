@@ -963,7 +963,7 @@ rlabel metal1 -15466 -20481 -15341 -20092 0 IO36
 port 19 nsew
 rlabel metal1 -15466 -23339 -15341 -22950 0 IO37
 port 20 nsew
-rlabel metal2 -15139 13873 -14971 14164 0 Vssa1
+rlabel metal2 -15139 13873 -14971 14164 0 VSSA1
 port 21 nsew
 rlabel metal1 -13106 14454 -12717 14571 0 ANALOG10
 port 22 nsew
