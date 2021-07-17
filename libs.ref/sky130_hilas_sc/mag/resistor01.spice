@@ -1,0 +1,7 @@
+* SPICE3 file created from resistor01.ext - technology: sky130A
+
+.option scale=10000u
+
+.subckt resistor01 Term1 Term2 VGND
+R0 Term1 Term2 mrp1 w=42 l=513
+.ends

@@ -1,0 +1,8 @@
+* SPICE3 file created from sky130_hilas_VinjDiodeProtect01.ext - technology: sky130A
+
+.option scale=10000u
+
+.subckt sky130_hilas_VinjDiodeProtect01 OUTPUT  VGND VINJ INPUT
+R0 INPUT OUTPUT  mrp1 w=132 l=581
+C0 OUTPUT  VINJ 8.57fF
+.ends
