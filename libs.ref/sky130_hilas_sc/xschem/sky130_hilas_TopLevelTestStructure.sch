@@ -506,6 +506,7 @@ N 760 490 760 510 { lab=VGND}
 N -1480 250 -1460 250 { lab=VGND}
 N -1460 340 -1460 380 { lab=VGND}
 N -1480 340 -1460 340 { lab=VGND}
+N 960 710 960 720 {}
 C {sky130_hilas_swc4x2cell.sym} 610 100 0 0 {name=x1}
 C {sky130_hilas_drainSelect01.sym} -320 100 0 0 {name=x2}
 C {sky130_hilas_WTA4Stage01.sym} 610 320 0 0 {name=x3}
@@ -571,10 +572,10 @@ C {devices/iopin.sym} -1170 -660 0 1 {name=Dig09 lab=DIG09}
 C {devices/iopin.sym} -1170 -680 0 1 {name=Dig10 lab=DIG10}
 C {devices/iopin.sym} -1170 -700 0 1 {name=Dig11 lab=DIG11}
 C {devices/iopin.sym} -1170 -720 0 1 {name=Dig12 lab=DIG12}
-C {devices/iopin.sym} 1370 -680 0 1 {name=Dig16 lab=DIG16}
-C {devices/iopin.sym} 1370 -700 0 1 {name=Dig15 lab=DIG15}
-C {devices/iopin.sym} 1370 -720 0 1 {name=Dig14 lab=DIG14}
-C {devices/iopin.sym} 1370 -740 0 1 {name=Dig13 lab=DIG13}
+C {devices/iopin.sym} -10 -660 0 1 {name=Dig16 lab=DIG16}
+C {devices/iopin.sym} -10 -680 0 1 {name=Dig15 lab=DIG15}
+C {devices/iopin.sym} -10 -700 0 1 {name=Dig14 lab=DIG14}
+C {devices/iopin.sym} -10 -720 0 1 {name=Dig13 lab=DIG13}
 C {sky130_hilas_LevelShift4InputUp.sym} 240 -700 0 0 {name=x19}
 C {devices/iopin.sym} 1160 330 0 0 {name=Dig21 lab=DIG21}
 C {devices/iopin.sym} 1160 350 0 0 {name=Dig22 lab=DIG22}
@@ -586,10 +587,10 @@ C {devices/iopin.sym} 1260 780 0 1 {name=Dig26 lab=DIG26}
 C {devices/iopin.sym} 1260 760 0 1 {name=Dig27 lab=DIG27}
 C {devices/iopin.sym} 1260 740 0 1 {name=Dig28 lab=DIG28}
 C {devices/iopin.sym} 1260 700 0 1 {name=Dig29 lab=DIG29}
-C {devices/iopin.sym} -10 -660 0 1 {name=Dig17 lab=DIG17}
-C {devices/iopin.sym} -10 -680 0 1 {name=Dig18 lab=DIG18}
-C {devices/iopin.sym} -10 -700 0 1 {name=Dig19 lab=DIG19}
-C {devices/iopin.sym} -10 -720 0 1 {name=Dig20 lab=DIG20}
+C {devices/iopin.sym} 1370 -680 0 1 {name=Dig17 lab=DIG17}
+C {devices/iopin.sym} 1370 -700 0 1 {name=Dig18 lab=DIG18}
+C {devices/iopin.sym} 1370 -720 0 1 {name=Dig19 lab=DIG19}
+C {devices/iopin.sym} 1370 -740 0 1 {name=Dig20 lab=DIG20}
 C {sky130_hilas_pFETLarge.sym} 220 390 0 0 {name=x21}
 C {sky130_hilas_pFETLarge.sym} 220 320 0 0 {name=x22}
 C {sky130_hilas_pFETLarge.sym} 220 250 0 0 {name=x23}
