@@ -46,9 +46,9 @@ rect -143 131 -99 144
 rect -82 131 -76 148
 rect -143 128 -76 131
 << labels >>
-rlabel metal1 -142 171 -133 198 0 Term1
+rlabel metal1 -142 171 -133 198 0 TERM1
 port 1 nsew
-rlabel metal1 494 171 506 201 0 Term2
+rlabel metal1 494 171 506 201 0 TERM2
 port 2 nsew
 rlabel metal1 -143 128 -134 144 0 VGND
 port 3 nsew

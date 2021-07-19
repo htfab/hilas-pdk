@@ -181,12 +181,12 @@ N -1820 110 -1780 110 { lab=GATEANDCAP1}
 N -1820 130 -1780 130 { lab=GATEANDCAP1}
 N -1820 320 -1780 320 { lab=GATEANDCAP1}
 N -1820 440 -1780 440 { lab=GATEANDCAP1}
-N -1440 -310 -1440 510 { lab=WELL}
+N -1440 -310 -1440 510 { lab=VPWR}
 N -1400 -310 -1400 510 { lab=SOURCEP}
 N -1360 -310 -1360 500 { lab=SOURCEN}
-N -1480 -240 -1440 -240 { lab=WELL}
-N -1480 110 -1440 110 { lab=WELL}
-N -1480 460 -1440 460 { lab=WELL}
+N -1480 -240 -1440 -240 { lab=VPWR}
+N -1480 110 -1440 110 { lab=VPWR}
+N -1480 460 -1440 460 { lab=VPWR}
 N -1480 -220 -1400 -220 { lab=SOURCEP}
 N -1480 -200 -1360 -200 { lab=SOURCEN}
 N -1480 -140 -1400 -140 { lab=SOURCEP}
@@ -218,7 +218,7 @@ N -1480 320 -1320 320 { lab=DRAIN6N}
 N -1480 440 -1320 440 { lab=DRAIN6P}
 N -1360 -330 -1360 -310 { lab=SOURCEN}
 N -1400 -360 -1400 -310 { lab=SOURCEP}
-N -1440 -400 -1440 -310 { lab=WELL}
+N -1440 -400 -1440 -310 { lab=VPWR}
 N 410 -640 410 -610 { lab=#net16}
 N 440 270 460 270 { lab=#net24}
 N 440 230 460 230 { lab=#net25}
@@ -550,7 +550,7 @@ C {devices/iopin.sym} -1320 440 0 0 {name=Drain6p lab=DRAIN6P}
 C {devices/iopin.sym} -1320 320 0 0 {name=Drain16n lab=DRAIN6N}
 C {devices/iopin.sym} -1360 -330 0 0 {name=SourceN lab=SOURCEN}
 C {devices/iopin.sym} -1400 -360 0 0 {name=SourceP lab=SOURCEP}
-C {devices/iopin.sym} -1440 -400 0 0 {name=Well lab=WELL}
+C {devices/iopin.sym} -1440 -400 0 0 {name=Well lab=VPWR}
 C {devices/iopin.sym} -150 -610 0 0 {name=DrainOut lab=DRAINOUT}
 C {devices/iopin.sym} 440 80 0 1 {name=RowTerm2 lab=ROWTERM2}
 C {devices/iopin.sym} 1000 180 0 0 {name=Column1 lab=COLUMN1}

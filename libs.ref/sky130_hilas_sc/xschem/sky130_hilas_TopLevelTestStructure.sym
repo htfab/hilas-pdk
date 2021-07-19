@@ -102,7 +102,7 @@ B 5 397.5 237.5 402.5 242.5 {name=DIG03 dir=inout }
 B 5 477.5 237.5 482.5 242.5 {name=DIG02 dir=inout }
 B 5 257.5 237.5 262.5 242.5 {name=DIG01 dir=inout }
 B 5 837.5 67.5 842.5 72.5 {name=OUTPUTTA1 dir=inout }
-B 5 837.5 167.5 842.5 172.5 {name=WELL dir=inout }
+B 5 837.5 167.5 842.5 172.5 {name=VPWR dir=inout }
 B 5 157.5 -52.5 162.5 -47.5 {name=SOURCEP dir=inout }
 B 5 157.5 -32.5 162.5 -27.5 {name=SOURCEN dir=inout }
 B 5 157.5 -12.5 162.5 -7.5 {name=DRAIN1P dir=inout }
@@ -169,7 +169,7 @@ T {DIG03} 285 216 1 1 0.2 0.2 {}
 T {DIG02} 265 216 1 1 0.2 0.2 {}
 T {DIG01} 245 216 1 1 0.2 0.2 {}
 T {OUTPUTTA1} 815 66 0 1 0.2 0.2 {}
-T {WELL} 815 166 0 1 0.2 0.2 {}
+T {VPWR} 815 166 0 1 0.2 0.2 {}
 T {SOURCEP} 225 -54 0 1 0.2 0.2 {}
 T {SOURCEN} 225 -34 0 1 0.2 0.2 {}
 T {DRAIN1P} 225 -14 0 1 0.2 0.2 {}

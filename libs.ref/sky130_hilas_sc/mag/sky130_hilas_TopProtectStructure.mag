@@ -961,7 +961,7 @@ rlabel metal1 -15466 -20481 -15341 -20092 0 IO36
 port 19 nsew
 rlabel metal1 -15466 -23339 -15341 -22950 0 IO37
 port 20 nsew
-rlabel metal2 -15139 13873 -14971 14164 0 Vssa1
+rlabel metal2 -15139 13873 -14971 14164 0 VSSA1
 port 21 nsew
 rlabel metal1 -13106 14454 -12717 14571 0 ANALOG10
 port 22 nsew
@@ -1041,7 +1041,7 @@ rlabel metal2 7215 -23814 7419 -23648 0 LADATAOUT21
 port 56 nsew
 rlabel metal2 7624 -23816 7827 -23650 0 LADATAOUT22
 port 57 nsew
-rlabel space 8039 -23816 8242 -23650 0 LADATAOUT23
+rlabel metal2 8039 -23816 8242 -23650 0 LADATAOUT23
 port 58 nsew
 rlabel metal2 8441 -23816 8644 -23650 0 LADATAOUT24
 port 59 nsew

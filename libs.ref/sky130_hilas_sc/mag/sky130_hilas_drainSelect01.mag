@@ -57,12 +57,12 @@ rlabel metal1 1542 5 1561 12 0 VGND
 port 11 nsew ground default
 rlabel metal1 1542 605 1561 610 0 VGND
 port 11 nsew ground default
-rlabel metal2 1613 91 1618 114 0 SELECT04
+rlabel metal2 1613 91 1618 114 0 SELECT4
 port 12 nsew
-rlabel metal2 1614 208 1622 231 0 SELECT03
+rlabel metal2 1614 208 1622 231 0 SELECT3
 port 13 nsew
-rlabel metal2 1611 384 1622 407 0 SELECT02
+rlabel metal2 1611 384 1622 407 0 SELECT2
 port 14 nsew
-rlabel metal2 1614 501 1622 524 0 SELECT01
+rlabel metal2 1614 501 1622 524 0 SELECT1
 port 15 nsew
 << end >>
