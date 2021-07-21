@@ -1,8 +1,0 @@
-* SPICE3 file created from sky130_hilas_polyresistorGND.ext - technology: sky130A
-
-.option scale=10000u
-
-.subckt sky130_hilas_polyresistorGND INPUT VGND
-R0 INPUT VGND mrp1 w=135 l=599
-C0 m2_n2749_51# VGND 11.38fF **FLOATING
-.ends
