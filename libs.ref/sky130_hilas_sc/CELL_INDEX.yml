@@ -44,9 +44,6 @@ standard-cells:
   TopProtectStructure:
     description: top level test structure with protection (duplicate of TopLevelProtectStructure)
 
-  TopLevelProtectStructure:
-    description: top level test structure with the protection diodes (duplicate of TopProtectStructure)
-
   polyresistorGND:
     description: protective current-limiting resistor to ground
 

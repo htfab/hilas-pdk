@@ -18,7 +18,6 @@
 | [`sky130_hilas_TA2SignalBiasCell`](CELL_DETAILS.md#sky130-hilas-TA2SignalBiasCell) |                                                         |
 | [`sky130_hilas_Tgate4Double01`](CELL_DETAILS.md#sky130-hilas-Tgate4Double01) | 4 double-throw transmission gates                       |
 | [`sky130_hilas_Tgate4Single01`](CELL_DETAILS.md#sky130-hilas-Tgate4Single01) | 4 single-throw transmission gates                       |
-| [`sky130_hilas_TopLevelProtectStructure`](CELL_DETAILS.md#sky130-hilas-TopLevelProtectStructure) | top level test structure with the protection diodes (duplicate of TopProtectStructure) |
 | [`sky130_hilas_TopLevelTextStructure`](CELL_DETAILS.md#sky130-hilas-TopLevelTextStructure) | top level test structure                                |
 | [`sky130_hilas_TopProtectStructure`](CELL_DETAILS.md#sky130-hilas-TopProtectStructure) | top level test structure with protection (duplicate of TopLevelProtectStructure) |
 | [`sky130_hilas_Trans4small`](CELL_DETAILS.md#sky130-hilas-Trans4small) | 3 small nFETs + 3 small pFETs                           |

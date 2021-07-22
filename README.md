@@ -63,7 +63,6 @@ idea to start by taking a look at the [Fastlane Page](https://gitlab.com/um-ece/
 | [`sky130_hilas_TA2SignalBiasCell`](#sky130-hilas-TA2SignalBiasCell) |                                                         |
 | [`sky130_hilas_Tgate4Double01`](#sky130-hilas-Tgate4Double01) | 4 double-throw transmission gates                       |
 | [`sky130_hilas_Tgate4Single01`](#sky130-hilas-Tgate4Single01) | 4 single-throw transmission gates                       |
-| [`sky130_hilas_TopLevelProtectStructure`](#sky130-hilas-TopLevelProtectStructure) | top level test structure with the protection diodes (duplicate of TopProtectStructure) |
 | [`sky130_hilas_TopLevelTextStructure`](#sky130-hilas-TopLevelTextStructure) | top level test structure                                |
 | [`sky130_hilas_TopProtectStructure`](#sky130-hilas-TopProtectStructure) | top level test structure with protection (duplicate of TopLevelProtectStructure) |
 | [`sky130_hilas_Trans4small`](#sky130-hilas-Trans4small) | 3 small nFETs + 3 small pFETs                           |
@@ -426,81 +425,6 @@ Width: 4.760
 | 12                   | OUTPUT2              | metal2               | nsew,analog,default  |
 | 13                   | OUTPUT3              | metal2               | nsew,analog,default  |
 | 14                   | OUTPUT4              | metal2               | nsew,analog,default  |
---------------------------------------------------------------------------------------------
-<a name="sky130-hilas-TopLevelProtectStructure"></a>
-### `sky130_hilas_TopLevelProtectStructure`
-
-Description: top level test structure with the protection diodes (duplicate of TopProtectStructure)
-
-Height: 389.100
-<br>
-Width: 372.850
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | IO07                 | metal1               | nsew                 |
-| 2                    | IO08                 | metal1               | nsew                 |
-| 3                    | IO09                 | metal1               | nsew                 |
-| 4                    | IO10                 | metal1               | nsew                 |
-| 5                    | IO11                 | metal1               | nsew                 |
-| 6                    | IO12                 | metal1               | nsew                 |
-| 7                    | IO13                 | metal1               | nsew                 |
-| 8                    | IO25                 | metal1               | nsew                 |
-| 9                    | IO26                 | metal1               | nsew                 |
-| 10                   | IO27                 | metal1               | nsew                 |
-| 11                   | IO28                 | metal1               | nsew                 |
-| 12                   | IO29                 | metal1               | nsew                 |
-| 13                   | IO30                 | metal1               | nsew                 |
-| 14                   | IO31                 | metal1               | nsew                 |
-| 15                   | IO32                 | metal1               | nsew                 |
-| 16                   | IO33                 | metal1               | nsew                 |
-| 17                   | IO34                 | metal1               | nsew                 |
-| 18                   | IO35                 | metal1               | nsew                 |
-| 19                   | IO36                 | metal1               | nsew                 |
-| 20                   | IO37                 | metal1               | nsew                 |
-| 22                   | ANALOG10             | metal1               | nsew                 |
-| 23                   | ANALOG09             | metal1               | nsew                 |
-| 24                   | ANALOG08             | metal1               | nsew                 |
-| 25                   | ANALOG07             | metal1               | nsew                 |
-| 26                   | ANALOG06             | metal1               | nsew                 |
-| 27                   | ANALOG05             | metal1               | nsew                 |
-| 28                   | ANALOG04             | metal1               | nsew                 |
-| 29                   | ANALOG03             | metal1               | nsew                 |
-| 30                   | ANALOG02             | metal1               | nsew                 |
-| 31                   | ANALOG01             | metal1               | nsew                 |
-| 32                   | ANALOG00             | metal1               | nsew                 |
-| 33                   | VSSA1                | metal2               | nsew                 |
-| 34                   | VDDA1                | metal2               | nsew                 |
-| 35                   | LADATAOUT01          | metal2               | nsew                 |
-| 36                   | LADATAOUT00          | metal2               | nsew                 |
-| 37                   | LADATAOUT02          | metal2               | nsew                 |
-| 38                   | LADATAOUT03          | metal2               | nsew                 |
-| 39                   | LADATAOUT04          | metal2               | nsew                 |
-| 40                   | LADATAOUT05          | metal2               | nsew                 |
-| 41                   | LADATAOUT06          | metal2               | nsew                 |
-| 42                   | LADATAOUT07          | metal2               | nsew                 |
-| 43                   | LADATAOUT08          | metal2               | nsew                 |
-| 44                   | LADATAOUT09          | metal2               | nsew                 |
-| 45                   | LADATAOUT10          | metal2               | nsew                 |
-| 46                   | LADATAOUT11          | metal2               | nsew                 |
-| 47                   | LADATAOUT12          | metal2               | nsew                 |
-| 48                   | LADATAOUT13          | metal2               | nsew                 |
-| 49                   | LADATAOUT14          | metal2               | nsew                 |
-| 50                   | LADATAOUT15          | metal2               | nsew                 |
-| 51                   | LADATA16             | metal2               | nsew                 |
-| 52                   | LADATAOUT17          | metal2               | nsew                 |
-| 53                   | LADATAOUT18          | metal2               | nsew                 |
-| 54                   | LADATAOUT19          | metal2               | nsew                 |
-| 55                   | LADATAOUT20          | metal2               | nsew                 |
-| 56                   | LADATAOUT21          | metal2               | nsew                 |
-| 57                   | LADATAOUT22          | metal2               | nsew                 |
-| 58                   | LADATAOUT23          | metal2               | nsew                 |
-| 59                   | LADATAOUT24          | metal2               | nsew                 |
-| 60                   | LADATAIN00           | metal2               | nsew                 |
-| 61                   | LADATAIN01           | metal2               | nsew                 |
-| 62                   | LADATAIN02           | metal2               | nsew                 |
-| 63                   | LADATAIN03           | metal2               | nsew                 |
-| 64                   | VCCA                 | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-TopLevelTextStructure"></a>
 ### `sky130_hilas_TopLevelTextStructure`
