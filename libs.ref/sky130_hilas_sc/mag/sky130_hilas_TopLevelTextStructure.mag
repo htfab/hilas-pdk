@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1626570174
+timestamp 1626912190
 << error_s >>
 rect 2364 6133 2393 6149
 rect 2443 6133 2472 6149
@@ -3155,14 +3155,14 @@ use sky130_hilas_drainSelect01  sky130_hilas_drainSelect01_1
 timestamp 1625970648
 transform -1 0 6601 0 -1 4345
 box 1050 5 1622 610
-use sky130_hilas_TA2Cell_1FG_Strong  sky130_hilas_TA2Cell_1FG_Strong_0
-timestamp 1626460134
-transform 1 0 8236 0 1 3936
-box -2617 140 193 745
 use sky130_hilas_TA2Cell_1FG  sky130_hilas_TA2Cell_1FG_0
 timestamp 1625491133
 transform 1 0 8236 0 1 3333
 box -2616 140 193 745
+use sky130_hilas_TA2Cell_1FG_Strong  sky130_hilas_TA2Cell_1FG_Strong_0
+timestamp 1626460134
+transform 1 0 8236 0 1 3936
+box -2617 140 193 745
 use sky130_hilas_Tgate4Single01  sky130_hilas_Tgate4Single01_0
 timestamp 1608226321
 transform 1 0 10780 0 1 3947
