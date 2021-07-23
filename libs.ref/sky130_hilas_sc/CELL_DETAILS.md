@@ -101,9 +101,9 @@ Width: 11.520
 
 Description: 4-channel level shifter
 
-Height: 6.240
+Height: 6.640
 <br>
-Width: 8.800
+Width: 8.990
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -137,9 +137,9 @@ Width: 8.800
 Description: Two transimpedance amps with one (of two) amplifiers using floating-gate
   inputs. FG amplifier with wide linear range.
 
-Height: 6.050
+Height: 9.870
 <br>
-Width: 28.090
+Width: 32.060
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -165,9 +165,9 @@ Width: 28.090
 
 Description: Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with normal linear range.
 
-Height: 6.050
+Height: 9.870
 <br>
-Width: 28.100
+Width: 32.050
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -195,7 +195,7 @@ Width: 28.100
 
 Description: Two transimpedane amplifiers with no floating-gate inputs.
 
-Height: 6.050
+Height: 9.870
 <br>
 Width: 17.920
 
@@ -299,7 +299,7 @@ Width: 4.760
 
 Description: top level test structure
 
-Height: 75.780
+Height: 78.160
 <br>
 Width: 130.250
 
@@ -543,9 +543,9 @@ Width: 6.880
 
 Description: 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one nFET transistor current source.
 
-Height: 6.050
+Height: 9.870
 <br>
-Width: 14.170
+Width: 16.240
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -574,7 +574,7 @@ Width: 14.170
 
 Description: selectable capacitor array
 
-Height: 6.050
+Height: 9.870
 <br>
 Width: 36.700
 
@@ -720,9 +720,9 @@ Width: 4.370
 
 Description: Single Large (W/L=100) pFET Transistor
 
-Height: 5.990
+Height: 6.100
 <br>
-Width: 4.640
+Width: 5.390
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -813,9 +813,9 @@ Width: 9.350
 
 Description: 4x2 array of FG switch cell, Varactor capacitor cell
 
-Height: 6.050
+Height: 9.870
 <br>
-Width: 20.130
+Width: 25.400
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -842,9 +842,9 @@ Width: 20.130
 
 Description: Core switch cell, built with overlap capacitor
 
-Height: 6.050
+Height: 9.870
 <br>
-Width: 17.980
+Width: 21.790
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1125,9 +1125,9 @@ Width: 5.680
 
 Description: None
 
-Height: 12.030
+Height: 15.890
 <br>
-Width: 34.090
+Width: 34.950
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1299,9 +1299,9 @@ Width: 6.140
 
 Description: None
 
-Height: 5.950
+Height: 6.170
 <br>
-Width: 3.530
+Width: 4.400
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|

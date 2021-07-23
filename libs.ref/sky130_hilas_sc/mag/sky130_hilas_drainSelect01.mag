@@ -1,68 +1,72 @@
 magic
 tech sky130A
-timestamp 1625970648
+timestamp 1627061426
 << metal1 >>
-rect 1108 603 1133 610
-rect 1407 603 1430 610
-rect 1542 605 1561 610
-rect 1407 5 1430 13
-rect 1542 5 1561 12
+rect 58 598 83 605
+rect 357 598 380 605
+rect 492 600 511 605
+rect 357 0 380 8
+rect 492 0 511 7
 << metal2 >>
-rect 1055 559 1180 560
-rect 1055 543 1249 559
-rect 1055 542 1180 543
-rect 1614 501 1622 524
-rect 1611 384 1622 407
-rect 1055 372 1174 374
-rect 1055 356 1246 372
-rect 1055 258 1107 259
-rect 1055 257 1177 258
-rect 1055 241 1250 257
-rect 1614 208 1622 231
-rect 1613 91 1622 114
-rect 1055 74 1107 75
-rect 1055 57 1253 74
-use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_2
+rect 5 554 130 555
+rect 5 538 199 554
+rect 5 537 130 538
+rect 564 496 572 519
+rect 561 379 572 402
+rect 5 367 124 369
+rect 5 351 196 367
+rect 5 253 57 254
+rect 5 252 127 253
+rect 5 236 200 252
+rect 564 203 572 226
+rect 563 86 572 109
+rect 5 69 57 70
+rect 5 52 203 69
+use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_0
 timestamp 1625970418
-transform 1 0 1282 0 1 45
-box -232 -40 336 119
-use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_1
-timestamp 1625970418
-transform 1 0 1282 0 -1 570
+transform 1 0 232 0 1 333
 box -232 -40 336 119
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_3
 timestamp 1625970418
-transform 1 0 1282 0 -1 277
+transform 1 0 232 0 -1 272
 box -232 -40 336 119
-use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_0
+use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_1
 timestamp 1625970418
-transform 1 0 1282 0 1 338
+transform 1 0 232 0 -1 565
+box -232 -40 336 119
+use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_2
+timestamp 1625970418
+transform 1 0 232 0 1 40
 box -232 -40 336 119
 << labels >>
-rlabel metal2 1107 542 1112 560 0 DRAIN1
+rlabel metal2 57 537 62 555 0 DRAIN1
 port 4 nsew analog default
-rlabel metal2 1107 356 1112 374 0 DRAIN2
+rlabel metal2 57 351 62 369 0 DRAIN2
 port 3 nsew analog default
-rlabel metal2 1107 241 1112 258 0 DRAIN3
+rlabel metal2 57 236 62 253 0 DRAIN3
 port 2 nsew
-rlabel metal2 1107 57 1112 74 0 DRAIN4
+rlabel metal2 57 52 62 69 0 DRAIN4
 port 1 nsew
-rlabel metal1 1108 603 1133 610 0 VINJ
+rlabel metal1 58 598 83 605 0 VINJ
 port 9 nsew power default
-rlabel metal1 1407 603 1430 610 0 DRAIN_MUX
+rlabel metal1 357 598 380 605 0 DRAIN_MUX
 port 10 nsew analog default
-rlabel metal1 1407 5 1430 13 0 DRAIN_MUX
+rlabel metal1 357 0 380 8 0 DRAIN_MUX
 port 10 nsew analog default
-rlabel metal1 1542 5 1561 12 0 VGND
+rlabel metal1 492 0 511 7 0 VGND
 port 11 nsew ground default
-rlabel metal1 1542 605 1561 610 0 VGND
+rlabel metal1 492 600 511 605 0 VGND
 port 11 nsew ground default
-rlabel metal2 1613 91 1618 114 0 SELECT4
+rlabel metal2 563 86 568 109 0 SELECT4
 port 12 nsew
-rlabel metal2 1614 208 1622 231 0 SELECT3
+rlabel metal2 564 203 572 226 0 SELECT3
 port 13 nsew
-rlabel metal2 1611 384 1622 407 0 SELECT2
+rlabel metal2 561 379 572 402 0 SELECT2
 port 14 nsew
-rlabel metal2 1614 501 1622 524 0 SELECT1
+rlabel metal2 564 496 572 519 0 SELECT1
 port 15 nsew
+<< properties >>
+string LEFclass CORE
+string LEFsite unithd
+string LEFsymmetry X Y R90
 << end >>

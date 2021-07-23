@@ -1,112 +1,116 @@
 magic
 tech sky130A
-timestamp 1624113415
+timestamp 1627063084
 << nwell >>
-rect 19 -40 270 119
+rect 0 -80 251 79
 << mvpmos >>
-rect 84 55 134 86
-rect 155 -7 205 24
+rect 65 15 115 46
+rect 136 -47 186 -16
 << mvpdiff >>
-rect 53 79 84 86
-rect 53 62 61 79
-rect 78 62 84 79
-rect 53 55 84 62
-rect 134 80 168 86
-rect 134 63 140 80
-rect 157 63 168 80
-rect 134 55 168 63
-rect 124 16 155 24
-rect 124 -1 130 16
-rect 148 -1 155 16
-rect 124 -7 155 -1
-rect 205 18 237 24
-rect 205 1 211 18
-rect 229 1 237 18
-rect 205 -7 237 1
+rect 34 39 65 46
+rect 34 22 42 39
+rect 59 22 65 39
+rect 34 15 65 22
+rect 115 40 149 46
+rect 115 23 121 40
+rect 138 23 149 40
+rect 115 15 149 23
+rect 105 -24 136 -16
+rect 105 -41 111 -24
+rect 129 -41 136 -24
+rect 105 -47 136 -41
+rect 186 -22 218 -16
+rect 186 -39 192 -22
+rect 210 -39 218 -22
+rect 186 -47 218 -39
 << mvpdiffc >>
-rect 61 62 78 79
-rect 140 63 157 80
-rect 130 -1 148 16
-rect 211 1 229 18
+rect 42 22 59 39
+rect 121 23 138 40
+rect 111 -41 129 -24
+rect 192 -39 210 -22
 << mvnsubdiff >>
-rect 54 16 124 24
-rect 54 -1 80 16
-rect 97 -1 124 16
-rect 54 -7 124 -1
+rect 35 -24 105 -16
+rect 35 -41 61 -24
+rect 78 -41 105 -24
+rect 35 -47 105 -41
 << mvnsubdiffcont >>
-rect 80 -1 97 16
+rect 61 -41 78 -24
 << poly >>
-rect 84 88 255 104
-rect 84 86 134 88
-rect 228 60 255 88
-rect 84 40 134 55
-rect 228 43 233 60
-rect 250 43 255 60
-rect 155 24 205 39
-rect 228 35 255 43
-rect 155 -10 205 -7
-rect 155 -25 285 -10
+rect 65 48 236 64
+rect 65 46 115 48
+rect 209 20 236 48
+rect 65 0 115 15
+rect 209 3 214 20
+rect 231 3 236 20
+rect 136 -16 186 -1
+rect 209 -5 236 3
+rect 136 -50 186 -47
+rect 136 -65 266 -50
 << polycont >>
-rect 233 43 250 60
+rect 214 3 231 20
 << locali >>
-rect 147 87 370 95
-rect 147 80 164 87
-rect 53 62 61 79
-rect 78 62 86 79
-rect 132 63 140 80
-rect 157 70 164 80
-rect 181 78 370 87
-rect 181 70 192 78
-rect 157 63 192 70
-rect 60 52 78 62
-rect 77 35 78 52
-rect 60 17 78 35
-rect 225 43 233 60
-rect 250 43 258 60
-rect 225 18 250 43
-rect 77 16 78 17
-rect 77 0 80 16
-rect 60 -1 80 0
-rect 97 -1 130 16
-rect 148 -1 156 16
-rect 203 1 211 18
-rect 229 8 250 18
-rect 229 7 267 8
-rect 229 1 285 7
-rect 211 -10 285 1
+rect 128 47 351 55
+rect 128 40 145 47
+rect 34 22 42 39
+rect 59 22 67 39
+rect 113 23 121 40
+rect 138 30 145 40
+rect 162 38 351 47
+rect 162 30 173 38
+rect 138 23 173 30
+rect 41 12 59 22
+rect 58 -5 59 12
+rect 41 -23 59 -5
+rect 206 3 214 20
+rect 231 3 239 20
+rect 206 -22 231 3
+rect 58 -24 59 -23
+rect 58 -40 61 -24
+rect 41 -41 61 -40
+rect 78 -41 111 -24
+rect 129 -41 137 -24
+rect 184 -39 192 -22
+rect 210 -32 231 -22
+rect 210 -33 248 -32
+rect 210 -39 266 -33
+rect 192 -50 266 -39
 << viali >>
-rect 164 70 181 87
-rect 60 35 77 52
-rect 60 0 77 17
+rect 145 30 162 47
+rect 41 -5 58 12
+rect 41 -40 58 -23
 << metal1 >>
-rect 53 52 82 119
-rect 157 92 189 95
-rect 157 66 160 92
-rect 186 66 189 92
-rect 157 65 189 66
-rect 53 35 60 52
-rect 77 35 82 52
-rect 53 17 82 35
-rect 53 0 60 17
-rect 77 0 82 17
-rect 53 -40 82 0
+rect 34 12 63 79
+rect 138 52 170 55
+rect 138 26 141 52
+rect 167 26 170 52
+rect 138 25 170 26
+rect 34 -5 41 12
+rect 58 -5 63 12
+rect 34 -23 63 -5
+rect 34 -40 41 -23
+rect 58 -40 63 -23
+rect 34 -80 63 -40
 << via1 >>
-rect 160 87 186 92
-rect 160 70 164 87
-rect 164 70 181 87
-rect 181 70 186 87
-rect 160 66 186 70
+rect 141 47 167 52
+rect 141 30 145 47
+rect 145 30 162 47
+rect 162 30 167 47
+rect 141 26 167 30
 << metal2 >>
-rect 157 87 160 92
-rect 26 67 160 87
-rect 157 66 160 67
-rect 186 66 189 92
+rect 138 47 141 52
+rect 7 27 141 47
+rect 138 26 141 27
+rect 167 26 170 52
 use sky130_hilas_StepUpDigitalPart1  StepUpDigitalPart1_0
 timestamp 1624113415
-transform 1 0 7 0 1 0
+transform 1 0 -12 0 1 -40
 box 278 -40 892 119
 << labels >>
-rlabel metal2 26 67 33 87 0 Output
-rlabel metal1 53 111 82 119 0 Vinj
-rlabel metal1 53 -40 82 -32 0 Vinj
+rlabel metal2 7 27 14 47 0 Output
+rlabel metal1 34 71 63 79 0 Vinj
+rlabel metal1 34 -80 63 -72 0 Vinj
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>
