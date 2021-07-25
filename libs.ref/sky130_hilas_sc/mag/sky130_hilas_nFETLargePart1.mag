@@ -1,24 +1,24 @@
 magic
 tech sky130A
-timestamp 1627218289
-use sky130_hilas_nFETmed  sky130_hilas_nFETmed_2
-timestamp 1627218289
-transform 1 0 12 0 1 13
-box -12 -44 70 228
-use sky130_hilas_nFETmed  sky130_hilas_nFETmed_1
-timestamp 1627218289
-transform 1 0 -43 0 1 13
-box -12 -44 70 228
-use sky130_hilas_nFETmed  sky130_hilas_nFETmed_0
-timestamp 1627218289
-transform 1 0 -98 0 1 13
+timestamp 1627255200
+use sky130_hilas_nFETmed  sky130_hilas_nFETmed_3
+timestamp 1627255200
+transform 1 0 67 0 1 13
 box -12 -44 70 228
 use sky130_hilas_nFETmed  sky130_hilas_nFETmed_4
-timestamp 1627218289
+timestamp 1627255200
 transform 1 0 -153 0 1 13
 box -12 -44 70 228
-use sky130_hilas_nFETmed  sky130_hilas_nFETmed_3
-timestamp 1627218289
-transform 1 0 67 0 1 13
+use sky130_hilas_nFETmed  sky130_hilas_nFETmed_0
+timestamp 1627255200
+transform 1 0 -98 0 1 13
+box -12 -44 70 228
+use sky130_hilas_nFETmed  sky130_hilas_nFETmed_1
+timestamp 1627255200
+transform 1 0 -43 0 1 13
+box -12 -44 70 228
+use sky130_hilas_nFETmed  sky130_hilas_nFETmed_2
+timestamp 1627255200
+transform 1 0 12 0 1 13
 box -12 -44 70 228
 << end >>

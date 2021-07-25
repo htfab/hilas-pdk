@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1627248563
+timestamp 1627255200
 << nwell >>
 rect -251 -102 25 -29
 rect -251 -119 -52 -102
@@ -66,24 +66,24 @@ rect -263 -72 -202 -52
 rect -176 -150 -64 -149
 rect -263 -170 -64 -150
 rect -176 -171 -64 -170
-use sky130_hilas_poly2m1  sky130_hilas_poly2m1_0
-timestamp 1607270135
-transform 1 0 -236 0 1 -65
-box -9 -26 24 25
-use sky130_hilas_TgateSingle01Part1  sky130_hilas_TgateSingle01Part1_0
-timestamp 1627219133
-transform 1 0 -232 0 1 0
-box 257 -181 445 -29
-use sky130_hilas_TgateSingle01Part2  sky130_hilas_TgateSingle01Part2_0
-timestamp 1627219133
-transform 1 0 -71 0 1 0
-box -67 -181 96 -38
-use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1627219129
-transform 1 0 -225 0 1 -62
-box -9 -10 23 22
 use sky130_hilas_li2m1  sky130_hilas_li2m1_2
-timestamp 1627219129
+timestamp 1627255200
 transform 1 0 -180 0 1 -86
 box -10 -8 13 21
+use sky130_hilas_m12m2  sky130_hilas_m12m2_0
+timestamp 1627255200
+transform 1 0 -225 0 1 -62
+box -9 -10 23 22
+use sky130_hilas_TgateSingle01Part2  sky130_hilas_TgateSingle01Part2_0
+timestamp 1627255200
+transform 1 0 -71 0 1 0
+box -67 -181 96 -38
+use sky130_hilas_TgateSingle01Part1  sky130_hilas_TgateSingle01Part1_0
+timestamp 1627255200
+transform 1 0 -232 0 1 0
+box 257 -181 445 -29
+use sky130_hilas_poly2m1  sky130_hilas_poly2m1_0
+timestamp 1627255200
+transform 1 0 -236 0 1 -65
+box -9 -26 24 25
 << end >>

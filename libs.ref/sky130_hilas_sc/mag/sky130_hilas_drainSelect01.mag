@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1627219133
+timestamp 1627255200
 << metal1 >>
 rect 1108 603 1133 610
 rect 1407 603 1430 610
@@ -22,21 +22,21 @@ rect 1614 208 1622 231
 rect 1613 91 1622 114
 rect 1055 74 1107 75
 rect 1055 57 1253 74
-use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_2
-timestamp 1627219133
-transform 1 0 1282 0 1 45
-box -232 -40 336 119
-use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_1
-timestamp 1627219133
-transform 1 0 1282 0 -1 570
+use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_0
+timestamp 1627255200
+transform 1 0 1282 0 1 338
 box -232 -40 336 119
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_3
-timestamp 1627219133
+timestamp 1627255200
 transform 1 0 1282 0 -1 277
 box -232 -40 336 119
-use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_0
-timestamp 1627219133
-transform 1 0 1282 0 1 338
+use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_1
+timestamp 1627255200
+transform 1 0 1282 0 -1 570
+box -232 -40 336 119
+use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_2
+timestamp 1627255200
+transform 1 0 1282 0 1 45
 box -232 -40 336 119
 << labels >>
 rlabel metal2 1107 542 1112 560 0 DRAIN1
