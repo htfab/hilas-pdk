@@ -1,36 +1,20 @@
 magic
 tech sky130A
-timestamp 1624113741
-<< metal1 >>
-rect 4 517 33 522
-rect 445 515 476 522
-rect 746 517 770 522
-rect 4 -102 33 -97
-rect 445 -102 476 -96
-rect 746 -102 770 -97
-<< metal2 >>
-rect -30 470 -19 490
-rect 841 372 850 404
-rect -30 315 -19 335
-rect 841 217 850 249
-rect -30 160 -19 180
-rect 841 62 850 94
-rect -30 5 -19 25
-rect 841 -93 850 -61
+timestamp 1627245502
 use sky130_hilas_StepUpDigital  StepUpDigital_2
-timestamp 1624113415
+timestamp 1627245502
 transform 1 0 -49 0 1 403
 box 19 -40 899 119
 use sky130_hilas_StepUpDigital  StepUpDigital_1
-timestamp 1624113415
+timestamp 1627245502
 transform 1 0 -49 0 1 248
 box 19 -40 899 119
 use sky130_hilas_StepUpDigital  StepUpDigital_0
-timestamp 1624113415
+timestamp 1627245502
 transform 1 0 -49 0 1 93
 box 19 -40 899 119
 use sky130_hilas_StepUpDigital  StepUpDigital_3
-timestamp 1624113415
+timestamp 1627245502
 transform 1 0 -49 0 1 -62
 box 19 -40 899 119
 << labels >>

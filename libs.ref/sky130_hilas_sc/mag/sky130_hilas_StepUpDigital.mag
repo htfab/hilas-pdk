@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1624113415
+timestamp 1627245502
 << nwell >>
 rect 19 -40 270 119
 << mvpmos >>
@@ -102,7 +102,7 @@ rect 26 67 160 87
 rect 157 66 160 67
 rect 186 66 189 92
 use sky130_hilas_StepUpDigitalPart1  StepUpDigitalPart1_0
-timestamp 1624113415
+timestamp 1627245502
 transform 1 0 7 0 1 0
 box 278 -40 892 119
 << labels >>

@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1625491133
+timestamp 1627250292
 << error_s >>
 rect -1580 672 -1574 678
 rect -1527 672 -1521 678
@@ -18,9 +18,6 @@ rect -2061 563 -2055 569
 rect -1944 563 -1938 569
 rect -998 563 -992 569
 rect -881 563 -875 569
-rect -1187 428 -1170 429
-rect -1187 411 -1170 412
-rect -1749 394 -1748 407
 rect -2055 312 -2049 318
 rect -1950 312 -1944 318
 rect -992 312 -986 318
@@ -55,15 +52,15 @@ rect -1767 387 -1747 394
 rect -1192 480 -1163 488
 rect -1192 463 -1187 480
 rect -1170 463 -1163 480
-rect -1192 412 -1163 463
-rect -1192 395 -1187 412
-rect -1170 395 -1163 412
-rect -1192 387 -1163 395
+rect -1192 411 -1163 463
+rect -1192 394 -1187 411
+rect -1170 394 -1163 411
+rect -1192 387 -1163 394
 << viali >>
 rect -1766 463 -1749 480
 rect -1765 394 -1748 411
 rect -1187 463 -1170 480
-rect -1187 395 -1170 412
+rect -1187 394 -1170 411
 << metal1 >>
 rect -2592 740 -2564 745
 rect -2592 739 -2560 740
@@ -85,14 +82,17 @@ rect -3 731 31 745
 rect 63 730 91 745
 rect -372 710 -340 712
 rect -1768 432 -1736 434
-rect -1768 404 -1765 432
+rect -1768 394 -1765 432
 rect -1739 406 -1736 432
 rect -1748 404 -1736 406
 rect -1198 426 -1166 429
+rect -1748 394 -1744 404
 rect -1198 400 -1195 426
 rect -1169 400 -1166 426
 rect -1198 397 -1187 400
 rect -1170 397 -1166 400
+rect -1768 393 -1744 394
+rect -1746 391 -1744 393
 rect -154 187 -121 189
 rect -1198 174 -1166 176
 rect -1198 148 -1195 174
@@ -113,10 +113,10 @@ rect -369 712 -343 738
 rect -1765 411 -1739 432
 rect -1765 406 -1748 411
 rect -1748 406 -1739 411
-rect -1195 412 -1169 426
-rect -1195 400 -1187 412
-rect -1187 400 -1170 412
-rect -1170 400 -1169 412
+rect -1195 411 -1169 426
+rect -1195 400 -1187 411
+rect -1187 400 -1170 411
+rect -1170 400 -1169 411
 rect -1195 148 -1169 174
 rect -151 161 -124 187
 << metal2 >>
@@ -179,22 +179,22 @@ rect -1169 159 -121 161
 rect -1169 158 -1129 159
 rect -1169 148 -1166 158
 rect -1198 146 -1166 148
-use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1625491133
-transform 1 0 -1077 0 1 522
-box -396 -382 757 223
-use sky130_hilas_FGBiasWeakGate2x1cell  sky130_hilas_FGBiasWeakGate2x1cell_0
-timestamp 1625491133
-transform -1 0 -1859 0 1 522
-box -396 -382 757 223
-use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
-timestamp 1608384750
-transform 1 0 -454 0 -1 305
-box 133 -440 320 165
 use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
-timestamp 1608069483
+timestamp 1627219133
 transform 1 0 38 0 1 181
 box -172 -22 155 550
+use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
+timestamp 1627219133
+transform 1 0 -454 0 -1 305
+box 133 -440 320 165
+use sky130_hilas_FGBiasWeakGate2x1cell  sky130_hilas_FGBiasWeakGate2x1cell_0
+timestamp 1627219133
+transform -1 0 -1859 0 1 522
+box -396 -382 757 223
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1627219133
+transform 1 0 -1077 0 1 522
+box -396 -382 757 223
 << labels >>
 rlabel metal2 -1726 617 -1690 636 0 VIN11
 port 2 nsew analog default
