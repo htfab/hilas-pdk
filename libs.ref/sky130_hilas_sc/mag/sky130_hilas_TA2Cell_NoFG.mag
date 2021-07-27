@@ -1,138 +1,142 @@
 magic
 tech sky130A
-timestamp 1625491133
+timestamp 1627400024
 << error_s >>
-rect -1415 672 -1409 678
-rect -1362 672 -1356 678
-rect -1421 622 -1415 628
-rect -1356 622 -1350 628
-rect -992 613 -986 619
-rect -887 613 -881 619
-rect -998 563 -992 569
-rect -881 563 -875 569
-rect -992 312 -986 318
-rect -887 312 -881 318
-rect -1415 258 -1409 264
-rect -1362 258 -1356 264
-rect -998 262 -992 268
-rect -881 262 -875 268
-rect -1421 208 -1415 214
-rect -1356 208 -1350 214
+rect 58 532 64 538
+rect 111 532 117 538
+rect 52 482 58 488
+rect 117 482 123 488
+rect 481 473 487 479
+rect 586 473 592 479
+rect 475 423 481 429
+rect 592 423 598 429
+rect 481 172 487 178
+rect 586 172 592 178
+rect 58 118 64 124
+rect 111 118 117 124
+rect 475 122 481 128
+rect 592 122 598 128
+rect 52 68 58 74
+rect 117 68 123 74
 << nwell >>
-rect 192 727 319 745
-rect -328 571 -162 593
-rect -282 410 -254 434
-rect 191 140 319 159
+rect 1665 587 1792 605
+rect 1145 431 1311 453
+rect 1191 270 1219 294
+rect 1664 0 1792 19
 << locali >>
-rect -1190 479 -1144 488
-rect -1190 462 -1187 479
-rect -1170 462 -1144 479
-rect -1190 410 -1144 462
-rect -1190 393 -1187 410
-rect -1170 393 -1144 410
-rect -1190 387 -1144 393
+rect 283 339 329 348
+rect 283 322 286 339
+rect 303 322 329 339
+rect 283 270 329 322
+rect 283 253 286 270
+rect 303 253 329 270
+rect 283 247 329 253
 << viali >>
-rect -1187 462 -1170 479
-rect -1187 393 -1170 410
+rect 286 322 303 339
+rect 286 253 303 270
 << metal1 >>
-rect -1438 738 -1396 745
-rect -1068 737 -1045 745
-rect -416 737 -397 745
-rect -372 737 -344 745
-rect 123 731 157 745
-rect 190 730 217 745
-rect -1194 484 -1156 488
-rect -1194 391 -1190 484
-rect -1161 391 -1156 484
-rect -1194 387 -1156 391
-rect 123 140 157 159
-rect 190 140 217 161
+rect 35 598 77 605
+rect 405 597 428 605
+rect 1057 597 1076 605
+rect 1101 597 1129 605
+rect 1596 591 1630 605
+rect 1663 590 1690 605
+rect 279 344 317 348
+rect 279 251 283 344
+rect 312 251 317 344
+rect 279 247 317 251
+rect 1596 0 1630 19
+rect 1663 0 1690 21
 << via1 >>
-rect 127 579 153 605
-rect -1190 479 -1161 484
-rect -1190 462 -1187 479
-rect -1187 462 -1170 479
-rect -1170 462 -1161 479
-rect -1190 410 -1161 462
-rect -1190 393 -1187 410
-rect -1187 393 -1170 410
-rect -1170 393 -1161 410
-rect -1190 391 -1161 393
+rect 1600 439 1626 465
+rect 283 339 312 344
+rect 283 322 286 339
+rect 286 322 303 339
+rect 303 322 312 339
+rect 283 270 312 322
+rect 283 253 286 270
+rect 286 253 303 270
+rect 303 253 312 270
+rect 283 251 312 253
 << metal2 >>
-rect -130 718 -105 744
-rect -1473 677 -1466 695
-rect -24 620 1 657
-rect 123 605 157 609
-rect 123 600 127 605
-rect -328 571 -162 593
-rect -112 581 127 600
-rect -112 524 -93 581
-rect 123 579 127 581
-rect 153 579 157 605
-rect 123 576 157 579
-rect -21 535 0 564
-rect -1191 505 -93 524
-rect -1191 487 -1172 505
-rect -1193 484 -1158 487
-rect -1193 391 -1190 484
-rect -1161 391 -1158 484
-rect 304 474 319 496
-rect -126 451 -101 474
-rect -282 410 -254 434
-rect 304 392 319 414
-rect -1193 388 -1158 391
-rect -177 327 0 347
-rect -334 278 -318 318
-rect -206 246 0 267
-rect -1473 192 -1465 207
-rect -286 142 -260 167
-use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1625491133
-transform 1 0 -1077 0 1 522
-box -396 -382 757 223
-use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_0
-timestamp 1608384750
-transform 1 0 -484 0 1 580
-box 133 -440 320 165
-use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
-timestamp 1608384750
-transform 1 0 -328 0 -1 305
-box 133 -440 320 165
+rect 1343 578 1368 604
+rect 0 537 7 555
+rect 1449 480 1474 517
+rect 1596 465 1630 469
+rect 1596 460 1600 465
+rect 1145 431 1311 453
+rect 1361 441 1600 460
+rect 1361 384 1380 441
+rect 1596 439 1600 441
+rect 1626 439 1630 465
+rect 1596 436 1630 439
+rect 1452 395 1473 424
+rect 282 365 1380 384
+rect 282 347 301 365
+rect 280 344 315 347
+rect 280 251 283 344
+rect 312 251 315 344
+rect 1777 334 1792 356
+rect 1347 311 1372 334
+rect 1191 270 1219 294
+rect 1777 252 1792 274
+rect 280 248 315 251
+rect 1296 187 1473 207
+rect 1139 138 1155 178
+rect 1267 106 1473 127
+rect 0 52 8 67
+rect 1187 2 1213 27
 use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
 timestamp 1608069483
-transform 1 0 164 0 1 181
+transform 1 0 1637 0 1 41
 box -172 -22 155 550
+use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
+timestamp 1608384750
+transform 1 0 1145 0 -1 165
+box 133 -440 320 165
+use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_0
+timestamp 1608384750
+transform 1 0 989 0 1 440
+box 133 -440 320 165
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1625491133
+transform 1 0 396 0 1 382
+box -396 -382 757 223
 << labels >>
-rlabel metal1 123 140 157 146 0 VGND
+rlabel metal1 1596 0 1630 6 0 VGND
 port 7 nsew ground default
-rlabel metal1 190 140 217 146 0 VPWR
+rlabel metal1 1663 0 1690 6 0 VPWR
 port 8 nsew power default
-rlabel metal1 123 740 157 745 0 VGND
+rlabel metal1 1596 600 1630 605 0 VGND
 port 7 nsew ground default
-rlabel metal1 190 740 217 745 0 VPWR
+rlabel metal1 1663 600 1690 605 0 VPWR
 port 8 nsew power default
-rlabel metal2 -126 451 -101 474 0 VIN21
+rlabel metal2 1347 311 1372 334 0 VIN21
 port 3 nsew
-rlabel metal2 -286 142 -263 167 0 VIN12
+rlabel metal2 1187 2 1210 27 0 VIN12
 port 2 nsew analog default
-rlabel metal2 -130 718 -105 744 0 VIN22
+rlabel metal2 1343 578 1368 604 0 VIN22
 port 4 nsew
-rlabel metal2 304 392 319 414 0 OUTPUT1
+rlabel metal2 1777 252 1792 274 0 OUTPUT1
 port 5 nsew
-rlabel metal2 304 474 319 496 0 OUTPUT2
+rlabel metal2 1777 334 1792 356 0 OUTPUT2
 port 6 nsew
-rlabel metal1 -416 737 -397 745 0 COLSEL1
+rlabel metal1 1057 597 1076 605 0 COLSEL1
 port 1 nsew
-rlabel metal2 -1473 677 -1466 695 0 DRAIN1
+rlabel metal2 0 537 7 555 0 DRAIN1
 port 9 nsew
-rlabel metal2 -1473 192 -1465 207 0 DRAIN2
+rlabel metal2 0 52 8 67 0 DRAIN2
 port 10 nsew
-rlabel metal1 -1438 738 -1396 745 0 VTUN
+rlabel metal1 35 598 77 605 0 VTUN
 port 11 nsew
-rlabel metal1 -1068 737 -1045 745 0 GATE1
+rlabel metal1 405 597 428 605 0 GATE1
 port 12 nsew
-rlabel metal1 -372 737 -344 745 0 VINJ
+rlabel metal1 1101 597 1129 605 0 VINJ
 port 13 nsew
-rlabel metal2 -282 410 -259 434 0 VIN11
+rlabel metal2 1191 270 1214 294 0 VIN11
 port 14 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

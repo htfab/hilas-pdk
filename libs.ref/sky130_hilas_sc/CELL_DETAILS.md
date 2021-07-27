@@ -101,9 +101,9 @@ Width: 11.520
 
 Description: 4-channel level shifter
 
-Height: 6.640
+Height: 6.730
 <br>
-Width: 8.990
+Width: 9.040
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -139,7 +139,7 @@ Description: Two transimpedance amps with one (of two) amplifiers using floating
 
 Height: 9.870
 <br>
-Width: 32.060
+Width: 32.050
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -375,9 +375,9 @@ Width: 130.250
 
 Description: top level test structure with protection (duplicate of TopLevelProtectStructure)
 
-Height: 389.100
+Height: 389.400
 <br>
-Width: 372.850
+Width: 373.410
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -482,9 +482,9 @@ Width: 2.800
 
 Description: a 2-to-4 decoder capable of handling VINJ voltage
 
-Height: 6.160
+Height: 8.330
 <br>
-Width: 12.950
+Width: 16.320
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -722,7 +722,7 @@ Description: Single Large (W/L=100) pFET Transistor
 
 Height: 6.100
 <br>
-Width: 5.390
+Width: 5.610
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1125,9 +1125,9 @@ Width: 5.680
 
 Description: None
 
-Height: 15.890
+Height: 16.240
 <br>
-Width: 34.950
+Width: 46.850
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|

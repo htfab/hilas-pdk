@@ -1,71 +1,75 @@
 magic
 tech sky130A
-timestamp 1608226321
+timestamp 1627400855
 << metal1 >>
-rect 38 460 58 464
-rect 389 458 408 464
-rect 38 -141 58 -137
-rect 389 -141 408 -135
+rect 74 601 94 605
+rect 425 599 444 605
+rect 74 0 94 4
+rect 425 0 444 6
 << metal2 >>
-rect -36 433 -31 453
-rect -36 335 -30 355
-rect 433 335 440 355
-rect -36 270 -30 290
-rect 433 270 440 290
-rect -36 172 -31 192
-rect -36 131 -31 151
-rect -36 33 -30 53
-rect 433 33 440 53
-rect -36 -32 -30 -12
-rect 433 -32 440 -12
-rect -36 -130 -31 -110
-use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_2
+rect 0 574 5 594
+rect 0 476 6 496
+rect 469 476 476 496
+rect 0 411 6 431
+rect 469 411 476 431
+rect 0 313 5 333
+rect 0 272 5 292
+rect 0 174 6 194
+rect 469 174 476 194
+rect 0 109 6 129
+rect 469 109 476 129
+rect 0 11 5 31
+use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_1
 timestamp 1608225149
-transform 1 0 227 0 -1 -19
-box -263 -181 213 -29
-use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_3
-timestamp 1608225149
-transform 1 0 227 0 1 342
+transform 1 0 263 0 1 181
 box -263 -181 213 -29
 use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_0
 timestamp 1608225149
-transform 1 0 227 0 -1 283
+transform 1 0 263 0 -1 424
 box -263 -181 213 -29
-use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_1
+use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_3
 timestamp 1608225149
-transform 1 0 227 0 1 40
+transform 1 0 263 0 1 483
+box -263 -181 213 -29
+use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_2
+timestamp 1608225149
+transform 1 0 263 0 -1 122
 box -263 -181 213 -29
 << labels >>
-rlabel metal2 -36 335 -30 355 0 SELECT1
+rlabel metal2 0 476 6 496 0 SELECT1
 port 8 nsew analog default
-rlabel metal2 -36 270 -30 290 0 SELECT2
+rlabel metal2 0 411 6 431 0 SELECT2
 port 7 nsew analog default
-rlabel metal2 -36 33 -30 53 0 SELECT3
+rlabel metal2 0 174 6 194 0 SELECT3
 port 4 nsew analog default
-rlabel metal2 -36 -32 -30 -12 0 SELECT4
+rlabel metal2 0 109 6 129 0 SELECT4
 port 3 nsew analog default
-rlabel metal1 38 -141 58 -137 0 VPWR
+rlabel metal1 74 0 94 4 0 VPWR
 port 2 nsew analog default
-rlabel metal2 -36 433 -31 453 0 INPUT1_1
+rlabel metal2 0 574 5 594 0 INPUT1_1
 port 9 nsew analog default
-rlabel metal2 -36 172 -31 192 0 INPUT1_2
+rlabel metal2 0 313 5 333 0 INPUT1_2
 port 6 nsew analog default
-rlabel metal2 -36 131 -31 151 0 INPUT1_3
+rlabel metal2 0 272 5 292 0 INPUT1_3
 port 5 nsew analog default
-rlabel metal2 -36 -130 -31 -110 0 INPUT1_4
+rlabel metal2 0 11 5 31 0 INPUT1_4
 port 1 nsew analog default
-rlabel metal1 389 458 408 464 0 VGND
+rlabel metal1 425 599 444 605 0 VGND
 port 10 nsew ground default
-rlabel metal1 389 -141 408 -135 0 VGND
+rlabel metal1 425 0 444 6 0 VGND
 port 10 nsew ground default
-rlabel metal2 433 335 440 355 0 OUTPUT1
+rlabel metal2 469 476 476 496 0 OUTPUT1
 port 11 nsew analog default
-rlabel metal2 433 270 440 290 0 OUTPUT2
+rlabel metal2 469 411 476 431 0 OUTPUT2
 port 12 nsew analog default
-rlabel metal2 433 33 440 53 0 OUTPUT3
+rlabel metal2 469 174 476 194 0 OUTPUT3
 port 13 nsew analog default
-rlabel metal2 433 -32 440 -12 0 OUTPUT4
+rlabel metal2 469 109 476 129 0 OUTPUT4
 port 14 nsew analog default
-rlabel metal1 38 460 58 464 0 VPWR
+rlabel metal1 74 601 94 605 0 VPWR
 port 2 nsew power default
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>
