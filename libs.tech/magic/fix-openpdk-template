@@ -1,0 +1,57 @@
+#!/bin/bash
+
+sed -i 's'\
+'/MAGIC_CURRENT'\
+'/libs.tech\/magic'\
+'/g' \
+*.magicrc
+
+sed -i 's'\
+'/TECHNAME'\
+'/sky130'\
+'/g' \
+*.magicrc
+
+# DO NOT SET PDKPATH:
+sed -i 's'\
+'/Allow override of PDK path from environment variable PDKPATH'\
+'/REQUIRE PDK path from environment variable PDKPATH'\
+'/g' *.magicrc
+
+sed -i 's'\
+'/set PDKPATH "STAGING_PATH\/sky130"'\
+'/puts "this script requires env-variable \$PDKPATH to be set"\n    exit 1'\
+'/g' *.magicrc
+
+
+# MAGIC library section:
+sed -i 's'\
+'/addpath ${PDKPATH}\/libs.ref\/${MAGTYPE}\/sky130_sram_macros'\
+'/addpath ${PDKPATH}\/libs.ref\/${MAGTYPE}\/sky130_sram_macros\n'\
+'    addpath ${PDKPATH}\/libs.ref\/${MAGTYPE}\/sky130_hilas_sc'\
+'/g' \
+*.magicrc
+
+sed -i 's'\
+'/addpath ${PDKPATH}\/libs.ref\/sky130_sram_macros\/${MAGTYPE}'\
+'/addpath ${PDKPATH}\/libs.ref\/sky130_sram_macros\/${MAGTYPE}\n'\
+'    addpath ${PDKPATH}\/libs.ref\/sky130_hilas_sc\/${MAGTYPE}'\
+'/g' \
+*.magicrc
+
+
+#  GDS Section
+sed -i 's'\
+'/addpath ${PDKPATH}\/libs.ref\/gds\/sky130_sram_macros'\
+'/addpath ${PDKPATH}\/libs.ref\/gds\/sky130_sram_macros\n'\
+'    addpath ${PDKPATH}\/libs.ref\/gds\/sky130_hilas_sc'\
+'/g' \
+*.magicrc
+
+sed -i 's'\
+'/addpath ${PDKPATH}\/libs.ref\/sky130_sram_macros\/gds'\
+'/addpath ${PDKPATH}\/libs.ref\/sky130_sram_macros\/gds\n'\
+'    addpath ${PDKPATH}\/libs.ref\/sky130_hilas_sc\/gds'\
+'/g' \
+*.magicrc
+
