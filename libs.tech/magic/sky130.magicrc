@@ -1,7 +1,3 @@
-###
-###	Source file sky130.magicrc
-###	Process this file with the m4 processor
-###
 puts stdout "Sourcing design .magicrc for technology sky130 ..."
 
 # Put grid on 0.005 pitch.  This is important, as some commands don't
@@ -24,16 +20,12 @@ ext2spice scale off
 
 # REQUIRE PDK path from environment variable PDKPATH
 if {[catch {set PDKPATH $env(PDKPATH)}]} {
-    puts "this script requires env-variable $PDKPATH to be set"
+    puts "this script requires environment variable PDKPATH to be set"
     exit 1
 }
 
 # loading technology
-#ifdef FULLTECH
-tech load $PDKPATH/libs.tech/magic/sky130-F.tech
-#else
 tech load $PDKPATH/libs.tech/magic/sky130.tech
-#endif
 
 # load device generator
 source $PDKPATH/libs.tech/magic/sky130.tcl
@@ -89,38 +81,7 @@ if {[file isdir ${PDKPATH}/libs.ref/${MAGTYPE}]} {
     addpath ${PDKPATH}/libs.ref/sky130_hilas_sc/${MAGTYPE}
 }
 
-# add path to GDS cells
-#ifdef FULLTECH
-if {[file isdir ${PDKPATH}/libs.ref/gds]} {
-    path cell ${PDKPATH}/libs.ref/gds/sky130_fd_pr
-    path cell +${PDKPATH}/libs.ref/gds/sky130_fd_io
-    path cell +${PDKPATH}/libs.ref/gds/sky130_fd_sc_hd
-    path cell +${PDKPATH}/libs.ref/gds/sky130_fd_sc_hdll
-    path cell +${PDKPATH}/libs.ref/gds/sky130_fd_sc_hs
-    path cell +${PDKPATH}/libs.ref/gds/sky130_fd_sc_hvl
-    path cell +${PDKPATH}/libs.ref/gds/sky130_fd_sc_lp
-    path cell +${PDKPATH}/libs.ref/gds/sky130_fd_sc_ls
-    path cell +${PDKPATH}/libs.ref/gds/sky130_fd_sc_ms
-    path cell +${PDKPATH}/libs.ref/gds/sky130_osu130
-    path cell +${PDKPATH}/libs.ref/gds/sky130_osu130_t18
-    path cell +${PDKPATH}/libs.ref/gds/sky130_ml_xx_hd
-    path cell +${PDKPATH}/libs.ref/gds/sky130_sram_macros
-} else {
-    path cell ${PDKPATH}/libs.ref/sky130_fd_pr/gds
-    path cell +${PDKPATH}/libs.ref/sky130_fd_io/gds
-    path cell +${PDKPATH}/libs.ref/sky130_fd_sc_hd/gds
-    path cell +${PDKPATH}/libs.ref/sky130_fd_sc_hdll/gds
-    path cell +${PDKPATH}/libs.ref/sky130_fd_sc_hs/gds
-    path cell +${PDKPATH}/libs.ref/sky130_fd_sc_hvl/gds
-    path cell +${PDKPATH}/libs.ref/sky130_fd_sc_lp/gds
-    path cell +${PDKPATH}/libs.ref/sky130_fd_sc_ls/gds
-    path cell +${PDKPATH}/libs.ref/sky130_fd_sc_ms/gds
-    path cell +${PDKPATH}/libs.ref/sky130_osu130/gds
-    path cell +${PDKPATH}/libs.ref/sky130_osu130_t18/gds
-    path cell +${PDKPATH}/libs.ref/sky130_ml_xx_hd/gds
-    path cell +${PDKPATH}/libs.ref/sky130_sram_macros/gds
-}
-#endif (FULLTECH)
+
 
 # add path to IP from catalog.  This procedure defined in the PDK script.
 catch {magic::query_mylib_ip}

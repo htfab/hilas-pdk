@@ -1,10 +1,3 @@
-###
-###	Source file sky130.tech
-###	Process this file with the preproc.py macro processor
-###	Note that the tech name is always TECHNAME for
-###	magic;  this keeps compatibility between layouts
-###	for all process variants.
-###
 #------------------------------------------------------------------------
 # Copyright (c) 2020 R. Timothy Edwards
 # Revisions:  See below
@@ -17,11 +10,11 @@
 #------------------------------------------------------------------------
 tech
   format 35
-  TECHNAME
+  sky130
 end
 
 version
- version REVISION
+ version 9.9999hilas
  description "SkyWater SKY130: Open Source rules and DRC"
  requires magic-8.3.111
 end
@@ -117,19 +110,11 @@ planes
   metal1,m1
   metal2,m2
   metal3,m3
-#ifdef METAL5
-#ifdef MIM
   cap1,c1
-#endif (MIM)
   metal4,m4
-#ifdef MIM
   cap2,c2
-#endif (MIM)
   metal5,m5
-#endif (METAL5)
-#ifdef REDISTRIBUTION
   metali,mi
-#endif
   block,b
   comment,c
 end
@@ -261,14 +246,11 @@ types
   metal3 metal3,m3,met3
   metal3 rmetal3,rm3,rmet3
  -metal3 obsm3
-#ifdef METAL5
   metal3 via3,v3
  -metal3 m3fill
 
-#ifdef MIM
   cap1 mimcap,mim,capm
   cap1 mimcapcontact,mimcapc,mimcc,capmc
-#endif
 
 # Metal 4
   metal4 metal4,m4,met4
@@ -277,25 +259,20 @@ types
   metal4 via4,v4
  -metal4 m4fill
 
-#ifdef MIM
   cap2 mimcap2,mim2,capm2
   cap2 mimcap2contact,mimcap2c,mim2cc,capm2c
-#endif
 
 # Metal 5
   metal5 metal5,m5,met5
   metal5 rm5,rmetal5,rmet5
  -metal5 obsm5
  -metal5 m5fill
-#endif (METAL5)
 
-#ifdef REDISTRIBUTION
   metal5 mrdlcontact,mrdlc,pi1
   metali metalrdl,mrdl,metrdl,rdl
  -metali obsmrdl
   metali pi2
   block  ubm
-#endif (REDISTRIBUTION)
 
 # Miscellaneous
  -block  glass
@@ -347,28 +324,18 @@ contact
 
   via1   metal1 metal2
   via2   metal2 metal3
-#ifdef METAL5
   via3   metal3 metal4
   via4   metal4 metal5
-#endif (METAL5)
   stackable
 
-#ifdef METAL5
-#ifdef MIM
   # MiM cap contacts are not stackable!
   mimcc  mimcap metal4
   mim2cc mimcap2 metal5
-#endif (MIM)
 
   padl m1 m2 m3 m4 m5 glass
-#else
-  padl m1 m2 m3 glass
-#endif  (!METAL5)
 
-#ifdef REDISTRIBUTION
   mrdlc metal5 mrdl
   pi2   mrdl ubm
-#endif (REDISTRIBUTION)
 end
 
 #-----------------------------------------------------
@@ -448,10 +415,8 @@ aliases
   allm1		*m1,rm1
   allm2		*m2,rm2
   allm3		*m3,rm3
-#ifdef METAL5
   allm4	   	*m4,rm4
   allm5	   	*m5,rm5
-#endif (METAL5)
 
   allpad	padl
 
@@ -581,13 +546,10 @@ styles
   m3fill    metal4
   rm3       metal4         poly_resist_stripes
   obsm3     metal4
-#ifdef METAL5
-#ifdef MIM
   mimcap    metal3         mems
   mimcc     metal3         contact_X'es mems
   mimcap2   metal4         mems
   mim2cc    metal4         contact_X'es mems
-#endif (MIM)
   via3      metal4         metal5  via4
   metal4    metal5
   m4fill    metal5
@@ -598,14 +560,11 @@ styles
   m5fill    metal6
   rm5       metal6         poly_resist_stripes
   obsm5     metal6
-#endif (METAL5)
-#ifdef REDISTRIBUTION
   mrdlc	    metal6  metal7  via6
   metalrdl  metal7
   obsmrdl   metal7
   ubm	    metal8
   pi2	    metal7  metal8  via7
-#endif (REDISTRIBUTION)
 
   glass	    overglass
   mrp1      poly_resist    poly_resist_stripes
@@ -625,11 +584,7 @@ styles
   obswell   cwell
   obsactive implant4
 
-#ifndef METAL5
-  padl      metal4 via4 overglass
-#else
   padl      metal6 via6 overglass
-#endif
 
   magnet    substrate_field_implant
   rotate    via3alt
@@ -682,10 +637,8 @@ compose
   paint  coreli  psc    psc
   paint  coreli  viali  viali
 
-#ifdef METAL5
   paint  m4      obsm4  m4
   paint  m5      obsm5  m5
-#endif (METAL5)
 end
 
 #-----------------------------------------------------
@@ -699,22 +652,16 @@ connect
   *m1,m1fill,obsmcon	*m1,m1fill,obsmcon
   *m2,m2fill	*m2,m2fill
   *m3,m3fill	*m3,m3fill
-#ifdef METAL5
   *m4,m4fill	*m4,m4fill
   *m5,m5fill	*m5,m5fill
-#ifdef MIM
   *mimcap     *mimcap
   *mimcap2    *mimcap2
-#endif (MIM)
-#endif (METAL5)
    allnactivenonfet	allnactivenonfet
    allpactivenonfet	allpactivenonfet
   *poly,xpc,allfets,polyfill	*poly,xpc,allfets,polyfill
-#ifdef REDISTRIBUTION
   # RDL connects to m5 (i.e., padl) through glass cut
   *mrdl			*mrdl
   glass			metrdl
-#endif (REDISTRIBUTION)
 end
 
 #-----------------------------------------------------
@@ -1263,14 +1210,11 @@ style gdsii
 	labels m3fill
 	calma 34 28
 
-#ifdef METAL5
 #----------------------------------------------------------------
 # VIA3
 #----------------------------------------------------------------
  layer VIA3	via3
-#ifdef MIM
 	or mimcc
-#endif (MIM)
  	squares-grid 60 200 200
  	calma 	70 44
 
@@ -1300,9 +1244,7 @@ style gdsii
 # VIA4
 #----------------------------------------------------------------
  layer VIA4	via4
-#ifdef MIM
 	or mim2cc
-#endif (MIM)
  	squares-grid 190 800 800
  	calma 	71 44
 
@@ -1328,9 +1270,7 @@ style gdsii
 	labels m5fill
 	calma 59 28
 
-#endif (METAL5)
 
-#ifdef REDISTRIBUTION
 #----------------------------------------------------------------
 # RDL
 #----------------------------------------------------------------
@@ -1359,7 +1299,6 @@ style gdsii
 	grow	25000
 	# Test only---needs GDS layer number
 
-#endif REDISTRIBUTION
 
 #----------------------------------------------------------------
 # GLASS
@@ -1367,7 +1306,6 @@ style gdsii
  layer GLASS 	glass
  	calma 	76 20
 
-#ifdef MIM
 #----------------------------------------------------------------
 # CAPM
 #----------------------------------------------------------------
@@ -1378,7 +1316,6 @@ style gdsii
  layer CAPM2 	*mimcap2
  	labels 	mimcap2
  	calma 	97 44
-#endif (MIM)
 
 #----------------------------------------------------------------
 # Chip top level marker for DRC latchup rules to check 15um
@@ -1423,17 +1360,13 @@ style gdsii
  render MET2	metal3       2.0061 0.36
  render VIA2	via          2.3661 0.42
  render MET3	metal4       2.7861 0.845
-#ifdef METAL5
  render VIA3	via          3.6311 0.39
  render MET4	metal5       4.0211 0.845
  render VIA4	via          4.8661 0.505
  render MET5	metal6       5.3711 1.26
  render CAPM	metal8       2.4661 0.2
  render CAPM2	metal9       3.7311 0.2
-#ifdef REDISTRIBUTION
  render RDL	metal7      11.8834 4.0
-#endif (!REDISTRIBUTION)
-#endif (!METAL5)
 
 #----------------------------------------------------------------
 style drc
@@ -1762,38 +1695,6 @@ style drc
  and-not m4_huge
  and allm4
 
-#ifdef EXPERIMENTAL
-#----------------------------------------------------------------
-style paint
-#----------------------------------------------------------------
-# NOTE:  This style is used for database manipulations only via
-# the "cif paint" command.
-#----------------------------------------------------------------
-
- scalefactor 10  nanometers
-
- templayer m1grow *m1
-    grow 290
-
- # layer listrap:  Use the following set of commands to strap local
- # interconnect wires with metal1 (inside the cursor box) to satisfy
- # the maximum aspect ratio rule for local interconnect:
- #
- #    tech unlock *
- #    cif ostyle paint
- #    cif paint m1strap comment
- #    cif paint m1strap m1
- #    cif paint listrap viali
- #    erase comment
-
- templayer m1strap *li
-    and-not m1grow
-    grow 30
-
- templayer listrap comment
-    slots 30 170 170 60
-
-#endif (EXPERIMENTAL)
 
 #----------------------------------------------------------------
 style density
@@ -2213,7 +2114,6 @@ style wafflefill variants (),(tiled)
 	or	met3fill_veryfine
  	calma 	34 28
 
-#ifdef METAL5
 #---------------------------------------------------
 # MET4 fill
 #---------------------------------------------------
@@ -2293,7 +2193,6 @@ style wafflefill variants (),(tiled)
  layer	MET5FILL met5fill_coarse
 	or	met5fill_medium
  	calma 	59 28
-#endif (METAL5)
 
 end
 
@@ -2310,14 +2209,6 @@ style  sky130 variants (vendor),()
 
  options ignore-unknown-layer-labels no-reconnect-labels
 
-#ifndef MIM
- ignore CAPM
- ignore CAPM2
-#endif (!MIM)
-#ifndef METAL5
- ignore MET4,VIA3
- ignore MET5,VIA4
-#endif
  ignore NPC
  ignore SEALID
  ignore CAPID
@@ -3477,7 +3368,6 @@ style  sky130 variants (vendor),()
  layer m1fill MET1FILL
  labels MET1FILL
 
-#ifdef MIM
  layer mimcap MET3
  and CAPM
  labels CAPM
@@ -3500,7 +3390,6 @@ style  sky130 variants (vendor),()
  shrink 210
  labels CAPM2
 
-#endif (MIM)
 
  templayer m2cbase VIA1
  and-not COREID
@@ -3559,12 +3448,9 @@ style  sky130 variants (vendor),()
  layer m3fill MET3FILL
  labels MET3FILL
 
-#ifdef (METAL5)
 
  templayer via3base VIA3
-#ifdef MIM
  and-not CAPM
-#endif (MIM)
  grow 60
 
  layer via3 via3base
@@ -3609,9 +3495,7 @@ style  sky130 variants (vendor),()
  labels MET5FILL
 
  templayer via4base VIA4
-#ifdef MIM
  and-not CAPM2
-#endif (MIM)
  grow 190
 
  layer via4 via4base
@@ -3620,9 +3504,7 @@ style  sky130 variants (vendor),()
  shrink 590
  grow 590
  or via4base
-#endif (METAL5)
 
-#ifdef REDISTRIBUTION
  layer metrdl RDL,RDLTXT,RDLPIN
  labels RDL
  variants (vendor)
@@ -3631,7 +3513,6 @@ style  sky130 variants (vendor),()
  labels RDLTXT text
  variants *
  labels RDLPIN port
-#endif
 
  # Find diffusion not covered in
  # NSDM or PSDM and pull it into
@@ -3949,15 +3830,11 @@ style  sky130 variants (vendor),()
  calma MET2 69 20
  calma VIA2 69 44
  calma MET3 70 20
-#ifdef METAL5
  calma VIA3 70 44
  calma MET4 71 20
  calma VIA4 71 44
  calma MET5 72 20
-#endif
-#ifdef REDISTRIBUTION
  calma RDL 74 20
-#endif
  calma GLASS 76 20
 
  calma SUBTXT  64 59
@@ -3970,41 +3847,31 @@ style  sky130 variants (vendor),()
  calma MET1TXT 68 5
  calma MET2TXT 69 5
  calma MET3TXT 70 5
-#ifdef METAL5
  calma MET4TXT 71 5
  calma MET5TXT 72 5
-#endif
-#ifdef REDISTRIBUTION
  calma RDLTXT 74 5
-#endif
 
  calma LIRES 67 13
  calma MET1RES 68 13
  calma MET2RES 69 13
  calma MET3RES 70 13
-#ifdef METAL5
  calma MET4RES 71 13
  calma MET5RES 72 13
-#endif
 
  calma LIFILL   56 28
  calma MET1FILL 36 28
  calma MET2FILL 41 28
  calma MET3FILL 34 28
-#ifdef METAL5
  calma MET4FILL 51 28
  calma MET5FILL 59 28
-#endif
 
  calma POLYSHORT 66 15
  calma LISHORT 67 15
  calma MET1SHORT 68 15
  calma MET2SHORT 69 15
  calma MET3SHORT 70 15
-#ifdef METAL5
  calma MET4SHORT 71 15
  calma MET5SHORT 72 15
-#endif
 
  calma SUBPIN 122 16
  calma PADPIN 76 16
@@ -4015,22 +3882,16 @@ style  sky130 variants (vendor),()
  calma MET1PIN 68 16
  calma MET2PIN 69 16
  calma MET3PIN 70 16
-#ifdef METAL5
  calma MET4PIN 71 16
  calma MET5PIN 72 16
-#endif
-#ifdef REDISTRIBUTION
  calma RDLPIN 74 16
-#endif
 
  calma BOUND 235 4
 
  calma LVSTEXT 83 44
 
-#ifdef (MIM)
  calma CAPM 89 44
  calma CAPM2 97 44
-#endif (MIM)
 
  calma FILLOBSM1  62  24
  calma FILLOBSM2  105 52
@@ -4564,8 +4425,6 @@ variants (full)
 variants *
 
 
-#ifdef METAL5
-#undef METAL5
 #--------------------------------------------------
 # VIA3 - Requires METAL5 Module
 #--------------------------------------------------
@@ -4622,10 +4481,7 @@ variants *
 
  angles allm5 45 "Only 45 and 90 degree angles permitted on metal5 (x.3a)"
 
-#define METAL5
-#endif (METAL5)
 
-#ifdef REDISTRIBUTION
 
 variants (full)
 
@@ -4636,7 +4492,6 @@ variants (full)
 
 variants (fast),(full)
 
-#endif (REDISTRIBUTION)
 
 #--------------------------------------------------
 # NMOS, PMOS
@@ -4758,7 +4613,6 @@ variants (full)
 	"Varactor N-well must not contain P+ diffusion (varac.7)"
 variants (fast),(full)
 
-#ifdef MIM
 #-----------------------------------------------------------
 # MiM CAP (CAPM) - 
 #-----------------------------------------------------------
@@ -4823,7 +4677,6 @@ variants (fast),(full)
 	"Metal5 overlap of MiM2 cap contact < %d (met5.3 - via4.4)"
  exact_overlap mim2cc/c2
 
-#endif (MIM)
 
 #----------------------------
 # HVNTM
@@ -4853,34 +4706,24 @@ lef
  routing m1	met1 MET1 m1
  routing m2	met2 MET2 m2
  routing m3	met3 MET3 m3
-#ifdef METAL5
  routing m4	met4 MET4 m4
  routing m5	met5 MET5 m5
-#endif (METAL5)
-#ifdef REDISTRIBUTION
  routing mrdl	met6 MET6 m6 MRDL METRDL
-#endif
 
  cut mcon  mcon MCON Mcon
  cut m2c  via via1 VIA VIA1 cont2 via12
  cut m3c  via2 VIA2 cont3 via23
-#ifdef METAL5
  cut via3 via3 VIA3 cont4 via34
  cut via4 via4 VIA4 cont5 via45
-#endif (METAL5)
 
  obs obsli   li1
  obs obsm1   met1
  obs obsm2   met2
  obs obsm3   met3
 
-#ifdef METAL5
  obs obsm4   met4
  obs obsm5   met5
-#endif (METAL5)
-#ifdef REDISTRIBUTION
  obs obsmrdl met6
-#endif
 
  # NOTE: obsmcon only used with li1, not obsli.
  obs obsmcon mcon
@@ -4888,10 +4731,8 @@ lef
  # Vias on obstruction layers should be ignored, so cast to obstruction metal.
  obs obsm1   via
  obs obsm2   via2
-#ifdef METAL5
  obs obsm3   via3
  obs obsm4   via4
-#endif (METAL5)
 
 end
 
@@ -4928,35 +4769,13 @@ extract
  planeorder metal1 	4
  planeorder metal2 	5
  planeorder metal3 	6
-#ifdef METAL5
  planeorder metal4 	7
  planeorder metal5 	8
-#ifdef REDISTRIBUTION
  planeorder metali	9
  planeorder block      10
  planeorder comment    11
  planeorder cap1       12
  planeorder cap2       13
-#else (!REDISTRIBUTION)
- planeorder block       9	
- planeorder comment    10
- planeorder cap1       11
- planeorder cap2       12
-#endif (!REDISTRIBUTION)
-#else (!METAL5)
-#ifdef REDISTRIBUTION
- planeorder metali     7
- planeorder block      8
- planeorder comment    9
- planeorder cap1       10
- planeorder cap2       11
-#else (!REDISTRIBUTION)
- planeorder block      7
- planeorder comment    8
- planeorder cap1       9
- planeorder cap2       10
-#endif (!REDISTRIBUTION)
-#endif (!METAL5)
 
  height	dnwell 	    -0.1    0.1
  height	nwell,pwell  0.0    0.2062
@@ -4976,7 +4795,6 @@ extract
  height v2	     2.3661 0.42
  height allm3	     2.7861 0.845
  height m3fill	     1.3761 0.36
-#ifdef METAL5
  height v3	     3.6311 0.39
  height allm4	     4.0211 0.845
  height m4fill	     1.3761 0.36
@@ -4987,11 +4805,8 @@ extract
  height mimcap2	     3.7311 0.2
  height mimcc	     2.6661 0.12
  height mim2cc	     3.9311 0.09
-#ifdef REDISTRIBUTION
  height mrdlc	     6.6311 0.63
  height mrdl	     7.2611 3.0
-#endif (!REDISTRIBUTION)
-#endif (!METAL5)
 
  # Antenna check parameters
  # Note that checks w/diode diffusion are not modeled
@@ -5003,10 +4818,8 @@ extract
  antenna m1,m2,m3 sidewall 400 2600 400
  antenna v1 surface 3 0 18
  antenna v2 surface 6 0 36
-#ifdef METAL5
  antenna m4,m5 sidewall 400 2600 400
  antenna v3,v4 surface 6 0 36
-#endif (METAL5)
 
  tiedown alldiffnonfet
 
@@ -5039,13 +4852,9 @@ extract
  resist (allm1)/metal1		   125
  resist (allm2)/metal2		   125
  resist (allm3)/metal3	            47
-#ifdef METAL5
  resist (allm4)/metal4  	    47
  resist (allm5)/metal5  	    29
-#endif (METAL5)
-#ifdef REDISTRIBUTION
  resist mrdl/metali		     5
-#endif (REDISTRIBUTION)
 
  # These types should not be considered as electrical nodes
  resist blocktypes	 	 None
@@ -5061,17 +4870,11 @@ extract
  contact mcon			152000
  contact m2c			  4500
  contact m3c			  3410
-#ifdef METAL5
-#ifdef MIM
  contact mimcc			  4500
  contact mim2cc			  3410
-#endif (MIM)
  contact via3			  3410
  contact via4			   380
-#endif (METAL5)
-#ifdef REDISTRIBUTION
  contact mrdlc			     6
-#endif (REDISTRIBUTION)
 
 #-------------------------------------------------------------------------
 # Parasitic capacitance values:  Use document (...)
@@ -5210,7 +5013,6 @@ defaultareacap     nwell well 120
  defaultsideoverlap allm3 metal3 allm2 metal2 70
  defaultsideoverlap allm2 metal2 allm3 metal3 44
 
-#ifdef METAL5
 #metal4
  defaultsidewall    allm4 metal4       67
 # defaultareacap     alltopm metal4 well  6
@@ -5287,10 +5089,7 @@ defaultareacap     nwell well 120
  defaultoverlap     allm5 metal5 allm4 metal4 68
  defaultsideoverlap allm5 metal5 allm4 metal4 83
  defaultsideoverlap allm4 metal4 allm5 metal5 47
-#endif (METAL5)
 
-#ifdef REDISTRIBUTION
-#endif (REDISTRIBUTION)
 
 # Devices:  Base models (not subcircuit wrappers)
 
@@ -5388,10 +5187,8 @@ variants (),(si)
  device resistor sky130_fd_pr__res_generic_m1 rmetal1 *metal1
  device resistor sky130_fd_pr__res_generic_m2 rmetal2 *metal2
  device resistor sky130_fd_pr__res_generic_m3 rmetal3 *metal3
-#ifdef METAL5
  device resistor sky130_fd_pr__res_generic_m4 rm4 *m4
  device resistor sky130_fd_pr__res_generic_m5 rm5 *m5
-#endif (METAL5)
 
  device rsubcircuit sky130_fd_pr__res_high_po_0p35 xhrpoly \
 	xpc pwell,space/w error +res0p35 l=l
@@ -5442,10 +5239,8 @@ variants (),(si)
  device ndiode sky130_fd_pr__diode_pw2nd_05v5_nvt *nndiode pwell,space/w a=area p=pj
  device ndiode sky130_fd_pr__diode_pw2nd_11v0 *mvndiode pwell,space/w a=area p=pj
 
-#ifdef MIM
  device csubcircuit sky130_fd_pr__cap_mim_m3_1 *mimcap  *m3 w=w l=l
  device csubcircuit sky130_fd_pr__cap_mim_m3_2 *mimcap2 *m4 w=w l=l
-#endif (MIM)
 
  variants (orig)
 
@@ -5490,10 +5285,8 @@ variants (),(si)
  device resistor sky130_fd_pr__res_generic_m1 rmetal1 *metal1
  device resistor sky130_fd_pr__res_generic_m2 rmetal2 *metal2
  device resistor sky130_fd_pr__res_generic_m3 rmetal3 *metal3
-#ifdef METAL5
  device resistor sky130_fd_pr__res_generic_m4 rm4 *m4
  device resistor sky130_fd_pr__res_generic_m5 rm5 *m5
-#endif (METAL5)
 
  device resistor sky130_fd_pr__res_high_po_0p35 xhrpoly xpc +res0p35
  device resistor sky130_fd_pr__res_high_po_0p69 xhrpoly xpc +res0p69
@@ -5533,10 +5326,8 @@ variants (),(si)
  device bjt sky130_fd_pr__npn_11v0_W1p00L1p00 npn *mvndiff dnwell space/w error +npn11p0
  device bjt sky130_fd_pr__npn_11v0 npn *mvndiff dnwell space/w error a2=area
 
-#ifdef MIM
  device capacitor sky130_fd_pr__cap_mim_m3_1 *mimcap  *m3 1
  device capacitor sky130_fd_pr__cap_mim_m3_2 *mimcap2 *m4 1
-#endif (MIM)
 
 end
 
@@ -5551,10 +5342,8 @@ wiring
  contact mcon 170 li 0  0 m1 30 60
  contact v1  260 m1 0 30 m2  0 30
  contact v2  280 m2 0 45 m3 25  0
-#ifdef METAL5
  contact v3  320 m3 0 30 m4  5  5
  contact v4 1180 m4 0    m5 120
-#endif (METAL5)
 
  contact pc  170  poly 50 80 li 0 80
  contact pdc 170 pdiff 40 60 li 0 80
