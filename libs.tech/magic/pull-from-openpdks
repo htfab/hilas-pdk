@@ -1,0 +1,6 @@
+#!/bin/bash
+
+wget https://raw.githubusercontent.com/RTimothyEdwards/open_pdks/master/sky130/magic/sky130.magicrc
+wget https://raw.githubusercontent.com/RTimothyEdwards/open_pdks/master/sky130/magic/sky130.tcl
+wget https://raw.githubusercontent.com/RTimothyEdwards/open_pdks/master/sky130/magic/sky130.tech
+wget https://raw.githubusercontent.com/RTimothyEdwards/open_pdks/master/sky130/magic/sky130gds.tech

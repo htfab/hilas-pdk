@@ -1,16 +1,20 @@
+###
+###     Source file sky130.tcl
+###     Process this file with the preprocessor script
+###
 #-----------------------------------------------------
-# Magic/TCL design kit for SKYWATER sky130A
+# Magic/TCL design kit for SKYWATER TECHNAME
 #-----------------------------------------------------
 # Tim Edwards
 # Revision 1	ALPHA   9/10/2020
 #-----------------------------------------------------
 
-set TECHPATH /home/bjmuld/work/hilas/fastlane/PDKs/open_pdks/sky130
-if [catch {set PDKPATH}] {set PDKPATH ${TECHPATH}/sky130A}
-set PDKNAME sky130A
+set TECHPATH STAGING_PATH
+if [catch {set PDKPATH}] {set PDKPATH ${TECHPATH}/TECHNAME}
+set PDKNAME TECHNAME
 # "sky130" is the namespace used for all devices
 set PDKNAMESPACE sky130
-puts stdout "Loading sky130A Device Generator Menu ..."
+puts stdout "Loading TECHNAME Device Generator Menu ..."
 
 # Initialize toolkit menus to the wrapper window
 
@@ -25,24 +29,7 @@ set Opts(callback) [subst {sky130::addtechmenu \$framename; $Opts(callback)}]
 
 # Set options specific to this PDK
 set Opts(hidelocked) 1
-set Opts(hidespecial) 1
-
-# Create new "tool" proc that doesn't have the netlist tool.
-proc magic::nexttool {} {
-   global Opts
-
-   # Don't attempt to switch tools while a selection drag is active
-   if {$Opts(motion) == {}} {
-      switch $Opts(tool) {
-         box { magic::tool wiring }
-         wiring { magic::tool pick }
-         default { magic::tool box }
-      }
-   }
-}
-
-# This shoule be part of sitedef. . .
-macro space magic::nexttool
+set Opts(hidespecial) 0
 
 # Wrap the closewrapper procedure so that closing the last
 # window is equivalent to quitting.
@@ -124,8 +111,10 @@ proc sky130::addtechmenu {framename} {
 	    "magic::gencell sky130::sky130_fd_pr__rf_npn_05v5_W1p00L1p00" pdk1
    magic::add_toolkit_command $layoutframe "NPN 1.0 x 2.0" \
 	    "magic::gencell sky130::sky130_fd_pr__rf_npn_05v5_W1p00L2p00" pdk1
+   magic::add_toolkit_command $layoutframe "PNP 0.68 x 0.68" \
+	    "magic::gencell sky130::sky130_fd_pr__rf_pnp_05v5_W0p68L0p68" pdk1
    magic::add_toolkit_command $layoutframe "PNP 3.4 x 3.4" \
-	    "magic::gencell sky130::sky130_fd_pr__pnp_05v5_W3p40L3p40" pdk1
+	    "magic::gencell sky130::sky130_fd_pr__rf_pnp_05v5_W3p40L3p40" pdk1
 
    magic::add_toolkit_separator	$layoutframe pdk1
 
@@ -150,10 +139,12 @@ proc sky130::addtechmenu {framename} {
 	    "sky130::via1_draw" pdk1
    magic::add_toolkit_command $layoutframe "via2" \
 	    "sky130::via2_draw" pdk1
+#ifdef METAL5
    magic::add_toolkit_command $layoutframe "via3" \
 	    "sky130::via3_draw" pdk1
    magic::add_toolkit_command $layoutframe "via4" \
 	    "sky130::via4_draw" pdk1
+#endif (METAL5)
    
 
    magic::add_toolkit_menu $layoutframe "Devices 2" pdk2
@@ -185,15 +176,19 @@ proc sky130::addtechmenu {framename} {
 	    "magic::gencell sky130::sky130_fd_pr__res_generic_m2" pdk2
    magic::add_toolkit_command $layoutframe "m3 metal resistor - 47 mOhm/sq" \
 	    "magic::gencell sky130::sky130_fd_pr__res_generic_m3" pdk2
+#ifdef METAL5
    magic::add_toolkit_command $layoutframe "m4 metal resistor - 47 mOhm/sq" \
 	    "magic::gencell sky130::sky130_fd_pr__res_generic_m4" pdk2
    magic::add_toolkit_command $layoutframe "m5 metal resistor - 29 mOhm/sq" \
 	    "magic::gencell sky130::sky130_fd_pr__res_generic_m5" pdk2
+#endif (METAL5)
 
-   magic::add_toolkit_command $layoutframe "MiM cap - 1fF/um^2 (metal3)" \
+#ifdef MIM
+   magic::add_toolkit_command $layoutframe "MiM cap - 2fF/um^2 (metal3)" \
 	    "magic::gencell sky130::sky130_fd_pr__cap_mim_m3_1" pdk2
-   magic::add_toolkit_command $layoutframe "MiM cap - 1fF/um^2 (metal4)" \
+   magic::add_toolkit_command $layoutframe "MiM cap - 2fF/um^2 (metal4)" \
 	    "magic::gencell sky130::sky130_fd_pr__cap_mim_m3_2" pdk2
+#endif (MIM)
    magic::add_toolkit_separator	$layoutframe pdk2
 
    magic::add_toolkit_command $layoutframe "vpp 11.5x11.7 m1-m4, li/m5 shield" \
@@ -205,7 +200,12 @@ proc sky130::addtechmenu {framename} {
    magic::add_toolkit_command $layoutframe "vpp 4.4x4.6 m1-m2 l1 shield" \
 	    "magic::gencell sky130::sky130_fd_pr__cap_vpp_04p4x04p6_m1m2_l1shield" pdk2
 
+   # Additional DRC style for routing only---add this to the DRC menu
    ${layoutframe}.titlebar.mbuttons.drc.toolmenu add command -label "DRC Routing" -command {drc style drc(routing)}
+
+   # Add SPICE import function to File menu
+   ${layoutframe}.titlebar.mbuttons.file.toolmenu insert 4 command -label "Import SPICE" -command {sky130::importspice}
+   ${layoutframe}.titlebar.mbuttons.file.toolmenu insert 4 separator
 
    # Add command entry window by default if enabled
    if {[info exists Opts(cmdentry)]} {
@@ -215,6 +215,22 @@ proc sky130::addtechmenu {framename} {
    }
    if {$Winopts(${framename},cmdentry) == 1} {
       addcommandentry $framename
+   }
+}
+
+#----------------------------------------------------------------
+# Menu callback function to read a SPICE netlist and generate an
+# initial layout using the SKYWATER TECHNAME gencells.
+#----------------------------------------------------------------
+
+proc sky130::importspice {} {
+   global CAD_ROOT
+
+   set Layoutfilename [ tk_getOpenFile -filetypes \
+	    {{SPICE {.spice .spc .spi .ckt .cir .sp \
+	    {.spice .spc .spi .ckt .cir .sp}}} {"All files" {*}}}]
+   if {$Layoutfilename != ""} {
+      magic::netlist_to_layout $Layoutfilename sky130
    }
 }
 
@@ -232,7 +248,7 @@ proc sky130::mcon_draw {{dir default}} {
       return
    }
    suspendall
-   paint lic
+   paint mcon
    pushbox
    if {($w < $h) || ($dir == "vert")} {
        box grow e 0.03um
@@ -305,6 +321,7 @@ proc sky130::via2_draw {} {
    resumeall
 }
 
+#ifdef METAL5
 proc sky130::via3_draw {} {
    set w [magic::i2u [box width]]
    set h [magic::i2u [box height]]
@@ -355,6 +372,7 @@ proc sky130::via4_draw {} {
    popbox
    resumeall
 }
+#endif (METAL5)
 
 proc sky130::subconn_draw {} {
    set w [magic::i2u [box width]]
@@ -728,6 +746,7 @@ proc sky130::compute_aptot {parameters} {
 
 proc sky130::diode_check {parameters} {
 
+    set guard 0
     # Set a local variable for each parameter (e.g., $l, $w, etc.)
     foreach key [dict keys $parameters] {
         set $key [dict get $parameters $key]
@@ -1407,18 +1426,20 @@ proc sky130::sky130_fd_pr__diode_pd2nw_11v0_draw {parameters} {
 # NOTE:  Work in progress.  These values need to be corrected.
 #----------------------------------------------------------------
 
+#ifdef MIM
 proc sky130::sky130_fd_pr__cap_mim_m3_1_defaults {} {
-    return {w 2.00 l 2.00 val 4.0 carea 1.00 cperi 0.17 \
+    return {w 2.00 l 2.00 val 8.0 carea 2.00 cperi 0.19 \
 		nx 1 ny 1 dummy 0 square 0 lmin 2.00 wmin 2.00 \
 		lmax 30.0 wmax 30.0 dc 0 bconnect 1 tconnect 1 \
 		ccov 100}
 }
 proc sky130::sky130_fd_pr__cap_mim_m3_2_defaults {} {
-    return {w 2.00 l 2.00 val 4.0 carea 1.00 cperi 0.17 \
+    return {w 2.00 l 2.00 val 8.0 carea 2.00 cperi 0.19 \
 		nx 1 ny 1 dummy 0 square 0 lmin 2.00 wmin 2.00 \
 		lmax 30.0 wmax 30.0 dc 0 bconnect 1 tconnect 1 \
 		ccov 100}
 }
+#endif (MIM)
 
 
 #----------------------------------------------------------------
@@ -1487,12 +1508,14 @@ proc sky130::cap_convert {parameters} {
     return $pdkparams
 }
 
+#ifdef MIM
 proc sky130::sky130_fd_pr__cap_mim_m3_1_convert {parameters} {
     return [cap_convert $parameters]
 }
 proc sky130::sky130_fd_pr__cap_mim_m3_2_convert {parameters} {
     return [cap_convert $parameters]
 }
+#endif (MIM)
 
 #----------------------------------------------------------------
 # capacitor: Interactively specifies the fixed layout parameters
@@ -1531,12 +1554,14 @@ proc sky130::cap_dialog {device parameters} {
     # magic::add_checkbox dummy "Add dummy" $parameters
 }
 
+#ifdef MIM
 proc sky130::sky130_fd_pr__cap_mim_m3_1_dialog {parameters} {
     sky130::cap_dialog sky130_fd_pr__cap_mim_m3_1 $parameters
 }
 proc sky130::sky130_fd_pr__cap_mim_m3_2_dialog {parameters} {
     sky130::cap_dialog sky130_fd_pr__cap_mim_m3_2 $parameters
 }
+#endif (MIM)
 
 #----------------------------------------------------------------
 # Capacitor total capacitance computation
@@ -2040,6 +2065,7 @@ proc sky130::cap_draw {parameters} {
 
 #----------------------------------------------------------------
 
+#ifdef MIM
 proc sky130::sky130_fd_pr__cap_mim_m3_1_draw {parameters} {
     set newdict [dict create \
 	    top_type 		m4 \
@@ -2082,6 +2108,7 @@ proc sky130::sky130_fd_pr__cap_mim_m3_2_draw {parameters} {
     return [sky130::cap_draw $drawdict]
 }
 
+#endif (MIM)
 
 #----------------------------------------------------------------
 # capacitor: Check device parameters for out-of-bounds values
@@ -2163,12 +2190,14 @@ proc sky130::cap_check {parameters} {
     return $parameters
 }
 
+#ifdef MIM
 proc sky130::sky130_fd_pr__cap_mim_m3_1_check {parameters} {
     return [sky130::cap_check $parameters]
 }
 proc sky130::sky130_fd_pr__cap_mim_m3_2_check {parameters} {
     return [sky130::cap_check $parameters]
 }
+#endif (MIM)
 
 #----------------------------------------------------------------
 # Drawn resistors
@@ -2221,7 +2250,7 @@ proc sky130::sky130_fd_pr__res_generic_po_defaults {} {
 		rho 48.2 val 241 dummy 0 dw 0.0 term 0.0 \
 		sterm 0.0 caplen 0.4 snake 0 guard 1 \
 		glc 1 grc 1 gtc 1 gbc 1 roverlap 0 endcov 100 \
-		full_metal 1 hv_guard 0 vias 1 \
+		full_metal 1 hv_guard 0 n_guard 0 vias 1 \
 		viagb 0 viagt 0 viagl 0 viagr 0}
 }
 
@@ -2233,7 +2262,7 @@ proc sky130::sky130_fd_pr__res_high_po_0p35_defaults {} {
 		compatible {sky130_fd_pr__res_high_po_0p35 \
 		sky130_fd_pr__res_high_po_0p69 sky130_fd_pr__res_high_po_1p41 \
 		sky130_fd_pr__res_high_po_2p85 sky130_fd_pr__res_high_po_5p73} \
-		full_metal 1 wmax 0.350 vias 1 \
+		full_metal 1 wmax 0.350 vias 1 n_guard 0 hv_guard 0 \
 		viagb 0 viagt 0 viagl 0 viagr 0}
 }
 proc sky130::sky130_fd_pr__res_high_po_0p69_defaults {} {
@@ -2243,7 +2272,7 @@ proc sky130::sky130_fd_pr__res_high_po_0p69_defaults {} {
 		compatible {sky130_fd_pr__res_high_po_0p35 \
 		sky130_fd_pr__res_high_po_0p69 sky130_fd_pr__res_high_po_1p41 \
 		sky130_fd_pr__res_high_po_2p85 sky130_fd_pr__res_high_po_5p73} \
-		full_metal 1 wmax 0.690 vias 1 \
+		full_metal 1 wmax 0.690 n_guard 0 hv_guard 0 vias 1 \
 		viagb 0 viagt 0 viagl 0 viagr 0}
 }
 proc sky130::sky130_fd_pr__res_high_po_1p41_defaults {} {
@@ -2253,7 +2282,7 @@ proc sky130::sky130_fd_pr__res_high_po_1p41_defaults {} {
 		compatible {sky130_fd_pr__res_high_po_0p35 \
 		sky130_fd_pr__res_high_po_0p69 sky130_fd_pr__res_high_po_1p41 \
 		sky130_fd_pr__res_high_po_2p85 sky130_fd_pr__res_high_po_5p73} \
-		full_metal 1 wmax 1.410 vias 1 \
+		full_metal 1 wmax 1.410 n_guard 0 hv_guard 0 vias 1 \
 		viagb 0 viagt 0 viagl 0 viagr 0}
 }
 proc sky130::sky130_fd_pr__res_high_po_2p85_defaults {} {
@@ -2263,7 +2292,7 @@ proc sky130::sky130_fd_pr__res_high_po_2p85_defaults {} {
 		compatible {sky130_fd_pr__res_high_po_0p35 \
 		sky130_fd_pr__res_high_po_0p69 sky130_fd_pr__res_high_po_1p41 \
 		sky130_fd_pr__res_high_po_2p85 sky130_fd_pr__res_high_po_5p73} \
-		full_metal 1 wmax 2.850 vias 1 \
+		full_metal 1 wmax 2.850 n_guard 0 hv_guard 0 vias 1 \
 		viagb 0 viagt 0 viagl 0 viagr 0}
 }
 proc sky130::sky130_fd_pr__res_high_po_5p73_defaults {} {
@@ -2273,64 +2302,64 @@ proc sky130::sky130_fd_pr__res_high_po_5p73_defaults {} {
 		compatible {sky130_fd_pr__res_high_po_0p35 \
 		sky130_fd_pr__res_high_po_0p69 sky130_fd_pr__res_high_po_1p41 \
 		sky130_fd_pr__res_high_po_2p85 sky130_fd_pr__res_high_po_5p73} \
-		full_metal 1 wmax 5.730 vias 1 \
+		full_metal 1 wmax 5.730 n_guard 0 hv_guard 0 vias 1 \
 		viagb 0 viagt 0 viagl 0 viagr 0}
 }
 
 # "term" is rho * 0.06, the distance between xpc edge and CONT.
 proc sky130::sky130_fd_pr__res_xhigh_po_0p35_defaults {} {
     return {w 0.350 l 0.50 m 1 nx 1 wmin 0.350 lmin 0.50 \
-		rho 2000 val 2875.143 dummy 0 dw 0.0 term 120 \
+		rho 2000 val 2875.143 dummy 0 dw 0.0 term 19.188 \
 		sterm 0.0 caplen 0 wmax 0.350 \
 		guard 1 glc 1 grc 1 gtc 1 gbc 1 \
 		compatible {sky130_fd_pr__res_xhigh_po_0p35 \
 		sky130_fd_pr__res_xhigh_po_0p69 sky130_fd_pr__res_xhigh_po_1p41 \
 		sky130_fd_pr__res_xhigh_po_2p85 sky130_fd_pr__res_xhigh_po_5p73} \
-		full_metal 1 vias 1 \
+		full_metal 1 n_guard 0 hv_guard 0 vias 1 \
 		viagb 0 viagt 0 viagl 0 viagr 0}
 }
 proc sky130::sky130_fd_pr__res_xhigh_po_0p69_defaults {} {
     return {w 0.690 l 1.00 m 1 nx 1 wmin 0.690 lmin 0.50 \
-		rho 2000 val 2898.600 dummy 0 dw 0.0 term 120 \
+		rho 2000 val 2898.600 dummy 0 dw 0.0 term 19.188 \
 		sterm 0.0 caplen 0 wmax 0.690 \
 		guard 1 glc 1 grc 1 gtc 1 gbc 1 \
 		compatible {sky130_fd_pr__res_xhigh_po_0p35 \
 		sky130_fd_pr__res_xhigh_po_0p69 sky130_fd_pr__res_xhigh_po_1p41 \
 		sky130_fd_pr__res_xhigh_po_2p85 sky130_fd_pr__res_xhigh_po_5p73} \
-		full_metal 1 vias 1 \
+		full_metal 1 n_guard 0 hv_guard 0 vias 1 \
 		viagb 0 viagt 0 viagl 0 viagr 0}
 }
 proc sky130::sky130_fd_pr__res_xhigh_po_1p41_defaults {} {
     return {w 1.410 l 2.00 m 1 nx 1 wmin 1.410 lmin 0.50 \
-		rho 2000 val 2836.900 dummy 0 dw 0.0 term 120 \
+		rho 2000 val 2836.900 dummy 0 dw 0.0 term 19.188 \
 		sterm 0.0 caplen 0 wmax 1.410 \
 		guard 1 glc 1 grc 1 gtc 1 gbc 1 \
 		compatible {sky130_fd_pr__res_xhigh_po_0p35 \
 		sky130_fd_pr__res_xhigh_po_0p69 sky130_fd_pr__res_xhigh_po_1p41 \
 		sky130_fd_pr__res_xhigh_po_2p85 sky130_fd_pr__res_xhigh_po_5p73} \
-		full_metal 1 vias 1 \
+		full_metal 1 n_guard 0 hv_guard 0 vias 1 \
 		viagb 0 viagt 0 viagl 0 viagr 0}
 }
 proc sky130::sky130_fd_pr__res_xhigh_po_2p85_defaults {} {
     return {w 2.850 l 3.00 m 1 nx 1 wmin 2.850 lmin 0.50 \
-		rho 2000 val 2105.300 dummy 0 dw 0.0 term 120 \
+		rho 2000 val 2105.300 dummy 0 dw 0.0 term 19.188 \
 		sterm 0.0 caplen 0 wmax 2.850 \
 		guard 1 glc 1 grc 1 gtc 1 gbc 1 \
 		compatible {sky130_fd_pr__res_xhigh_po_0p35 \
 		sky130_fd_pr__res_xhigh_po_0p69 sky130_fd_pr__res_xhigh_po_1p41 \
 		sky130_fd_pr__res_xhigh_po_2p85 sky130_fd_pr__res_xhigh_po_5p73} \
-		full_metal 1 vias 1 \
+		full_metal 1 n_guard 0 hv_guard 0 vias 1 \
 		viagb 0 viagt 0 viagl 0 viagr 0}
 }
 proc sky130::sky130_fd_pr__res_xhigh_po_5p73_defaults {} {
     return {w 5.730 l 6.00 m 1 nx 1 wmin 5.730 lmin 0.50 \
-		rho 2000 val 2094.200 dummy 0 dw 0.0 term 120 \
+		rho 2000 val 2094.200 dummy 0 dw 0.0 term 19.188 \
 		sterm 0.0 caplen 0 wmax 5.730 \
 		guard 1 glc 1 grc 1 gtc 1 gbc 1 \
 		compatible {sky130_fd_pr__res_xhigh_po_0p35 \
 		sky130_fd_pr__res_xhigh_po_0p69 sky130_fd_pr__res_xhigh_po_1p41 \
 		sky130_fd_pr__res_xhigh_po_2p85 sky130_fd_pr__res_xhigh_po_5p73} \
-		full_metal 1 vias 1 \
+		full_metal 1 n_guard 0 hv_guard 0 vias 1 \
 		viagb 0 viagt 0 viagl 0 viagr 0}
 }
 
@@ -2429,6 +2458,7 @@ proc sky130::sky130_fd_pr__res_generic_m3_defaults {} {
 # back-end metal stack.
 #----------------------------------------------------------------
 
+#ifdef METAL5
 proc sky130::sky130_fd_pr__res_generic_m4_defaults {} {
     return {w 0.300 l 0.300 m 1 nx 1 wmin 0.30 lmin 0.30 \
 		rho 0.047 val 0.047 dummy 0 dw 0.0 term 0.0 \
@@ -2439,6 +2469,7 @@ proc sky130::sky130_fd_pr__res_generic_m5_defaults {} {
 		rho 0.029 val 0.029 dummy 0 dw 0.0 term 0.0 \
 		roverlap 0}
 }
+#endif (METAL5)
 
 #----------------------------------------------------------------
 # resistor: Conversion from SPICE netlist parameters to toolkit
@@ -2535,12 +2566,14 @@ proc sky130::sky130_fd_pr__res_generic_m3_convert {parameters} {
     return [sky130::res_convert $parameters]
 }
 
+#ifdef METAL5
 proc sky130::sky130_fd_pr__res_generic_m4_convert {parameters} {
     return [sky130::res_convert $parameters]
 }
 proc sky130::sky130_fd_pr__res_generic_m5_convert {parameters} {
     return [sky130::res_convert $parameters]
 }
+#endif (METAL5)
 
 #----------------------------------------------------------------
 # resistor: Interactively specifies the fixed layout parameters
@@ -2586,6 +2619,9 @@ proc sky130::res_dialog {device parameters} {
     	if {[dict exists $parameters hv_guard]} {
 	    magic::add_checkbox hv_guard "High-voltage guard ring" $parameters
 	}
+	if {[dict exists $parameters n_guard]} {
+	    magic::add_checkbox n_guard "N-well connected guard ring" $parameters
+	}
 	if {[dict exists $parameters full_metal]} {
 	    magic::add_checkbox full_metal "Full metal guard ring" $parameters
 	}
@@ -2601,6 +2637,7 @@ proc sky130::res_dialog {device parameters} {
 	if {[dict exists $parameters gbc]} {
 	    magic::add_checkbox gbc "Add bottom guard ring contact" $parameters
 	}
+
 
     	magic::add_entry viagb "Bottom guard ring via coverage \[+/-\](%)" $parameters
     	magic::add_entry viagt "Top guard ring via coverage \[+/-\](%)" $parameters
@@ -2693,12 +2730,14 @@ proc sky130::sky130_fd_pr__res_generic_m3_dialog {parameters} {
     sky130::res_dialog sky130_fd_pr__res_generic_m3 $parameters
 }
 
+#ifdef METAL5
 proc sky130::sky130_fd_pr__res_generic_m4_dialog {parameters} {
     sky130::res_dialog sky130_fd_pr__res_generic_m4 $parameters
 }
 proc sky130::sky130_fd_pr__res_generic_m5_dialog {parameters} {
     sky130::res_dialog sky130_fd_pr__res_generic_m5 $parameters
 }
+#endif (METAL5)
 
 #----------------------------------------------------------------
 # Resistor: Draw a single device in straight geometry
@@ -3184,16 +3223,41 @@ proc sky130::sky130_fd_pr__res_generic_po_draw {parameters} {
         set $key [dict get $sky130::ruleset $key]
     }
 
+    # Handle options related to guard ring type (high/low voltage, nwell/psub)
     if {[dict exists $parameters hv_guard]} {
-    	if {[dict get $parameters hv_guard] == 1} {
+	set use_hv_guard [dict get $parameters hv_guard]
+    } else {
+	set use_hv_guard 0
+    }
+    if {[dict exists $parameters n_guard]} {
+	set use_n_guard [dict get $parameters n_guard]
+    } else {
+	set use_n_guard 0
+    }
+
+    if {$use_hv_guard == 1} {
+	if {$use_n_guard == 1} {
 	    set gdifftype mvnsd
 	    set gdiffcont mvnsc
-	    set gsurround 0.33
 	} else {
+	    set gdifftype mvpsd
+	    set gdiffcont mvpsc
+	}
+	set gsurround 0.33
+    } else {
+	if {$use_n_guard == 1} {
 	    set gdifftype nsd
 	    set gdiffcont nsc
-	    set gsurround $sub_surround
+	} else {
+	    set gdifftype psd
+	    set gdiffcont psc
 	}
+	set gsurround $sub_surround
+    }
+    if {$use_n_guard == 1} {
+	set gsubtype nwell
+    } else {
+	set gsubtype psub
     }
 
     set newdict [dict create \
@@ -3202,7 +3266,7 @@ proc sky130::sky130_fd_pr__res_generic_po_draw {parameters} {
 	    end_contact_type	pc \
 	    plus_diff_type	$gdifftype \
 	    plus_contact_type	$gdiffcont \
-	    sub_type		nwell \
+	    sub_type		$gsubtype \
 	    guard_sub_surround	$gsurround \
 	    end_surround	$poly_surround \
 	    end_spacing		0.48 \
@@ -3227,22 +3291,64 @@ proc sky130::sky130_fd_pr__res_high_po_0p35_draw {parameters} {
         set $key [dict get $sky130::ruleset $key]
     }
 
+    # Handle options related to guard ring type (high/low voltage, nwell/psub)
+    if {[dict exists $parameters hv_guard]} {
+	set use_hv_guard [dict get $parameters hv_guard]
+    } else {
+	set use_hv_guard 0
+    }
+    if {[dict exists $parameters n_guard]} {
+	set use_n_guard [dict get $parameters n_guard]
+    } else {
+	set use_n_guard 0
+    }
+
+    if {$use_hv_guard == 1} {
+	if {$use_n_guard == 1} {
+	    set gdifftype mvnsd
+	    set gdiffcont mvnsc
+	} else {
+	    set gdifftype mvpsd
+	    set gdiffcont mvpsc
+	}
+	set gsurround 0.33
+    } else {
+	if {$use_n_guard == 1} {
+	    set gdifftype nsd
+	    set gdiffcont nsc
+	} else {
+	    set gdifftype psd
+	    set gdiffcont psc
+	}
+	set gsurround $sub_surround
+    }
+    if {$use_n_guard == 1} {
+	set gsubtype nwell
+	set gresdiff_spacing 0.785
+	set gresdiff_end 0.525
+    } else {
+	set gsubtype psub
+	set gresdiff_spacing 0.48
+	set gresdiff_end 0.48
+    }
+
     set newdict [dict create \
 	    res_type		ppres \
 	    res_idtype		res0p35 \
 	    end_type 		xpc \
 	    end_contact_type	xpc \
 	    end_contact_size	0 \
-	    plus_diff_type	psd \
-	    plus_contact_type	psc \
-	    sub_type		psub \
+	    plus_diff_type	$gdifftype \
+	    plus_contact_type	$gdiffcont \
+	    sub_type		$gsubtype \
+	    guard_sub_surround	$gsurround \
 	    end_surround	$poly_surround \
-	    end_spacing		0.48 \
+	    end_spacing		$gresdiff_end \
 	    end_to_end_space	0.52 \
 	    end_contact_size	0.19 \
 	    res_to_endcont	1.985 \
 	    res_spacing		1.24 \
-	    res_diff_spacing	0.48 \
+	    res_diff_spacing	$gresdiff_spacing \
 	    mask_clearance	0.52 \
 	    overlap_compress	0.36 \
     ]
@@ -3257,22 +3363,64 @@ proc sky130::sky130_fd_pr__res_high_po_0p69_draw {parameters} {
         set $key [dict get $sky130::ruleset $key]
     }
 
+    # Handle options related to guard ring type (high/low voltage, nwell/psub)
+    if {[dict exists $parameters hv_guard]} {
+	set use_hv_guard [dict get $parameters hv_guard]
+    } else {
+	set use_hv_guard 0
+    }
+    if {[dict exists $parameters n_guard]} {
+	set use_n_guard [dict get $parameters n_guard]
+    } else {
+	set use_n_guard 0
+    }
+
+    if {$use_hv_guard == 1} {
+	if {$use_n_guard == 1} {
+	    set gdifftype mvnsd
+	    set gdiffcont mvnsc
+	} else {
+	    set gdifftype mvpsd
+	    set gdiffcont mvpsc
+	}
+	set gsurround 0.33
+    } else {
+	if {$use_n_guard == 1} {
+	    set gdifftype nsd
+	    set gdiffcont nsc
+	} else {
+	    set gdifftype psd
+	    set gdiffcont psc
+	}
+	set gsurround $sub_surround
+    }
+    if {$use_n_guard == 1} {
+	set gsubtype nwell
+	set gresdiff_spacing 0.615
+	set gresdiff_end 0.525
+    } else {
+	set gsubtype psub
+	set gresdiff_spacing 0.48
+	set gresdiff_end 0.48
+    }
+
     set newdict [dict create \
 	    res_type		ppres \
 	    res_idtype		res0p69 \
 	    end_type 		xpc \
 	    end_contact_type	xpc \
 	    end_contact_size	0 \
-	    plus_diff_type	psd \
-	    plus_contact_type	psc \
-	    sub_type		psub \
+	    plus_diff_type	$gdifftype \
+	    plus_contact_type	$gdiffcont \
+	    sub_type		$gsubtype \
+	    guard_sub_surround	$gsurround \
 	    end_surround	$poly_surround \
-	    end_spacing		0.48 \
+	    end_spacing		$gresdiff_end \
 	    end_to_end_space	0.52 \
 	    end_contact_size	0.19 \
 	    res_to_endcont	1.985 \
 	    res_spacing		1.24 \
-	    res_diff_spacing	0.48 \
+	    res_diff_spacing	$gresdiff_spacing \
 	    mask_clearance	0.52 \
 	    overlap_compress	0.36 \
     ]
@@ -3287,22 +3435,64 @@ proc sky130::sky130_fd_pr__res_high_po_1p41_draw {parameters} {
         set $key [dict get $sky130::ruleset $key]
     }
 
+    # Handle options related to guard ring type (high/low voltage, nwell/psub)
+    if {[dict exists $parameters hv_guard]} {
+	set use_hv_guard [dict get $parameters hv_guard]
+    } else {
+	set use_hv_guard 0
+    }
+    if {[dict exists $parameters n_guard]} {
+	set use_n_guard [dict get $parameters n_guard]
+    } else {
+	set use_n_guard 0
+    }
+
+    if {$use_hv_guard == 1} {
+	if {$use_n_guard == 1} {
+	    set gdifftype mvnsd
+	    set gdiffcont mvnsc
+	} else {
+	    set gdifftype mvpsd
+	    set gdiffcont mvpsc
+	}
+	set gsurround 0.33
+    } else {
+	if {$use_n_guard == 1} {
+	    set gdifftype nsd
+	    set gdiffcont nsc
+	} else {
+	    set gdifftype psd
+	    set gdiffcont psc
+	}
+	set gsurround $sub_surround
+    }
+    if {$use_n_guard == 1} {
+	set gsubtype nwell
+	set gresdiff_spacing 0.525
+	set gresdiff_end 0.525
+    } else {
+	set gsubtype psub
+	set gresdiff_spacing 0.48
+	set gresdiff_end 0.48
+    }
+
     set newdict [dict create \
 	    res_type		ppres \
 	    res_idtype		res1p41 \
 	    end_type 		xpc \
 	    end_contact_type	xpc \
 	    end_contact_size	0 \
-	    plus_diff_type	psd \
-	    plus_contact_type	psc \
-	    sub_type		psub \
+	    plus_diff_type	$gdifftype \
+	    plus_contact_type	$gdiffcont \
+	    sub_type		$gsubtype \
+	    guard_sub_surround	$gsurround \
 	    end_surround	$poly_surround \
-	    end_spacing		0.48 \
+	    end_spacing		$gresdiff_end \
 	    end_to_end_space	0.52 \
 	    end_contact_size	0.19 \
 	    res_to_endcont	1.985 \
 	    res_spacing		1.24 \
-	    res_diff_spacing	0.48 \
+	    res_diff_spacing	$gresdiff_spacing \
 	    mask_clearance	0.52 \
 	    overlap_compress	0.36 \
     ]
@@ -3317,22 +3507,64 @@ proc sky130::sky130_fd_pr__res_high_po_2p85_draw {parameters} {
         set $key [dict get $sky130::ruleset $key]
     }
 
+    # Handle options related to guard ring type (high/low voltage, nwell/psub)
+    if {[dict exists $parameters hv_guard]} {
+	set use_hv_guard [dict get $parameters hv_guard]
+    } else {
+	set use_hv_guard 0
+    }
+    if {[dict exists $parameters n_guard]} {
+	set use_n_guard [dict get $parameters n_guard]
+    } else {
+	set use_n_guard 0
+    }
+
+    if {$use_hv_guard == 1} {
+	if {$use_n_guard == 1} {
+	    set gdifftype mvnsd
+	    set gdiffcont mvnsc
+	} else {
+	    set gdifftype mvpsd
+	    set gdiffcont mvpsc
+	}
+	set gsurround 0.33
+    } else {
+	if {$use_n_guard == 1} {
+	    set gdifftype nsd
+	    set gdiffcont nsc
+	} else {
+	    set gdifftype psd
+	    set gdiffcont psc
+	}
+	set gsurround $sub_surround
+    }
+    if {$use_n_guard == 1} {
+	set gsubtype nwell
+	set gresdiff_spacing 0.525
+	set gresdiff_end 0.525
+    } else {
+	set gsubtype psub
+	set gresdiff_spacing 0.48
+	set gresdiff_end 0.48
+    }
+
     set newdict [dict create \
 	    res_type		ppres \
 	    res_idtype		res2p85 \
 	    end_type 		xpc \
 	    end_contact_type	xpc \
 	    end_contact_size	0 \
-	    plus_diff_type	psd \
-	    plus_contact_type	psc \
-	    sub_type		psub \
+	    plus_diff_type	$gdifftype \
+	    plus_contact_type	$gdiffcont \
+	    sub_type		$gsubtype \
+	    guard_sub_surround	$gsurround \
 	    end_surround	$poly_surround \
-	    end_spacing		0.48 \
+	    end_spacing		$gresdiff_end \
 	    end_to_end_space	0.52 \
 	    end_contact_size	0.19 \
 	    res_to_endcont	1.985 \
 	    res_spacing		1.24 \
-	    res_diff_spacing	0.48 \
+	    res_diff_spacing	$gresdiff_spacing \
 	    mask_clearance	0.52 \
 	    overlap_compress	0.36 \
     ]
@@ -3347,22 +3579,64 @@ proc sky130::sky130_fd_pr__res_high_po_5p73_draw {parameters} {
         set $key [dict get $sky130::ruleset $key]
     }
 
+    # Handle options related to guard ring type (high/low voltage, nwell/psub)
+    if {[dict exists $parameters hv_guard]} {
+	set use_hv_guard [dict get $parameters hv_guard]
+    } else {
+	set use_hv_guard 0
+    }
+    if {[dict exists $parameters n_guard]} {
+	set use_n_guard [dict get $parameters n_guard]
+    } else {
+	set use_n_guard 0
+    }
+
+    if {$use_hv_guard == 1} {
+	if {$use_n_guard == 1} {
+	    set gdifftype mvnsd
+	    set gdiffcont mvnsc
+	} else {
+	    set gdifftype mvpsd
+	    set gdiffcont mvpsc
+	}
+	set gsurround 0.33
+    } else {
+	if {$use_n_guard == 1} {
+	    set gdifftype nsd
+	    set gdiffcont nsc
+	} else {
+	    set gdifftype psd
+	    set gdiffcont psc
+	}
+	set gsurround $sub_surround
+    }
+    if {$use_n_guard == 1} {
+	set gsubtype nwell
+	set gresdiff_spacing 0.525
+	set gresdiff_end 0.525
+    } else {
+	set gsubtype psub
+	set gresdiff_spacing 0.48
+	set gresdiff_end 0.48
+    }
+
     set newdict [dict create \
 	    res_type		ppres \
 	    res_idtype		res5p73 \
 	    end_type 		xpc \
 	    end_contact_type	xpc \
 	    end_contact_size	0 \
-	    plus_diff_type	psd \
-	    plus_contact_type	psc \
-	    sub_type		psub \
+	    plus_diff_type	$gdifftype \
+	    plus_contact_type	$gdiffcont \
+	    sub_type		$gsubtype \
+	    guard_sub_surround	$gsurround \
 	    end_surround	$poly_surround \
-	    end_spacing		0.48 \
+	    end_spacing		$gresdiff_end \
 	    end_to_end_space	0.52 \
 	    end_contact_size	0.19 \
 	    res_to_endcont	1.985 \
 	    res_spacing		1.24 \
-	    res_diff_spacing	0.48 \
+	    res_diff_spacing	$gresdiff_spacing \
 	    mask_clearance	0.52 \
 	    overlap_compress	0.36 \
     ]
@@ -3379,22 +3653,64 @@ proc sky130::sky130_fd_pr__res_xhigh_po_0p35_draw {parameters} {
         set $key [dict get $sky130::ruleset $key]
     }
 
+    # Handle options related to guard ring type (high/low voltage, nwell/psub)
+    if {[dict exists $parameters hv_guard]} {
+	set use_hv_guard [dict get $parameters hv_guard]
+    } else {
+	set use_hv_guard 0
+    }
+    if {[dict exists $parameters n_guard]} {
+	set use_n_guard [dict get $parameters n_guard]
+    } else {
+	set use_n_guard 0
+    }
+
+    if {$use_hv_guard == 1} {
+	if {$use_n_guard == 1} {
+	    set gdifftype mvnsd
+	    set gdiffcont mvnsc
+	} else {
+	    set gdifftype mvpsd
+	    set gdiffcont mvpsc
+	}
+	set gsurround 0.33
+    } else {
+	if {$use_n_guard == 1} {
+	    set gdifftype nsd
+	    set gdiffcont nsc
+	} else {
+	    set gdifftype psd
+	    set gdiffcont psc
+	}
+	set gsurround $sub_surround
+    }
+    if {$use_n_guard == 1} {
+	set gsubtype nwell
+	set gresdiff_spacing 0.785
+	set gresdiff_end 0.525
+    } else {
+	set gsubtype psub
+	set gresdiff_spacing 0.48
+	set gresdiff_end 0.48
+    }
+
     set newdict [dict create \
 	    res_type		xpres \
 	    res_idtype		res0p35 \
 	    end_type 		xpc \
 	    end_contact_type	xpc \
 	    end_contact_size	0 \
-	    plus_diff_type	psd \
-	    plus_contact_type	psc \
-	    sub_type		psub \
+	    plus_diff_type	$gdifftype \
+	    plus_contact_type	$gdiffcont \
+	    sub_type		$gsubtype \
+	    guard_sub_surround	$gsurround \
 	    end_surround	$poly_surround \
-	    end_spacing		0.48 \
+	    end_spacing		$gresdiff_end \
 	    end_to_end_space	0.52 \
 	    end_contact_size	0.19 \
 	    res_to_endcont	1.985 \
 	    res_spacing		1.24 \
-	    res_diff_spacing	0.48 \
+	    res_diff_spacing	$gresdiff_spacing \
 	    mask_clearance	0.52 \
 	    overlap_compress	0.36 \
     ]
@@ -3409,22 +3725,64 @@ proc sky130::sky130_fd_pr__res_xhigh_po_0p69_draw {parameters} {
         set $key [dict get $sky130::ruleset $key]
     }
 
+    # Handle options related to guard ring type (high/low voltage, nwell/psub)
+    if {[dict exists $parameters hv_guard]} {
+	set use_hv_guard [dict get $parameters hv_guard]
+    } else {
+	set use_hv_guard 0
+    }
+    if {[dict exists $parameters n_guard]} {
+	set use_n_guard [dict get $parameters n_guard]
+    } else {
+	set use_n_guard 0
+    }
+
+    if {$use_hv_guard == 1} {
+	if {$use_n_guard == 1} {
+	    set gdifftype mvnsd
+	    set gdiffcont mvnsc
+	} else {
+	    set gdifftype mvpsd
+	    set gdiffcont mvpsc
+	}
+	set gsurround 0.33
+    } else {
+	if {$use_n_guard == 1} {
+	    set gdifftype nsd
+	    set gdiffcont nsc
+	} else {
+	    set gdifftype psd
+	    set gdiffcont psc
+	}
+	set gsurround $sub_surround
+    }
+    if {$use_n_guard == 1} {
+	set gsubtype nwell
+	set gresdiff_spacing 0.615
+	set gresdiff_end 0.525
+    } else {
+	set gsubtype psub
+	set gresdiff_spacing 0.48
+	set gresdiff_end 0.48
+    }
+
     set newdict [dict create \
 	    res_type		xpres \
 	    res_idtype		res0p69 \
 	    end_type 		xpc \
 	    end_contact_type	xpc \
 	    end_contact_size	0 \
-	    plus_diff_type	psd \
-	    plus_contact_type	psc \
-	    sub_type		psub \
+	    plus_diff_type	$gdifftype \
+	    plus_contact_type	$gdiffcont \
+	    sub_type		$gsubtype \
+	    guard_sub_surround	$gsurround \
 	    end_surround	$poly_surround \
-	    end_spacing		0.48 \
+	    end_spacing		$gresdiff_end \
 	    end_to_end_space	0.52 \
 	    end_contact_size	0.19 \
 	    res_to_endcont	1.985 \
 	    res_spacing		1.24 \
-	    res_diff_spacing	0.48 \
+	    res_diff_spacing	$gresdiff_spacing \
 	    mask_clearance	0.52 \
 	    overlap_compress	0.36 \
     ]
@@ -3439,22 +3797,64 @@ proc sky130::sky130_fd_pr__res_xhigh_po_1p41_draw {parameters} {
         set $key [dict get $sky130::ruleset $key]
     }
 
+    # Handle options related to guard ring type (high/low voltage, nwell/psub)
+    if {[dict exists $parameters hv_guard]} {
+	set use_hv_guard [dict get $parameters hv_guard]
+    } else {
+	set use_hv_guard 0
+    }
+    if {[dict exists $parameters n_guard]} {
+	set use_n_guard [dict get $parameters n_guard]
+    } else {
+	set use_n_guard 0
+    }
+
+    if {$use_hv_guard == 1} {
+	if {$use_n_guard == 1} {
+	    set gdifftype mvnsd
+	    set gdiffcont mvnsc
+	} else {
+	    set gdifftype mvpsd
+	    set gdiffcont mvpsc
+	}
+	set gsurround 0.33
+    } else {
+	if {$use_n_guard == 1} {
+	    set gdifftype nsd
+	    set gdiffcont nsc
+	} else {
+	    set gdifftype psd
+	    set gdiffcont psc
+	}
+	set gsurround $sub_surround
+    }
+    if {$use_n_guard == 1} {
+	set gsubtype nwell
+	set gresdiff_spacing 0.525
+	set gresdiff_end 0.525
+    } else {
+	set gsubtype psub
+	set gresdiff_spacing 0.48
+	set gresdiff_end 0.48
+    }
+
     set newdict [dict create \
 	    res_type		xpres \
 	    res_idtype		res1p41 \
 	    end_type 		xpc \
 	    end_contact_type	xpc \
 	    end_contact_size	0 \
-	    plus_diff_type	psd \
-	    plus_contact_type	psc \
-	    sub_type		psub \
+	    plus_diff_type	$gdifftype \
+	    plus_contact_type	$gdiffcont \
+	    sub_type		$gsubtype \
+	    guard_sub_surround	$gsurround \
 	    end_surround	$poly_surround \
-	    end_spacing		0.48 \
+	    end_spacing		$gresdiff_end \
 	    end_to_end_space	0.52 \
 	    end_contact_size	0.19 \
 	    res_to_endcont	1.985 \
 	    res_spacing		1.24 \
-	    res_diff_spacing	0.48 \
+	    res_diff_spacing	$gresdiff_spacing \
 	    mask_clearance	0.52 \
 	    overlap_compress	0.36 \
     ]
@@ -3469,22 +3869,64 @@ proc sky130::sky130_fd_pr__res_xhigh_po_2p85_draw {parameters} {
         set $key [dict get $sky130::ruleset $key]
     }
 
+    # Handle options related to guard ring type (high/low voltage, nwell/psub)
+    if {[dict exists $parameters hv_guard]} {
+	set use_hv_guard [dict get $parameters hv_guard]
+    } else {
+	set use_hv_guard 0
+    }
+    if {[dict exists $parameters n_guard]} {
+	set use_n_guard [dict get $parameters n_guard]
+    } else {
+	set use_n_guard 0
+    }
+
+    if {$use_hv_guard == 1} {
+	if {$use_n_guard == 1} {
+	    set gdifftype mvnsd
+	    set gdiffcont mvnsc
+	} else {
+	    set gdifftype mvpsd
+	    set gdiffcont mvpsc
+	}
+	set gsurround 0.33
+    } else {
+	if {$use_n_guard == 1} {
+	    set gdifftype nsd
+	    set gdiffcont nsc
+	} else {
+	    set gdifftype psd
+	    set gdiffcont psc
+	}
+	set gsurround $sub_surround
+    }
+    if {$use_n_guard == 1} {
+	set gsubtype nwell
+	set gresdiff_spacing 0.525
+	set gresdiff_end 0.525
+    } else {
+	set gsubtype psub
+	set gresdiff_spacing 0.48
+	set gresdiff_end 0.48
+    }
+
     set newdict [dict create \
 	    res_type		xpres \
 	    res_idtype		res2p85 \
 	    end_type 		xpc \
 	    end_contact_type	xpc \
 	    end_contact_size	0 \
-	    plus_diff_type	psd \
-	    plus_contact_type	psc \
-	    sub_type		psub \
+	    plus_diff_type	$gdifftype \
+	    plus_contact_type	$gdiffcont \
+	    sub_type		$gsubtype \
+	    guard_sub_surround	$gsurround \
 	    end_surround	$poly_surround \
-	    end_spacing		0.48 \
+	    end_spacing		$gresdiff_end \
 	    end_to_end_space	0.52 \
 	    end_contact_size	0.19 \
 	    res_to_endcont	1.985 \
 	    res_spacing		1.24 \
-	    res_diff_spacing	0.48 \
+	    res_diff_spacing	$gresdiff_spacing \
 	    mask_clearance	0.52 \
 	    overlap_compress	0.36 \
     ]
@@ -3499,22 +3941,64 @@ proc sky130::sky130_fd_pr__res_xhigh_po_5p73_draw {parameters} {
         set $key [dict get $sky130::ruleset $key]
     }
 
+    # Handle options related to guard ring type (high/low voltage, nwell/psub)
+    if {[dict exists $parameters hv_guard]} {
+	set use_hv_guard [dict get $parameters hv_guard]
+    } else {
+	set use_hv_guard 0
+    }
+    if {[dict exists $parameters n_guard]} {
+	set use_n_guard [dict get $parameters n_guard]
+    } else {
+	set use_n_guard 0
+    }
+
+    if {$use_hv_guard == 1} {
+	if {$use_n_guard == 1} {
+	    set gdifftype mvnsd
+	    set gdiffcont mvnsc
+	} else {
+	    set gdifftype mvpsd
+	    set gdiffcont mvpsc
+	}
+	set gsurround 0.33
+    } else {
+	if {$use_n_guard == 1} {
+	    set gdifftype nsd
+	    set gdiffcont nsc
+	} else {
+	    set gdifftype psd
+	    set gdiffcont psc
+	}
+	set gsurround $sub_surround
+    }
+    if {$use_n_guard == 1} {
+	set gsubtype nwell
+	set gresdiff_spacing 0.525
+	set gresdiff_end 0.525
+    } else {
+	set gsubtype psub
+	set gresdiff_spacing 0.48
+	set gresdiff_end 0.48
+    }
+
     set newdict [dict create \
 	    res_type		xpres \
 	    res_idtype		res5p73 \
 	    end_type 		xpc \
 	    end_contact_type	xpc \
 	    end_contact_size	0 \
-	    plus_diff_type	psd \
-	    plus_contact_type	psc \
-	    sub_type		psub \
+	    plus_diff_type	$gdifftype \
+	    plus_contact_type	$gdiffcont \
+	    sub_type		$gsubtype \
+	    guard_sub_surround	$gsurround \
 	    end_surround	$poly_surround \
-	    end_spacing		0.48 \
+	    end_spacing		$gresdiff_end \
 	    end_to_end_space	0.52 \
 	    end_contact_size	0.19 \
 	    res_to_endcont	1.985 \
 	    res_spacing		1.24 \
-	    res_diff_spacing	0.48 \
+	    res_diff_spacing	$gresdiff_spacing \
 	    mask_clearance	0.52 \
 	    overlap_compress	0.36 \
     ]
@@ -3764,6 +4248,7 @@ proc sky130::sky130_fd_pr__res_generic_m3_draw {parameters} {
 
 #----------------------------------------------------------------
 
+#ifdef METAL5
 proc sky130::sky130_fd_pr__res_generic_m4_draw {parameters} {
 
     # Set a local variable for each rule in ruleset
@@ -3804,6 +4289,7 @@ proc sky130::sky130_fd_pr__res_generic_m5_draw {parameters} {
     set drawdict [dict merge $sky130::ruleset $newdict $parameters]
     return [sky130::res_draw $drawdict]
 }
+#endif (METAL5)
 
 #----------------------------------------------------------------
 # Resistor total length computation
@@ -4063,12 +4549,14 @@ proc sky130::sky130_fd_pr__res_generic_m3_check {parameters} {
     return [sky130::res_check sky130_fd_pr__res_generic_m3 $parameters]
 }
 
+#ifdef METAL5
 proc sky130::sky130_fd_pr__res_generic_m4_check {parameters} {
     return [sky130::res_check sky130_fd_pr__res_generic_m4 $parameters]
 }
 proc sky130::sky130_fd_pr__res_generic_m5_check {parameters} {
     return [sky130::res_check sky130_fd_pr__res_generic_m5 $parameters]
 }
+#endif (METAL5)
 
 #----------------------------------------------------------------
 # MOS defaults:
@@ -4100,7 +4588,9 @@ proc sky130::sky130_fd_pr__pfet_01v8_defaults {} {
 		topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.15 wmin 0.42 \
 		compatible {sky130_fd_pr__pfet_01v8 \
 		sky130_fd_pr__pfet_01v8_lvt sky130_fd_pr__pfet_01v8_hvt \
-		sky130_fd_pr__pfet_g5v0d10v5} full_metal 1}
+		sky130_fd_pr__pfet_g5v0d10v5} full_metal 1 \
+		viasrc 100 viadrn 100 viagate 100 \
+		viagb 0 viagr 0 viagl 0 viagt 0}
 }
 
 proc sky130::sky130_fd_pr__pfet_01v8_lvt_defaults {} {
@@ -4109,7 +4599,9 @@ proc sky130::sky130_fd_pr__pfet_01v8_lvt_defaults {} {
 		topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.35 wmin 0.42 \
 		compatible {sky130_fd_pr__pfet_01v8 \
 		sky130_fd_pr__pfet_01v8_lvt sky130_fd_pr__pfet_01v8_hvt \
-		sky130_fd_pr__pfet_g5v0d10v5} full_metal 1}
+		sky130_fd_pr__pfet_g5v0d10v5} full_metal 1 \
+		viasrc 100 viadrn 100 viagate 100 \
+		viagb 0 viagr 0 viagl 0 viagt 0}
 }
 
 proc sky130::sky130_fd_pr__pfet_01v8_hvt_defaults {} {
@@ -4118,7 +4610,9 @@ proc sky130::sky130_fd_pr__pfet_01v8_hvt_defaults {} {
 		topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.15 wmin 0.42 \
 		compatible {sky130_fd_pr__pfet_01v8 \
 		sky130_fd_pr__pfet_01v8_lvt sky130_fd_pr__pfet_01v8_hvt \
-		sky130_fd_pr__pfet_g5v0d10v5} full_metal 1}
+		sky130_fd_pr__pfet_g5v0d10v5} full_metal 1 \
+		viasrc 100 viadrn 100 viagate 100 \
+		viagb 0 viagr 0 viagl 0 viagt 0}
 }
 
 proc sky130::sky130_fd_pr__pfet_g5v0d10v5_defaults {} {
@@ -4127,7 +4621,9 @@ proc sky130::sky130_fd_pr__pfet_g5v0d10v5_defaults {} {
 		topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.50 wmin 0.42 \
 		compatible {sky130_fd_pr__pfet_01v8 \
 		sky130_fd_pr__pfet_01v8_lvt sky130_fd_pr__pfet_01v8_hvt \
-		sky130_fd_pr__pfet_g5v0d10v5} full_metal 1}
+		sky130_fd_pr__pfet_g5v0d10v5} full_metal 1 \
+		viasrc 100 viadrn 100 viagate 100 \
+		viagb 0 viagr 0 viagl 0 viagt 0}
 }
 
 #----------------------------------------------------------------
@@ -4141,7 +4637,8 @@ proc sky130::sky130_fd_pr__nfet_01v8_defaults {} {
 		topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.15 wmin 0.42 \
 		compatible {sky130_fd_pr__nfet_01v8 sky130_fd_pr__nfet_01v8_lvt \
 		sky130_fd_bs_flash__special_sonosfet_star \
-		sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt} \
+		sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt \
+		sky130_fd_pr__nfet_03v3_nvt} \
 		full_metal 1 viasrc 100 viadrn 100 viagate 100 \
 		viagb 0 viagr 0 viagl 0 viagt 0}
 }
@@ -4152,7 +4649,8 @@ proc sky130::sky130_fd_pr__nfet_01v8_lvt_defaults {} {
 		topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.15 wmin 0.42 \
 		compatible {sky130_fd_pr__nfet_01v8 sky130_fd_pr__nfet_01v8_lvt \
 		sky130_fd_bs_flash__special_sonosfet_star \
-		sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt} \
+		sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt \
+		sky130_fd_pr__nfet_03v3_nvt} \
 		full_metal 1 viasrc 100 viadrn 100 viagate 100 \
 		viagb 0 viagr 0 viagl 0 viagt 0}
 }
@@ -4163,7 +4661,8 @@ proc sky130::sky130_fd_bs_flash__special_sonosfet_star_defaults {} {
 		topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.15 wmin 0.42 \
 		compatible {sky130_fd_pr__nfet_01v8 sky130_fd_pr__nfet_01v8_lvt \
 		sky130_fd_bs_flash__special_sonosfet_star \
-		sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt} \
+		sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt \
+		sky130_fd_pr__nfet_03v3_nvt} \
 		full_metal 1 viasrc 100 viadrn 100 viagate 100 \
 		viagb 0 viagr 0 viagl 0 viagt 0}
 }
@@ -4174,18 +4673,32 @@ proc sky130::sky130_fd_pr__nfet_g5v0d10v5_defaults {} {
 		topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.50 wmin 0.42 \
 		compatible {sky130_fd_pr__nfet_01v8 sky130_fd_pr__nfet_01v8_lvt \
 		sky130_fd_bs_flash__special_sonosfet_star \
-		sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt} \
+		sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt \
+		sky130_fd_pr__nfet_03v3_nvt} \
 		full_metal 1 viasrc 100 viadrn 100 viagate 100 \
 		viagb 0 viagr 0 viagl 0 viagt 0}
 }
 
 proc sky130::sky130_fd_pr__nfet_05v0_nvt_defaults {} {
+    return {w 0.42 l 0.90 m 1 nf 1 diffcov 100 polycov 100 \
+		guard 1 glc 1 grc 1 gtc 1 gbc 1 tbcov 100 rlcov 100 \
+		topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.90 wmin 0.42 \
+		compatible {sky130_fd_pr__nfet_01v8 sky130_fd_pr__nfet_01v8_lvt \
+		sky130_fd_bs_flash__special_sonosfet_star \
+		sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt \
+		sky130_fd_pr__nfet_03v3_nvt} \
+		full_metal 1 viasrc 100 viadrn 100 viagate 100 \
+		viagb 0 viagr 0 viagl 0 viagt 0}
+}
+
+proc sky130::sky130_fd_pr__nfet_03v3_nvt_defaults {} {
     return {w 0.42 l 0.50 m 1 nf 1 diffcov 100 polycov 100 \
 		guard 1 glc 1 grc 1 gtc 1 gbc 1 tbcov 100 rlcov 100 \
 		topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.50 wmin 0.42 \
 		compatible {sky130_fd_pr__nfet_01v8 sky130_fd_pr__nfet_01v8_lvt \
 		sky130_fd_bs_flash__special_sonosfet_star \
-		sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt} \
+		sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt \
+		sky130_fd_pr__nfet_03v3_nvt} \
 		full_metal 1 viasrc 100 viadrn 100 viagate 100 \
 		viagb 0 viagr 0 viagl 0 viagt 0}
 }
@@ -4289,6 +4802,10 @@ proc sky130::sky130_fd_pr__nfet_05v0_nvt_convert {parameters} {
     return [sky130::mos_convert $parameters]
 }
 
+proc sky130::sky130_fd_pr__nfet_03v3_nvt_convert {parameters} {
+    return [sky130::mos_convert $parameters]
+}
+
 proc sky130::sky130_fd_pr__pfet_01v8_convert {parameters} {
     return [sky130::mos_convert $parameters]
 }
@@ -4388,6 +4905,10 @@ proc sky130::sky130_fd_pr__nfet_g5v0d10v5_dialog {parameters} {
 
 proc sky130::sky130_fd_pr__nfet_05v0_nvt_dialog {parameters} {
     sky130::mos_dialog sky130_fd_pr__nfet_05v0_nvt $parameters
+}
+
+proc sky130::sky130_fd_pr__nfet_03v3_nvt_dialog {parameters} {
+    sky130::mos_dialog sky130_fd_pr__nfet_03v3_nvt $parameters
 }
 
 proc sky130::sky130_fd_pr__pfet_01v8_dialog {parameters} {
@@ -5535,6 +6056,24 @@ proc sky130::sky130_fd_pr__nfet_05v0_nvt_draw {parameters} {
     return [sky130::mos_draw $drawdict]
 }
 
+proc sky130::sky130_fd_pr__nfet_03v3_nvt_draw {parameters} {
+    set newdict [dict create \
+	    gate_type		nnfet \
+	    diff_type 		mvndiff \
+	    diff_contact_type	mvndc \
+	    plus_diff_type	mvpsd \
+	    plus_contact_type	mvpsc \
+	    poly_type		poly \
+	    poly_contact_type	pc \
+	    sub_type		psub \
+	    diff_spacing	0.30 \
+	    diff_tap_space	0.38 \
+	    diff_gate_space	0.38 \
+    ]
+    set drawdict [dict merge $sky130::ruleset $newdict $parameters]
+    return [sky130::mos_draw $drawdict]
+}
+
 #------------------------
 # MOS varactor (1.8V)
 #------------------------
@@ -5793,6 +6332,10 @@ proc sky130::sky130_fd_pr__nfet_05v0_nvt_check {parameters} {
    return [sky130::mos_check sky130_fd_pr__nfet_05v0_nvt $parameters]
 }
 
+proc sky130::sky130_fd_pr__nfet_03v3_nvt_check {parameters} {
+   return [sky130::mos_check sky130_fd_pr__nfet_03v3_nvt $parameters]
+}
+
 proc sky130::sky130_fd_pr__pfet_01v8_check {parameters} {
    return [sky130::mos_check sky130_fd_pr__pfet_01v8 $parameters]
 }
@@ -5849,7 +6392,8 @@ proc sky130::sky130_fd_pr__cap_var_check {parameters} {
 #
 # sky130_fd_pr__rf_npn_05v5_W1p00L1p00
 # sky130_fd_pr__rf_npn_05v5_W1p00L2p00
-# sky130_fd_pr__pnp_05v5_W3p40L3p40
+# sky130_fd_pr__rf_pnp_05v5_W3p40L3p40
+# sky130_fd_pr__rf_pnp_05v5_W0p68L0p68
 #
 # Parallel Plate Capacitors:
 #
@@ -5871,7 +6415,11 @@ proc sky130::sky130_fd_pr__rf_npn_05v5_W1p00L2p00_defaults {} {
     return {nx 1 ny 1 deltax 0 deltay 0 nocell 1 xstep 7.03 ystep 8.03}
 }
 
-proc sky130::sky130_fd_pr__pnp_05v5_W3p40L3p40_defaults {} {
+proc sky130::sky130_fd_pr__rf_pnp_05v5_W0p68L0p68_defaults {} {
+    return {nx 1 ny 1 deltax 0 deltay 0 nocell 1 xstep 3.72 ystep 3.72}
+}
+
+proc sky130::sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_defaults {} {
     return {nx 1 ny 1 deltax 0 deltay 0 nocell 1 xstep 6.44 ystep 6.44}
 }
 
@@ -5924,7 +6472,11 @@ proc sky130::sky130_fd_pr__rf_npn_05v5_W1p00L2p00_convert {parameters} {
     return [sky130::fixed_convert $parameters]
 }
 
-proc sky130::sky130_fd_pr__pnp_05v5_W3p40L3p40_convert {parameters} {
+proc sky130::sky130_fd_pr__rf_pnp_05v5_W0p68L0p68_convert {parameters} {
+    return [sky130::fixed_convert $parameters]
+}
+
+proc sky130::sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_convert {parameters} {
     return [sky130::fixed_convert $parameters]
 }
 
@@ -6004,7 +6556,11 @@ proc sky130::sky130_fd_pr__rf_npn_05v5_W1p00L2p00_dialog {parameters} {
     sky130::fixed_dialog $parameters
 }
 
-proc sky130::sky130_fd_pr__pnp_05v5_W3p40L3p40_dialog {parameters} {
+proc sky130::sky130_fd_pr__rf_pnp_05v5_W0p68L0p68_dialog {parameters} {
+    sky130::fixed_dialog $parameters
+}
+
+proc sky130::sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_dialog {parameters} {
     sky130::fixed_dialog $parameters
 }
 
@@ -6079,8 +6635,12 @@ proc sky130::sky130_fd_pr__rf_npn_05v5_W1p00L2p00_draw {parameters} {
     return [sky130::fixed_draw sky130_fd_pr__rf_npn_05v5_W1p00L2p00 $parameters]
 }
 
-proc sky130::sky130_fd_pr__pnp_05v5_W3p40L3p40_draw {parameters} {
-    return [sky130::fixed_draw sky130_fd_pr__pnp_05v5_W3p40L3p40 $parameters]
+proc sky130::sky130_fd_pr__rf_pnp_05v5_W0p68L0p68_draw {parameters} {
+    return [sky130::fixed_draw sky130_fd_pr__rf_pnp_05v5_W0p68L0p68 $parameters]
+}
+
+proc sky130::sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_draw {parameters} {
+    return [sky130::fixed_draw sky130_fd_pr__rf_pnp_05v5_W3p40L3p40 $parameters]
 }
 
 proc sky130::sky130_fd_pr__rf_test_coil1 {parameters} {
@@ -6166,11 +6726,11 @@ proc sky130::sky130_fd_pr__rf_npn_05v5_W1p00L2p00_check {parameters} {
     return [sky130::fixed_check $parameters]
 }
 
-proc sky130::sky130_fd_pr__pnp_05v5_W0p68L0p68_check {parameters} {
+proc sky130::sky130_fd_pr__rf_pnp_05v5_W0p68L0p68_check {parameters} {
     return [sky130::fixed_check $parameters]
 }
 
-proc sky130::sky130_fd_pr__pnp_05v5_W3p40L3p40_check {parameters} {
+proc sky130::sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_check {parameters} {
     return [sky130::fixed_check $parameters]
 }
 
@@ -6198,277 +6758,3 @@ proc sky130::sky130_fd_pr__cap_vpp_08p6x07p8_m1m2_lishield_check {parameters} {
 proc sky130::sky130_fd_pr__cap_vpp_04p4x04p6_m1m2_lishield_check {parameters} {
     return [sky130::fixed_check $parameters]
 }
-#-------------------------------------------------------------------
-# General-purpose routines for the PDK script in all technologies
-#-------------------------------------------------------------------
-# 
-#----------------------------------------
-# Number Conversion Functions
-#----------------------------------------
-
-#---------------------
-# Microns to Lambda
-#---------------------
-proc magic::u2l {micron} {
-    set techlambda [magic::tech lambda]
-    set tech1 [lindex $techlambda 1]
-    set tech0 [lindex $techlambda 0]
-    set tscale [expr {$tech1 / $tech0}]
-    set lambdaout [expr {((round([magic::cif scale output] * 10000)) / 10000.0)}]
-    return [expr $micron / ($lambdaout*$tscale) ]
-}
-
-#---------------------
-# Lambda to Microns
-#---------------------
-proc magic::l2u {lambda} {
-    set techlambda [magic::tech lambda]
-    set tech1 [lindex $techlambda 1] ; set tech0 [lindex $techlambda 0]
-    set tscale [expr {$tech1 / $tech0}]
-    set lambdaout [expr {((round([magic::cif scale output] * 10000)) / 10000.0)}]
-    return [expr $lambda * $lambdaout * $tscale ]
-}
-
-#---------------------
-# Internal to Microns
-#---------------------
-proc magic::i2u { value } {
-    return [expr {((round([magic::cif scale output] * 10000)) / 10000.0) * $value}]
-}
-
-#---------------------
-# Microns to Internal
-#---------------------
-proc magic::u2i {value} {
-    return [expr {$value / ((round([magic::cif scale output] * 10000)) / 10000.0)}]
-}
-
-#---------------------
-# Float to Spice 
-#---------------------
-proc magic::float2spice {value} { 
-    if {$value >= 1.0e+6} { 
-	set exponent 1e+6
-	set unit "meg"
-    } elseif {$value >= 1.0e+3} { 
-	set exponent 1e+3
-	set unit "k"
-    } elseif { $value >= 1} { 
-	set exponent 1
-	set unit ""
-    } elseif {$value >= 1.0e-3} { 
-	set exponent 1e-3
-	set unit "m"
-    } elseif {$value >= 1.0e-6} { 
-	set exponent 1e-6
-	set unit "u"
-    } elseif {$value >= 1.0e-9} { 
-	set exponent 1e-9
-	set unit "n"
-    } elseif {$value >= 1.0e-12} { 
-	set exponent 1e-12
-	set unit "p"
-    } elseif {$value >= 1.0e-15} { 
-	set exponent 1e-15
-	set unit "f"
-    } else {
-	set exponent 1e-18
-	set unit "a"
-    }
-    set val [expr $value / $exponent]
-    set val [expr int($val * 1000) / 1000.0]
-    if {$val == 0} {set unit ""}
-    return $val$unit
-}
-
-#---------------------
-# Spice to Float
-#---------------------
-proc magic::spice2float {value {faultval 0.0}} { 
-    # Remove trailing units, at least for some common combinations
-    set value [string tolower $value]
-    set value [string map {um u nm n uF n nF n pF p aF a} $value]
-    set value [string map {meg "* 1.0e6" k "* 1.0e3" m "* 1.0e-3" u "* 1.0e-6" \
-		 n "* 1.0 e-9" p "* 1.0e-12" f "* 1.0e-15" a "* 1.0e-15"} $value]
-    if {[catch {set rval [expr $value]}]} {
-	puts stderr "Value is not numeric!"
-	set rval $faultval
-    }
-    return $rval
-}
-
-#---------------------
-# Numeric Precision
-#---------------------
-proc magic::3digitpastdecimal {value} {
-    set new [expr int([expr $value * 1000 + 0.5 ]) / 1000.0]
-    return $new
-}
-
-#-------------------------------------------------------------------
-# File Access Functions
-#-------------------------------------------------------------------
-
-#-------------------------------------------------------------------
-# Ensures that a cell name does not already exist, either in
-# memory or on disk. Modifies the name until it does.
-#-------------------------------------------------------------------
-proc magic:cellnameunique {cellname} {
-    set i 0
-    set newname $cellname
-    while {[cellname list exists $newname] != 0 || [magic::searchcellondisk $newname] != 0} {
-	incr i
-	set newname ${cellname}_$i
-    }
-    return $newname
-}
-
-#-------------------------------------------------------------------
-# Looks to see if a cell exists on disk
-#-------------------------------------------------------------------
-proc magic::searchcellondisk {name} {
-    set rlist {}
-    foreach dir [path search] {
-	set ftry [file join $dir ${name}.mag]
-	if [file exists $ftry] {
-	    return 1
-	}
-    }
-    return 0
-} 
-
-#-------------------------------------------------------------------
-# Checks to see if a cell already exists on disk or in memory
-#-------------------------------------------------------------------
-proc magic::iscellnameunique {cellname} {
-    if {[cellname list exists $cellname] == 0 && [magic::searchcellondisk $cellname] == 0} { 
-	return 1
-    } else {
-	return 0
-    }
-}
-
-#--------------------------------------------------------------
-# Procedure that checks the user's "ip" subdirectory on startup
-# and adds each one's maglef subdirectory to the path.
-#--------------------------------------------------------------
-
-proc magic::query_mylib_ip {} {
-    global TECHPATH
-    global env
-    if [catch {set home $env(SUDO_USER)}] {
-        set home $env(USER)
-    }
-    set homedir /home/${home}
-    set ip_dirs [glob -directory ${homedir}/design/ip *]
-    set proj_dir [pwd]
-    set config_dir .config
-    set info_dir ${proj_dir}/${config_dir}
-    if {![file exists ${info_dir}]} {
-	set config_dir .ef-config
-	set info_dir ${proj_dir}/${config_dir}
-    }
-
-    set info_file ${info_dir}/info
-    set depends [dict create]
-    if {![catch {open $info_file r} ifd]} {
-        set depsec false
-        while {[gets $ifd line] >= 0} {
-	    if {[string first dependencies: $line] >= 0} {
-	        set depsec true
-	    }
-	    if {$depsec} {
-		if {[string first version: $line] >= 0} {
-		    if {$ipname != ""} {
-			set ipvers [string trim [lindex [split $line] 1] ']
-			dict set depends $ipname $ipvers
-			set ipname ""
-		    } else {
-			puts stderr "Badly formatted info file in ${config_dir}!"
-		    }
-		} else {
-		    set ipname [string trim $line :]
-		}
-	    }
-	}
-    }
-
-    foreach dir $ip_dirs {
-	# Version handling:  version dependencies are found in
-	# ${config_dir}/info.  For all other IP, use the most recent
-	# version number.
-	set ipname [lindex [file split $dir] end]
-	if {![catch {set version [dict get $depends $ipname]}]} {
-	    if {[file isdirectory ${dir}/${version}/maglef]} {
-		addpath ${dir}/${version}/maglef
-		continue
-	    } else {
-		puts stderr "ERROR:  Dependency ${ipname} version ${version} does not exist"
-	    }
-	}
-
-	# Secondary directory is the version number.  Use the highest
-	# version available.
-
-	set sub_dirs {}
-        catch {set sub_dirs [glob -directory $dir *]}
-	set maxver 0.0
-	foreach subdir $sub_dirs {
-	    set vidx [string last / $subdir]
-	    incr vidx
-	    set version [string range $subdir $vidx end]
-	    if {$version > $maxver} {
-		set maxver $version
-	    }
-	}
-	if {[file exists ${dir}/${maxver}/maglef]} {
-	    # Compatibility rule:  foundry name must match.
-	    # Get foundry name from ${config_dir}/techdir symbolic link reference
-	    if {[file exists ${dir}/${maxver}/${config_dir}/techdir]} {
-		set technodedir [file link ${dir}/${maxver}/${config_dir}/techdir]
-		set nidx [string last / $technodedir]
-		set techdir [string range $technodedir 0 $nidx-1]
-		if {$techdir == $TECHPATH} {
-		    addpath ${dir}/${maxver}/maglef
-		}
-	    }
-	}
-    }
-}
-
-#--------------------------------------------------------------
-# Procedure that checks the user's design directory on startup
-# and adds each one's mag subdirectory to the path.
-#--------------------------------------------------------------
-
-proc magic::query_my_projects {} {
-    global TECHPATH
-    global env
-    if [catch {set home $env(SUDO_USER)}] {
-        set home $env(USER)
-    }
-    set homedir /home/${home}
-    set proj_dirs [glob -directory ${homedir}/design *]
-    foreach dir $proj_dirs {
-	# Compatibility rule:  foundry name must match.
-	# Get foundry name from ${config_dir}/techdir symbolic link reference
-	if {[file exists ${dir}/mag]} {
-	    set config_dir .config
-	    set tech_dir ${dir}/${config_dir}
-	    if {![file exists ${tech_dir}]} {
-		set config_dir .ef-config
-		set tech_dir ${dir}/${config_dir}
-	    }
-	    if {[file exists ${dir}/${config_dir}/techdir]} {
-		set technodedir [file link ${dir}/${config_dir}/techdir]
-		set nidx [string last / $technodedir]
-		set techdir [string range $technodedir 0 $nidx-1]
-		if {$techdir == $TECHPATH} {
-		    addpath ${dir}/mag
-		}
-	    }
-	}
-    }
-}
-
-#----------------------------------------------------------------
