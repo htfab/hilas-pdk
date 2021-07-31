@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1627744303
+timestamp 1627759641
 << error_s >>
 rect 84 86 134 97
 rect 134 80 168 86
@@ -12,11 +12,9 @@ rect 84 44 134 55
 rect 685 51 690 56
 rect 233 43 250 48
 rect 417 41 467 50
-rect 60 35 77 36
 rect 574 35 602 51
 rect 716 35 744 51
 rect 155 24 205 35
-rect 60 16 77 17
 rect 345 15 396 25
 rect 313 10 332 15
 rect 525 14 553 31
@@ -85,9 +83,9 @@ rect 157 70 164 80
 rect 181 78 370 87
 rect 181 70 192 78
 rect 157 63 192 70
-rect 60 52 78 62
-rect 77 35 78 52
-rect 60 17 78 35
+rect 60 53 78 62
+rect 77 36 78 53
+rect 60 17 78 36
 rect 225 43 233 60
 rect 250 43 258 60
 rect 225 18 250 43
@@ -103,17 +101,17 @@ rect 229 1 285 7
 rect 211 -10 285 1
 << viali >>
 rect 164 70 181 87
-rect 60 35 77 52
+rect 60 36 77 53
 rect 60 0 77 17
 << metal1 >>
-rect 53 52 82 119
+rect 53 53 82 119
 rect 157 92 189 95
 rect 157 66 160 92
 rect 186 66 189 92
 rect 157 65 189 66
-rect 53 35 60 52
-rect 77 35 82 52
-rect 53 17 82 35
+rect 53 36 60 53
+rect 77 36 82 53
+rect 53 17 82 36
 rect 53 0 60 17
 rect 77 0 82 17
 rect 53 -40 82 0

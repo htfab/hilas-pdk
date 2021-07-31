@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1627744303
+timestamp 1627758336
 << error_s >>
 rect -937 567 -887 578
 rect -865 567 -815 578
@@ -20,14 +20,6 @@ rect 790 504 819 505
 rect 896 475 900 505
 rect -865 463 -815 475
 rect 819 463 869 475
-rect -690 459 -673 461
-rect -296 460 -279 462
-rect 283 460 300 462
-rect 677 459 694 461
-rect -690 440 -673 442
-rect -296 441 -279 443
-rect 283 441 300 443
-rect 677 440 694 442
 rect -865 423 -815 435
 rect 819 423 869 435
 rect -896 393 -892 423
@@ -46,14 +38,6 @@ rect -937 320 -887 331
 rect -865 320 -815 331
 rect 819 320 869 331
 rect 891 320 941 331
-rect -297 314 -280 316
-rect 284 314 301 316
-rect -690 300 -673 302
-rect 677 300 694 302
-rect -297 295 -280 297
-rect 284 295 301 297
-rect -690 281 -673 283
-rect 677 281 694 283
 rect -937 266 -887 277
 rect -865 266 -815 277
 rect 819 266 869 277
@@ -161,13 +145,13 @@ rect -1004 90 -997 108
 rect 1000 90 1009 108
 rect -1004 47 -997 65
 rect 1000 47 1009 65
-use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_0
-timestamp 1627744303
-transform 1 0 264 0 1 378
-box -264 -382 744 223
 use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_1
-timestamp 1627744303
+timestamp 1627758336
 transform -1 0 -260 0 1 378
+box -264 -382 744 223
+use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_0
+timestamp 1627758336
+transform 1 0 264 0 1 378
 box -264 -382 744 223
 << labels >>
 rlabel metal1 441 591 479 601 0 GATE2

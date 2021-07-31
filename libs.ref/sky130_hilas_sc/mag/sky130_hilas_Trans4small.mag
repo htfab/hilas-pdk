@@ -1,100 +1,112 @@
 magic
 tech sky130A
-timestamp 1627744303
-<< error_s >>
-rect 309 425 336 432
-rect 309 383 336 390
-rect 309 333 336 340
-rect 309 291 336 298
-rect 309 241 336 248
-rect 309 199 336 206
-rect 301 135 340 138
-rect 301 93 340 96
-rect 301 39 340 42
-rect 301 -3 340 0
-rect 301 -57 340 -54
-rect 301 -99 340 -96
+timestamp 1627755811
 << nwell >>
-rect 401 -87 455 159
+rect 401 -18 455 159
+rect 395 -45 455 -18
+rect 401 -87 455 -45
 rect 383 -132 455 -87
 rect 198 -150 455 -132
 << psubdiff >>
-rect 397 368 439 375
-rect 397 351 410 368
-rect 427 351 439 368
-rect 397 344 439 351
+rect 397 368 441 375
+rect 397 351 412 368
+rect 429 351 441 368
+rect 397 344 441 351
 << nsubdiff >>
-rect 396 -110 437 -105
-rect 396 -127 408 -110
-rect 425 -127 437 -110
-rect 396 -132 437 -127
+rect 395 -23 437 -18
+rect 395 -40 407 -23
+rect 424 -40 437 -23
+rect 395 -45 437 -40
 << psubdiffcont >>
-rect 410 351 427 368
+rect 412 351 429 368
 << nsubdiffcont >>
-rect 408 -127 425 -110
+rect 407 -40 424 -23
 << locali >>
+rect 224 362 245 387
 rect 411 376 428 381
 rect 410 373 428 376
 rect 410 368 453 373
-rect 427 351 453 368
+rect 410 351 412 368
+rect 429 351 453 368
 rect 410 348 453 351
-rect 410 342 427 348
-rect 396 -127 408 -110
-rect 425 -127 438 -110
+rect 410 345 429 348
+rect 411 342 429 345
+rect 399 -40 407 -23
+rect 424 -40 432 -23
 << metal1 >>
-rect 409 -150 431 438
+rect 409 -23 431 438
+rect 407 -40 431 -23
+rect 409 -150 431 -40
 rect 449 -150 471 438
 << metal2 >>
-rect 191 398 198 415
+rect 191 421 198 425
+rect 191 398 205 421
 rect 389 399 471 416
-rect 191 357 198 374
-rect 191 306 198 323
+rect 191 357 207 374
+rect 191 306 205 323
 rect 389 307 471 324
-rect 191 265 198 282
-rect 191 214 198 231
+rect 191 265 208 282
+rect 191 228 205 231
+rect 191 214 212 228
 rect 389 215 471 232
-rect 191 173 198 190
-rect 191 112 198 131
+rect 191 173 207 190
+rect 191 112 205 131
 rect 391 105 471 125
-rect 191 70 198 89
-rect 191 16 198 35
+rect 191 70 205 89
+rect 191 33 205 35
+rect 191 16 198 33
 rect 391 9 471 29
-rect 191 -26 198 -7
-rect 191 -80 198 -61
+rect 191 -9 205 -7
+rect 191 -26 198 -9
+rect 191 -66 205 -61
+rect 191 -80 198 -66
 rect 390 -87 471 -67
-rect 191 -122 198 -103
+rect 191 -105 205 -103
+rect 191 -122 206 -105
+use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_2
+timestamp 1627753048
+transform 1 0 319 0 1 -82
+box -121 -55 82 44
+use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_1
+timestamp 1627753048
+transform 1 0 319 0 1 17
+box -121 -55 82 44
+use sky130_hilas_li2m1  sky130_hilas_li2m1_0
+timestamp 1627744303
+transform 0 1 412 -1 0 -30
+box -10 -8 13 21
+use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_0
+timestamp 1627753048
+transform 1 0 319 0 1 116
+box -121 -55 82 44
+use sky130_hilas_li2m2  sky130_hilas_li2m2_2
+timestamp 1627744303
+transform 1 0 217 0 1 175
+box -14 -15 20 18
+use sky130_hilas_li2m2  sky130_hilas_li2m2_1
+timestamp 1627744303
+transform 1 0 219 0 1 274
+box -14 -15 20 18
+use sky130_hilas_nFET03a  sky130_hilas_nFET03a_0
+timestamp 1627755346
+transform 1 0 309 0 1 208
+box -111 -41 97 49
 use sky130_hilas_li2m1  sky130_hilas_li2m1_1
 timestamp 1627744303
 transform 1 0 458 0 1 354
 box -10 -8 13 21
-use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1627744303
-transform 0 1 411 -1 0 -120
-box -10 -8 13 21
-use sky130_hilas_nFET03a  sky130_hilas_nFET03a_3
-timestamp 1627744303
-transform 1 0 309 0 1 396
-box -111 -47 97 42
 use sky130_hilas_nFET03a  sky130_hilas_nFET03a_1
+timestamp 1627755346
+transform 1 0 309 0 1 307
+box -111 -41 97 49
+use sky130_hilas_li2m2  sky130_hilas_li2m2_0
 timestamp 1627744303
-transform 1 0 309 0 1 304
-box -111 -47 97 42
-use sky130_hilas_nFET03a  sky130_hilas_nFET03a_0
-timestamp 1627744303
-transform 1 0 309 0 1 212
-box -111 -47 97 42
-use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_2
-timestamp 1627744303
-transform 1 0 319 0 1 -77
-box -121 -55 82 44
-use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_1
-timestamp 1627744303
-transform 1 0 319 0 1 19
-box -121 -55 82 44
-use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_0
-timestamp 1627744303
-transform 1 0 319 0 1 115
-box -121 -55 82 44
+transform 1 0 221 0 1 366
+box -14 -15 20 18
+use sky130_hilas_nFET03a  sky130_hilas_nFET03a_3
+timestamp 1627755346
+transform 1 0 308 0 1 406
+box -111 -41 97 49
 << labels >>
 rlabel metal1 409 -150 431 -141 0 WELL
 port 13 nsew power default
