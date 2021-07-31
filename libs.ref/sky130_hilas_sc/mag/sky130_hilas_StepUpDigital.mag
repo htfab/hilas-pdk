@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1627742263
+timestamp 1627744303
 << error_s >>
 rect 84 86 134 97
 rect 134 80 168 86
@@ -129,7 +129,7 @@ rect 26 67 160 87
 rect 157 66 160 67
 rect 186 66 189 92
 use sky130_hilas_StepUpDigitalPart1  StepUpDigitalPart1_0
-timestamp 1627742263
+timestamp 1627744303
 transform 1 0 7 0 1 0
 box 278 -40 892 119
 << labels >>

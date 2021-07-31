@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1627742263
+timestamp 1627744303
 << error_s >>
 rect 309 425 336 432
 rect 309 383 336 390
@@ -64,35 +64,35 @@ rect 191 -80 198 -61
 rect 390 -87 471 -67
 rect 191 -122 198 -103
 use sky130_hilas_li2m1  sky130_hilas_li2m1_1
-timestamp 1627742263
+timestamp 1627744303
 transform 1 0 458 0 1 354
 box -10 -8 13 21
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1627742263
+timestamp 1627744303
 transform 0 1 411 -1 0 -120
 box -10 -8 13 21
 use sky130_hilas_nFET03a  sky130_hilas_nFET03a_3
-timestamp 1627742263
+timestamp 1627744303
 transform 1 0 309 0 1 396
 box -111 -47 97 42
 use sky130_hilas_nFET03a  sky130_hilas_nFET03a_1
-timestamp 1627742263
+timestamp 1627744303
 transform 1 0 309 0 1 304
 box -111 -47 97 42
 use sky130_hilas_nFET03a  sky130_hilas_nFET03a_0
-timestamp 1627742263
+timestamp 1627744303
 transform 1 0 309 0 1 212
 box -111 -47 97 42
 use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_2
-timestamp 1627742263
+timestamp 1627744303
 transform 1 0 319 0 1 -77
 box -121 -55 82 44
 use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_1
-timestamp 1627742263
+timestamp 1627744303
 transform 1 0 319 0 1 19
 box -121 -55 82 44
 use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_0
-timestamp 1627742263
+timestamp 1627744303
 transform 1 0 319 0 1 115
 box -121 -55 82 44
 << labels >>
