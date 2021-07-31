@@ -2,14 +2,13 @@
 
 ## Techfile:
 ./preproc.py sky130.tech sky130.tech.new\
- -DTECHNAME=sky130\
+ -DTECHNAME=sky130A\
  -DREVISION=9.9999hilas\
  -DMETAL5\
  -DMIM\
  -DREDISTRIBUTION
 
 mv sky130.tech.new sky130.tech
-
 
 
 # remove triple commented lines:
@@ -85,7 +84,7 @@ sed -i 's'\
 # replace TECHNAME
 sed -i 's'\
 '/TECHNAME'\
-'/sky130'\
+'/sky130A'\
 '/g' *.magicrc
 
 ## set techfile version:
