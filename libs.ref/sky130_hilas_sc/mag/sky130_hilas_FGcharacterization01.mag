@@ -1,15 +1,12 @@
 magic
 tech sky130A
-timestamp 1627737364
+timestamp 1627741245
 << error_s >>
 rect 52 825 81 841
 rect 131 825 160 841
 rect 210 825 239 841
 rect 289 825 318 841
-rect 1916 822 1920 839
-rect 2056 822 2060 839
 rect 177 802 194 803
-rect 1455 801 1456 807
 rect 52 791 53 792
 rect 80 791 81 792
 rect 131 791 132 792
@@ -235,8 +232,8 @@ rect 1836 816 1896 822
 rect 1836 799 1840 816
 rect 1857 799 1874 816
 rect 1891 799 1896 816
-rect 1976 816 2036 822
 rect 1836 793 1896 799
+rect 1976 816 2036 822
 rect 1976 799 1981 816
 rect 1998 799 2015 816
 rect 2032 799 2036 816
@@ -462,14 +459,17 @@ rect 1997 673 2014 690
 rect -708 746 -680 796
 rect -705 679 -680 746
 rect -186 716 -137 803
+rect 1477 801 1688 814
 rect -186 714 8 716
 rect 291 714 342 715
 rect 365 714 561 801
-rect 1476 764 1688 814
+rect 1476 764 1688 801
 rect 1751 764 1764 814
+rect 1912 815 1920 831
 rect 1912 793 1932 815
+rect 2053 814 2062 831
 rect 2050 793 2068 814
-rect 1476 750 1528 764
+rect 1476 750 1530 764
 rect 1822 738 1836 793
 rect 1896 738 1932 793
 rect 1960 738 1976 793
@@ -507,6 +507,8 @@ rect 2039 375 2052 430
 << locali >>
 rect 1686 820 1694 837
 rect 1745 820 1753 837
+rect 1916 816 1924 831
+rect 2053 817 2062 831
 rect 1973 816 2073 817
 rect 1832 799 1840 816
 rect 1891 799 1933 816
@@ -735,6 +737,10 @@ use sky130_hilas_nOverlapCap01  sky130_hilas_nOverlapCap01_0
 timestamp 1627737364
 transform 1 0 -795 0 1 395
 box -62 -43 67 86
+use sky130_hilas_FGHugeVaractorCapacitor01  sky130_hilas_FGHugeVaractorCapacitor01_0
+timestamp 1627741245
+transform 1 0 1099 0 1 1077
+box -556 -816 473 -217
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
 timestamp 1627737364
 transform 1 0 466 0 1 281
@@ -755,10 +761,6 @@ use sky130_hilas_pFETdevice01  sky130_hilas_pFETdevice01_0
 timestamp 1627737364
 transform 1 0 224 0 1 655
 box -79 -78 82 43
-use sky130_hilas_FGHugeVaractorCapacitor01  sky130_hilas_FGHugeVaractorCapacitor01_0
-timestamp 1627737364
-transform 1 0 1099 0 1 1077
-box -556 -816 473 -217
 use sky130_hilas_li2m2  sky130_hilas_li2m2_9
 timestamp 1627737364
 transform 1 0 1706 0 1 298
@@ -855,18 +857,18 @@ use sky130_hilas_nDiffThOxContact  sky130_hilas_nDiffThOxContact_0
 timestamp 1627737364
 transform 1 0 1712 0 1 723
 box -26 13 41 42
-use sky130_hilas_poly2li  sky130_hilas_poly2li_4
-timestamp 1627737364
-transform 1 0 2060 0 1 828
-box -9 -14 18 19
 use sky130_hilas_poly2li  sky130_hilas_poly2li_1
 timestamp 1627737364
-transform 1 0 1920 0 1 828
+transform 1 0 1924 0 1 828
 box -9 -14 18 19
 use sky130_hilas_m12m2  sky130_hilas_m12m2_7
 timestamp 1627737364
 transform 1 0 1999 0 1 822
 box -9 -10 23 22
+use sky130_hilas_poly2li  sky130_hilas_poly2li_4
+timestamp 1627737364
+transform 1 0 2064 0 1 828
+box -9 -14 18 19
 << labels >>
 rlabel metal2 2077 305 2083 354 0 VGND
 port 8 nsew ground default
