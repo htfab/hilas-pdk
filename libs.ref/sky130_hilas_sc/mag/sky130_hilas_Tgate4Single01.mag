@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1627737364
+timestamp 1627742263
 << error_s >>
 rect 165 440 205 451
 rect 315 440 355 451
@@ -53,19 +53,19 @@ rect -36 -32 -30 -12
 rect 433 -32 440 -12
 rect -36 -130 -31 -110
 use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_1
-timestamp 1627737364
+timestamp 1627742263
 transform 1 0 227 0 1 40
 box -263 -181 213 -29
 use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_0
-timestamp 1627737364
+timestamp 1627742263
 transform 1 0 227 0 -1 283
 box -263 -181 213 -29
 use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_3
-timestamp 1627737364
+timestamp 1627742263
 transform 1 0 227 0 1 342
 box -263 -181 213 -29
 use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_2
-timestamp 1627737364
+timestamp 1627742263
 transform 1 0 227 0 -1 -19
 box -263 -181 213 -29
 << labels >>

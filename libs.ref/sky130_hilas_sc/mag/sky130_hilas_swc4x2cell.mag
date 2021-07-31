@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1627737364
+timestamp 1627742263
 << error_s >>
 rect -937 567 -887 578
 rect -865 567 -815 578
@@ -162,11 +162,11 @@ rect 1000 90 1009 108
 rect -1004 47 -997 65
 rect 1000 47 1009 65
 use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_0
-timestamp 1627737364
+timestamp 1627742263
 transform 1 0 264 0 1 378
 box -264 -382 744 223
 use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_1
-timestamp 1627737364
+timestamp 1627742263
 transform -1 0 -260 0 1 378
 box -264 -382 744 223
 << labels >>
