@@ -1,40 +1,60 @@
 magic
 tech sky130A
-timestamp 1627255200
+timestamp 1627737364
 << error_s >>
-rect 168 160 174 166
-rect 273 160 279 166
-rect -206 150 -200 156
-rect -153 150 -147 156
-rect -212 100 -206 106
-rect -147 100 -141 106
-rect 162 96 168 102
-rect 279 96 285 102
-rect -206 41 -200 47
-rect -153 41 -147 47
-rect 168 43 174 49
-rect 273 43 279 49
-rect -212 -9 -206 -3
-rect -147 -9 -141 -3
-rect 162 -21 168 -15
-rect 279 -21 285 -15
-rect 168 -142 174 -136
-rect 273 -142 279 -136
-rect -206 -148 -200 -142
-rect -153 -148 -147 -142
-rect -1 -147 16 -143
-rect -212 -198 -206 -192
-rect -147 -198 -141 -192
-rect 162 -206 168 -200
-rect 279 -206 285 -200
-rect 168 -258 174 -252
-rect 273 -258 279 -252
-rect -206 -265 -200 -259
-rect -153 -265 -147 -259
-rect -212 -315 -206 -309
-rect -147 -315 -141 -309
-rect 162 -322 168 -316
-rect 279 -322 285 -316
+rect 555 189 605 200
+rect 627 189 677 200
+rect 523 158 555 159
+rect 555 147 605 158
+rect 627 147 677 158
+rect 555 127 605 139
+rect 526 126 555 127
+rect 632 97 636 127
+rect 555 85 605 97
+rect -2 82 15 84
+rect 400 79 417 81
+rect -2 63 15 65
+rect 400 60 417 62
+rect 555 45 605 57
+rect 526 15 555 16
+rect 632 15 636 45
+rect 555 3 605 15
+rect 555 -16 605 -5
+rect 627 -16 677 -5
+rect 523 -17 555 -16
+rect 401 -39 418 -37
+rect -1 -45 16 -43
+rect 401 -58 418 -56
+rect 555 -58 605 -47
+rect 627 -58 677 -47
+rect -1 -64 16 -62
+rect 401 -73 418 -71
+rect -1 -79 16 -77
+rect 401 -92 418 -90
+rect -1 -98 16 -96
+rect 401 -107 418 -105
+rect -1 -113 16 -111
+rect 555 -112 605 -101
+rect 627 -112 677 -101
+rect 401 -126 418 -124
+rect -1 -132 16 -130
+rect 523 -143 555 -142
+rect -1 -147 16 -145
+rect 555 -154 605 -143
+rect 627 -154 677 -143
+rect 555 -174 605 -162
+rect 526 -175 555 -174
+rect 632 -204 636 -174
+rect 555 -216 605 -204
+rect 555 -255 605 -243
+rect 526 -285 555 -284
+rect 632 -285 636 -255
+rect 555 -297 605 -285
+rect 555 -316 605 -305
+rect 627 -316 677 -305
+rect 523 -317 555 -316
+rect 555 -358 605 -347
+rect 627 -358 677 -347
 << nwell >>
 rect 112 220 335 223
 rect -264 37 -263 160
@@ -215,59 +235,59 @@ rect 733 -288 744 -270
 rect 487 -330 500 -313
 rect 733 -331 744 -313
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 1188 0 1 18
 box -1451 -400 -1278 -210
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_0
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 1188 0 1 135
 box -1451 -400 -1278 -210
 use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_0
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 1069 0 1 14
 box -957 -395 -734 -209
 use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_1
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 1069 0 1 130
 box -957 -395 -734 -209
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_1
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 777 0 1 -428
 box -289 47 -33 232
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_2
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 777 0 -1 -31
 box -289 47 -33 232
 use sky130_hilas_wellContact  sky130_hilas_wellContact_1
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 1185 0 1 293
 box -1449 -441 -1275 -255
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_2
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 1188 0 1 324
 box -1451 -400 -1278 -210
 use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_2
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 1069 0 1 315
 box -957 -395 -734 -209
 use sky130_hilas_wellContact  sky130_hilas_wellContact_0
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 1588 0 1 286
 box -1449 -441 -1275 -255
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_0
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 777 0 1 -128
 box -289 47 -33 232
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 1188 0 1 433
 box -1451 -400 -1278 -210
 use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_3
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 1069 0 1 432
 box -957 -395 -734 -209
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_3
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 777 0 -1 270
 box -289 47 -33 232
 << labels >>
