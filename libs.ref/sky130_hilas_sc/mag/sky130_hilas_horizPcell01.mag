@@ -1,6 +1,16 @@
 magic
 tech sky130A
-timestamp 1627255200
+timestamp 1627737364
+<< error_s >>
+rect -222 173 -172 185
+rect -251 143 -222 144
+rect -145 143 -141 173
+rect -222 131 -172 143
+rect -222 112 -172 123
+rect -150 112 -100 123
+rect -254 111 -222 112
+rect -222 70 -172 81
+rect -150 70 -100 81
 << nwell >>
 rect -289 48 -33 232
 rect -289 47 -34 48
@@ -95,12 +105,12 @@ rect -85 47 -69 112
 rect -289 140 -280 158
 rect -250 140 -33 158
 rect -251 97 -33 115
-use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1627255200
-transform 1 0 -266 0 -1 156
-box -14 -15 20 18
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1627255200
+timestamp 1627737364
 transform 1 0 -266 0 -1 101
+box -14 -15 20 18
+use sky130_hilas_li2m2  sky130_hilas_li2m2_1
+timestamp 1627737364
+transform 1 0 -266 0 -1 156
 box -14 -15 20 18
 << end >>

@@ -1,11 +1,6 @@
 magic
 tech sky130A
-timestamp 1627255200
-<< error_p >>
-rect -1394 -283 -1388 -277
-rect -1341 -283 -1335 -277
-rect -1400 -333 -1394 -327
-rect -1335 -333 -1329 -327
+timestamp 1627737364
 << nwell >>
 rect -1451 -400 -1278 -210
 << mvvaractor >>
