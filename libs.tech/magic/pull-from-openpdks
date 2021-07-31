@@ -14,3 +14,8 @@ chmod +x ./preproc.py
 ./fix-openpdk-template
 
 rm ./preproc.py
+
+mv sky130gds.tech sky130Agds.tech
+mv sky130.tech sky130A.tech
+mv sky130.tcl sky130A.tcl
+mv sky130.magicrc sky130A.magicrc

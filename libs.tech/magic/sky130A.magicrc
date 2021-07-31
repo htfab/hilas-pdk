@@ -1,4 +1,4 @@
-puts stdout "Sourcing design .magicrc for technology sky130 ..."
+puts stdout "Sourcing design .magicrc for technology sky130A ..."
 
 # Put grid on 0.005 pitch.  This is important, as some commands don't
 # rescale the grid automatically (such as lef read?).
@@ -25,13 +25,13 @@ if {[catch {set PDKPATH $env(PDKPATH)}]} {
 }
 
 # loading technology
-tech load $PDKPATH/libs.tech/magic/sky130.tech
+tech load $PDKPATH/libs.tech/magic/sky130A.tech
 
 # load device generator
-source $PDKPATH/libs.tech/magic/sky130.tcl
+source $PDKPATH/libs.tech/magic/sky130A.tcl
 
 # load bind keys (optional)
-# source $PDKPATH/libs.tech/magic/sky130-BindKeys
+# source $PDKPATH/libs.tech/magic/sky130A-BindKeys
 
 # set units to lambda grid 
 snap lambda
