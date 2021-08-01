@@ -1553,7 +1553,7 @@ def check_file_names(path, suffix):
 
     for m in Path(path).glob(suffix):
         if not m.stem.startswith(CONVENTIONS.CELL_PREFIX):
-            edie('filename does not start with "{}":    {}'.format(CONVENTIONS.CELL_PREFIX, m.name))
+            warn('filename does not start with "{}":    {}'.format(CONVENTIONS.CELL_PREFIX, m.name))
 
 
 def check_hand_spice():
