@@ -11,6 +11,28 @@
 mv sky130.tech.new sky130.tech
 
 
+## Tclsh:
+./preproc.py sky130.tcl sky130.tcl.new\
+ -DTECHNAME=sky130A\
+ -DREVISION=9.9999hilas\
+ -DMETAL5\
+ -DMIM\
+ -DREDISTRIBUTION
+
+mv sky130.tcl.new sky130.tcl
+
+## GDS:
+./preproc.py sky130gds.tech sky130gds.tech.new\
+ -DTECHNAME=sky130A\
+ -DREVISION=9.9999hilas\
+ -DMETAL5\
+ -DMIM\
+ -DREDISTRIBUTION
+
+mv sky130gds.tech.new sky130gds.tech
+
+
+
 # remove triple commented lines:
 sed -i \
 '/###.*'\

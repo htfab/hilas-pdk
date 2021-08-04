@@ -143,7 +143,7 @@ idea to start by taking a look at the [Fastlane Page](https://gitlab.com/um-ece/
 
 Description: 5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit, and they would use this cell
 
-Height: 5.970
+Height: 5.990
 <br>
 Width: 16.580
 
@@ -582,7 +582,7 @@ Width: 372.850
 
 Description: 3 small nFETs + 3 small pFETs
 
-Height: 5.880
+Height: 6.050
 <br>
 Width: 2.800
 
@@ -1079,7 +1079,7 @@ Description: None
 
 Height: 5.650
 <br>
-Width: 1.850
+Width: 1.910
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1627,7 +1627,7 @@ Width: 0.890
 
 Description: None
 
-Height: 0.890
+Height: 0.900
 <br>
 Width: 2.080
 
@@ -1785,7 +1785,7 @@ Description: pFET transistor used in DAC block
 
 Height: 1.450
 <br>
-Width: 1.840
+Width: 1.910
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
