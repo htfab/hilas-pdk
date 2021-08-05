@@ -1,20 +1,16 @@
-###
-###     Source file sky130.tcl
-###     Process this file with the preprocessor script
-###
 #-----------------------------------------------------
-# Magic/TCL design kit for SKYWATER TECHNAME
+# Magic/TCL design kit for SKYWATER sky130A
 #-----------------------------------------------------
 # Tim Edwards
 # Revision 1	ALPHA   9/10/2020
 #-----------------------------------------------------
 
 set TECHPATH STAGING_PATH
-if [catch {set PDKPATH}] {set PDKPATH ${TECHPATH}/TECHNAME}
-set PDKNAME TECHNAME
+if [catch {set PDKPATH}] {set PDKPATH ${TECHPATH}/sky130A}
+set PDKNAME sky130A
 # "sky130" is the namespace used for all devices
 set PDKNAMESPACE sky130
-puts stdout "Loading TECHNAME Device Generator Menu ..."
+puts stdout "Loading sky130A Device Generator Menu ..."
 
 # Initialize toolkit menus to the wrapper window
 
@@ -139,12 +135,10 @@ proc sky130::addtechmenu {framename} {
 	    "sky130::via1_draw" pdk1
    magic::add_toolkit_command $layoutframe "via2" \
 	    "sky130::via2_draw" pdk1
-#ifdef METAL5
    magic::add_toolkit_command $layoutframe "via3" \
 	    "sky130::via3_draw" pdk1
    magic::add_toolkit_command $layoutframe "via4" \
 	    "sky130::via4_draw" pdk1
-#endif (METAL5)
    
 
    magic::add_toolkit_menu $layoutframe "Devices 2" pdk2
@@ -176,19 +170,15 @@ proc sky130::addtechmenu {framename} {
 	    "magic::gencell sky130::sky130_fd_pr__res_generic_m2" pdk2
    magic::add_toolkit_command $layoutframe "m3 metal resistor - 47 mOhm/sq" \
 	    "magic::gencell sky130::sky130_fd_pr__res_generic_m3" pdk2
-#ifdef METAL5
    magic::add_toolkit_command $layoutframe "m4 metal resistor - 47 mOhm/sq" \
 	    "magic::gencell sky130::sky130_fd_pr__res_generic_m4" pdk2
    magic::add_toolkit_command $layoutframe "m5 metal resistor - 29 mOhm/sq" \
 	    "magic::gencell sky130::sky130_fd_pr__res_generic_m5" pdk2
-#endif (METAL5)
 
-#ifdef MIM
    magic::add_toolkit_command $layoutframe "MiM cap - 2fF/um^2 (metal3)" \
 	    "magic::gencell sky130::sky130_fd_pr__cap_mim_m3_1" pdk2
    magic::add_toolkit_command $layoutframe "MiM cap - 2fF/um^2 (metal4)" \
 	    "magic::gencell sky130::sky130_fd_pr__cap_mim_m3_2" pdk2
-#endif (MIM)
    magic::add_toolkit_separator	$layoutframe pdk2
 
    magic::add_toolkit_command $layoutframe "vpp 11.5x11.7 m1-m4, li/m5 shield" \
@@ -220,7 +210,7 @@ proc sky130::addtechmenu {framename} {
 
 #----------------------------------------------------------------
 # Menu callback function to read a SPICE netlist and generate an
-# initial layout using the SKYWATER TECHNAME gencells.
+# initial layout using the SKYWATER sky130A gencells.
 #----------------------------------------------------------------
 
 proc sky130::importspice {} {
@@ -321,7 +311,6 @@ proc sky130::via2_draw {} {
    resumeall
 }
 
-#ifdef METAL5
 proc sky130::via3_draw {} {
    set w [magic::i2u [box width]]
    set h [magic::i2u [box height]]
@@ -372,7 +361,6 @@ proc sky130::via4_draw {} {
    popbox
    resumeall
 }
-#endif (METAL5)
 
 proc sky130::subconn_draw {} {
    set w [magic::i2u [box width]]
@@ -1426,7 +1414,6 @@ proc sky130::sky130_fd_pr__diode_pd2nw_11v0_draw {parameters} {
 # NOTE:  Work in progress.  These values need to be corrected.
 #----------------------------------------------------------------
 
-#ifdef MIM
 proc sky130::sky130_fd_pr__cap_mim_m3_1_defaults {} {
     return {w 2.00 l 2.00 val 8.0 carea 2.00 cperi 0.19 \
 		nx 1 ny 1 dummy 0 square 0 lmin 2.00 wmin 2.00 \
@@ -1439,7 +1426,6 @@ proc sky130::sky130_fd_pr__cap_mim_m3_2_defaults {} {
 		lmax 30.0 wmax 30.0 dc 0 bconnect 1 tconnect 1 \
 		ccov 100}
 }
-#endif (MIM)
 
 
 #----------------------------------------------------------------
@@ -1508,14 +1494,12 @@ proc sky130::cap_convert {parameters} {
     return $pdkparams
 }
 
-#ifdef MIM
 proc sky130::sky130_fd_pr__cap_mim_m3_1_convert {parameters} {
     return [cap_convert $parameters]
 }
 proc sky130::sky130_fd_pr__cap_mim_m3_2_convert {parameters} {
     return [cap_convert $parameters]
 }
-#endif (MIM)
 
 #----------------------------------------------------------------
 # capacitor: Interactively specifies the fixed layout parameters
@@ -1554,14 +1538,12 @@ proc sky130::cap_dialog {device parameters} {
     # magic::add_checkbox dummy "Add dummy" $parameters
 }
 
-#ifdef MIM
 proc sky130::sky130_fd_pr__cap_mim_m3_1_dialog {parameters} {
     sky130::cap_dialog sky130_fd_pr__cap_mim_m3_1 $parameters
 }
 proc sky130::sky130_fd_pr__cap_mim_m3_2_dialog {parameters} {
     sky130::cap_dialog sky130_fd_pr__cap_mim_m3_2 $parameters
 }
-#endif (MIM)
 
 #----------------------------------------------------------------
 # Capacitor total capacitance computation
@@ -2065,7 +2047,6 @@ proc sky130::cap_draw {parameters} {
 
 #----------------------------------------------------------------
 
-#ifdef MIM
 proc sky130::sky130_fd_pr__cap_mim_m3_1_draw {parameters} {
     set newdict [dict create \
 	    top_type 		m4 \
@@ -2108,7 +2089,6 @@ proc sky130::sky130_fd_pr__cap_mim_m3_2_draw {parameters} {
     return [sky130::cap_draw $drawdict]
 }
 
-#endif (MIM)
 
 #----------------------------------------------------------------
 # capacitor: Check device parameters for out-of-bounds values
@@ -2190,14 +2170,12 @@ proc sky130::cap_check {parameters} {
     return $parameters
 }
 
-#ifdef MIM
 proc sky130::sky130_fd_pr__cap_mim_m3_1_check {parameters} {
     return [sky130::cap_check $parameters]
 }
 proc sky130::sky130_fd_pr__cap_mim_m3_2_check {parameters} {
     return [sky130::cap_check $parameters]
 }
-#endif (MIM)
 
 #----------------------------------------------------------------
 # Drawn resistors
@@ -2458,7 +2436,6 @@ proc sky130::sky130_fd_pr__res_generic_m3_defaults {} {
 # back-end metal stack.
 #----------------------------------------------------------------
 
-#ifdef METAL5
 proc sky130::sky130_fd_pr__res_generic_m4_defaults {} {
     return {w 0.300 l 0.300 m 1 nx 1 wmin 0.30 lmin 0.30 \
 		rho 0.047 val 0.047 dummy 0 dw 0.0 term 0.0 \
@@ -2469,7 +2446,6 @@ proc sky130::sky130_fd_pr__res_generic_m5_defaults {} {
 		rho 0.029 val 0.029 dummy 0 dw 0.0 term 0.0 \
 		roverlap 0}
 }
-#endif (METAL5)
 
 #----------------------------------------------------------------
 # resistor: Conversion from SPICE netlist parameters to toolkit
@@ -2566,14 +2542,12 @@ proc sky130::sky130_fd_pr__res_generic_m3_convert {parameters} {
     return [sky130::res_convert $parameters]
 }
 
-#ifdef METAL5
 proc sky130::sky130_fd_pr__res_generic_m4_convert {parameters} {
     return [sky130::res_convert $parameters]
 }
 proc sky130::sky130_fd_pr__res_generic_m5_convert {parameters} {
     return [sky130::res_convert $parameters]
 }
-#endif (METAL5)
 
 #----------------------------------------------------------------
 # resistor: Interactively specifies the fixed layout parameters
@@ -2730,14 +2704,12 @@ proc sky130::sky130_fd_pr__res_generic_m3_dialog {parameters} {
     sky130::res_dialog sky130_fd_pr__res_generic_m3 $parameters
 }
 
-#ifdef METAL5
 proc sky130::sky130_fd_pr__res_generic_m4_dialog {parameters} {
     sky130::res_dialog sky130_fd_pr__res_generic_m4 $parameters
 }
 proc sky130::sky130_fd_pr__res_generic_m5_dialog {parameters} {
     sky130::res_dialog sky130_fd_pr__res_generic_m5 $parameters
 }
-#endif (METAL5)
 
 #----------------------------------------------------------------
 # Resistor: Draw a single device in straight geometry
@@ -4248,7 +4220,6 @@ proc sky130::sky130_fd_pr__res_generic_m3_draw {parameters} {
 
 #----------------------------------------------------------------
 
-#ifdef METAL5
 proc sky130::sky130_fd_pr__res_generic_m4_draw {parameters} {
 
     # Set a local variable for each rule in ruleset
@@ -4289,7 +4260,6 @@ proc sky130::sky130_fd_pr__res_generic_m5_draw {parameters} {
     set drawdict [dict merge $sky130::ruleset $newdict $parameters]
     return [sky130::res_draw $drawdict]
 }
-#endif (METAL5)
 
 #----------------------------------------------------------------
 # Resistor total length computation
@@ -4549,14 +4519,12 @@ proc sky130::sky130_fd_pr__res_generic_m3_check {parameters} {
     return [sky130::res_check sky130_fd_pr__res_generic_m3 $parameters]
 }
 
-#ifdef METAL5
 proc sky130::sky130_fd_pr__res_generic_m4_check {parameters} {
     return [sky130::res_check sky130_fd_pr__res_generic_m4 $parameters]
 }
 proc sky130::sky130_fd_pr__res_generic_m5_check {parameters} {
     return [sky130::res_check sky130_fd_pr__res_generic_m5 $parameters]
 }
-#endif (METAL5)
 
 #----------------------------------------------------------------
 # MOS defaults:

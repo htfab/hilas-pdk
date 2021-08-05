@@ -45,6 +45,7 @@ from collections import OrderedDict
 from sys import stderr as STDERR
 from pexpect.replwrap import REPLWrapper
 from pathlib import Path
+from pexpect.exceptions import EOF as PEXP_EXCEPTION
 
 #######################################################################################
 PDK_VARIANT = 'sky130_hilas_sc'
@@ -830,21 +831,28 @@ class Magic:
                 if ourrcfile.is_file():
                     magicrcfile = str(ourrcfile)
 
-            techfile = os.getenv('TECHFILE')
-            if not techfile:
-                ourtechfile = Path(TECH_ROOT) / 'magic' / 'sky130A.tech'
-                if ourtechfile.is_file():
-                    techfile = str(ourtechfile)
+            #print("rc file: \"{}\"".format(magicrcfile))
+
+            #techfile = os.getenv('TECHFILE')
+            #if not techfile:
+            #    ourtechfile = Path(TECH_ROOT) / 'magic' / 'sky130A.tech'
+            #    if ourtechfile.is_file():
+            #        techfile = str(ourtechfile)
 
             print('starting Magic')
             odir = os.getcwd()
             os.chdir(LIB_PATH['mag'])
+            os.environ["PDKPATH"] = str(HILAS_PDK_ROOT)
 
-            self.p = REPLWrapper('magic -dnull -noconsole -rcfile "{}" -T "{}"'.format(
-                magicrcfile, techfile),
-                orig_prompt='%', prompt_change=None)
+            cmd = 'magic -dnull -noconsole -rcfile "{}"'.format(str(magicrcfile))
+            #print('starting magic with : "{}"'.format(cmd))
+            self.p = REPLWrapper(
+                cmd,
+                orig_prompt='%',
+                prompt_change=None
+            )
 
-        except:
+        except PEXP_EXCEPTION as e:
             edie('couldn\'t start Magic')
 
         finally:
@@ -1553,7 +1561,7 @@ def check_file_names(path, suffix):
 
     for m in Path(path).glob(suffix):
         if not m.stem.startswith(CONVENTIONS.CELL_PREFIX):
-            edie('filename does not start with "{}":    {}'.format(CONVENTIONS.CELL_PREFIX, m.name))
+            warn('filename does not start with "{}":    {}'.format(CONVENTIONS.CELL_PREFIX, m.name))
 
 
 def check_hand_spice():

@@ -1,10 +1,10 @@
 tech
     format 32
-    TECHNAME-GDS
+    sky130A-GDS
 end
 
 version
-    version REVISION
+    version 9.9999hilas
     description "SkyWater SKY130: Vendor GDS layers and supplementary DRC"
     requires magic-8.3.124
 end
