@@ -30,7 +30,7 @@ Width: 16.580
 
 Description: None
 
-Height: 6.050
+Height: 6.150
 <br>
 Width: 11.530
 
@@ -51,7 +51,7 @@ Width: 11.530
 
 Description: 2x1 array of FG switch cells configured as pFET current sources with weak capacitive gate inputs
 
-Height: 6.050
+Height: 6.150
 <br>
 Width: 11.530
 
@@ -75,7 +75,7 @@ Width: 11.530
 
 Description: None
 
-Height: 6.050
+Height: 6.150
 <br>
 Width: 11.520
 
@@ -101,21 +101,17 @@ Width: 11.520
 
 Description: 4-channel level shifter
 
-Height: 6.240
+Height: 7.000
 <br>
-Width: 8.800
+Width: 8.700
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | INPUT1               | metal2               | nsew                 |
-| 2                    | INPUT2               | metal2               | nsew                 |
-| 3                    | INPUT3               | metal2               | nsew                 |
-| 4                    | INPUT4               | metal2               | nsew                 |
 | 5                    | VPWR                 | metal1               | nsew                 |
 | 6                    | VINJ                 | metal1               | nsew                 |
-| 7                    | OUTPUT1              | metal2               | nsew                 |
-| 8                    | OUTPUT2              | metal2               | nsew                 |
-| 9                    | OUTPUT3              | metal2               | nsew                 |
+| 7                    | OUTPUT1              | space                | nsew                 |
+| 8                    | OUTPUT2              | space                | nsew                 |
+| 9                    | OUTPUT3              | space                | nsew                 |
 | 10                   | OUTPUT4              | metal2               | nsew                 |
 | 11                   | VGND                 | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
@@ -124,9 +120,9 @@ Width: 8.800
 
 Description: a single level shifter
 
-Height: 1.590
+Height: 1.750
 <br>
-Width: 8.800
+Width: 8.700
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -137,7 +133,7 @@ Width: 8.800
 Description: Two transimpedance amps with one (of two) amplifiers using floating-gate
   inputs. FG amplifier with wide linear range.
 
-Height: 6.050
+Height: 6.150
 <br>
 Width: 28.090
 
@@ -165,7 +161,7 @@ Width: 28.090
 
 Description: Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with normal linear range.
 
-Height: 6.050
+Height: 6.150
 <br>
 Width: 28.100
 
@@ -195,7 +191,7 @@ Width: 28.100
 
 Description: Two transimpedane amplifiers with no floating-gate inputs.
 
-Height: 6.050
+Height: 6.150
 <br>
 Width: 17.920
 
@@ -273,26 +269,26 @@ Width: 7.080
 
 Description: 4 single-throw transmission gates
 
-Height: 6.050
+Height: 6.410
 <br>
 Width: 4.760
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | INPUT1_4             | metal2               | nsew,analog,default  |
 | 2                    | VPWR                 | metal1               | nsew,power,default   |
-| 3                    | SELECT4              | metal2               | nsew,analog,default  |
-| 4                    | SELECT3              | metal2               | nsew,analog,default  |
-| 5                    | INPUT1_3             | metal2               | nsew,analog,default  |
 | 6                    | INPUT1_2             | metal2               | nsew,analog,default  |
 | 7                    | SELECT2              | metal2               | nsew,analog,default  |
-| 8                    | SELECT1              | metal2               | nsew,analog,default  |
-| 9                    | INPUT1_1             | metal2               | nsew,analog,default  |
 | 10                   | VGND                 | metal1               | nsew,ground,default  |
-| 11                   | OUTPUT1              | metal2               | nsew,analog,default  |
 | 12                   | OUTPUT2              | metal2               | nsew,analog,default  |
-| 13                   | OUTPUT3              | metal2               | nsew,analog,default  |
-| 14                   | OUTPUT4              | metal2               | nsew,analog,default  |
+| 14                   | OUTPUT4              | metal2               | nsew                 |
+| 15                   | OUTPUT3              | metal2               | nsew                 |
+| 16                   | OUTPUT1              | metal2               | nsew                 |
+| 17                   | INPUT1_4             | metal2               | nsew                 |
+| 18                   | SELECT4              | metal2               | nsew                 |
+| 19                   | SELECT3              | metal2               | nsew                 |
+| 20                   | INPUT1_3             | metal2               | nsew                 |
+| 21                   | SELECT1              | metal2               | nsew                 |
+| 22                   | INPUT1_1             | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-TopLevelTextStructure"></a>
 ### `sky130_hilas_TopLevelTextStructure`
@@ -543,7 +539,7 @@ Width: 6.880
 
 Description: 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one nFET transistor current source.
 
-Height: 6.050
+Height: 6.500
 <br>
 Width: 14.170
 
@@ -559,22 +555,22 @@ Width: 14.170
 | 10                   | INPUT3               | metal2               | nsew,analog,default  |
 | 11                   | INPUT4               | metal2               | nsew,analog,default  |
 | 12                   | DRAIN1               | metal2               | nsew                 |
-| 13                   | DRAIN2               | metal2               | nsew                 |
-| 14                   | DRAIN3               | metal2               | nsew                 |
-| 15                   | DRAIN4               | metal2               | nsew                 |
 | 16                   | GATE1                | metal1               | nsew                 |
 | 17                   | VTUN                 | metal1               | nsew                 |
 | 18                   | WTAMIDDLENODE        | metal1               | nsew                 |
 | 19                   | COLSEL1              | metal1               | nsew                 |
 | 20                   | VPWR                 | metal1               | nsew                 |
 | 21                   | VINJ                 | metal1               | nsew                 |
+| 22                   | DRAIN2               | metal2               | nsew                 |
+| 23                   | DRAIN3               | metal2               | nsew                 |
+| 24                   | DRAIN4               | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-capacitorArray01"></a>
 ### `sky130_hilas_capacitorArray01`
 
 Description: selectable capacitor array
 
-Height: 6.050
+Height: 6.500
 <br>
 Width: 36.700
 
@@ -655,9 +651,9 @@ Width: 5.780
 
 Description: 4x1 array of FG switch cell, Varactor capacitor cell
 
-Height: 6.050
+Height: 6.500
 <br>
-Width: 10.080
+Width: 10.070
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -666,38 +662,36 @@ Width: 10.080
 | 3                    | COLSEL1              | metal1               | nsew                 |
 | 4                    | COL1                 | metal1               | nsew                 |
 | 5                    | GATE1                | metal1               | nsew                 |
-| 6                    | DRAIN1               | metal2               | nsew                 |
-| 7                    | ROW3                 | metal2               | nsew                 |
-| 8                    | DRAIN2               | metal2               | nsew                 |
-| 9                    | ROW2                 | metal2               | nsew                 |
-| 10                   | DRAIN3               | metal2               | nsew                 |
 | 11                   | ROW4                 | metal2               | nsew                 |
-| 12                   | DRAIN4               | metal2               | nsew                 |
-| 13                   | ROW1                 | metal2               | nsew                 |
 | 14                   | VGND                 | metal1               | nsew                 |
+| 15                   | DRAIN4               | metal2               | nsew                 |
+| 16                   | DRAIN1               | metal2               | nsew                 |
+| 17                   | ROW1                 | metal2               | nsew                 |
+| 18                   | ROW3                 | metal2               | nsew                 |
+| 19                   | DRAIN3               | metal2               | nsew                 |
+| 20                   | DRAIN2               | metal2               | nsew                 |
+| 21                   | ROW2                 | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-drainSelect01"></a>
 ### `sky130_hilas_drainSelect01`
 
 Description: multiplexor for drain selection for 4 drain lines, pitch matched
 
-Height: 6.050
+Height: 6.590
 <br>
 Width: 5.720
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
-| 1                    | DRAIN4               | metal2               | nsew                 |
 | 2                    | DRAIN3               | metal2               | nsew                 |
-| 3                    | DRAIN2               | metal2               | nsew,analog,default  |
-| 4                    | DRAIN1               | metal2               | nsew,analog,default  |
+| 3                    | DRAIN2               | space                | nsew,analog,default  |
 | 9                    | VINJ                 | metal1               | nsew,power,default   |
 | 10                   | DRAIN_MUX            | metal1               | nsew,analog,default  |
 | 11                   | VGND                 | metal1               | nsew,ground,default  |
-| 12                   | SELECT4              | metal2               | nsew                 |
-| 13                   | SELECT3              | metal2               | nsew                 |
 | 14                   | SELECT2              | metal2               | nsew                 |
 | 15                   | SELECT1              | metal2               | nsew                 |
+| 16                   | SELECT3              | metal2               | nsew                 |
+| 17                   | SELECT4              | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-nFETLarge"></a>
 ### `sky130_hilas_nFETLarge`
@@ -763,26 +757,26 @@ Width: 55.470
 
 Description: 4x1 array of FG switch cell configured pFET as current sources
 
-Height: 6.050
+Height: 6.500
 <br>
-Width: 10.110
+Width: 10.080
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
+| 1                    | ROW1                 | space                | nsew                 |
+| 2                    | ROW2                 | metal2               | nsew                 |
+| 3                    | ROW3                 | metal2               | nsew                 |
+| 4                    | ROW4                 | metal2               | nsew                 |
 | 5                    | VTUN                 | metal1               | nsew,analog,default  |
 | 6                    | GATE1                | metal1               | nsew,analog,default  |
 | 7                    | VINJ                 | metal1               | nsew,power,default   |
 | 8                    | VPWR                 | metal1               | nsew,power,default   |
 | 9                    | COLSEL1              | metal1               | nsew,analog,default  |
-| 10                   | DRAIN1               | metal2               | nsew,analog,default  |
-| 11                   | ROW1                 | metal2               | nsew,analog,default  |
-| 12                   | ROW2                 | metal2               | nsew,analog,default  |
-| 13                   | DRAIN2               | metal2               | nsew                 |
-| 14                   | DRAIN3               | metal2               | nsew,analog,default  |
-| 15                   | ROW3                 | metal2               | nsew,analog,default  |
-| 16                   | ROW4                 | metal2               | nsew,analog,default  |
-| 17                   | DRAIN4               | metal2               | nsew,analog,default  |
 | 18                   | VGND                 | metal1               | nsew                 |
+| 19                   | DRAIN3               | metal2               | nsew                 |
+| 20                   | DRAIN4               | metal2               | nsew                 |
+| 21                   | DRAIN1               | metal2               | nsew                 |
+| 22                   | DRAIN2               | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-swc4x1cellOverlap"></a>
 ### `sky130_hilas_swc4x1cellOverlap`
@@ -801,7 +795,7 @@ Width: 10.080
 
 Description: 4x1 analog mux with overlap
 
-Height: 6.050
+Height: 6.160
 <br>
 Width: 9.350
 
@@ -813,9 +807,9 @@ Width: 9.350
 
 Description: 4x2 array of FG switch cell, Varactor capacitor cell
 
-Height: 6.050
+Height: 6.500
 <br>
-Width: 20.130
+Width: 20.120
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -827,13 +821,13 @@ Width: 20.130
 | 11                   | GATESELECT2          | metal1               | nsew,analog,default  |
 | 12                   | COL1                 | metal1               | nsew,analog,default  |
 | 13                   | COL2                 | metal1               | nsew,analog,default  |
-| 14                   | ROW1                 | metal2               | nsew,analog,default  |
+| 14                   | ROW1                 | metal2               | nsew                 |
 | 15                   | ROW2                 | metal2               | nsew                 |
-| 16                   | DRAIN1               | metal2               | nsew,analog,default  |
-| 17                   | DRAIN2               | metal2               | nsew,analog,default  |
-| 18                   | DRAIN3               | metal2               | nsew,analog,default  |
-| 19                   | ROW3                 | metal2               | nsew,analog,default  |
-| 20                   | ROW4                 | metal2               | nsew,analog,default  |
+| 16                   | DRAIN1               | metal2               | nsew                 |
+| 17                   | DRAIN2               | metal2               | nsew                 |
+| 18                   | DRAIN3               | metal2               | nsew                 |
+| 19                   | ROW3                 | metal2               | nsew                 |
+| 20                   | ROW4                 | metal2               | nsew                 |
 | 21                   | DRAIN4               | metal2               | nsew                 |
 | 22                   | VGND                 | metal1               | nsew                 |
 --------------------------------------------------------------------------------------------
@@ -842,7 +836,7 @@ Width: 20.130
 
 Description: Core switch cell, built with overlap capacitor
 
-Height: 6.050
+Height: 6.160
 <br>
 Width: 17.980
 
@@ -981,7 +975,7 @@ Width: 16.380
 
 Description: 2x1 array of transmission gates
 
-Height: 6.050
+Height: 6.150
 <br>
 Width: 5.680
 
@@ -993,7 +987,7 @@ Width: 5.680
 
 Description: None
 
-Height: 5.720
+Height: 5.790
 <br>
 Width: 3.270
 
@@ -1077,7 +1071,7 @@ Width: 7.080
 
 Description: None
 
-Height: 1.520
+Height: 1.610
 <br>
 Width: 4.760
 
@@ -1113,7 +1107,7 @@ Width: 1.630
 
 Description: None
 
-Height: 1.590
+Height: 1.700
 <br>
 Width: 5.680
 
@@ -1125,7 +1119,7 @@ Width: 5.680
 
 Description: None
 
-Height: 12.030
+Height: 12.520
 <br>
 Width: 34.090
 
@@ -1197,7 +1191,7 @@ Width: 4.670
 
 Description: None
 
-Height: 1.270
+Height: 1.290
 <br>
 Width: 1.840
 
@@ -1287,7 +1281,7 @@ Width: 2.220
 
 Description: step-up level shifter part
 
-Height: 1.590
+Height: 1.690
 <br>
 Width: 6.140
 
@@ -1387,7 +1381,7 @@ Width: 3.890
 
 Description: None
 
-Height: 1.850
+Height: 1.910
 <br>
 Width: 2.560
 
@@ -1399,7 +1393,7 @@ Width: 2.560
 
 Description: None
 
-Height: 3.110
+Height: 3.170
 <br>
 Width: 4.430
 
@@ -1725,7 +1719,7 @@ Description: contact to a well block, typically used for contacting tunneling ju
 
 Height: 1.860
 <br>
-Width: 1.740
+Width: 1.730
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
