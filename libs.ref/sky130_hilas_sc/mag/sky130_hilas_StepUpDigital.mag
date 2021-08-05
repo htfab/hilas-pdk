@@ -1,135 +1,165 @@
 magic
 tech sky130A
-timestamp 1627759641
+timestamp 1628116922
 << error_s >>
-rect 84 86 134 97
-rect 134 80 168 86
-rect 417 83 467 92
-rect 467 77 498 83
-rect 574 77 602 93
-rect 716 77 744 93
-rect 84 44 134 55
-rect 685 51 690 56
-rect 233 43 250 48
-rect 417 41 467 50
-rect 574 35 602 51
-rect 716 35 744 51
-rect 155 24 205 35
-rect 345 15 396 25
-rect 313 10 332 15
-rect 525 14 553 31
-rect 765 14 793 31
-rect 205 -7 237 -2
-rect 155 -18 205 -7
-rect 313 -17 318 10
-rect 396 -17 427 -11
-rect 345 -27 396 -17
-rect 525 -28 553 -11
-rect 765 -28 793 -11
+rect 84 91 134 97
+rect 407 92 457 98
+rect 564 91 592 98
+rect 706 92 734 98
+rect 84 49 134 55
+rect 407 50 457 56
+rect 564 49 592 56
+rect 706 50 734 56
+rect 155 25 205 31
+rect 335 20 386 26
+rect 515 20 543 26
+rect 755 20 783 26
+rect 155 -17 205 -11
+rect 335 -22 386 -16
+rect 515 -22 543 -16
+rect 755 -22 783 -16
 << nwell >>
-rect 19 -40 270 119
+rect 19 -44 269 131
+rect 656 124 833 131
+rect 656 -44 833 -35
 << mvpmos >>
-rect 84 55 134 86
-rect 155 -7 205 24
+rect 84 55 134 91
+rect 155 -11 205 25
 << mvpdiff >>
-rect 53 79 84 86
+rect 53 79 84 91
 rect 53 62 61 79
 rect 78 62 84 79
 rect 53 55 84 62
-rect 134 80 168 86
+rect 134 80 168 91
 rect 134 63 140 80
 rect 157 63 168 80
 rect 134 55 168 63
-rect 124 16 155 24
+rect 124 16 155 25
 rect 124 -1 130 16
 rect 148 -1 155 16
-rect 124 -7 155 -1
-rect 205 18 237 24
+rect 124 -11 155 -1
+rect 205 18 236 25
 rect 205 1 211 18
-rect 229 1 237 18
-rect 205 -7 237 1
+rect 229 1 236 18
+rect 205 -11 236 1
 << mvpdiffc >>
 rect 61 62 78 79
 rect 140 63 157 80
 rect 130 -1 148 16
 rect 211 1 229 18
 << mvnsubdiff >>
-rect 54 16 124 24
+rect 54 16 124 25
 rect 54 -1 80 16
 rect 97 -1 124 16
-rect 54 -7 124 -1
+rect 54 -11 124 -1
 << mvnsubdiffcont >>
 rect 80 -1 97 16
 << poly >>
-rect 84 88 255 104
-rect 84 86 134 88
-rect 228 60 255 88
+rect 84 99 234 114
+rect 84 91 134 99
+rect 207 87 234 99
+rect 207 70 212 87
+rect 229 70 234 87
+rect 207 60 234 70
+rect 261 85 295 90
+rect 261 68 270 85
+rect 287 68 295 85
+rect 261 60 295 68
 rect 84 40 134 55
-rect 228 43 233 60
-rect 250 43 255 60
-rect 155 24 205 39
-rect 228 35 255 43
-rect 155 -10 205 -7
-rect 155 -25 285 -10
+rect 155 25 205 39
+rect 261 26 277 60
+rect 245 2 277 26
+rect 155 -19 205 -11
+rect 245 -19 261 2
+rect 155 -34 261 -19
 << polycont >>
-rect 233 43 250 60
+rect 212 70 229 87
+rect 270 68 287 85
 << locali >>
-rect 147 87 370 95
+rect 147 87 192 95
 rect 147 80 164 87
 rect 53 62 61 79
 rect 78 62 86 79
 rect 132 63 140 80
 rect 157 70 164 80
-rect 181 78 370 87
-rect 181 70 192 78
+rect 181 70 192 87
 rect 157 63 192 70
+rect 212 87 229 95
 rect 60 53 78 62
 rect 77 36 78 53
 rect 60 17 78 36
-rect 225 43 233 60
-rect 250 43 258 60
-rect 225 18 250 43
+rect 212 19 229 70
+rect 262 85 291 88
+rect 262 83 270 85
+rect 262 66 268 83
+rect 287 68 295 85
+rect 285 66 291 68
+rect 262 64 291 66
+rect 212 18 250 19
 rect 77 16 78 17
 rect 77 0 80 16
 rect 60 -1 80 0
 rect 97 -1 130 16
 rect 148 -1 156 16
 rect 203 1 211 18
-rect 229 8 250 18
-rect 229 7 267 8
+rect 229 12 250 18
+rect 229 7 284 12
 rect 229 1 285 7
-rect 211 -10 285 1
+rect 211 -5 285 1
+rect 211 -10 250 -5
 << viali >>
 rect 164 70 181 87
 rect 60 36 77 53
+rect 268 68 270 83
+rect 270 68 285 83
+rect 268 66 285 68
 rect 60 0 77 17
 << metal1 >>
-rect 53 53 82 119
+rect 53 53 82 131
+rect 484 125 515 131
+rect 785 124 809 131
 rect 157 92 189 95
 rect 157 66 160 92
 rect 186 66 189 92
+rect 262 88 293 89
 rect 157 65 189 66
+rect 261 62 264 88
+rect 290 62 293 88
+rect 261 61 293 62
+rect 262 60 291 61
 rect 53 36 60 53
 rect 77 36 82 53
 rect 53 17 82 36
 rect 53 0 60 17
 rect 77 0 82 17
-rect 53 -40 82 0
+rect 53 -44 82 0
 << via1 >>
 rect 160 87 186 92
 rect 160 70 164 87
 rect 164 70 181 87
 rect 181 70 186 87
 rect 160 66 186 70
+rect 264 83 290 88
+rect 264 66 268 83
+rect 268 66 285 83
+rect 285 66 290 83
+rect 264 62 290 66
 << metal2 >>
 rect 157 87 160 92
 rect 26 67 160 87
 rect 157 66 160 67
-rect 186 66 189 92
+rect 186 87 189 92
+rect 260 88 292 89
+rect 260 87 264 88
+rect 186 67 264 87
+rect 186 66 189 67
+rect 260 62 264 67
+rect 290 62 293 88
+rect 260 60 292 62
 use sky130_hilas_StepUpDigitalPart1  StepUpDigitalPart1_0
-timestamp 1627744303
-transform 1 0 7 0 1 0
-box 278 -40 892 119
+timestamp 1628116121
+transform 1 0 -3 0 1 5
+box 278 -49 892 120
 << labels >>
 rlabel metal2 26 67 33 87 0 Output
 rlabel metal1 53 111 82 119 0 Vinj

@@ -1,27 +1,28 @@
 magic
 tech sky130A
-timestamp 1627744303
+timestamp 1628164971
 << error_s >>
-rect -138 -64 -98 -54
-rect 88 -64 128 -52
-rect -138 -106 -98 -96
-rect 88 -106 128 -94
-rect -62 -126 -22 -115
-rect 88 -126 128 -115
-rect -62 -168 -22 -157
-rect 88 -168 128 -157
+rect -138 -59 -98 -54
+rect 88 -59 128 -52
+rect -138 -101 -98 -96
+rect 88 -101 128 -94
+rect -62 -126 -22 -120
+rect 88 -126 128 -120
+rect -62 -168 -22 -162
+rect 88 -168 128 -162
 << nwell >>
-rect -251 -102 25 -29
+rect -251 -102 25 -25
 rect -251 -119 -52 -102
 rect -251 -181 -53 -119
+rect -251 -186 25 -181
 << pmos >>
-rect -138 -96 -98 -64
+rect -138 -96 -98 -59
 << pdiff >>
-rect -167 -71 -138 -64
+rect -167 -71 -138 -59
 rect -167 -88 -161 -71
 rect -144 -88 -138 -71
 rect -167 -96 -138 -88
-rect -98 -71 -70 -64
+rect -98 -71 -70 -59
 rect -98 -88 -92 -71
 rect -75 -88 -70 -71
 rect -98 -96 -70 -88
@@ -36,8 +37,8 @@ rect -227 -159 -195 -147
 << nsubdiffcont >>
 rect -220 -147 -203 -130
 << poly >>
-rect -234 -56 25 -40
-rect -138 -64 -98 -56
+rect -234 -51 25 -36
+rect -138 -59 -98 -51
 rect -52 -83 -19 -77
 rect -138 -118 -98 -96
 rect -52 -100 -44 -83
@@ -69,30 +70,36 @@ rect -220 -126 -197 -124
 rect -220 -130 -199 -126
 rect -220 -158 -203 -147
 << metal1 >>
-rect -189 -181 -169 -29
+rect -189 -186 -169 -25
+rect 162 -29 181 -25
+rect 162 -186 181 -181
 << metal2 >>
 rect -263 -72 -202 -52
+rect 206 -72 213 -52
 rect -176 -150 -64 -149
 rect -263 -170 -64 -150
 rect -176 -171 -64 -170
-use sky130_hilas_poly2m1  sky130_hilas_poly2m1_0
-timestamp 1627744303
-transform 1 0 -236 0 1 -65
-box -9 -26 24 25
 use sky130_hilas_TgateSingle01Part1  sky130_hilas_TgateSingle01Part1_0
-timestamp 1627744303
+timestamp 1628164971
 transform 1 0 -232 0 1 0
 box 257 -181 445 -29
+use sky130_hilas_poly2m1  sky130_hilas_poly2m1_0
+timestamp 1628164971
+transform 1 0 -236 0 1 -65
+box -9 -26 24 25
 use sky130_hilas_TgateSingle01Part2  sky130_hilas_TgateSingle01Part2_0
-timestamp 1627744303
+timestamp 1628164971
 transform 1 0 -71 0 1 0
 box -67 -181 96 -38
 use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1627744303
+timestamp 1628164971
 transform 1 0 -225 0 1 -62
 box -9 -10 23 22
 use sky130_hilas_li2m1  sky130_hilas_li2m1_2
-timestamp 1627744303
+timestamp 1628164971
 transform 1 0 -180 0 1 -86
 box -10 -8 13 21
+<< labels >>
+rlabel metal2 -263 -72 -254 -52 0 Select
+rlabel metal2 -263 -170 -254 -150 0 Input
 << end >>

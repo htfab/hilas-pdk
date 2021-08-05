@@ -1,46 +1,15 @@
 magic
 tech sky130A
-timestamp 1627760062
+timestamp 1628168646
 << error_s >>
-rect 568 189 618 200
-rect 640 189 690 200
-rect 534 158 568 159
-rect 568 147 618 158
-rect 640 147 690 158
-rect 327 126 367 128
-rect 463 126 502 128
-rect 534 126 566 128
-rect 617 126 626 128
-rect 327 118 329 126
-rect 325 51 327 101
-rect 367 51 369 101
-rect 460 51 463 101
-rect 502 51 505 101
-rect 640 39 645 63
-rect 664 22 669 39
-rect 325 -28 327 22
-rect 367 -28 369 22
-rect 460 -28 463 22
-rect 502 -28 505 22
-rect 325 -181 327 -131
-rect 367 -181 369 -131
-rect 460 -181 463 -131
-rect 502 -181 505 -131
-rect 640 -181 645 -157
-rect 664 -198 669 -181
-rect 325 -260 327 -210
-rect 367 -260 369 -210
-rect 460 -260 463 -210
-rect 502 -260 505 -210
-rect 327 -287 367 -285
-rect 463 -287 502 -285
-rect 534 -287 566 -285
-rect 617 -287 626 -285
-rect 568 -317 618 -306
-rect 640 -317 690 -306
-rect 534 -318 568 -317
-rect 568 -359 618 -348
-rect 640 -359 690 -348
+rect 568 195 618 201
+rect 640 195 690 201
+rect 568 153 618 159
+rect 640 153 690 159
+rect 568 -318 618 -312
+rect 640 -318 690 -312
+rect 568 -360 618 -354
+rect 640 -360 690 -354
 << nwell >>
 rect -337 -242 -281 0
 << psubdiff >>
@@ -93,9 +62,7 @@ rect -202 -367 298 -310
 rect -209 122 297 205
 rect -202 114 -154 122
 rect -169 89 -154 114
-rect 467 28 470 45
 rect -92 -42 -73 -34
-rect 467 -51 472 -34
 rect -92 -75 -73 -59
 rect -92 -76 146 -75
 rect -92 -93 -71 -76
@@ -110,11 +77,8 @@ rect 119 -93 190 -92
 rect 209 -93 236 -76
 rect 255 -93 263 -76
 rect -92 -110 -73 -93
-rect 474 -108 491 -51
-rect 467 -125 469 -108
 rect -92 -135 -73 -127
 rect 11 -197 34 -193
-rect 467 -204 470 -187
 rect -172 -279 -170 -254
 rect -205 -287 -170 -279
 rect -205 -372 300 -287
@@ -143,66 +107,66 @@ rect -396 -279 -201 -258
 rect 510 -315 526 -313
 rect -396 -320 526 -315
 rect -396 -330 514 -320
-use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
-timestamp 1627744303
-transform 1 0 1056 0 1 19
-box -1451 -400 -1278 -210
-use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
-timestamp 1627744303
-transform 1 0 1056 0 1 433
-box -1451 -400 -1278 -210
-use sky130_hilas_wellContact  sky130_hilas_wellContact_0
-timestamp 1627744303
-transform 1 0 1054 0 1 231
-box -1449 -441 -1275 -255
-use sky130_hilas_wellContact  sky130_hilas_wellContact_1
-timestamp 1627744303
-transform 1 0 1054 0 1 404
-box -1449 -441 -1275 -255
-use sky130_hilas_li2m2  sky130_hilas_li2m2_2
-timestamp 1627744303
-transform 1 0 -188 0 1 101
-box -14 -15 20 18
-use sky130_hilas_li2m2  sky130_hilas_li2m2_3
-timestamp 1627744303
-transform 1 0 -191 0 1 -268
-box -14 -15 20 18
-use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1627744303
-transform 1 0 -103 0 1 -92
-box -10 -8 13 21
-use sky130_hilas_FGVaractorCapacitor02  sky130_hilas_FGVaractorCapacitor02_2
-timestamp 1627744303
-transform 1 0 986 0 -1 -231
-box -1005 -380 -733 -211
 use sky130_hilas_FGVaractorCapacitor02  sky130_hilas_FGVaractorCapacitor02_0
 timestamp 1627744303
 transform 1 0 986 0 1 62
 box -1005 -380 -733 -211
-use sky130_hilas_horizTransCell01  sky130_hilas_horizTransCell01_1
+use sky130_hilas_FGVaractorCapacitor02  sky130_hilas_FGVaractorCapacitor02_2
 timestamp 1627744303
-transform 1 0 790 0 -1 270
-box -476 48 -33 359
-use sky130_hilas_horizTransCell01  sky130_hilas_horizTransCell01_0
-timestamp 1627744303
-transform 1 0 790 0 1 -429
-box -476 48 -33 359
-use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1627744303
-transform 1 0 538 0 1 60
+transform 1 0 986 0 -1 -231
+box -1005 -380 -733 -211
+use sky130_hilas_li2m1  sky130_hilas_li2m1_0
+timestamp 1628166556
+transform 1 0 -103 0 1 -92
+box -10 -8 13 21
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
+timestamp 1628079880
+transform 1 0 1056 0 1 433
+box -1451 -400 -1278 -210
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
+timestamp 1628079880
+transform 1 0 1056 0 1 19
+box -1451 -400 -1278 -210
+use sky130_hilas_wellContact  sky130_hilas_wellContact_1
+timestamp 1628104465
+transform 1 0 1054 0 1 404
+box -1448 -441 -1275 -255
+use sky130_hilas_wellContact  sky130_hilas_wellContact_0
+timestamp 1628104465
+transform 1 0 1054 0 1 231
+box -1448 -441 -1275 -255
+use sky130_hilas_li2m2  sky130_hilas_li2m2_3
+timestamp 1628166556
+transform 1 0 -191 0 1 -268
 box -14 -15 20 18
-use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1627744303
-transform 1 0 538 0 1 -216
+use sky130_hilas_li2m2  sky130_hilas_li2m2_2
+timestamp 1628166556
+transform 1 0 -188 0 1 101
 box -14 -15 20 18
-use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1627744303
-transform 1 0 627 0 1 -116
-box -9 -10 23 22
 use sky130_hilas_m12m2  sky130_hilas_m12m2_1
-timestamp 1627744303
+timestamp 1628164971
 transform 1 0 627 0 1 -56
 box -9 -10 23 22
+use sky130_hilas_m12m2  sky130_hilas_m12m2_0
+timestamp 1628164971
+transform 1 0 627 0 1 -116
+box -9 -10 23 22
+use sky130_hilas_li2m2  sky130_hilas_li2m2_1
+timestamp 1628166556
+transform 1 0 538 0 1 -216
+box -14 -15 20 18
+use sky130_hilas_li2m2  sky130_hilas_li2m2_0
+timestamp 1628166556
+transform 1 0 538 0 1 60
+box -14 -15 20 18
+use sky130_hilas_horizTransCell01  sky130_hilas_horizTransCell01_0
+timestamp 1628168286
+transform 1 0 790 0 1 -429
+box -476 42 -33 359
+use sky130_hilas_horizTransCell01  sky130_hilas_horizTransCell01_1
+timestamp 1628168286
+transform 1 0 790 0 -1 270
+box -476 42 -33 359
 << labels >>
 rlabel metal1 -361 216 -319 223 0 VTUN
 port 9 nsew analog default
