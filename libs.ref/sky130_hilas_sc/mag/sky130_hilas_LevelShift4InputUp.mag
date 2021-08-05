@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628116922
+timestamp 1628178864
 << error_s >>
 rect 35 554 85 560
 rect 358 555 408 561
@@ -66,21 +66,21 @@ rect 106 -79 156 -73
 rect 286 -84 337 -78
 rect 466 -84 494 -78
 rect 706 -84 734 -78
-use sky130_hilas_StepUpDigital  StepUpDigital_2
-timestamp 1628116922
-transform 1 0 -49 0 1 463
-box 19 -44 889 131
-use sky130_hilas_StepUpDigital  StepUpDigital_1
-timestamp 1628116922
-transform 1 0 -49 0 1 288
+use sky130_hilas_StepUpDigital  StepUpDigital_0
+timestamp 1628178864
+transform 1 0 -49 0 1 113
 box 19 -44 889 131
 use sky130_hilas_StepUpDigital  StepUpDigital_3
-timestamp 1628116922
+timestamp 1628178864
 transform 1 0 -49 0 1 -62
 box 19 -44 889 131
-use sky130_hilas_StepUpDigital  StepUpDigital_0
-timestamp 1628116922
-transform 1 0 -49 0 1 113
+use sky130_hilas_StepUpDigital  StepUpDigital_1
+timestamp 1628178864
+transform 1 0 -49 0 1 288
+box 19 -44 889 131
+use sky130_hilas_StepUpDigital  StepUpDigital_2
+timestamp 1628178864
+transform 1 0 -49 0 1 463
 box 19 -44 889 131
 << labels >>
 rlabel space 746 517 770 522 0 VPWR

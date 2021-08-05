@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628168539
+timestamp 1628178864
 << error_s >>
 rect -2550 717 -2500 723
 rect -2478 717 -2428 723
@@ -13,8 +13,7 @@ rect -509 675 -459 681
 rect -437 675 -387 681
 rect -49 679 -22 685
 rect -49 654 -22 660
-rect -2486 648 -2477 650
-rect -2426 648 -2394 650
+rect -2401 648 -2394 650
 rect -2362 648 -2323 650
 rect -2227 648 -2187 650
 rect -2365 573 -2362 623
@@ -37,18 +36,13 @@ rect -2229 341 -2227 391
 rect -2187 341 -2185 391
 rect -49 379 -22 385
 rect -49 354 -22 360
-rect -118 346 -113 347
-rect -104 346 -99 354
 rect -49 312 -22 318
 rect -2365 262 -2362 312
 rect -2323 262 -2320 312
 rect -2229 262 -2227 312
 rect -2187 262 -2185 312
 rect -49 271 -22 277
-rect -118 264 -113 267
-rect -104 264 -99 268
-rect -2486 235 -2477 237
-rect -2426 235 -2394 237
+rect -2401 235 -2394 237
 rect -2362 235 -2323 237
 rect -2227 235 -2187 237
 rect -49 229 -22 235
@@ -57,13 +51,11 @@ rect -2478 204 -2428 210
 rect -509 204 -459 210
 rect -437 204 -387 210
 rect -49 204 -22 210
-rect -99 171 -67 174
 rect -2550 162 -2500 168
 rect -2478 162 -2428 168
 rect -509 162 -459 168
 rect -437 162 -387 168
 rect -49 162 -22 168
-rect -113 157 -53 160
 << nwell >>
 rect -2617 744 -2286 745
 rect -320 744 -186 745
@@ -107,13 +99,18 @@ rect -1166 147 -1163 173
 rect -156 162 -153 188
 rect -127 162 -124 188
 rect -156 160 -124 162
-rect -156 159 -2 160
-rect -156 154 31 159
+rect -156 157 -113 160
+rect -53 159 -2 160
+rect -53 157 31 159
+rect -156 154 31 157
+rect -141 149 31 154
 rect -1195 145 -1163 147
-rect -151 146 31 154
+rect -138 146 31 149
 rect -416 140 -397 145
 rect -372 140 -344 145
-rect -3 140 31 146
+rect -135 144 31 146
+rect -128 143 -32 144
+rect -3 140 31 144
 rect 64 140 91 161
 << via1 >>
 rect -2594 715 -2568 741
@@ -152,12 +149,13 @@ rect -692 382 -666 446
 rect 182 392 193 414
 rect -692 361 -279 382
 rect -300 347 -279 361
-rect -300 326 -113 347
+rect -300 326 -99 347
 rect -811 290 -522 312
 rect -811 289 -782 290
 rect -1137 262 -1115 277
-rect -700 262 -113 267
-rect -1137 246 -113 262
+rect -700 262 -100 267
+rect -1137 247 -100 262
+rect -1137 246 -113 247
 rect -1137 240 -661 246
 rect -2617 190 -2609 208
 rect -156 188 -124 190
@@ -173,22 +171,22 @@ rect -127 162 -124 188
 rect -1166 160 -124 162
 rect -1166 147 -1163 160
 rect -1195 145 -1163 147
-use sky130_hilas_FGtrans2x1cell  sky130_hilas_FGtrans2x1cell_0
-timestamp 1628168539
-transform -1 0 -1860 0 1 522
-box -395 -387 757 228
-use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1628168286
-transform 1 0 -1077 0 1 522
-box -396 -387 757 228
-use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
-timestamp 1628166556
-transform 1 0 -454 0 -1 305
-box 133 -440 320 165
 use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
-timestamp 1628166556
+timestamp 1628178864
 transform 1 0 38 0 1 181
 box -172 -26 155 553
+use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
+timestamp 1628178864
+transform 1 0 -454 0 -1 305
+box 133 -440 320 165
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1628178864
+transform 1 0 -1077 0 1 522
+box -396 -387 757 228
+use sky130_hilas_FGtrans2x1cell  sky130_hilas_FGtrans2x1cell_0
+timestamp 1628178864
+transform -1 0 -1860 0 1 522
+box -395 -387 757 228
 << labels >>
 rlabel metal1 -3 739 31 745 0 VGND
 port 11 nsew

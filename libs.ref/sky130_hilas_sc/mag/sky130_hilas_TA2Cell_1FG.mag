@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628168646
+timestamp 1628178864
 << error_s >>
 rect -2549 717 -2499 723
 rect -2477 717 -2427 723
@@ -21,25 +21,19 @@ rect -49 462 -22 468
 rect -49 421 -22 427
 rect -49 379 -22 385
 rect -49 354 -22 360
-rect -118 346 -113 347
-rect -104 346 -99 354
 rect -49 312 -22 318
 rect -49 271 -22 277
-rect -118 264 -113 267
-rect -104 264 -99 268
 rect -49 229 -22 235
 rect -2549 204 -2499 210
 rect -2477 204 -2427 210
 rect -509 204 -459 210
 rect -437 204 -387 210
 rect -49 204 -22 210
-rect -99 171 -67 174
 rect -2549 162 -2499 168
 rect -2477 162 -2427 168
 rect -509 162 -459 168
 rect -437 162 -387 168
 rect -49 162 -22 168
-rect -113 157 -53 160
 << nwell >>
 rect -2616 744 -2418 745
 rect -320 744 -173 745
@@ -108,10 +102,13 @@ rect -154 161 -151 187
 rect -124 161 -121 187
 rect -154 160 -121 161
 rect -1198 146 -1166 148
-rect -155 159 -3 160
-rect -155 146 31 159
+rect -155 157 -113 160
+rect -53 159 -3 160
+rect -53 157 31 159
+rect -155 146 31 157
 rect -416 140 -397 145
 rect -372 140 -344 145
+rect -127 143 -37 146
 rect -3 140 31 146
 rect 64 140 91 161
 << via1 >>
@@ -169,10 +166,10 @@ rect -692 382 -666 446
 rect 182 392 193 414
 rect -692 361 -279 382
 rect -300 347 -279 361
-rect -300 326 -113 347
+rect -300 326 -98 347
 rect -807 290 -522 312
-rect -700 262 -113 267
-rect -1137 246 -113 262
+rect -700 262 -98 267
+rect -1137 246 -98 262
 rect -1137 240 -661 246
 rect -2616 190 -2608 208
 rect -154 187 -121 189
@@ -187,19 +184,19 @@ rect -1169 158 -1129 159
 rect -1169 148 -1166 158
 rect -1198 146 -1166 148
 use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1628168286
+timestamp 1628178864
 transform 1 0 -1077 0 1 522
 box -396 -387 757 228
 use sky130_hilas_FGBiasWeakGate2x1cell  sky130_hilas_FGBiasWeakGate2x1cell_0
-timestamp 1628168646
+timestamp 1628178864
 transform -1 0 -1859 0 1 522
 box -396 -387 757 228
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
-timestamp 1628166556
+timestamp 1628178864
 transform 1 0 -454 0 -1 305
 box 133 -440 320 165
 use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
-timestamp 1628166556
+timestamp 1628178864
 transform 1 0 38 0 1 181
 box -172 -26 155 553
 << labels >>
