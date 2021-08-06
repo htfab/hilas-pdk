@@ -1,14 +1,11 @@
 magic
 tech sky130A
-timestamp 1628178864
+timestamp 1628285143
 << error_s >>
 rect 568 195 618 201
 rect 640 195 690 201
 rect 568 153 618 159
 rect 640 153 690 159
-rect 327 126 367 128
-rect 463 126 502 128
-rect 534 126 541 128
 rect 325 51 327 101
 rect 367 51 369 101
 rect 460 51 463 101
@@ -25,9 +22,6 @@ rect 325 -260 327 -210
 rect 367 -260 369 -210
 rect 460 -260 463 -210
 rect 502 -260 505 -210
-rect 327 -287 367 -285
-rect 463 -287 502 -285
-rect 534 -287 541 -285
 rect 568 -318 618 -312
 rect 640 -318 690 -312
 rect 568 -360 618 -354
@@ -72,7 +66,8 @@ rect 190 -93 209 -76
 rect 236 -93 255 -76
 rect -92 -127 -73 -110
 << poly >>
-rect -237 134 331 151
+rect -237 136 331 151
+rect -237 134 319 136
 rect -237 126 -185 134
 rect -2 91 20 134
 rect 166 91 188 134
@@ -88,7 +83,8 @@ rect 272 -260 316 -255
 rect -3 -293 17 -260
 rect 169 -293 189 -260
 rect 272 -263 300 -260
-rect -280 -310 331 -293
+rect -280 -295 317 -293
+rect -280 -310 331 -295
 << polycont >>
 rect 280 -255 297 -238
 << locali >>
@@ -171,83 +167,83 @@ rect -395 -320 526 -315
 rect -395 -330 514 -320
 rect 749 -332 757 -314
 use sky130_hilas_FGVaractorCapacitor02  sky130_hilas_FGVaractorCapacitor02_0
-timestamp 1628178864
+timestamp 1628285143
 transform -1 0 -752 0 1 62
 box -1005 -380 -733 -211
 use sky130_hilas_FGVaractorCapacitor02  sky130_hilas_FGVaractorCapacitor02_2
-timestamp 1628178864
+timestamp 1628285143
 transform -1 0 -752 0 -1 -231
 box -1005 -380 -733 -211
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
-timestamp 1628178864
+timestamp 1628285143
 transform 1 0 1056 0 1 433
 box -1451 -400 -1278 -210
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
-timestamp 1628178864
+timestamp 1628285143
 transform 1 0 1056 0 1 19
 box -1451 -400 -1278 -210
 use sky130_hilas_wellContact  sky130_hilas_wellContact_0
-timestamp 1628178864
+timestamp 1628285143
 transform 1 0 1054 0 1 231
 box -1448 -441 -1275 -255
 use sky130_hilas_wellContact  sky130_hilas_wellContact_1
-timestamp 1628178864
+timestamp 1628285143
 transform 1 0 1054 0 1 404
 box -1448 -441 -1275 -255
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1628178864
+timestamp 1628285143
 transform 1 0 -103 0 1 -92
 box -10 -8 13 21
-use sky130_hilas_poly2m1  sky130_hilas_poly2m1_0
-timestamp 1628178864
-transform 1 0 389 0 1 -74
-box -9 -26 24 25
-use sky130_hilas_li2m1  sky130_hilas_li2m1_1
-timestamp 1628178864
-transform 1 0 434 0 1 -123
-box -10 -8 13 21
-use sky130_hilas_li2m1  sky130_hilas_li2m1_3
-timestamp 1628178864
-transform 1 0 480 0 1 -141
-box -10 -8 13 21
-use sky130_hilas_li2m1  sky130_hilas_li2m1_2
-timestamp 1628178864
-transform 1 0 435 0 1 -281
-box -10 -8 13 21
 use sky130_hilas_li2m1  sky130_hilas_li2m1_5
-timestamp 1628178864
+timestamp 1628285143
 transform 1 0 478 0 1 -332
 box -10 -8 13 21
-use sky130_hilas_li2m1  sky130_hilas_li2m1_6
-timestamp 1628178864
-transform 1 0 481 0 1 165
+use sky130_hilas_li2m1  sky130_hilas_li2m1_2
+timestamp 1628285143
+transform 1 0 435 0 1 -281
 box -10 -8 13 21
-use sky130_hilas_li2m1  sky130_hilas_li2m1_4
-timestamp 1628178864
-transform 1 0 434 0 1 109
+use sky130_hilas_li2m1  sky130_hilas_li2m1_3
+timestamp 1628285143
+transform 1 0 480 0 1 -141
 box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_1
+timestamp 1628285143
+transform 1 0 434 0 1 -123
+box -10 -8 13 21
+use sky130_hilas_poly2m1  sky130_hilas_poly2m1_0
+timestamp 1628285143
+transform 1 0 389 0 1 -74
+box -9 -26 24 25
 use sky130_hilas_li2m1  sky130_hilas_li2m1_7
-timestamp 1628178864
+timestamp 1628285143
 transform 1 0 481 0 1 -34
 box -10 -8 13 21
-use sky130_hilas_horizTransCell01a  sky130_hilas_horizTransCell01a_0
-timestamp 1628178864
-transform 1 0 790 0 1 -429
-box -476 42 -33 359
+use sky130_hilas_li2m1  sky130_hilas_li2m1_4
+timestamp 1628285143
+transform 1 0 434 0 1 109
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_6
+timestamp 1628285143
+transform 1 0 481 0 1 165
+box -10 -8 13 21
 use sky130_hilas_horizTransCell01a  sky130_hilas_horizTransCell01a_1
-timestamp 1628178864
+timestamp 1628285143
 transform 1 0 790 0 -1 270
 box -476 42 -33 359
+use sky130_hilas_horizTransCell01a  sky130_hilas_horizTransCell01a_0
+timestamp 1628285143
+transform 1 0 790 0 1 -429
+box -476 42 -33 359
 use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1628178864
+timestamp 1628285143
 transform 1 0 628 0 1 -85
 box -9 -10 23 22
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1628178864
+timestamp 1628285143
 transform 1 0 563 0 1 -166
 box -14 -15 20 18
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1628178864
+timestamp 1628285143
 transform 1 0 562 0 1 3
 box -14 -15 20 18
 << labels >>

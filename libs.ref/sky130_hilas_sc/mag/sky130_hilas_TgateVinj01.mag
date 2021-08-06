@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628178864
+timestamp 1628285143
 << error_s >>
 rect -147 91 -97 97
 rect 173 91 223 97
@@ -236,7 +236,7 @@ rect 184 -4 187 -2
 rect 213 -4 216 22
 rect 184 -7 216 -4
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1628178864
+timestamp 1628285143
 transform 1 0 266 0 1 65
 box -10 -8 13 21
 << end >>
