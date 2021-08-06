@@ -103,17 +103,21 @@ Description: 4-channel level shifter
 
 Height: 7.000
 <br>
-Width: 8.700
+Width: 10.585
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
 | 5                    | VPWR                 | metal1               | nsew                 |
 | 6                    | VINJ                 | metal1               | nsew                 |
-| 7                    | OUTPUT1              | space                | nsew                 |
-| 8                    | OUTPUT2              | space                | nsew                 |
-| 9                    | OUTPUT3              | space                | nsew                 |
-| 10                   | OUTPUT4              | metal2               | nsew                 |
+| 8                    | OUTPUT2              | space                | n                    |
+| 9                    | OUTPUT3              | space                | n                    |
 | 11                   | VGND                 | metal1               | nsew                 |
+| 12                   | INPUT4               | metal2               | n                    |
+| 13                   | INPUT3               | metal2               | n                    |
+| 14                   | INPUT2               | metal2               | n                    |
+| 15                   | INPUT1               | metal2               | n                    |
+| 16                   | OUTPUT1              | space                | n                    |
+| 17                   | OUTPUT4              | space                | n                    |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-StepUpDigital"></a>
 ### `sky130_hilas_StepUpDigital`
@@ -122,7 +126,7 @@ Description: a single level shifter
 
 Height: 1.750
 <br>
-Width: 8.700
+Width: 9.630
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1171,7 +1175,7 @@ Width: 130.250
 | 47                   | DRAIN6N              | metal2               | nsew                 |
 | 48                   | DRAIN6P              | metal2               | nsew                 |
 | 49                   | DRAIN5P              | metal2               | nsew                 |
-| 50                   | DARIN4P              | metal2               | nsew                 |
+| 50                   | DRAIN4P              | metal2               | nsew                 |
 | 51                   | DRAIN5N              | metal2               | nsew                 |
 | 52                   | DRAIN4N              | metal2               | nsew                 |
 | 53                   | DRAIN3P              | metal2               | nsew                 |
