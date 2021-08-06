@@ -290,157 +290,6 @@ Width: 4.760
 | 21                   | SELECT1              | metal2               | nsew                 |
 | 22                   | INPUT1_1             | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
-<a name="sky130-hilas-TopLevelTextStructure"></a>
-### `sky130_hilas_TopLevelTextStructure`
-
-Description: top level test structure
-
-Height: 75.780
-<br>
-Width: 130.250
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | DIG24                | metal2               | n                    |
-| 2                    | DIG23                | metal2               | nsew                 |
-| 3                    | DIG22                | metal2               | nsew                 |
-| 4                    | DIG21                | metal2               | nsew                 |
-| 5                    | DIG29                | metal2               | nsew                 |
-| 6                    | DIG28                | metal2               | nsew                 |
-| 7                    | DIG27                | metal2               | nsew                 |
-| 8                    | DIG26                | metal2               | nsew                 |
-| 9                    | DIG25                | metal2               | nsew                 |
-| 10                   | DIG20                | metal2               | nsew                 |
-| 11                   | DIG19                | metal2               | nsew                 |
-| 12                   | DIG18                | metal2               | nsew                 |
-| 13                   | DIG17                | metal2               | nsew                 |
-| 14                   | DIG16                | metal2               | nsew                 |
-| 15                   | DIG15                | metal2               | nsew                 |
-| 16                   | DIG14                | metal2               | nsew                 |
-| 17                   | DIG13                | metal2               | nsew                 |
-| 18                   | DIG12                | metal2               | nsew                 |
-| 19                   | DIG11                | metal2               | nsew                 |
-| 20                   | DIG10                | metal2               | nsew                 |
-| 21                   | DIG09                | metal2               | nsew                 |
-| 22                   | DIG08                | metal2               | nsew                 |
-| 23                   | DIG07                | metal2               | nsew                 |
-| 24                   | DIG06                | metal2               | nsew                 |
-| 25                   | DIG05                | metal2               | nsew                 |
-| 26                   | DIG04                | metal2               | nsew                 |
-| 27                   | DIG03                | metal2               | nsew                 |
-| 28                   | DIG02                | metal2               | nsew                 |
-| 29                   | DIG01                | metal2               | nsew                 |
-| 30                   | CAP2                 | metal2               | nsew                 |
-| 31                   | GENERALGATE01        | metal2               | nsew                 |
-| 32                   | GATEANDCAP1          | metal2               | nsew                 |
-| 33                   | GENERALGATE02        | metal2               | nsew                 |
-| 34                   | OUTPUTTA1            | metal2               | nsew                 |
-| 35                   | GATENFET1            | metal2               | nsew                 |
-| 36                   | DACOUTPUT            | metal2               | nsew                 |
-| 37                   | DRAINOUT             | metal2               | nsew                 |
-| 38                   | ROWTERM2             | metal2               | nsew                 |
-| 39                   | COLUMN2              | metal2               | nsew                 |
-| 40                   | COLUMN1              | metal2               | nsew                 |
-| 41                   | GATE2                | metal1               | nsew                 |
-| 42                   | DRAININJECT          | metal1               | nsew                 |
-| 43                   | VTUN                 | metal1               | nsew                 |
-| 44                   | VREFCHAR             | metal2               | nsew                 |
-| 45                   | CHAROUTPUT           | metal2               | nsew                 |
-| 46                   | LARGECAPACITOR       | metal2               | nsew                 |
-| 47                   | DRAIN6N              | metal2               | nsew                 |
-| 48                   | DRAIN6P              | metal2               | nsew                 |
-| 49                   | DRAIN5P              | metal2               | nsew                 |
-| 50                   | DARIN4P              | metal2               | nsew                 |
-| 51                   | DRAIN5N              | metal2               | nsew                 |
-| 52                   | DRAIN4N              | metal2               | nsew                 |
-| 53                   | DRAIN3P              | metal2               | nsew                 |
-| 54                   | DRAIN2P              | metal2               | nsew                 |
-| 55                   | DRAIN1P              | metal2               | nsew                 |
-| 56                   | DRAIN3N              | metal2               | nsew                 |
-| 57                   | DRAIN2N              | metal2               | nsew                 |
-| 58                   | DRAIN1N              | metal2               | nsew                 |
-| 59                   | SOURCEN              | metal2               | nsew                 |
-| 60                   | SOURCEP              | metal2               | nsew                 |
-| 61                   | GATE1                | metal1               | nsew                 |
-| 62                   | VINJ                 | metal1               | nsew                 |
-| 63                   | VGND                 | metal1               | nsew                 |
-| 64                   | VPWR                 | metal1               | nsew                 |
---------------------------------------------------------------------------------------------
-<a name="sky130-hilas-TopProtectStructure"></a>
-### `sky130_hilas_TopProtectStructure`
-
-Description: top level test structure with protection (duplicate of TopLevelProtectStructure)
-
-Height: 389.100
-<br>
-Width: 372.850
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | IO07                 | metal1               | nsew                 |
-| 2                    | IO08                 | metal1               | nsew                 |
-| 3                    | IO09                 | metal1               | nsew                 |
-| 4                    | IO10                 | metal1               | nsew                 |
-| 5                    | IO11                 | metal1               | nsew                 |
-| 6                    | IO12                 | metal1               | nsew                 |
-| 7                    | IO13                 | metal1               | nsew                 |
-| 8                    | IO25                 | metal1               | nsew                 |
-| 9                    | IO26                 | metal1               | nsew                 |
-| 10                   | IO27                 | metal1               | nsew                 |
-| 11                   | IO28                 | metal1               | nsew                 |
-| 12                   | IO29                 | metal1               | nsew                 |
-| 13                   | IO30                 | metal1               | nsew                 |
-| 14                   | IO31                 | metal1               | nsew                 |
-| 15                   | IO32                 | metal1               | nsew                 |
-| 16                   | IO33                 | metal1               | nsew                 |
-| 17                   | IO34                 | metal1               | nsew                 |
-| 18                   | IO35                 | metal1               | nsew                 |
-| 19                   | IO36                 | metal1               | nsew                 |
-| 20                   | IO37                 | metal1               | nsew                 |
-| 22                   | ANALOG10             | metal1               | nsew                 |
-| 23                   | ANALOG09             | metal1               | nsew                 |
-| 24                   | ANALOG08             | metal1               | nsew                 |
-| 25                   | ANALOG07             | metal1               | nsew                 |
-| 26                   | ANALOG06             | metal1               | nsew                 |
-| 27                   | ANALOG05             | metal1               | nsew                 |
-| 28                   | ANALOG04             | metal1               | nsew                 |
-| 29                   | ANALOG03             | metal1               | nsew                 |
-| 30                   | ANALOG02             | metal1               | nsew                 |
-| 31                   | ANALOG01             | metal1               | nsew                 |
-| 32                   | ANALOG00             | metal1               | nsew                 |
-| 33                   | VSSA1                | metal2               | nsew                 |
-| 34                   | VDDA1                | metal2               | nsew                 |
-| 35                   | LADATAOUT01          | metal2               | nsew                 |
-| 36                   | LADATAOUT00          | metal2               | nsew                 |
-| 37                   | LADATAOUT02          | metal2               | nsew                 |
-| 38                   | LADATAOUT03          | metal2               | nsew                 |
-| 39                   | LADATAOUT04          | metal2               | nsew                 |
-| 40                   | LADATAOUT05          | metal2               | nsew                 |
-| 41                   | LADATAOUT06          | metal2               | nsew                 |
-| 42                   | LADATAOUT07          | metal2               | nsew                 |
-| 43                   | LADATAOUT08          | metal2               | nsew                 |
-| 44                   | LADATAOUT09          | metal2               | nsew                 |
-| 45                   | LADATAOUT10          | metal2               | nsew                 |
-| 46                   | LADATAOUT11          | metal2               | nsew                 |
-| 47                   | LADATAOUT12          | metal2               | nsew                 |
-| 48                   | LADATAOUT13          | metal2               | nsew                 |
-| 49                   | LADATAOUT14          | metal2               | nsew                 |
-| 50                   | LADATAOUT15          | metal2               | nsew                 |
-| 51                   | LADATA16             | metal2               | nsew                 |
-| 52                   | LADATAOUT17          | metal2               | nsew                 |
-| 53                   | LADATAOUT18          | metal2               | nsew                 |
-| 54                   | LADATAOUT19          | metal2               | nsew                 |
-| 55                   | LADATAOUT20          | metal2               | nsew                 |
-| 56                   | LADATAOUT21          | metal2               | nsew                 |
-| 57                   | LADATAOUT22          | metal2               | nsew                 |
-| 58                   | LADATAOUT23          | metal2               | nsew                 |
-| 59                   | LADATAOUT24          | metal2               | nsew                 |
-| 60                   | LADATAIN00           | metal2               | nsew                 |
-| 61                   | LADATAIN01           | metal2               | nsew                 |
-| 62                   | LADATAIN02           | metal2               | nsew                 |
-| 63                   | LADATAIN03           | metal2               | nsew                 |
-| 64                   | VCCA                 | metal2               | nsew                 |
---------------------------------------------------------------------------------------------
 <a name="sky130-hilas-Trans4small"></a>
 ### `sky130_hilas_Trans4small`
 
@@ -1261,6 +1110,82 @@ Width: 29.950
 | 12                   | VBIAS                | metal2               | nsew,analog,default  |
 | 13                   | DRAIN1               | metal2               | nsew                 |
 | 14                   | SOURCE1              | metal2               | nsew                 |
+--------------------------------------------------------------------------------------------
+<a name="sky130-hilas-TopLevelTestStructure"></a>
+### `sky130_hilas_TopLevelTestStructure`
+
+Description: top level test structure
+
+Height: 75.780
+<br>
+Width: 130.250
+
+| Port Number          | Label                | Layer                | Attributes           |
+|----------------------|----------------------|----------------------|----------------------|
+| 1                    | DIG24                | metal2               | n                    |
+| 2                    | DIG23                | metal2               | nsew                 |
+| 3                    | DIG22                | metal2               | nsew                 |
+| 4                    | DIG21                | metal2               | nsew                 |
+| 5                    | DIG29                | metal2               | nsew                 |
+| 6                    | DIG28                | metal2               | nsew                 |
+| 7                    | DIG27                | metal2               | nsew                 |
+| 8                    | DIG26                | metal2               | nsew                 |
+| 9                    | DIG25                | metal2               | nsew                 |
+| 10                   | DIG20                | metal2               | nsew                 |
+| 11                   | DIG19                | metal2               | nsew                 |
+| 12                   | DIG18                | metal2               | nsew                 |
+| 13                   | DIG17                | metal2               | nsew                 |
+| 14                   | DIG16                | metal2               | nsew                 |
+| 15                   | DIG15                | metal2               | nsew                 |
+| 16                   | DIG14                | metal2               | nsew                 |
+| 17                   | DIG13                | metal2               | nsew                 |
+| 18                   | DIG12                | metal2               | nsew                 |
+| 19                   | DIG11                | metal2               | nsew                 |
+| 20                   | DIG10                | metal2               | nsew                 |
+| 21                   | DIG09                | metal2               | nsew                 |
+| 22                   | DIG08                | metal2               | nsew                 |
+| 23                   | DIG07                | metal2               | nsew                 |
+| 24                   | DIG06                | metal2               | nsew                 |
+| 25                   | DIG05                | metal2               | nsew                 |
+| 26                   | DIG04                | metal2               | nsew                 |
+| 27                   | DIG03                | metal2               | nsew                 |
+| 28                   | DIG02                | metal2               | nsew                 |
+| 29                   | DIG01                | metal2               | nsew                 |
+| 30                   | CAP2                 | metal2               | nsew                 |
+| 31                   | GENERALGATE01        | metal2               | nsew                 |
+| 32                   | GATEANDCAP1          | metal2               | nsew                 |
+| 33                   | GENERALGATE02        | metal2               | nsew                 |
+| 34                   | OUTPUTTA1            | metal2               | nsew                 |
+| 35                   | GATENFET1            | metal2               | nsew                 |
+| 36                   | DACOUTPUT            | metal2               | nsew                 |
+| 37                   | DRAINOUT             | metal2               | nsew                 |
+| 38                   | ROWTERM2             | metal2               | nsew                 |
+| 39                   | COLUMN2              | metal2               | nsew                 |
+| 40                   | COLUMN1              | metal2               | nsew                 |
+| 41                   | GATE2                | metal1               | nsew                 |
+| 42                   | DRAININJECT          | metal1               | nsew                 |
+| 43                   | VTUN                 | metal1               | nsew                 |
+| 44                   | VREFCHAR             | metal2               | nsew                 |
+| 45                   | CHAROUTPUT           | metal2               | nsew                 |
+| 46                   | LARGECAPACITOR       | metal2               | nsew                 |
+| 47                   | DRAIN6N              | metal2               | nsew                 |
+| 48                   | DRAIN6P              | metal2               | nsew                 |
+| 49                   | DRAIN5P              | metal2               | nsew                 |
+| 50                   | DARIN4P              | metal2               | nsew                 |
+| 51                   | DRAIN5N              | metal2               | nsew                 |
+| 52                   | DRAIN4N              | metal2               | nsew                 |
+| 53                   | DRAIN3P              | metal2               | nsew                 |
+| 54                   | DRAIN2P              | metal2               | nsew                 |
+| 55                   | DRAIN1P              | metal2               | nsew                 |
+| 56                   | DRAIN3N              | metal2               | nsew                 |
+| 57                   | DRAIN2N              | metal2               | nsew                 |
+| 58                   | DRAIN1N              | metal2               | nsew                 |
+| 59                   | SOURCEN              | metal2               | nsew                 |
+| 60                   | SOURCEP              | metal2               | nsew                 |
+| 61                   | GATE1                | metal1               | nsew                 |
+| 62                   | VINJ                 | metal1               | nsew                 |
+| 63                   | VGND                 | metal1               | nsew                 |
+| 64                   | VPWR                 | metal1               | nsew                 |
 ## COMPONENT-CELLS
 
 --------------------------------------------------------------------------------------------

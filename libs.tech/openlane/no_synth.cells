@@ -10,8 +10,6 @@ sky130_hilas_TA2Cell_NoFG
 sky130_hilas_TA2SignalBiasCell
 sky130_hilas_Tgate4Double01
 sky130_hilas_Tgate4Single01
-sky130_hilas_TopLevelTextStructure
-sky130_hilas_TopProtectStructure
 sky130_hilas_Trans4small
 sky130_hilas_VinjDecode2to4
 sky130_hilas_VinjDiodeProtect01
@@ -66,6 +64,7 @@ sky130_hilas_pFETmirror
 sky130_hilas_pFETmirror02
 sky130_hilas_pTransistorPair
 sky130_hilas_FGcharacterization01
+sky130_hilas_TopLevelTestStructure
 sky130_hilas_FGVaractorTunnelCap01
 sky130_hilas_StepUpDigitalPart1
 sky130_hilas_Trans2med

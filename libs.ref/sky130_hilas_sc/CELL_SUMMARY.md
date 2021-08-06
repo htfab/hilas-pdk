@@ -18,8 +18,6 @@
 | [`sky130_hilas_TA2SignalBiasCell`](CELL_DETAILS.md#sky130-hilas-TA2SignalBiasCell) |                                                         |
 | [`sky130_hilas_Tgate4Double01`](CELL_DETAILS.md#sky130-hilas-Tgate4Double01) | 4 double-throw transmission gates                       |
 | [`sky130_hilas_Tgate4Single01`](CELL_DETAILS.md#sky130-hilas-Tgate4Single01) | 4 single-throw transmission gates                       |
-| [`sky130_hilas_TopLevelTextStructure`](CELL_DETAILS.md#sky130-hilas-TopLevelTextStructure) | top level test structure                                |
-| [`sky130_hilas_TopProtectStructure`](CELL_DETAILS.md#sky130-hilas-TopProtectStructure) | top level test structure with protection (duplicate of TopLevelProtectStructure) |
 | [`sky130_hilas_Trans4small`](CELL_DETAILS.md#sky130-hilas-Trans4small) | 3 small nFETs + 3 small pFETs                           |
 | [`sky130_hilas_VinjDecode2to4`](CELL_DETAILS.md#sky130-hilas-VinjDecode2to4) | a 2-to-4 decoder capable of handling VINJ voltage       |
 | [`sky130_hilas_VinjDiodeProtect01`](CELL_DETAILS.md#sky130-hilas-VinjDiodeProtect01) | protective ESD diode for VINJ line                      |
@@ -84,3 +82,4 @@
 | Block Name                | Description                                             |
 |---------------------------|---------------------------------------------------------|
 | [`sky130_hilas_FGcharacterization01`](CELL_DETAILS.md#sky130-hilas-FGcharacterization01) | FG test strucure that uses a capacitor around a transconductance amplifier |
+| [`sky130_hilas_TopLevelTestStructure`](CELL_DETAILS.md#sky130-hilas-TopLevelTestStructure) | top level test structure                                |
