@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1628420416
 << error_s >>
 rect 35 554 85 560
 rect 358 555 408 561
@@ -66,41 +66,67 @@ rect 106 -79 156 -73
 rect 286 -84 337 -78
 rect 466 -84 494 -78
 rect 706 -84 734 -78
-use sky130_hilas_StepUpDigital  StepUpDigital_2
+<< nwell >>
+rect -30 470 -19 490
+<< metal1 >>
+rect 4 585 33 594
+rect 435 588 466 594
+rect 736 589 760 594
+rect 4 -106 33 -94
+rect 435 -106 466 -100
+rect 736 -106 760 -101
+<< metal2 >>
+rect -30 530 -14 550
+rect 830 437 840 469
+rect -30 355 -13 375
+rect 830 262 840 294
+rect -30 180 -11 200
+rect 830 87 840 119
+rect -30 5 -14 25
+rect 830 -88 840 -56
+use sky130_hilas_StepUpDigital  StepUpDigital_0
 timestamp 1628285143
-transform 1 0 -49 0 1 463
-box 19 -44 889 131
-use sky130_hilas_StepUpDigital  StepUpDigital_1
-timestamp 1628285143
-transform 1 0 -49 0 1 288
+transform 1 0 -49 0 1 113
 box 19 -44 889 131
 use sky130_hilas_StepUpDigital  StepUpDigital_3
 timestamp 1628285143
 transform 1 0 -49 0 1 -62
 box 19 -44 889 131
-use sky130_hilas_StepUpDigital  StepUpDigital_0
+use sky130_hilas_StepUpDigital  StepUpDigital_1
 timestamp 1628285143
-transform 1 0 -49 0 1 113
+transform 1 0 -49 0 1 288
+box 19 -44 889 131
+use sky130_hilas_StepUpDigital  StepUpDigital_2
+timestamp 1628285143
+transform 1 0 -49 0 1 463
 box 19 -44 889 131
 << labels >>
-rlabel space 746 517 770 522 0 VPWR
-port 5 nsew
-rlabel metal1 746 -102 770 -97 0 VPWR
-port 5 nsew
-rlabel space 4 517 33 522 0 VINJ
-port 6 nsew
 rlabel metal1 4 -102 33 -97 0 VINJ
 port 6 nsew
-rlabel space -30 470 -19 490 0 OUTPUT1
-port 7 nsew
-rlabel space -30 315 -19 335 0 OUTPUT2
-port 8 nsew
-rlabel space -30 160 -19 180 0 OUTPUT3
-port 9 nsew
 rlabel metal2 -30 5 -19 25 0 OUTPUT4
 port 10 nsew
-rlabel space 445 515 476 522 0 VGND
+rlabel metal2 830 437 840 469 0 INPUT1
+port 12 nsew
+rlabel metal2 830 262 840 294 0 INPUT2
+port 13 nsew
+rlabel metal2 830 87 840 119 0 INPUT3
+port 14 nsew
+rlabel metal2 830 -88 840 -56 0 INPUT4
+port 15 nsew
+rlabel metal2 -30 180 -22 200 0 OUTPUT3
+port 9 nsew
+rlabel metal2 -30 355 -23 375 0 OUTPUT2
+port 8 nsew
+rlabel metal2 -30 530 -23 550 0 OUTPUT1
+port 7 nsew
+rlabel metal1 435 -106 466 -100 0 VGND
 port 11 nsew
-rlabel metal1 445 -102 476 -96 0 VGND
+rlabel metal1 435 588 466 594 0 VGND
 port 11 nsew
+rlabel metal1 4 585 33 594 0 VINJ
+port 6 nsew
+rlabel metal1 736 589 760 594 0 VPWR
+port 5 nsew
+rlabel metal1 736 -106 760 -101 0 VPWR
+port 5 nsew
 << end >>
