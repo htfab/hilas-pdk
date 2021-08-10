@@ -1,76 +1,84 @@
 magic
 tech sky130A
-timestamp 1627737364
+timestamp 1628616667
+<< checkpaint >>
+rect -331 19898 2016 20643
+rect -560 -630 2016 19898
+rect -560 -1375 1787 -630
 << metal1 >>
-rect -2053 27123 -1982 27519
-rect -898 26641 -826 27030
-rect -2054 24263 -1984 24659
-rect -898 23782 -826 24171
-rect -2052 21404 -1982 21800
-rect -898 20922 -826 21311
-rect -2054 18545 -1984 18941
-rect -898 18065 -826 18454
-rect -2054 15685 -1984 16081
-rect -899 15205 -827 15594
-rect -2053 12827 -1983 13223
-rect -898 12346 -826 12735
-rect -2053 9967 -1983 10363
-rect -898 9486 -826 9875
-use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_12
-timestamp 1627735001
-transform 0 1 -1755 1 0 26614
-box -745 -229 2114 858
-use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_11
-timestamp 1627735001
-transform 0 1 -1755 1 0 23755
-box -745 -229 2114 858
-use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_10
-timestamp 1627735001
-transform 0 1 -1755 1 0 20896
-box -745 -229 2114 858
-use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_5
-timestamp 1627735001
-transform 0 1 -1755 1 0 18037
-box -745 -229 2114 858
-use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_8
-timestamp 1627735001
-transform 0 1 -1755 1 0 15178
-box -745 -229 2114 858
-use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_7
-timestamp 1627735001
-transform 0 1 -1755 1 0 12319
-box -745 -229 2114 858
+rect 1 17663 72 18059
+rect 1156 17181 1228 17570
+rect 0 14803 70 15199
+rect 1156 14322 1228 14711
+rect 2 11944 72 12340
+rect 1156 11462 1228 11851
+rect 0 9085 70 9481
+rect 1156 8605 1228 8994
+rect 0 6225 70 6621
+rect 1155 5745 1227 6134
+rect 1 3367 71 3763
+rect 1156 2886 1228 3275
+rect 1 507 71 903
+rect 1156 26 1228 415
 use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_9
-timestamp 1627735001
-transform 0 1 -1755 1 0 9460
-box -745 -229 2114 858
+timestamp 1628616606
+transform 0 1 299 1 0 0
+box 0 0 2859 1087
+use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_7
+timestamp 1628616606
+transform 0 1 299 1 0 2859
+box 0 0 2859 1087
+use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_8
+timestamp 1628616606
+transform 0 1 299 1 0 5718
+box 0 0 2859 1087
+use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_5
+timestamp 1628616606
+transform 0 1 299 1 0 8577
+box 0 0 2859 1087
+use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_10
+timestamp 1628616606
+transform 0 1 299 1 0 11436
+box 0 0 2859 1087
+use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_11
+timestamp 1628616606
+transform 0 1 299 1 0 14295
+box 0 0 2859 1087
+use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_12
+timestamp 1628616606
+transform 0 1 299 1 0 17154
+box 0 0 2859 1087
 << labels >>
-rlabel metal1 -898 9486 -826 9875 0 IO7
+rlabel metal1 1156 26 1228 415 0 IO7
 port 1 nsew
-rlabel metal1 -898 12346 -826 12735 0 IO8
+rlabel metal1 1156 2886 1228 3275 0 IO8
 port 2 nsew
-rlabel metal1 -899 15205 -827 15594 0 IO9
+rlabel metal1 1155 5745 1227 6134 0 IO9
 port 3 nsew
-rlabel metal1 -898 18065 -826 18454 0 IO10
+rlabel metal1 1156 8605 1228 8994 0 IO10
 port 4 nsew
-rlabel metal1 -898 20922 -826 21311 0 IO11
+rlabel metal1 1156 11462 1228 11851 0 IO11
 port 5 nsew
-rlabel metal1 -898 23782 -826 24171 0 IO12
+rlabel metal1 1156 14322 1228 14711 0 IO12
 port 7 nsew
-rlabel metal1 -898 26641 -826 27030 0 IO13
+rlabel metal1 1156 17181 1228 17570 0 IO13
 port 6 nsew
-rlabel metal1 -2053 9967 -1983 10363 0 PIN1
+rlabel metal1 1 507 71 903 0 PIN1
 port 8 nsew
-rlabel metal1 -2053 12827 -1983 13223 0 PIN2
+rlabel metal1 1 3367 71 3763 0 PIN2
 port 9 nsew
-rlabel metal1 -2054 15685 -1984 16081 0 PIN3
+rlabel metal1 0 6225 70 6621 0 PIN3
 port 10 nsew
-rlabel metal1 -2054 18545 -1984 18941 0 PIN4
+rlabel metal1 0 9085 70 9481 0 PIN4
 port 11 nsew
-rlabel metal1 -2052 21404 -1982 21800 0 PIN5
+rlabel metal1 2 11944 72 12340 0 PIN5
 port 12 nsew
-rlabel metal1 -2054 24263 -1984 24659 0 PIN6
+rlabel metal1 0 14803 70 15199 0 PIN6
 port 13 nsew
-rlabel metal1 -2053 27123 -1983 27519 0 PIN7
+rlabel metal1 1 17663 71 18059 0 PIN7
 port 14 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

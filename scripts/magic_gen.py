@@ -50,7 +50,7 @@ from pexpect.exceptions import EOF as PEXP_EXCEPTION
 #######################################################################################
 PDK_VARIANT = 'sky130_hilas_sc'
 ###########################################################################################
-
+pos = [0.0, 0.0, 0.0]
 THIS_DIR = Path(__file__).parent
 HILAS_PDK_ROOT = THIS_DIR.parent
 
@@ -883,8 +883,18 @@ class Magic:
         result += self.p.run_command('gds write {}'.format(target))
         return result
 
-    def make_lef(self, source):
+    def make_lef(self, source, centering, addProps, pos):
+        xinv = pos[0]
+        yinv = pos[1]
         result = self.renew(source)
+        if addProps == 1:
+            result += self.p.run_command('property LEFclass CORE')
+            result += self.p.run_command('property LEFsite unithd')
+            result += self.p.run_command('property LEFsymmetry "X Y R90"')
+        if centering == 1:
+            result += self.p.run_command('select')
+            result += self.p.run_command('move origin '+str(xinv)+' '+str(yinv))
+        result += self.p.run_command('save')
         # result += self.p.run_command('lef write -toplayer -hide')
         result += self.p.run_command('lef write -toplayer')
         # result += self.p.run_command('lef write')
@@ -972,18 +982,38 @@ def make_gds(mf):
         error("There was a problem during the processing of {}:".format(mf))
 
 
-def make_temp_lef(mf):
+def make_temp_lef(mf, centering, addProps, pos):
     target = (LIB_PATH['temp_lef'] / mf.long_name).with_suffix('.lef')
-
     # try:
+    result = magic.make_lef(mf.file, 0, addProps, pos)
+    line=[]
 
-    result = magic.make_lef(mf.file)
+
     if not magic.is_alive():
         print(result)
         error("There was a problem during the processing of {}: ".format(mf))
 
     shutil.copy(mf.file.parent / (mf.long_name + '.lef'), target)
+    with open(target, mode='r', newline='\n') as lef:
+        line = lef.readlines()
+        for data in line:
+           if data.find("ORIGIN")!=-1:
+                newstring = data.split(' ')
+                xpos = float(newstring[3])
+                ypos = float(newstring[4])
+                if xpos != 0.0 or ypos != 0.0:
+                    xinvert = -100*xpos
+                    yinvert = -100*ypos
+                    pos[0]=xinvert
+                    pos[1]=yinvert
+                    result = magic.make_lef(mf.file, 1, addProps, pos)
     os.remove(mf.file.parent / (mf.long_name + '.lef'))
+
+    ##This is the part where we get the LEF file data, read it, invert it and now it just needs to open magic run some commands and re-run
+
+
+
+
     print('wrote LEF: {}'.format(target.relative_to(rel_root)))
 
     # except BaseException:
@@ -1447,7 +1477,7 @@ def target_check(magic_file, type):
     else:
         return True
 
-def handle_magic(magic_file):
+def handle_magic(magic_file, centering, addProps):
     if not any([
         target_check(magic_file, 'gds'),
         target_check(magic_file, 'temp_lef'),
@@ -1463,7 +1493,7 @@ def handle_magic(magic_file):
         make_gds(magic_file)
     if args.temp_lef and target_check(magic_file, 'temp_lef'):
         parent_check(LIB_PATH['temp_lef'])
-        make_temp_lef(magic_file)
+        make_temp_lef(magic_file, centering, addProps, pos)
     if args.spice and target_check(magic_file, 'spice_ext'):
         parent_check(LIB_PATH['spice_ext'])
         make_spice(magic_file)
@@ -1760,6 +1790,7 @@ def main():
 
     ap.add_argument('--rename-magic-port', nargs=3, help='rename port in magic cell. Usage: --rename-magic-port <cell-name> <old-name> <new-name>')
     ap.add_argument('--rename-xschem-pin', nargs=3, help='rename pin in xschem circuit. Usage: --rename-xschem-pin <circuit-name> <old-name> <new-name>')
+    ap.add_argument('--center-origin', nargs=1, help='Center the origin of the magic layot file to origin 0,0. Usage: --center-origin <circuit-name>')
 
     args = ap.parse_args()
     if args.refresh:
@@ -1799,7 +1830,7 @@ def main():
     # Items here on done on a per-cell basis with Magic opening each one
     magic = Magic()
     for m in magic_lib.values():
-        handle_magic(m)
+        handle_magic(m, 1, 1)
 
     # The following items can be done on the batch level:
     if args.lvs:

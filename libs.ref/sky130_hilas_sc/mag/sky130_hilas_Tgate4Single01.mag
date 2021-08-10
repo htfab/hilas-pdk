@@ -1,106 +1,114 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1628616651
+<< checkpaint >>
+rect -367 1474 1369 1677
+rect -630 -427 1369 1474
+rect -367 -630 1369 -427
 << error_s >>
-rect 165 453 205 459
-rect 315 453 355 459
-rect 165 411 205 417
-rect 315 411 355 417
-rect 89 387 129 392
-rect 315 385 355 392
-rect 89 345 129 350
-rect 315 343 355 350
-rect 89 283 129 288
-rect 315 283 355 290
-rect 89 241 129 246
-rect 315 241 355 248
-rect 165 216 205 222
-rect 315 216 355 222
-rect 165 174 205 180
-rect 315 174 355 180
-rect 165 133 205 139
-rect 315 133 355 139
-rect 165 91 205 97
-rect 315 91 355 97
-rect 89 67 129 72
-rect 315 65 355 72
-rect 89 25 129 30
-rect 315 23 355 30
-rect 89 -37 129 -32
-rect 315 -37 355 -30
-rect 89 -79 129 -74
-rect 315 -79 355 -72
-rect 165 -104 205 -98
-rect 315 -104 355 -98
-rect 165 -146 205 -140
-rect 315 -146 355 -140
+rect 201 820 241 826
+rect 351 820 391 826
+rect 201 778 241 784
+rect 351 778 391 784
+rect 125 754 165 759
+rect 351 752 391 759
+rect 125 712 165 717
+rect 351 710 391 717
+rect 125 650 165 655
+rect 351 650 391 657
+rect 125 608 165 613
+rect 351 608 391 615
+rect 201 583 241 589
+rect 351 583 391 589
+rect 201 541 241 547
+rect 351 541 391 547
+rect 201 500 241 506
+rect 351 500 391 506
+rect 201 458 241 464
+rect 351 458 391 464
+rect 125 434 165 439
+rect 351 432 391 439
+rect 125 392 165 397
+rect 351 390 391 397
+rect 125 330 165 335
+rect 351 330 391 337
+rect 125 288 165 293
+rect 351 288 391 295
+rect 201 263 241 269
+rect 351 263 391 269
+rect 201 221 241 227
+rect 351 221 391 227
 << nwell >>
-rect -24 385 -23 423
+rect 12 752 13 790
 << metal1 >>
-rect 38 460 58 464
-rect 389 458 408 464
-rect 38 -141 58 -137
-rect 389 -141 408 -135
+rect 74 827 94 831
+rect 425 825 444 831
+rect 74 226 94 230
+rect 425 226 444 232
 << metal2 >>
-rect -36 441 -31 461
-rect -36 343 -30 363
-rect 433 343 440 363
-rect -36 270 -30 290
-rect 433 270 440 290
-rect -36 172 -31 192
-rect -36 121 -31 141
-rect -36 23 -30 43
-rect 433 23 440 43
-rect -36 -50 -30 -30
-rect 433 -50 440 -30
-rect -36 -148 -31 -128
-use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_1
-timestamp 1628285143
-transform 1 0 227 0 1 22
-box -263 -186 213 -25
-use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_2
-timestamp 1628285143
-transform 1 0 227 0 -1 -29
-box -263 -186 213 -25
-use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_0
-timestamp 1628285143
-transform 1 0 227 0 -1 291
-box -263 -186 213 -25
+rect 0 808 5 828
+rect 0 710 6 730
+rect 469 710 476 730
+rect 0 637 6 657
+rect 469 637 476 657
+rect 0 539 5 559
+rect 0 488 5 508
+rect 0 390 6 410
+rect 469 390 476 410
+rect 0 317 6 337
+rect 469 317 476 337
+rect 0 219 5 239
 use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_3
-timestamp 1628285143
-transform 1 0 227 0 1 342
-box -263 -186 213 -25
+timestamp 1628616500
+transform 1 0 263 0 1 709
+box 0 0 476 338
+use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_0
+timestamp 1628616500
+transform 1 0 263 0 -1 658
+box 0 0 476 338
+use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_2
+timestamp 1628616500
+transform 1 0 263 0 -1 338
+box 0 0 476 338
+use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_1
+timestamp 1628616500
+transform 1 0 263 0 1 389
+box 0 0 476 338
 << labels >>
-rlabel metal2 -36 270 -30 290 0 SELECT2
+rlabel metal2 0 637 6 657 0 SELECT2
 port 7 nsew analog default
-rlabel metal1 38 -141 58 -137 0 VPWR
+rlabel metal1 74 226 94 230 0 VPWR
 port 2 nsew analog default
-rlabel metal2 -36 172 -31 192 0 INPUT1_2
+rlabel metal2 0 539 5 559 0 INPUT1_2
 port 6 nsew analog default
-rlabel metal1 389 458 408 464 0 VGND
+rlabel metal1 425 825 444 831 0 VGND
 port 10 nsew ground default
-rlabel metal1 389 -141 408 -135 0 VGND
+rlabel metal1 425 226 444 232 0 VGND
 port 10 nsew ground default
-rlabel metal2 433 270 440 290 0 OUTPUT2
+rlabel metal2 469 637 476 657 0 OUTPUT2
 port 12 nsew analog default
-rlabel metal1 38 460 58 464 0 VPWR
+rlabel metal1 74 827 94 831 0 VPWR
 port 2 nsew power default
-rlabel metal2 433 -50 440 -30 0 OUTPUT4
+rlabel metal2 469 317 476 337 0 OUTPUT4
 port 14 nsew
-rlabel metal2 433 23 440 43 0 OUTPUT3
+rlabel metal2 469 390 476 410 0 OUTPUT3
 port 15 nsew
-rlabel metal2 433 343 440 363 0 OUTPUT1
+rlabel metal2 469 710 476 730 0 OUTPUT1
 port 16 nsew
-rlabel metal2 -36 -148 -31 -128 0 INPUT1_4
+rlabel metal2 0 219 5 239 0 INPUT1_4
 port 17 nsew
-rlabel metal2 -36 -50 -30 -30 0 SELECT4
+rlabel metal2 0 317 6 337 0 SELECT4
 port 18 nsew
-rlabel metal2 -36 23 -30 43 0 SELECT3
+rlabel metal2 0 390 6 410 0 SELECT3
 port 19 nsew
-rlabel metal2 -36 121 -31 141 0 INPUT1_3
+rlabel metal2 0 488 5 508 0 INPUT1_3
 port 20 nsew
-rlabel metal2 -36 343 -30 363 0 SELECT1
+rlabel metal2 0 710 6 730 0 SELECT1
 port 21 nsew
-rlabel metal2 -36 441 -31 461 0 INPUT1_1
+rlabel metal2 0 808 5 828 0 INPUT1_1
 port 22 nsew
+<< properties >>
+string LEFclass CORE
+string LEFsite unithd
+string LEFsymmetry X Y R90
 << end >>

@@ -1,236 +1,248 @@
 magic
 tech sky130A
-timestamp 1625358249
+timestamp 1628616654
+<< checkpaint >>
+rect -575 929 932 937
+rect -585 789 932 929
+rect -585 780 934 789
+rect -585 -360 948 780
+rect -570 -507 948 -360
+rect -570 -600 939 -507
+rect -570 -608 929 -600
 << nwell >>
-rect 68 52 472 189
+rect 0 165 404 302
 << mvnmos >>
-rect 130 -56 341 5
+rect 62 57 273 118
 << mvpmos >>
-rect 130 86 340 148
+rect 62 199 272 261
 << mvndiff >>
-rect 101 1 130 5
-rect 101 -16 107 1
-rect 124 -16 130 1
-rect 101 -33 130 -16
-rect 101 -50 107 -33
-rect 124 -50 130 -33
-rect 101 -56 130 -50
-rect 341 1 370 5
-rect 341 -16 347 1
-rect 364 -16 370 1
-rect 341 -33 370 -16
-rect 341 -50 347 -33
-rect 364 -50 370 -33
-rect 341 -56 370 -50
+rect 33 114 62 118
+rect 33 97 39 114
+rect 56 97 62 114
+rect 33 80 62 97
+rect 33 63 39 80
+rect 56 63 62 80
+rect 33 57 62 63
+rect 273 114 302 118
+rect 273 97 279 114
+rect 296 97 302 114
+rect 273 80 302 97
+rect 273 63 279 80
+rect 296 63 302 80
+rect 273 57 302 63
 << mvpdiff >>
-rect 101 143 130 148
-rect 101 126 107 143
-rect 124 126 130 143
-rect 101 109 130 126
-rect 101 92 107 109
-rect 124 92 130 109
-rect 101 86 130 92
-rect 340 143 370 148
-rect 340 126 346 143
-rect 363 126 370 143
-rect 340 109 370 126
-rect 340 92 346 109
-rect 363 92 370 109
-rect 340 86 370 92
+rect 33 256 62 261
+rect 33 239 39 256
+rect 56 239 62 256
+rect 33 222 62 239
+rect 33 205 39 222
+rect 56 205 62 222
+rect 33 199 62 205
+rect 272 256 302 261
+rect 272 239 278 256
+rect 295 239 302 256
+rect 272 222 302 239
+rect 272 205 278 222
+rect 295 205 302 222
+rect 272 199 302 205
 << mvndiffc >>
-rect 107 -16 124 1
-rect 107 -50 124 -33
-rect 347 -16 364 1
-rect 347 -50 364 -33
+rect 39 97 56 114
+rect 39 63 56 80
+rect 279 97 296 114
+rect 279 63 296 80
 << mvpdiffc >>
-rect 107 126 124 143
-rect 107 92 124 109
-rect 346 126 363 143
-rect 346 92 363 109
+rect 39 239 56 256
+rect 39 205 56 222
+rect 278 239 295 256
+rect 278 205 295 222
 << psubdiff >>
-rect 389 -2 458 10
-rect 389 -19 399 -2
-rect 416 -19 433 -2
-rect 450 -19 458 -2
-rect 389 -36 458 -19
-rect 389 -53 399 -36
-rect 416 -53 433 -36
-rect 450 -53 458 -36
-rect 389 -70 458 -53
-rect 382 -87 399 -70
-rect 416 -87 433 -70
-rect 450 -87 458 -70
-rect 389 -99 458 -87
+rect 321 111 390 123
+rect 321 94 331 111
+rect 348 94 365 111
+rect 382 94 390 111
+rect 321 77 390 94
+rect 321 60 331 77
+rect 348 60 365 77
+rect 382 60 390 77
+rect 321 43 390 60
+rect 314 26 331 43
+rect 348 26 365 43
+rect 382 26 390 43
+rect 321 14 390 26
 << mvnsubdiff >>
-rect 397 144 439 156
-rect 397 127 409 144
-rect 426 127 439 144
-rect 397 110 439 127
-rect 397 93 409 110
-rect 426 93 439 110
-rect 397 86 439 93
+rect 329 257 371 269
+rect 329 240 341 257
+rect 358 240 371 257
+rect 329 223 371 240
+rect 329 206 341 223
+rect 358 206 371 223
+rect 329 199 371 206
 << psubdiffcont >>
-rect 399 -19 416 -2
-rect 433 -19 450 -2
-rect 399 -53 416 -36
-rect 433 -53 450 -36
-rect 399 -87 416 -70
-rect 433 -87 450 -70
+rect 331 94 348 111
+rect 365 94 382 111
+rect 331 60 348 77
+rect 365 60 382 77
+rect 331 26 348 43
+rect 365 26 382 43
 << mvnsubdiffcont >>
-rect 409 127 426 144
-rect 409 93 426 110
+rect 341 240 358 257
+rect 341 206 358 223
 << poly >>
-rect 130 148 341 163
-rect 130 85 340 86
-rect 130 68 341 85
-rect 130 67 231 68
-rect 163 40 164 67
-rect 197 40 198 67
-rect 304 20 305 46
-rect 338 20 339 46
-rect 271 19 341 20
-rect 130 5 341 19
-rect 130 -69 341 -56
+rect 62 261 273 276
+rect 62 198 272 199
+rect 62 181 273 198
+rect 62 180 163 181
+rect 95 153 96 180
+rect 129 153 130 180
+rect 236 133 237 159
+rect 270 133 271 159
+rect 203 132 273 133
+rect 62 118 273 132
+rect 62 44 273 57
 << locali >>
-rect 99 183 429 189
-rect 99 182 158 183
-rect 166 182 265 183
-rect 275 182 429 183
-rect 99 179 429 182
-rect 99 162 377 179
-rect 394 162 412 179
-rect 99 144 429 162
-rect 99 143 409 144
-rect 99 126 107 143
-rect 124 126 346 143
-rect 363 127 409 143
-rect 426 127 429 144
-rect 363 126 429 127
-rect 99 110 428 126
-rect 99 109 409 110
-rect 99 92 107 109
-rect 124 92 346 109
-rect 363 93 409 109
-rect 426 93 428 110
-rect 363 92 428 93
-rect 99 85 428 92
-rect 99 1 231 67
-rect 271 24 428 85
-rect 367 4 450 6
-rect 361 1 450 4
-rect 99 -16 107 1
-rect 124 -16 347 1
-rect 364 -2 450 1
-rect 364 -16 399 -2
-rect 99 -19 399 -16
-rect 416 -19 433 -2
-rect 99 -33 450 -19
-rect 99 -50 107 -33
-rect 124 -50 347 -33
-rect 364 -36 450 -33
-rect 364 -50 399 -36
-rect 99 -53 399 -50
-rect 416 -53 433 -36
-rect 99 -70 450 -53
-rect 99 -87 382 -70
-rect 99 -88 450 -87
-rect 375 -95 450 -88
+rect 31 296 361 302
+rect 31 295 90 296
+rect 98 295 197 296
+rect 207 295 361 296
+rect 31 292 361 295
+rect 31 275 309 292
+rect 326 275 344 292
+rect 31 257 361 275
+rect 31 256 341 257
+rect 31 239 39 256
+rect 56 239 278 256
+rect 295 240 341 256
+rect 358 240 361 257
+rect 295 239 361 240
+rect 31 223 360 239
+rect 31 222 341 223
+rect 31 205 39 222
+rect 56 205 278 222
+rect 295 206 341 222
+rect 358 206 360 223
+rect 295 205 360 206
+rect 31 198 360 205
+rect 31 114 163 180
+rect 203 137 360 198
+rect 299 117 382 119
+rect 293 114 382 117
+rect 31 97 39 114
+rect 56 97 279 114
+rect 296 111 382 114
+rect 296 97 331 111
+rect 31 94 331 97
+rect 348 94 365 111
+rect 31 80 382 94
+rect 31 63 39 80
+rect 56 63 279 80
+rect 296 77 382 80
+rect 296 63 331 77
+rect 31 60 331 63
+rect 348 60 365 77
+rect 31 43 382 60
+rect 31 26 314 43
+rect 31 25 382 26
+rect 307 18 382 25
 << viali >>
-rect 377 162 394 179
-rect 412 162 429 179
-rect 382 -87 399 -70
-rect 416 -87 433 -70
+rect 309 275 326 292
+rect 344 275 361 292
+rect 314 26 331 43
+rect 348 26 365 43
 << metal1 >>
-rect 68 179 473 189
-rect 68 162 377 179
-rect 394 162 412 179
-rect 429 162 473 179
-rect 68 142 473 162
-rect 99 141 473 142
-rect 68 -64 373 -50
-rect 68 -70 473 -64
-rect 68 -87 382 -70
-rect 399 -87 416 -70
-rect 433 -87 473 -70
-rect 68 -113 473 -87
-use sky130_hilas_li2m1  sky130_hilas_li2m1_1
-timestamp 1607179295
-transform 1 0 174 0 1 -83
-box -10 -8 13 21
+rect 0 292 405 302
+rect 0 275 309 292
+rect 326 275 344 292
+rect 361 275 405 292
+rect 0 255 405 275
+rect 31 254 405 255
+rect 0 49 305 63
+rect 0 43 405 49
+rect 0 26 314 43
+rect 331 26 348 43
+rect 365 26 405 43
+rect 0 0 405 26
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1607179295
-transform 1 0 138 0 1 -83
-box -10 -8 13 21
+timestamp 1628616507
+transform 1 0 70 0 1 30
+box 0 0 23 29
+use sky130_hilas_li2m1  sky130_hilas_li2m1_1
+timestamp 1628616507
+transform 1 0 106 0 1 30
+box 0 0 23 29
 use sky130_hilas_li2m1  sky130_hilas_li2m1_3
-timestamp 1607179295
-transform 1 0 210 0 1 -83
-box -10 -8 13 21
-use sky130_hilas_li2m1  sky130_hilas_li2m1_2
-timestamp 1607179295
-transform 1 0 282 0 1 -83
-box -10 -8 13 21
+timestamp 1628616507
+transform 1 0 142 0 1 30
+box 0 0 23 29
 use sky130_hilas_li2m1  sky130_hilas_li2m1_5
-timestamp 1607179295
-transform 1 0 246 0 1 -83
-box -10 -8 13 21
-use sky130_hilas_li2m1  sky130_hilas_li2m1_7
-timestamp 1607179295
-transform 1 0 354 0 1 -83
-box -10 -8 13 21
+timestamp 1628616507
+transform 1 0 178 0 1 30
+box 0 0 23 29
+use sky130_hilas_li2m1  sky130_hilas_li2m1_2
+timestamp 1628616507
+transform 1 0 214 0 1 30
+box 0 0 23 29
 use sky130_hilas_li2m1  sky130_hilas_li2m1_4
-timestamp 1607179295
-transform 1 0 318 0 1 -83
-box -10 -8 13 21
-use sky130_hilas_poly2li  sky130_hilas_poly2li_4
-timestamp 1607178257
-transform 0 1 285 -1 0 37
-box -9 -14 18 19
-use sky130_hilas_poly2li  sky130_hilas_poly2li_3
-timestamp 1607178257
-transform 0 1 353 -1 0 37
-box -9 -14 18 19
-use sky130_hilas_poly2li  sky130_hilas_poly2li_0
-timestamp 1607178257
-transform 0 1 319 -1 0 37
-box -9 -14 18 19
-use sky130_hilas_poly2li  sky130_hilas_poly2li_1
-timestamp 1607178257
-transform 0 1 144 -1 0 58
-box -9 -14 18 19
+timestamp 1628616507
+transform 1 0 250 0 1 30
+box 0 0 23 29
+use sky130_hilas_li2m1  sky130_hilas_li2m1_7
+timestamp 1628616507
+transform 1 0 286 0 1 30
+box 0 0 23 29
 use sky130_hilas_poly2li  sky130_hilas_poly2li_2
-timestamp 1607178257
-transform 0 1 178 -1 0 58
-box -9 -14 18 19
+timestamp 1628616554
+transform 0 1 110 -1 0 171
+box 0 0 27 33
+use sky130_hilas_poly2li  sky130_hilas_poly2li_1
+timestamp 1628616554
+transform 0 1 76 -1 0 171
+box 0 0 27 33
 use sky130_hilas_poly2li  sky130_hilas_poly2li_5
-timestamp 1607178257
-transform 0 1 212 -1 0 58
-box -9 -14 18 19
-use sky130_hilas_li2m1  sky130_hilas_li2m1_10
-timestamp 1607179295
-transform 1 0 159 0 1 165
-box -10 -8 13 21
+timestamp 1628616554
+transform 0 1 144 -1 0 171
+box 0 0 27 33
+use sky130_hilas_poly2li  sky130_hilas_poly2li_4
+timestamp 1628616554
+transform 0 1 217 -1 0 150
+box 0 0 27 33
+use sky130_hilas_poly2li  sky130_hilas_poly2li_0
+timestamp 1628616554
+transform 0 1 251 -1 0 150
+box 0 0 27 33
+use sky130_hilas_poly2li  sky130_hilas_poly2li_3
+timestamp 1628616554
+transform 0 1 285 -1 0 150
+box 0 0 27 33
 use sky130_hilas_li2m1  sky130_hilas_li2m1_9
-timestamp 1607179295
-transform 1 0 123 0 1 165
-box -10 -8 13 21
-use sky130_hilas_li2m1  sky130_hilas_li2m1_12
-timestamp 1607179295
-transform 1 0 231 0 1 165
-box -10 -8 13 21
+timestamp 1628616507
+transform 1 0 55 0 1 278
+box 0 0 23 29
+use sky130_hilas_li2m1  sky130_hilas_li2m1_10
+timestamp 1628616507
+transform 1 0 91 0 1 278
+box 0 0 23 29
 use sky130_hilas_li2m1  sky130_hilas_li2m1_11
-timestamp 1607179295
-transform 1 0 195 0 1 165
-box -10 -8 13 21
+timestamp 1628616507
+transform 1 0 127 0 1 278
+box 0 0 23 29
+use sky130_hilas_li2m1  sky130_hilas_li2m1_12
+timestamp 1628616507
+transform 1 0 163 0 1 278
+box 0 0 23 29
 use sky130_hilas_li2m1  sky130_hilas_li2m1_13
-timestamp 1607179295
-transform 1 0 267 0 1 165
-box -10 -8 13 21
-use sky130_hilas_li2m1  sky130_hilas_li2m1_15
-timestamp 1607179295
-transform 1 0 347 0 1 165
-box -10 -8 13 21
+timestamp 1628616507
+transform 1 0 199 0 1 278
+box 0 0 23 29
 use sky130_hilas_li2m1  sky130_hilas_li2m1_14
-timestamp 1607179295
-transform 1 0 303 0 1 165
-box -10 -8 13 21
+timestamp 1628616507
+transform 1 0 235 0 1 278
+box 0 0 23 29
+use sky130_hilas_li2m1  sky130_hilas_li2m1_15
+timestamp 1628616507
+transform 1 0 279 0 1 278
+box 0 0 23 29
+<< properties >>
+string LEFclass CORE
+string LEFsite unithd
+string LEFsymmetry X Y R90
 << end >>
