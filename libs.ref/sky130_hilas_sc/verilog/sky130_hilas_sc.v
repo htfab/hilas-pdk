@@ -740,6 +740,7 @@ module sky130_hilas_TopLevelTextStructure (
     DRAININJECT,
     VTUN,
     LARGECAPACITOR,
+    DRAIN6N,
     DRAIN6P,
     DRAIN5P,
     DARIN4P,
@@ -789,6 +790,7 @@ module sky130_hilas_TopLevelTextStructure (
         inout DRAININJECT;
         inout VTUN;
         inout LARGECAPACITOR;
+        inout DRAIN6N;
         inout DRAIN6P;
         inout DRAIN5P;
         inout DARIN4P;
@@ -846,6 +848,7 @@ module sky130_hilas_TopLevelTextStructure (
     DRAININJECT,
     VTUN,
     LARGECAPACITOR,
+    DRAIN6N,
     DRAIN6P,
     DRAIN5P,
     DARIN4P,
@@ -891,6 +894,7 @@ module sky130_hilas_TopLevelTextStructure (
         inout DRAININJECT;
         inout VTUN;
         inout LARGECAPACITOR;
+        inout DRAIN6N;
         inout DRAIN6P;
         inout DRAIN5P;
         inout DARIN4P;

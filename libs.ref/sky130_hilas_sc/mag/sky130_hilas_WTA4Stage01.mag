@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616689
+timestamp 1628616993
 << checkpaint >>
 rect -630 1276 2655 2117
 rect -630 1203 2919 1276
@@ -129,43 +129,43 @@ rect 1552 24 1576 41
 rect 1228 16 1576 24
 rect 1239 0 1576 16
 use sky130_hilas_WTA4stage01  sky130_hilas_WTA4stage01_0
-timestamp 1628616688
+timestamp 1628616992
 transform 1 0 2409 0 1 38
 box 0 0 283 534
-use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1628616688
-transform 1 0 1235 0 1 116
-box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1628616688
+timestamp 1628616992
 transform 1 0 1240 0 1 20
 box 0 0 34 33
-use sky130_hilas_m12m2  sky130_hilas_m12m2_4
-timestamp 1628616552
-transform 1 0 1564 0 1 278
-box 0 0 32 32
-use sky130_hilas_m12m2  sky130_hilas_m12m2_2
-timestamp 1628616552
-transform 1 0 1564 0 1 466
-box 0 0 32 32
-use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1628616552
-transform 1 0 1566 0 1 571
-box 0 0 32 32
-use sky130_hilas_m12m2  sky130_hilas_m12m2_3
-timestamp 1628616552
-transform 1 0 1237 0 1 416
-box 0 0 32 32
-use sky130_hilas_m12m2  sky130_hilas_m12m2_1
-timestamp 1628616552
-transform 1 0 1235 0 1 315
-box 0 0 32 32
+use sky130_hilas_li2m2  sky130_hilas_li2m2_1
+timestamp 1628616992
+transform 1 0 1235 0 1 116
+box 0 0 34 33
 use sky130_hilas_m12m2  sky130_hilas_m12m2_5
-timestamp 1628616552
+timestamp 1628616702
 transform 1 0 1551 0 1 160
 box 0 0 32 32
+use sky130_hilas_m12m2  sky130_hilas_m12m2_1
+timestamp 1628616702
+transform 1 0 1235 0 1 315
+box 0 0 32 32
+use sky130_hilas_m12m2  sky130_hilas_m12m2_3
+timestamp 1628616702
+transform 1 0 1237 0 1 416
+box 0 0 32 32
+use sky130_hilas_m12m2  sky130_hilas_m12m2_0
+timestamp 1628616702
+transform 1 0 1566 0 1 571
+box 0 0 32 32
+use sky130_hilas_m12m2  sky130_hilas_m12m2_2
+timestamp 1628616702
+transform 1 0 1564 0 1 466
+box 0 0 32 32
+use sky130_hilas_m12m2  sky130_hilas_m12m2_4
+timestamp 1628616702
+transform 1 0 1564 0 1 278
+box 0 0 32 32
 use sky130_hilas_swc4x1BiasCell  sky130_hilas_swc4x1BiasCell_0
-timestamp 1628616688
+timestamp 1628616992
 transform -1 0 2025 0 1 396
 box 0 0 2025 1091
 << labels >>
@@ -212,7 +212,7 @@ port 23 nsew
 rlabel metal2 1224 52 1233 70 0 DRAIN4
 port 24 nsew
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

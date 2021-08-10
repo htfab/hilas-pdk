@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616697
+timestamp 1628617001
 << checkpaint >>
 rect -630 -289 5202 2102
 rect 33 -652 4539 -289
@@ -128,11 +128,11 @@ rect 3283 77 3292 95
 rect 1280 34 1287 52
 rect 3283 34 3292 52
 use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_1
-timestamp 1628616688
+timestamp 1628616992
 transform -1 0 2024 0 1 382
 box 0 0 2024 1090
 use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_0
-timestamp 1628616688
+timestamp 1628616992
 transform 1 0 2548 0 1 382
 box 0 0 2024 1090
 << labels >>
@@ -224,7 +224,7 @@ port 21 nsew
 rlabel metal2 3283 554 3292 572 0 DRAIN1
 port 16 nsew
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

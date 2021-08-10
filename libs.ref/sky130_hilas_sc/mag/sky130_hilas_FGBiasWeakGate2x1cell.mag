@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616655
+timestamp 1628616962
 << checkpaint >>
 rect 822 1649 2255 1682
 rect 820 1329 2255 1649
@@ -118,63 +118,63 @@ rect 906 114 922 116
 rect 0 109 922 114
 rect 0 99 910 109
 use sky130_hilas_li2m2  sky130_hilas_li2m2_3
-timestamp 1628616534
+timestamp 1628616688
 transform 1 0 205 0 1 161
 box 0 0 34 33
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1628616507
+timestamp 1628616665
 transform 1 0 293 0 1 337
 box 0 0 23 29
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1628616534
+timestamp 1628616688
 transform 1 0 934 0 1 213
 box 0 0 34 33
 use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1628616552
+timestamp 1628616702
 transform 1 0 1023 0 1 313
 box 0 0 32 32
-use sky130_hilas_FGVaractorCapacitor02  sky130_hilas_FGVaractorCapacitor02_2
-timestamp 1628616611
-transform 1 0 1382 0 -1 198
-box 0 0 272 169
 use sky130_hilas_horizTransCell01  sky130_hilas_horizTransCell01_0
-timestamp 1628616556
+timestamp 1628616706
 transform 1 0 1186 0 1 0
 box 0 0 443 317
+use sky130_hilas_FGVaractorCapacitor02  sky130_hilas_FGVaractorCapacitor02_2
+timestamp 1628616755
+transform 1 0 1382 0 -1 198
+box 0 0 272 169
 use sky130_hilas_li2m2  sky130_hilas_li2m2_2
-timestamp 1628616534
+timestamp 1628616688
 transform 1 0 208 0 1 530
 box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1628616534
+timestamp 1628616688
 transform 1 0 934 0 1 489
 box 0 0 34 33
 use sky130_hilas_m12m2  sky130_hilas_m12m2_1
-timestamp 1628616552
+timestamp 1628616702
 transform 1 0 1023 0 1 373
 box 0 0 32 32
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
-timestamp 1628616638
+timestamp 1628616945
 transform 1 0 1452 0 1 448
 box 0 0 173 190
 use sky130_hilas_wellContact  sky130_hilas_wellContact_0
-timestamp 1628616533
+timestamp 1628616687
 transform 1 0 1450 0 1 660
 box 0 0 173 186
-use sky130_hilas_FGVaractorCapacitor02  sky130_hilas_FGVaractorCapacitor02_0
-timestamp 1628616611
-transform 1 0 1382 0 1 491
-box 0 0 272 169
 use sky130_hilas_horizTransCell01  sky130_hilas_horizTransCell01_1
-timestamp 1628616556
+timestamp 1628616706
 transform 1 0 1186 0 -1 699
 box 0 0 443 317
+use sky130_hilas_FGVaractorCapacitor02  sky130_hilas_FGVaractorCapacitor02_0
+timestamp 1628616755
+transform 1 0 1382 0 1 491
+box 0 0 272 169
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
-timestamp 1628616638
+timestamp 1628616945
 transform 1 0 1452 0 1 862
 box 0 0 173 190
 use sky130_hilas_wellContact  sky130_hilas_wellContact_1
-timestamp 1628616533
+timestamp 1628616687
 transform 1 0 1450 0 1 833
 box 0 0 173 186
 << labels >>
@@ -211,7 +211,7 @@ port 12 nsew analog default
 rlabel metal2 0 380 6 402 0 COMMONSOURCE
 port 13 nsew analog default
 << properties >>
-string LEFclass CORE
 string LEFsite unithd
+string LEFclass CORE
 string LEFsymmetry X Y R90
 << end >>

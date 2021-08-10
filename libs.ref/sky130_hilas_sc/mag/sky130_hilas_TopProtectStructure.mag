@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616713
+timestamp 1628617017
 << checkpaint >>
 rect 1412 46462 4052 47207
 rect 1412 39646 4200 46462
@@ -1898,20 +1898,20 @@ rect 25111 521 25315 687
 rect 25517 521 25721 687
 rect 415 33 555 230
 rect 1045 0 1185 366
-use sky130_hilas_LeftProtection  sky130_hilas_LeftProtection_0
-timestamp 1628616568
-transform 1 0 2190 0 1 8665
-box 0 0 1380 37167
-use sky130_hilas_TopLevelTextStructure  sky130_hilas_TopLevelTextStructure_0
-timestamp 1628616711
-transform 1 0 12478 0 1 30961
-box 0 0 13573 7816
 use sky130_hilas_TopProtection  sky130_hilas_TopProtection_0
-timestamp 1628616684
+timestamp 1628616988
 transform 1 0 1593 0 1 37623
 box 0 0 34133 1393
+use sky130_hilas_TopLevelTextStructure  sky130_hilas_TopLevelTextStructure_0
+timestamp 1628617015
+transform 1 0 12478 0 1 30961
+box 0 0 13573 7816
+use sky130_hilas_LeftProtection  sky130_hilas_LeftProtection_0
+timestamp 1628616717
+transform 1 0 2190 0 1 8665
+box 0 0 1380 37167
 use sky130_hilas_RightProtection  sky130_hilas_RightProtection_0
-timestamp 1628616667
+timestamp 1628616974
 transform 1 0 37986 0 1 8593
 box 0 0 1386 20013
 << labels >>
@@ -2050,7 +2050,7 @@ port 63 nsew
 rlabel metal2 36151 16126 36267 16252 0 VCCA
 port 64 nsew
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

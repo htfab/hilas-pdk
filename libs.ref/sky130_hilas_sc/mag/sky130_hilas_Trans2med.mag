@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616663
+timestamp 1628616970
 << checkpaint >>
 rect -630 1201 867 1223
 rect -630 1190 1014 1201
@@ -105,75 +105,75 @@ rect 253 47 440 69
 rect 87 0 286 22
 rect 371 3 440 24
 use sky130_hilas_m12m2  sky130_hilas_m12m2_1
-timestamp 1628616552
+timestamp 1628616702
 transform 1 0 118 0 1 185
 box 0 0 32 32
-use sky130_hilas_poly2m1  sky130_hilas_poly2m1_0
-timestamp 1628616653
-transform 1 0 118 0 -1 304
-box 0 0 33 51
 use sky130_hilas_poly2m1  sky130_hilas_poly2m1_1
-timestamp 1628616653
+timestamp 1628616960
 transform -1 0 132 0 1 233
 box 0 0 33 51
-use sky130_hilas_li2m2  sky130_hilas_li2m2_4
-timestamp 1628616534
-transform 1 0 168 0 1 55
-box 0 0 34 33
+use sky130_hilas_poly2m1  sky130_hilas_poly2m1_0
+timestamp 1628616960
+transform 1 0 118 0 -1 304
+box 0 0 33 51
 use sky130_hilas_li2m2  sky130_hilas_li2m2_5
-timestamp 1628616534
+timestamp 1628616688
 transform 1 0 238 0 1 55
 box 0 0 34 33
+use sky130_hilas_li2m2  sky130_hilas_li2m2_4
+timestamp 1628616688
+transform 1 0 168 0 1 55
+box 0 0 34 33
 use sky130_hilas_nFETmed  sky130_hilas_nFETmed_1
-timestamp 1628616569
+timestamp 1628616718
 transform 1 0 177 0 1 20
 box 0 0 82 272
-use sky130_hilas_li2m2  sky130_hilas_li2m2_7
-timestamp 1628616534
-transform 1 0 290 0 1 11
-box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_6
-timestamp 1628616534
+timestamp 1628616688
 transform 1 0 355 0 1 11
 box 0 0 34 33
+use sky130_hilas_li2m2  sky130_hilas_li2m2_7
+timestamp 1628616688
+transform 1 0 290 0 1 11
+box 0 0 34 33
 use sky130_hilas_poly2m2  sky130_hilas_poly2m2_0
-timestamp 1628616589
+timestamp 1628616734
 transform 0 -1 413 1 0 234
 box 0 0 33 55
 use sky130_hilas_nFETmed  sky130_hilas_nFETmed_0
-timestamp 1628616569
+timestamp 1628616718
 transform 1 0 296 0 1 20
 box 0 0 82 272
 use sky130_hilas_poly2m2  sky130_hilas_poly2m2_1
-timestamp 1628616589
+timestamp 1628616734
 transform 0 -1 414 1 0 288
 box 0 0 33 55
-use sky130_hilas_pFETmed  sky130_hilas_pFETmed_0
-timestamp 1628616605
-transform 1 0 0 0 1 306
-box 0 0 119 287
 use sky130_hilas_pFETmed  sky130_hilas_pFETmed_1
-timestamp 1628616605
+timestamp 1628616750
 transform 1 0 118 0 1 306
 box 0 0 119 287
+use sky130_hilas_pFETmed  sky130_hilas_pFETmed_0
+timestamp 1628616750
+transform 1 0 0 0 1 306
+box 0 0 119 287
 use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1628616552
+timestamp 1628616702
 transform 1 0 118 0 1 340
 box 0 0 32 32
 use sky130_hilas_li2m2  sky130_hilas_li2m2_3
-timestamp 1628616534
+timestamp 1628616688
 transform 1 0 171 0 1 443
 box 0 0 34 33
-use sky130_hilas_li2m2  sky130_hilas_li2m2_2
-timestamp 1628616534
-transform 1 0 288 0 1 521
-box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1628616534
+timestamp 1628616688
 transform 1 0 240 0 1 444
 box 0 0 34 33
+use sky130_hilas_li2m2  sky130_hilas_li2m2_2
+timestamp 1628616688
+transform 1 0 288 0 1 521
+box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1628616534
+timestamp 1628616688
 transform 1 0 359 0 1 527
 box 0 0 34 33
 << labels >>
@@ -206,7 +206,7 @@ port 14 nsew
 rlabel metal2 431 380 440 401 0 WELL
 port 15 nsew
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

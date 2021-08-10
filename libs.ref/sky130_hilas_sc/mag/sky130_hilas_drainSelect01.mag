@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616727
+timestamp 1628617031
 << checkpaint >>
 rect -630 1217 1198 1262
 rect -630 -612 1430 1217
@@ -69,19 +69,19 @@ rect 564 198 572 221
 rect 563 64 572 87
 rect 0 16 178 33
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_1
-timestamp 1628616665
+timestamp 1628616972
 transform 1 0 232 0 -1 587
 box 0 0 568 170
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_0
-timestamp 1628616665
+timestamp 1628616972
 transform 1 0 232 0 1 338
 box 0 0 568 170
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_2
-timestamp 1628616665
+timestamp 1628616972
 transform 1 0 232 0 1 18
 box 0 0 568 170
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_3
-timestamp 1628616665
+timestamp 1628616972
 transform 1 0 232 0 -1 267
 box 0 0 568 170
 << labels >>
@@ -108,7 +108,7 @@ port 16 nsew
 rlabel metal2 563 64 572 87 0 SELECT4
 port 17 nsew
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

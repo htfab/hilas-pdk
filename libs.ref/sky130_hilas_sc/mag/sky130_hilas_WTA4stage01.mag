@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616734
+timestamp 1628617038
 << checkpaint >>
 rect -728 1149 566 1164
 rect -728 1126 580 1149
@@ -14,24 +14,24 @@ rect 88 0 108 29
 << metal1 >>
 rect 10 257 33 277
 rect 136 257 159 278
-use sky130_hilas_WTAsinglestage01  sky130_hilas_WTAsinglestage01_0
-timestamp 1628616725
-transform 1 0 0 0 1 76
-box 0 0 283 143
-use sky130_hilas_WTAsinglestage01  sky130_hilas_WTAsinglestage01_1
-timestamp 1628616725
-transform 1 0 0 0 -1 181
-box 0 0 283 143
-use sky130_hilas_WTAsinglestage01  sky130_hilas_WTAsinglestage01_2
-timestamp 1628616725
-transform 1 0 0 0 -1 458
-box 0 0 283 143
 use sky130_hilas_WTAsinglestage01  sky130_hilas_WTAsinglestage01_3
-timestamp 1628616725
+timestamp 1628617029
 transform 1 0 0 0 1 353
 box 0 0 283 143
+use sky130_hilas_WTAsinglestage01  sky130_hilas_WTAsinglestage01_2
+timestamp 1628617029
+transform 1 0 0 0 -1 458
+box 0 0 283 143
+use sky130_hilas_WTAsinglestage01  sky130_hilas_WTAsinglestage01_1
+timestamp 1628617029
+transform 1 0 0 0 -1 181
+box 0 0 283 143
+use sky130_hilas_WTAsinglestage01  sky130_hilas_WTAsinglestage01_0
+timestamp 1628617029
+transform 1 0 0 0 1 76
+box 0 0 283 143
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

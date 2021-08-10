@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616757
+timestamp 1628617060
 << checkpaint >>
 rect -337 1270 957 1271
 rect -446 1235 957 1270
@@ -71,48 +71,48 @@ rect 0 70 7 84
 rect 199 63 280 83
 rect 0 45 14 47
 rect 0 28 15 45
-use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_2
-timestamp 1628616734
-transform 1 0 128 0 1 68
-box 0 0 212 105
 use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_1
-timestamp 1628616734
+timestamp 1628617039
 transform 1 0 128 0 1 167
 box 0 0 212 105
+use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_2
+timestamp 1628617039
+transform 1 0 128 0 1 68
+box 0 0 212 105
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1628616665
+timestamp 1628616972
 transform 0 1 221 -1 0 120
 box 0 0 23 29
 use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_0
-timestamp 1628616734
+timestamp 1628617039
 transform 1 0 128 0 1 266
 box 0 0 212 105
 use sky130_hilas_nFET03a  sky130_hilas_nFET03a_0
-timestamp 1628616711
+timestamp 1628617015
 transform 1 0 118 0 1 358
 box 0 0 210 90
 use sky130_hilas_li2m2  sky130_hilas_li2m2_2
-timestamp 1628616688
+timestamp 1628616992
 transform 1 0 26 0 1 325
 box 0 0 34 33
 use sky130_hilas_nFET03a  sky130_hilas_nFET03a_1
-timestamp 1628616711
+timestamp 1628617015
 transform 1 0 118 0 1 457
 box 0 0 210 90
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1628616688
+timestamp 1628616992
 transform 1 0 28 0 1 424
 box 0 0 34 33
 use sky130_hilas_nFET03a  sky130_hilas_nFET03a_3
-timestamp 1628616711
+timestamp 1628617015
 transform 1 0 117 0 1 556
 box 0 0 210 90
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1628616688
+timestamp 1628616992
 transform 1 0 30 0 1 516
 box 0 0 34 33
 use sky130_hilas_li2m1  sky130_hilas_li2m1_1
-timestamp 1628616665
+timestamp 1628616972
 transform 1 0 267 0 1 504
 box 0 0 23 29
 << labels >>
@@ -161,7 +161,7 @@ port 19 nsew analog default
 rlabel metal2 275 365 280 382 0 NFET_DRAIN3
 port 18 nsew analog default
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

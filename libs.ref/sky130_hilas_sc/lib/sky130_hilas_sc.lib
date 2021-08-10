@@ -685,6 +685,14 @@ cell ("sky130_hilas_TopLevelTextStructure") {
         related_ground_pin : "VGND";
         related_power_pin : "VPWR";
     }
+    pin ("DRAIN6N") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
     pin ("DRAIN6P") {
         clock : "false";
         direction : "inout";
@@ -3955,6 +3963,14 @@ cell ("sky130_hilas_TA2Cell_1FG") {
         related_power_pin : "VPWR";
     }
     pin ("LARGECAPACITOR") {
+        clock : "false";
+        direction : "inout";
+        capacitance : 0.002103;
+        max_transition : 1.506103;
+        related_ground_pin : "VGND";
+        related_power_pin : "VPWR";
+    }
+    pin ("DRAIN6N") {
         clock : "false";
         direction : "inout";
         capacitance : 0.002103;

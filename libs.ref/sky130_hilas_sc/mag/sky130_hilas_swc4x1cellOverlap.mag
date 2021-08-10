@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616672
+timestamp 1628616978
 << checkpaint >>
 rect 822 1537 2255 1681
 rect 819 1387 2255 1537
@@ -336,59 +336,59 @@ rect 2 142 764 159
 rect 80 133 234 142
 rect 2 98 764 115
 use sky130_hilas_overlapCap01  sky130_hilas_overlapCap01_2
-timestamp 1628616602
+timestamp 1628616747
 transform 1 0 767 0 1 240
 box 0 0 287 208
 use sky130_hilas_overlapCap01  sky130_hilas_overlapCap01_3
-timestamp 1628616602
+timestamp 1628616747
 transform 1 0 767 0 1 86
 box 0 0 287 208
-use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_2
-timestamp 1628616586
-transform 1 0 1041 0 -1 397
-box 0 0 256 191
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_1
-timestamp 1628616586
+timestamp 1628616733
 transform 1 0 1041 0 1 0
 box 0 0 256 191
+use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_2
+timestamp 1628616733
+transform 1 0 1041 0 -1 397
+box 0 0 256 191
 use sky130_hilas_overlapCap01  sky130_hilas_overlapCap01_1
-timestamp 1628616602
+timestamp 1628616747
 transform 1 0 768 0 1 396
 box 0 0 287 208
-use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_3
-timestamp 1628616586
-transform 1 0 1041 0 -1 698
-box 0 0 256 191
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_0
-timestamp 1628616586
+timestamp 1628616733
 transform 1 0 1041 0 1 300
 box 0 0 256 191
+use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_3
+timestamp 1628616733
+transform 1 0 1041 0 -1 698
+box 0 0 256 191
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
-timestamp 1628616638
+timestamp 1628616945
 transform 1 0 1452 0 1 446
 box 0 0 173 190
 use sky130_hilas_overlapCap01  sky130_hilas_overlapCap01_0
-timestamp 1628616602
+timestamp 1628616747
 transform 1 0 768 0 1 549
 box 0 0 287 208
-use sky130_hilas_wellContact  sky130_hilas_wellContact_1
-timestamp 1628616533
-transform 1 0 1449 0 1 721
-box 0 0 173 186
-use sky130_hilas_TunCap01  sky130_hilas_TunCap01_2
-timestamp 1628616638
-transform 1 0 1452 0 1 752
-box 0 0 173 190
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_0
-timestamp 1628616638
+timestamp 1628616945
 transform 1 0 1452 0 1 563
 box 0 0 173 190
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_2
+timestamp 1628616945
+transform 1 0 1452 0 1 752
+box 0 0 173 190
+use sky130_hilas_wellContact  sky130_hilas_wellContact_1
+timestamp 1628616687
+transform 1 0 1449 0 1 721
+box 0 0 173 186
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
-timestamp 1628616638
+timestamp 1628616945
 transform 1 0 1452 0 1 861
 box 0 0 173 190
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

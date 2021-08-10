@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616729
+timestamp 1628617033
 << checkpaint >>
 rect -544 657 749 666
 rect -544 -621 763 657
@@ -77,11 +77,11 @@ rect 83 59 92 76
 rect 56 31 92 59
 rect 56 14 89 31
 use sky130_hilas_poly2li  sky130_hilas_poly2li_0
-timestamp 1628616704
+timestamp 1628617008
 transform 0 1 100 -1 0 27
 box 0 0 27 33
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

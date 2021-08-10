@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616650
+timestamp 1628616957
 << checkpaint >>
 rect -92 1170 1591 1417
 rect -484 952 1591 1170
@@ -31,25 +31,25 @@ rect 45 226 152 227
 rect 316 115 379 227
 rect 316 85 531 115
 rect 349 84 531 85
+use sky130_hilas_CapModule03  sky130_hilas_CapModule03_0
+timestamp 1628616692
+transform 1 0 538 0 1 204
+box 0 0 423 583
 use sky130_hilas_m22m4  sky130_hilas_m22m4_1
-timestamp 1628616565
+timestamp 1628616715
 transform 1 0 750 0 1 249
 box 0 0 79 75
 use sky130_hilas_m22m4  sky130_hilas_m22m4_0
-timestamp 1628616565
+timestamp 1628616715
 transform 1 0 38 0 1 247
 box 0 0 79 75
-use sky130_hilas_CapModule03  sky130_hilas_CapModule03_0
-timestamp 1628616539
-transform 1 0 538 0 1 204
-box 0 0 423 583
 << labels >>
 rlabel metal2 2 237 9 265 0 CAPTERM01
 port 2 nsew analog default
 rlabel metal2 782 239 797 267 0 CAPTERM02
 port 1 nsew analog default
 << properties >>
-string LEFclass CORE
 string LEFsite unithd
+string LEFclass CORE
 string LEFsymmetry X Y R90
 << end >>

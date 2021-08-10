@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616707
+timestamp 1628617011
 << checkpaint >>
 rect -267 1249 1179 1693
 rect -630 -171 1179 1249
@@ -31,47 +31,47 @@ rect 140 205 187 230
 rect 122 102 177 127
 rect 68 16 156 41
 use sky130_hilas_li2m2  sky130_hilas_li2m2_2
-timestamp 1628616688
+timestamp 1628616992
 transform -1 0 157 0 -1 116
 box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1628616688
+timestamp 1628616992
 transform 1 0 115 0 1 295
 box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1628616688
+timestamp 1628616992
 transform 1 0 42 0 1 167
 box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_3
-timestamp 1628616688
+timestamp 1628616992
 transform -1 0 142 0 -1 33
 box 0 0 34 33
 use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1628616702
+timestamp 1628617006
 transform 1 0 154 0 1 210
 box 0 0 32 32
 use sky130_hilas_poly2li  sky130_hilas_poly2li_1
-timestamp 1628616704
+timestamp 1628617008
 transform 1 0 103 0 1 28
 box 0 0 27 33
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1628616665
+timestamp 1628616972
 transform 1 0 158 0 1 369
 box 0 0 23 29
 use sky130_hilas_poly2li  sky130_hilas_poly2li_0
-timestamp 1628616704
+timestamp 1628617008
 transform 1 0 101 0 1 331
 box 0 0 27 33
 use sky130_hilas_pTransistorVert01  sky130_hilas_pTransistorVert01_1
-timestamp 1628616649
+timestamp 1628616956
 transform 1 0 363 0 1 459
 box 0 0 186 299
 use sky130_hilas_pTransistorVert01  sky130_hilas_pTransistorVert01_0
-timestamp 1628616649
+timestamp 1628616956
 transform 1 0 363 0 1 764
 box 0 0 186 299
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

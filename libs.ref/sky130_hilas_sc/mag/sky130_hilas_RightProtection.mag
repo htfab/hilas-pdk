@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616667
+timestamp 1628616974
 << checkpaint >>
 rect -331 19898 2016 20643
 rect -560 -630 2016 19898
@@ -21,31 +21,31 @@ rect 1156 2886 1228 3275
 rect 1 507 71 903
 rect 1156 26 1228 415
 use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_9
-timestamp 1628616606
+timestamp 1628616751
 transform 0 1 299 1 0 0
 box 0 0 2859 1087
 use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_7
-timestamp 1628616606
+timestamp 1628616751
 transform 0 1 299 1 0 2859
 box 0 0 2859 1087
 use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_8
-timestamp 1628616606
+timestamp 1628616751
 transform 0 1 299 1 0 5718
 box 0 0 2859 1087
 use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_5
-timestamp 1628616606
+timestamp 1628616751
 transform 0 1 299 1 0 8577
 box 0 0 2859 1087
 use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_10
-timestamp 1628616606
+timestamp 1628616751
 transform 0 1 299 1 0 11436
 box 0 0 2859 1087
 use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_11
-timestamp 1628616606
+timestamp 1628616751
 transform 0 1 299 1 0 14295
 box 0 0 2859 1087
 use sky130_hilas_VinjDiodeProtect01  sky130_hilas_VinjDiodeProtect01_12
-timestamp 1628616606
+timestamp 1628616751
 transform 0 1 299 1 0 17154
 box 0 0 2859 1087
 << labels >>
@@ -78,7 +78,7 @@ port 13 nsew
 rlabel metal1 1 17663 71 18059 0 PIN7
 port 14 nsew
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

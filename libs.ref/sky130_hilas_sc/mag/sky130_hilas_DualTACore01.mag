@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616670
+timestamp 1628616976
 << checkpaint >>
 rect -405 1318 988 1384
 rect -606 1294 988 1318
@@ -33,58 +33,58 @@ rect 27 404 292 427
 rect 1 322 292 344
 rect 0 105 271 128
 use sky130_hilas_li2m2  sky130_hilas_li2m2_3
-timestamp 1628616534
+timestamp 1628616688
 transform 1 0 235 0 1 114
 box 0 0 34 33
 use sky130_hilas_pFETmirror02  sky130_hilas_pFETmirror02_0
-timestamp 1628616582
+timestamp 1628616729
 transform 1 0 225 0 1 0
 box 0 0 133 292
-use sky130_hilas_nMirror03  sky130_hilas_nMirror03_1
-timestamp 1628616665
-transform 1 0 24 0 1 241
-box 0 0 184 147
 use sky130_hilas_nMirror03  sky130_hilas_nMirror03_0
-timestamp 1628616665
+timestamp 1628616972
 transform 1 0 24 0 -1 208
 box 0 0 184 147
+use sky130_hilas_nMirror03  sky130_hilas_nMirror03_1
+timestamp 1628616972
+transform 1 0 24 0 1 241
+box 0 0 184 147
 use sky130_hilas_li2m1  sky130_hilas_li2m1_1
-timestamp 1628616665
+timestamp 1628616972
 transform 1 0 178 0 1 237
 box 0 0 23 29
-use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1628616534
-transform 1 0 243 0 1 339
-box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1628616534
+timestamp 1628616688
 transform 1 0 244 0 1 411
 box 0 0 34 33
+use sky130_hilas_li2m2  sky130_hilas_li2m2_0
+timestamp 1628616688
+transform 1 0 243 0 1 339
+box 0 0 34 33
 use sky130_hilas_pFETmirror02  sky130_hilas_pFETmirror02_1
-timestamp 1628616582
+timestamp 1628616729
 transform 1 0 225 0 -1 746
 box 0 0 133 292
-use sky130_hilas_nMirror03  sky130_hilas_nMirror03_3
-timestamp 1628616665
-transform 1 0 24 0 -1 508
-box 0 0 184 147
 use sky130_hilas_nMirror03  sky130_hilas_nMirror03_2
-timestamp 1628616665
+timestamp 1628616972
 transform 1 0 24 0 1 541
 box 0 0 184 147
+use sky130_hilas_nMirror03  sky130_hilas_nMirror03_3
+timestamp 1628616972
+transform 1 0 24 0 -1 508
+box 0 0 184 147
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1628616665
+timestamp 1628616972
 transform 1 0 178 0 1 496
 box 0 0 23 29
 use sky130_hilas_li2m2  sky130_hilas_li2m2_2
-timestamp 1628616534
+timestamp 1628616688
 transform 1 0 239 0 1 633
 box 0 0 34 33
 << labels >>
 rlabel metal2 281 404 292 427 0 output1
 rlabel space 281 322 292 345 0 output2
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

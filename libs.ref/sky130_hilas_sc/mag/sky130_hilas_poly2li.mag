@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628616704
+timestamp 1628617008
 << poly >>
 rect 0 25 27 33
 rect 0 8 5 25
@@ -12,7 +12,7 @@ rect 5 8 22 25
 rect 5 25 22 33
 rect 5 0 22 8
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>
