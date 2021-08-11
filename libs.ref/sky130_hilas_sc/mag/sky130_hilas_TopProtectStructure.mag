@@ -1,16 +1,18 @@
 magic
 tech sky130A
-timestamp 1628704354
+timestamp 1628707331
 << checkpaint >>
-rect 12066 38282 26351 38376
-rect 11664 38277 26351 38282
-rect 11378 38174 26351 38277
-rect 11377 37765 26351 38174
-rect 11352 36472 26351 37765
-rect 11366 36457 26351 36472
-rect 11584 35664 26351 36457
-rect 11892 35663 26351 35664
-rect 12066 29538 26351 35663
+rect 1560 39646 4200 46462
+rect 963 38023 36356 39646
+rect -505 36993 36356 38023
+rect -505 8035 4200 36993
+rect 11352 36472 26681 36993
+rect 11366 36457 26681 36472
+rect 11584 35664 26681 36457
+rect 11848 30331 26681 35664
+rect 12066 29538 26351 30331
+rect -505 -404 1987 8035
+rect 37356 7963 40002 29236
 << error_s >>
 rect 14842 37094 14871 37110
 rect 14921 37094 14950 37110
@@ -1893,22 +1895,22 @@ rect 25111 521 25315 687
 rect 25517 521 25721 687
 rect 415 33 555 230
 rect 1045 0 1185 366
-use sky130_hilas_TopLevelTextStructure  sky130_hilas_TopLevelTextStructure_0
-timestamp 1628704353
-transform 1 0 12478 0 1 30961
-box 0 0 13025 7578
-use sky130_hilas_RightProtection  sky130_hilas_RightProtection_0
-timestamp 1628704268
-transform 1 0 37986 0 1 8593
-box 0 0 1228 20013
-use sky130_hilas_LeftProtection  sky130_hilas_LeftProtection_0
-timestamp 1627737364
-transform 1 0 2190 0 1 8665
-box -2065 -8439 -833 28728
 use sky130_hilas_TopProtection  sky130_hilas_TopProtection_0
-timestamp 1628704297
+timestamp 1628707303
 transform 1 0 1593 0 1 37623
-box 0 0 34133 1246
+box 0 0 34133 1393
+use sky130_hilas_TopLevelTextStructure  sky130_hilas_TopLevelTextStructure_0
+timestamp 1628707330
+transform 1 0 12478 0 1 30961
+box 0 0 13573 7816
+use sky130_hilas_LeftProtection  sky130_hilas_LeftProtection_0
+timestamp 1628706195
+transform 1 0 2190 0 1 8665
+box 0 0 1380 37167
+use sky130_hilas_RightProtection  sky130_hilas_RightProtection_0
+timestamp 1628707289
+transform 1 0 37986 0 1 8593
+box 0 0 1386 20013
 << labels >>
 rlabel metal1 37160 18079 37285 18468 0 IO07
 port 1 nsew

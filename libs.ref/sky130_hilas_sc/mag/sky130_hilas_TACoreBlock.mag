@@ -1,11 +1,13 @@
 magic
 tech sky130A
-timestamp 1628704249
+timestamp 1628707280
 << checkpaint >>
-rect 847 1065 2280 1153
+rect 327 1153 1810 1460
+rect 327 1065 2280 1153
 rect -630 -297 2280 1065
-rect -630 -381 1584 -297
-rect 68 -394 1584 -381
+rect -630 -381 1873 -297
+rect 68 -394 1873 -381
+rect 357 -435 1873 -394
 << error_s >>
 rect 56 372 62 378
 rect 161 372 167 378
@@ -52,17 +54,17 @@ rect 482 40 495 69
 rect 449 17 457 34
 rect 474 17 482 34
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_0
-timestamp 1628704213
+timestamp 1628707260
 transform 1 0 1477 0 1 333
 box 0 0 173 190
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_0
-timestamp 1628285143
+timestamp 1628705728
 transform 1 0 987 0 1 195
-box -289 41 -33 232
+box 0 0 256 191
 use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_0
-timestamp 1628285143
+timestamp 1628705716
 transform 1 0 957 0 1 644
-box -957 -395 -734 -209
+box 0 0 223 186
 << properties >>
 string LEFsite unithd
 string LEFclass CORE

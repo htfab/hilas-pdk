@@ -1,26 +1,30 @@
 magic
 tech sky130A
-timestamp 1628704418
-use sky130_hilas_pFETmed  sky130_hilas_pFETmed_3
-timestamp 1628285143
-transform 1 0 73 0 1 22
-box 147 -22 266 265
-use sky130_hilas_pFETmed  sky130_hilas_pFETmed_4
-timestamp 1628285143
-transform 1 0 -147 0 1 22
-box 147 -22 266 265
-use sky130_hilas_pFETmed  sky130_hilas_pFETmed_0
-timestamp 1628285143
-transform 1 0 -92 0 1 22
-box 147 -22 266 265
-use sky130_hilas_pFETmed  sky130_hilas_pFETmed_1
-timestamp 1628285143
-transform 1 0 -37 0 1 22
-box 147 -22 266 265
+timestamp 1628707363
+<< checkpaint >>
+rect -630 895 969 917
+rect -630 -630 1116 895
+rect -483 -652 1116 -630
 use sky130_hilas_pFETmed  sky130_hilas_pFETmed_2
-timestamp 1628285143
-transform 1 0 18 0 1 22
-box 147 -22 266 265
+timestamp 1628705750
+transform 1 0 165 0 1 0
+box 0 0 119 287
+use sky130_hilas_pFETmed  sky130_hilas_pFETmed_1
+timestamp 1628705750
+transform 1 0 110 0 1 0
+box 0 0 119 287
+use sky130_hilas_pFETmed  sky130_hilas_pFETmed_0
+timestamp 1628705750
+transform 1 0 55 0 1 0
+box 0 0 119 287
+use sky130_hilas_pFETmed  sky130_hilas_pFETmed_4
+timestamp 1628705750
+transform 1 0 0 0 1 0
+box 0 0 119 287
+use sky130_hilas_pFETmed  sky130_hilas_pFETmed_3
+timestamp 1628705750
+transform 1 0 220 0 1 0
+box 0 0 119 287
 << properties >>
 string LEFsite unithd
 string LEFclass CORE

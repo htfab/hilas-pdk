@@ -1,59 +1,62 @@
 magic
 tech sky130A
-timestamp 1628704301
+timestamp 1628707305
 << checkpaint >>
-rect -43 -427 1447 1362
+rect -45 1105 1445 1362
+rect -596 -230 1445 1105
+rect -593 -427 1445 -230
+rect -593 -530 1230 -427
 << metal2 >>
-rect 2 485 577 503
-rect 2 442 577 460
-rect 2 390 29 418
-rect 542 390 577 418
-rect 2 342 577 360
-rect 2 299 577 317
-rect 2 184 577 201
-rect 2 142 577 159
-rect 2 90 30 118
-rect 542 90 578 118
-rect 2 44 577 61
-rect 2 0 577 17
+rect 0 485 575 503
+rect 0 442 575 460
+rect 0 390 27 418
+rect 540 390 575 418
+rect 0 342 575 360
+rect 0 299 575 317
+rect 0 184 575 201
+rect 0 142 575 159
+rect 0 90 28 118
+rect 540 90 576 118
+rect 0 44 575 61
+rect 0 0 575 17
 << metal3 >>
-rect 386 364 489 439
-rect 385 65 491 138
+rect 384 364 487 439
+rect 383 65 489 138
 << metal4 >>
-rect 26 370 305 411
-rect 57 69 269 110
-use sky130_hilas_CapModule01a  sky130_hilas_CapModule01a_0
-timestamp 1628704239
-transform 1 0 587 0 1 203
-box 0 0 230 228
+rect 24 370 303 411
+rect 55 69 267 110
 use sky130_hilas_CapModule01a  sky130_hilas_CapModule01a_1
-timestamp 1628704239
-transform 1 0 587 0 1 504
+timestamp 1628707274
+transform 1 0 585 0 1 504
 box 0 0 230 228
-use sky130_hilas_m22m4  sky130_hilas_m22m4_2
-timestamp 1607701799
-transform 1 0 36 0 1 400
-box -36 -36 43 39
-use sky130_hilas_m22m4  sky130_hilas_m22m4_5
-timestamp 1607701799
-transform 1 0 39 0 1 100
-box -36 -36 43 39
-use sky130_hilas_m22m4  sky130_hilas_m22m4_3
-timestamp 1607701799
-transform 1 0 523 0 1 400
-box -36 -36 43 39
+use sky130_hilas_CapModule01a  sky130_hilas_CapModule01a_0
+timestamp 1628707274
+transform 1 0 585 0 1 203
+box 0 0 230 228
 use sky130_hilas_m22m4  sky130_hilas_m22m4_4
-timestamp 1607701799
-transform 1 0 523 0 1 100
-box -36 -36 43 39
+timestamp 1628705705
+transform 1 0 521 0 1 100
+box 0 0 79 75
+use sky130_hilas_m22m4  sky130_hilas_m22m4_3
+timestamp 1628705705
+transform 1 0 521 0 1 400
+box 0 0 79 75
+use sky130_hilas_m22m4  sky130_hilas_m22m4_5
+timestamp 1628705705
+transform 1 0 37 0 1 100
+box 0 0 79 75
+use sky130_hilas_m22m4  sky130_hilas_m22m4_2
+timestamp 1628705705
+transform 1 0 34 0 1 400
+box 0 0 79 75
 << labels >>
-rlabel metal2 567 390 577 418 0 CAP1TERM02
+rlabel metal2 565 390 575 418 0 CAP1TERM02
 port 1 nsew analog default
-rlabel metal2 2 390 9 418 0 CAP1TERM01
+rlabel metal2 0 390 7 418 0 CAP1TERM01
 port 4 nsew analog default
-rlabel metal2 2 90 8 118 0 CAP2TERM01
+rlabel metal2 0 90 6 118 0 CAP2TERM01
 port 3 nsew analog default
-rlabel metal2 571 90 578 118 0 CAP2TERM02
+rlabel metal2 569 90 576 118 0 CAP2TERM02
 port 2 nsew analog default
 << properties >>
 string LEFsite unithd

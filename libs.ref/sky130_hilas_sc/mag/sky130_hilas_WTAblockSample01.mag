@@ -1,12 +1,12 @@
 magic
 tech sky130A
-timestamp 1628704432
+timestamp 1628707370
 << checkpaint >>
-rect 2429 2277 5663 2317
-rect 322 1719 5663 2277
-rect 322 -32 5665 1719
-rect 325 -591 5665 -32
-rect 325 -630 4831 -591
+rect 2429 2700 6381 2754
+rect 322 2156 6381 2700
+rect 322 -32 6383 2156
+rect 325 -591 6383 -32
+rect 325 -630 6157 -591
 << error_s >>
 rect 413 1136 419 1142
 rect 518 1136 524 1142
@@ -226,21 +226,21 @@ rect 1498 56 1504 62
 rect 2459 56 2465 62
 rect 2576 56 2582 62
 use sky130_hilas_WTA4Stage01  sky130_hilas_WTA4Stage01_1
-timestamp 1628704397
+timestamp 1628707352
 transform 1 0 3059 0 1 637
-box 0 0 1974 1050
+box 0 0 2692 1487
 use sky130_hilas_WTA4Stage01  sky130_hilas_WTA4Stage01_0
-timestamp 1628704397
+timestamp 1628707352
 transform 1 0 3061 0 1 39
-box 0 0 1974 1050
+box 0 0 2692 1487
 use sky130_hilas_swc4x2cell  sky130_hilas_swc4x2cell_1
-timestamp 1628704405
+timestamp 1628707356
 transform 1 0 952 0 1 598
-box 0 0 3246 1049
+box 0 0 4572 1472
 use sky130_hilas_swc4x2cell  sky130_hilas_swc4x2cell_0
-timestamp 1628704405
+timestamp 1628707356
 transform 1 0 955 0 1 0
-box 0 0 3246 1049
+box 0 0 4572 1472
 << properties >>
 string LEFsite unithd
 string LEFclass CORE

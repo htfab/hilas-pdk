@@ -711,12 +711,11 @@ module sky130_hilas_TopLevelTextStructure (
     DIG22,
     DIG21,
     DIG29,
+    DIG28,
     DIG27,
     DIG26,
     DIG25,
-    DIG20,
-    DIG19,
-    DIG18,
+    DIG17,
     DIG16,
     DIG15,
     DIG14,
@@ -734,6 +733,7 @@ module sky130_hilas_TopLevelTextStructure (
     DIG02,
     DIG01,
     DRAINOUT,
+    ROWTERM2,
     COLUMN2,
     COLUMN1,
     GATE2,
@@ -761,12 +761,11 @@ module sky130_hilas_TopLevelTextStructure (
         inout DIG22;
         inout DIG21;
         inout DIG29;
+        inout DIG28;
         inout DIG27;
         inout DIG26;
         inout DIG25;
-        inout DIG20;
-        inout DIG19;
-        inout DIG18;
+        inout DIG17;
         inout DIG16;
         inout DIG15;
         inout DIG14;
@@ -784,6 +783,7 @@ module sky130_hilas_TopLevelTextStructure (
         inout DIG02;
         inout DIG01;
         inout DRAINOUT;
+        inout ROWTERM2;
         inout COLUMN2;
         inout COLUMN1;
         inout GATE2;
@@ -819,12 +819,11 @@ module sky130_hilas_TopLevelTextStructure (
     DIG22,
     DIG21,
     DIG29,
+    DIG28,
     DIG27,
     DIG26,
     DIG25,
-    DIG20,
-    DIG19,
-    DIG18,
+    DIG17,
     DIG16,
     DIG15,
     DIG14,
@@ -842,6 +841,7 @@ module sky130_hilas_TopLevelTextStructure (
     DIG02,
     DIG01,
     DRAINOUT,
+    ROWTERM2,
     COLUMN2,
     COLUMN1,
     GATE2,
@@ -865,12 +865,11 @@ module sky130_hilas_TopLevelTextStructure (
         inout DIG22;
         inout DIG21;
         inout DIG29;
+        inout DIG28;
         inout DIG27;
         inout DIG26;
         inout DIG25;
-        inout DIG20;
-        inout DIG19;
-        inout DIG18;
+        inout DIG17;
         inout DIG16;
         inout DIG15;
         inout DIG14;
@@ -888,6 +887,7 @@ module sky130_hilas_TopLevelTextStructure (
         inout DIG02;
         inout DIG01;
         inout DRAINOUT;
+        inout ROWTERM2;
         inout COLUMN2;
         inout COLUMN1;
         inout GATE2;
@@ -1207,6 +1207,7 @@ module sky130_hilas_swc4x1BiasCell (
     VTUN,
     GATE1,
     VINJ,
+    COLSEL1,
     DRAIN3,
     DRAIN4,
     DRAIN1,
@@ -1223,6 +1224,7 @@ module sky130_hilas_swc4x1BiasCell (
         inout VTUN;
         inout GATE1;
         inout VINJ;
+        inout COLSEL1;
         inout DRAIN3;
         inout DRAIN4;
         inout DRAIN1;
@@ -1247,6 +1249,7 @@ module sky130_hilas_swc4x1BiasCell (
     VTUN,
     GATE1,
     VINJ,
+    COLSEL1,
     DRAIN3,
     DRAIN4,
     DRAIN1,
@@ -1259,6 +1262,7 @@ module sky130_hilas_swc4x1BiasCell (
         inout VTUN;
         inout GATE1;
         inout VINJ;
+        inout COLSEL1;
         inout DRAIN3;
         inout DRAIN4;
         inout DRAIN1;
@@ -1487,36 +1491,36 @@ endmodule
 
 `celldefine
 module sky130_hilas_FGtrans2x1cell (
+    COL1,
     COLSEL1,
-    VINJ,
     DRAIN1,
     DRAIN2,
-    PROG,
-    RUN,
-    VIN2,
-    VIN1,
     GATE1,
-    VTUN,
-    COL1,
+    PROG,
     ROW1,
     ROW2,
+    RUN,
+    VIN1,
+    VIN2,
+    VINJ,
+    VTUN,
     VGND,
     VNB,
     VPB
 );
+        inout COL1;
         inout COLSEL1;
-        inout VINJ;
         inout DRAIN1;
         inout DRAIN2;
-        inout PROG;
-        inout RUN;
-        inout VIN2;
-        inout VIN1;
         inout GATE1;
-        inout VTUN;
-        inout COL1;
+        inout PROG;
         inout ROW1;
         inout ROW2;
+        inout RUN;
+        inout VIN1;
+        inout VIN2;
+        inout VINJ;
+        inout VTUN;
         inout VGND;
         inout VNB;
         inout VPB;
@@ -1529,33 +1533,33 @@ endmodule
 
 `celldefine
 module sky130_hilas_FGtrans2x1cell (
+    COL1,
     COLSEL1,
-    VINJ,
     DRAIN1,
     DRAIN2,
-    PROG,
-    RUN,
-    VIN2,
-    VIN1,
     GATE1,
-    VTUN,
-    COL1,
+    PROG,
     ROW1,
-    ROW2
+    ROW2,
+    RUN,
+    VIN1,
+    VIN2,
+    VINJ,
+    VTUN
 );
+        inout COL1;
         inout COLSEL1;
-        inout VINJ;
         inout DRAIN1;
         inout DRAIN2;
-        inout PROG;
-        inout RUN;
-        inout VIN2;
-        inout VIN1;
         inout GATE1;
-        inout VTUN;
-        inout COL1;
+        inout PROG;
         inout ROW1;
         inout ROW2;
+        inout RUN;
+        inout VIN1;
+        inout VIN2;
+        inout VINJ;
+        inout VTUN;
 endmodule
 `endcelldefine
 
@@ -1741,10 +1745,12 @@ endmodule
 module sky130_hilas_Tgate4Double01 (
     INPUT1_1,
     SELECT1,
+    SELECT2,
     INPUT2_2,
     INPUT1_2,
     SELECT3,
     INPUT2_3,
+    SELECT4,
     INPUT2_4,
     INPUT1_4,
     OUTPUT4,
@@ -1754,15 +1760,18 @@ module sky130_hilas_Tgate4Double01 (
     INPUT2_1,
     INPUT1_3,
     VGND,
+    VPWR,
     VNB,
     VPB
 );
         inout INPUT1_1;
         inout SELECT1;
+        inout SELECT2;
         inout INPUT2_2;
         inout INPUT1_2;
         inout SELECT3;
         inout INPUT2_3;
+        inout SELECT4;
         inout INPUT2_4;
         inout INPUT1_4;
         inout OUTPUT4;
@@ -1772,6 +1781,7 @@ module sky130_hilas_Tgate4Double01 (
         inout INPUT2_1;
         inout INPUT1_3;
         inout VGND;
+        inout VPWR;
         inout VNB;
         inout VPB;
 endmodule
@@ -1785,10 +1795,12 @@ endmodule
 module sky130_hilas_Tgate4Double01 (
     INPUT1_1,
     SELECT1,
+    SELECT2,
     INPUT2_2,
     INPUT1_2,
     SELECT3,
     INPUT2_3,
+    SELECT4,
     INPUT2_4,
     INPUT1_4,
     OUTPUT4,
@@ -1800,10 +1812,12 @@ module sky130_hilas_Tgate4Double01 (
 );
         inout INPUT1_1;
         inout SELECT1;
+        inout SELECT2;
         inout INPUT2_2;
         inout INPUT1_2;
         inout SELECT3;
         inout INPUT2_3;
+        inout SELECT4;
         inout INPUT2_4;
         inout INPUT1_4;
         inout OUTPUT4;
@@ -3163,8 +3177,6 @@ module user_analog_project_wrapper (
     gpio_analog[2],
     gpio_analog[3],
     gpio_analog[4],
-    gpio_analog[5],
-    gpio_analog[6],
     gpio_analog[7],
     gpio_analog[8],
     gpio_analog[9],
@@ -3829,8 +3841,6 @@ module user_analog_project_wrapper (
         inout gpio_analog[2];
         inout gpio_analog[3];
         inout gpio_analog[4];
-        inout gpio_analog[5];
-        inout gpio_analog[6];
         inout gpio_analog[7];
         inout gpio_analog[8];
         inout gpio_analog[9];
@@ -4503,8 +4513,6 @@ module user_analog_project_wrapper (
     gpio_analog[2],
     gpio_analog[3],
     gpio_analog[4],
-    gpio_analog[5],
-    gpio_analog[6],
     gpio_analog[7],
     gpio_analog[8],
     gpio_analog[9],
@@ -5167,8 +5175,6 @@ module user_analog_project_wrapper (
         inout gpio_analog[2];
         inout gpio_analog[3];
         inout gpio_analog[4];
-        inout gpio_analog[5];
-        inout gpio_analog[6];
         inout gpio_analog[7];
         inout gpio_analog[8];
         inout gpio_analog[9];
@@ -5900,13 +5906,11 @@ module sky130_hilas_Trans2med (
     GATE1N,
     GATE2P,
     GATE1P,
-    GATE2N,
     SOURCE1P,
     SOURCE2P,
     SOURCE2N,
     SOURCE1N,
     DRAIN1N,
-    DRAIN2N,
     DRAIN1P,
     DRAIN2P,
     WELL,
@@ -5917,13 +5921,11 @@ module sky130_hilas_Trans2med (
         inout GATE1N;
         inout GATE2P;
         inout GATE1P;
-        inout GATE2N;
         inout SOURCE1P;
         inout SOURCE2P;
         inout SOURCE2N;
         inout SOURCE1N;
         inout DRAIN1N;
-        inout DRAIN2N;
         inout DRAIN1P;
         inout DRAIN2P;
         inout WELL;
@@ -5942,13 +5944,11 @@ module sky130_hilas_Trans2med (
     GATE1N,
     GATE2P,
     GATE1P,
-    GATE2N,
     SOURCE1P,
     SOURCE2P,
     SOURCE2N,
     SOURCE1N,
     DRAIN1N,
-    DRAIN2N,
     DRAIN1P,
     DRAIN2P,
     WELL
@@ -5956,13 +5956,11 @@ module sky130_hilas_Trans2med (
         inout GATE1N;
         inout GATE2P;
         inout GATE1P;
-        inout GATE2N;
         inout SOURCE1P;
         inout SOURCE2P;
         inout SOURCE2N;
         inout SOURCE1N;
         inout DRAIN1N;
-        inout DRAIN2N;
         inout DRAIN1P;
         inout DRAIN2P;
         inout WELL;
@@ -6094,6 +6092,9 @@ endmodule
 
 `celldefine
 module sky130_hilas_swc4x2cell (
+    COL1,
+    COL2,
+    DRAIN1,
     DRAIN2,
     DRAIN3,
     DRAIN4,
@@ -6111,6 +6112,9 @@ module sky130_hilas_swc4x2cell (
     VNB,
     VPB
 );
+        inout COL1;
+        inout COL2;
+        inout DRAIN1;
         inout DRAIN2;
         inout DRAIN3;
         inout DRAIN4;
@@ -6136,6 +6140,9 @@ endmodule
 
 `celldefine
 module sky130_hilas_swc4x2cell (
+    COL1,
+    COL2,
+    DRAIN1,
     DRAIN2,
     DRAIN3,
     DRAIN4,
@@ -6150,6 +6157,9 @@ module sky130_hilas_swc4x2cell (
     VINJ,
     VTUN
 );
+        inout COL1;
+        inout COL2;
+        inout DRAIN1;
         inout DRAIN2;
         inout DRAIN3;
         inout DRAIN4;
@@ -6483,11 +6493,9 @@ endmodule
 
 `celldefine
 module sky130_hilas_DecoupVinj01 (
-    VGND,
     VNB,
     VPB
 );
-        inout VGND;
         inout VNB;
         inout VPB;
 endmodule
@@ -7122,6 +7130,7 @@ module sky130_hilas_swc4x2cellOverlap (
     GATESELECT1,
     VERT2,
     GATESELECT2,
+    DRAIN,
     GATE2,
     GATE1,
     VTUN,
@@ -7141,6 +7150,7 @@ module sky130_hilas_swc4x2cellOverlap (
         inout GATESELECT1;
         inout VERT2;
         inout GATESELECT2;
+        inout DRAIN;
         inout GATE2;
         inout GATE1;
         inout VTUN;
@@ -7168,6 +7178,7 @@ module sky130_hilas_swc4x2cellOverlap (
     GATESELECT1,
     VERT2,
     GATESELECT2,
+    DRAIN,
     GATE2,
     GATE1,
     VTUN
@@ -7185,6 +7196,7 @@ module sky130_hilas_swc4x2cellOverlap (
         inout GATESELECT1;
         inout VERT2;
         inout GATESELECT2;
+        inout DRAIN;
         inout GATE2;
         inout GATE1;
         inout VTUN;

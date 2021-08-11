@@ -1,10 +1,13 @@
 magic
 tech sky130A
-timestamp 1628704254
+timestamp 1628707282
 << checkpaint >>
-rect -557 -538 1076 751
-rect -366 -599 1030 -538
-rect -253 -600 1030 -599
+rect -599 960 849 968
+rect -599 787 994 960
+rect -599 -444 1106 787
+rect -592 -506 1106 -444
+rect -557 -538 1106 -506
+rect -505 -625 1106 -538
 << error_s >>
 rect 125 127 165 132
 rect 351 127 391 134
@@ -84,25 +87,25 @@ rect 87 36 199 37
 rect 0 16 199 36
 rect 87 15 199 16
 use sky130_hilas_li2m1  sky130_hilas_li2m1_2
-timestamp 1628285143
+timestamp 1628705643
 transform 1 0 83 0 1 100
-box -10 -8 13 21
+box 0 0 23 29
+use sky130_hilas_m12m2  sky130_hilas_m12m2_0
+timestamp 1628705688
+transform 1 0 38 0 1 124
+box 0 0 32 32
+use sky130_hilas_TgateSingle01Part2  sky130_hilas_TgateSingle01Part2_0
+timestamp 1628705742
+transform 1 0 192 0 1 186
+box 0 0 172 144
+use sky130_hilas_TgateSingle01Part1  sky130_hilas_TgateSingle01Part1_0
+timestamp 1628705689
+transform 1 0 31 0 1 186
+box 0 0 188 152
 use sky130_hilas_poly2m1  sky130_hilas_poly2m1_0
-timestamp 1628704241
+timestamp 1628707275
 transform 1 0 27 0 1 121
 box 0 0 33 51
-use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1628285143
-transform 1 0 38 0 1 124
-box -9 -10 23 22
-use sky130_hilas_TgateSingle01Part1  sky130_hilas_TgateSingle01Part1_0
-timestamp 1628285143
-transform 1 0 31 0 1 186
-box 257 -181 445 -29
-use sky130_hilas_TgateSingle01Part2  sky130_hilas_TgateSingle01Part2_0
-timestamp 1628285143
-transform 1 0 192 0 1 186
-box -67 -181 96 -38
 << labels >>
 rlabel metal2 0 114 9 134 0 Select
 rlabel metal2 0 16 9 36 0 Input

@@ -1,109 +1,111 @@
 magic
 tech sky130A
-timestamp 1628704382
+timestamp 1628707345
 << checkpaint >>
-rect -630 -630 1198 1289
+rect -630 1217 1198 1262
+rect -630 -612 1430 1217
+rect -630 -657 1198 -612
 << error_s >>
-rect 85 626 135 631
-rect 225 626 275 632
-rect 405 626 455 631
-rect 85 584 135 589
-rect 225 584 275 590
-rect 405 584 455 589
-rect 85 559 135 565
-rect 405 559 455 565
-rect 85 517 135 523
-rect 405 517 455 523
-rect 85 456 135 462
-rect 405 456 455 462
-rect 85 414 135 420
-rect 405 414 455 420
-rect 85 390 135 395
-rect 225 389 275 395
-rect 405 390 455 395
-rect 85 348 135 353
-rect 225 347 275 353
-rect 405 348 455 353
-rect 85 306 135 311
-rect 225 306 275 312
-rect 405 306 455 311
-rect 85 264 135 269
-rect 225 264 275 270
-rect 405 264 455 269
-rect 85 239 135 245
-rect 405 239 455 245
-rect 85 197 135 203
-rect 405 197 455 203
-rect 85 136 135 142
-rect 405 136 455 142
-rect 85 94 135 100
-rect 405 94 455 100
-rect 85 70 135 75
-rect 225 69 275 75
-rect 405 70 455 75
-rect 85 28 135 33
-rect 225 27 275 33
-rect 405 28 455 33
+rect 85 599 135 604
+rect 225 599 275 605
+rect 405 599 455 604
+rect 85 557 135 562
+rect 225 557 275 563
+rect 405 557 455 562
+rect 85 532 135 538
+rect 405 532 455 538
+rect 85 490 135 496
+rect 405 490 455 496
+rect 85 429 135 435
+rect 405 429 455 435
+rect 85 387 135 393
+rect 405 387 455 393
+rect 85 363 135 368
+rect 225 362 275 368
+rect 405 363 455 368
+rect 85 321 135 326
+rect 225 320 275 326
+rect 405 321 455 326
+rect 85 279 135 284
+rect 225 279 275 285
+rect 405 279 455 284
+rect 85 237 135 242
+rect 225 237 275 243
+rect 405 237 455 242
+rect 85 212 135 218
+rect 405 212 455 218
+rect 85 170 135 176
+rect 405 170 455 176
+rect 85 109 135 115
+rect 405 109 455 115
+rect 85 67 135 73
+rect 405 67 455 73
+rect 85 43 135 48
+rect 225 42 275 48
+rect 405 43 455 48
+rect 85 1 135 6
+rect 225 0 275 6
+rect 405 1 455 6
 << nwell >>
-rect 0 489 342 490
-rect 0 168 342 170
+rect 0 462 342 463
+rect 0 141 342 143
 << metal1 >>
-rect 58 631 83 638
-rect 357 631 380 638
-rect 492 633 511 638
-rect 58 489 83 490
-rect 58 169 83 170
-rect 357 33 380 41
-rect 492 33 511 40
+rect 58 604 83 611
+rect 357 604 380 611
+rect 492 606 511 611
+rect 58 462 83 463
+rect 58 142 83 143
+rect 357 6 380 14
+rect 492 6 511 13
 << metal2 >>
-rect 0 595 178 613
-rect 564 545 572 568
-rect 557 411 572 435
-rect 0 365 178 381
-rect 0 286 57 287
-rect 0 285 127 286
-rect 0 269 200 285
-rect 564 225 572 248
-rect 563 91 572 114
-rect 0 43 178 60
+rect 0 568 178 586
+rect 564 518 572 541
+rect 557 384 572 408
+rect 0 338 178 354
+rect 0 259 57 260
+rect 0 258 127 259
+rect 0 242 200 258
+rect 564 198 572 221
+rect 563 64 572 87
+rect 0 16 178 33
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_1
-timestamp 1628704264
-transform 1 0 232 0 -1 614
-box -232 -45 336 125
+timestamp 1628707287
+transform 1 0 232 0 -1 587
+box 0 0 568 170
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_0
-timestamp 1628704264
-transform 1 0 232 0 1 365
-box -232 -45 336 125
+timestamp 1628707287
+transform 1 0 232 0 1 338
+box 0 0 568 170
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_2
-timestamp 1628704264
-transform 1 0 232 0 1 45
-box -232 -45 336 125
+timestamp 1628707287
+transform 1 0 232 0 1 18
+box 0 0 568 170
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_3
-timestamp 1628704264
-transform 1 0 232 0 -1 294
-box -232 -45 336 125
+timestamp 1628707287
+transform 1 0 232 0 -1 267
+box 0 0 568 170
 << labels >>
-rlabel space 57 384 62 402 0 DRAIN2
+rlabel space 57 357 62 375 0 DRAIN2
 port 3 nsew analog default
-rlabel metal2 57 269 62 286 0 DRAIN3
+rlabel metal2 57 242 62 259 0 DRAIN3
 port 2 nsew
-rlabel metal1 58 631 83 638 0 VINJ
+rlabel metal1 58 604 83 611 0 VINJ
 port 9 nsew power default
-rlabel metal1 357 631 380 638 0 DRAIN_MUX
+rlabel metal1 357 604 380 611 0 DRAIN_MUX
 port 10 nsew analog default
-rlabel metal1 357 33 380 41 0 DRAIN_MUX
+rlabel metal1 357 6 380 14 0 DRAIN_MUX
 port 10 nsew analog default
-rlabel metal1 492 33 511 40 0 VGND
+rlabel metal1 492 6 511 13 0 VGND
 port 11 nsew ground default
-rlabel metal1 492 633 511 638 0 VGND
+rlabel metal1 492 606 511 611 0 VGND
 port 11 nsew ground default
-rlabel metal2 561 412 572 435 0 SELECT2
+rlabel metal2 561 385 572 408 0 SELECT2
 port 14 nsew
-rlabel metal2 564 545 572 568 0 SELECT1
+rlabel metal2 564 518 572 541 0 SELECT1
 port 15 nsew
-rlabel metal2 564 225 572 248 0 SELECT3
+rlabel metal2 564 198 572 221 0 SELECT3
 port 16 nsew
-rlabel metal2 563 91 572 114 0 SELECT4
+rlabel metal2 563 64 572 87 0 SELECT4
 port 17 nsew
 << properties >>
 string LEFsite unithd

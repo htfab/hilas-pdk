@@ -1,19 +1,19 @@
 magic
 tech sky130A
-timestamp 1628704442
+timestamp 1628707375
 << checkpaint >>
-rect -448 1229 846 1230
-rect -557 1214 846 1229
-rect -571 1179 846 1214
-rect -600 1164 846 1179
-rect -614 1163 846 1164
-rect -614 1072 920 1163
-rect -616 995 920 1072
-rect -616 983 961 995
-rect -616 973 970 983
+rect -337 1270 957 1271
+rect -446 1230 957 1270
+rect -448 1229 957 1230
+rect -557 1214 957 1229
+rect -571 1179 957 1214
+rect -600 1172 957 1179
+rect -600 1164 958 1172
+rect -614 1072 958 1164
+rect -616 1001 958 1072
+rect -616 973 970 1001
 rect -618 -320 970 973
-rect -502 -508 970 -320
-rect -502 -562 961 -508
+rect -502 -562 970 -320
 << nwell >>
 rect 210 132 264 309
 rect 204 105 264 132
@@ -76,48 +76,48 @@ rect 0 70 7 84
 rect 199 63 280 83
 rect 0 45 14 47
 rect 0 28 15 45
-use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_2
-timestamp 1628704399
-transform 1 0 128 0 1 68
-box 0 0 212 99
 use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_1
-timestamp 1628704399
+timestamp 1628707353
 transform 1 0 128 0 1 167
-box 0 0 212 99
+box 0 0 212 105
+use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_2
+timestamp 1628707353
+transform 1 0 128 0 1 68
+box 0 0 212 105
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1628704264
+timestamp 1628707287
 transform 0 1 221 -1 0 120
 box 0 0 23 29
 use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_0
-timestamp 1628704399
+timestamp 1628707353
 transform 1 0 128 0 1 266
-box 0 0 212 99
+box 0 0 212 105
 use sky130_hilas_nFET03a  sky130_hilas_nFET03a_0
-timestamp 1628704353
+timestamp 1628707330
 transform 1 0 118 0 1 358
 box 0 0 210 90
 use sky130_hilas_li2m2  sky130_hilas_li2m2_2
-timestamp 1628704305
+timestamp 1628707307
 transform 1 0 26 0 1 325
 box 0 0 34 33
 use sky130_hilas_nFET03a  sky130_hilas_nFET03a_1
-timestamp 1628704353
+timestamp 1628707330
 transform 1 0 118 0 1 457
 box 0 0 210 90
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1628704305
+timestamp 1628707307
 transform 1 0 28 0 1 424
 box 0 0 34 33
-use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1628704305
-transform 1 0 30 0 1 516
-box 0 0 34 33
 use sky130_hilas_nFET03a  sky130_hilas_nFET03a_3
-timestamp 1628704353
+timestamp 1628707330
 transform 1 0 117 0 1 556
 box 0 0 210 90
+use sky130_hilas_li2m2  sky130_hilas_li2m2_0
+timestamp 1628707307
+transform 1 0 30 0 1 516
+box 0 0 34 33
 use sky130_hilas_li2m1  sky130_hilas_li2m1_1
-timestamp 1628704264
+timestamp 1628707287
 transform 1 0 267 0 1 504
 box 0 0 23 29
 << labels >>

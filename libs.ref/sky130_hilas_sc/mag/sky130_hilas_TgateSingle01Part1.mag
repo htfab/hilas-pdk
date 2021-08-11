@@ -1,8 +1,9 @@
 magic
 tech sky130A
-timestamp 1628704335
+timestamp 1628707322
 << checkpaint >>
-rect -561 754 731 765
+rect -552 765 740 775
+rect -561 754 740 765
 rect -561 689 798 754
 rect -583 674 798 689
 rect -597 -535 798 674
@@ -74,21 +75,21 @@ rect 137 0 156 152
 rect 0 109 188 129
 rect 0 11 57 31
 use sky130_hilas_li2m2  sky130_hilas_li2m2_3
-timestamp 1628704305
+timestamp 1628707307
 transform 1 0 47 0 1 26
 box 0 0 34 33
-use sky130_hilas_m12m2  sky130_hilas_m12m2_3
-timestamp 1628704334
-transform 1 0 78 0 1 113
-box 0 0 32 32
 use sky130_hilas_li2m1  sky130_hilas_li2m1_1
-timestamp 1628704264
+timestamp 1628707287
 transform 1 0 145 0 1 95
 box 0 0 23 29
 use sky130_hilas_li2m1  sky130_hilas_li2m1_5
-timestamp 1628704264
+timestamp 1628707287
 transform 1 0 99 0 1 33
 box 0 0 23 29
+use sky130_hilas_m12m2  sky130_hilas_m12m2_3
+timestamp 1628707321
+transform 1 0 78 0 1 113
+box 0 0 32 32
 << labels >>
 rlabel metal2 182 109 188 129 0 output
 << properties >>

@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628704424
+timestamp 1628707366
 << checkpaint >>
 rect -132 761 1151 769
 rect -142 -520 1151 761
@@ -240,7 +240,7 @@ rect 416 41 419 43
 rect 445 41 448 67
 rect 416 38 448 41
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1628704264
+timestamp 1628707287
 transform 1 0 498 0 1 110
 box 0 0 23 29
 << properties >>
