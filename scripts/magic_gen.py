@@ -895,11 +895,13 @@ class Magic:
             result += self.p.run_command('property LEFsite unithd')
             result += self.p.run_command('property LEFsymmetry "X Y R90"')
             result += self.p.run_command('save')
+            result += self.renew(source)
 
         if center_origin == True:
             result += self.p.run_command('select cell')
             result += self.p.run_command('move origin ' + str(new_position[0]) + ' ' + str(new_position[1]))
             result += self.p.run_command('save')
+            result += self.renew(source)
 
         # result += self.p.run_command('lef write -toplayer -hide')
         result += self.p.run_command('lef write -toplayer')
