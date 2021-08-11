@@ -1,32 +1,32 @@
 magic
 tech sky130A
-timestamp 1628616947
+timestamp 1628694557
 << checkpaint >>
 rect -630 858 932 902
 rect -642 -630 932 858
 rect -642 -674 920 -630
 use sky130_hilas_nFETmed  sky130_hilas_nFETmed_3
-timestamp 1628616718
+timestamp 1628617022
 transform 1 0 220 0 1 0
 box 0 0 82 272
 use sky130_hilas_nFETmed  sky130_hilas_nFETmed_4
-timestamp 1628616718
+timestamp 1628617022
 transform 1 0 0 0 1 0
 box 0 0 82 272
 use sky130_hilas_nFETmed  sky130_hilas_nFETmed_0
-timestamp 1628616718
+timestamp 1628617022
 transform 1 0 55 0 1 0
 box 0 0 82 272
 use sky130_hilas_nFETmed  sky130_hilas_nFETmed_1
-timestamp 1628616718
+timestamp 1628617022
 transform 1 0 110 0 1 0
 box 0 0 82 272
 use sky130_hilas_nFETmed  sky130_hilas_nFETmed_2
-timestamp 1628616718
+timestamp 1628617022
 transform 1 0 165 0 1 0
 box 0 0 82 272
 << properties >>
-string LEFclass CORE
 string LEFsite unithd
+string LEFclass CORE
 string LEFsymmetry X Y R90
 << end >>
