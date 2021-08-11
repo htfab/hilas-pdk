@@ -11,7 +11,7 @@
 
 Description: 5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit, and they would use this cell
 
-Height: 5.990
+Height: 7.410
 <br>
 Width: 16.580
 
@@ -30,9 +30,9 @@ Width: 16.580
 
 Description: None
 
-Height: 6.150
+Height: 10.100
 <br>
-Width: 11.530
+Width: 16.250
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -51,9 +51,9 @@ Width: 11.530
 
 Description: 2x1 array of FG switch cells configured as pFET current sources with weak capacitive gate inputs
 
-Height: 6.150
+Height: 10.100
 <br>
-Width: 11.530
+Width: 16.250
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -75,9 +75,9 @@ Width: 11.530
 
 Description: None
 
-Height: 6.150
+Height: 10.100
 <br>
-Width: 11.520
+Width: 16.240
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -137,9 +137,9 @@ Width: 8.700
 Description: Two transimpedance amps with one (of two) amplifiers using floating-gate
   inputs. FG amplifier with wide linear range.
 
-Height: 6.150
+Height: 10.100
 <br>
-Width: 28.090
+Width: 34.530
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -165,9 +165,9 @@ Width: 28.090
 
 Description: Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with normal linear range.
 
-Height: 6.150
+Height: 10.100
 <br>
-Width: 28.100
+Width: 32.820
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -195,7 +195,7 @@ Width: 28.100
 
 Description: Two transimpedane amplifiers with no floating-gate inputs.
 
-Height: 6.150
+Height: 10.100
 <br>
 Width: 17.920
 
@@ -221,9 +221,9 @@ Width: 17.920
 
 Description: None
 
-Height: 6.050
+Height: 6.360
 <br>
-Width: 8.880
+Width: 10.600
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -452,7 +452,7 @@ Description: 3 small nFETs + 3 small pFETs
 
 Height: 6.050
 <br>
-Width: 2.800
+Width: 3.400
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -543,9 +543,9 @@ Width: 6.880
 
 Description: 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one nFET transistor current source.
 
-Height: 6.500
+Height: 10.500
 <br>
-Width: 14.170
+Width: 19.740
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -574,7 +574,7 @@ Width: 14.170
 
 Description: selectable capacitor array
 
-Height: 6.500
+Height: 10.490
 <br>
 Width: 36.700
 
@@ -597,9 +597,9 @@ Width: 36.700
 
 Description: smallest cap
 
-Height: 5.830
+Height: 7.870
 <br>
-Width: 10.420
+Width: 13.090
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -627,7 +627,7 @@ Description: mid-large cap
 
 Height: 5.870
 <br>
-Width: 5.790
+Width: 6.020
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -639,9 +639,9 @@ Width: 5.790
 
 Description: large cap
 
-Height: 5.290
+Height: 7.320
 <br>
-Width: 5.780
+Width: 8.170
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -655,9 +655,9 @@ Width: 5.780
 
 Description: 4x1 array of FG switch cell, Varactor capacitor cell
 
-Height: 6.500
+Height: 10.490
 <br>
-Width: 10.070
+Width: 16.240
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -702,9 +702,9 @@ Width: 5.720
 
 Description: Single Large (W//L=100) nFET Transistor
 
-Height: 5.830
+Height: 6.030
 <br>
-Width: 4.370
+Width: 5.570
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -761,9 +761,9 @@ Width: 55.470
 
 Description: 4x1 array of FG switch cell configured pFET as current sources
 
-Height: 6.500
+Height: 10.500
 <br>
-Width: 10.080
+Width: 16.250
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -787,9 +787,9 @@ Width: 10.080
 
 Description: 4x1 array of FG switch cell using overlap capacitors
 
-Height: 6.710
+Height: 10.360
 <br>
-Width: 10.080
+Width: 16.250
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -811,9 +811,9 @@ Width: 9.350
 
 Description: 4x2 array of FG switch cell, Varactor capacitor cell
 
-Height: 6.500
+Height: 10.490
 <br>
-Width: 20.120
+Width: 32.460
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -957,7 +957,7 @@ Description: None
 
 Height: 5.650
 <br>
-Width: 1.870
+Width: 1.880
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -967,7 +967,7 @@ Width: 1.870
 
 Description: None
 
-Height: 13.680
+Height: 15.410
 <br>
 Width: 16.380
 
@@ -1039,9 +1039,9 @@ Width: 2.720
 
 Description: None
 
-Height: 5.020
+Height: 5.230
 <br>
-Width: 9.540
+Width: 16.500
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1063,7 +1063,7 @@ Width: 2.190
 
 Description: None
 
-Height: 1.520
+Height: 1.670
 <br>
 Width: 7.080
 
@@ -1101,7 +1101,7 @@ Description: None
 
 Height: 1.430
 <br>
-Width: 1.630
+Width: 1.720
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1123,9 +1123,9 @@ Width: 5.680
 
 Description: None
 
-Height: 12.520
+Height: 16.870
 <br>
-Width: 34.090
+Width: 50.350
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1231,7 +1231,7 @@ Width: 1.280
 
 Description: None
 
-Height: 6.050
+Height: 6.190
 <br>
 Width: 1.870
 
@@ -1359,7 +1359,7 @@ Width: 2.830
 
 Description: decoupling cap (intended as fill)
 
-Height: 3.020
+Height: 3.070
 <br>
 Width: 3.080
 
@@ -1495,7 +1495,7 @@ Description: None
 
 Height: 0.900
 <br>
-Width: 2.080
+Width: 2.100
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1613,9 +1613,9 @@ Width: 1.720
 
 Description: pFET transistor used in DAC block
 
-Height: 1.570
+Height: 1.330
 <br>
-Width: 1.870
+Width: 1.880
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1625,9 +1625,9 @@ Width: 1.870
 
 Description: pFET transistor used in DAC block
 
-Height: 1.570
+Height: 1.330
 <br>
-Width: 1.870
+Width: 1.930
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1637,9 +1637,9 @@ Width: 1.870
 
 Description: pFET transistor used in DAC block
 
-Height: 1.570
+Height: 1.330
 <br>
-Width: 1.870
+Width: 1.930
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1649,7 +1649,7 @@ Width: 1.870
 
 Description: pFET transistor used in DAC block
 
-Height: 1.450
+Height: 1.860
 <br>
 Width: 1.910
 

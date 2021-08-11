@@ -1,88 +1,88 @@
 magic
 tech sky130A
-timestamp 1628698478
+timestamp 1628704272
 << checkpaint >>
-rect -517 1133 776 1175
-rect -665 1103 776 1133
-rect -789 -576 776 1103
-rect -665 -606 776 -576
-rect -517 -651 776 -606
+rect -345 1159 948 1201
+rect -493 1129 948 1159
+rect -617 -550 948 1129
+rect -493 -580 948 -550
+rect -345 -625 948 -580
 << error_s >>
-rect -87 540 -60 546
-rect -87 498 -60 504
-rect -87 473 -60 479
-rect -87 431 -60 437
-rect -87 390 -60 396
-rect -87 348 -60 354
-rect -87 323 -60 329
-rect -87 281 -60 287
-rect -87 240 -60 246
-rect -87 198 -60 204
-rect -87 173 -60 179
-rect -87 131 -60 137
-rect -87 90 -60 96
-rect -87 48 -60 54
-rect -87 23 -60 29
-rect -87 -19 -60 -13
+rect 85 566 112 572
+rect 85 524 112 530
+rect 85 499 112 505
+rect 85 457 112 463
+rect 85 416 112 422
+rect 85 374 112 380
+rect 85 349 112 355
+rect 85 307 112 313
+rect 85 266 112 272
+rect 85 224 112 230
+rect 85 199 112 205
+rect 85 157 112 163
+rect 85 116 112 122
+rect 85 74 112 80
+rect 85 49 112 55
+rect 85 7 112 13
 << metal1 >>
-rect -41 -22 -7 550
-rect 26 -21 53 549
+rect 131 4 165 576
+rect 198 5 225 575
 << metal2 >>
-rect -136 507 118 530
-rect -110 293 155 316
-rect -136 211 155 233
-rect -137 -6 134 17
+rect 36 533 290 556
+rect 62 319 327 342
+rect 36 237 327 259
+rect 35 20 306 43
 use sky130_hilas_pFETmirror02  sky130_hilas_pFETmirror02_0
 timestamp 1628285143
-transform 1 0 88 0 1 -111
+transform 1 0 260 0 1 -85
 box -61 89 67 373
 use sky130_hilas_nMirror03  sky130_hilas_nMirror03_1
-timestamp 1628698474
-transform 1 0 -113 0 1 130
+timestamp 1628704264
+transform 1 0 59 0 1 156
 box -59 -6 125 123
 use sky130_hilas_nMirror03  sky130_hilas_nMirror03_0
-timestamp 1628698474
-transform 1 0 -113 0 -1 97
+timestamp 1628704264
+transform 1 0 59 0 -1 123
 box -59 -6 125 123
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
 timestamp 1628285143
-transform 1 0 106 0 1 228
+transform 1 0 278 0 1 254
 box -14 -15 20 18
 use sky130_hilas_li2m2  sky130_hilas_li2m2_3
 timestamp 1628285143
-transform 1 0 98 0 1 3
+transform 1 0 270 0 1 29
 box -14 -15 20 18
 use sky130_hilas_li2m1  sky130_hilas_li2m1_1
-timestamp 1628698474
-transform 1 0 41 0 1 126
-box -10 -8 13 21
+timestamp 1628704264
+transform 1 0 213 0 1 152
+box 0 0 23 29
 use sky130_hilas_pFETmirror02  sky130_hilas_pFETmirror02_1
 timestamp 1628285143
-transform 1 0 88 0 -1 635
+transform 1 0 260 0 -1 661
 box -61 89 67 373
 use sky130_hilas_nMirror03  sky130_hilas_nMirror03_3
-timestamp 1628698474
-transform 1 0 -113 0 -1 397
+timestamp 1628704264
+transform 1 0 59 0 -1 423
 box -59 -6 125 123
 use sky130_hilas_nMirror03  sky130_hilas_nMirror03_2
-timestamp 1628698474
-transform 1 0 -113 0 1 430
+timestamp 1628704264
+transform 1 0 59 0 1 456
 box -59 -6 125 123
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
 timestamp 1628285143
-transform 1 0 107 0 1 300
+transform 1 0 279 0 1 326
 box -14 -15 20 18
 use sky130_hilas_li2m2  sky130_hilas_li2m2_2
 timestamp 1628285143
-transform 1 0 102 0 1 522
+transform 1 0 274 0 1 548
 box -14 -15 20 18
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1628698474
-transform 1 0 41 0 1 385
-box -10 -8 13 21
+timestamp 1628704264
+transform 1 0 213 0 1 411
+box 0 0 23 29
 << labels >>
-rlabel metal2 144 293 155 316 0 output1
-rlabel space 144 211 155 234 0 output2
+rlabel metal2 316 319 327 342 0 output1
+rlabel space 316 237 327 260 0 output2
 << properties >>
 string LEFsite unithd
 string LEFclass CORE

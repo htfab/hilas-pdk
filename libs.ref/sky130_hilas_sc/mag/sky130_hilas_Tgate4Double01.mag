@@ -1,98 +1,98 @@
 magic
 tech sky130A
-timestamp 1628698486
+timestamp 1628704288
 << checkpaint >>
-rect -421 1083 873 1084
-rect -421 1069 1181 1083
-rect -421 1048 1226 1069
-rect -496 1047 1226 1048
-rect -556 1007 1226 1047
-rect -593 1004 1272 1007
-rect -648 -681 1272 1004
-rect -593 -684 1272 -681
-rect -556 -724 1226 -684
-rect -496 -725 1226 -724
-rect -421 -746 1226 -725
-rect -421 -760 1181 -746
-rect -421 -761 873 -760
+rect -385 1224 909 1225
+rect -385 1202 1217 1224
+rect -385 1188 1272 1202
+rect -520 1140 1272 1188
+rect -547 1126 1318 1140
+rect -601 1119 1318 1126
+rect -603 -514 1318 1119
+rect -601 -521 1318 -514
+rect -547 -535 1318 -521
+rect -520 -583 1272 -535
+rect -385 -597 1272 -583
+rect -385 -619 1217 -597
+rect -385 -620 909 -619
 << metal1 >>
-rect 38 460 58 464
-rect 621 460 640 464
-rect 38 -141 58 -137
-rect 621 -141 640 -137
+rect 74 601 94 605
+rect 657 601 676 605
+rect 74 0 94 4
+rect 657 0 676 4
 << metal2 >>
-rect -36 433 -31 453
-rect -36 385 -31 405
-rect -36 335 -30 355
-rect 665 335 672 355
-rect -36 270 -30 290
-rect 666 270 672 290
-rect -36 220 -31 240
-rect -36 172 -31 192
-rect -36 131 -31 151
-rect -36 83 -31 103
-rect -36 33 -30 53
-rect 666 33 672 53
-rect -36 -32 -30 -12
-rect 666 -32 672 -12
-rect -36 -82 -31 -62
-rect -36 -130 -31 -110
-use sky130_hilas_TgateDouble01  sky130_hilas_TgateDouble01_2
-timestamp 1608225149
-transform 1 0 227 0 -1 -19
-box -263 -181 445 -29
-use sky130_hilas_TgateDouble01  sky130_hilas_TgateDouble01_3
-timestamp 1608225149
-transform 1 0 227 0 1 342
-box -263 -181 445 -29
-use sky130_hilas_TgateDouble01  sky130_hilas_TgateDouble01_0
-timestamp 1608225149
-transform 1 0 227 0 -1 283
-box -263 -181 445 -29
+rect 0 574 5 594
+rect 0 526 5 546
+rect 0 476 6 496
+rect 701 476 708 496
+rect 0 411 6 431
+rect 702 411 708 431
+rect 0 361 5 381
+rect 0 313 5 333
+rect 0 272 5 292
+rect 0 224 5 244
+rect 0 174 6 194
+rect 702 174 708 194
+rect 0 109 6 129
+rect 702 109 708 129
+rect 0 59 5 79
+rect 0 11 5 31
 use sky130_hilas_TgateDouble01  sky130_hilas_TgateDouble01_1
 timestamp 1608225149
-transform 1 0 227 0 1 40
-box -263 -181 445 -29
+transform 1 0 263 0 1 181
+box -263 -181 445 -14
+use sky130_hilas_TgateDouble01  sky130_hilas_TgateDouble01_0
+timestamp 1608225149
+transform 1 0 263 0 -1 424
+box -263 -181 445 -14
+use sky130_hilas_TgateDouble01  sky130_hilas_TgateDouble01_3
+timestamp 1608225149
+transform 1 0 263 0 1 483
+box -263 -181 445 -14
+use sky130_hilas_TgateDouble01  sky130_hilas_TgateDouble01_2
+timestamp 1608225149
+transform 1 0 263 0 -1 122
+box -263 -181 445 -14
 << labels >>
-rlabel metal1 621 460 640 464 0 VPWR
+rlabel metal1 657 601 676 605 0 VPWR
 port 13 nsew
-rlabel metal1 38 460 58 464 0 VGND
+rlabel metal1 74 601 94 605 0 VGND
 port 1 nsew ground default
-rlabel metal2 665 335 672 355 0 OUTPUT1
+rlabel metal2 701 476 708 496 0 OUTPUT1
 port 17 nsew
-rlabel metal2 666 33 672 53 0 OUTPUT3
+rlabel metal2 702 174 708 194 0 OUTPUT3
 port 15 nsew
-rlabel metal2 666 270 672 290 0 OUTPUT2
+rlabel metal2 702 411 708 431 0 OUTPUT2
 port 16 nsew
-rlabel metal2 666 -32 672 -12 0 OUTPUT4
+rlabel metal2 702 109 708 129 0 OUTPUT4
 port 14 nsew
-rlabel metal2 -36 335 -30 355 0 SELECT1
+rlabel metal2 0 476 6 496 0 SELECT1
 port 4 nsew
-rlabel metal2 -36 270 -30 290 0 SELECT2
+rlabel metal2 0 411 6 431 0 SELECT2
 port 5 nsew
-rlabel metal2 -36 33 -30 53 0 SELECT3
+rlabel metal2 0 174 6 194 0 SELECT3
 port 8 nsew
-rlabel metal2 -36 -32 -30 -12 0 SELECT4
+rlabel metal2 0 109 6 129 0 SELECT4
 port 10 nsew
-rlabel metal1 621 -141 640 -137 0 VGND
+rlabel metal1 657 0 676 4 0 VGND
 port 1 nsew
-rlabel metal1 38 -141 58 -137 0 VPWR
+rlabel metal1 74 0 94 4 0 VPWR
 port 13 nsew
-rlabel metal2 -36 433 -31 453 0 INPUT1_1
+rlabel metal2 0 574 5 594 0 INPUT1_1
 port 2 nsew
-rlabel metal2 -36 172 -31 192 0 INPUT1_2
+rlabel metal2 0 313 5 333 0 INPUT1_2
 port 7 nsew
-rlabel metal2 -36 220 -31 240 0 INPUT2_2
+rlabel metal2 0 361 5 381 0 INPUT2_2
 port 6 nsew
-rlabel metal2 -36 131 -31 151 0 INPUT1_3
+rlabel metal2 0 272 5 292 0 INPUT1_3
 port 19 nsew
-rlabel metal2 -36 83 -31 103 0 INPUT2_3
+rlabel metal2 0 224 5 244 0 INPUT2_3
 port 9 nsew
-rlabel metal2 -36 -82 -31 -62 0 INPUT2_4
+rlabel metal2 0 59 5 79 0 INPUT2_4
 port 11 nsew
-rlabel metal2 -36 -130 -31 -110 0 INPUT1_4
+rlabel metal2 0 11 5 31 0 INPUT1_4
 port 12 nsew
-rlabel metal2 -36 385 -31 405 0 INPUT2_1
+rlabel metal2 0 526 5 546 0 INPUT2_1
 port 18 nsew
 << properties >>
 string LEFsite unithd

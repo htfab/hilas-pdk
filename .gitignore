@@ -1,6 +1,5 @@
 .idea
 *.swp
-libs.ref/sky130_hilas_sc/gds
 *~
 libs.ref/sky130_hilas_sc/_templef
 /LVS_RESULTS/

@@ -1,216 +1,216 @@
 magic
 tech sky130A
-timestamp 1628698495
+timestamp 1628704307
 << checkpaint >>
-rect -1691 1146 576 1219
-rect -1691 1078 687 1146
-rect -1691 1011 702 1078
-rect -1744 910 702 1011
-rect -1746 707 702 910
-rect -1751 -580 702 707
-rect -1751 -586 687 -580
-rect -1746 -648 687 -586
-rect -1746 -682 576 -648
-rect -1691 -691 576 -682
+rect -894 1680 539 2080
+rect -894 1468 1615 1680
+rect -894 1207 1990 1468
+rect -894 1139 2365 1207
+rect -894 170 2380 1139
+rect -630 -230 2380 170
+rect -73 -519 2380 -230
+rect -73 -525 2365 -519
+rect -68 -587 2365 -525
+rect -68 -621 1226 -587
 << error_s >>
-rect -994 555 -944 561
-rect -922 555 -872 561
-rect -994 513 -944 519
-rect -922 513 -872 519
-rect -922 486 -872 492
-rect -922 444 -872 450
-rect -922 403 -872 409
-rect -922 361 -872 367
-rect -994 334 -944 340
-rect -922 334 -872 340
-rect -994 292 -944 298
-rect -922 292 -872 298
-rect -994 231 -944 237
-rect -922 231 -872 237
-rect -994 189 -944 195
-rect -922 189 -872 195
-rect -922 162 -872 168
-rect -922 120 -872 126
-rect -922 78 -872 84
-rect -922 36 -872 42
-rect -994 9 -944 15
-rect -922 9 -872 15
-rect -994 -33 -944 -27
-rect -922 -33 -872 -27
+rect 684 616 734 622
+rect 756 616 806 622
+rect 684 574 734 580
+rect 756 574 806 580
+rect 756 547 806 553
+rect 756 505 806 511
+rect 756 464 806 470
+rect 756 422 806 428
+rect 684 395 734 401
+rect 756 395 806 401
+rect 684 353 734 359
+rect 756 353 806 359
+rect 684 292 734 298
+rect 756 292 806 298
+rect 684 250 734 256
+rect 756 250 806 256
+rect 756 223 806 229
+rect 756 181 806 187
+rect 756 139 806 145
+rect 756 97 806 103
+rect 684 70 734 76
+rect 756 70 806 76
+rect 684 28 734 34
+rect 756 28 806 34
 << nwell >>
-rect -1101 561 -805 562
-rect -1101 546 -1060 561
-rect -532 552 -494 562
-rect -129 548 -89 562
-rect -1101 545 -1042 546
-rect -1101 369 -1060 545
-rect -1112 327 -1060 369
-rect -1112 307 -1061 327
-rect -1112 254 -1060 307
-rect -1101 -42 -1060 254
+rect 577 622 873 623
+rect 577 607 618 622
+rect 1146 613 1184 623
+rect 1549 609 1589 623
+rect 577 606 636 607
+rect 577 430 618 606
+rect 566 388 618 430
+rect 566 368 617 388
+rect 566 315 618 368
+rect 577 19 618 315
 << poly >>
-rect 209 516 229 562
-rect 209 -43 229 -18
+rect 1887 577 1907 623
+rect 1887 18 1907 43
 << locali >>
-rect -1115 -25 -1097 67
+rect 563 36 581 128
 << metal1 >>
-rect -1025 555 -1009 562
-rect -984 555 -965 562
-rect -944 555 -928 562
-rect -532 552 -494 562
-rect -129 534 -89 562
-rect 131 516 154 562
-rect 257 516 280 562
-rect -782 430 -761 504
-rect -1112 254 -1091 369
-rect -784 93 -768 243
-rect 257 127 280 132
-rect 253 126 281 127
-rect 253 124 283 126
-rect 253 97 254 124
-rect 281 97 283 124
-rect 253 94 283 97
-rect -532 -43 -494 -33
-rect 131 -43 154 -18
-rect 257 -43 280 -18
+rect 653 616 669 623
+rect 694 616 713 623
+rect 734 616 750 623
+rect 1146 613 1184 623
+rect 1549 595 1589 623
+rect 1809 577 1832 623
+rect 1935 577 1958 623
+rect 896 491 917 565
+rect 566 315 587 430
+rect 894 154 910 304
+rect 1935 188 1958 193
+rect 1931 187 1959 188
+rect 1931 185 1961 187
+rect 1931 158 1932 185
+rect 1959 158 1961 185
+rect 1931 155 1961 158
+rect 1146 18 1184 28
+rect 1809 18 1832 43
+rect 1935 18 1958 43
 << via1 >>
-rect 254 97 281 124
+rect 1932 158 1959 185
 << metal2 >>
-rect -1116 515 -1043 533
-rect -758 512 7 531
-rect -758 510 24 512
-rect -14 491 24 510
-rect -65 490 -51 491
-rect -1112 427 -1097 469
-rect -65 457 -50 490
-rect -65 437 56 457
-rect -1112 418 -785 427
-rect 170 426 296 442
-rect -1112 412 -769 418
-rect -799 402 -769 412
-rect -1114 352 -1082 379
-rect -54 371 66 381
-rect -55 363 66 371
-rect 38 351 66 363
-rect 38 349 41 351
-rect -1119 320 -1061 338
-rect 170 333 296 349
-rect -791 304 -768 305
-rect -791 301 -34 304
-rect -791 284 -28 301
-rect -791 274 -767 284
-rect -1112 256 -767 274
-rect -47 264 24 284
-rect -1112 254 -775 256
-rect -777 234 -32 236
-rect -777 214 24 234
-rect -777 213 -745 214
-rect -1116 191 -1061 209
-rect -1118 118 -1098 168
-rect -56 152 44 168
-rect 170 149 296 165
-rect 251 124 284 125
-rect -1118 98 -763 118
-rect 251 116 254 124
-rect -384 99 254 116
-rect 251 97 254 99
-rect 281 97 284 124
-rect 251 96 284 97
-rect -1119 47 -1091 74
-rect -55 54 45 71
-rect 172 56 296 72
-rect -55 53 39 54
-rect -1118 -5 -1061 13
-rect -32 8 23 9
-rect -790 -14 23 8
-rect -790 -15 -31 -14
-rect -790 -16 -713 -15
-rect -1114 -33 -1080 -20
-rect -790 -33 -766 -16
-rect -1114 -41 -766 -33
-rect -1103 -57 -766 -41
+rect 562 576 635 594
+rect 920 573 1685 592
+rect 920 571 1702 573
+rect 1664 552 1702 571
+rect 1613 551 1627 552
+rect 566 488 581 530
+rect 1613 518 1628 551
+rect 1613 498 1734 518
+rect 566 479 893 488
+rect 1848 487 1974 503
+rect 566 473 909 479
+rect 879 463 909 473
+rect 564 413 596 440
+rect 1624 432 1744 442
+rect 1623 424 1744 432
+rect 1716 412 1744 424
+rect 1716 410 1719 412
+rect 559 381 617 399
+rect 1848 394 1974 410
+rect 887 365 910 366
+rect 887 362 1644 365
+rect 887 345 1650 362
+rect 887 335 911 345
+rect 566 317 911 335
+rect 1631 325 1702 345
+rect 566 315 903 317
+rect 901 295 1646 297
+rect 901 275 1702 295
+rect 901 274 933 275
+rect 562 252 617 270
+rect 560 179 580 229
+rect 1622 213 1722 229
+rect 1848 210 1974 226
+rect 1929 185 1962 186
+rect 560 159 915 179
+rect 1929 177 1932 185
+rect 1294 160 1932 177
+rect 1929 158 1932 160
+rect 1959 158 1962 185
+rect 1929 157 1962 158
+rect 559 108 587 135
+rect 1623 115 1723 132
+rect 1850 117 1974 133
+rect 1623 114 1717 115
+rect 560 56 617 74
+rect 1646 69 1701 70
+rect 888 47 1701 69
+rect 888 46 1647 47
+rect 888 45 965 46
+rect 564 28 598 41
+rect 888 28 912 45
+rect 564 20 912 28
+rect 575 4 912 20
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1628698494
-transform 1 0 -1107 0 1 59
-box -14 -15 20 18
+timestamp 1628704305
+transform 1 0 571 0 1 120
+box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1628698494
-transform 1 0 -1102 0 1 -37
-box -14 -15 20 18
+timestamp 1628704305
+transform 1 0 576 0 1 24
+box 0 0 34 33
 use sky130_hilas_m12m2  sky130_hilas_m12m2_4
 timestamp 1628285143
-transform 1 0 -778 0 1 221
+transform 1 0 900 0 1 282
 box -9 -10 23 22
 use sky130_hilas_m12m2  sky130_hilas_m12m2_2
 timestamp 1628285143
-transform 1 0 -778 0 1 409
+transform 1 0 900 0 1 470
 box -9 -10 23 22
 use sky130_hilas_m12m2  sky130_hilas_m12m2_0
 timestamp 1628285143
-transform 1 0 -776 0 1 514
+transform 1 0 902 0 1 575
 box -9 -10 23 22
 use sky130_hilas_m12m2  sky130_hilas_m12m2_3
 timestamp 1628285143
-transform 1 0 -1105 0 1 359
+transform 1 0 573 0 1 420
 box -9 -10 23 22
 use sky130_hilas_m12m2  sky130_hilas_m12m2_1
 timestamp 1628285143
-transform 1 0 -1107 0 1 258
+transform 1 0 571 0 1 319
 box -9 -10 23 22
 use sky130_hilas_m12m2  sky130_hilas_m12m2_5
 timestamp 1628285143
-transform 1 0 -791 0 1 103
+transform 1 0 887 0 1 164
 box -9 -10 23 22
 use sky130_hilas_WTA4stage01  sky130_hilas_WTA4stage01_0
-timestamp 1628698494
-transform 1 0 67 0 1 -19
+timestamp 1628704305
+transform 1 0 1745 0 1 42
 box -54 1 229 535
 use sky130_hilas_swc4x1BiasCell  sky130_hilas_swc4x1BiasCell_0
-timestamp 1628698494
-transform -1 0 -317 0 1 339
-box -264 -400 744 250
+timestamp 1628704305
+transform -1 0 1361 0 1 400
+box 0 0 1625 1050
 << labels >>
-rlabel metal2 289 426 296 442 0 OUTPUT1
+rlabel metal2 1967 487 1974 503 0 OUTPUT1
 port 4 nsew analog default
-rlabel metal2 291 333 296 349 0 OUTPUT2
+rlabel metal2 1969 394 1974 410 0 OUTPUT2
 port 5 nsew analog default
-rlabel metal2 291 149 296 165 0 OUTPUT3
+rlabel metal2 1969 210 1974 226 0 OUTPUT3
 port 6 nsew analog default
-rlabel metal2 291 56 296 72 0 OUTPUT4
+rlabel metal2 1969 117 1974 133 0 OUTPUT4
 port 7 nsew analog default
-rlabel metal1 257 556 280 562 0 VGND
+rlabel metal1 1935 617 1958 623 0 VGND
 port 1 nsew ground default
-rlabel metal1 257 -43 280 -37 0 VGND
+rlabel metal1 1935 18 1958 24 0 VGND
 port 1 nsew ground default
-rlabel metal2 -1112 449 -1097 469 0 INPUT1
+rlabel metal2 566 510 581 530 0 INPUT1
 port 8 nsew analog default
-rlabel metal2 -1112 352 -1086 378 0 INPUT2
+rlabel metal2 566 413 592 439 0 INPUT2
 port 9 nsew analog default
-rlabel metal2 -1118 151 -1098 168 0 INPUT3
+rlabel metal2 560 212 580 229 0 INPUT3
 port 10 nsew analog default
-rlabel metal2 -1119 47 -1091 74 0 INPUT4
+rlabel metal2 559 108 587 135 0 INPUT4
 port 11 nsew analog default
-rlabel metal1 -531 552 -495 562 0 GATE1
+rlabel metal1 1147 613 1183 623 0 GATE1
 port 16 nsew
-rlabel metal1 -129 548 -89 562 0 VTUN
+rlabel metal1 1549 609 1589 623 0 VTUN
 port 17 nsew
-rlabel metal1 131 -43 154 -37 0 WTAMIDDLENODE
+rlabel metal1 1809 18 1832 24 0 WTAMIDDLENODE
 port 18 nsew
-rlabel metal1 131 556 154 562 0 WTAMIDDLENODE
+rlabel metal1 1809 617 1832 623 0 WTAMIDDLENODE
 port 18 nsew
-rlabel metal1 -984 555 -965 562 0 COLSEL1
+rlabel metal1 694 616 713 623 0 COLSEL1
 port 19 nsew
-rlabel metal1 -1025 555 -1009 562 0 VINJ
+rlabel metal1 653 616 669 623 0 VINJ
 port 21 nsew
-rlabel metal1 -944 555 -928 562 0 VPWR
+rlabel metal1 734 616 750 623 0 VPWR
 port 20 nsew
-rlabel metal2 -1116 515 -1107 533 0 DRAIN1
+rlabel metal2 562 576 571 594 0 DRAIN1
 port 12 nsew
-rlabel metal2 -1119 320 -1110 338 0 DRAIN2
+rlabel metal2 559 381 568 399 0 DRAIN2
 port 22 nsew
-rlabel metal2 -1116 191 -1107 209 0 DRAIN3
+rlabel metal2 562 252 571 270 0 DRAIN3
 port 23 nsew
-rlabel metal2 -1118 -5 -1109 13 0 DRAIN4
+rlabel metal2 560 56 569 74 0 DRAIN4
 port 24 nsew
 << properties >>
 string LEFsite unithd

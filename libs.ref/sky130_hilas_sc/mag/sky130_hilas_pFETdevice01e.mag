@@ -1,48 +1,48 @@
 magic
 tech sky130A
-timestamp 1628698448
+timestamp 1628704213
 << nwell >>
-rect -121 -55 82 44
+rect 0 0 203 99
 << pmos >>
-rect -18 -19 21 23
+rect 103 36 142 78
 << pdiff >>
-rect -46 9 -18 23
-rect -46 -8 -41 9
-rect -24 -8 -18 9
-rect -46 -19 -18 -8
-rect 21 9 48 23
-rect 21 -8 27 9
-rect 44 -8 48 9
-rect 21 -19 48 -8
+rect 75 64 103 78
+rect 75 47 80 64
+rect 97 47 103 64
+rect 75 36 103 47
+rect 142 64 169 78
+rect 142 47 148 64
+rect 165 47 169 64
+rect 142 36 169 47
 << pdiffc >>
-rect -41 -8 -24 9
-rect 27 -8 44 9
+rect 80 47 97 64
+rect 148 47 165 64
 << poly >>
-rect -18 23 21 36
-rect -80 -27 -54 -19
-rect -18 -27 21 -19
-rect -80 -42 21 -27
+rect 103 78 142 91
+rect 41 28 67 36
+rect 103 28 142 36
+rect 41 13 142 28
 << locali >>
-rect -55 9 -24 17
-rect -55 -1 -41 9
-rect -57 -3 -41 -1
-rect -41 -16 -24 -8
-rect 27 9 44 17
-rect 27 -16 44 -8
+rect 66 64 97 72
+rect 66 54 80 64
+rect 64 52 80 54
+rect 80 39 97 47
+rect 148 64 165 72
+rect 148 39 165 47
 << metal2 >>
-rect -121 -3 -84 16
-rect -121 -45 -83 -26
+rect 0 52 37 71
+rect 0 10 38 29
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
 timestamp 1628285143
-transform 1 0 57 0 1 -1
+transform 1 0 178 0 1 54
 box -14 -15 20 18
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
 timestamp 1628285143
-transform 1 0 -73 0 1 9
+transform 1 0 48 0 1 64
 box -14 -15 20 18
 use sky130_hilas_poly2m2  sky130_hilas_poly2m2_0
 timestamp 1628285143
-transform 0 1 -87 -1 0 -28
+transform 0 1 34 -1 0 27
 box -9 -26 24 29
 << properties >>
 string LEFsite unithd

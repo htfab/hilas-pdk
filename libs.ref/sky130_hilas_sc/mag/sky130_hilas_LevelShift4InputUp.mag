@@ -1,133 +1,133 @@
 magic
 tech sky130A
-timestamp 1628698545
+timestamp 1628704408
 << error_s >>
-rect 35 554 85 560
-rect 358 555 408 561
-rect 515 554 543 561
-rect 657 555 685 561
-rect 35 512 85 518
-rect 358 513 408 519
-rect 515 512 543 519
-rect 657 513 685 519
-rect 106 488 156 494
-rect 286 483 337 489
-rect 466 483 494 489
-rect 706 483 734 489
-rect 106 446 156 452
-rect 286 441 337 447
-rect 466 441 494 447
-rect 706 441 734 447
-rect 35 379 85 385
-rect 358 380 408 386
-rect 515 379 543 386
-rect 657 380 685 386
-rect 35 337 85 343
-rect 358 338 408 344
-rect 515 337 543 344
-rect 657 338 685 344
-rect 106 313 156 319
-rect 286 308 337 314
-rect 466 308 494 314
-rect 706 308 734 314
-rect 106 271 156 277
-rect 286 266 337 272
-rect 466 266 494 272
-rect 706 266 734 272
-rect 35 204 85 210
-rect 358 205 408 211
-rect 515 204 543 211
-rect 657 205 685 211
-rect 35 162 85 168
-rect 358 163 408 169
-rect 515 162 543 169
-rect 657 163 685 169
-rect 106 138 156 144
-rect 286 133 337 139
-rect 466 133 494 139
-rect 706 133 734 139
-rect 106 96 156 102
-rect 286 91 337 97
-rect 466 91 494 97
-rect 706 91 734 97
-rect 35 29 85 35
-rect 358 30 408 36
-rect 515 29 543 36
-rect 657 30 685 36
-rect 35 -13 85 -7
-rect 358 -12 408 -6
-rect 515 -13 543 -6
-rect 657 -12 685 -6
-rect 106 -37 156 -31
-rect 286 -42 337 -36
-rect 466 -42 494 -36
-rect 706 -42 734 -36
-rect 106 -79 156 -73
-rect 286 -84 337 -78
-rect 466 -84 494 -78
-rect 706 -84 734 -78
+rect 65 660 115 666
+rect 388 661 438 667
+rect 545 660 573 667
+rect 687 661 715 667
+rect 65 618 115 624
+rect 388 619 438 625
+rect 545 618 573 625
+rect 687 619 715 625
+rect 136 594 186 600
+rect 316 589 367 595
+rect 496 589 524 595
+rect 736 589 764 595
+rect 136 552 186 558
+rect 316 547 367 553
+rect 496 547 524 553
+rect 736 547 764 553
+rect 65 485 115 491
+rect 388 486 438 492
+rect 545 485 573 492
+rect 687 486 715 492
+rect 65 443 115 449
+rect 388 444 438 450
+rect 545 443 573 450
+rect 687 444 715 450
+rect 136 419 186 425
+rect 316 414 367 420
+rect 496 414 524 420
+rect 736 414 764 420
+rect 136 377 186 383
+rect 316 372 367 378
+rect 496 372 524 378
+rect 736 372 764 378
+rect 65 310 115 316
+rect 388 311 438 317
+rect 545 310 573 317
+rect 687 311 715 317
+rect 65 268 115 274
+rect 388 269 438 275
+rect 545 268 573 275
+rect 687 269 715 275
+rect 136 244 186 250
+rect 316 239 367 245
+rect 496 239 524 245
+rect 736 239 764 245
+rect 136 202 186 208
+rect 316 197 367 203
+rect 496 197 524 203
+rect 736 197 764 203
+rect 65 135 115 141
+rect 388 136 438 142
+rect 545 135 573 142
+rect 687 136 715 142
+rect 65 93 115 99
+rect 388 94 438 100
+rect 545 93 573 100
+rect 687 94 715 100
+rect 136 69 186 75
+rect 316 64 367 70
+rect 496 64 524 70
+rect 736 64 764 70
+rect 136 27 186 33
+rect 316 22 367 28
+rect 496 22 524 28
+rect 736 22 764 28
 << nwell >>
-rect -30 470 -19 490
+rect 0 576 11 596
 << metal1 >>
-rect 4 585 33 594
-rect 435 588 466 594
-rect 736 589 760 594
-rect 4 -106 33 -94
-rect 435 -106 466 -100
-rect 736 -106 760 -101
+rect 34 691 63 700
+rect 465 694 496 700
+rect 766 695 790 700
+rect 34 0 63 12
+rect 465 0 496 6
+rect 766 0 790 5
 << metal2 >>
-rect -30 530 -14 550
-rect 830 437 840 469
-rect -30 355 -13 375
-rect 830 262 840 294
-rect -30 180 -11 200
-rect 830 87 840 119
-rect -30 5 -14 25
-rect 830 -88 840 -56
+rect 0 636 16 656
+rect 860 543 870 575
+rect 0 461 17 481
+rect 860 368 870 400
+rect 0 286 19 306
+rect 860 193 870 225
+rect 0 111 16 131
+rect 860 18 870 50
 use sky130_hilas_StepUpDigital  StepUpDigital_2
-timestamp 1628698527
-transform 1 0 -49 0 1 463
-box 19 -44 889 131
+timestamp 1628704371
+transform 1 0 -19 0 1 569
+box 0 0 870 175
 use sky130_hilas_StepUpDigital  StepUpDigital_1
-timestamp 1628698527
-transform 1 0 -49 0 1 288
-box 19 -44 889 131
+timestamp 1628704371
+transform 1 0 -19 0 1 394
+box 0 0 870 175
 use sky130_hilas_StepUpDigital  StepUpDigital_3
-timestamp 1628698527
-transform 1 0 -49 0 1 -62
-box 19 -44 889 131
+timestamp 1628704371
+transform 1 0 -19 0 1 44
+box 0 0 870 175
 use sky130_hilas_StepUpDigital  StepUpDigital_0
-timestamp 1628698527
-transform 1 0 -49 0 1 113
-box 19 -44 889 131
+timestamp 1628704371
+transform 1 0 -19 0 1 219
+box 0 0 870 175
 << labels >>
-rlabel metal1 4 -102 33 -97 0 VINJ
+rlabel metal1 34 4 63 9 0 VINJ
 port 6 nsew
-rlabel metal2 -30 5 -19 25 0 OUTPUT4
+rlabel metal2 0 111 11 131 0 OUTPUT4
 port 10 nsew
-rlabel metal2 830 437 840 469 0 INPUT1
+rlabel metal2 860 543 870 575 0 INPUT1
 port 12 nsew
-rlabel metal2 830 262 840 294 0 INPUT2
+rlabel metal2 860 368 870 400 0 INPUT2
 port 13 nsew
-rlabel metal2 830 87 840 119 0 INPUT3
+rlabel metal2 860 193 870 225 0 INPUT3
 port 14 nsew
-rlabel metal2 830 -88 840 -56 0 INPUT4
+rlabel metal2 860 18 870 50 0 INPUT4
 port 15 nsew
-rlabel metal2 -30 180 -22 200 0 OUTPUT3
+rlabel metal2 0 286 8 306 0 OUTPUT3
 port 9 nsew
-rlabel metal2 -30 355 -23 375 0 OUTPUT2
+rlabel metal2 0 461 7 481 0 OUTPUT2
 port 8 nsew
-rlabel metal2 -30 530 -23 550 0 OUTPUT1
+rlabel metal2 0 636 7 656 0 OUTPUT1
 port 7 nsew
-rlabel metal1 435 -106 466 -100 0 VGND
+rlabel metal1 465 0 496 6 0 VGND
 port 11 nsew
-rlabel metal1 435 588 466 594 0 VGND
+rlabel metal1 465 694 496 700 0 VGND
 port 11 nsew
-rlabel metal1 4 585 33 594 0 VINJ
+rlabel metal1 34 691 63 700 0 VINJ
 port 6 nsew
-rlabel metal1 736 589 760 594 0 VPWR
+rlabel metal1 766 695 790 700 0 VPWR
 port 5 nsew
-rlabel metal1 736 -106 760 -101 0 VPWR
+rlabel metal1 766 0 790 5 0 VPWR
 port 5 nsew
 << properties >>
 string LEFsite unithd

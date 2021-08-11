@@ -1,53 +1,53 @@
 magic
 tech sky130A
-timestamp 1628698526
+timestamp 1628704368
 << checkpaint >>
-rect 1271 911 2610 915
-rect 786 -420 2610 911
-rect 786 -424 2125 -420
+rect -107 994 1232 998
+rect -592 -337 1232 994
+rect -592 -341 747 -337
 << metal2 >>
-rect 1414 480 1992 498
-rect 1414 437 1992 455
-rect 1417 337 1992 355
-rect 1417 294 1992 312
-rect 1416 232 1443 260
-rect 1956 236 1993 264
-rect 1417 179 1992 196
-rect 1417 137 1992 154
-rect 1417 39 1992 56
-rect 1417 -5 1992 12
+rect 0 527 578 545
+rect 0 484 578 502
+rect 3 384 578 402
+rect 3 341 578 359
+rect 2 279 29 307
+rect 542 283 579 311
+rect 3 226 578 243
+rect 3 184 578 201
+rect 3 86 578 103
+rect 3 42 578 59
 << metal3 >>
-rect 1559 285 1586 286
-rect 1559 210 1973 285
+rect 145 332 172 333
+rect 145 257 559 332
 << metal4 >>
-rect 1672 273 1716 357
-rect 1530 272 1631 273
-rect 1671 272 1717 273
-rect 1459 222 1717 272
-rect 1459 221 1566 222
-rect 1671 156 1717 222
-rect 1671 106 1719 156
-rect 1716 76 1719 106
+rect 258 320 302 404
+rect 116 319 217 320
+rect 257 319 303 320
+rect 45 269 303 319
+rect 45 268 152 269
+rect 257 203 303 269
+rect 257 153 305 203
+rect 302 123 305 153
 use sky130_hilas_m22m4  sky130_hilas_m22m4_1
-timestamp 1628698521
-transform 1 0 1937 0 1 246
-box -36 -36 43 39
+timestamp 1628704359
+transform 1 0 523 0 1 293
+box 0 0 79 75
 use sky130_hilas_m22m4  sky130_hilas_m22m4_0
-timestamp 1628698521
-transform 1 0 1452 0 1 242
-box -36 -36 43 39
+timestamp 1628704359
+transform 1 0 38 0 1 289
+box 0 0 79 75
 use sky130_hilas_CapModule01  sky130_hilas_CapModule01_1
 timestamp 1607800460
-transform 1 0 2002 0 1 499
+transform 1 0 588 0 1 546
 box -443 -245 -159 41
 use sky130_hilas_CapModule01  sky130_hilas_CapModule01_0
 timestamp 1607800460
-transform 1 0 2002 0 1 198
+transform 1 0 588 0 1 245
 box -443 -245 -159 41
 << labels >>
-rlabel metal2 1416 232 1423 260 0 CAPTERM01
+rlabel metal2 2 279 9 307 0 CAPTERM01
 port 2 nsew analog default
-rlabel metal2 1985 236 1993 264 0 CAPTERM02
+rlabel metal2 571 283 579 311 0 CAPTERM02
 port 1 nsew analog default
 << properties >>
 string LEFsite unithd

@@ -1,83 +1,83 @@
 magic
 tech sky130A
-timestamp 1628698534
+timestamp 1628704386
 << checkpaint >>
-rect -605 -540 688 747
+rect -544 -629 749 658
 << nwell >>
-rect -61 89 67 373
+rect 0 0 128 284
 << pmos >>
-rect -40 295 28 325
-rect -40 164 28 194
+rect 21 206 89 236
+rect 21 75 89 105
 << pdiff >>
-rect -40 349 28 354
-rect -40 331 -33 349
-rect -15 331 3 349
-rect 21 331 28 349
-rect -40 325 28 331
-rect -40 289 28 295
-rect -40 271 -32 289
-rect -15 271 4 289
-rect 22 271 28 289
-rect -40 265 28 271
-rect -40 218 28 224
-rect -40 201 -32 218
-rect -14 201 4 218
-rect 22 201 28 218
-rect -40 194 28 201
-rect -40 157 28 164
-rect -40 140 -32 157
-rect -14 140 4 157
-rect 22 140 28 157
-rect -40 136 28 140
+rect 21 260 89 265
+rect 21 242 28 260
+rect 46 242 64 260
+rect 82 242 89 260
+rect 21 236 89 242
+rect 21 200 89 206
+rect 21 182 29 200
+rect 46 182 65 200
+rect 83 182 89 200
+rect 21 176 89 182
+rect 21 129 89 135
+rect 21 112 29 129
+rect 47 112 65 129
+rect 83 112 89 129
+rect 21 105 89 112
+rect 21 68 89 75
+rect 21 51 29 68
+rect 47 51 65 68
+rect 83 51 89 68
+rect 21 47 89 51
 << pdiffc >>
-rect -33 331 -15 349
-rect 3 331 21 349
-rect -32 271 -15 289
-rect 4 271 22 289
-rect -32 201 -14 218
-rect 4 201 22 218
-rect -32 140 -14 157
-rect 4 140 22 157
+rect 28 242 46 260
+rect 64 242 82 260
+rect 29 182 46 200
+rect 65 182 83 200
+rect 29 112 47 129
+rect 65 112 83 129
+rect 29 51 47 68
+rect 65 51 83 68
 << nsubdiff >>
-rect -40 253 28 265
-rect -40 236 -32 253
-rect -14 236 4 253
-rect 22 236 28 253
-rect -40 224 28 236
+rect 21 164 89 176
+rect 21 147 29 164
+rect 47 147 65 164
+rect 83 147 89 164
+rect 21 135 89 147
 << nsubdiffcont >>
-rect -32 236 -14 253
-rect 4 236 22 253
+rect 29 147 47 164
+rect 65 147 83 164
 << poly >>
-rect -53 295 -40 325
-rect 28 295 53 325
-rect 36 194 53 295
-rect -53 164 -40 194
-rect 28 164 53 194
-rect 36 112 53 164
+rect 8 206 21 236
+rect 89 206 114 236
+rect 97 105 114 206
+rect 8 75 21 105
+rect 89 75 114 105
+rect 97 23 114 75
 << locali >>
-rect -41 331 -33 349
-rect -15 331 3 349
-rect 21 331 29 349
-rect -40 271 -32 289
-rect -15 271 4 289
-rect 22 271 30 289
-rect -40 253 30 271
-rect -40 236 -32 253
-rect -14 236 4 253
-rect 22 236 30 253
-rect -40 218 30 236
-rect -40 201 -32 218
-rect -14 201 4 218
-rect 22 201 30 218
-rect -40 140 -32 157
-rect -14 140 4 157
-rect 22 140 31 157
-rect -5 112 31 140
-rect -5 95 28 112
+rect 20 242 28 260
+rect 46 242 64 260
+rect 82 242 90 260
+rect 21 182 29 200
+rect 46 182 65 200
+rect 83 182 91 200
+rect 21 164 91 182
+rect 21 147 29 164
+rect 47 147 65 164
+rect 83 147 91 164
+rect 21 129 91 147
+rect 21 112 29 129
+rect 47 112 65 129
+rect 83 112 91 129
+rect 21 51 29 68
+rect 47 51 65 68
+rect 83 51 92 68
+rect 56 23 92 51
+rect 56 6 89 23
 use sky130_hilas_poly2li  sky130_hilas_poly2li_0
-timestamp 1628698510
-transform 0 1 39 -1 0 108
-box -9 -14 18 19
+timestamp 1628704338
+transform 0 1 100 -1 0 19
+box 0 0 27 33
 << properties >>
 string LEFsite unithd
 string LEFclass CORE

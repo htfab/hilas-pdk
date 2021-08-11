@@ -1,38 +1,38 @@
 magic
 tech sky130A
-timestamp 1628698483
+timestamp 1628704282
 << checkpaint >>
-rect 420 -630 2248 1245
+rect -630 -630 1198 1245
 << metal2 >>
-rect 1107 559 1180 560
-rect 1107 543 1249 559
-rect 1107 542 1180 543
-rect 1107 372 1174 374
-rect 1107 356 1246 372
-rect 1107 257 1177 258
-rect 1107 241 1250 257
-rect 1107 57 1253 74
+rect 57 559 130 560
+rect 57 543 199 559
+rect 57 542 130 543
+rect 57 372 124 374
+rect 57 356 196 372
+rect 57 257 127 258
+rect 57 241 200 257
+rect 57 57 203 74
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_0
-timestamp 1628698474
-transform 1 0 1282 0 1 338
+timestamp 1628704264
+transform 1 0 232 0 1 338
 box -232 -45 336 125
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_3
-timestamp 1628698474
-transform 1 0 1282 0 -1 277
+timestamp 1628704264
+transform 1 0 232 0 -1 277
 box -232 -45 336 125
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_1
-timestamp 1628698474
-transform 1 0 1282 0 -1 570
+timestamp 1628704264
+transform 1 0 232 0 -1 570
 box -232 -45 336 125
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_2
-timestamp 1628698474
-transform 1 0 1282 0 1 45
+timestamp 1628704264
+transform 1 0 232 0 1 45
 box -232 -45 336 125
 << labels >>
-rlabel metal2 1107 542 1112 560 0 drain1
-rlabel metal2 1107 356 1112 374 0 drain2
-rlabel metal2 1107 241 1112 258 0 drain3
-rlabel metal2 1107 57 1112 74 0 drain4
+rlabel metal2 57 542 62 560 0 drain1
+rlabel metal2 57 356 62 374 0 drain2
+rlabel metal2 57 241 62 258 0 drain3
+rlabel metal2 57 57 62 74 0 drain4
 << properties >>
 string LEFsite unithd
 string LEFclass CORE

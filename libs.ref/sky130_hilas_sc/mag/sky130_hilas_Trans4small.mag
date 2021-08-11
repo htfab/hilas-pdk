@@ -1,166 +1,169 @@
 magic
 tech sky130A
-timestamp 1628698562
+timestamp 1628704442
 << checkpaint >>
-rect -271 1064 1023 1065
-rect -380 1014 1023 1064
-rect -423 1005 1023 1014
-rect -423 922 1101 1005
-rect -425 823 1101 922
-rect -427 790 1101 823
-rect -432 -284 1101 790
-rect -432 -673 1063 -284
-rect -432 -767 1031 -673
+rect -448 1229 846 1230
+rect -557 1214 846 1229
+rect -571 1179 846 1214
+rect -600 1164 846 1179
+rect -614 1163 846 1164
+rect -614 1072 920 1163
+rect -616 995 920 1072
+rect -616 983 961 995
+rect -616 973 970 983
+rect -618 -320 970 973
+rect -502 -508 970 -320
+rect -502 -562 961 -508
 << nwell >>
-rect 401 -18 455 159
-rect 395 -45 455 -18
-rect 401 -87 455 -45
-rect 383 -132 455 -87
-rect 198 -150 455 -132
+rect 210 132 264 309
+rect 204 105 264 132
+rect 210 63 264 105
+rect 192 18 264 63
+rect 7 0 264 18
 << psubdiff >>
-rect 397 368 441 375
-rect 397 351 412 368
-rect 429 351 441 368
-rect 397 344 441 351
+rect 206 518 250 525
+rect 206 501 221 518
+rect 238 501 250 518
+rect 206 494 250 501
 << nsubdiff >>
-rect 395 -23 437 -18
-rect 395 -40 407 -23
-rect 424 -40 437 -23
-rect 395 -45 437 -40
+rect 204 127 246 132
+rect 204 110 216 127
+rect 233 110 246 127
+rect 204 105 246 110
 << psubdiffcont >>
-rect 412 351 429 368
+rect 221 501 238 518
 << nsubdiffcont >>
-rect 407 -40 424 -23
+rect 216 110 233 127
 << locali >>
-rect 224 362 245 387
-rect 411 376 428 381
-rect 410 373 428 376
-rect 410 368 453 373
-rect 410 351 412 368
-rect 429 351 453 368
-rect 410 348 453 351
-rect 410 345 429 348
-rect 411 342 429 345
-rect 399 -40 407 -23
-rect 424 -40 432 -23
+rect 33 512 54 537
+rect 220 526 237 531
+rect 219 523 237 526
+rect 219 518 262 523
+rect 219 501 221 518
+rect 238 501 262 518
+rect 219 498 262 501
+rect 219 495 238 498
+rect 220 492 238 495
+rect 208 110 216 127
+rect 233 110 241 127
 << metal1 >>
-rect 409 -23 431 438
-rect 407 -40 431 -23
-rect 409 -150 431 -40
-rect 449 -150 471 438
+rect 218 127 240 588
+rect 216 110 240 127
+rect 218 0 240 110
+rect 258 0 280 588
 << metal2 >>
-rect 191 421 198 425
-rect 191 398 205 421
-rect 389 399 471 416
-rect 191 357 207 374
-rect 191 306 205 323
-rect 389 307 471 324
-rect 191 265 208 282
-rect 191 228 205 231
-rect 191 214 212 228
-rect 389 215 471 232
-rect 191 173 207 190
-rect 191 112 205 131
-rect 391 105 471 125
-rect 191 70 205 89
-rect 191 33 205 35
-rect 191 16 198 33
-rect 391 9 471 29
-rect 191 -9 205 -7
-rect 191 -26 198 -9
-rect 191 -66 205 -61
-rect 191 -80 198 -66
-rect 390 -87 471 -67
-rect 191 -105 205 -103
-rect 191 -122 206 -105
+rect 0 571 7 575
+rect 0 548 14 571
+rect 198 549 280 566
+rect 0 507 16 524
+rect 0 456 14 473
+rect 198 457 280 474
+rect 0 415 17 432
+rect 0 378 14 381
+rect 0 364 21 378
+rect 198 365 280 382
+rect 0 323 16 340
+rect 0 262 14 281
+rect 200 255 280 275
+rect 0 220 14 239
+rect 0 183 14 185
+rect 0 166 7 183
+rect 200 159 280 179
+rect 0 141 14 143
+rect 0 124 7 141
+rect 0 84 14 89
+rect 0 70 7 84
+rect 199 63 280 83
+rect 0 45 14 47
+rect 0 28 15 45
 use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_2
-timestamp 1628698540
-transform 1 0 319 0 1 -82
-box -121 -55 82 44
+timestamp 1628704399
+transform 1 0 128 0 1 68
+box 0 0 212 99
 use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_1
-timestamp 1628698540
-transform 1 0 319 0 1 17
-box -121 -55 82 44
+timestamp 1628704399
+transform 1 0 128 0 1 167
+box 0 0 212 99
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1628698474
-transform 0 1 412 -1 0 -30
-box -10 -8 13 21
+timestamp 1628704264
+transform 0 1 221 -1 0 120
+box 0 0 23 29
 use sky130_hilas_pFETdevice01e  sky130_hilas_pFETdevice01e_0
-timestamp 1628698540
-transform 1 0 319 0 1 116
-box -121 -55 82 44
-use sky130_hilas_li2m2  sky130_hilas_li2m2_2
-timestamp 1628698494
-transform 1 0 217 0 1 175
-box -14 -15 20 18
+timestamp 1628704399
+transform 1 0 128 0 1 266
+box 0 0 212 99
 use sky130_hilas_nFET03a  sky130_hilas_nFET03a_0
-timestamp 1628698517
-transform 1 0 309 0 1 208
-box -111 -41 97 49
-use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1628698494
-transform 1 0 219 0 1 274
-box -14 -15 20 18
+timestamp 1628704353
+transform 1 0 118 0 1 358
+box 0 0 210 90
+use sky130_hilas_li2m2  sky130_hilas_li2m2_2
+timestamp 1628704305
+transform 1 0 26 0 1 325
+box 0 0 34 33
 use sky130_hilas_nFET03a  sky130_hilas_nFET03a_1
-timestamp 1628698517
-transform 1 0 309 0 1 307
-box -111 -41 97 49
+timestamp 1628704353
+transform 1 0 118 0 1 457
+box 0 0 210 90
+use sky130_hilas_li2m2  sky130_hilas_li2m2_1
+timestamp 1628704305
+transform 1 0 28 0 1 424
+box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1628698494
-transform 1 0 221 0 1 366
-box -14 -15 20 18
-use sky130_hilas_li2m1  sky130_hilas_li2m1_1
-timestamp 1628698474
-transform 1 0 458 0 1 354
-box -10 -8 13 21
+timestamp 1628704305
+transform 1 0 30 0 1 516
+box 0 0 34 33
 use sky130_hilas_nFET03a  sky130_hilas_nFET03a_3
-timestamp 1628698517
-transform 1 0 308 0 1 406
-box -111 -41 97 49
+timestamp 1628704353
+transform 1 0 117 0 1 556
+box 0 0 210 90
+use sky130_hilas_li2m1  sky130_hilas_li2m1_1
+timestamp 1628704264
+transform 1 0 267 0 1 504
+box 0 0 23 29
 << labels >>
-rlabel metal1 409 -150 431 -141 0 WELL
+rlabel metal1 218 0 240 9 0 WELL
 port 13 nsew power default
-rlabel metal1 449 -150 471 -141 0 VGND
+rlabel metal1 258 0 280 9 0 VGND
 port 14 nsew ground default
-rlabel metal1 409 429 431 438 0 WELL
+rlabel metal1 218 579 240 588 0 WELL
 port 13 nsew ground default
-rlabel metal1 449 429 471 438 0 VGND
+rlabel metal1 258 579 280 588 0 VGND
 port 14 nsew power default
-rlabel metal2 191 398 198 415 0 NFET_SOURCE1
+rlabel metal2 0 548 7 565 0 NFET_SOURCE1
 port 1 nsew analog default
-rlabel metal2 191 357 198 374 0 NFET_GATE1
+rlabel metal2 0 507 7 524 0 NFET_GATE1
 port 2 nsew analog default
-rlabel metal2 191 306 198 323 0 NFET_SOURCE2
+rlabel metal2 0 456 7 473 0 NFET_SOURCE2
 port 3 nsew analog default
-rlabel metal2 191 265 198 282 0 NFET_GATE2
+rlabel metal2 0 415 7 432 0 NFET_GATE2
 port 4 nsew analog default
-rlabel metal2 191 214 198 231 0 NFET_SOURCE3
+rlabel metal2 0 364 7 381 0 NFET_SOURCE3
 port 5 nsew analog default
-rlabel metal2 191 173 198 190 0 NFET_GATE3
+rlabel metal2 0 323 7 340 0 NFET_GATE3
 port 6 nsew analog default
-rlabel metal2 191 70 198 89 0 PFET_GATE1
+rlabel metal2 0 220 7 239 0 PFET_GATE1
 port 8 nsew analog default
-rlabel metal2 191 112 198 131 0 PFET_SOURCE1
+rlabel metal2 0 262 7 281 0 PFET_SOURCE1
 port 7 nsew analog default
-rlabel metal2 191 16 198 35 0 PFET_SOURCE2
+rlabel metal2 0 166 7 185 0 PFET_SOURCE2
 port 9 nsew analog default
-rlabel metal2 191 -26 198 -7 0 PFET_GATE2
+rlabel metal2 0 124 7 143 0 PFET_GATE2
 port 10 nsew analog default
-rlabel metal2 191 -80 198 -61 0 PFET_SOURCE3
+rlabel metal2 0 70 7 89 0 PFET_SOURCE3
 port 11 nsew analog default
-rlabel metal2 191 -122 198 -103 0 PFET_GATE3
+rlabel metal2 0 28 7 47 0 PFET_GATE3
 port 12 nsew analog default
-rlabel metal2 465 105 471 125 0 PFET_DRAIN1
+rlabel metal2 274 255 280 275 0 PFET_DRAIN1
 port 17 nsew analog default
-rlabel metal2 465 9 471 29 0 PFET_DRAIN2
+rlabel metal2 274 159 280 179 0 PFET_DRAIN2
 port 16 nsew analog default
-rlabel metal2 465 -87 471 -67 0 PFET_DRAIN3
+rlabel metal2 274 63 280 83 0 PFET_DRAIN3
 port 15 nsew analog default
-rlabel metal2 466 399 471 416 0 NFET_DRAIN1
+rlabel metal2 275 549 280 566 0 NFET_DRAIN1
 port 20 nsew analog default
-rlabel metal2 466 307 471 324 0 NFET_DRAIN2
+rlabel metal2 275 457 280 474 0 NFET_DRAIN2
 port 19 nsew analog default
-rlabel metal2 466 215 471 232 0 NFET_DRAIN3
+rlabel metal2 275 365 280 382 0 NFET_DRAIN3
 port 18 nsew analog default
 << properties >>
 string LEFsite unithd

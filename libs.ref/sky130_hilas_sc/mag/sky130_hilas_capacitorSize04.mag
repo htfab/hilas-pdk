@@ -1,59 +1,59 @@
 magic
 tech sky130A
-timestamp 1628698492
+timestamp 1628704301
 << checkpaint >>
-rect 956 -648 2446 1141
+rect -43 -427 1447 1362
 << metal2 >>
-rect 1417 480 1992 498
-rect 1417 437 1992 455
-rect 1417 385 1444 413
-rect 1957 385 1992 413
-rect 1417 337 1992 355
-rect 1417 294 1992 312
-rect 1417 179 1992 196
-rect 1417 137 1992 154
-rect 1417 85 1445 113
-rect 1957 85 1993 113
-rect 1417 39 1992 56
-rect 1417 -5 1992 12
+rect 2 485 577 503
+rect 2 442 577 460
+rect 2 390 29 418
+rect 542 390 577 418
+rect 2 342 577 360
+rect 2 299 577 317
+rect 2 184 577 201
+rect 2 142 577 159
+rect 2 90 30 118
+rect 542 90 578 118
+rect 2 44 577 61
+rect 2 0 577 17
 << metal3 >>
-rect 1801 359 1904 434
-rect 1800 60 1906 133
+rect 386 364 489 439
+rect 385 65 491 138
 << metal4 >>
-rect 1441 365 1720 406
-rect 1472 64 1684 105
+rect 26 370 305 411
+rect 57 69 269 110
 use sky130_hilas_CapModule01a  sky130_hilas_CapModule01a_0
-timestamp 1628698461
-transform 1 0 2002 0 1 198
-box -416 -216 -186 12
+timestamp 1628704239
+transform 1 0 587 0 1 203
+box 0 0 230 228
 use sky130_hilas_CapModule01a  sky130_hilas_CapModule01a_1
-timestamp 1628698461
-transform 1 0 2002 0 1 499
-box -416 -216 -186 12
+timestamp 1628704239
+transform 1 0 587 0 1 504
+box 0 0 230 228
 use sky130_hilas_m22m4  sky130_hilas_m22m4_2
 timestamp 1607701799
-transform 1 0 1451 0 1 395
+transform 1 0 36 0 1 400
 box -36 -36 43 39
 use sky130_hilas_m22m4  sky130_hilas_m22m4_5
 timestamp 1607701799
-transform 1 0 1454 0 1 95
+transform 1 0 39 0 1 100
 box -36 -36 43 39
 use sky130_hilas_m22m4  sky130_hilas_m22m4_3
 timestamp 1607701799
-transform 1 0 1938 0 1 395
+transform 1 0 523 0 1 400
 box -36 -36 43 39
 use sky130_hilas_m22m4  sky130_hilas_m22m4_4
 timestamp 1607701799
-transform 1 0 1938 0 1 95
+transform 1 0 523 0 1 100
 box -36 -36 43 39
 << labels >>
-rlabel metal2 1982 385 1992 413 0 CAP1TERM02
+rlabel metal2 567 390 577 418 0 CAP1TERM02
 port 1 nsew analog default
-rlabel metal2 1417 385 1424 413 0 CAP1TERM01
+rlabel metal2 2 390 9 418 0 CAP1TERM01
 port 4 nsew analog default
-rlabel metal2 1417 85 1423 113 0 CAP2TERM01
+rlabel metal2 2 90 8 118 0 CAP2TERM01
 port 3 nsew analog default
-rlabel metal2 1986 85 1993 113 0 CAP2TERM02
+rlabel metal2 571 90 578 118 0 CAP2TERM02
 port 2 nsew analog default
 << properties >>
 string LEFsite unithd
