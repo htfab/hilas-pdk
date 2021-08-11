@@ -1017,6 +1017,7 @@ def make_temp_lef(mf, center_origin, add_properties, pos):
                         pos[1] = yinvert
                         result = magic.make_lef(mf.file, center_origin, add_properties, pos)  # Make another lef with
                         # new centering
+                        shutil.copy(mf.file.parent / (mf.long_name + '.lef'), target)  # Copy lef to the lef directory
 
     os.remove(mf.file.parent / (mf.long_name + '.lef'))
 
