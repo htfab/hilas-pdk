@@ -1,64 +1,53 @@
 magic
 tech sky130A
-timestamp 1628617047
-<< checkpaint >>
-rect -490 764 802 774
-rect -499 689 802 764
-rect -577 674 802 689
-rect -591 -596 802 674
-rect -591 -604 792 -596
-rect -591 -619 703 -604
+timestamp 1628285143
 << error_s >>
-rect 76 55 116 61
-rect 76 13 116 19
+rect 9 -126 49 -120
+rect 9 -168 49 -162
 << nwell >>
-rect 49 84 163 143
-rect 0 0 163 84
+rect -18 -97 96 -38
+rect -67 -181 96 -97
 << pmos >>
-rect 76 19 116 55
+rect 9 -162 49 -126
 << pdiff >>
-rect 47 48 76 55
-rect 47 31 53 48
-rect 70 31 76 48
-rect 47 19 76 31
-rect 116 48 145 55
-rect 116 31 122 48
-rect 139 31 145 48
-rect 116 19 145 31
+rect -20 -133 9 -126
+rect -20 -150 -14 -133
+rect 3 -150 9 -133
+rect -20 -162 9 -150
+rect 49 -133 78 -126
+rect 49 -150 55 -133
+rect 72 -150 78 -133
+rect 49 -162 78 -150
 << pdiffc >>
-rect 53 31 70 48
-rect 122 31 139 48
+rect -14 -150 3 -133
+rect 55 -150 72 -133
 << poly >>
-rect 76 55 116 78
-rect 76 6 116 19
+rect 9 -126 49 -103
+rect 9 -175 49 -162
 << locali >>
-rect 49 93 163 111
-rect 53 48 70 56
-rect 114 31 122 48
-rect 139 31 152 49
-rect 53 26 70 31
+rect -18 -88 96 -70
+rect -14 -133 3 -125
+rect 47 -150 55 -133
+rect 72 -150 85 -132
+rect -14 -155 3 -150
 << metal1 >>
-rect 141 55 160 114
-rect 139 26 162 55
+rect 74 -126 93 -67
+rect 72 -155 95 -126
 << metal2 >>
-rect 126 109 163 129
-rect 0 31 22 32
-rect 0 11 163 31
-rect 0 10 22 11
-use sky130_hilas_li2m1  sky130_hilas_li2m1_3
-timestamp 1628616972
-transform 1 0 149 0 1 34
-box 0 0 23 29
-use sky130_hilas_li2m2  sky130_hilas_li2m2_2
-timestamp 1628616992
-transform 1 0 53 0 1 26
-box 0 0 34 33
+rect 59 -72 96 -52
+rect -67 -150 -45 -149
+rect -67 -170 96 -150
+rect -67 -171 -45 -170
 use sky130_hilas_m12m2  sky130_hilas_m12m2_2
-timestamp 1628617006
-transform 1 0 140 0 1 112
-box 0 0 32 32
-<< properties >>
-string LEFclass CORE
-string LEFsite unithd
-string LEFsymmetry X Y R90
+timestamp 1628285143
+transform 1 0 73 0 1 -69
+box -9 -10 23 22
+use sky130_hilas_li2m2  sky130_hilas_li2m2_2
+timestamp 1628285143
+transform 1 0 -14 0 1 -155
+box -14 -15 20 18
+use sky130_hilas_li2m1  sky130_hilas_li2m1_3
+timestamp 1628285143
+transform 1 0 82 0 1 -147
+box -10 -8 13 21
 << end >>

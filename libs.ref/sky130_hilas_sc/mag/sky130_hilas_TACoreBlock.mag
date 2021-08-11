@@ -1,72 +1,61 @@
 magic
 tech sky130A
-timestamp 1628616965
-<< checkpaint >>
-rect 327 1153 1810 1460
-rect 327 1065 2280 1153
-rect -630 -297 2280 1065
-rect -630 -381 1873 -297
-rect -604 -435 1873 -381
-rect -604 -697 829 -435
+timestamp 1607993916
 << error_s >>
-rect 56 372 62 378
-rect 161 372 167 378
-rect 50 308 56 314
-rect 167 308 173 314
-rect 0 249 223 250
-rect 426 225 501 243
-rect 426 161 444 225
-rect 483 161 501 225
-rect 426 143 501 161
-rect 421 94 516 112
-rect 83 50 89 56
-rect 136 50 142 56
-rect 449 12 450 94
-rect 482 77 516 94
-rect 454 69 482 77
-rect 454 58 495 69
-rect 454 12 476 58
-rect 482 40 516 58
-rect 525 51 531 57
-rect 630 51 636 57
-rect 477 12 516 40
-rect 449 11 516 12
-rect 77 0 83 6
-rect 142 0 148 6
-rect 519 1 525 7
-rect 636 1 642 7
+rect -401 342 -395 348
+rect -296 342 -290 348
+rect -407 278 -401 284
+rect -290 278 -284 284
+rect -457 219 -234 220
+rect -31 195 44 213
+rect -31 131 -13 195
+rect 26 131 44 195
+rect -31 113 44 131
+rect -36 64 59 82
+rect -374 20 -368 26
+rect -321 20 -315 26
+rect -8 -18 -7 64
+rect 25 47 59 64
+rect -3 39 25 47
+rect -3 28 38 39
+rect -3 -18 19 28
+rect 25 10 59 28
+rect 68 21 74 27
+rect 173 21 179 27
+rect 20 -18 59 10
+rect -8 -19 59 -18
+rect -380 -30 -374 -24
+rect -315 -30 -309 -24
+rect 62 -29 68 -23
+rect 179 -29 185 -23
 << nmos >>
-rect 449 40 482 69
+rect -8 10 25 39
 << ndiff >>
-rect 449 69 482 94
-rect 449 34 482 40
-rect 449 17 457 34
-rect 474 17 482 34
-rect 449 11 482 17
+rect -8 39 25 64
+rect -8 4 25 10
+rect -8 -13 0 4
+rect 17 -13 25 4
+rect -8 -19 25 -13
 << pdiff >>
-rect 444 161 483 225
+rect -13 131 26 195
 << ndiffc >>
-rect 457 17 474 34
+rect 0 -13 17 4
 << poly >>
-rect 436 40 449 69
-rect 482 40 495 69
+rect -21 10 -8 39
+rect 25 10 38 39
 << locali >>
-rect 449 17 457 34
-rect 474 17 482 34
+rect -8 -13 0 4
+rect 17 -13 25 4
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_0
-timestamp 1628616945
-transform 1 0 1477 0 1 333
-box 0 0 173 190
-use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_0
-timestamp 1628616724
-transform 1 0 957 0 1 644
-box 0 0 223 186
+timestamp 1607993916
+transform 1 0 1020 0 1 303
+box -1451 -400 -784 -210
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_0
-timestamp 1628616733
-transform 1 0 987 0 1 195
-box 0 0 256 191
-<< properties >>
-string LEFsite unithd
-string LEFclass CORE
-string LEFsymmetry X Y R90
+timestamp 1607386385
+transform 1 0 530 0 1 165
+box -289 47 -33 232
+use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_0
+timestamp 1606741561
+transform 1 0 500 0 1 614
+box -957 -395 -734 -209
 << end >>
