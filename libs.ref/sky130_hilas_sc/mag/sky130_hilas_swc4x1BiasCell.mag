@@ -1,6 +1,8 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1628698465
+<< checkpaint >>
+rect -893 -1030 540 880
 << error_s >>
 rect 555 216 605 222
 rect 627 216 677 222
@@ -211,13 +213,13 @@ rect 393 -252 425 -251
 rect -263 -286 500 -269
 rect 733 -301 744 -283
 rect 733 -344 744 -326
-use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
-timestamp 1628285143
-transform 1 0 1188 0 1 0
-box -1451 -400 -1278 -210
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_0
-timestamp 1628285143
+timestamp 1628698447
 transform 1 0 1188 0 1 135
+box -1451 -400 -1278 -210
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
+timestamp 1628698447
+transform 1 0 1188 0 1 0
 box -1451 -400 -1278 -210
 use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_0
 timestamp 1628285143
@@ -235,14 +237,14 @@ use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_2
 timestamp 1628285143
 transform 1 0 777 0 -1 -33
 box -289 41 -33 232
-use sky130_hilas_TunCap01  sky130_hilas_TunCap01_2
-timestamp 1628285143
-transform 1 0 1188 0 1 324
-box -1451 -400 -1278 -210
 use sky130_hilas_wellContact  sky130_hilas_wellContact_1
 timestamp 1628285143
 transform 1 0 1185 0 1 293
 box -1448 -441 -1275 -255
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_2
+timestamp 1628698447
+transform 1 0 1188 0 1 324
+box -1451 -400 -1278 -210
 use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_2
 timestamp 1628285143
 transform 1 0 1069 0 1 315
@@ -256,7 +258,7 @@ timestamp 1628285143
 transform 1 0 777 0 1 -116
 box -289 41 -33 232
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
-timestamp 1628285143
+timestamp 1628698447
 transform 1 0 1188 0 1 460
 box -1451 -400 -1278 -210
 use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_3
@@ -319,4 +321,8 @@ rlabel space -264 132 -252 151 0 ROW1
 port 1 nsew
 rlabel metal2 -263 24 -257 42 0 ROW2
 port 2 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

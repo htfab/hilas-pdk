@@ -1,6 +1,10 @@
 magic
 tech sky130A
-timestamp 1608249223
+timestamp 1628698526
+<< checkpaint >>
+rect 1271 911 2610 915
+rect 786 -420 2610 911
+rect 786 -424 2125 -420
 << metal2 >>
 rect 1414 480 1992 498
 rect 1414 437 1992 455
@@ -24,25 +28,29 @@ rect 1459 221 1566 222
 rect 1671 156 1717 222
 rect 1671 106 1719 156
 rect 1716 76 1719 106
-use sky130_hilas_CapModule01  sky130_hilas_CapModule01_0
-timestamp 1607800460
-transform 1 0 2002 0 1 198
-box -443 -245 -159 41
+use sky130_hilas_m22m4  sky130_hilas_m22m4_1
+timestamp 1628698521
+transform 1 0 1937 0 1 246
+box -36 -36 43 39
+use sky130_hilas_m22m4  sky130_hilas_m22m4_0
+timestamp 1628698521
+transform 1 0 1452 0 1 242
+box -36 -36 43 39
 use sky130_hilas_CapModule01  sky130_hilas_CapModule01_1
 timestamp 1607800460
 transform 1 0 2002 0 1 499
 box -443 -245 -159 41
-use sky130_hilas_m22m4  sky130_hilas_m22m4_1
-timestamp 1607701799
-transform 1 0 1937 0 1 246
-box -36 -36 43 39
-use sky130_hilas_m22m4  sky130_hilas_m22m4_0
-timestamp 1607701799
-transform 1 0 1452 0 1 242
-box -36 -36 43 39
+use sky130_hilas_CapModule01  sky130_hilas_CapModule01_0
+timestamp 1607800460
+transform 1 0 2002 0 1 198
+box -443 -245 -159 41
 << labels >>
 rlabel metal2 1416 232 1423 260 0 CAPTERM01
 port 2 nsew analog default
 rlabel metal2 1985 236 1993 264 0 CAPTERM02
 port 1 nsew analog default
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

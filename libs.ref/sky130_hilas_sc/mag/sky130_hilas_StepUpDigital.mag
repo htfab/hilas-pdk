@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1628698527
 << error_s >>
 rect 84 91 134 97
 rect 407 92 457 98
@@ -157,11 +157,15 @@ rect 260 62 264 67
 rect 290 62 293 88
 rect 260 60 292 62
 use sky130_hilas_StepUpDigitalPart1  StepUpDigitalPart1_0
-timestamp 1628285143
+timestamp 1628698511
 transform 1 0 -3 0 1 5
 box 278 -49 892 120
 << labels >>
 rlabel metal2 26 67 33 87 0 Output
 rlabel metal1 53 111 82 119 0 Vinj
 rlabel metal1 53 -40 82 -32 0 Vinj
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

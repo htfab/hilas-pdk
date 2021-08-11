@@ -1,6 +1,17 @@
 magic
 tech sky130A
-timestamp 1607481960
+timestamp 1628698491
+<< checkpaint >>
+rect -54 2496 1378 2522
+rect -67 1749 1378 2496
+rect -67 1748 2203 1749
+rect -214 1738 2203 1748
+rect -214 1722 2396 1738
+rect -214 1617 2670 1722
+rect -228 302 2670 1617
+rect -222 113 2670 302
+rect -211 -103 2670 113
+rect 53 -106 2463 -103
 << error_s >>
 rect 752 1027 1762 1104
 rect 1868 1020 1889 1092
@@ -50,110 +61,114 @@ rect 1653 1093 1769 1121
 rect 1728 1092 1769 1093
 rect 418 715 1569 735
 rect 418 603 1236 623
-use sky130_hilas_poly2m2  sky130_hilas_poly2m2_8
-timestamp 1607270276
-transform 1 0 584 0 1 1090
-box -9 -26 24 29
-use sky130_hilas_poly2m2  sky130_hilas_poly2m2_9
-timestamp 1607270276
-transform 1 0 425 0 1 1089
-box -9 -26 24 29
-use sky130_hilas_poly2m2  sky130_hilas_poly2m2_10
-timestamp 1607270276
-transform 1 0 411 0 1 958
-box -9 -26 24 29
-use sky130_hilas_poly2m2  sky130_hilas_poly2m2_11
-timestamp 1607270276
-transform 1 0 417 0 1 863
-box -9 -26 24 29
 use sky130_hilas_poly2m2  sky130_hilas_poly2m2_12
-timestamp 1607270276
+timestamp 1628285143
 transform 1 0 417 0 1 769
 box -9 -26 24 29
+use sky130_hilas_poly2m2  sky130_hilas_poly2m2_11
+timestamp 1628285143
+transform 1 0 417 0 1 863
+box -9 -26 24 29
+use sky130_hilas_poly2m2  sky130_hilas_poly2m2_10
+timestamp 1628285143
+transform 1 0 411 0 1 958
+box -9 -26 24 29
+use sky130_hilas_poly2m2  sky130_hilas_poly2m2_9
+timestamp 1628285143
+transform 1 0 425 0 1 1089
+box -9 -26 24 29
+use sky130_hilas_poly2m2  sky130_hilas_poly2m2_8
+timestamp 1628285143
+transform 1 0 584 0 1 1090
+box -9 -26 24 29
 use sky130_hilas_DAC6TransistorStack01a  sky130_hilas_DAC6TransistorStack01a_0
-timestamp 1607478455
+timestamp 1628698452
 transform 1 0 391 0 1 701
 box 28 -174 200 391
-use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1607179295
-transform 1 0 693 0 1 532
-box -10 -8 13 21
-use sky130_hilas_li2m1  sky130_hilas_li2m1_6
-timestamp 1607179295
-transform 1 0 855 0 1 532
-box -10 -8 13 21
-use sky130_hilas_poly2m2  sky130_hilas_poly2m2_6
-timestamp 1607270276
-transform 1 0 904 0 1 1089
-box -9 -26 24 29
 use sky130_hilas_poly2m2  sky130_hilas_poly2m2_7
-timestamp 1607270276
+timestamp 1628285143
 transform 0 1 739 -1 0 1073
 box -9 -26 24 29
+use sky130_hilas_li2m1  sky130_hilas_li2m1_0
+timestamp 1628698474
+transform 1 0 693 0 1 532
+box -10 -8 13 21
+use sky130_hilas_poly2m2  sky130_hilas_poly2m2_6
+timestamp 1628285143
+transform 1 0 904 0 1 1089
+box -9 -26 24 29
 use sky130_hilas_li2m1  sky130_hilas_li2m1_7
-timestamp 1607179295
+timestamp 1628698474
 transform 1 0 1015 0 1 532
 box -10 -8 13 21
-use sky130_hilas_poly2m2  sky130_hilas_poly2m2_5
-timestamp 1607270276
-transform 1 0 1065 0 1 1089
-box -9 -26 24 29
-use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1607179755
-transform 1 0 1217 0 1 607
-box -9 -10 23 22
-use sky130_hilas_li2m1  sky130_hilas_li2m1_5
-timestamp 1607179295
-transform 1 0 1337 0 1 532
-box -10 -8 13 21
-use sky130_hilas_li2m1  sky130_hilas_li2m1_1
-timestamp 1607179295
-transform 1 0 1177 0 1 532
+use sky130_hilas_li2m1  sky130_hilas_li2m1_6
+timestamp 1628698474
+transform 1 0 855 0 1 532
 box -10 -8 13 21
 use sky130_hilas_poly2m2  sky130_hilas_poly2m2_4
-timestamp 1607270276
+timestamp 1628285143
 transform 1 0 1227 0 1 1089
 box -9 -26 24 29
+use sky130_hilas_poly2m2  sky130_hilas_poly2m2_5
+timestamp 1628285143
+transform 1 0 1065 0 1 1089
+box -9 -26 24 29
+use sky130_hilas_li2m1  sky130_hilas_li2m1_1
+timestamp 1628698474
+transform 1 0 1177 0 1 532
+box -10 -8 13 21
+use sky130_hilas_m12m2  sky130_hilas_m12m2_0
+timestamp 1628285143
+transform 1 0 1217 0 1 607
+box -9 -10 23 22
 use sky130_hilas_poly2m2  sky130_hilas_poly2m2_3
-timestamp 1607270276
+timestamp 1628285143
 transform 1 0 1388 0 1 1090
 box -9 -26 24 29
-use sky130_hilas_DAC6TransistorStack01a  sky130_hilas_DAC6TransistorStack01a_1
-timestamp 1607478455
-transform 1 0 1840 0 1 701
-box 28 -174 200 391
-use sky130_hilas_li2m1  sky130_hilas_li2m1_2
-timestamp 1607179295
-transform 1 0 1499 0 1 532
+use sky130_hilas_li2m1  sky130_hilas_li2m1_5
+timestamp 1628698474
+transform 1 0 1337 0 1 532
 box -10 -8 13 21
-use sky130_hilas_li2m1  sky130_hilas_li2m1_4
-timestamp 1607179295
-transform 1 0 1820 0 1 532
-box -10 -8 13 21
-use sky130_hilas_li2m1  sky130_hilas_li2m1_3
-timestamp 1607179295
-transform 1 0 1659 0 1 532
-box -10 -8 13 21
-use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1607089160
-transform 1 0 1746 0 1 1090
-box -14 -15 20 18
-use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1607089160
-transform 1 0 1679 0 1 1090
-box -14 -15 20 18
 use sky130_hilas_poly2m2  sky130_hilas_poly2m2_2
-timestamp 1607270276
+timestamp 1628285143
 transform 1 0 1549 0 1 1090
 box -9 -26 24 29
-use sky130_hilas_DAC6TransistorStack01  sky130_hilas_DAC6TransistorStack01_0
-timestamp 1607480432
-transform 1 0 548 0 1 1501
+use sky130_hilas_li2m1  sky130_hilas_li2m1_2
+timestamp 1628698474
+transform 1 0 1499 0 1 532
+box -10 -8 13 21
+use sky130_hilas_li2m2  sky130_hilas_li2m2_0
+timestamp 1628285143
+transform 1 0 1679 0 1 1090
+box -14 -15 20 18
+use sky130_hilas_li2m2  sky130_hilas_li2m2_1
+timestamp 1628285143
+transform 1 0 1746 0 1 1090
+box -14 -15 20 18
+use sky130_hilas_li2m1  sky130_hilas_li2m1_3
+timestamp 1628698474
+transform 1 0 1659 0 1 532
+box -10 -8 13 21
+use sky130_hilas_li2m1  sky130_hilas_li2m1_4
+timestamp 1628698474
+transform 1 0 1820 0 1 532
+box -10 -8 13 21
+use sky130_hilas_DAC6TransistorStack01a  sky130_hilas_DAC6TransistorStack01a_1
+timestamp 1628698452
+transform 1 0 1840 0 1 701
 box 28 -174 200 391
 use sky130_hilas_DAC6TransistorStack01  sky130_hilas_DAC6TransistorStack01_0
-timestamp 0
+timestamp 1628698453
 transform 1 0 535 0 1 1475
-box 0 0 1 1
+box 28 -174 200 391
+use sky130_hilas_DAC6TransistorStack01  sky130_hilas_DAC6TransistorStack01_1
+timestamp 1628698453
+transform 1 0 548 0 1 1501
+box 28 -174 200 391
 << labels >>
 rlabel metal2 1653 1107 1728 1121 0 Vdd
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

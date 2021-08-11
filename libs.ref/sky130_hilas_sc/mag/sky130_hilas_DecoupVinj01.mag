@@ -1,6 +1,12 @@
 magic
 tech sky130A
-timestamp 1625359887
+timestamp 1628698454
+<< checkpaint >>
+rect -229 1159 1270 1269
+rect -229 1021 1275 1159
+rect -244 -303 1275 1021
+rect -229 -441 1275 -303
+rect -229 -551 1270 -441
 << psubdiff >>
 rect 671 88 672 171
 << locali >>
@@ -120,13 +126,13 @@ rect 585 90 615 116
 rect 641 90 664 116
 rect 690 90 715 116
 rect 585 57 715 90
-use sky130_hilas_DecoupVinj00  CapDeco_1
-timestamp 1625358249
-transform 1 0 273 0 1 170
-box 68 -113 473 189
 use sky130_hilas_DecoupVinj00  CapDeco_0
 timestamp 1625358249
 transform 1 0 273 0 -1 548
+box 68 -113 473 189
+use sky130_hilas_DecoupVinj00  CapDeco_1
+timestamp 1625358249
+transform 1 0 273 0 1 170
 box 68 -113 473 189
 << labels >>
 rlabel metal1 355 57 364 120 0 VGND 
@@ -149,4 +155,8 @@ rlabel metal1 355 598 363 661 0 VGND
 port 3 nsew
 rlabel metal1 734 598 744 661 0 VGND
 port 2 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

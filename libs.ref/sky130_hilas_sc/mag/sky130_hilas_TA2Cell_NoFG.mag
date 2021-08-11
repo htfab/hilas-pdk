@@ -1,6 +1,12 @@
 magic
 tech sky130A
-timestamp 1625491133
+timestamp 1628698470
+<< checkpaint >>
+rect -2103 1375 310 1380
+rect -2103 1364 622 1375
+rect -2103 -475 949 1364
+rect -2103 -490 622 -475
+rect -2103 -495 310 -490
 << error_s >>
 rect -1415 672 -1409 678
 rect -1362 672 -1356 678
@@ -87,21 +93,21 @@ rect -206 246 0 267
 rect -1473 192 -1465 207
 rect -286 142 -260 167
 use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1625491133
+timestamp 1628285143
 transform 1 0 -1077 0 1 522
-box -396 -382 757 223
+box -396 -387 757 228
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_0
-timestamp 1608384750
+timestamp 1628698458
 transform 1 0 -484 0 1 580
 box 133 -440 320 165
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
-timestamp 1608384750
+timestamp 1628698458
 transform 1 0 -328 0 -1 305
 box 133 -440 320 165
 use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
-timestamp 1608069483
+timestamp 1628285143
 transform 1 0 164 0 1 181
-box -172 -22 155 550
+box -172 -26 155 553
 << labels >>
 rlabel metal1 123 140 157 146 0 VGND
 port 7 nsew ground default
@@ -135,4 +141,8 @@ rlabel metal1 -372 737 -344 745 0 VINJ
 port 13 nsew
 rlabel metal2 -282 410 -259 434 0 VIN11
 port 14 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

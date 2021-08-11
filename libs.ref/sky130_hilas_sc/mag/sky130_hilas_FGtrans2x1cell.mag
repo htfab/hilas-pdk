@@ -1,6 +1,12 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1628698457
+<< checkpaint >>
+rect -1025 816 408 853
+rect -1025 -672 1124 816
+rect -1025 -779 1123 -672
+rect -1025 -970 1121 -779
+rect -1025 -1011 408 -970
 << error_s >>
 rect 568 195 618 201
 rect 640 195 690 201
@@ -174,14 +180,6 @@ use sky130_hilas_FGVaractorCapacitor02  sky130_hilas_FGVaractorCapacitor02_2
 timestamp 1628285143
 transform -1 0 -752 0 -1 -231
 box -1005 -380 -733 -211
-use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
-timestamp 1628285143
-transform 1 0 1056 0 1 433
-box -1451 -400 -1278 -210
-use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
-timestamp 1628285143
-transform 1 0 1056 0 1 19
-box -1451 -400 -1278 -210
 use sky130_hilas_wellContact  sky130_hilas_wellContact_0
 timestamp 1628285143
 transform 1 0 1054 0 1 231
@@ -190,6 +188,14 @@ use sky130_hilas_wellContact  sky130_hilas_wellContact_1
 timestamp 1628285143
 transform 1 0 1054 0 1 404
 box -1448 -441 -1275 -255
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
+timestamp 1628698447
+transform 1 0 1056 0 1 19
+box -1451 -400 -1278 -210
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
+timestamp 1628698447
+transform 1 0 1056 0 1 433
+box -1451 -400 -1278 -210
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
 timestamp 1628285143
 transform 1 0 -103 0 1 -92
@@ -226,13 +232,13 @@ use sky130_hilas_li2m1  sky130_hilas_li2m1_6
 timestamp 1628285143
 transform 1 0 481 0 1 165
 box -10 -8 13 21
-use sky130_hilas_horizTransCell01a  sky130_hilas_horizTransCell01a_1
-timestamp 1628285143
-transform 1 0 790 0 -1 270
-box -476 42 -33 359
 use sky130_hilas_horizTransCell01a  sky130_hilas_horizTransCell01a_0
 timestamp 1628285143
 transform 1 0 790 0 1 -429
+box -476 42 -33 359
+use sky130_hilas_horizTransCell01a  sky130_hilas_horizTransCell01a_1
+timestamp 1628285143
+transform 1 0 790 0 -1 270
 box -476 42 -33 359
 use sky130_hilas_m12m2  sky130_hilas_m12m2_0
 timestamp 1628285143
@@ -293,4 +299,8 @@ rlabel metal2 -395 0 -389 19 0 ROW1
 port 17 nsew
 rlabel metal2 -395 -186 -389 -167 0 ROW2
 port 18 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

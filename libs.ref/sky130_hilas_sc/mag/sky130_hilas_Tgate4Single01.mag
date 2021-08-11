@@ -1,6 +1,12 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1628698460
+<< checkpaint >>
+rect -289 1076 994 1077
+rect -402 1015 994 1076
+rect -593 -702 1040 1015
+rect -402 -763 994 -702
+rect -289 -764 994 -763
 << error_s >>
 rect 165 453 205 459
 rect 315 453 355 459
@@ -54,21 +60,21 @@ rect 433 23 440 43
 rect -36 -50 -30 -30
 rect 433 -50 440 -30
 rect -36 -148 -31 -128
-use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_1
+use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_3
 timestamp 1628285143
-transform 1 0 227 0 1 22
-box -263 -186 213 -25
-use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_2
-timestamp 1628285143
-transform 1 0 227 0 -1 -29
+transform 1 0 227 0 1 342
 box -263 -186 213 -25
 use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_0
 timestamp 1628285143
 transform 1 0 227 0 -1 291
 box -263 -186 213 -25
-use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_3
+use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_2
 timestamp 1628285143
-transform 1 0 227 0 1 342
+transform 1 0 227 0 -1 -29
+box -263 -186 213 -25
+use sky130_hilas_TgateSingle01  sky130_hilas_TgateSingle01_1
+timestamp 1628285143
+transform 1 0 227 0 1 22
 box -263 -186 213 -25
 << labels >>
 rlabel metal2 -36 270 -30 290 0 SELECT2
@@ -103,4 +109,8 @@ rlabel metal2 -36 343 -30 363 0 SELECT1
 port 21 nsew
 rlabel metal2 -36 441 -31 461 0 INPUT1_1
 port 22 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1606594671
+timestamp 1628698522
 << error_p >>
 rect -540 172 -533 173
 rect -601 -66 -516 -60
@@ -144,4 +144,8 @@ rect -542 -121 -520 -95
 rect -495 -121 -489 -95
 rect -542 -122 -489 -121
 rect -522 -124 -492 -122
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

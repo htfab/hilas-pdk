@@ -1,6 +1,10 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1628698464
+<< checkpaint >>
+rect -1025 559 408 853
+rect -1025 -730 540 559
+rect -1025 -1011 408 -730
 << error_s >>
 rect 568 195 618 201
 rect 640 195 690 201
@@ -115,14 +119,6 @@ use sky130_hilas_FGVaractorCapacitor02  sky130_hilas_FGVaractorCapacitor02_2
 timestamp 1628285143
 transform 1 0 986 0 -1 -231
 box -1005 -380 -733 -211
-use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
-timestamp 1628285143
-transform 1 0 1056 0 1 433
-box -1451 -400 -1278 -210
-use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
-timestamp 1628285143
-transform 1 0 1056 0 1 19
-box -1451 -400 -1278 -210
 use sky130_hilas_wellContact  sky130_hilas_wellContact_1
 timestamp 1628285143
 transform 1 0 1054 0 1 404
@@ -139,6 +135,14 @@ use sky130_hilas_li2m2  sky130_hilas_li2m2_2
 timestamp 1628285143
 transform 1 0 -188 0 1 101
 box -14 -15 20 18
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
+timestamp 1628698447
+transform 1 0 1056 0 1 19
+box -1451 -400 -1278 -210
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
+timestamp 1628698447
+transform 1 0 1056 0 1 433
+box -1451 -400 -1278 -210
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
 timestamp 1628285143
 transform 1 0 -103 0 1 -92
@@ -200,4 +204,8 @@ rlabel metal2 -396 -279 -390 -258 0 VIN12
 port 12 nsew analog default
 rlabel metal2 -396 -49 -390 -27 0 COMMONSOURCE
 port 13 nsew analog default
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

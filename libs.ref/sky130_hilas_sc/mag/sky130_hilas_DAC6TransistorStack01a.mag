@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1628698505
 << error_s >>
 rect 90 368 129 371
 rect 90 326 129 329
@@ -14,28 +14,32 @@ rect 90 -16 129 -13
 rect 90 -58 129 -55
 rect 90 -112 129 -109
 rect 90 -154 129 -151
+use sky130_hilas_pFETdevice01aa  sky130_hilas_pFETdevice01aa_0
+timestamp 1628698452
+transform 1 0 108 0 1 -36
+box -80 -78 92 43
+use sky130_hilas_pFETdevice01aa  sky130_hilas_pFETdevice01aa_1
+timestamp 1628698452
+transform 1 0 108 0 1 60
+box -80 -78 92 43
+use sky130_hilas_pFETdevice01aa  sky130_hilas_pFETdevice01aa_4
+timestamp 1628698452
+transform 1 0 108 0 1 156
+box -80 -78 92 43
+use sky130_hilas_pFETdevice01aa  sky130_hilas_pFETdevice01aa_2
+timestamp 1628698452
+transform 1 0 108 0 1 252
+box -80 -78 92 43
+use sky130_hilas_pFETdevice01aa  sky130_hilas_pFETdevice01aa_3
+timestamp 1628698452
+transform 1 0 108 0 1 348
+box -80 -78 92 43
 use sky130_hilas_pFETdevice01a  sky130_hilas_pFETdevice01a_0
 timestamp 1628285143
 transform 1 0 108 0 1 -132
 box -80 -42 81 43
-use sky130_hilas_pFETdevice01aa  sky130_hilas_pFETdevice01aa_3
-timestamp 1628285143
-transform 1 0 108 0 1 348
-box -80 -78 92 43
-use sky130_hilas_pFETdevice01aa  sky130_hilas_pFETdevice01aa_2
-timestamp 1628285143
-transform 1 0 108 0 1 252
-box -80 -78 92 43
-use sky130_hilas_pFETdevice01aa  sky130_hilas_pFETdevice01aa_4
-timestamp 1628285143
-transform 1 0 108 0 1 156
-box -80 -78 92 43
-use sky130_hilas_pFETdevice01aa  sky130_hilas_pFETdevice01aa_1
-timestamp 1628285143
-transform 1 0 108 0 1 60
-box -80 -78 92 43
-use sky130_hilas_pFETdevice01aa  sky130_hilas_pFETdevice01aa_0
-timestamp 1628285143
-transform 1 0 108 0 1 -36
-box -80 -78 92 43
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

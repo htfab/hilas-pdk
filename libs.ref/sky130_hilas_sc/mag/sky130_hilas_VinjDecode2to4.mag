@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1624147000
+timestamp 1628698488
 << error_s >>
 rect -330 594 -329 597
 rect -330 443 -329 446
@@ -159,34 +159,34 @@ rect -54 105 -51 110
 rect -54 89 -29 105
 rect -54 81 -51 89
 rect 645 85 658 102
-use sky130_hilas_VinjInv2  VinjInv2_2
-timestamp 1624141468
-transform 1 0 -301 0 1 60
-box -336 144 25 308
-use sky130_hilas_VinjInv2  VinjInv2_1
-timestamp 1624141468
-transform 1 0 -301 0 1 211
-box -336 144 25 308
-use sky130_hilas_VinjInv2  VinjInv2_0
-timestamp 1624141468
-transform 1 0 -301 0 1 362
-box -336 144 25 308
-use sky130_hilas_VinjNOR3  VinjNOR3_0
+use sky130_hilas_VinjNOR3  VinjNOR3_2
 timestamp 1624138502
-transform 1 0 307 0 1 -90
-box -337 144 351 308
-use sky130_hilas_VinjNOR3  VinjNOR3_3
-timestamp 1624138502
-transform 1 0 307 0 1 362
+transform 1 0 307 0 1 211
 box -337 144 351 308
 use sky130_hilas_VinjNOR3  VinjNOR3_1
 timestamp 1624138502
 transform 1 0 307 0 1 60
 box -337 144 351 308
-use sky130_hilas_VinjNOR3  VinjNOR3_2
+use sky130_hilas_VinjNOR3  VinjNOR3_3
 timestamp 1624138502
-transform 1 0 307 0 1 211
+transform 1 0 307 0 1 362
 box -337 144 351 308
+use sky130_hilas_VinjNOR3  VinjNOR3_0
+timestamp 1624138502
+transform 1 0 307 0 1 -90
+box -337 144 351 308
+use sky130_hilas_VinjInv2  VinjInv2_0
+timestamp 1624141468
+transform 1 0 -301 0 1 362
+box -336 144 25 308
+use sky130_hilas_VinjInv2  VinjInv2_1
+timestamp 1624141468
+transform 1 0 -301 0 1 211
+box -336 144 25 308
+use sky130_hilas_VinjInv2  VinjInv2_2
+timestamp 1624141468
+transform 1 0 -301 0 1 60
+box -336 144 25 308
 << labels >>
 rlabel metal2 645 537 658 554 0 OUTPUT00
 port 1 nsew
@@ -214,4 +214,8 @@ rlabel metal1 -576 658 -554 666 0 VINJ
 port 6 nsew
 rlabel metal1 -319 657 -296 666 0 VGND
 port 5 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

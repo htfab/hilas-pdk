@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1627737364
+timestamp 1628698523
 << metal1 >>
 rect -898 27122 -834 27516
 rect -2065 26640 -1984 27030
@@ -132,4 +132,8 @@ rlabel metal1 -897 -4327 -833 -3933 0 PIN12
 port 24 nsew
 rlabel metal1 -897 -7184 -833 -6790 0 PIN13
 port 25 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

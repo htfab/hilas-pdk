@@ -3,10 +3,12 @@ VERSION 5.7 ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
 MACRO sky130_hilas_TA2Cell_1FG_Strong
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_TA2Cell_1FG_Strong ;
   ORIGIN 26.170 -1.350 ;
   SIZE 28.100 BY 6.150 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN VTUN
     ANTENNADIFFAREA 5.032200 ;
     PORT
@@ -685,10 +687,12 @@ MACRO sky130_hilas_TA2Cell_1FG_Strong
 END sky130_hilas_TA2Cell_1FG_Strong
 
 MACRO sky130_hilas_TA2Cell_NoFG
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_TA2Cell_NoFG ;
   ORIGIN 14.730 -1.350 ;
   SIZE 17.920 BY 6.150 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN COLSEL1
     ANTENNAGATEAREA 0.360000 ;
     PORT
@@ -1184,10 +1188,12 @@ MACRO sky130_hilas_TA2Cell_NoFG
 END sky130_hilas_TA2Cell_NoFG
 
 MACRO sky130_hilas_TopLevelTextStructure
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_TopLevelTextStructure ;
   ORIGIN -2.180 7.930 ;
   SIZE 130.250 BY 75.780 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN DIG24 
     ANTENNADIFFAREA 0.275500 ;
     PORT
@@ -9184,10 +9190,12 @@ MACRO sky130_hilas_TopLevelTextStructure
 END sky130_hilas_TopLevelTextStructure
 
 MACRO sky130_hilas_pFETLarge
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_pFETLarge ;
   ORIGIN -0.640 -4.190 ;
   SIZE 4.640 BY 5.990 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN GATE
     ANTENNAGATEAREA 6.526000 ;
     PORT
@@ -9399,10 +9407,12 @@ MACRO sky130_hilas_pFETLarge
 END sky130_hilas_pFETLarge
 
 MACRO sky130_hilas_VinjInv2
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_VinjInv2 ;
   ORIGIN 3.360 -1.440 ;
   SIZE 3.610 BY 1.640 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   OBS
       LAYER nwell ;
         RECT -3.360 1.440 -1.380 3.080 ;
@@ -9448,10 +9458,12 @@ MACRO sky130_hilas_VinjInv2
 END sky130_hilas_VinjInv2
 
 MACRO sky130_hilas_capacitorSize03
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_capacitorSize03 ;
   ORIGIN -14.140 0.470 ;
   SIZE 5.790 BY 5.870 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN CAPTERM02
     USE ANALOG ;
     PORT
@@ -9508,10 +9520,12 @@ MACRO sky130_hilas_capacitorSize03
 END sky130_hilas_capacitorSize03
 
 MACRO sky130_hilas_swc4x1BiasCell
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_swc4x1BiasCell ;
   ORIGIN 2.640 4.000 ;
   SIZE 10.080 BY 6.500 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN ROW1
     ANTENNADIFFAREA 0.104400 ;
     PORT
@@ -9816,10 +9830,12 @@ MACRO sky130_hilas_swc4x1BiasCell
 END sky130_hilas_swc4x1BiasCell
 
 MACRO sky130_hilas_FGtrans2x1cell
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_FGtrans2x1cell ;
   ORIGIN 3.950 3.870 ;
   SIZE 11.520 BY 6.150 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN COLSEL1
     USE ANALOG ;
     ANTENNAGATEAREA 0.360000 ;
@@ -10108,10 +10124,12 @@ MACRO sky130_hilas_FGtrans2x1cell
 END sky130_hilas_FGtrans2x1cell
 
 MACRO sky130_hilas_capacitorSize01
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_capacitorSize01 ;
   ORIGIN -14.140 0.480 ;
   SIZE 10.420 BY 5.830 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN CAPTERM02
     USE ANALOG ;
     PORT
@@ -10167,10 +10185,12 @@ MACRO sky130_hilas_capacitorSize01
 END sky130_hilas_capacitorSize01
 
 MACRO sky130_hilas_Tgate4Double01
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_Tgate4Double01 ;
   ORIGIN 0.360 1.410 ;
   SIZE 7.080 BY 6.050 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN VGND
     USE GROUND ;
     PORT
@@ -10743,10 +10763,12 @@ MACRO sky130_hilas_Tgate4Double01
 END sky130_hilas_Tgate4Double01
 
 MACRO sky130_hilas_cellAttempt01
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_cellAttempt01 ;
   ORIGIN 2.630 4.040 ;
   SIZE 10.070 BY 6.500 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN VTUN
     ANTENNADIFFAREA 2.237600 ;
     PORT
@@ -11041,10 +11063,12 @@ MACRO sky130_hilas_cellAttempt01
 END sky130_hilas_cellAttempt01
 
 MACRO sky130_hilas_StepUpDigital
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_StepUpDigital ;
   ORIGIN -0.190 0.440 ;
   SIZE 8.700 BY 1.750 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   OBS
       LAYER nwell ;
         RECT 0.190 -0.440 2.690 1.310 ;
@@ -11128,10 +11152,12 @@ MACRO sky130_hilas_StepUpDigital
 END sky130_hilas_StepUpDigital
 
 MACRO sky130_hilas_VinjNOR3
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_VinjNOR3 ;
   ORIGIN 3.370 -1.440 ;
   SIZE 6.880 BY 1.640 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   OBS
       LAYER nwell ;
         RECT -3.360 1.440 0.080 3.080 ;
@@ -11209,10 +11235,12 @@ MACRO sky130_hilas_VinjNOR3
 END sky130_hilas_VinjNOR3
 
 MACRO sky130_hilas_VinjDiodeProtect01
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_VinjDiodeProtect01 ;
   ORIGIN 7.450 2.290 ;
   SIZE 28.590 BY 10.870 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN OUTPUT 
     ANTENNADIFFAREA 58.900799 ;
     PORT
@@ -11351,10 +11379,12 @@ MACRO sky130_hilas_VinjDiodeProtect01
 END sky130_hilas_VinjDiodeProtect01
 
 MACRO sky130_hilas_LevelShift4InputUp
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_LevelShift4InputUp ;
   ORIGIN 0.300 1.060 ;
   SIZE 8.700 BY 7.000 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN VPWR
     USE POWER ;
     PORT
@@ -11710,10 +11740,12 @@ MACRO sky130_hilas_LevelShift4InputUp
 END sky130_hilas_LevelShift4InputUp
 
 MACRO sky130_hilas_WTA4Stage01
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_WTA4Stage01 ;
   ORIGIN 11.210 0.610 ;
   SIZE 14.170 BY 6.500 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN VGND
     USE GROUND ;
     PORT
@@ -12252,10 +12284,12 @@ MACRO sky130_hilas_WTA4Stage01
 END sky130_hilas_WTA4Stage01
 
 MACRO sky130_hilas_Trans4small
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_Trans4small ;
   ORIGIN -1.910 1.500 ;
   SIZE 2.800 BY 6.050 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN NFET_SOURCE1
     USE ANALOG ;
     ANTENNADIFFAREA 0.130200 ;
@@ -12628,10 +12662,12 @@ MACRO sky130_hilas_Trans4small
 END sky130_hilas_Trans4small
 
 MACRO sky130_hilas_FGBiasWeakGate2x1cell
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_FGBiasWeakGate2x1cell ;
   ORIGIN 3.960 3.870 ;
   SIZE 11.530 BY 6.150 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN DRAIN1
     USE ANALOG ;
     ANTENNADIFFAREA 0.122400 ;
@@ -12860,10 +12896,12 @@ MACRO sky130_hilas_FGBiasWeakGate2x1cell
 END sky130_hilas_FGBiasWeakGate2x1cell
 
 MACRO sky130_hilas_swc4x2cell
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_swc4x2cell ;
   ORIGIN 10.040 0.260 ;
   SIZE 20.120 BY 6.500 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN GATE2
     USE ANALOG ;
     ANTENNADIFFAREA 3.253900 ;
@@ -13391,10 +13429,12 @@ MACRO sky130_hilas_swc4x2cell
 END sky130_hilas_swc4x2cell
 
 MACRO sky130_hilas_polyresistorGND
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_polyresistorGND ;
   ORIGIN 27.490 0.570 ;
   SIZE 55.470 BY 10.890 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN INPUT
     PORT
       LAYER met1 ;
@@ -13462,10 +13502,12 @@ MACRO sky130_hilas_polyresistorGND
 END sky130_hilas_polyresistorGND
 
 MACRO sky130_hilas_swc4x2cellOverlap
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_swc4x2cellOverlap ;
   ORIGIN 10.010 -7.230 ;
   SIZE 17.980 BY 6.160 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN VERT1
     USE ANALOG ;
     ANTENNADIFFAREA 0.417600 ;
@@ -13962,10 +14004,12 @@ MACRO sky130_hilas_swc4x2cellOverlap
 END sky130_hilas_swc4x2cellOverlap
 
 MACRO sky130_hilas_FGBias2x1cell
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_FGBias2x1cell ;
   ORIGIN 3.960 3.870 ;
   SIZE 11.530 BY 6.150 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN VTUN
     USE ANALOG ;
     ANTENNADIFFAREA 2.516100 ;
@@ -14163,10 +14207,12 @@ MACRO sky130_hilas_FGBias2x1cell
 END sky130_hilas_FGBias2x1cell
 
 MACRO sky130_hilas_drainSelect01
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_drainSelect01 ;
   ORIGIN -10.500 0.280 ;
   SIZE 5.720 BY 6.590 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN DRAIN3
     ANTENNADIFFAREA 0.322600 ;
     PORT
@@ -14440,10 +14486,12 @@ MACRO sky130_hilas_drainSelect01
 END sky130_hilas_drainSelect01
 
 MACRO sky130_hilas_DAC5bit01
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_DAC5bit01 ;
   ORIGIN -3.820 -5.240 ;
   SIZE 16.580 BY 5.990 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN A0
     USE ANALOG ;
     ANTENNAGATEAREA 0.152100 ;
@@ -14753,10 +14801,12 @@ MACRO sky130_hilas_DAC5bit01
 END sky130_hilas_DAC5bit01
 
 MACRO sky130_hilas_capacitorSize04
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_capacitorSize04 ;
   ORIGIN -14.150 0.180 ;
   SIZE 5.780 BY 5.290 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN CAP1TERM02
     USE ANALOG ;
     PORT
@@ -14839,10 +14889,12 @@ MACRO sky130_hilas_capacitorSize04
 END sky130_hilas_capacitorSize04
 
 MACRO sky130_hilas_capacitorArray01
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_capacitorArray01 ;
   ORIGIN 13.040 0.790 ;
   SIZE 36.700 BY 6.500 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN CAPTERM2
     USE ANALOG ;
     PORT
@@ -15230,10 +15282,12 @@ MACRO sky130_hilas_capacitorArray01
 END sky130_hilas_capacitorArray01
 
 MACRO sky130_hilas_pFETmed
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_pFETmed ;
   ORIGIN -1.470 0.220 ;
   SIZE 1.190 BY 2.870 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   OBS
       LAYER nwell ;
         RECT 1.470 -0.220 2.660 2.650 ;
@@ -15244,10 +15298,12 @@ MACRO sky130_hilas_pFETmed
 END sky130_hilas_pFETmed
 
 MACRO sky130_hilas_swc4x1cellOverlap2
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_swc4x1cellOverlap2 ;
   ORIGIN 1.910 3.870 ;
   SIZE 9.350 BY 6.160 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   OBS
       LAYER nwell ;
         RECT 4.880 2.230 7.440 2.290 ;
@@ -15453,10 +15509,12 @@ MACRO sky130_hilas_swc4x1cellOverlap2
 END sky130_hilas_swc4x1cellOverlap2
 
 MACRO sky130_hilas_TA2SignalBiasCell
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_TA2SignalBiasCell ;
   ORIGIN 5.690 -1.400 ;
   SIZE 8.880 BY 6.050 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN VOUT_AMP2
     USE ANALOG ;
     ANTENNADIFFAREA 0.308800 ;
@@ -15915,10 +15973,12 @@ MACRO sky130_hilas_TA2SignalBiasCell
 END sky130_hilas_TA2SignalBiasCell
 
 MACRO sky130_hilas_Tgate4Single01
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_Tgate4Single01 ;
   ORIGIN 0.360 1.640 ;
   SIZE 4.760 BY 6.410 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN VPWR
     USE ANALOG ;
     ANTENNADIFFAREA 0.966800 ;
@@ -16330,10 +16390,12 @@ MACRO sky130_hilas_Tgate4Single01
 END sky130_hilas_Tgate4Single01
 
 MACRO sky130_hilas_VinjDecode2to4
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_VinjDecode2to4 ;
   ORIGIN 6.370 -0.540 ;
   SIZE 12.950 BY 6.160 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN OUTPUT00
     ANTENNADIFFAREA 0.275500 ;
     PORT
@@ -16832,10 +16894,12 @@ MACRO sky130_hilas_VinjDecode2to4
 END sky130_hilas_VinjDecode2to4
 
 MACRO sky130_hilas_TA2Cell_1FG
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_TA2Cell_1FG ;
   ORIGIN 26.160 -1.350 ;
   SIZE 28.090 BY 6.150 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN VIN12
     USE ANALOG ;
     PORT
@@ -17473,10 +17537,12 @@ MACRO sky130_hilas_TA2Cell_1FG
 END sky130_hilas_TA2Cell_1FG
 
 MACRO sky130_hilas_swc4x1cellOverlap
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_swc4x1cellOverlap ;
   ORIGIN 2.640 4.130 ;
   SIZE 10.080 BY 6.710 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   OBS
       LAYER nwell ;
         RECT 2.230 2.290 4.950 2.520 ;
@@ -17683,10 +17749,12 @@ MACRO sky130_hilas_swc4x1cellOverlap
 END sky130_hilas_swc4x1cellOverlap
 
 MACRO sky130_hilas_capacitorSize02
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_capacitorSize02 ;
   ORIGIN -14.140 0.480 ;
   SIZE 7.970 BY 5.830 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN CAPTERM02
     USE ANALOG ;
     PORT
@@ -17742,10 +17810,12 @@ MACRO sky130_hilas_capacitorSize02
 END sky130_hilas_capacitorSize02
 
 MACRO sky130_hilas_TopProtectStructure
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_TopProtectStructure ;
   ORIGIN 154.680 243.370 ;
   SIZE 372.850 BY 389.100 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN IO07
     PORT
       LAYER met1 ;
@@ -29296,10 +29366,12 @@ MACRO sky130_hilas_TopProtectStructure
 END sky130_hilas_TopProtectStructure
 
 MACRO sky130_hilas_nFETLarge
-  CLASS BLOCK ;
+  CLASS CORE ;
   FOREIGN sky130_hilas_nFETLarge ;
   ORIGIN -0.640 -4.200 ;
   SIZE 4.370 BY 5.830 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
   PIN GATE
     USE ANALOG ;
     ANTENNAGATEAREA 6.396000 ;

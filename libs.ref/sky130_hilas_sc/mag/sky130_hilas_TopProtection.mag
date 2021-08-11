@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1627737364
+timestamp 1628698479
 << metal1 >>
 rect 769 1088 1158 1168
 rect 3628 1088 4017 1168
@@ -113,4 +113,8 @@ rlabel metal1 1251 -76 1646 1 0 PIN10
 port 21 nsew
 rlabel metal1 11246 -76 11494 1 0 VTUN
 port 22 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

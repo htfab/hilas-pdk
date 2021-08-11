@@ -1,6 +1,65 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1628698489
+<< checkpaint >>
+rect 316 6785 1608 6787
+rect -30 6254 1608 6785
+rect 1667 6603 3327 6796
+rect 1638 6419 3327 6603
+rect -30 6237 1620 6254
+rect 1638 6237 4169 6419
+rect -30 5700 4169 6237
+rect -30 5492 5587 5700
+rect 18 5274 5587 5492
+rect 6133 5311 8546 5316
+rect 5968 5300 8732 5311
+rect 5968 5274 9059 5300
+rect 18 4962 9059 5274
+rect 10278 5024 11729 5038
+rect 10278 4962 11774 5024
+rect 326 4961 9059 4962
+rect 1306 4946 9059 4961
+rect 10187 4959 11820 4962
+rect 1306 4937 3327 4946
+rect 1306 3975 2839 4937
+rect 1306 3586 2801 3975
+rect 1306 3492 2769 3586
+rect 3457 3070 9059 4946
+rect 10132 3248 11820 4959
+rect 10187 3245 11820 3248
+rect 10278 3183 11774 3245
+rect 10278 3169 11729 3183
+rect 1252 3020 2611 3064
+rect 1130 2885 2611 3020
+rect 1085 2853 2611 2885
+rect 1084 2548 2611 2853
+rect 3453 2858 9059 3070
+rect 3453 2843 8732 2858
+rect 3453 2838 8546 2843
+rect 1084 2024 2615 2548
+rect 922 2002 2615 2024
+rect 919 1591 2615 2002
+rect 918 1255 2615 1591
+rect 3453 2046 8403 2838
+rect 3453 1939 7914 2046
+rect 3453 1738 7915 1939
+rect 918 1244 2548 1255
+rect 918 298 2549 1244
+rect 3453 1110 7972 1738
+rect 4287 445 7972 1110
+rect 9806 1365 11095 1432
+rect 4287 443 7971 445
+rect 4288 399 7971 443
+rect 4288 396 6416 399
+rect 6677 398 7971 399
+rect 922 -49 2549 298
+rect 9806 4 11650 1365
+rect 922 -250 2492 -49
+rect 922 -457 2491 -250
+rect 978 -527 2491 -457
+rect 1088 -528 2491 -527
+rect 9806 -613 11431 4
+rect 9806 -978 11095 -613
 << error_s >>
 rect 2364 6133 2393 6149
 rect 2443 6133 2472 6149
@@ -3651,37 +3710,29 @@ timestamp 1628285143
 transform -1 0 2012 0 -1 1081
 box 64 419 528 1018
 use sky130_hilas_nFETLarge  sky130_hilas_nFETLarge_0
-timestamp 1628285143
+timestamp 1628698468
 transform -1 0 2008 0 -1 1836
 box 64 420 501 1003
 use sky130_hilas_DAC5bit01  sky130_hilas_DAC5bit01_0
-timestamp 1628285143
+timestamp 1628698474
 transform 0 1 9912 1 0 -1031
 box 382 524 2040 1123
 use sky130_hilas_Trans2med  sky130_hilas_Trans2med_0
-timestamp 1628285143
+timestamp 1628698472
 transform 1 0 2073 0 -1 2311
 box -380 -143 -27 452
 use sky130_hilas_WTA4Stage01  sky130_hilas_WTA4Stage01_0
-timestamp 1628285143
+timestamp 1628698465
 transform 1 0 6825 0 1 1804
 box -1121 -61 296 589
 use sky130_hilas_drainSelect01  sky130_hilas_drainSelect01_3
-timestamp 1628285143
+timestamp 1628698474
 transform -1 0 6602 0 -1 2371
 box 1050 -28 1622 631
-use sky130_hilas_LevelShift4InputUp  sky130_hilas_LevelShift4InputUp_3
-timestamp 1628285143
-transform -1 0 4923 0 -1 2334
-box -30 -106 840 594
 use sky130_hilas_drainSelect01  sky130_hilas_drainSelect01_2
-timestamp 1628285143
+timestamp 1628698474
 transform -1 0 6599 0 -1 3298
 box 1050 -28 1622 631
-use sky130_hilas_LevelShift4InputUp  sky130_hilas_LevelShift4InputUp_2
-timestamp 1628285143
-transform -1 0 4927 0 -1 3240
-box -30 -106 840 594
 use sky130_hilas_pFETLarge  sky130_hilas_pFETLarge_1
 timestamp 1628285143
 transform 1 0 4824 0 1 606
@@ -3698,12 +3749,20 @@ use sky130_hilas_pFETLarge  sky130_hilas_pFETLarge_4
 timestamp 1628285143
 transform -1 0 6861 0 1 609
 box 64 419 528 1018
+use sky130_hilas_LevelShift4InputUp  sky130_hilas_LevelShift4InputUp_2
+timestamp 1628420416
+transform -1 0 4927 0 -1 3240
+box -30 -106 840 594
+use sky130_hilas_LevelShift4InputUp  sky130_hilas_LevelShift4InputUp_3
+timestamp 1628420416
+transform -1 0 4923 0 -1 2334
+box -30 -106 840 594
 use sky130_hilas_nFETLarge  sky130_hilas_nFETLarge_1
-timestamp 1628285143
+timestamp 1628698468
 transform -1 0 7435 0 1 608
 box 64 420 501 1003
 use sky130_hilas_Trans4small  sky130_hilas_Trans4small_0
-timestamp 1628285143
+timestamp 1628698474
 transform 1 0 1738 0 1 4259
 box 191 -150 471 455
 use sky130_hilas_swc4x2cell  sky130_hilas_swc4x2cell_0
@@ -3711,31 +3770,31 @@ timestamp 1628285143
 transform 1 0 6765 0 1 2702
 box -1004 -26 1008 624
 use sky130_hilas_TA2Cell_1FG  sky130_hilas_TA2Cell_1FG_0
-timestamp 1628285143
+timestamp 1628698478
 transform 1 0 8236 0 1 3333
 box -2616 135 193 750
 use sky130_hilas_TA2Cell_1FG_Strong  sky130_hilas_TA2Cell_1FG_Strong_0
-timestamp 1628285143
+timestamp 1628698487
 transform 1 0 8236 0 1 3936
 box -2617 135 193 750
 use sky130_hilas_drainSelect01  sky130_hilas_drainSelect01_1
-timestamp 1628285143
+timestamp 1628698474
 transform -1 0 6601 0 -1 4345
 box 1050 -28 1622 631
 use sky130_hilas_LevelShift4InputUp  sky130_hilas_LevelShift4InputUp_1
-timestamp 1628285143
+timestamp 1628420416
 transform -1 0 4927 0 -1 4253
 box -30 -106 840 594
 use sky130_hilas_Tgate4Single01  sky130_hilas_Tgate4Single01_0
-timestamp 1628285143
+timestamp 1628698474
 transform 1 0 10780 0 1 3947
 box -36 -164 440 477
 use sky130_hilas_FGcharacterization01  sky130_hilas_FGcharacterization01_0
-timestamp 1628285143
+timestamp 1628698484
 transform -1 0 2682 0 1 5308
 box -912 259 2083 864
 use sky130_hilas_LevelShift4InputUp  sky130_hilas_LevelShift4InputUp_0
-timestamp 1628285143
+timestamp 1628420416
 transform -1 0 4927 0 1 4476
 box -30 -106 840 594
 << labels >>
@@ -3885,4 +3944,8 @@ rlabel metal1 5200 -785 5292 -712 0 VPWR
 port 64 nsew
 rlabel metal1 6393 -785 6485 -712 0 VPWR
 port 64 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

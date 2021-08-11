@@ -1,6 +1,12 @@
 magic
 tech sky130A
-timestamp 1607392100
+timestamp 1628698501
+<< checkpaint >>
+rect -142 853 1374 859
+rect -542 840 1374 853
+rect -771 -1000 1374 840
+rect -542 -1012 1374 -1000
+rect -142 -1017 1374 -1012
 << error_s >>
 rect -91 192 -62 210
 rect 155 190 184 206
@@ -281,51 +287,55 @@ rect -191 -188 500 -171
 rect -191 -286 500 -269
 rect -191 -330 500 -313
 use sky130_hilas_nOverlapCap01  sky130_hilas_nOverlapCap01_3
-timestamp 1607262215
+timestamp 1628698500
 transform 1 0 -79 0 1 -327
 box -62 -43 67 86
 use sky130_hilas_nOverlapCap01  sky130_hilas_nOverlapCap01_2
-timestamp 1607262215
+timestamp 1628698500
 transform 1 0 -79 0 1 -173
 box -62 -43 67 86
 use sky130_hilas_overlapCap02a  sky130_hilas_overlapCap02a_3
-timestamp 1607261501
+timestamp 1628698482
 transform 1 0 609 0 1 -328
 box -521 -54 -121 110
 use sky130_hilas_overlapCap02a  sky130_hilas_overlapCap02a_2
-timestamp 1607261501
+timestamp 1628698482
 transform 1 0 609 0 1 -181
 box -521 -54 -121 110
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_1
-timestamp 1607386385
+timestamp 1628698494
 transform 1 0 777 0 1 -428
-box -289 47 -33 232
+box -289 41 -33 232
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_2
-timestamp 1607386385
+timestamp 1628698494
 transform 1 0 777 0 -1 -31
-box -289 47 -33 232
+box -289 41 -33 232
 use sky130_hilas_nOverlapCap01  sky130_hilas_nOverlapCap01_1
-timestamp 1607262215
+timestamp 1628698500
 transform 1 0 -79 0 1 -28
 box -62 -43 67 86
 use sky130_hilas_overlapCap02a  sky130_hilas_overlapCap02a_1
-timestamp 1607261501
+timestamp 1628698482
 transform 1 0 609 0 1 -34
 box -521 -54 -121 110
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_0
-timestamp 1607386385
+timestamp 1628698494
 transform 1 0 777 0 1 -128
-box -289 47 -33 232
+box -289 41 -33 232
 use sky130_hilas_nOverlapCap01  sky130_hilas_nOverlapCap01_0
-timestamp 1607262215
+timestamp 1628698500
 transform 1 0 -79 0 1 124
 box -62 -43 67 86
 use sky130_hilas_overlapCap02a  sky130_hilas_overlapCap02a_0
-timestamp 1607261501
+timestamp 1628698482
 transform 1 0 609 0 1 113
 box -521 -54 -121 110
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_3
-timestamp 1607386385
+timestamp 1628698494
 transform 1 0 777 0 -1 270
-box -289 47 -33 232
+box -289 41 -33 232
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

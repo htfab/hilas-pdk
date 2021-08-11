@@ -1,6 +1,12 @@
 magic
 tech sky130A
-timestamp 1625360156
+timestamp 1628698536
+<< checkpaint >>
+rect -229 1159 1270 1269
+rect -229 1021 1275 1159
+rect -244 -303 1275 1021
+rect -229 -441 1275 -303
+rect -229 -551 1270 -441
 << nwell >>
 rect 663 213 744 505
 << psubdiff >>
@@ -238,13 +244,13 @@ rect 585 90 615 116
 rect 641 90 664 116
 rect 690 90 715 116
 rect 585 57 715 90
-use sky130_hilas_decoup_cap_00  CapDeco_1
-timestamp 1623107852
-transform 1 0 273 0 1 170
-box 82 -113 390 189
 use sky130_hilas_decoup_cap_00  CapDeco_0
 timestamp 1623107852
 transform 1 0 273 0 -1 548
+box 82 -113 390 189
+use sky130_hilas_decoup_cap_00  CapDeco_1
+timestamp 1623107852
+transform 1 0 273 0 1 170
 box 82 -113 390 189
 << labels >>
 rlabel metal1 355 311 372 407 0 VPWR
@@ -267,4 +273,8 @@ rlabel metal2 377 57 507 69 0 VPWR
 port 1 nsew
 rlabel metal2 585 57 715 69 0 VGND
 port 2 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

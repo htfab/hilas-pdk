@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1624138502
+timestamp 1628698533
 << nwell >>
 rect -336 144 8 308
 << mvnmos >>
@@ -285,4 +285,8 @@ rlabel metal1 222 299 249 305 0 GND
 rlabel metal1 222 153 249 158 0 GND
 rlabel metal1 -275 153 -253 159 0 Vinj
 rlabel metal1 -275 297 -253 304 0 Vinj
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

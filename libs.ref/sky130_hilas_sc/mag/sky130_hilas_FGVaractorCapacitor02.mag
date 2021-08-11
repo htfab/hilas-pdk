@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1628698560
 << nwell >>
 rect -1005 -215 -734 -211
 rect -1005 -380 -733 -215
@@ -40,4 +40,8 @@ rect -977 -308 -951 -280
 rect -977 -325 -972 -308
 rect -955 -325 -951 -308
 rect -977 -333 -951 -325
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

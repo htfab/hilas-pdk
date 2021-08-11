@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1628698472
 << nwell >>
 rect -83 185 -27 382
 << psubdiff >>
@@ -106,7 +106,7 @@ timestamp 1628285143
 transform 1 0 -299 0 1 -64
 box -14 -15 20 18
 use sky130_hilas_poly2m1  sky130_hilas_poly2m1_1
-timestamp 1628285143
+timestamp 1628698462
 transform -1 0 -335 0 1 114
 box -9 -26 24 25
 use sky130_hilas_nFETmed  sky130_hilas_nFETmed_0
@@ -142,7 +142,7 @@ timestamp 1628285143
 transform 1 0 -296 0 1 324
 box -14 -15 20 18
 use sky130_hilas_poly2m1  sky130_hilas_poly2m1_0
-timestamp 1628285143
+timestamp 1628698462
 transform 1 0 -349 0 -1 185
 box -9 -26 24 25
 use sky130_hilas_pFETmed  sky130_hilas_pFETmed_1
@@ -190,4 +190,8 @@ rlabel metal2 -38 0 -27 21 0 VGND
 port 14 nsew
 rlabel metal2 -36 261 -27 282 0 WELL
 port 15 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

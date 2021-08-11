@@ -1,6 +1,8 @@
 magic
 tech sky130A
-timestamp 1627343631
+timestamp 1628698451
+<< checkpaint >>
+rect 133816 296593 172361 336763
 << metal1 >>
 rect 136911 335875 137167 339279
 rect 139714 335875 139969 341529
@@ -1295,93 +1297,93 @@ rect -50 352000 292050 352050
 rect -50 0 0 352000
 rect 292000 0 292050 352000
 rect -50 -50 292050 0
-use m12m3  m12m3_29
+use m12m3  m12m3_31
 timestamp 1627218289
-transform 1 0 133012 0 1 303846
+transform 1 0 133373 0 1 296500
 box -25 -21 1232 1087
 use m12m3  m12m3_32
 timestamp 1627218289
 transform 1 0 135394 0 1 295760
 box -25 -21 1232 1087
-use m12m3  m12m3_31
+use m12m3  m12m3_29
 timestamp 1627218289
-transform 1 0 133373 0 1 296500
-box -25 -21 1232 1087
-use m12m3  m12m3_28
-timestamp 1627218289
-transform 1 0 132948 0 1 306753
-box -25 -21 1232 1087
-use m12m3  m12m3_26
-timestamp 1627218289
-transform 1 0 133074 0 1 312091
+transform 1 0 133012 0 1 303846
 box -25 -21 1232 1087
 use m12m3  m12m3_27
 timestamp 1627218289
 transform 1 0 133012 0 1 309660
 box -25 -21 1232 1087
+use m12m3  m12m3_26
+timestamp 1627218289
+transform 1 0 133074 0 1 312091
+box -25 -21 1232 1087
+use m12m3  m12m3_28
+timestamp 1627218289
+transform 1 0 132948 0 1 306753
+box -25 -21 1232 1087
 use m12m3  m12m3_30
 timestamp 1627218289
 transform 1 0 174268 0 1 313861
-box -25 -21 1232 1087
-use m12m3  m12m3_25
-timestamp 1627218289
-transform 1 0 133074 0 1 315106
-box -25 -21 1232 1087
-use m12m3  m12m3_23
-timestamp 1627218289
-transform 1 0 133057 0 1 321019
 box -25 -21 1232 1087
 use m12m3  m12m3_24
 timestamp 1627218289
 transform 1 0 133108 0 1 318171
 box -25 -21 1232 1087
+use m12m3  m12m3_23
+timestamp 1627218289
+transform 1 0 133057 0 1 321019
+box -25 -21 1232 1087
+use m12m3  m12m3_25
+timestamp 1627218289
+transform 1 0 133074 0 1 315106
+box -25 -21 1232 1087
 use m12m3  m12m3_8
 timestamp 1627218289
 transform 1 0 168404 0 1 316575
-box -25 -21 1232 1087
-use m12m3  m12m3_18
-timestamp 1627218289
-transform 1 0 172206 0 1 315227
-box -25 -21 1232 1087
-use m12m3  m12m3_17
-timestamp 1627218289
-transform 1 0 172247 0 1 317988
 box -25 -21 1232 1087
 use m12m3  m12m3_16
 timestamp 1627218289
 transform 1 0 172288 0 1 320912
 box -25 -21 1232 1087
-use m12m3  m12m3_22
+use m12m3  m12m3_17
 timestamp 1627218289
-transform 1 0 133124 0 1 323749
+transform 1 0 172247 0 1 317988
 box -25 -21 1232 1087
-use m12m3  m12m3_20
+use m12m3  m12m3_18
 timestamp 1627218289
-transform 1 0 133108 0 1 329511
+transform 1 0 172206 0 1 315227
 box -25 -21 1232 1087
 use m12m3  m12m3_21
 timestamp 1627218289
 transform 1 0 133124 0 1 326479
 box -25 -21 1232 1087
+use m12m3  m12m3_20
+timestamp 1627218289
+transform 1 0 133108 0 1 329511
+box -25 -21 1232 1087
+use m12m3  m12m3_22
+timestamp 1627218289
+transform 1 0 133124 0 1 323749
+box -25 -21 1232 1087
 use m12m3  m12m3_15
 timestamp 1627218289
 transform 1 0 172166 0 1 323714
-box -25 -21 1232 1087
-use m12m3  m12m3_14
-timestamp 1627218289
-transform 1 0 172247 0 1 326759
 box -25 -21 1232 1087
 use m12m3  m12m3_13
 timestamp 1627218289
 transform 1 0 172247 0 1 329276
 box -25 -21 1232 1087
-use m12m3  m12m3_19
+use m12m3  m12m3_14
 timestamp 1627218289
-transform 1 0 133041 0 1 332459
+transform 1 0 172247 0 1 326759
 box -25 -21 1232 1087
 use m12m3  m12m3_1
 timestamp 1627218289
 transform 1 0 136237 0 1 338302
+box -25 -21 1232 1087
+use m12m3  m12m3_19
+timestamp 1627218289
+transform 1 0 133041 0 1 332459
 box -25 -21 1232 1087
 use m12m3  m12m3_12
 timestamp 1627218289
@@ -1391,44 +1393,44 @@ use m12m3  m12m3_0
 timestamp 1627218289
 transform 1 0 139001 0 1 340528
 box -25 -21 1232 1087
-use m12m3  m12m3_2
-timestamp 1627218289
-transform 1 0 141764 0 1 342702
-box -25 -21 1232 1087
 use m12m3  m12m3_3
 timestamp 1627218289
 transform 1 0 146062 0 1 345056
 box -25 -21 1232 1087
-use m12m3  m12m3_7
+use m12m3  m12m3_2
 timestamp 1627218289
-transform 1 0 159571 0 1 345926
+transform 1 0 141764 0 1 342702
 box -25 -21 1232 1087
 use m12m3  m12m3_9
 timestamp 1627218289
 transform 1 0 162436 0 1 343623
 box -25 -21 1232 1087
-use m12m3  m12m3_11
+use m12m3  m12m3_7
 timestamp 1627218289
-transform 1 0 167963 0 1 339248
+transform 1 0 159571 0 1 345926
 box -25 -21 1232 1087
 use m12m3  m12m3_10
 timestamp 1627218289
 transform 1 0 165200 0 1 341397
 box -25 -21 1232 1087
-use m12m3  m12m3_4
+use m12m3  m12m3_11
 timestamp 1627218289
-transform 1 0 150284 0 1 347359
-box -25 -21 1232 1087
-use m12m3  m12m3_6
-timestamp 1627218289
-transform 1 0 156526 0 1 348894
+transform 1 0 167963 0 1 339248
 box -25 -21 1232 1087
 use m12m3  m12m3_5
 timestamp 1627218289
 transform 1 0 153098 0 1 349789
 box -25 -21 1232 1087
+use m12m3  m12m3_6
+timestamp 1627218289
+transform 1 0 156526 0 1 348894
+box -25 -21 1232 1087
+use m12m3  m12m3_4
+timestamp 1627218289
+transform 1 0 150284 0 1 347359
+box -25 -21 1232 1087
 use sky130_hilas_TopProtectStructure  sky130_hilas_TopProtectStructure_0
-timestamp 1627343631
+timestamp 1627744303
 transform 1 0 149914 0 1 321560
 box -15468 -24337 21817 14573
 << labels >>
@@ -2789,5 +2791,8 @@ port 676 nsew signal input
 flabel metal2 s 3217 -400 3273 240 0 FreeSans 560 90 0 0 wbs_we_i
 port 677 nsew signal input
 << properties >>
+string LEFsite unithd
+string LEFclass CORE
 string FIXED_BBOX 0 0 292000 352000
+string LEFsymmetry X Y R90
 << end >>

@@ -1,6 +1,10 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1628698517
+<< checkpaint >>
+rect -579 658 715 659
+rect -688 -634 715 658
+rect -688 -635 606 -634
 << nmos >>
 rect 0 -6 27 36
 << ndiff >>
@@ -36,11 +40,15 @@ rect -56 -36 -48 -19
 rect -111 2 -51 19
 rect 75 3 97 20
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1628285143
+timestamp 1628698494
 transform 1 0 -44 0 1 10
 box -14 -15 20 18
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1628285143
+timestamp 1628698494
 transform 1 0 65 0 1 11
 box -14 -15 20 18
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

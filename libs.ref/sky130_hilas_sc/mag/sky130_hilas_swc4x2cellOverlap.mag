@@ -1,6 +1,12 @@
 magic
 tech sky130A
-timestamp 1608301303
+timestamp 1628698475
+<< checkpaint >>
+rect -1631 1963 -115 1969
+rect -90 1963 1426 1969
+rect -1631 98 1426 1963
+rect -1631 93 -115 98
+rect -90 93 1426 98
 << error_s >>
 rect -678 1300 -649 1316
 rect -599 1300 -570 1316
@@ -506,11 +512,11 @@ rect 785 779 796 797
 use sky130_hilas_swc4x1cellOverlap2  sky130_hilas_swc4x1cellOverlap2_0
 timestamp 1607392100
 transform 1 0 52 0 1 1110
-box -191 -382 744 223
+box -191 -387 744 229
 use sky130_hilas_swc4x1cellOverlap2  sky130_hilas_swc4x1cellOverlap2_1
 timestamp 1607392100
 transform -1 0 -257 0 1 1110
-box -191 -382 744 223
+box -191 -387 744 229
 << labels >>
 rlabel metal1 -884 1327 -868 1333 0 VERT1
 port 1 nsew analog default
@@ -583,4 +589,8 @@ rlabel metal1 -196 728 -166 736 0 VTUN
 port 17 nsew analog default
 rlabel metal1 -38 728 -8 736 0 VTUN
 port 17 nsew analog default
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>
