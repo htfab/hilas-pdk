@@ -1,29 +1,25 @@
 magic
 tech sky130A
-timestamp 1628707269
+timestamp 1628285143
 << error_p >>
-rect 2 28 65 29
+rect -24 41 39 42
 << mvndiff >>
-rect 2 22 65 28
-rect 2 5 8 22
-rect 25 5 42 22
-rect 59 5 65 22
-rect 2 0 65 5
+rect -24 35 39 41
+rect -24 18 -18 35
+rect -1 18 16 35
+rect 33 18 39 35
+rect -24 13 39 18
 << mvndiffc >>
-rect 8 5 25 22
-rect 42 5 59 22
+rect -18 18 -1 35
+rect 16 18 33 35
 << locali >>
-rect 0 5 8 22
-rect 59 5 67 22
+rect -26 18 -18 35
+rect 33 18 41 35
 << viali >>
-rect 25 5 42 22
+rect -1 18 16 35
 << metal1 >>
-rect 14 22 53 25
-rect 14 5 25 22
-rect 42 5 53 22
-rect 14 2 53 5
-<< properties >>
-string LEFsite unithd
-string LEFclass CORE
-string LEFsymmetry X Y R90
+rect -12 35 27 38
+rect -12 18 -1 35
+rect 16 18 27 35
+rect -12 15 27 18
 << end >>
