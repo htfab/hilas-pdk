@@ -886,20 +886,27 @@ class Magic:
         result += self.p.run_command('gds write {}'.format(target))
         return result
 
-    def make_lef(self, source, center_origin, add_properties, new_position):
-
+    def move_origin(self, source, new_position):
         result = self.renew(source)
 
-        if add_properties == True:
-            result += self.p.run_command('property LEFclass CORE')
-            result += self.p.run_command('property LEFsite unithd')
-            result += self.p.run_command('property LEFsymmetry "X Y R90"')
-            result += self.p.run_command('save')
+        result += self.p.run_command('select top cell')
+        result += self.p.run_command('move origin '
+                                     '' + str(new_position[0]) + ' ' + str(new_position[1]))
+        result += self.p.run_command('save')
 
-        if center_origin == True:
-            result += self.p.run_command('select cell')
-            result += self.p.run_command('move origin ' + str(new_position[0]) + ' ' + str(new_position[1]))
-            result += self.p.run_command('save')
+        return result
+
+    def add_properties(self, source):
+        result = self.renew(source)
+
+        result += self.p.run_command('property LEFclass CORE')
+        result += self.p.run_command('property LEFsite unithd')
+        result += self.p.run_command('property LEFsymmetry "X Y R90"')
+        result += self.p.run_command('save')
+
+    def make_lef(self, source):
+
+        result = self.renew(source)
 
         # result += self.p.run_command('lef write -toplayer -hide')
         result += self.p.run_command('lef write -toplayer')
@@ -988,11 +995,10 @@ def make_gds(mf):
         error("There was a problem during the processing of {}:".format(mf))
 
 
-def make_temp_lef(mf, center_origin, add_properties, pos):
+def make_temp_lef(mf):
     target = (LIB_PATH['temp_lef'] / mf.long_name).with_suffix('.lef')  # setting target path
     # try:
-    result = magic.make_lef(mf.file, 0, add_properties,
-                            pos)  # Make an lef with just the properties, necessary to re-center origin
+    result = magic.make_lef(mf.file)  # Make an lef with just the properties, necessary to re-center origin
     line = []
 
     if not magic.is_alive():
@@ -1000,23 +1006,6 @@ def make_temp_lef(mf, center_origin, add_properties, pos):
         error("There was a problem during the processing of {}: ".format(mf))
 
     shutil.copy(mf.file.parent / (mf.long_name + '.lef'), target)  # Copy lef to the lef directory
-    if center_origin == True:  # Check if we need to center the origin
-        with open(target, mode='r', newline='\n') as lef:  # Open the lef we just made and look for the keyword ORIGIN
-            line = lef.readlines()
-            for data in line:
-                if data.find("ORIGIN") != -1:  # Find the line with data about current origin position
-                    newstring = data.split(' ')
-                    xpos = float(newstring[3])
-                    ypos = float(newstring[4])
-                    if xpos != 0.0 or ypos != 0.0:
-                        xinvert = -100 * xpos
-                        yinvert = -100 * ypos  # Convert units and invert position
-                        pos[0] = xinvert
-                        pos[1] = yinvert
-                        result = magic.make_lef(mf.file, center_origin, add_properties, pos)  # Make another lef with
-                        # new centering
-                        shutil.copy(mf.file.parent / (mf.long_name + '.lef'), target)  # Copy lef to the lef directory
-
     os.remove(mf.file.parent / (mf.long_name + '.lef'))
 
     print('wrote LEF: {}'.format(target.relative_to(rel_root)))
@@ -1486,23 +1475,48 @@ def target_check(magic_file, type):
         return True
 
 
-def handle_magic(magic_file, center_origin, add_properties, position):
+def handle_magic(magic_file, center_origin, add_properties):
     if not any([
         target_check(magic_file, 'gds'),
         target_check(magic_file, 'temp_lef'),
         target_check(magic_file, 'spice_ext')
-    ]):
+    ]) and not center_origin and not add_properties:
         return
 
     magic.renew(magic_file.file)
     print('loaded file {}'.format(magic_file.file.relative_to(rel_root)))
 
+    if add_properties:
+        magic.add_properties(magic_file)
+
+    if center_origin:
+        WAS_MOVED = False
+        make_temp_lef(magic_file)
+        target = (LIB_PATH['temp_lef'] / magic_file.long_name).with_suffix('.lef')  # setting target path
+        with open(target, mode='r',
+                  newline='\n') as lef:  # Open the lef we just made and look for the keyword ORIGIN
+            all_text = lef.read()
+
+        match_obj = re.search(r'^\s*ORIGIN\s+([-]?\d+[.]\d+)\s+([-]?\d+[.]\d+)\s*\s*;\s*$', all_text, re.MULTILINE)
+        if match_obj:
+            x_coord = float(match_obj.group(1))
+            y_coord = float(match_obj.group(2))
+            if x_coord != 0.0 or y_coord != 0.0:
+                xinvert = -100 * x_coord
+                yinvert = -100 * y_coord  # Convert units and invert position
+                result = magic.move_origin(magic_file.file, (xinvert, yinvert))  # Make another lef with
+                WAS_MOVED = True
+                # # new centering
+                # shutil.copy(mf.file.parent / (mf.long_name + '.lef'), target)  # Copy lef to the lef directory
+
     if args.gds and target_check(magic_file, 'gds'):
         parent_check(LIB_PATH['gds'])
         make_gds(magic_file)
-    if args.temp_lef and target_check(magic_file, 'temp_lef'):
+
+    if (args.temp_lef and target_check(magic_file, 'temp_lef') and not (args.center_origin and not WAS_MOVED)) or (args.center_origin and WAS_MOVED):
         parent_check(LIB_PATH['temp_lef'])
-        make_temp_lef(magic_file, center_origin, add_properties, position)
+        make_temp_lef(magic_file)
+
     if args.spice and target_check(magic_file, 'spice_ext'):
         parent_check(LIB_PATH['spice_ext'])
         make_spice(magic_file)
@@ -1862,7 +1876,7 @@ def main():
     # Items here on done on a per-cell basis with Magic opening each one
     magic = Magic()
     for m in magic_lib.values():
-        handle_magic(m, centering, add_props, pos)
+        handle_magic(m, centering, add_props)
 
     # The following items can be done on the batch level:
     if args.lvs:
