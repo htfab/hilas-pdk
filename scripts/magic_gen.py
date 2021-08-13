@@ -1487,7 +1487,7 @@ def handle_magic(magic_file, center_origin, add_properties):
     print('loaded file {}'.format(magic_file.file.relative_to(rel_root)))
 
     if add_properties:
-        magic.add_properties(magic_file)
+        magic.add_properties(magic_file.file)
 
     if center_origin:
         WAS_MOVED = False
