@@ -1,55 +1,55 @@
 magic
 tech sky130A
-timestamp 1626535775
+timestamp 1629137175
 << psubdiff >>
-rect -131 148 491 156
-rect -131 131 -116 148
-rect -99 131 491 148
-rect -131 124 491 131
+rect 12 24 634 32
+rect 12 7 27 24
+rect 44 7 634 24
+rect 12 0 634 7
 << psubdiffcont >>
-rect -116 131 -99 148
+rect 27 7 44 24
 << poly >>
-rect -119 193 -75 206
-rect -119 176 -106 193
-rect -89 176 -75 193
-rect -119 164 -75 176
-rect 438 195 484 206
-rect 438 178 453 195
-rect 470 178 487 195
-rect 438 164 484 178
+rect 24 69 68 82
+rect 24 52 37 69
+rect 54 52 68 69
+rect 24 40 68 52
+rect 581 71 627 82
+rect 581 54 596 71
+rect 613 54 630 71
+rect 581 40 627 54
 << polycont >>
-rect -106 176 -89 193
-rect 453 178 470 195
+rect 37 52 54 69
+rect 596 54 613 71
 << npolyres >>
-rect -75 164 438 206
+rect 68 40 581 82
 << locali >>
-rect -89 176 -81 193
-rect 445 178 453 195
-rect 445 176 487 178
-rect -127 131 -116 148
+rect 54 52 62 69
+rect 588 54 596 71
+rect 588 52 630 54
+rect 16 7 27 24
 << viali >>
-rect -123 176 -106 193
-rect 470 178 487 195
-rect -99 131 -82 148
+rect 20 52 37 69
+rect 613 54 630 71
+rect 44 7 61 24
 << metal1 >>
-rect -143 193 -86 198
-rect -143 176 -123 193
-rect -106 176 -86 193
-rect -143 171 -86 176
-rect 453 195 506 201
-rect 453 178 470 195
-rect 487 178 506 195
-rect 453 171 506 178
-rect -102 148 -76 151
-rect -128 144 -99 148
-rect -143 131 -99 144
-rect -82 131 -76 148
-rect -143 128 -76 131
+rect 0 69 57 74
+rect 0 52 20 69
+rect 37 52 57 69
+rect 0 47 57 52
+rect 596 71 649 77
+rect 596 54 613 71
+rect 630 54 649 71
+rect 596 47 649 54
+rect 41 24 67 27
+rect 15 20 44 24
+rect 0 7 44 20
+rect 61 7 67 24
+rect 0 4 67 7
 << labels >>
-rlabel metal1 -142 171 -133 198 0 TERM1
+rlabel metal1 1 47 10 74 0 TERM1
 port 1 nsew
-rlabel metal1 494 171 506 201 0 TERM2
+rlabel metal1 637 47 649 77 0 TERM2
 port 2 nsew
-rlabel metal1 -143 128 -134 144 0 VGND
+rlabel metal1 0 4 9 20 0 VGND
 port 3 nsew
 << end >>

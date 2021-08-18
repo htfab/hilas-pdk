@@ -1,46 +1,50 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1629137196
+<< checkpaint >>
+rect -454 714 840 715
+rect -563 -578 840 714
+rect -563 -579 731 -578
 << nmos >>
-rect 0 -6 27 36
+rect 111 35 138 77
 << ndiff >>
-rect -31 20 0 36
-rect -31 3 -26 20
-rect -6 3 0 20
-rect -31 -6 0 3
-rect 27 20 58 36
-rect 27 3 33 20
-rect 53 3 58 20
-rect 27 -6 58 3
+rect 80 61 111 77
+rect 80 44 85 61
+rect 105 44 111 61
+rect 80 35 111 44
+rect 138 61 169 77
+rect 138 44 144 61
+rect 164 44 169 61
+rect 138 35 169 44
 << ndiffc >>
-rect -26 3 -6 20
-rect 33 3 53 20
+rect 85 44 105 61
+rect 144 44 164 61
 << poly >>
-rect 0 36 27 49
-rect 0 -14 27 -6
-rect -81 -19 27 -14
-rect -81 -36 -73 -19
-rect -56 -29 27 -19
-rect -56 -36 -48 -29
-rect -81 -41 -48 -36
+rect 111 77 138 90
+rect 111 27 138 35
+rect 30 22 138 27
+rect 30 5 38 22
+rect 55 12 138 22
+rect 55 5 63 12
+rect 30 0 63 5
 << polycont >>
-rect -73 -36 -56 -19
+rect 38 5 55 22
 << locali >>
-rect -26 20 -6 28
-rect -26 -5 -6 3
-rect 33 20 53 28
-rect 33 -5 53 3
-rect -81 -36 -73 -19
-rect -56 -36 -48 -19
+rect 85 61 105 69
+rect 85 36 105 44
+rect 144 61 164 69
+rect 144 36 164 44
+rect 30 5 38 22
+rect 55 5 63 22
 << metal2 >>
-rect -111 2 -51 19
-rect 75 3 97 20
+rect 0 43 60 60
+rect 186 44 208 61
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1628285143
-transform 1 0 -44 0 1 10
-box -14 -15 20 18
+timestamp 1629137146
+transform 1 0 67 0 1 51
+box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1628285143
-transform 1 0 65 0 1 11
-box -14 -15 20 18
+timestamp 1629137146
+transform 1 0 176 0 1 52
+box 0 0 34 33
 << end >>

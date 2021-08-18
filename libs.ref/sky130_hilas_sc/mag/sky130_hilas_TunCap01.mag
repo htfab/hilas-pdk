@@ -1,14 +1,14 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1629137126
 << nwell >>
-rect -1451 -400 -1278 -210
+rect 0 0 173 190
 << mvvaractor >>
-rect -1394 -333 -1335 -283
+rect 57 67 116 117
 << mvnsubdiff >>
-rect -1394 -283 -1335 -247
-rect -1394 -367 -1335 -333
+rect 57 117 116 153
+rect 57 33 116 67
 << poly >>
-rect -1436 -333 -1394 -283
-rect -1335 -333 -1293 -283
+rect 15 67 57 117
+rect 116 67 158 117
 << end >>

@@ -34,18 +34,20 @@ import argparse
 import os
 import re
 import shlex
+import shutil
 import subprocess
 import tempfile
-import shutil
+import networkx as nx
+import matplotlib.pyplot as plt
+from collections import OrderedDict
+from pathlib import Path
+from sys import stderr as STDERR
+
 import jinja2
 import yaml
-
-from yamllint import cli as yamllintcli
-from collections import OrderedDict
-from sys import stderr as STDERR
-from pexpect.replwrap import REPLWrapper
-from pathlib import Path
 from pexpect.exceptions import EOF as PEXP_EXCEPTION
+from pexpect.replwrap import REPLWrapper
+from yamllint import cli as yamllintcli
 
 #######################################################################################
 PDK_VARIANT = 'sky130_hilas_sc'
@@ -1475,7 +1477,7 @@ def target_check(magic_file, type):
         return True
 
 
-def handle_magic(magic_file, center_origin, add_properties):
+def handle_magic(magic_file, center_origin, add_properties, cell_graph):
     if not any([
         target_check(magic_file, 'gds'),
         target_check(magic_file, 'temp_lef'),
@@ -1499,6 +1501,7 @@ def handle_magic(magic_file, center_origin, add_properties):
 
         match_obj = re.search(r'^\s*ORIGIN\s+([-]?\d+[.]\d+)\s+([-]?\d+[.]\d+)\s*\s*;\s*$', all_text, re.MULTILINE)
         if match_obj:
+            print(cell_graph.nodes)
             x_coord = float(match_obj.group(1))
             y_coord = float(match_obj.group(2))
             if x_coord != 0.0 or y_coord != 0.0:
@@ -1775,13 +1778,26 @@ def read_cell_index():
 
     cd = LibraryInfo(CELL_DATA_FILE)
 
+def make_hierarchy(mag_lib):
+    G = nx.DiGraph()
+    for m in mag_lib:
+        if G.has_node(m):
+            print("Node already found")
+        else:
+            G.add_node(m, children=m.references, centered=False)
+            for child in m.references:
+                child_magic = next(x for x in mag_lib if x.long_name == child)
+                if not G.has_node(child_magic):
+                    G.add_edge(m, child_magic)
+    return G
 
 def main():
-    global magic, args, rel_root, cd, magic_lib, xschem_lib
+    global magic, args, rel_root, cd, magic_lib, xschem_lib, graph
     pos = [0.0, 0.0]
     centering = False
     add_props = False
     ap = argparse.ArgumentParser()
+    graph = nx.empty_graph()
 
     ############  Target Selection  ####################################################################################
     ap.add_argument('-e', '--lef', action='store_true', help='Create LEF file', default=False)
@@ -1829,10 +1845,17 @@ def main():
                     default=False)
 
     args = ap.parse_args()
+
+    rel_root = Path.cwd()
+
+    read_cell_index()
+    magic_lib = MagicLibrary(LIB_PATH['mag'])
+    xschem_lib = XschemLibrary(LIB_PATH['xschem'])
+
     if args.center_origin:
         setattr(args, 'refresh', True)
         centering = True
-
+        graph = make_hierarchy(magic_lib.values())
 
     if args.write_properties:
         setattr(args, 'refresh', True)
@@ -1852,12 +1875,6 @@ def main():
         ]:
             setattr(args, arg, True)
 
-    rel_root = Path.cwd()
-
-    read_cell_index()
-    magic_lib = MagicLibrary(LIB_PATH['mag'])
-    xschem_lib = XschemLibrary(LIB_PATH['xschem'])
-
     if args.basic_checks:
         run_basic_checks()
 
@@ -1876,7 +1893,15 @@ def main():
     # Items here on done on a per-cell basis with Magic opening each one
     magic = Magic()
     for m in magic_lib.values():
-        handle_magic(m, centering, add_props)
+        if graph.out_edges(m) != []: #No children, can be centered without missing top level
+            handle_magic(m, centering, add_props, graph)
+        else:
+            for child in graph.predecessors(m):
+                if graph.succ[child]['centered'] == False:
+
+
+                    pass
+
 
     # The following items can be done on the batch level:
     if args.lvs:

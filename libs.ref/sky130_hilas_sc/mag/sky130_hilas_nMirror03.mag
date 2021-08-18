@@ -1,75 +1,81 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1629137270
+<< checkpaint >>
+rect -545 759 804 777
+rect -581 694 804 759
+rect -586 693 804 694
+rect -608 -600 804 693
+rect -545 -610 804 -600
 << error_s >>
-rect 26 110 53 116
-rect 26 68 53 74
-rect 78 67 101 73
-rect 78 50 81 67
-rect 26 43 53 49
-rect 78 44 101 50
-rect 26 1 53 7
+rect 85 116 112 122
+rect 85 74 112 80
+rect 137 73 160 79
+rect 137 56 140 73
+rect 85 49 112 55
+rect 137 50 160 56
+rect 85 7 112 13
 << nmos >>
-rect 26 109 53 110
-rect 26 7 53 8
+rect 85 115 112 116
+rect 85 13 112 14
 << ndiff >>
-rect -5 109 26 110
-rect 53 109 84 110
-rect -5 7 26 8
-rect 53 7 84 8
+rect 54 115 85 116
+rect 112 115 143 116
+rect 54 13 85 14
+rect 112 13 143 14
 << psubdiff >>
-rect 84 100 125 110
-rect 84 83 96 100
-rect 113 83 125 100
-rect 84 74 125 83
-rect 84 34 125 43
-rect 84 17 96 34
-rect 113 17 125 34
-rect 84 7 125 17
+rect 143 106 184 116
+rect 143 89 155 106
+rect 172 89 184 106
+rect 143 80 184 89
+rect 143 40 184 49
+rect 143 23 155 40
+rect 172 23 184 40
+rect 143 13 184 23
 << psubdiffcont >>
-rect 96 83 113 100
-rect 96 17 113 34
+rect 155 89 172 106
+rect 155 23 172 40
 << poly >>
-rect 26 122 53 123
-rect -46 56 53 66
-rect -46 51 26 56
-rect -46 43 -19 51
-rect 26 -6 53 -5
+rect 85 128 112 129
+rect 13 62 112 72
+rect 13 57 85 62
+rect 13 49 40 57
+rect 85 0 112 1
 << locali >>
-rect 79 100 114 108
-rect 79 83 96 100
-rect 113 83 114 100
-rect 59 75 78 76
-rect 79 75 114 83
-rect 59 42 114 75
-rect 79 34 114 42
-rect 79 17 96 34
-rect 113 17 114 34
-rect 79 9 114 17
+rect 138 106 173 114
+rect 138 89 155 106
+rect 172 89 173 106
+rect 118 81 137 82
+rect 138 81 173 89
+rect 118 48 173 81
+rect 138 40 173 48
+rect 138 23 155 40
+rect 172 23 173 40
+rect 138 15 173 23
 << metal2 >>
-rect -59 14 -26 35
-use sky130_hilas_poly2li  sky130_hilas_poly2li_0
-timestamp 1628285143
-transform 1 0 -37 0 1 24
-box -9 -14 18 19
-use sky130_hilas_nFET03  sky130_hilas_nFET03_0
-timestamp 1628285143
-transform 1 0 26 0 1 14
-box -31 -19 58 42
-use sky130_hilas_nFET03  sky130_hilas_nFET03_1
-timestamp 1628285143
-transform 1 0 26 0 1 80
-box -31 -19 58 42
+rect 0 20 33 41
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1628285143
-transform 1 0 -10 0 1 90
-box -14 -15 20 18
+timestamp 1629137146
+transform 1 0 49 0 1 96
+box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1628285143
-transform 1 0 -15 0 1 25
-box -14 -15 20 18
+timestamp 1629137146
+transform 1 0 44 0 1 31
+box 0 0 34 33
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1628285143
-transform 1 0 88 0 1 52
-box -10 -8 13 21
+timestamp 1629137137
+transform 1 0 147 0 1 58
+box 0 0 23 29
+use sky130_hilas_nFET03  sky130_hilas_nFET03_0
+timestamp 1629137184
+transform 1 0 85 0 1 20
+box 0 0 89 61
+use sky130_hilas_nFET03  sky130_hilas_nFET03_1
+timestamp 1629137184
+transform 1 0 85 0 1 86
+box 0 0 89 61
+use sky130_hilas_poly2li  sky130_hilas_poly2li_0
+timestamp 1629137155
+transform 1 0 22 0 1 30
+box 0 0 27 33
 << end >>
