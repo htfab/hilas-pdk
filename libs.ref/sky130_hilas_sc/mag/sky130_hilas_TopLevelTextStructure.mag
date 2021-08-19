@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628285143
+timestamp 1629332956
 << error_s >>
 rect 2364 6133 2393 6149
 rect 2443 6133 2472 6149
@@ -2948,8 +2948,8 @@ rect 4954 2758 4997 2781
 rect 284 2627 411 2711
 rect 4954 2710 4974 2758
 rect 5552 2732 5782 2750
-rect 5552 2731 5572 2732
-rect 5531 2713 5572 2731
+rect 5552 2731 5594 2732
+rect 5531 2713 5594 2731
 rect 4930 2690 4974 2710
 rect 1801 2653 1832 2655
 rect 1867 2653 1898 2655
@@ -3172,6 +3172,7 @@ rect 4926 1784 4991 1804
 rect 5531 1799 5725 1804
 rect 5531 1786 5580 1799
 rect 683 1747 763 1752
+rect 5709 1747 5741 1763
 rect 5606 1743 5638 1744
 rect 4945 1713 4948 1739
 rect 4974 1734 4977 1739
@@ -3181,13 +3182,12 @@ rect 4974 1713 4977 1718
 rect 5606 1717 5609 1718
 rect 5635 1717 5638 1743
 rect 5606 1716 5638 1717
-rect 5709 1742 5741 1763
+rect 5709 1742 6074 1747
 rect 5709 1716 5712 1742
-rect 5738 1732 5741 1742
+rect 5738 1734 6074 1742
 rect 6771 1744 6812 1745
 rect 6771 1734 6774 1744
-rect 6074 1732 6774 1734
-rect 5738 1718 6774 1732
+rect 5738 1718 6774 1734
 rect 5738 1716 5741 1718
 rect 5709 1715 5741 1716
 rect 6066 1711 6774 1718
@@ -3662,6 +3662,14 @@ use sky130_hilas_Trans2med  sky130_hilas_Trans2med_0
 timestamp 1628285143
 transform 1 0 2073 0 -1 2311
 box -380 -143 -27 452
+use sky130_hilas_LevelShift4InputUp  sky130_hilas_LevelShift4InputUp_3
+timestamp 1628420416
+transform -1 0 4923 0 -1 2334
+box -30 -106 840 594
+use sky130_hilas_LevelShift4InputUp  sky130_hilas_LevelShift4InputUp_2
+timestamp 1628420416
+transform -1 0 4927 0 -1 3240
+box -30 -106 840 594
 use sky130_hilas_WTA4Stage01  sky130_hilas_WTA4Stage01_0
 timestamp 1628285143
 transform 1 0 6825 0 1 1804
@@ -3670,18 +3678,10 @@ use sky130_hilas_drainSelect01  sky130_hilas_drainSelect01_3
 timestamp 1628285143
 transform -1 0 6602 0 -1 2371
 box 1050 -28 1622 631
-use sky130_hilas_LevelShift4InputUp  sky130_hilas_LevelShift4InputUp_3
-timestamp 1628285143
-transform -1 0 4923 0 -1 2334
-box -30 -106 840 594
 use sky130_hilas_drainSelect01  sky130_hilas_drainSelect01_2
 timestamp 1628285143
 transform -1 0 6599 0 -1 3298
 box 1050 -28 1622 631
-use sky130_hilas_LevelShift4InputUp  sky130_hilas_LevelShift4InputUp_2
-timestamp 1628285143
-transform -1 0 4927 0 -1 3240
-box -30 -106 840 594
 use sky130_hilas_pFETLarge  sky130_hilas_pFETLarge_1
 timestamp 1628285143
 transform 1 0 4824 0 1 606
@@ -3706,6 +3706,10 @@ use sky130_hilas_Trans4small  sky130_hilas_Trans4small_0
 timestamp 1628285143
 transform 1 0 1738 0 1 4259
 box 191 -150 471 455
+use sky130_hilas_LevelShift4InputUp  sky130_hilas_LevelShift4InputUp_1
+timestamp 1628420416
+transform -1 0 4927 0 -1 4253
+box -30 -106 840 594
 use sky130_hilas_swc4x2cell  sky130_hilas_swc4x2cell_0
 timestamp 1628285143
 transform 1 0 6765 0 1 2702
@@ -3722,10 +3726,6 @@ use sky130_hilas_drainSelect01  sky130_hilas_drainSelect01_1
 timestamp 1628285143
 transform -1 0 6601 0 -1 4345
 box 1050 -28 1622 631
-use sky130_hilas_LevelShift4InputUp  sky130_hilas_LevelShift4InputUp_1
-timestamp 1628285143
-transform -1 0 4927 0 -1 4253
-box -30 -106 840 594
 use sky130_hilas_Tgate4Single01  sky130_hilas_Tgate4Single01_0
 timestamp 1628285143
 transform 1 0 10780 0 1 3947
@@ -3735,7 +3735,7 @@ timestamp 1628285143
 transform -1 0 2682 0 1 5308
 box -912 259 2083 864
 use sky130_hilas_LevelShift4InputUp  sky130_hilas_LevelShift4InputUp_0
-timestamp 1628285143
+timestamp 1628420416
 transform -1 0 4927 0 1 4476
 box -30 -106 840 594
 << labels >>
