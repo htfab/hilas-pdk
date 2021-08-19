@@ -109,11 +109,15 @@ Width: 8.700
 |----------------------|----------------------|----------------------|----------------------|
 | 5                    | VPWR                 | metal1               | nsew                 |
 | 6                    | VINJ                 | metal1               | nsew                 |
-| 7                    | OUTPUT1              | space                | nsew                 |
-| 8                    | OUTPUT2              | space                | nsew                 |
-| 9                    | OUTPUT3              | space                | nsew                 |
+| 7                    | OUTPUT1              | metal2               | nsew                 |
+| 8                    | OUTPUT2              | metal2               | nsew                 |
+| 9                    | OUTPUT3              | metal2               | nsew                 |
 | 10                   | OUTPUT4              | metal2               | nsew                 |
 | 11                   | VGND                 | metal1               | nsew                 |
+| 12                   | INPUT1               | metal2               | nsew                 |
+| 13                   | INPUT2               | metal2               | nsew                 |
+| 14                   | INPUT3               | metal2               | nsew                 |
+| 15                   | INPUT4               | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-StepUpDigital"></a>
 ### `sky130_hilas_StepUpDigital`

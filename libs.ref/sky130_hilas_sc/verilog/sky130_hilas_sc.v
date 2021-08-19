@@ -5168,14 +5168,28 @@ endmodule
 `celldefine
 module sky130_hilas_LevelShift4InputUp (
     VINJ,
+    OUTPUT1,
+    OUTPUT2,
+    OUTPUT3,
     OUTPUT4,
+    INPUT1,
+    INPUT2,
+    INPUT3,
+    INPUT4,
     VPWR,
     VGND,
     VNB,
     VPB
 );
         inout VINJ;
+        inout OUTPUT1;
+        inout OUTPUT2;
+        inout OUTPUT3;
         inout OUTPUT4;
+        inout INPUT1;
+        inout INPUT2;
+        inout INPUT3;
+        inout INPUT4;
         inout VPWR;
         inout VGND;
         inout VNB;
@@ -5190,10 +5204,24 @@ endmodule
 `celldefine
 module sky130_hilas_LevelShift4InputUp (
     VINJ,
-    OUTPUT4
+    OUTPUT1,
+    OUTPUT2,
+    OUTPUT3,
+    OUTPUT4,
+    INPUT1,
+    INPUT2,
+    INPUT3,
+    INPUT4
 );
         inout VINJ;
+        inout OUTPUT1;
+        inout OUTPUT2;
+        inout OUTPUT3;
         inout OUTPUT4;
+        inout INPUT1;
+        inout INPUT2;
+        inout INPUT3;
+        inout INPUT4;
 endmodule
 `endcelldefine
 
