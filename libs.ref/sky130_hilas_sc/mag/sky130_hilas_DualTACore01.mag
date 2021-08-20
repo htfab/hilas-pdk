@@ -1,90 +1,86 @@
 magic
 tech sky130A
-timestamp 1629137248
+timestamp 1629472358
 << checkpaint >>
-rect -370 1312 1023 1376
-rect -545 1294 1023 1312
-rect -581 1229 1023 1294
-rect -586 1228 1023 1229
-rect -608 -479 1023 1228
-rect -586 -480 1023 -479
-rect -581 -545 1023 -480
-rect -545 -563 1023 -545
-rect -370 -630 1023 -563
+rect -405 1318 988 1376
+rect -606 1312 988 1318
+rect -665 -563 988 1312
+rect -606 -569 988 -563
+rect -405 -630 988 -569
 << error_s >>
-rect 85 651 112 657
-rect 85 609 112 615
-rect 85 584 112 590
-rect 85 542 112 548
-rect 85 501 112 507
-rect 85 459 112 465
-rect 85 434 112 440
-rect 85 392 112 398
-rect 85 351 112 357
-rect 85 309 112 315
-rect 85 284 112 290
-rect 85 242 112 248
-rect 85 201 112 207
-rect 85 159 112 165
-rect 85 134 112 140
-rect 85 92 112 98
+rect 50 651 77 657
+rect 50 609 77 615
+rect 50 584 77 590
+rect 50 542 77 548
+rect 50 501 77 507
+rect 50 459 77 465
+rect 50 434 77 440
+rect 50 392 77 398
+rect 50 351 77 357
+rect 50 309 77 315
+rect 50 284 77 290
+rect 50 242 77 248
+rect 50 201 77 207
+rect 50 159 77 165
+rect 50 134 77 140
+rect 50 92 77 98
 << metal1 >>
-rect 131 89 165 661
-rect 198 90 225 660
+rect 96 89 130 661
+rect 163 90 190 660
 << metal2 >>
-rect 36 618 290 641
-rect 62 404 327 427
-rect 36 322 327 344
-rect 35 105 306 128
-use sky130_hilas_nMirror03  sky130_hilas_nMirror03_0
-timestamp 1628285143
-transform 1 0 59 0 -1 208
-box -59 -6 125 141
-use sky130_hilas_nMirror03  sky130_hilas_nMirror03_1
-timestamp 1628285143
-transform 1 0 59 0 1 241
-box -59 -6 125 141
+rect 1 618 255 641
+rect 27 404 292 427
+rect 1 322 292 344
+rect 0 105 271 128
 use sky130_hilas_li2m1  sky130_hilas_li2m1_1
 timestamp 1629137137
-transform 1 0 213 0 1 237
+transform 1 0 178 0 1 237
 box 0 0 23 29
 use sky130_hilas_li2m2  sky130_hilas_li2m2_3
 timestamp 1629137146
-transform 1 0 270 0 1 114
+transform 1 0 235 0 1 114
 box 0 0 34 33
 use sky130_hilas_pFETmirror02  sky130_hilas_pFETmirror02_0
 timestamp 1629137204
-transform 1 0 260 0 1 0
+transform 1 0 225 0 1 0
 box 0 0 133 292
-use sky130_hilas_nMirror03  sky130_hilas_nMirror03_2
-timestamp 1628285143
-transform 1 0 59 0 1 541
-box -59 -6 125 141
-use sky130_hilas_nMirror03  sky130_hilas_nMirror03_3
-timestamp 1628285143
-transform 1 0 59 0 -1 508
-box -59 -6 125 141
+use sky130_hilas_nMirror03  sky130_hilas_nMirror03_1
+timestamp 1629137270
+transform 1 0 24 0 1 241
+box 0 0 184 147
+use sky130_hilas_nMirror03  sky130_hilas_nMirror03_0
+timestamp 1629137270
+transform 1 0 24 0 -1 208
+box 0 0 184 147
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
 timestamp 1629137137
-transform 1 0 213 0 1 496
+transform 1 0 178 0 1 496
 box 0 0 23 29
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
 timestamp 1629137146
-transform 1 0 279 0 1 411
+transform 1 0 244 0 1 411
 box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
 timestamp 1629137146
-transform 1 0 278 0 1 339
+transform 1 0 243 0 1 339
 box 0 0 34 33
 use sky130_hilas_pFETmirror02  sky130_hilas_pFETmirror02_1
 timestamp 1629137204
-transform 1 0 260 0 -1 746
+transform 1 0 225 0 -1 746
 box 0 0 133 292
+use sky130_hilas_nMirror03  sky130_hilas_nMirror03_3
+timestamp 1629137270
+transform 1 0 24 0 -1 508
+box 0 0 184 147
+use sky130_hilas_nMirror03  sky130_hilas_nMirror03_2
+timestamp 1629137270
+transform 1 0 24 0 1 541
+box 0 0 184 147
 use sky130_hilas_li2m2  sky130_hilas_li2m2_2
 timestamp 1629137146
-transform 1 0 274 0 1 633
+transform 1 0 239 0 1 633
 box 0 0 34 33
 << labels >>
-rlabel metal2 316 404 327 427 0 output1
-rlabel space 316 322 327 345 0 output2
+rlabel metal2 281 404 292 427 0 output1
+rlabel space 281 322 292 345 0 output2
 << end >>

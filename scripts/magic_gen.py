@@ -1501,7 +1501,7 @@ def handle_magic(magic_file, center_origin, add_properties, cell_graph):
 
         match_obj = re.search(r'^\s*ORIGIN\s+([-]?\d+[.]\d+)\s+([-]?\d+[.]\d+)\s*\s*;\s*$', all_text, re.MULTILINE)
         if match_obj:
-            print(cell_graph.nodes)
+            # print(cell_graph.nodes)
             x_coord = float(match_obj.group(1))
             y_coord = float(match_obj.group(2))
             if x_coord != 0.0 or y_coord != 0.0:
@@ -1782,12 +1782,13 @@ def make_hierarchy(mag_lib):
     G = nx.DiGraph()
     for m in mag_lib:
         if G.has_node(m):
-            print("Node already found")
+            assert "Node already found"
         else:
             G.add_node(m, children=m.references, centered=False)
             for child in m.references:
                 child_magic = next(x for x in mag_lib if x.long_name == child)
                 if not G.has_node(child_magic):
+                    G.add_node(child_magic, children=m.references, centered=False)
                     G.add_edge(m, child_magic)
     return G
 
@@ -1893,14 +1894,15 @@ def main():
     # Items here on done on a per-cell basis with Magic opening each one
     magic = Magic()
     for m in magic_lib.values():
-        if graph.out_edges(m) != []: #No children, can be centered without missing top level
-            handle_magic(m, centering, add_props, graph)
-        else:
-            for child in graph.predecessors(m):
-                if graph.succ[child]['centered'] == False:
-
-
-                    pass
+        handle_magic(m, centering, add_props, graph)
+        # if graph.out_edges(m) == []: #No children, can be centered without missing top level
+        #     handle_magic(m, centering, add_props, graph)
+        # else:
+        #     for child in graph.successors(m):
+        #         if graph.succ[child]['centered'] == False:
+        #
+        #
+        #             pass
 
 
     # The following items can be done on the batch level:
