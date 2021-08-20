@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1628420416
+timestamp 1629420194
 << error_s >>
 rect 35 554 85 560
 rect 358 555 408 561
@@ -84,21 +84,21 @@ rect -30 180 -11 200
 rect 830 87 840 119
 rect -30 5 -14 25
 rect 830 -88 840 -56
-use sky130_hilas_StepUpDigital  StepUpDigital_0
-timestamp 1628285143
-transform 1 0 -49 0 1 113
-box 19 -44 889 131
-use sky130_hilas_StepUpDigital  StepUpDigital_3
-timestamp 1628285143
-transform 1 0 -49 0 1 -62
+use sky130_hilas_StepUpDigital  StepUpDigital_2
+timestamp 1629420194
+transform 1 0 -49 0 1 463
 box 19 -44 889 131
 use sky130_hilas_StepUpDigital  StepUpDigital_1
-timestamp 1628285143
+timestamp 1629420194
 transform 1 0 -49 0 1 288
 box 19 -44 889 131
-use sky130_hilas_StepUpDigital  StepUpDigital_2
-timestamp 1628285143
-transform 1 0 -49 0 1 463
+use sky130_hilas_StepUpDigital  StepUpDigital_3
+timestamp 1629420194
+transform 1 0 -49 0 1 -62
+box 19 -44 889 131
+use sky130_hilas_StepUpDigital  StepUpDigital_0
+timestamp 1629420194
+transform 1 0 -49 0 1 113
 box 19 -44 889 131
 << labels >>
 rlabel metal1 4 -102 33 -97 0 VINJ
