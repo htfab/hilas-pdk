@@ -162,7 +162,7 @@ Width: 16.580
 
 Description: None
 
-Height: 6.150
+Height: 6.930
 <br>
 Width: 11.530
 
@@ -269,7 +269,7 @@ Width: 8.700
 Description: Two transimpedance amps with one (of two) amplifiers using floating-gate
   inputs. FG amplifier with wide linear range.
 
-Height: 6.150
+Height: 6.930
 <br>
 Width: 28.090
 
@@ -297,7 +297,7 @@ Width: 28.090
 
 Description: Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with normal linear range.
 
-Height: 6.150
+Height: 6.930
 <br>
 Width: 28.100
 
@@ -327,7 +327,7 @@ Width: 28.100
 
 Description: Two transimpedane amplifiers with no floating-gate inputs.
 
-Height: 6.150
+Height: 6.930
 <br>
 Width: 17.920
 
