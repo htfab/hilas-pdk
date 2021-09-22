@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1629137152
+timestamp 1632251369
 << nmos >>
 rect 8 15 14 18
 << pmos >>
@@ -57,4 +57,8 @@ rect 46 12 52 30
 rect 46 8 47 12
 rect 51 8 52 12
 rect 46 3 52 8
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

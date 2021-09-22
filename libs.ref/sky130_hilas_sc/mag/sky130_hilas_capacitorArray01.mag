@@ -1,10 +1,10 @@
 magic
 tech sky130A
-timestamp 1629472364
+timestamp 1632257801
 << checkpaint >>
 rect -366 1657 2918 2102
-rect -629 -248 2918 1657
-rect -629 -693 2655 -248
+rect -629 -289 2918 1657
+rect -629 -652 2255 -289
 << error_s >>
 rect 432 542 438 548
 rect 537 542 543 548
@@ -140,31 +140,31 @@ rect 1155 55 1185 79
 rect 3368 55 3398 136
 rect 1155 25 3398 55
 use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_1
-timestamp 1629137274
+timestamp 1632256337
 transform 1 0 264 0 1 382
 box 0 0 2024 1090
 use sky130_hilas_cellAttempt01  sky130_hilas_cellAttempt01_0
-timestamp 1629137274
+timestamp 1632256337
 transform 1 0 264 0 1 382
 box 0 0 2024 1090
-use sky130_hilas_m12m2  sky130_hilas_m12m2_1
-timestamp 1629137154
+use sky130_hilas_m12m2  sky130_hilas_m12m2_0
+timestamp 1632251372
 transform 1 0 876 0 1 581
 box 0 0 32 32
-use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1629137154
+use sky130_hilas_m12m2  sky130_hilas_m12m2_1
+timestamp 1632251372
 transform 1 0 876 0 1 581
 box 0 0 32 32
 use sky130_hilas_m22m4  sky130_hilas_m22m4_3
-timestamp 1629137164
+timestamp 1632251386
 transform 1 0 1107 0 1 109
 box 0 0 79 75
 use sky130_hilas_m22m4  sky130_hilas_m22m4_2
-timestamp 1629137164
+timestamp 1632251386
 transform 1 0 998 0 1 196
 box 0 0 79 75
 use sky130_hilas_m22m4  sky130_hilas_m22m4_1
-timestamp 1629137164
+timestamp 1632251386
 transform 1 0 1002 0 1 405
 box 0 0 79 75
 << labels >>
@@ -211,4 +211,8 @@ rlabel metal1 280 0 304 7 0 VGND
 port 12 nsew
 rlabel metal1 673 0 697 7 0 VGND
 port 12 nsew
+<< properties >>
+string LEFclass CORE
+string LEFsite unithd
+string LEFsymmetry X Y R90
 << end >>

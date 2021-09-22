@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1629137143
+timestamp 1632251351
 << psubdiff >>
 rect 34 873 5355 877
 rect 34 856 72 873
@@ -272,4 +272,8 @@ rlabel metal1 2675 0 2923 27 0 OUTPUT
 port 3 nsew
 rlabel metal1 27 7 68 18 0 VGND
 port 4 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

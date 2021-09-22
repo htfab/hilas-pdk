@@ -143,9 +143,9 @@ idea to start by taking a look at the [Fastlane Page](https://gitlab.com/um-ece/
 
 Description: 5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit, and they would use this cell
 
-Height: 7.990
+Height: 8.190
 <br>
-Width: 16.580
+Width: 16.990
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -375,9 +375,9 @@ Width: 11.810
 
 Description: 4 double-throw transmission gates
 
-Height: 6.050
+Height: 6.950
 <br>
-Width: 7.080
+Width: 9.710
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -407,7 +407,7 @@ Description: 4 single-throw transmission gates
 
 Height: 10.470
 <br>
-Width: 7.390
+Width: 7.460
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -584,7 +584,7 @@ Description: 3 small nFETs + 3 small pFETs
 
 Height: 6.460
 <br>
-Width: 3.400
+Width: 3.470
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -677,7 +677,7 @@ Description: 4-input winner-take-all circuit. Connects directly to array of swc4
 
 Height: 14.870
 <br>
-Width: 26.920
+Width: 27.980
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -813,7 +813,7 @@ Width: 20.240
 
 Description: multiplexor for drain selection for 4 drain lines, pitch matched
 
-Height: 6.110
+Height: 6.140
 <br>
 Width: 8.000
 
@@ -850,9 +850,9 @@ Width: 5.570
 
 Description: Single Large (W/L=100) pFET Transistor
 
-Height: 5.990
+Height: 6.070
 <br>
-Width: 4.640
+Width: 5.080
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1051,9 +1051,9 @@ Width: 4.230
 
 Description: None
 
-Height: 6.230
+Height: 6.010
 <br>
-Width: 1.910
+Width: 1.730
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1063,9 +1063,9 @@ Width: 1.910
 
 Description: None
 
-Height: 6.230
+Height: 6.010
 <br>
-Width: 1.900
+Width: 1.720
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1075,9 +1075,9 @@ Width: 1.900
 
 Description: None
 
-Height: 6.230
+Height: 6.010
 <br>
-Width: 2.090
+Width: 1.910
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1087,9 +1087,9 @@ Width: 2.090
 
 Description: None
 
-Height: 6.230
+Height: 6.010
 <br>
-Width: 2.060
+Width: 1.880
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1099,7 +1099,7 @@ Width: 2.060
 
 Description: None
 
-Height: 15.990
+Height: 15.770
 <br>
 Width: 16.390
 
@@ -1123,7 +1123,7 @@ Width: 7.430
 
 Description: None
 
-Height: 7.460
+Height: 7.520
 <br>
 Width: 3.580
 
@@ -1209,7 +1209,7 @@ Description: None
 
 Height: 3.380
 <br>
-Width: 4.760
+Width: 4.830
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1257,7 +1257,7 @@ Description: None
 
 Height: 21.240
 <br>
-Width: 57.530
+Width: 58.590
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1327,7 +1327,7 @@ Width: 4.360
 
 Description: None
 
-Height: 1.470
+Height: 1.590
 <br>
 Width: 1.840
 
@@ -1431,7 +1431,7 @@ Description: None
 
 Height: 5.930
 <br>
-Width: 4.400
+Width: 4.680
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1505,7 +1505,7 @@ Description: decoupling cap (intended as fill), variant
 
 Height: 6.040
 <br>
-Width: 3.890
+Width: 4.710
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|

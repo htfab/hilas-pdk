@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1629137211
+timestamp 1632256361
 << checkpaint >>
 rect -630 -586 1466 1417
 << error_s >>
@@ -86,21 +86,21 @@ rect 19 286 38 306
 rect 879 193 889 225
 rect 19 111 35 131
 rect 879 18 889 50
-use sky130_hilas_StepUpDigital  StepUpDigital_0
-timestamp 1629137198
-transform 1 0 0 0 1 219
-box 0 0 836 218
-use sky130_hilas_StepUpDigital  StepUpDigital_3
-timestamp 1629137198
-transform 1 0 0 0 1 44
+use sky130_hilas_StepUpDigital  StepUpDigital_2
+timestamp 1632256343
+transform 1 0 0 0 1 569
 box 0 0 836 218
 use sky130_hilas_StepUpDigital  StepUpDigital_1
-timestamp 1629137198
+timestamp 1632256343
 transform 1 0 0 0 1 394
 box 0 0 836 218
-use sky130_hilas_StepUpDigital  StepUpDigital_2
-timestamp 1629137198
-transform 1 0 0 0 1 569
+use sky130_hilas_StepUpDigital  StepUpDigital_3
+timestamp 1632256343
+transform 1 0 0 0 1 44
+box 0 0 836 218
+use sky130_hilas_StepUpDigital  StepUpDigital_0
+timestamp 1632256343
+transform 1 0 0 0 1 219
 box 0 0 836 218
 << labels >>
 rlabel metal1 53 4 82 9 0 VINJ
@@ -131,4 +131,8 @@ rlabel metal1 785 695 809 700 0 VPWR
 port 5 nsew
 rlabel metal1 785 0 809 5 0 VPWR
 port 5 nsew
+<< properties >>
+string LEFclass CORE
+string LEFsite unithd
+string LEFsymmetry X Y R90
 << end >>

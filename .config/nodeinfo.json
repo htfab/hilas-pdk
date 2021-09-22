@@ -1,9 +1,10 @@
 {
     "foundry" : "SW",
     "foundry-name" : "SkyWater",
-    "node" : "sky130A",
+    "node" : "sky130A_hilas",
     "feature-size" : "130nm",
     "status" : "active",
+    "commit": "02a2802d726910deba14383792011c185b347b66"
     "description" : "Skywater 0.13um CMOS, local interconntect + high-resistance poly + 5 metal layer backend stack + MiM caps + redistribution layer",
     "options" : [
         "METAL5",
@@ -11,6 +12,23 @@
         "REDISTRIBUTION"
     ],
     "stdcells" : [
-	"sky130_hilas_sc",
+	"sky130_fd_sc_hd": "ac7fb61f06e6470b94e8afdf7c25268f62fbd7b1",
+	"sky130_hilas_sc"
     ],
+    "iocells": {
+        "sky130_fd_io": "01b18699b4102d8e54ad1406b3991ecb652e5aee"
+    },
+    "primitive": {
+	"sky130_fd_pr": "f62031a1be9aefe902d6d54cddd6f59b57627436"
+    },
+    "memory": {
+	"sky130_sram_macros": "a4066fe72816cb8554303cb1faef6abf1377cb28"
+    },
+    "other": {
+	"sky130_ml_xx_hd": "6c05bc48dc88784f9d98b89d6791cdfd91526676"
+    },
+    "build": {
+	"magic": "8.3.209",
+	"open_pdks": "1.0.225"
+    }
 }

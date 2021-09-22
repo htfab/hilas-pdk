@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1629137160
+timestamp 1632251379
 << error_p >>
 rect 307 88 308 91
 << nwell >>
@@ -146,4 +146,8 @@ rlabel metal1 318 9 341 15 0 GND
 rlabel metal2 0 103 10 121 0 Input
 rlabel metal2 352 103 361 121 0 Input
 rlabel metal2 352 36 361 54 0 Output
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

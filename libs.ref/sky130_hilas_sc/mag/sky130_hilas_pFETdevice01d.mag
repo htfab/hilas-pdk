@@ -1,49 +1,56 @@
 magic
 tech sky130A
-timestamp 1629137210
-<< checkpaint >>
-rect -630 681 663 816
-rect -630 -495 821 681
-rect -472 -630 821 -495
+magscale 1 2
+timestamp 1632255311
 << error_s >>
-rect 67 148 106 151
-rect 67 106 106 109
+rect 33 322 50 343
+rect 134 296 212 302
+rect 134 212 212 218
+rect 314 138 316 146
+rect 268 108 282 134
+rect 314 108 316 116
+rect 268 104 316 108
+rect 286 88 316 104
 << nwell >>
-rect 6 50 167 171
+rect 12 100 334 342
 << pmos >>
-rect 67 109 106 148
+rect 134 218 212 296
 << pdiff >>
-rect 40 137 67 148
-rect 40 120 44 137
-rect 61 120 67 137
-rect 40 109 67 120
-rect 106 137 133 148
-rect 106 120 112 137
-rect 129 120 133 137
-rect 106 109 133 120
+rect 80 274 134 296
+rect 80 240 88 274
+rect 122 240 134 274
+rect 80 218 134 240
+rect 212 274 266 296
+rect 212 240 224 274
+rect 258 240 266 274
+rect 212 218 266 240
 << pdiffc >>
-rect 44 120 61 137
-rect 112 120 129 137
+rect 88 240 122 274
+rect 224 240 258 274
 << poly >>
-rect 67 148 106 161
-rect 67 101 106 109
-rect 67 86 157 101
-rect 141 69 157 86
-rect 141 58 158 69
-rect 141 54 157 58
-rect 143 52 157 54
-rect 143 44 149 52
+rect 134 296 212 322
+rect 134 202 212 218
+rect 134 172 314 202
+rect 282 138 314 172
+rect 282 116 316 138
+rect 282 108 314 116
+rect 286 104 314 108
+rect 286 88 298 104
 << locali >>
-rect 44 137 61 145
-rect 44 112 61 120
-rect 112 137 129 145
-rect 112 112 129 120
+rect 88 274 122 290
+rect 88 224 122 240
+rect 224 274 258 290
+rect 224 224 258 240
 use sky130_hilas_poly2m1  sky130_hilas_poly2m1_2
-timestamp 1629137133
-transform 1 0 158 0 -1 51
-box 0 0 33 51
+timestamp 1632251319
+transform 1 0 316 0 -1 102
+box 0 0 66 102
 use sky130_hilas_poly2m1  sky130_hilas_poly2m1_0
-timestamp 1629137133
-transform 1 0 0 0 1 135
-box 0 0 33 51
+timestamp 1632251319
+transform 1 0 0 0 1 270
+box 0 0 66 102
+<< properties >>
+string LEFclass CORE
+string LEFsite unithd
+string LEFsymmetry X Y R90
 << end >>

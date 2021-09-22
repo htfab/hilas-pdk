@@ -29,6 +29,7 @@
 set XSCHEM_LIBRARY_PATH {}
 #### include devices/*.sym
 append XSCHEM_LIBRARY_PATH ${XSCHEM_SHAREDIR}/xschem_library
+append XSCHEM_LIBRARY_PATH /home/phardytx/Work/fastlane/pdks/sky130A_hilas/libs.ref/sky130_hilas_sc/xschem
 #### include skywater libraries. Here i use [pwd]. This works if i start xschem from here.
 append XSCHEM_LIBRARY_PATH :$env(PWD)
 # append XSCHEM_LIBRARY_PATH :/mnt/sda7/home/schippes/pdks/sky130A/libs.tech/xschem

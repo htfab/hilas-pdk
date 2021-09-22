@@ -1,13 +1,15 @@
 magic
 tech sky130A
-timestamp 1629137250
+timestamp 1632257804
 << checkpaint >>
 rect 822 1537 2255 1681
 rect 819 1387 2255 1537
-rect 138 1078 2255 1387
-rect 137 -184 2255 1078
-rect 137 -544 1927 -184
-rect 411 -630 1927 -544
+rect 138 1287 2255 1387
+rect 122 1096 2255 1287
+rect -629 -184 2255 1096
+rect -629 -350 1927 -184
+rect 122 -589 1927 -350
+rect 411 -630 1927 -589
 << error_s >>
 rect 531 658 560 686
 rect 610 658 639 686
@@ -333,56 +335,60 @@ rect 2 240 764 257
 rect 2 142 764 159
 rect 80 133 234 142
 rect 2 98 764 115
-use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_2
-timestamp 1629137207
-transform 1 0 1041 0 -1 397
-box 0 0 256 191
-use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_1
-timestamp 1629137207
-transform 1 0 1041 0 1 0
-box 0 0 256 191
-use sky130_hilas_overlapCap01  sky130_hilas_overlapCap01_3
-timestamp 1629137176
-transform 1 0 767 0 1 86
-box 0 0 287 208
 use sky130_hilas_overlapCap01  sky130_hilas_overlapCap01_2
-timestamp 1629137176
+timestamp 1632251423
 transform 1 0 767 0 1 240
 box 0 0 287 208
+use sky130_hilas_overlapCap01  sky130_hilas_overlapCap01_3
+timestamp 1632251423
+transform 1 0 767 0 1 86
+box 0 0 287 208
+use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_1
+timestamp 1632255311
+transform 1 0 1041 0 1 0
+box 0 0 256 191
+use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_2
+timestamp 1632255311
+transform 1 0 1041 0 -1 397
+box 0 0 256 191
+use sky130_hilas_overlapCap01  sky130_hilas_overlapCap01_1
+timestamp 1632251423
+transform 1 0 768 0 1 396
+box 0 0 287 208
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_3
-timestamp 1629137207
+timestamp 1632255311
 transform 1 0 1041 0 -1 698
 box 0 0 256 191
 use sky130_hilas_horizPcell01  sky130_hilas_horizPcell01_0
-timestamp 1629137207
+timestamp 1632255311
 transform 1 0 1041 0 1 300
 box 0 0 256 191
-use sky130_hilas_overlapCap01  sky130_hilas_overlapCap01_1
-timestamp 1629137176
-transform 1 0 768 0 1 396
-box 0 0 287 208
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
-timestamp 1629137126
+timestamp 1632251302
 transform 1 0 1452 0 1 446
 box 0 0 173 190
 use sky130_hilas_overlapCap01  sky130_hilas_overlapCap01_0
-timestamp 1629137176
+timestamp 1632251423
 transform 1 0 768 0 1 549
 box 0 0 287 208
-use sky130_hilas_TunCap01  sky130_hilas_TunCap01_2
-timestamp 1629137126
-transform 1 0 1452 0 1 752
-box 0 0 173 190
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_0
-timestamp 1629137126
+timestamp 1632251302
 transform 1 0 1452 0 1 563
 box 0 0 173 190
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_2
+timestamp 1632251302
+transform 1 0 1452 0 1 752
+box 0 0 173 190
 use sky130_hilas_wellContact  sky130_hilas_wellContact_1
-timestamp 1629137145
+timestamp 1632251355
 transform 1 0 1449 0 1 721
 box 0 0 173 186
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
-timestamp 1629137126
+timestamp 1632251302
 transform 1 0 1452 0 1 861
 box 0 0 173 190
+<< properties >>
+string LEFclass CORE
+string LEFsite unithd
+string LEFsymmetry X Y R90
 << end >>

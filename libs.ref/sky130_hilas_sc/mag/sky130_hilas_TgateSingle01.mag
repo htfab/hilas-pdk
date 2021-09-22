@@ -1,23 +1,37 @@
 magic
 tech sky130A
-timestamp 1629137243
-<< checkpaint >>
-rect -603 786 690 802
-rect -603 780 700 786
-rect -603 759 1028 780
-rect -603 -509 1086 759
-rect -547 -530 1086 -509
-rect -452 -592 1040 -530
-rect -452 -599 999 -592
+timestamp 1632255311
 << error_s >>
+rect 94 308 134 315
+rect 158 280 168 297
+rect 178 284 185 307
+rect 197 296 203 297
+rect 158 273 165 280
+rect 94 266 134 273
+rect 241 270 355 288
+rect 120 247 124 258
+rect 139 248 144 253
+rect 94 241 134 247
+rect 63 217 71 225
+rect 74 217 78 226
+rect 106 225 110 241
+rect 120 239 124 241
+rect 132 217 137 222
+rect 71 209 79 212
+rect 140 209 148 217
+rect 94 199 134 205
+rect 192 186 355 270
+rect 127 161 288 168
+rect 60 124 67 156
+rect 74 115 81 161
+rect 425 157 444 171
 rect 125 127 165 132
-rect 351 127 391 134
+rect 74 110 85 115
+rect 77 103 85 110
 rect 125 85 165 90
-rect 351 85 391 92
-rect 201 60 241 66
-rect 351 60 391 66
-rect 201 18 241 24
-rect 351 18 391 24
+rect 210 5 288 132
+rect 469 114 483 134
+rect 425 0 444 14
 << nwell >>
 rect 12 84 288 161
 rect 12 67 211 84
@@ -88,26 +102,30 @@ rect 87 36 199 37
 rect 0 16 199 36
 rect 87 15 199 16
 use sky130_hilas_poly2m1  sky130_hilas_poly2m1_0
-timestamp 1629137133
+timestamp 1632251319
 transform 1 0 27 0 1 121
 box 0 0 33 51
-use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1629137154
-transform 1 0 38 0 1 124
-box 0 0 32 32
 use sky130_hilas_li2m1  sky130_hilas_li2m1_2
-timestamp 1629137137
+timestamp 1632251332
 transform 1 0 83 0 1 100
 box 0 0 23 29
-use sky130_hilas_TgateSingle01Part2  sky130_hilas_TgateSingle01Part2_0
-timestamp 1628285143
-transform 1 0 192 0 1 186
-box -67 -181 105 -37
+use sky130_hilas_m12m2  sky130_hilas_m12m2_0
+timestamp 1632251372
+transform 1 0 38 0 1 124
+box 0 0 32 32
 use sky130_hilas_TgateSingle01Part1  sky130_hilas_TgateSingle01Part1_0
-timestamp 1628285143
+timestamp 1632255311
 transform 1 0 31 0 1 186
-box 257 -181 445 -29
+box 0 0 188 152
+use sky130_hilas_TgateSingle01Part2  sky130_hilas_TgateSingle01Part2_0
+timestamp 1632255311
+transform 1 0 192 0 1 186
+box 0 0 172 144
 << labels >>
 rlabel metal2 0 114 9 134 0 Select
 rlabel metal2 0 16 9 36 0 Input
+<< properties >>
+string LEFclass CORE
+string LEFsite unithd
+string LEFsymmetry X Y R90
 << end >>

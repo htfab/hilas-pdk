@@ -1,14 +1,14 @@
 magic
 tech sky130A
-timestamp 1629472380
+timestamp 1632257795
 << checkpaint >>
-rect -630 2577 1354 3031
-rect -630 2315 1487 2577
-rect -630 708 1846 2315
-rect -497 309 1846 708
-rect -497 254 1643 309
-rect -299 -176 1643 254
-rect -299 -630 1510 -176
+rect -630 2321 1354 3031
+rect -630 2238 1811 2321
+rect -630 708 1846 2238
+rect -497 268 1846 708
+rect -389 254 1846 268
+rect -299 216 1846 254
+rect -299 -630 1510 216
 << error_s >>
 rect 873 1286 874 1287
 << nwell >>
@@ -204,27 +204,27 @@ rect 373 900 399 925
 << rmetal2 >>
 rect 162 1373 193 1374
 use sky130_hilas_DualTACore01  sky130_hilas_DualTACore01_0
-timestamp 1629472358
+timestamp 1632256331
 transform 1 0 823 0 1 939
-box 0 0 358 746
+box 0 0 358 752
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_2
-timestamp 1629137266
+timestamp 1632255311
 transform 1 0 0 0 1 1338
 box 0 0 549 1063
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
-timestamp 1629137266
+timestamp 1632255311
 transform 1 0 331 0 -1 1063
 box 0 0 549 1063
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_0
-timestamp 1629137266
+timestamp 1632255311
 transform 1 0 175 0 1 1338
 box 0 0 549 1063
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1629137146
+timestamp 1632251356
 transform 1 0 263 0 1 1339
 box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1629137146
+timestamp 1632251356
 transform 1 0 179 0 1 1467
 box 0 0 34 33
 << labels >>
@@ -254,4 +254,8 @@ rlabel metal2 133 1168 140 1192 0 VBIAS1
 port 10 nsew analog default
 rlabel metal2 133 901 140 924 0 VBIAS2
 port 9 nsew analog default
+<< properties >>
+string LEFclass CORE
+string LEFsite unithd
+string LEFsymmetry X Y R90
 << end >>

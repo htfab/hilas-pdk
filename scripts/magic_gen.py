@@ -42,6 +42,7 @@ import matplotlib.pyplot as plt
 from collections import OrderedDict
 from pathlib import Path
 from sys import stderr as STDERR
+from networkx.drawing.nx_agraph import graphviz_layout
 
 import jinja2
 import yaml
@@ -890,17 +891,13 @@ class Magic:
 
     def move_origin(self, source, new_position):
         result = self.renew(source)
-
         result += self.p.run_command('select top cell')
-        result += self.p.run_command('move origin '
-                                     '' + str(new_position[0]) + ' ' + str(new_position[1]))
+        result += self.p.run_command('move origin'+' ' + str(new_position[0]) + ' ' + str(new_position[1]))
         result += self.p.run_command('save')
-
         return result
 
     def add_properties(self, source):
         result = self.renew(source)
-
         result += self.p.run_command('property LEFclass CORE')
         result += self.p.run_command('property LEFsite unithd')
         result += self.p.run_command('property LEFsymmetry "X Y R90"')
@@ -909,7 +906,6 @@ class Magic:
     def make_lef(self, source):
 
         result = self.renew(source)
-
         # result += self.p.run_command('lef write -toplayer -hide')
         result += self.p.run_command('lef write -toplayer')
         # result += self.p.run_command('lef write')
@@ -1478,6 +1474,7 @@ def target_check(magic_file, type):
 
 
 def handle_magic(magic_file, center_origin, add_properties, cell_graph):
+
     if not any([
         target_check(magic_file, 'gds'),
         target_check(magic_file, 'temp_lef'),
@@ -1492,14 +1489,16 @@ def handle_magic(magic_file, center_origin, add_properties, cell_graph):
         magic.add_properties(magic_file.file)
 
     if center_origin:
+
         WAS_MOVED = False
         make_temp_lef(magic_file)
         target = (LIB_PATH['temp_lef'] / magic_file.long_name).with_suffix('.lef')  # setting target path
-        with open(target, mode='r',
-                  newline='\n') as lef:  # Open the lef we just made and look for the keyword ORIGIN
+
+        with open(target, mode='r', newline='\n') as lef:  # Open the lef we just made and look for the keyword ORIGIN
             all_text = lef.read()
 
         match_obj = re.search(r'^\s*ORIGIN\s+([-]?\d+[.]\d+)\s+([-]?\d+[.]\d+)\s*\s*;\s*$', all_text, re.MULTILINE)
+
         if match_obj:
             # print(cell_graph.nodes)
             x_coord = float(match_obj.group(1))
@@ -1779,17 +1778,13 @@ def read_cell_index():
     cd = LibraryInfo(CELL_DATA_FILE)
 
 def make_hierarchy(mag_lib):
-    G = nx.DiGraph()
-    for m in mag_lib:
-        if G.has_node(m):
-            assert "Node already found"
-        else:
-            G.add_node(m, children=m.references, centered=False)
-            for child in m.references:
-                child_magic = next(x for x in mag_lib if x.long_name == child)
-                if not G.has_node(child_magic):
-                    G.add_node(child_magic, children=m.references, centered=False)
-                    G.add_edge(m, child_magic)
+    G = nx.DiGraph(overlap='false', nodesep=0.45) #make empty directed graph
+    for m in mag_lib: #load the magic file of each cell
+        if not G.has_node(m.long_name):
+            G.add_node(m.long_name, children=m.references, centered=False)
+        for child in m.references:
+            child_magic = magic_lib.by_shortname(child)
+            G.add_edge(m.long_name, child_magic.long_name)
     return G
 
 def main():
@@ -1844,6 +1839,9 @@ def main():
     ap.add_argument('--write-properties', action='store_true',
                     help='Make refresh, adds properties to magic files, centers magic file origin to 0,0',
                     default=False)
+    ap.add_argument('--make-graph', action='store_true',
+                    help='Iterates through magic library and returns a dependency graph',
+                    default=False)
 
     args = ap.parse_args()
 
@@ -1852,17 +1850,28 @@ def main():
     read_cell_index()
     magic_lib = MagicLibrary(LIB_PATH['mag'])
     xschem_lib = XschemLibrary(LIB_PATH['xschem'])
+    graph = make_hierarchy(magic_lib.values())
+    ordered_list = list(reversed(list(nx.topological_sort(graph))))
+    attrs_g = {'title': 'Random graph1', 'value': 0.00}
+    graph.graph.update(attrs_g)
 
     if args.center_origin:
         setattr(args, 'refresh', True)
         centering = True
-        graph = make_hierarchy(magic_lib.values())
 
     if args.write_properties:
         setattr(args, 'refresh', True)
         add_props = True
 
+    if args.make_graph:
+        pos = graphviz_layout(graph, prog='dot')
+        # labels = {v: v.__name__ for v in magic_lib.values()}
+        #node = nx.algorithms.bfs_predecessors(graph, (magic_lib.by_longname('sky130_hilas_TopLevelTextStructure')).short_name)
+        nx.draw(graph, with_labels=True, pos=pos, font_size=10, node_size=500)
+        plt.show()
+
     if args.refresh:
+
         for arg in [
             'lef',
             'gds',
@@ -1893,8 +1902,9 @@ def main():
 
     # Items here on done on a per-cell basis with Magic opening each one
     magic = Magic()
-    for m in magic_lib.values():
-        handle_magic(m, centering, add_props, graph)
+    for m in ordered_list:
+        file = magic_lib.by_longname(m)
+        handle_magic(file, centering, add_props, graph)
         # if graph.out_edges(m) == []: #No children, can be centered without missing top level
         #     handle_magic(m, centering, add_props, graph)
         # else:

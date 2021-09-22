@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1629137226
+timestamp 1632257798
 << checkpaint >>
 rect -294 -480 2262 1246
 rect 314 -630 2262 -480
@@ -163,31 +163,31 @@ rect 583 179 608 195
 rect 583 171 586 179
 rect 1282 175 1295 192
 use sky130_hilas_VinjInv2  VinjInv2_2
-timestamp 1629137160
+timestamp 1632251379
 transform 1 0 336 0 1 150
 box 0 0 361 164
 use sky130_hilas_VinjInv2  VinjInv2_1
-timestamp 1629137160
+timestamp 1632251379
 transform 1 0 336 0 1 301
 box 0 0 361 164
 use sky130_hilas_VinjInv2  VinjInv2_0
-timestamp 1629137160
+timestamp 1632251379
 transform 1 0 336 0 1 452
 box 0 0 361 164
 use sky130_hilas_VinjNOR3  VinjNOR3_0
-timestamp 1629137170
+timestamp 1632251401
 transform 1 0 944 0 1 0
 box 0 0 688 164
 use sky130_hilas_VinjNOR3  VinjNOR3_3
-timestamp 1629137170
+timestamp 1632251401
 transform 1 0 944 0 1 452
 box 0 0 688 164
 use sky130_hilas_VinjNOR3  VinjNOR3_1
-timestamp 1629137170
+timestamp 1632251401
 transform 1 0 944 0 1 150
 box 0 0 688 164
 use sky130_hilas_VinjNOR3  VinjNOR3_2
-timestamp 1629137170
+timestamp 1632251401
 transform 1 0 944 0 1 301
 box 0 0 688 164
 << labels >>
@@ -217,4 +217,8 @@ rlabel metal1 61 748 83 756 0 VINJ
 port 6 nsew
 rlabel metal1 318 747 341 756 0 VGND
 port 5 nsew
+<< properties >>
+string LEFclass CORE
+string LEFsite unithd
+string LEFsymmetry X Y R90
 << end >>

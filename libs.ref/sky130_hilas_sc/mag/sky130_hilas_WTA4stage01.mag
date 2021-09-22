@@ -1,29 +1,91 @@
 magic
 tech sky130A
-timestamp 1629137209
-<< checkpaint >>
-rect -630 -592 913 1126
+magscale 1 2
+timestamp 1632256327
+<< error_s >>
+rect 54 908 136 930
+rect 0 866 28 908
+rect 48 838 52 886
+rect 54 878 180 908
+rect 54 836 106 878
+rect 122 850 180 878
+rect 122 836 137 850
+rect 54 830 114 836
+rect 48 828 114 830
+rect 116 832 148 836
+rect 48 822 112 828
+rect 48 820 110 822
+rect 48 800 110 802
+rect 48 794 112 800
+rect 116 794 168 832
+rect 48 792 168 794
+rect 54 790 168 792
+rect 234 790 268 832
+rect 346 790 380 832
+rect 460 790 494 832
+rect 528 790 562 832
+rect 54 786 148 790
+rect 0 714 28 756
+rect 48 736 52 784
+rect 54 772 137 786
+rect 54 742 180 772
+rect 84 714 180 742
+rect 84 692 136 714
+rect 20 514 66 554
+rect 272 514 318 556
+rect 54 354 136 376
+rect 0 312 28 354
+rect 48 284 52 332
+rect 54 324 180 354
+rect 54 282 106 324
+rect 122 296 180 324
+rect 122 282 137 296
+rect 54 276 114 282
+rect 48 274 114 276
+rect 116 278 148 282
+rect 48 268 112 274
+rect 48 266 110 268
+rect 48 246 110 248
+rect 48 240 112 246
+rect 116 240 168 278
+rect 48 238 168 240
+rect 54 236 168 238
+rect 234 236 268 278
+rect 346 236 380 278
+rect 460 236 494 278
+rect 528 236 562 278
+rect 54 232 148 236
+rect 0 160 28 202
+rect 48 182 52 230
+rect 54 218 137 232
+rect 54 188 180 218
+rect 84 160 180 188
+rect 84 138 136 160
 << poly >>
-rect 88 505 108 534
-rect 87 228 108 307
-rect 88 0 108 29
+rect 176 1010 216 1068
+rect 174 456 216 614
+rect 176 0 216 58
 << metal1 >>
-rect 10 257 33 277
-rect 136 257 159 278
+rect 20 514 66 554
+rect 272 514 318 556
 use sky130_hilas_WTAsinglestage01  sky130_hilas_WTAsinglestage01_0
-timestamp 1629137201
-transform 1 0 0 0 1 76
-box 0 0 283 143
+timestamp 1632255311
+transform 1 0 0 0 1 152
+box 0 0 566 286
 use sky130_hilas_WTAsinglestage01  sky130_hilas_WTAsinglestage01_1
-timestamp 1629137201
-transform 1 0 0 0 -1 181
-box 0 0 283 143
+timestamp 1632255311
+transform 1 0 0 0 -1 362
+box 0 0 566 286
 use sky130_hilas_WTAsinglestage01  sky130_hilas_WTAsinglestage01_2
-timestamp 1629137201
-transform 1 0 0 0 -1 458
-box 0 0 283 143
+timestamp 1632255311
+transform 1 0 0 0 -1 916
+box 0 0 566 286
 use sky130_hilas_WTAsinglestage01  sky130_hilas_WTAsinglestage01_3
-timestamp 1629137201
-transform 1 0 0 0 1 353
-box 0 0 283 143
+timestamp 1632255311
+transform 1 0 0 0 1 706
+box 0 0 566 286
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

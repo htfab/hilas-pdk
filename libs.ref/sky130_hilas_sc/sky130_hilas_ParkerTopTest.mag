@@ -1,0 +1,10 @@
+magic
+tech sky130A
+timestamp 1632255311
+<< ndiff >>
+rect -7957 274106 216 281387
+use user_analog_project_wrapper  user_analog_project_wrapper_0
+timestamp 1632255311
+transform 1 0 -22 0 1 2
+box -400 -400 292400 368137
+<< end >>

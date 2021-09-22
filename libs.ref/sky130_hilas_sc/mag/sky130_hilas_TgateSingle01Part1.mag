@@ -1,16 +1,22 @@
 magic
 tech sky130A
-timestamp 1629137265
-<< checkpaint >>
-rect -552 754 740 775
-rect -552 689 798 754
-rect -583 -535 798 689
-rect -583 -597 752 -535
-rect -583 -604 711 -597
+timestamp 1632255311
 << error_s >>
 rect 63 122 103 129
+rect 130 94 137 111
+rect 147 98 154 121
+rect 166 110 172 115
 rect 63 80 103 87
+rect 89 61 93 72
+rect 108 62 113 67
 rect 63 55 103 61
+rect 32 31 40 39
+rect 43 31 47 40
+rect 75 39 79 55
+rect 89 53 93 55
+rect 101 31 106 36
+rect 40 23 48 26
+rect 109 23 117 31
 rect 63 13 103 19
 << nmos >>
 rect 63 87 103 122
@@ -71,21 +77,25 @@ rect 137 0 156 152
 rect 0 109 188 129
 rect 0 11 57 31
 use sky130_hilas_li2m2  sky130_hilas_li2m2_3
-timestamp 1629137146
+timestamp 1632251356
 transform 1 0 47 0 1 26
 box 0 0 34 33
-use sky130_hilas_m12m2  sky130_hilas_m12m2_3
-timestamp 1629137154
-transform 1 0 78 0 1 113
-box 0 0 32 32
 use sky130_hilas_li2m1  sky130_hilas_li2m1_1
-timestamp 1629137137
+timestamp 1632251332
 transform 1 0 145 0 1 95
 box 0 0 23 29
 use sky130_hilas_li2m1  sky130_hilas_li2m1_5
-timestamp 1629137137
+timestamp 1632251332
 transform 1 0 99 0 1 33
 box 0 0 23 29
+use sky130_hilas_m12m2  sky130_hilas_m12m2_3
+timestamp 1632251372
+transform 1 0 78 0 1 113
+box 0 0 32 32
 << labels >>
 rlabel metal2 182 109 188 129 0 output
+<< properties >>
+string LEFclass CORE
+string LEFsite unithd
+string LEFsymmetry X Y R90
 << end >>
