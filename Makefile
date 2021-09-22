@@ -38,6 +38,8 @@ centering: clean-all
 
 properties: clean-all
 	$(SCRIPTS)/magic_gen.py --write-properties
+graph: 
+	$(SCRIPTS)/magic_gen.py --make-graph
 
 check:
 	$(SCRIPTS)/magic_gen.py -C -L
