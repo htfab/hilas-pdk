@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1632400811
+timestamp 1632407404
 << error_s >>
 rect -509 717 -459 723
 rect -437 717 -387 723
@@ -71,7 +71,7 @@ rect -1170 393 -1161 410
 rect -1190 391 -1161 393
 << metal2 >>
 rect -1473 677 -1466 695
-rect -328 571 -150 593
+rect -328 571 319 593
 rect 124 532 164 533
 rect 124 524 127 532
 rect -1191 505 127 524
@@ -84,7 +84,6 @@ rect -1193 484 -1158 487
 rect -1193 391 -1190 484
 rect -1161 391 -1158 484
 rect -62 392 35 434
-rect 304 392 319 414
 rect -1193 388 -1158 391
 rect -177 327 0 347
 rect -334 278 -318 318
@@ -116,10 +115,8 @@ rlabel metal1 123 740 157 745 0 VGND
 port 7 nsew ground default
 rlabel metal1 190 740 217 745 0 VPWR
 port 8 nsew power default
-rlabel metal2 -286 142 -263 167 0 VIN12
+rlabel metal2 -286 142 -263 167 0 VIN
 port 2 nsew analog default
-rlabel metal2 304 392 319 414 0 OUTPUT1
-port 5 nsew
 rlabel metal1 -416 737 -397 745 0 COLSEL1
 port 1 nsew
 rlabel metal2 -1473 677 -1466 695 0 DRAIN1
@@ -132,4 +129,6 @@ rlabel metal1 -1068 737 -1045 745 0 GATE1
 port 12 nsew
 rlabel metal1 -372 737 -344 745 0 VINJ
 port 13 nsew
+rlabel metal2 303 571 319 593 0 OUTPUT
+port 14 nsew
 << end >>
