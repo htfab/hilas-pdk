@@ -1,0 +1,43 @@
+magic
+tech sky130A
+timestamp 1632400113
+<< nwell >>
+rect 133 -140 319 -133
+<< poly >>
+rect 225 -104 248 -100
+<< locali >>
+rect 279 -70 301 -61
+rect 279 -78 287 -70
+rect 247 -133 252 -120
+rect 235 -146 252 -133
+<< metal1 >>
+rect 283 -109 304 -88
+<< metal2 >>
+rect 306 -105 320 -86
+rect 225 -169 312 -146
+rect 225 -170 268 -169
+use sky130_hilas_li2m2  sky130_hilas_li2m2_1
+timestamp 1629420194
+transform 1 0 248 0 1 -159
+box -14 -15 20 18
+use sky130_hilas_li2m2  sky130_hilas_li2m2_0
+timestamp 1629420194
+transform 1 0 176 0 1 -4
+box -14 -15 20 18
+use sky130_hilas_m12m2  sky130_hilas_m12m2_0
+timestamp 1629420194
+transform 1 0 290 0 1 -100
+box -9 -10 23 22
+use sky130_hilas_poly2li  sky130_hilas_poly2li_0
+timestamp 1629420194
+transform 1 0 234 0 1 -123
+box -9 -14 18 19
+use sky130_hilas_pTransistorVert01  sky130_hilas_pTransistorVert01_0
+timestamp 1629420194
+transform 1 0 496 0 1 310
+box -363 -444 -177 -145
+use sky130_hilas_li2m1  sky130_hilas_li2m1_0
+timestamp 1629420194
+transform 1 0 291 0 1 -85
+box -10 -8 13 21
+<< end >>
