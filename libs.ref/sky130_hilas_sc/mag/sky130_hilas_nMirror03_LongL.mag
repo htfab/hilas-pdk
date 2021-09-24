@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1632411078
+timestamp 1632490171
 << error_s >>
 rect -350 111 49 117
 rect -350 69 49 75
@@ -42,38 +42,38 @@ rect 81 17 96 30
 rect 96 17 98 30
 rect 81 13 98 17
 << metal1 >>
-rect 78 104 101 111
-rect 78 87 81 104
-rect 98 87 101 104
-rect 78 30 101 87
-rect 78 13 81 30
-rect 98 13 101 30
-rect 78 7 101 13
+rect 76 104 103 117
+rect 76 87 81 104
+rect 98 87 103 104
+rect 76 30 103 87
+rect 76 13 81 30
+rect 98 13 103 30
+rect 76 2 103 13
 << metal2 >>
-rect -437 81 -392 102
+rect -347 81 125 103
 rect -437 14 -371 35
-use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1632409009
-transform 1 0 -391 0 1 24
-box -14 -15 20 18
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1632409009
-transform 1 0 -381 0 1 91
+timestamp 1632488964
+transform 1 0 -363 0 1 91
 box -14 -15 20 18
-use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1629420194
-transform 1 0 88 0 1 52
-box -10 -8 13 21
-use sky130_hilas_nFET03_LongL  sky130_hilas_nFET03_LongL_1
-timestamp 1632408239
-transform 1 0 -350 0 1 81
-box -31 -19 432 43
-use sky130_hilas_nFET03_LongL  sky130_hilas_nFET03_LongL_0
-timestamp 1632408239
-transform 1 0 -350 0 1 13
-box -31 -19 432 43
 use sky130_hilas_poly2li  sky130_hilas_poly2li_0
-timestamp 1629420194
+timestamp 1632488964
 transform 1 0 -414 0 1 23
 box -9 -14 18 19
+use sky130_hilas_nFET03_LongL  sky130_hilas_nFET03_LongL_0
+timestamp 1632488964
+transform 1 0 -350 0 1 13
+box -31 -19 432 43
+use sky130_hilas_li2m1  sky130_hilas_li2m1_0
+timestamp 1632488964
+transform 1 0 88 0 1 52
+box -10 -8 13 21
+use sky130_hilas_li2m2  sky130_hilas_li2m2_0
+timestamp 1632488964
+transform 1 0 -391 0 1 24
+box -14 -15 20 18
+use sky130_hilas_nFET03_LongL  sky130_hilas_nFET03_LongL_1
+timestamp 1632488964
+transform 1 0 -350 0 1 81
+box -31 -19 432 43
 << end >>
