@@ -1,0 +1,322 @@
+magic
+tech sky130A
+timestamp 1629420194
+<< error_s >>
+rect 555 216 605 222
+rect 627 216 677 222
+rect 555 174 605 180
+rect 627 174 677 180
+rect 555 147 605 153
+rect 555 105 605 111
+rect 555 64 605 70
+rect 555 22 605 28
+rect 555 -5 605 1
+rect 627 -5 677 1
+rect 555 -47 605 -41
+rect 627 -47 677 -41
+rect 555 -108 605 -102
+rect 627 -108 677 -102
+rect 555 -150 605 -144
+rect 627 -150 677 -144
+rect 555 -177 605 -171
+rect 555 -219 605 -213
+rect 555 -261 605 -255
+rect 555 -303 605 -297
+rect 555 -330 605 -324
+rect 627 -330 677 -324
+rect 555 -372 605 -366
+rect 627 -372 677 -366
+<< nwell >>
+rect -206 77 -147 93
+rect 168 71 279 98
+rect 488 -21 497 -13
+rect 632 -71 649 -65
+rect 632 -72 667 -71
+rect 632 -82 649 -72
+rect 666 -82 667 -72
+rect -206 -247 -147 -232
+rect 168 -249 279 -230
+<< psubdiff >>
+rect -6 82 19 105
+rect -6 65 -2 82
+rect 15 65 19 82
+rect 396 79 421 107
+rect -6 37 19 65
+rect 396 62 400 79
+rect 417 62 421 79
+rect 396 36 421 62
+rect -6 -45 20 -3
+rect -6 -62 -1 -45
+rect 16 -62 20 -45
+rect -6 -79 20 -62
+rect -6 -96 -1 -79
+rect 16 -96 20 -79
+rect -6 -113 20 -96
+rect -6 -130 -1 -113
+rect 16 -130 20 -113
+rect -6 -141 20 -130
+rect 396 -39 423 -18
+rect 396 -56 401 -39
+rect 418 -56 423 -39
+rect 396 -73 423 -56
+rect 396 -90 401 -73
+rect 418 -90 423 -73
+rect 396 -107 423 -90
+rect 396 -124 401 -107
+rect 418 -124 423 -107
+rect -1 -145 16 -141
+rect 396 -142 423 -124
+<< mvnsubdiff >>
+rect -206 77 -147 93
+rect 168 71 279 98
+rect -206 -247 -147 -232
+rect 168 -249 279 -230
+<< psubdiffcont >>
+rect -2 65 15 82
+rect 400 62 417 79
+rect -1 -62 16 -45
+rect -1 -96 16 -79
+rect -1 -130 16 -113
+rect 401 -56 418 -39
+rect 401 -90 418 -73
+rect 401 -124 418 -107
+<< poly >>
+rect 320 155 488 172
+rect -105 127 128 151
+rect -107 5 128 29
+rect 320 3 488 20
+rect 627 -75 632 -74
+rect 649 -72 667 -71
+rect 665 -74 667 -72
+rect 649 -75 677 -74
+rect 665 -82 667 -75
+rect -107 -175 130 -151
+rect 320 -169 488 -152
+rect -105 -307 132 -283
+rect 320 -322 488 -305
+<< polycont >>
+rect 632 -82 649 -65
+<< locali >>
+rect -2 82 15 84
+rect 400 79 417 81
+rect -1 -79 16 -62
+rect -1 -113 16 -109
+rect 401 -73 418 -56
+rect 623 -82 632 -65
+rect 401 -107 418 -105
+<< viali >>
+rect -2 84 15 101
+rect -2 48 15 65
+rect 400 81 417 98
+rect 400 45 417 62
+rect -1 -45 16 -28
+rect -1 -96 16 -92
+rect -1 -109 16 -96
+rect -1 -130 16 -128
+rect -1 -145 16 -130
+rect 401 -39 418 -22
+rect 649 -82 667 -65
+rect 401 -90 418 -88
+rect 401 -105 418 -90
+rect 401 -141 418 -124
+<< metal1 >>
+rect -228 -400 -188 250
+rect -7 101 20 250
+rect 177 213 215 250
+rect -7 84 -2 101
+rect 15 84 20 101
+rect -7 65 20 84
+rect -7 48 -2 65
+rect 15 48 20 65
+rect -7 -28 20 48
+rect -7 -45 -1 -28
+rect 16 -45 20 -28
+rect -7 -92 20 -45
+rect -7 -109 -1 -92
+rect 16 -109 20 -92
+rect -7 -128 20 -109
+rect -7 -145 -1 -128
+rect 16 -145 20 -128
+rect -7 -224 20 -145
+rect 396 98 421 250
+rect 611 216 627 223
+rect 648 216 667 223
+rect 692 216 708 223
+rect 396 81 400 98
+rect 417 81 421 98
+rect 396 62 421 81
+rect 396 45 400 62
+rect 417 45 421 62
+rect 396 -22 421 45
+rect 396 -39 401 -22
+rect 418 -39 421 -22
+rect 396 -88 421 -39
+rect 646 -65 670 -62
+rect 627 -74 649 -65
+rect 611 -75 649 -74
+rect 627 -82 649 -75
+rect 667 -82 670 -65
+rect 692 -75 708 -74
+rect 646 -85 670 -82
+rect 396 -105 401 -88
+rect 418 -105 421 -88
+rect 656 -95 667 -85
+rect 396 -124 421 -105
+rect 396 -141 401 -124
+rect 418 -141 421 -124
+rect 396 -221 421 -141
+rect 395 -224 423 -221
+rect -9 -227 22 -224
+rect -9 -253 -7 -227
+rect 20 -253 22 -227
+rect 394 -225 424 -224
+rect 394 -251 396 -225
+rect 422 -251 424 -225
+rect 394 -252 424 -251
+rect -9 -255 22 -253
+rect 395 -254 423 -252
+rect -7 -400 20 -255
+rect 177 -400 215 -372
+rect 396 -400 421 -254
+rect 611 -381 627 -374
+rect 648 -381 667 -374
+rect 692 -381 708 -374
+<< via1 >>
+rect -7 -253 20 -227
+rect 396 -251 422 -225
+<< metal2 >>
+rect 735 176 744 194
+rect -263 132 498 151
+rect 735 133 744 151
+rect -263 24 500 42
+rect 735 24 744 42
+rect 488 -20 497 -17
+rect 735 -19 744 -1
+rect 488 -31 500 -20
+rect 485 -146 500 -129
+rect 733 -148 744 -130
+rect -263 -187 -216 -171
+rect -262 -188 -216 -187
+rect -186 -190 500 -173
+rect 733 -191 744 -173
+rect 393 -225 425 -224
+rect -10 -253 -7 -227
+rect 20 -230 23 -227
+rect 393 -230 396 -225
+rect 20 -247 396 -230
+rect 20 -253 23 -247
+rect 393 -251 396 -247
+rect 422 -251 425 -225
+rect 393 -252 425 -251
+rect -263 -286 500 -269
+rect 733 -301 744 -283
+rect 733 -344 744 -326
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_1
+timestamp 1629420194
+transform 1 0 1188 0 1 0
+box -1451 -400 -1278 -210
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_0
+timestamp 1629420194
+transform 1 0 1188 0 1 135
+box -1451 -400 -1278 -210
+use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_0
+timestamp 1629420194
+transform 1 0 1069 0 1 -5
+box -957 -395 -734 -209
+use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_1
+timestamp 1629420194
+transform 1 0 1069 0 1 130
+box -957 -395 -734 -209
+use sky130_hilas_horizPcell01d  sky130_hilas_horizPcell01d_1
+timestamp 1629420194
+transform 1 0 777 0 1 -441
+box -289 41 -33 232
+use sky130_hilas_horizPcell01d  sky130_hilas_horizPcell01d_2
+timestamp 1629420194
+transform 1 0 777 0 -1 -33
+box -289 41 -33 232
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_2
+timestamp 1629420194
+transform 1 0 1188 0 1 324
+box -1451 -400 -1278 -210
+use sky130_hilas_wellContact  sky130_hilas_wellContact_1
+timestamp 1629420194
+transform 1 0 1185 0 1 293
+box -1448 -441 -1275 -255
+use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_2
+timestamp 1629420194
+transform 1 0 1069 0 1 315
+box -957 -395 -734 -209
+use sky130_hilas_wellContact  sky130_hilas_wellContact_0
+timestamp 1629420194
+transform 1 0 1588 0 1 286
+box -1448 -441 -1275 -255
+use sky130_hilas_horizPcell01d  sky130_hilas_horizPcell01d_0
+timestamp 1629420194
+transform 1 0 777 0 1 -116
+box -289 41 -33 232
+use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
+timestamp 1629420194
+transform 1 0 1188 0 1 460
+box -1451 -400 -1278 -210
+use sky130_hilas_FGVaractorCapacitor  sky130_hilas_FGVaractorCapacitor_3
+timestamp 1629420194
+transform 1 0 1069 0 1 459
+box -957 -395 -734 -209
+use sky130_hilas_horizPcell01d  sky130_hilas_horizPcell01d_3
+timestamp 1629420194
+transform 1 0 777 0 -1 291
+box -289 41 -33 232
+<< labels >>
+rlabel metal2 -263 -187 -251 -171 0 ROW3
+port 3 nsew analog default
+rlabel metal2 -263 -285 -249 -270 0 ROW4
+port 4 nsew analog default
+rlabel metal1 -228 209 -188 223 0 VTUN
+port 5 nsew analog default
+rlabel metal1 -228 -382 -188 -372 0 VTUN
+port 5 nsew analog default
+rlabel metal1 177 -382 215 -372 0 GATE1
+port 6 nsew analog default
+rlabel metal1 177 213 215 223 0 GATE1
+port 6 nsew analog default
+rlabel metal1 692 216 708 223 0 VINJ
+port 7 nsew power default
+rlabel metal1 611 216 627 223 0 VPWR
+port 8 nsew power default
+rlabel metal1 648 216 667 223 0 COLSEL1
+rlabel metal1 692 -381 708 -374 0 VINJ
+port 7 nsew power default
+rlabel metal1 611 -381 627 -374 0 VPWR
+port 8 nsew power default
+rlabel metal1 648 -381 667 -374 0 COLSEL1
+port 9 nsew analog default
+rlabel metal1 -7 215 20 223 0 VGND
+port 18 nsew
+rlabel metal1 396 218 421 223 0 VGND
+port 18 nsew
+rlabel metal1 -7 -382 20 -375 0 VGND
+port 18 nsew
+rlabel metal1 396 -382 421 -375 0 VGND
+port 18 nsew
+rlabel metal2 733 -191 744 -173 0 ROW3
+port 3 nsew
+rlabel metal2 733 -148 744 -130 0 DRAIN3
+port 19 nsew
+rlabel metal2 733 -344 744 -326 0 DRAIN4
+port 20 nsew
+rlabel metal2 733 -301 744 -283 0 ROW4
+port 4 nsew
+rlabel metal2 735 176 744 194 0 DRAIN1
+port 21 nsew
+rlabel metal2 735 133 744 151 0 ROW1
+port 1 nsew
+rlabel metal2 735 24 744 42 0 ROW2
+port 2 nsew
+rlabel metal2 735 -19 744 -1 0 DRAIN2
+port 22 nsew
+rlabel space -264 132 -252 151 0 ROW1
+port 1 nsew
+rlabel metal2 -263 24 -257 42 0 ROW2
+port 2 nsew
+<< end >>
