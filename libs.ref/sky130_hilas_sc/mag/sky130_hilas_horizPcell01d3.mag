@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1632174189
+timestamp 1632492731
 << nwell >>
 rect -289 41 -33 232
 << mvpmos >>
@@ -57,7 +57,7 @@ rect -166 42 -150 115
 rect -289 140 -280 158
 rect -250 140 -33 158
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1629420194
+timestamp 1632488964
 transform 1 0 -266 0 -1 156
 box -14 -15 20 18
 << end >>

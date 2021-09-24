@@ -1,15 +1,7 @@
 magic
 tech sky130A
-timestamp 1632174189
-<< nwell >>
-rect 980 583 989 613
+timestamp 1632492731
 << metal1 >>
-rect -983 610 -952 613
-rect -983 597 -980 610
-rect -984 584 -980 597
-rect -954 584 -952 610
-rect 957 611 989 612
-rect 957 601 960 611
 rect -887 596 -871 601
 rect -693 592 -669 601
 rect -475 591 -437 601
@@ -20,13 +12,7 @@ rect 280 596 304 601
 rect 441 591 479 601
 rect 673 594 697 601
 rect 875 596 891 601
-rect -984 582 -952 584
-rect -968 567 -952 582
 rect -32 565 36 587
-rect 956 585 960 601
-rect 986 585 989 611
-rect 956 584 989 585
-rect 956 567 972 584
 rect -887 -3 -871 3
 rect -693 -4 -669 4
 rect -475 -4 -437 5
@@ -37,19 +23,7 @@ rect 280 -4 304 3
 rect 441 -4 479 11
 rect 673 -4 697 2
 rect 875 -3 891 3
-<< via1 >>
-rect -980 584 -954 610
-rect 960 585 986 611
 << metal2 >>
-rect -984 611 990 614
-rect -984 610 960 611
-rect -984 584 -980 610
-rect -954 596 960 610
-rect -954 584 -942 596
-rect -984 582 -942 584
-rect 956 585 960 596
-rect 986 585 990 611
-rect 956 583 990 585
 rect -1004 507 -997 525
 rect 999 507 1008 525
 rect -1004 396 -998 414
@@ -59,13 +33,13 @@ rect 999 183 1008 201
 rect -334 134 342 152
 rect -1004 73 -997 91
 rect 999 73 1008 91
-use sky130_hilas_cellAttempt01d3  sky130_hilas_cellAttempt01d3_0
-timestamp 1632174189
-transform 1 0 264 0 1 378
-box -263 -404 744 246
 use sky130_hilas_cellAttempt01d3  sky130_hilas_cellAttempt01d3_1
-timestamp 1632174189
+timestamp 1632492731
 transform -1 0 -260 0 1 378
+box -263 -404 744 246
+use sky130_hilas_cellAttempt01d3  sky130_hilas_cellAttempt01d3_0
+timestamp 1632492731
+transform 1 0 264 0 1 378
 box -263 -404 744 246
 << labels >>
 rlabel metal1 441 591 479 601 0 GATE2
@@ -84,10 +58,6 @@ rlabel metal1 -475 -4 -437 5 0 GATE1
 port 3 nsew analog default
 rlabel metal1 441 -4 479 11 0 GATE2
 port 1 nsew analog default
-rlabel metal1 956 596 972 601 0 VINJ
-port 6 nsew power default
-rlabel metal1 -968 596 -952 601 0 VINJ
-port 6 nsew power default
 rlabel metal1 -887 596 -871 601 0 COL1
 port 12 nsew analog default
 rlabel metal1 -887 -3 -871 3 0 COL1

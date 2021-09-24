@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1632174189
+timestamp 1632492731
 << nwell >>
 rect -263 112 -256 130
 rect -206 77 -147 88
@@ -153,11 +153,11 @@ timestamp 1629420194
 transform 1 0 1069 0 1 130
 box -957 -395 -734 -209
 use sky130_hilas_horizPcell01d3  sky130_hilas_horizPcell01d3_1
-timestamp 1632174189
+timestamp 1632492731
 transform 1 0 777 0 1 -445
 box -289 41 -33 232
 use sky130_hilas_horizPcell01d3  sky130_hilas_horizPcell01d3_2
-timestamp 1632174189
+timestamp 1632492731
 transform 1 0 777 0 -1 -37
 box -289 41 -33 232
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_2
@@ -177,7 +177,7 @@ timestamp 1629420194
 transform 1 0 1588 0 1 286
 box -1448 -441 -1275 -255
 use sky130_hilas_horizPcell01d3  sky130_hilas_horizPcell01d3_0
-timestamp 1632174189
+timestamp 1632492731
 transform 1 0 777 0 1 -122
 box -289 41 -33 232
 use sky130_hilas_TunCap01  sky130_hilas_TunCap01_3
@@ -189,7 +189,7 @@ timestamp 1629420194
 transform 1 0 1069 0 1 455
 box -957 -395 -734 -209
 use sky130_hilas_horizPcell01d3  sky130_hilas_horizPcell01d3_3
-timestamp 1632174189
+timestamp 1632492731
 transform 1 0 777 0 -1 287
 box -289 41 -33 232
 << labels >>
