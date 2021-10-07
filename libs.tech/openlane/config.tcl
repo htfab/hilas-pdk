@@ -10,7 +10,7 @@ set ::env(GND_PIN) "VGND"
 
 # Technology LEF
 set ::env(TECH_LEF) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/techlef/$::env(STD_CELL_LIBRARY).tlef"
-set ::env(CELLS_LEF) [glob "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lef/*.lef"]
+set ::env(CELLS_LEF) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lef/sky130_hilas_sc.lef"
 
 set ::env(GPIO_PADS_LEF) "\
 	$::env(PDK_ROOT)/$::env(PDK)/libs.ref/sky130_fd_io/lef/sky130_fd_io.lef\
@@ -71,3 +71,6 @@ set ::env(FP_PDN_CORE_RING_HOFFSET) 6
 
 # Used for estimate_parasitics
 set ::env(WIRE_RC_LAYER) "met1"; 
+
+# DRC BYPASS
+set ::env(DRC_EXCLUDE_CELL_LIST) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/drc_exclude.cells";
