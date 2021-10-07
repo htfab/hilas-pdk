@@ -1,64 +1,62 @@
 magic
-tech sky130A
-timestamp 1632251369
-<< nmos >>
-rect 8 15 14 18
-<< pmos >>
-rect 39 15 45 18
-<< ndiff >>
-rect 8 24 14 25
-rect 8 20 9 24
-rect 13 20 14 24
-rect 8 18 14 20
-rect 8 13 14 15
-rect 8 9 9 13
-rect 13 9 14 13
-rect 8 8 14 9
-<< pdiff >>
-rect 39 25 45 26
-rect 39 21 40 25
-rect 44 21 45 25
-rect 39 18 45 21
-rect 39 12 45 15
-rect 39 8 40 12
-rect 44 8 45 12
-rect 39 7 45 8
-<< ndiffc >>
-rect 9 20 13 24
-rect 9 9 13 13
-<< pdiffc >>
-rect 40 21 44 25
-rect 40 8 44 12
-<< poly >>
-rect 5 15 8 18
-rect 14 15 39 18
-rect 45 15 47 18
-rect 24 12 27 15
-rect 22 11 28 12
-rect 22 7 23 11
-rect 27 7 28 11
-rect 22 6 28 7
+tech scmos
+timestamp 1602540516
+<< polysilicon >>
+rect -8 0 -5 3
+rect 1 0 26 3
+rect 32 0 34 3
+rect 11 -3 14 0
+rect 9 -4 15 -3
+rect 9 -8 10 -4
+rect 14 -8 15 -4
+rect 9 -9 15 -8
+<< ndiffusion >>
+rect -5 9 1 10
+rect -5 5 -4 9
+rect 0 5 1 9
+rect -5 3 1 5
+rect -5 -2 1 0
+rect -5 -6 -4 -2
+rect 0 -6 1 -2
+rect -5 -7 1 -6
+<< pdiffusion >>
+rect 26 10 32 11
+rect 26 6 27 10
+rect 31 6 32 10
+rect 26 3 32 6
+rect 26 -3 32 0
+rect 26 -7 27 -3
+rect 31 -7 32 -3
+rect 26 -8 32 -7
 << metal1 >>
-rect 23 24 27 31
-rect 13 21 40 24
-rect 13 20 44 21
-rect 5 9 9 13
-rect 44 8 47 12
-rect 23 0 27 7
-<< via1 >>
-rect 1 9 5 13
-rect 47 8 51 12
+rect 10 9 14 16
+rect 0 6 27 9
+rect 0 5 31 6
+rect -8 -6 -4 -2
+rect 31 -7 34 -3
+rect 10 -15 14 -8
 << metal2 >>
-rect 0 13 6 30
-rect 0 9 1 13
-rect 5 9 6 13
-rect 0 3 6 9
-rect 46 12 52 30
-rect 46 8 47 12
-rect 51 8 52 12
-rect 46 3 52 8
-<< properties >>
-string LEFsite unithd
-string LEFclass CORE
-string LEFsymmetry X Y R90
+rect -13 -2 -7 15
+rect -13 -6 -12 -2
+rect -8 -6 -7 -2
+rect -13 -12 -7 -6
+rect 33 -3 39 15
+rect 33 -7 34 -3
+rect 38 -7 39 -3
+rect 33 -12 39 -7
+<< ntransistor >>
+rect -5 0 1 3
+<< ptransistor >>
+rect 26 0 32 3
+<< polycontact >>
+rect 10 -8 14 -4
+<< ndcontact >>
+rect -4 5 0 9
+rect -4 -6 0 -2
+<< pdcontact >>
+rect 27 6 31 10
+rect 27 -7 31 -3
+<< m2contact >>
+rect -12 -6 -8 -2
+rect 34 -7 38 -3
 << end >>

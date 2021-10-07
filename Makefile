@@ -23,23 +23,13 @@ all:
 		-v \
 		-m \
 		-n \
-		-Y \
-		--center-origin \
-		--write-properties
+		-Y
 
 force: clean-all
 	$(SCRIPTS)/magic_gen.py -F -L -g -t -e -i -s -v -m -n -Y
 
 refresh: clean-all
 	$(SCRIPTS)/magic_gen.py --refresh
-
-centering: clean-all
-	$(SCRIPTS)/magic_gen.py --center-origin
-
-properties: clean-all
-	$(SCRIPTS)/magic_gen.py --write-properties
-graph: 
-	$(SCRIPTS)/magic_gen.py --make-graph
 
 check:
 	$(SCRIPTS)/magic_gen.py -C -L

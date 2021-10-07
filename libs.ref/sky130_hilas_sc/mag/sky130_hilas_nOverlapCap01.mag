@@ -1,55 +1,51 @@
 magic
 tech sky130A
-timestamp 1632251362
+timestamp 1629420194
 << error_p >>
-rect 50 111 79 129
-rect 50 79 51 80
-rect 78 79 79 80
-rect 0 50 18 79
-rect 49 78 80 79
-rect 50 69 79 78
-rect 50 60 60 69
-rect 69 60 79 69
-rect 50 51 79 60
-rect 49 50 80 51
-rect 111 50 129 79
-rect 50 49 51 50
-rect 78 49 79 50
-rect 50 0 79 18
+rect -12 68 17 86
+rect -12 36 -11 37
+rect 16 36 17 37
+rect -62 7 -44 36
+rect -13 35 18 36
+rect -12 26 17 35
+rect -12 17 -2 26
+rect 7 17 17 26
+rect -12 8 17 17
+rect -13 7 18 8
+rect 49 7 67 36
+rect -12 6 -11 7
+rect 16 6 17 7
+rect -12 -43 17 -25
 << mvnmos >>
-rect 18 79 111 111
-rect 18 50 50 79
-rect 79 50 111 79
-rect 18 18 111 50
+rect -44 36 49 68
+rect -44 7 -12 36
+rect 17 7 49 36
+rect -44 -25 49 7
 << mvndiff >>
-rect 50 73 79 79
-rect 50 56 56 73
-rect 73 56 79 73
-rect 50 50 79 56
+rect -12 30 17 36
+rect -12 13 -6 30
+rect 11 13 17 30
+rect -12 7 17 13
 << mvndiffc >>
-rect 56 56 73 73
+rect -6 13 11 30
 << poly >>
-rect 5 111 124 124
-rect 5 18 18 111
-rect 111 18 124 111
-rect 5 5 124 18
+rect -57 68 62 81
+rect -57 -25 -44 68
+rect 49 -25 62 68
+rect -57 -38 62 -25
 << locali >>
-rect 56 107 73 110
-rect 56 73 73 90
-rect 56 38 73 56
+rect -6 64 11 67
+rect -6 30 11 47
+rect -6 -5 11 13
 << viali >>
-rect 56 90 73 107
-rect 56 21 73 38
+rect -6 47 11 64
+rect -6 -22 11 -5
 << metal1 >>
-rect 53 107 76 129
-rect 53 90 56 107
-rect 73 90 76 107
-rect 53 38 76 90
-rect 53 21 56 38
-rect 73 21 76 38
-rect 53 0 76 21
-<< properties >>
-string LEFsite unithd
-string LEFclass CORE
-string LEFsymmetry X Y R90
+rect -9 64 14 86
+rect -9 47 -6 64
+rect 11 47 14 64
+rect -9 -5 14 47
+rect -9 -22 -6 -5
+rect 11 -22 14 -5
+rect -9 -43 14 -22
 << end >>

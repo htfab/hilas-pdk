@@ -1,29 +1,23 @@
 magic
 tech sky130A
-timestamp 1632251394
-<< checkpaint >>
-rect -470 -628 823 683
+timestamp 1607475333
 << nwell >>
-rect 0 12 161 133
+rect -79 -78 82 43
 << pmos >>
-rect 61 71 100 110
+rect -18 -19 21 20
 << pdiff >>
-rect 34 71 61 110
-rect 100 71 127 110
+rect -45 -19 -18 20
+rect 21 -19 48 20
 << poly >>
-rect 61 110 100 123
-rect 61 63 100 71
-rect 61 48 150 63
-rect 135 27 150 48
-rect 135 12 187 27
-rect 159 11 164 12
-rect 172 0 187 12
+rect -18 20 21 33
+rect -18 -27 21 -19
+rect -18 -42 71 -27
+rect 56 -63 71 -42
+rect 56 -78 108 -63
+rect 80 -79 85 -78
+rect 93 -90 108 -78
 use sky130_hilas_poly2m1  sky130_hilas_poly2m1_0
-timestamp 1632251319
-transform 1 0 160 0 1 2
-box 0 0 33 51
-<< properties >>
-string LEFsite unithd
-string LEFclass CORE
-string LEFsymmetry X Y R90
+timestamp 1607270135
+transform 1 0 81 0 1 -88
+box -9 -26 24 25
 << end >>
