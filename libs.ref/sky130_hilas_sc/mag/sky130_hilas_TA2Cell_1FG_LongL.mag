@@ -1,0 +1,246 @@
+magic
+tech sky130A
+timestamp 1632490732
+<< error_s >>
+rect -46 723 353 729
+rect -2549 717 -2499 723
+rect -2477 717 -2427 723
+rect -509 717 -459 723
+rect -437 717 -387 723
+rect -46 681 353 687
+rect -2549 675 -2499 681
+rect -2477 675 -2427 681
+rect -509 675 -459 681
+rect -437 675 -387 681
+rect -46 655 353 661
+rect -46 613 353 619
+rect -46 572 353 578
+rect -46 530 353 536
+rect -46 504 353 510
+rect -46 462 353 468
+rect -47 421 352 427
+rect -47 379 352 385
+rect -47 353 352 359
+rect -47 311 352 317
+rect -47 270 352 276
+rect -47 228 352 234
+rect -2549 204 -2499 210
+rect -2477 204 -2427 210
+rect -509 204 -459 210
+rect -437 204 -387 210
+rect -47 202 352 208
+rect -2549 162 -2499 168
+rect -2477 162 -2427 168
+rect -509 162 -459 168
+rect -437 162 -387 168
+rect -47 160 352 166
+<< nwell >>
+rect -2616 744 -2418 745
+rect -320 744 -173 745
+rect -2616 677 -2609 695
+rect -2616 190 -2608 208
+<< locali >>
+rect -1767 481 -1747 488
+rect -1767 464 -1766 481
+rect -1749 464 -1747 481
+rect -1767 409 -1747 464
+rect -1767 392 -1765 409
+rect -1748 392 -1747 409
+rect -1767 387 -1747 392
+rect -1192 481 -1163 488
+rect -1192 464 -1187 481
+rect -1170 464 -1163 481
+rect -1192 409 -1163 464
+rect -1192 392 -1187 409
+rect -1170 392 -1163 409
+rect -1192 387 -1163 392
+<< viali >>
+rect -1766 464 -1749 481
+rect -1765 392 -1748 409
+rect -1187 464 -1170 481
+rect -1187 392 -1170 409
+<< metal1 >>
+rect -2592 740 -2564 745
+rect -2592 739 -2560 740
+rect -2539 739 -2520 745
+rect -2592 713 -2589 739
+rect -2563 713 -2560 739
+rect -1891 736 -1868 744
+rect -1769 736 -1746 744
+rect -1540 729 -1396 745
+rect -1190 736 -1167 745
+rect -1068 737 -1045 745
+rect -416 737 -397 745
+rect -372 740 -344 745
+rect -372 738 -340 740
+rect -2592 712 -2560 713
+rect -372 712 -369 738
+rect -343 712 -340 738
+rect -372 710 -340 712
+rect 379 731 415 750
+rect 777 736 820 750
+rect -1766 463 -1749 464
+rect -1187 463 -1170 464
+rect -1768 432 -1736 434
+rect -1768 393 -1765 432
+rect -1739 406 -1736 432
+rect -1748 404 -1736 406
+rect -1198 426 -1166 429
+rect -1748 393 -1744 404
+rect -1198 400 -1195 426
+rect -1169 400 -1166 426
+rect -1198 397 -1187 400
+rect -1746 387 -1744 393
+rect -1170 397 -1166 400
+rect -154 187 -121 189
+rect -1198 174 -1166 176
+rect -1198 148 -1195 174
+rect -1169 148 -1166 174
+rect -154 161 -151 187
+rect -124 161 -121 187
+rect -154 160 -121 161
+rect 379 160 413 731
+rect -1198 146 -1166 148
+rect -155 154 -116 160
+rect 379 154 415 160
+rect -416 140 -397 145
+rect -372 140 -344 145
+rect -155 140 415 154
+rect 379 135 415 140
+rect 777 135 819 155
+<< via1 >>
+rect -2589 713 -2563 739
+rect -369 712 -343 738
+rect -1765 409 -1739 432
+rect -1765 406 -1748 409
+rect -1748 406 -1739 409
+rect -1195 409 -1169 426
+rect -1195 400 -1187 409
+rect -1187 400 -1170 409
+rect -1170 400 -1169 409
+rect -1195 148 -1169 174
+rect -151 161 -124 187
+<< metal2 >>
+rect -2592 739 -2560 740
+rect -2592 713 -2589 739
+rect -2563 728 -2560 739
+rect -372 738 -340 740
+rect -372 728 -369 738
+rect -2563 713 -369 728
+rect -2592 712 -369 713
+rect -343 712 -340 738
+rect -260 718 -229 742
+rect -2592 710 -340 712
+rect -2616 677 -2609 695
+rect -149 655 -127 657
+rect -1726 617 -1642 637
+rect -154 621 -127 655
+rect -1681 570 -667 592
+rect -328 571 -293 593
+rect -1686 473 -785 495
+rect -1768 432 -1736 434
+rect -1768 406 -1765 432
+rect -1739 429 -1736 432
+rect -1739 426 -1166 429
+rect -1739 406 -1195 426
+rect -1768 404 -1195 406
+rect -1198 400 -1195 404
+rect -1169 400 -1166 426
+rect -1198 397 -1166 400
+rect -1681 295 -1115 317
+rect -1731 265 -1683 266
+rect -1731 241 -1642 265
+rect -1137 262 -1115 295
+rect -807 312 -785 473
+rect -689 450 -667 570
+rect -147 564 -127 565
+rect -147 531 -125 564
+rect -145 530 -125 531
+rect -252 451 -220 475
+rect 859 474 877 497
+rect -692 446 -667 450
+rect -692 382 -666 446
+rect 860 392 878 415
+rect -692 361 -279 382
+rect -300 347 -279 361
+rect -300 326 -98 347
+rect -807 290 -522 312
+rect -700 262 -98 267
+rect -1137 246 -98 262
+rect -1137 240 -661 246
+rect -2616 190 -2608 208
+rect -154 187 -121 189
+rect -1198 175 -1166 176
+rect -154 175 -151 187
+rect -1198 174 -151 175
+rect -1198 148 -1195 174
+rect -1169 161 -151 174
+rect -124 161 -121 187
+rect -1169 159 -121 161
+rect -1169 158 -1129 159
+rect -1169 148 -1166 158
+rect -1198 146 -1166 148
+use sky130_hilas_DualTACore01_LongL  sky130_hilas_DualTACore01_LongL_0
+timestamp 1632490171
+transform 1 0 422 0 1 181
+box -556 -28 455 555
+use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
+timestamp 1632489745
+transform 1 0 -1077 0 1 522
+box -396 -387 757 228
+use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_1
+timestamp 1632489745
+transform 1 0 -454 0 -1 305
+box 133 -440 320 165
+use sky130_hilas_FGBiasWeakGate2x1cell  sky130_hilas_FGBiasWeakGate2x1cell_0
+timestamp 1632489745
+transform -1 0 -1859 0 1 522
+box -396 -387 757 228
+<< labels >>
+rlabel metal2 -1726 617 -1690 636 0 VIN11
+port 2 nsew analog default
+rlabel metal2 -1731 241 -1695 266 0 VIN12
+port 1 nsew analog default
+rlabel metal2 -252 451 -220 475 0 VIN21
+port 3 nsew analog default
+rlabel metal2 -260 718 -229 742 1 VIN22
+port 4 n analog default
+rlabel metal1 -372 737 -344 745 0 VINJ
+port 8 nsew power default
+rlabel metal1 -372 140 -344 145 0 VINJ
+port 8 nsew power default
+rlabel metal2 -2616 677 -2609 695 0 DRAIN1
+port 11 nsew
+rlabel metal2 -2616 190 -2608 208 0 DRAIN2
+port 12 nsew
+rlabel metal1 -2592 738 -2564 745 0 VINJ
+port 8 nsew
+rlabel metal1 -2539 739 -2520 745 0 COLSEL2
+port 13 nsew
+rlabel metal1 -1891 736 -1868 744 0 GATE2
+port 14 nsew
+rlabel metal1 -1769 736 -1746 744 0 VGND
+port 7 nsew
+rlabel metal1 -1068 737 -1045 745 0 GATE1
+port 15 nsew
+rlabel metal1 -1190 737 -1167 745 0 VGND
+port 7 nsew
+rlabel metal1 -416 737 -397 745 0 COLSEL1
+port 16 nsew
+rlabel metal1 -416 140 -397 145 0 COLSEL1
+port 16 nsew
+rlabel metal1 -1498 733 -1438 745 0 VTUN
+port 17 nsew
+rlabel metal1 379 744 415 750 0 VGND
+port 7 nsew
+rlabel metal1 379 135 415 140 0 VGND
+port 7 nsew
+rlabel metal1 777 135 819 143 0 VPWR
+port 18 nsew
+rlabel metal1 777 744 820 750 0 VPWR
+port 18 nsew
+rlabel metal2 859 474 877 497 0 OUTPUT1
+port 19 nsew
+rlabel metal2 860 392 878 415 0 OUTPUT2
+port 20 nsew
+<< end >>
