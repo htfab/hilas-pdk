@@ -34,18 +34,21 @@ import argparse
 import os
 import re
 import shlex
+import shutil
 import subprocess
 import tempfile
-import shutil
+import networkx as nx
+import matplotlib.pyplot as plt
+from collections import OrderedDict
+from pathlib import Path
+from sys import stderr as STDERR
+from networkx.drawing.nx_agraph import graphviz_layout
+
 import jinja2
 import yaml
-
-from yamllint import cli as yamllintcli
-from collections import OrderedDict
-from sys import stderr as STDERR
-from pexpect.replwrap import REPLWrapper
-from pathlib import Path
 from pexpect.exceptions import EOF as PEXP_EXCEPTION
+from pexpect.replwrap import REPLWrapper
+from yamllint import cli as yamllintcli
 
 #######################################################################################
 PDK_VARIANT = 'sky130_hilas_sc'
@@ -80,7 +83,8 @@ LIB_PATH = {
     'cell_summary': REF_ROOT / PDK_VARIANT / 'CELL_SUMMARY.md',
     'cell_details': REF_ROOT / PDK_VARIANT / 'CELL_DETAILS.md'
 }
-for name in ['cdl', 'doc', 'gds', 'lef', 'lib', 'mag', 'png', 'spice_ext', 'spice_hand', 'schem', 'techlef', 'verilog', 'xschem']:
+for name in ['cdl', 'doc', 'gds', 'lef', 'lib', 'mag', 'png', 'spice_ext', 'spice_hand', 'schem', 'techlef', 'verilog',
+             'xschem']:
     LIB_PATH.update({name: REF_ROOT / PDK_VARIANT / name})
 
 with open(THIS_DIR / 'templates' / 'license_head.txt', 'r') as f:
@@ -99,7 +103,7 @@ class Conventions:
                     }
 
     def __init__(self):
-        self._pg_pin_map={item: parent for parent,ll in self.PG_PIN_NAMES.items() for item in ll}
+        self._pg_pin_map = {item: parent for parent, ll in self.PG_PIN_NAMES.items() for item in ll}
 
     def pg_pin_lookup(self, net):
         if net in self._pg_pin_map:
@@ -129,7 +133,7 @@ class Conventions:
             return None
 
 
-CONVENTIONS=Conventions()
+CONVENTIONS = Conventions()
 
 
 class StructuredTextFile:
@@ -162,7 +166,7 @@ class XschemLibrary(dict):
     def __contains__(self, item):
         if isinstance(item, Path):
             item = str(item.relative_to(self.root))
-        return len(list(self.root.glob('**/'+item))) != 0
+        return len(list(self.root.glob('**/' + item))) != 0
         # return item in [str(x.path.relative_to(self.root)) for x in self.symbols]
 
     def get_symbol(self, name):
@@ -333,8 +337,8 @@ class XschemSchematic(StructuredTextFile):
         touched = False
         for i, line in enumerate(c):
             match = re.search(r'^C {(.*?)}.*', line)
-            if match and match.group(1) == oldname +'.sym':
-                newline = line.replace(oldname+'.sym', newname+'.sym')
+            if match and match.group(1) == oldname + '.sym':
+                newline = line.replace(oldname + '.sym', newname + '.sym')
                 c[i] = newline
                 touched = True
         if touched:
@@ -441,10 +445,10 @@ class XschemSymbol(StructuredTextFile):
     @property
     def pins(self):
         pins = {}
-        pinlist = re.findall(r'^B \S+ \S+ \S+ \S+ \S+ {\s*(.*?)\s*}', self.c, re.M|re.S)
+        pinlist = re.findall(r'^B \S+ \S+ \S+ \S+ \S+ {\s*(.*?)\s*}', self.c, re.M | re.S)
         for string in pinlist:
             pairs = dict(tuple(x.split('=')) for x in string.split())
-            pins.update({pairs['name']: {k:v for k,v in pairs.items() if k!='name'}})
+            pins.update({pairs['name']: {k: v for k, v in pairs.items() if k != 'name'}})
         return pins
 
 
@@ -494,7 +498,8 @@ class LibraryInfo(OrderedDict):
 
     @property
     def all_cells(self):
-        return OrderedDict({cn: cell for cat, cells in self.items() for cn, cell in cells.items() if 'description' in cell})
+        return OrderedDict(
+            {cn: cell for cat, cells in self.items() for cn, cell in cells.items() if 'description' in cell})
 
     def by_category(self, category_name):
         return OrderedDict({cn: cell for cn, cell in self[category_name].items() if cn != 'description'})
@@ -721,7 +726,6 @@ class MagicLibrary(dict):
 
 
 class MagicDesign(StructuredTextFile):
-
     MAGIC_PIN_REGEX = re.compile(r'^\s*\wlabel\s+(\S+).*\s+(\S+)\s*\n\s*port\s+(\d+)\s+(.*)$', re.MULTILINE)
     CELL_REF_REGEX = re.compile(r'^\s?use (\w+)', re.MULTILINE)
 
@@ -792,7 +796,9 @@ class MagicDesign(StructuredTextFile):
 
         if floating:
             warn(stylize_head())
-            warn('Magic file for \'{}\' has the following floating ports (not connected to a metal layer or li):'.format(self.long_name))
+            warn(
+                'Magic file for \'{}\' has the following floating ports (not connected to a metal layer or li):'.format(
+                    self.long_name))
             for net in floating:
                 warn('    {}'.format(net))
 
@@ -804,7 +810,7 @@ class MagicDesign(StructuredTextFile):
             fnet = CONVENTIONS.net_name(net)
             if fnet:
                 warn('Found port in \'{}\' whose name should probably be corrected: \'{}\'->\'{}\''.format(
-                    self.file,net,fnet))
+                    self.file, net, fnet))
                 self.rename_net(net, fnet)
                 write = True
 
@@ -831,10 +837,10 @@ class Magic:
                 if ourrcfile.is_file():
                     magicrcfile = str(ourrcfile)
 
-            #print("rc file: \"{}\"".format(magicrcfile))
+            # print("rc file: \"{}\"".format(magicrcfile))
 
-            #techfile = os.getenv('TECHFILE')
-            #if not techfile:
+            # techfile = os.getenv('TECHFILE')
+            # if not techfile:
             #    ourtechfile = Path(TECH_ROOT) / 'magic' / 'sky130A.tech'
             #    if ourtechfile.is_file():
             #        techfile = str(ourtechfile)
@@ -845,7 +851,7 @@ class Magic:
             os.environ["PDKPATH"] = str(HILAS_PDK_ROOT)
 
             cmd = 'magic -dnull -noconsole -rcfile "{}"'.format(str(magicrcfile))
-            #print('starting magic with : "{}"'.format(cmd))
+            # print('starting magic with : "{}"'.format(cmd))
             self.p = REPLWrapper(
                 cmd,
                 orig_prompt='%',
@@ -883,7 +889,22 @@ class Magic:
         result += self.p.run_command('gds write {}'.format(target))
         return result
 
+    def move_origin(self, source, new_position):
+        result = self.renew(source)
+        result += self.p.run_command('select top cell')
+        result += self.p.run_command('move origin'+' ' + str(new_position[0]) + ' ' + str(new_position[1]))
+        result += self.p.run_command('save')
+        return result
+
+    def add_properties(self, source):
+        result = self.renew(source)
+        result += self.p.run_command('property LEFclass CORE')
+        result += self.p.run_command('property LEFsite unithd')
+        result += self.p.run_command('property LEFsymmetry "X Y R90"')
+        result += self.p.run_command('save')
+
     def make_lef(self, source):
+
         result = self.renew(source)
         # result += self.p.run_command('lef write -toplayer -hide')
         result += self.p.run_command('lef write -toplayer')
@@ -973,17 +994,18 @@ def make_gds(mf):
 
 
 def make_temp_lef(mf):
-    target = (LIB_PATH['temp_lef'] / mf.long_name).with_suffix('.lef')
-
+    target = (LIB_PATH['temp_lef'] / mf.long_name).with_suffix('.lef')  # setting target path
     # try:
+    result = magic.make_lef(mf.file)  # Make an lef with just the properties, necessary to re-center origin
+    line = []
 
-    result = magic.make_lef(mf.file)
     if not magic.is_alive():
         print(result)
         error("There was a problem during the processing of {}: ".format(mf))
 
-    shutil.copy(mf.file.parent / (mf.long_name + '.lef'), target)
+    shutil.copy(mf.file.parent / (mf.long_name + '.lef'), target)  # Copy lef to the lef directory
     os.remove(mf.file.parent / (mf.long_name + '.lef'))
+
     print('wrote LEF: {}'.format(target.relative_to(rel_root)))
 
     # except BaseException:
@@ -1017,7 +1039,9 @@ def make_lef():
             with open(sf, 'r') as f:
                 st = f.read()
             blocks.append(
-                re.search(r'(MACRO\s+{}[\s\S\n]*?\n\s*END\s+{})'.format(re.escape(cell.long_name), re.escape(cell.long_name)), st).group()
+                re.search(
+                    r'(MACRO\s+{}[\s\S\n]*?\n\s*END\s+{})'.format(re.escape(cell.long_name), re.escape(cell.long_name)),
+                    st).group()
             )
 
             if args.delete:
@@ -1342,6 +1366,7 @@ def make_cell_details_md():
         cells = cd.by_category(cat)
 
         for cn, cell in cells.items():
+
             rows = []
             matches = [(k, v) for k, v in magic_lib[cell.long_name].ports.items()]
             matches = sorted(list(set(matches)), key=lambda x: int(x[1][1]))
@@ -1367,7 +1392,7 @@ def make_cell_details_md():
 def make_nosynth():
     with open(NO_SYNTH_FILE, 'w') as f:
         for cellname in cd.all_cells.keys():
-            f.write(cellname+'\n')
+            f.write(cellname + '\n')
 
 
 def parent_check(path):
@@ -1425,7 +1450,8 @@ def target_check(magic_file, type):
     elif type in ['lef', 'lib', 'verilog']:
         target = (LIB_PATH[type] / PDK_VARIANT).with_suffix('.' + suffix)
         if not args.force and \
-            (target.is_file() and os.path.getmtime(target) > max([os.path.getmtime(mf) for mf in LIB_PATH['mag'].glob('*.mag')])):
+                (target.is_file() and os.path.getmtime(target) > max(
+                    [os.path.getmtime(mf) for mf in LIB_PATH['mag'].glob('*.mag')])):
             # short circuit; don't do it
             return False
         elif magic_file is not None and magic_file.short_name in cd.standard_cells:
@@ -1447,30 +1473,59 @@ def target_check(magic_file, type):
     else:
         return True
 
-def handle_magic(magic_file):
+
+def handle_magic(magic_file, center_origin, add_properties, cell_graph):
+
     if not any([
         target_check(magic_file, 'gds'),
         target_check(magic_file, 'temp_lef'),
         target_check(magic_file, 'spice_ext')
-    ]):
+    ]) and not center_origin and not add_properties:
         return
 
     magic.renew(magic_file.file)
     print('loaded file {}'.format(magic_file.file.relative_to(rel_root)))
 
+    if add_properties:
+        magic.add_properties(magic_file.file)
+
+    if center_origin:
+
+        WAS_MOVED = False
+        make_temp_lef(magic_file)
+        target = (LIB_PATH['temp_lef'] / magic_file.long_name).with_suffix('.lef')  # setting target path
+
+        with open(target, mode='r', newline='\n') as lef:  # Open the lef we just made and look for the keyword ORIGIN
+            all_text = lef.read()
+
+        match_obj = re.search(r'^\s*ORIGIN\s+([-]?\d+[.]\d+)\s+([-]?\d+[.]\d+)\s*\s*;\s*$', all_text, re.MULTILINE)
+
+        if match_obj:
+            # print(cell_graph.nodes)
+            x_coord = float(match_obj.group(1))
+            y_coord = float(match_obj.group(2))
+            if x_coord != 0.0 or y_coord != 0.0:
+                xinvert = -100 * x_coord
+                yinvert = -100 * y_coord  # Convert units and invert position
+                result = magic.move_origin(magic_file.file, (xinvert, yinvert))  # Make another lef with
+                WAS_MOVED = True
+                # # new centering
+                # shutil.copy(mf.file.parent / (mf.long_name + '.lef'), target)  # Copy lef to the lef directory
+
     if args.gds and target_check(magic_file, 'gds'):
         parent_check(LIB_PATH['gds'])
         make_gds(magic_file)
-    if args.temp_lef and target_check(magic_file, 'temp_lef'):
+
+    if (args.temp_lef and target_check(magic_file, 'temp_lef') and not (args.center_origin and not WAS_MOVED)) or (args.center_origin and WAS_MOVED):
         parent_check(LIB_PATH['temp_lef'])
         make_temp_lef(magic_file)
+
     if args.spice and target_check(magic_file, 'spice_ext'):
         parent_check(LIB_PATH['spice_ext'])
         make_spice(magic_file)
 
 
 def check_port_pin_mapping():
-
     for cn, c in cd.all_cells.items():
         amp = magic_lib[c.long_name].ports
         try:
@@ -1493,12 +1548,14 @@ def check_port_pin_mapping():
                 xpo.append(xsch_pin)
 
         if mpo:
-            message.append('Magic file for \'{}\' defines ports which are not pins in Xschem symbol:'.format(c.long_name))
+            message.append(
+                'Magic file for \'{}\' defines ports which are not pins in Xschem symbol:'.format(c.long_name))
             for mmpo in mpo:
                 message.append('    {}'.format(mmpo))
 
         if xpo:
-            message.append('Xschem symbol for \'{}\' defines pins which are not ports in Magic file:'.format(c.long_name))
+            message.append(
+                'Xschem symbol for \'{}\' defines pins which are not ports in Magic file:'.format(c.long_name))
             for xxpo in xpo:
                 message.append('    {}'.format(xxpo))
 
@@ -1536,7 +1593,7 @@ def check_lvs():
         modsrc = src + instance
 
         os.makedirs(HILAS_PDK_ROOT / 'LVS_RESULTS', exist_ok=True)
-        
+
         with tempfile.NamedTemporaryFile(mode='w', suffix='.spice') as f:
             f.write(modsrc)
 
@@ -1555,9 +1612,9 @@ def check_lvs():
 def check_file_names(path, suffix):
     if not suffix.startswith('*.'):
         if suffix.startswith('.'):
-            suffix='*'+suffix
+            suffix = '*' + suffix
         else:
-            suffix='*.'+suffix
+            suffix = '*.' + suffix
 
     for m in Path(path).glob(suffix):
         if not m.stem.startswith(CONVENTIONS.CELL_PREFIX):
@@ -1587,7 +1644,8 @@ def check_dir_for_prefixes(directory, extension):
 
     if mp:
         warn(stylize_head())
-        warn('    \'{}\' directory contains the following files which are missing the prefix \'{}\':'.format(directory, CONVENTIONS.CELL_PREFIX))
+        warn('    \'{}\' directory contains the following files which are missing the prefix \'{}\':'.format(directory,
+                                                                                                             CONVENTIONS.CELL_PREFIX))
         for exx in mp:
             warn('        {}'.format(exx))
         warn(stylize_head())
@@ -1600,7 +1658,7 @@ def check_dir_for_complete(directory, extension, set):
     if not extension.startswith('.'):
         extension = '.' + extension
 
-    targets = [c.long_name + extension for _,c in set.items()]
+    targets = [c.long_name + extension for _, c in set.items()]
     available = [c.name for c in LIB_PATH[directory].glob('*{}'.format(extension))]
     missing_in_dir = []
     extra = []
@@ -1720,11 +1778,23 @@ def read_cell_index():
 
     cd = LibraryInfo(CELL_DATA_FILE)
 
+def make_hierarchy(mag_lib):
+    G = nx.DiGraph(overlap='false', nodesep=0.45) #make empty directed graph
+    for m in mag_lib: #load the magic file of each cell
+        if not G.has_node(m.long_name):
+            G.add_node(m.long_name, children=m.references, centered=False)
+        for child in m.references:
+            child_magic = magic_lib.by_shortname(child)
+            G.add_edge(m.long_name, child_magic.long_name)
+    return G
 
 def main():
-    global magic, args, rel_root, cd, magic_lib, xschem_lib
-
+    global magic, args, rel_root, cd, magic_lib, xschem_lib, graph
+    pos = [0.0, 0.0]
+    centering = False
+    add_props = False
     ap = argparse.ArgumentParser()
+    graph = nx.empty_graph()
 
     ############  Target Selection  ####################################################################################
     ap.add_argument('-e', '--lef', action='store_true', help='Create LEF file', default=False)
@@ -1743,7 +1813,8 @@ def main():
 
     ############  Checking  ############################################################################################
     ap.add_argument('-l', '--lvs', action='store_true', help='run LVS checks (with netgen)', default=False)
-    ap.add_argument('-C', '--basic-checks', action='store_true', help='Run basic cell consistency checks.', default=False)
+    ap.add_argument('-C', '--basic-checks', action='store_true', help='Run basic cell consistency checks.',
+                    default=False)
     ap.add_argument('-L', '--lint-yaml', action='store_true', help='Run linter on the CELL_INDEX.yml file')
 
     ############  Basic Options ########################################################################################
@@ -1753,34 +1824,67 @@ def main():
     ap.add_argument('-Y', '--yes', action='store_true', help='Assume a \'yes\' answer to all prompts.')
 
     ############  Naming Tools  ########################################################################################
-    ap.add_argument('--rename-xschem-circuit', nargs=2, action='store', help='Rename modules in xschem library and update references.  '
-                                                            'Usage: \'--rename-xschem <fromname> <toname>\'')
+    ap.add_argument('--rename-xschem-circuit', nargs=2, action='store',
+                    help='Rename modules in xschem library and update references.  '
+                         'Usage: \'--rename-xschem <fromname> <toname>\'')
     ap.add_argument('--rename-magic-module', nargs=2, action='store', help='Rename magic modules and update references.'
-                                                           '    Usage: \'--rename-magic <fromname> <toname>\'')
+                                                                           '    Usage: \'--rename-magic <fromname> <toname>\'')
 
-    ap.add_argument('--rename-magic-port', nargs=3, help='rename port in magic cell. Usage: --rename-magic-port <cell-name> <old-name> <new-name>')
-    ap.add_argument('--rename-xschem-pin', nargs=3, help='rename pin in xschem circuit. Usage: --rename-xschem-pin <circuit-name> <old-name> <new-name>')
+    ap.add_argument('--rename-magic-port', nargs=3,
+                    help='rename port in magic cell. Usage: --rename-magic-port <cell-name> <old-name> <new-name>')
+    ap.add_argument('--rename-xschem-pin', nargs=3,
+                    help='rename pin in xschem circuit. Usage: --rename-xschem-pin <circuit-name> <old-name> <new-name>')
+    ap.add_argument('--center-origin', action='store_true',
+                    help='Make refresh, adds properties to magic files, centers magic file origin to 0,0',
+                    default=False)
+    ap.add_argument('--write-properties', action='store_true',
+                    help='Make refresh, adds properties to magic files, centers magic file origin to 0,0',
+                    default=False)
+    ap.add_argument('--make-graph', action='store_true',
+                    help='Iterates through magic library and returns a dependency graph',
+                    default=False)
 
     args = ap.parse_args()
-    if args.refresh:
-        for arg in [
-        'lef',
-        'gds',
-        'lib',
-        'markdown',
-        'nosynth',
-        'spice',
-        'temp_lef',
-        'verilog',
-        'force'
-        ]:
-            setattr(args, arg, True)
 
     rel_root = Path.cwd()
 
     read_cell_index()
     magic_lib = MagicLibrary(LIB_PATH['mag'])
     xschem_lib = XschemLibrary(LIB_PATH['xschem'])
+    graph = make_hierarchy(magic_lib.values())
+    ordered_list = list(reversed(list(nx.topological_sort(graph))))
+    attrs_g = {'title': 'Random graph1', 'value': 0.00}
+    graph.graph.update(attrs_g)
+
+    if args.center_origin:
+        setattr(args, 'refresh', True)
+        centering = True
+
+    if args.write_properties:
+        setattr(args, 'refresh', True)
+        add_props = True
+
+    if args.make_graph:
+        pos = graphviz_layout(graph, prog='dot')
+        # labels = {v: v.__name__ for v in magic_lib.values()}
+        #node = nx.algorithms.bfs_predecessors(graph, (magic_lib.by_longname('sky130_hilas_TopLevelTextStructure')).short_name)
+        nx.draw(graph, with_labels=True, pos=pos, font_size=10, node_size=500)
+        plt.show()
+
+    if args.refresh:
+
+        for arg in [
+            'lef',
+            'gds',
+            'lib',
+            'markdown',
+            'nosynth',
+            'spice',
+            'temp_lef',
+            'verilog',
+            'force'
+        ]:
+            setattr(args, arg, True)
 
     if args.basic_checks:
         run_basic_checks()
@@ -1796,10 +1900,21 @@ def main():
 
     if args.rename_xschem_pin:
         exit(run_rename_xschem_pin(*args.rename_xschem_pin))
+
     # Items here on done on a per-cell basis with Magic opening each one
     magic = Magic()
-    for m in magic_lib.values():
-        handle_magic(m)
+    for m in ordered_list:
+        file = magic_lib.by_longname(m)
+        handle_magic(file, centering, add_props, graph)
+        # if graph.out_edges(m) == []: #No children, can be centered without missing top level
+        #     handle_magic(m, centering, add_props, graph)
+        # else:
+        #     for child in graph.successors(m):
+        #         if graph.succ[child]['centered'] == False:
+        #
+        #
+        #             pass
+
 
     # The following items can be done on the batch level:
     if args.lvs:
@@ -1832,8 +1947,8 @@ def stylize_head(text=''):
         cblock = '  ' + text + '  '
     else:
         cblock = ''
-    hashlen = int((80-len(cblock))/2)
-    return '#'*hashlen + cblock + '#'*hashlen
+    hashlen = int((80 - len(cblock)) / 2)
+    return '#' * hashlen + cblock + '#' * hashlen
 
 
 if __name__ == '__main__':

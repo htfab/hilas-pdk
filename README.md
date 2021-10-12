@@ -63,8 +63,6 @@ idea to start by taking a look at the [Fastlane Page](https://gitlab.com/um-ece/
 | [`sky130_hilas_TA2SignalBiasCell`](#sky130-hilas-TA2SignalBiasCell) |                                                         |
 | [`sky130_hilas_Tgate4Double01`](#sky130-hilas-Tgate4Double01) | 4 double-throw transmission gates                       |
 | [`sky130_hilas_Tgate4Single01`](#sky130-hilas-Tgate4Single01) | 4 single-throw transmission gates                       |
-| [`sky130_hilas_TopLevelTextStructure`](#sky130-hilas-TopLevelTextStructure) | top level test structure                                |
-| [`sky130_hilas_TopProtectStructure`](#sky130-hilas-TopProtectStructure) | top level test structure with protection (duplicate of TopLevelProtectStructure) |
 | [`sky130_hilas_Trans4small`](#sky130-hilas-Trans4small) | 3 small nFETs + 3 small pFETs                           |
 | [`sky130_hilas_VinjDecode2to4`](#sky130-hilas-VinjDecode2to4) | a 2-to-4 decoder capable of handling VINJ voltage       |
 | [`sky130_hilas_VinjDiodeProtect01`](#sky130-hilas-VinjDiodeProtect01) | protective ESD diode for VINJ line                      |
@@ -143,7 +141,7 @@ idea to start by taking a look at the [Fastlane Page](https://gitlab.com/um-ece/
 
 Description: 5-bit digital-to-analog converter (under 6.05um at the moment; thinking through expansion to 6bit and 7bit, and they would use this cell
 
-Height: 5.990
+Height: 7.990
 <br>
 Width: 16.580
 
@@ -162,9 +160,9 @@ Width: 16.580
 
 Description: None
 
-Height: 6.930
+Height: 10.520
 <br>
-Width: 11.530
+Width: 16.540
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -183,9 +181,9 @@ Width: 11.530
 
 Description: 2x1 array of FG switch cells configured as pFET current sources with weak capacitive gate inputs
 
-Height: 6.150
+Height: 10.520
 <br>
-Width: 11.530
+Width: 16.540
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -207,9 +205,9 @@ Width: 11.530
 
 Description: None
 
-Height: 6.150
+Height: 10.520
 <br>
-Width: 11.520
+Width: 22.570
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -233,9 +231,9 @@ Width: 11.520
 
 Description: 4-channel level shifter
 
-Height: 7.000
+Height: 7.870
 <br>
-Width: 8.700
+Width: 8.890
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -256,9 +254,9 @@ Width: 8.700
 
 Description: a single level shifter
 
-Height: 1.750
+Height: 2.180
 <br>
-Width: 8.700
+Width: 8.360
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -269,9 +267,9 @@ Width: 8.700
 Description: Two transimpedance amps with one (of two) amplifiers using floating-gate
   inputs. FG amplifier with wide linear range.
 
-Height: 6.930
+Height: 23.320
 <br>
-Width: 28.090
+Width: 40.900
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -297,9 +295,9 @@ Width: 28.090
 
 Description: Two transimpedance amps with one (of two) amplifiers using floating-gate inputs. FG amplifier with normal linear range.
 
-Height: 6.930
+Height: 23.320
 <br>
-Width: 28.100
+Width: 46.940
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -327,9 +325,9 @@ Width: 28.100
 
 Description: Two transimpedane amplifiers with no floating-gate inputs.
 
-Height: 6.930
+Height: 24.010
 <br>
-Width: 17.920
+Width: 20.500
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -353,9 +351,9 @@ Width: 17.920
 
 Description: None
 
-Height: 6.050
+Height: 24.010
 <br>
-Width: 8.880
+Width: 11.810
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -375,9 +373,9 @@ Width: 8.880
 
 Description: 4 double-throw transmission gates
 
-Height: 6.050
+Height: 6.950
 <br>
-Width: 7.080
+Width: 9.710
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -405,9 +403,9 @@ Width: 7.080
 
 Description: 4 single-throw transmission gates
 
-Height: 6.410
+Height: 10.470
 <br>
-Width: 4.760
+Width: 7.390
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -426,165 +424,14 @@ Width: 4.760
 | 21                   | SELECT1              | metal2               | nsew                 |
 | 22                   | INPUT1_1             | metal2               | nsew                 |
 --------------------------------------------------------------------------------------------
-<a name="sky130-hilas-TopLevelTextStructure"></a>
-### `sky130_hilas_TopLevelTextStructure`
-
-Description: top level test structure
-
-Height: 75.780
-<br>
-Width: 130.250
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | DIG24                | metal2               | n                    |
-| 2                    | DIG23                | metal2               | nsew                 |
-| 3                    | DIG22                | metal2               | nsew                 |
-| 4                    | DIG21                | metal2               | nsew                 |
-| 5                    | DIG29                | metal2               | nsew                 |
-| 6                    | DIG28                | metal2               | nsew                 |
-| 7                    | DIG27                | metal2               | nsew                 |
-| 8                    | DIG26                | metal2               | nsew                 |
-| 9                    | DIG25                | metal2               | nsew                 |
-| 10                   | DIG20                | metal2               | nsew                 |
-| 11                   | DIG19                | metal2               | nsew                 |
-| 12                   | DIG18                | metal2               | nsew                 |
-| 13                   | DIG17                | metal2               | nsew                 |
-| 14                   | DIG16                | metal2               | nsew                 |
-| 15                   | DIG15                | metal2               | nsew                 |
-| 16                   | DIG14                | metal2               | nsew                 |
-| 17                   | DIG13                | metal2               | nsew                 |
-| 18                   | DIG12                | metal2               | nsew                 |
-| 19                   | DIG11                | metal2               | nsew                 |
-| 20                   | DIG10                | metal2               | nsew                 |
-| 21                   | DIG09                | metal2               | nsew                 |
-| 22                   | DIG08                | metal2               | nsew                 |
-| 23                   | DIG07                | metal2               | nsew                 |
-| 24                   | DIG06                | metal2               | nsew                 |
-| 25                   | DIG05                | metal2               | nsew                 |
-| 26                   | DIG04                | metal2               | nsew                 |
-| 27                   | DIG03                | metal2               | nsew                 |
-| 28                   | DIG02                | metal2               | nsew                 |
-| 29                   | DIG01                | metal2               | nsew                 |
-| 30                   | CAP2                 | metal2               | nsew                 |
-| 31                   | GENERALGATE01        | metal2               | nsew                 |
-| 32                   | GATEANDCAP1          | metal2               | nsew                 |
-| 33                   | GENERALGATE02        | metal2               | nsew                 |
-| 34                   | OUTPUTTA1            | metal2               | nsew                 |
-| 35                   | GATENFET1            | metal2               | nsew                 |
-| 36                   | DACOUTPUT            | metal2               | nsew                 |
-| 37                   | DRAINOUT             | metal2               | nsew                 |
-| 38                   | ROWTERM2             | metal2               | nsew                 |
-| 39                   | COLUMN2              | metal2               | nsew                 |
-| 40                   | COLUMN1              | metal2               | nsew                 |
-| 41                   | GATE2                | metal1               | nsew                 |
-| 42                   | DRAININJECT          | metal1               | nsew                 |
-| 43                   | VTUN                 | metal1               | nsew                 |
-| 44                   | VREFCHAR             | metal2               | nsew                 |
-| 45                   | CHAROUTPUT           | metal2               | nsew                 |
-| 46                   | LARGECAPACITOR       | metal2               | nsew                 |
-| 47                   | DRAIN6N              | metal2               | nsew                 |
-| 48                   | DRAIN6P              | metal2               | nsew                 |
-| 49                   | DRAIN5P              | metal2               | nsew                 |
-| 50                   | DARIN4P              | metal2               | nsew                 |
-| 51                   | DRAIN5N              | metal2               | nsew                 |
-| 52                   | DRAIN4N              | metal2               | nsew                 |
-| 53                   | DRAIN3P              | metal2               | nsew                 |
-| 54                   | DRAIN2P              | metal2               | nsew                 |
-| 55                   | DRAIN1P              | metal2               | nsew                 |
-| 56                   | DRAIN3N              | metal2               | nsew                 |
-| 57                   | DRAIN2N              | metal2               | nsew                 |
-| 58                   | DRAIN1N              | metal2               | nsew                 |
-| 59                   | SOURCEN              | metal2               | nsew                 |
-| 60                   | SOURCEP              | metal2               | nsew                 |
-| 61                   | GATE1                | metal1               | nsew                 |
-| 62                   | VINJ                 | metal1               | nsew                 |
-| 63                   | VGND                 | metal1               | nsew                 |
-| 64                   | VPWR                 | metal1               | nsew                 |
---------------------------------------------------------------------------------------------
-<a name="sky130-hilas-TopProtectStructure"></a>
-### `sky130_hilas_TopProtectStructure`
-
-Description: top level test structure with protection (duplicate of TopLevelProtectStructure)
-
-Height: 389.100
-<br>
-Width: 372.850
-
-| Port Number          | Label                | Layer                | Attributes           |
-|----------------------|----------------------|----------------------|----------------------|
-| 1                    | IO07                 | metal1               | nsew                 |
-| 2                    | IO08                 | metal1               | nsew                 |
-| 3                    | IO09                 | metal1               | nsew                 |
-| 4                    | IO10                 | metal1               | nsew                 |
-| 5                    | IO11                 | metal1               | nsew                 |
-| 6                    | IO12                 | metal1               | nsew                 |
-| 7                    | IO13                 | metal1               | nsew                 |
-| 8                    | IO25                 | metal1               | nsew                 |
-| 9                    | IO26                 | metal1               | nsew                 |
-| 10                   | IO27                 | metal1               | nsew                 |
-| 11                   | IO28                 | metal1               | nsew                 |
-| 12                   | IO29                 | metal1               | nsew                 |
-| 13                   | IO30                 | metal1               | nsew                 |
-| 14                   | IO31                 | metal1               | nsew                 |
-| 15                   | IO32                 | metal1               | nsew                 |
-| 16                   | IO33                 | metal1               | nsew                 |
-| 17                   | IO34                 | metal1               | nsew                 |
-| 18                   | IO35                 | metal1               | nsew                 |
-| 19                   | IO36                 | metal1               | nsew                 |
-| 20                   | IO37                 | metal1               | nsew                 |
-| 22                   | ANALOG10             | metal1               | nsew                 |
-| 23                   | ANALOG09             | metal1               | nsew                 |
-| 24                   | ANALOG08             | metal1               | nsew                 |
-| 25                   | ANALOG07             | metal1               | nsew                 |
-| 26                   | ANALOG06             | metal1               | nsew                 |
-| 27                   | ANALOG05             | metal1               | nsew                 |
-| 28                   | ANALOG04             | metal1               | nsew                 |
-| 29                   | ANALOG03             | metal1               | nsew                 |
-| 30                   | ANALOG02             | metal1               | nsew                 |
-| 31                   | ANALOG01             | metal1               | nsew                 |
-| 32                   | ANALOG00             | metal1               | nsew                 |
-| 33                   | VSSA1                | metal2               | nsew                 |
-| 34                   | VDDA1                | metal2               | nsew                 |
-| 35                   | LADATAOUT01          | metal2               | nsew                 |
-| 36                   | LADATAOUT00          | metal2               | nsew                 |
-| 37                   | LADATAOUT02          | metal2               | nsew                 |
-| 38                   | LADATAOUT03          | metal2               | nsew                 |
-| 39                   | LADATAOUT04          | metal2               | nsew                 |
-| 40                   | LADATAOUT05          | metal2               | nsew                 |
-| 41                   | LADATAOUT06          | metal2               | nsew                 |
-| 42                   | LADATAOUT07          | metal2               | nsew                 |
-| 43                   | LADATAOUT08          | metal2               | nsew                 |
-| 44                   | LADATAOUT09          | metal2               | nsew                 |
-| 45                   | LADATAOUT10          | metal2               | nsew                 |
-| 46                   | LADATAOUT11          | metal2               | nsew                 |
-| 47                   | LADATAOUT12          | metal2               | nsew                 |
-| 48                   | LADATAOUT13          | metal2               | nsew                 |
-| 49                   | LADATAOUT14          | metal2               | nsew                 |
-| 50                   | LADATAOUT15          | metal2               | nsew                 |
-| 51                   | LADATA16             | metal2               | nsew                 |
-| 52                   | LADATAOUT17          | metal2               | nsew                 |
-| 53                   | LADATAOUT18          | metal2               | nsew                 |
-| 54                   | LADATAOUT19          | metal2               | nsew                 |
-| 55                   | LADATAOUT20          | metal2               | nsew                 |
-| 56                   | LADATAOUT21          | metal2               | nsew                 |
-| 57                   | LADATAOUT22          | metal2               | nsew                 |
-| 58                   | LADATAOUT23          | metal2               | nsew                 |
-| 59                   | LADATAOUT24          | metal2               | nsew                 |
-| 60                   | LADATAIN00           | metal2               | nsew                 |
-| 61                   | LADATAIN01           | metal2               | nsew                 |
-| 62                   | LADATAIN02           | metal2               | nsew                 |
-| 63                   | LADATAIN03           | metal2               | nsew                 |
-| 64                   | VCCA                 | metal2               | nsew                 |
---------------------------------------------------------------------------------------------
 <a name="sky130-hilas-Trans4small"></a>
 ### `sky130_hilas_Trans4small`
 
 Description: 3 small nFETs + 3 small pFETs
 
-Height: 6.050
+Height: 6.460
 <br>
-Width: 2.800
+Width: 3.400
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -614,9 +461,9 @@ Width: 2.800
 
 Description: a 2-to-4 decoder capable of handling VINJ voltage
 
-Height: 6.160
+Height: 7.560
 <br>
-Width: 12.950
+Width: 16.320
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -675,9 +522,9 @@ Width: 6.880
 
 Description: 4-input winner-take-all circuit. Connects directly to array of swc4x2cell. Can array vertically. Needs one nFET transistor current source.
 
-Height: 6.500
+Height: 14.870
 <br>
-Width: 14.170
+Width: 26.920
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -706,7 +553,7 @@ Width: 14.170
 
 Description: selectable capacitor array
 
-Height: 6.500
+Height: 14.720
 <br>
 Width: 36.700
 
@@ -729,9 +576,9 @@ Width: 36.700
 
 Description: smallest cap
 
-Height: 5.830
+Height: 7.870
 <br>
-Width: 10.420
+Width: 13.090
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -743,9 +590,9 @@ Width: 10.420
 
 Description: mid-small cap
 
-Height: 5.830
+Height: 7.870
 <br>
-Width: 7.970
+Width: 9.610
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -757,9 +604,9 @@ Width: 7.970
 
 Description: mid-large cap
 
-Height: 5.870
+Height: 7.900
 <br>
-Width: 5.790
+Width: 8.720
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -771,9 +618,9 @@ Width: 5.790
 
 Description: large cap
 
-Height: 5.290
+Height: 7.320
 <br>
-Width: 5.780
+Width: 8.150
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -787,9 +634,9 @@ Width: 5.780
 
 Description: 4x1 array of FG switch cell, Varactor capacitor cell
 
-Height: 6.500
+Height: 10.900
 <br>
-Width: 10.070
+Width: 20.240
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -813,9 +660,9 @@ Width: 10.070
 
 Description: multiplexor for drain selection for 4 drain lines, pitch matched
 
-Height: 6.590
+Height: 6.110
 <br>
-Width: 5.720
+Width: 8.000
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -834,9 +681,9 @@ Width: 5.720
 
 Description: Single Large (W//L=100) nFET Transistor
 
-Height: 5.830
+Height: 6.030
 <br>
-Width: 4.370
+Width: 5.570
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -893,9 +740,9 @@ Width: 55.470
 
 Description: 4x1 array of FG switch cell configured pFET as current sources
 
-Height: 6.500
+Height: 10.910
 <br>
-Width: 10.080
+Width: 20.250
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -919,9 +766,9 @@ Width: 10.080
 
 Description: 4x1 array of FG switch cell using overlap capacitors
 
-Height: 6.710
+Height: 10.510
 <br>
-Width: 10.080
+Width: 16.250
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -931,9 +778,9 @@ Width: 10.080
 
 Description: 4x1 analog mux with overlap
 
-Height: 6.160
+Height: 7.050
 <br>
-Width: 9.350
+Width: 12.240
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -943,9 +790,9 @@ Width: 9.350
 
 Description: 4x2 array of FG switch cell, Varactor capacitor cell
 
-Height: 6.500
+Height: 14.720
 <br>
-Width: 20.120
+Width: 45.720
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -972,9 +819,9 @@ Width: 20.120
 
 Description: Core switch cell, built with overlap capacitor
 
-Height: 6.160
+Height: 10.870
 <br>
-Width: 17.980
+Width: 27.570
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1051,9 +898,9 @@ Width: 4.230
 
 Description: None
 
-Height: 5.650
+Height: 6.230
 <br>
-Width: 1.720
+Width: 1.910
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1063,9 +910,9 @@ Width: 1.720
 
 Description: None
 
-Height: 5.650
+Height: 6.230
 <br>
-Width: 1.720
+Width: 1.900
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1075,9 +922,9 @@ Width: 1.720
 
 Description: None
 
-Height: 5.650
+Height: 6.230
 <br>
-Width: 1.910
+Width: 2.090
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1087,9 +934,9 @@ Width: 1.910
 
 Description: None
 
-Height: 5.650
+Height: 6.230
 <br>
-Width: 1.870
+Width: 2.060
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1099,9 +946,9 @@ Width: 1.870
 
 Description: None
 
-Height: 13.680
+Height: 15.990
 <br>
-Width: 16.380
+Width: 16.390
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1111,9 +958,9 @@ Width: 16.380
 
 Description: 2x1 array of transmission gates
 
-Height: 6.150
+Height: 5.250
 <br>
-Width: 5.680
+Width: 7.430
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1123,9 +970,9 @@ Width: 5.680
 
 Description: None
 
-Height: 5.790
+Height: 7.460
 <br>
-Width: 3.270
+Width: 3.580
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1171,9 +1018,9 @@ Width: 2.720
 
 Description: None
 
-Height: 5.020
+Height: 8.300
 <br>
-Width: 9.540
+Width: 16.500
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1195,7 +1042,7 @@ Width: 2.190
 
 Description: None
 
-Height: 1.520
+Height: 1.670
 <br>
 Width: 7.080
 
@@ -1207,7 +1054,7 @@ Width: 7.080
 
 Description: None
 
-Height: 1.610
+Height: 3.380
 <br>
 Width: 4.760
 
@@ -1231,9 +1078,9 @@ Width: 1.880
 
 Description: None
 
-Height: 1.430
+Height: 1.440
 <br>
-Width: 1.630
+Width: 1.720
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1255,9 +1102,9 @@ Width: 5.680
 
 Description: None
 
-Height: 12.520
+Height: 21.240
 <br>
-Width: 34.090
+Width: 57.530
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1317,7 +1164,7 @@ Description: None
 
 Height: 4.770
 <br>
-Width: 4.670
+Width: 4.360
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1327,7 +1174,7 @@ Width: 4.670
 
 Description: None
 
-Height: 1.290
+Height: 1.470
 <br>
 Width: 1.840
 
@@ -1351,9 +1198,9 @@ Width: 2.190
 
 Description: second pFET current mirror
 
-Height: 2.840
+Height: 2.920
 <br>
-Width: 1.280
+Width: 1.330
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1363,9 +1210,9 @@ Width: 1.280
 
 Description: None
 
-Height: 6.050
+Height: 10.630
 <br>
-Width: 1.870
+Width: 5.490
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1377,9 +1224,9 @@ Width: 1.870
 
 Description: FG test strucure that uses a capacitor around a transconductance amplifier
 
-Height: 6.050
+Height: 14.170
 <br>
-Width: 29.950
+Width: 30.120
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1429,9 +1276,9 @@ Width: 6.140
 
 Description: None
 
-Height: 5.950
+Height: 5.930
 <br>
-Width: 3.530
+Width: 4.400
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1491,7 +1338,7 @@ Width: 2.830
 
 Description: decoupling cap (intended as fill)
 
-Height: 3.020
+Height: 3.070
 <br>
 Width: 3.080
 
@@ -1505,7 +1352,7 @@ Description: decoupling cap (intended as fill), variant
 
 Height: 6.040
 <br>
-Width: 3.890
+Width: 4.710
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1627,7 +1474,7 @@ Description: None
 
 Height: 0.900
 <br>
-Width: 2.080
+Width: 2.100
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1745,9 +1592,9 @@ Width: 1.720
 
 Description: pFET transistor used in DAC block
 
-Height: 1.570
+Height: 1.330
 <br>
-Width: 1.870
+Width: 1.880
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1757,9 +1604,9 @@ Width: 1.870
 
 Description: pFET transistor used in DAC block
 
-Height: 1.570
+Height: 1.330
 <br>
-Width: 1.870
+Width: 1.930
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1769,9 +1616,9 @@ Width: 1.870
 
 Description: pFET transistor used in DAC block
 
-Height: 1.570
+Height: 1.330
 <br>
-Width: 1.870
+Width: 1.930
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|
@@ -1781,7 +1628,7 @@ Width: 1.870
 
 Description: pFET transistor used in DAC block
 
-Height: 1.450
+Height: 1.860
 <br>
 Width: 1.910
 
@@ -1793,9 +1640,9 @@ Width: 1.910
 
 Description: pFET transistor used in DAC block
 
-Height: 0.990
+Height: 1.050
 <br>
-Width: 2.030
+Width: 2.120
 
 | Port Number          | Label                | Layer                | Attributes           |
 |----------------------|----------------------|----------------------|----------------------|

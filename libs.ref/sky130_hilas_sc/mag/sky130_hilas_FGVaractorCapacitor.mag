@@ -1,16 +1,20 @@
 magic
 tech sky130A
-timestamp 1629420194
+timestamp 1634057705
 << nwell >>
-rect -957 -395 -734 -210
+rect 0 0 223 185
 << mvvaractor >>
-rect -901 -336 -790 -272
+rect 56 59 167 123
 << mvnsubdiff >>
-rect -901 -272 -790 -244
-rect -901 -361 -790 -336
+rect 56 123 167 151
+rect 56 34 167 59
 << poly >>
-rect -941 -336 -901 -272
-rect -790 -336 -749 -272
+rect 16 59 56 123
+rect 167 59 208 123
 << metal1 >>
-rect -892 -395 -854 -209
+rect 65 0 103 186
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

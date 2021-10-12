@@ -1,63 +1,69 @@
 magic
 tech sky130A
-timestamp 1632494644
+timestamp 1634057722
+<< checkpaint >>
+rect -607 -548 687 745
 << nwell >>
-rect -289 41 -33 232
+rect 0 0 256 191
 << mvpmos >>
-rect -222 126 -172 180
+rect 67 85 117 139
 << mvpdiff >>
-rect -251 174 -222 180
-rect -251 132 -247 174
-rect -229 132 -222 174
-rect -251 126 -222 132
-rect -172 169 -142 180
-rect -172 152 -166 169
-rect -147 152 -142 169
-rect -172 126 -142 152
+rect 38 133 67 139
+rect 38 91 42 133
+rect 60 91 67 133
+rect 38 85 67 91
+rect 117 128 147 139
+rect 117 111 123 128
+rect 142 111 147 128
+rect 117 85 147 111
 << mvpdiffc >>
-rect -247 132 -229 174
-rect -166 152 -147 169
+rect 42 91 60 133
+rect 123 111 142 128
 << nsubdiff >>
-rect -142 169 -97 180
-rect -142 152 -128 169
-rect -109 152 -97 169
-rect -142 125 -97 152
+rect 147 128 192 139
+rect 147 111 161 128
+rect 180 111 192 128
+rect 147 84 192 111
 << nsubdiffcont >>
-rect -128 152 -109 169
+rect 161 111 180 128
 << poly >>
-rect -222 180 -172 193
-rect -222 117 -172 126
-rect -289 100 -172 117
+rect 67 139 117 152
+rect 67 76 117 85
+rect 0 59 117 76
 << locali >>
-rect -255 174 -221 176
-rect -255 132 -247 174
-rect -229 132 -221 174
-rect -166 169 -106 177
-rect -147 152 -128 169
-rect -109 152 -106 169
-rect -166 138 -106 152
-rect -166 121 -165 138
-rect -148 121 -127 138
-rect -110 121 -106 138
-rect -166 117 -106 121
+rect 34 133 68 135
+rect 34 91 42 133
+rect 60 91 68 133
+rect 123 128 183 136
+rect 142 111 161 128
+rect 180 111 183 128
+rect 123 97 183 111
+rect 123 80 124 97
+rect 141 80 162 97
+rect 179 80 183 97
+rect 123 76 183 80
 << viali >>
-rect -165 121 -148 138
-rect -127 121 -110 138
+rect 124 80 141 97
+rect 162 80 179 97
 << metal1 >>
-rect -166 194 -150 232
-rect -166 141 -107 194
-rect -168 138 -107 141
-rect -168 121 -165 138
-rect -148 121 -127 138
-rect -110 121 -107 138
-rect -168 117 -107 121
-rect -166 115 -107 117
-rect -166 42 -150 115
+rect 123 153 139 191
+rect 123 100 182 153
+rect 121 97 182 100
+rect 121 80 124 97
+rect 141 80 162 97
+rect 179 80 182 97
+rect 121 76 182 80
+rect 123 74 182 76
+rect 123 1 139 74
 << metal2 >>
-rect -289 140 -280 158
-rect -250 140 -33 158
+rect 0 99 9 117
+rect 39 99 256 117
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1632488964
-transform 1 0 -266 0 -1 156
-box -14 -15 20 18
+timestamp 1634057699
+transform 1 0 23 0 -1 115
+box 0 0 34 33
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

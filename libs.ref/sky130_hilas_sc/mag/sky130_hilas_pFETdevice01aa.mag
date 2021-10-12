@@ -1,22 +1,26 @@
 magic
 tech sky130A
-timestamp 1629420194
+timestamp 1634057725
 << error_p >>
-rect -18 20 21 23
-rect -18 -22 21 -19
+rect 62 98 101 101
+rect 62 56 101 59
 << nwell >>
-rect -80 -78 81 43
+rect 0 0 161 121
 << pmos >>
-rect -18 -19 21 20
+rect 62 59 101 98
 << pdiff >>
-rect -46 -19 -18 20
-rect 21 -19 47 20
+rect 34 59 62 98
+rect 101 59 127 98
 << poly >>
-rect -80 18 -54 33
-rect -18 20 21 33
-rect -69 -27 -54 18
-rect -18 -27 21 -19
-rect -69 -42 71 -27
-rect 56 -63 71 -42
-rect 56 -78 92 -63
+rect 0 96 26 111
+rect 62 98 101 111
+rect 11 51 26 96
+rect 62 51 101 59
+rect 11 36 151 51
+rect 136 15 151 36
+rect 136 0 172 15
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

@@ -1,43 +1,54 @@
 magic
 tech sky130A
-timestamp 1632400113
+timestamp 1634057769
+<< checkpaint >>
+rect -267 829 1179 1409
+rect -587 -150 1179 829
+rect -587 -464 819 -150
+rect -529 -560 819 -464
+rect -529 -583 779 -560
+rect -515 -619 779 -583
 << nwell >>
-rect 133 -140 319 -133
+rect 0 30 186 37
 << poly >>
-rect 225 -104 248 -100
+rect 92 66 115 70
 << locali >>
-rect 279 -70 301 -61
-rect 279 -78 287 -70
-rect 247 -133 252 -120
-rect 235 -146 252 -133
+rect 146 100 168 109
+rect 146 92 154 100
+rect 114 37 119 50
+rect 102 24 119 37
 << metal1 >>
-rect 283 -109 304 -88
+rect 150 61 171 82
 << metal2 >>
-rect 306 -105 320 -86
-rect 225 -169 312 -146
-rect 225 -170 268 -169
+rect 173 65 187 84
+rect 92 1 179 24
+rect 92 0 135 1
 use sky130_hilas_li2m2  sky130_hilas_li2m2_1
-timestamp 1629420194
-transform 1 0 248 0 1 -159
-box -14 -15 20 18
+timestamp 1634057699
+transform 1 0 115 0 1 11
+box 0 0 34 33
 use sky130_hilas_li2m2  sky130_hilas_li2m2_0
-timestamp 1629420194
-transform 1 0 176 0 1 -4
-box -14 -15 20 18
+timestamp 1634057699
+transform 1 0 43 0 1 166
+box 0 0 34 33
 use sky130_hilas_m12m2  sky130_hilas_m12m2_0
-timestamp 1629420194
-transform 1 0 290 0 1 -100
-box -9 -10 23 22
+timestamp 1634057711
+transform 1 0 157 0 1 70
+box 0 0 32 32
 use sky130_hilas_poly2li  sky130_hilas_poly2li_0
-timestamp 1629420194
-transform 1 0 234 0 1 -123
-box -9 -14 18 19
+timestamp 1634057707
+transform 1 0 101 0 1 47
+box 0 0 27 33
 use sky130_hilas_pTransistorVert01  sky130_hilas_pTransistorVert01_0
-timestamp 1629420194
-transform 1 0 496 0 1 310
-box -363 -444 -177 -145
+timestamp 1634057732
+transform 1 0 363 0 1 480
+box 0 0 186 299
 use sky130_hilas_li2m1  sky130_hilas_li2m1_0
-timestamp 1629420194
-transform 1 0 291 0 1 -85
-box -10 -8 13 21
+timestamp 1634057708
+transform 1 0 158 0 1 85
+box 0 0 23 29
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

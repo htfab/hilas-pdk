@@ -1,42 +1,46 @@
 magic
 tech sky130A
-timestamp 1629420194
+timestamp 1634057783
 << nwell >>
-rect -1005 -380 -783 -211
+rect 0 0 222 169
 << mvvaractor >>
-rect -901 -322 -840 -272
+rect 104 58 165 108
 << mvnsubdiff >>
-rect -972 -265 -840 -246
-rect -972 -287 -950 -265
-rect -901 -272 -840 -265
-rect -954 -304 -950 -287
-rect -972 -337 -950 -304
-rect -901 -347 -840 -322
+rect 33 115 165 134
+rect 33 93 55 115
+rect 104 108 165 115
+rect 51 76 55 93
+rect 33 43 55 76
+rect 104 33 165 58
 << mvnsubdiffcont >>
-rect -972 -304 -954 -287
+rect 33 76 51 93
 << poly >>
-rect -941 -322 -901 -272
-rect -840 -322 -800 -272
+rect 64 58 104 108
+rect 165 58 205 108
 << locali >>
-rect -975 -263 -952 -259
-rect -975 -280 -972 -263
-rect -955 -280 -952 -263
-rect -975 -287 -952 -280
-rect -975 -304 -972 -287
-rect -954 -304 -952 -287
-rect -975 -308 -952 -304
-rect -975 -325 -972 -308
-rect -955 -325 -952 -308
-rect -975 -328 -952 -325
+rect 30 117 53 121
+rect 30 100 33 117
+rect 50 100 53 117
+rect 30 93 53 100
+rect 30 76 33 93
+rect 51 76 53 93
+rect 30 72 53 76
+rect 30 55 33 72
+rect 50 55 53 72
+rect 30 52 53 55
 << viali >>
-rect -972 -280 -955 -263
-rect -972 -325 -955 -308
+rect 33 100 50 117
+rect 33 55 50 72
 << metal1 >>
-rect -977 -263 -951 -254
-rect -977 -280 -972 -263
-rect -955 -280 -951 -263
-rect -977 -308 -951 -280
-rect -977 -325 -972 -308
-rect -955 -325 -951 -308
-rect -977 -333 -951 -325
+rect 28 117 54 126
+rect 28 100 33 117
+rect 50 100 54 117
+rect 28 72 54 100
+rect 28 55 33 72
+rect 50 55 54 72
+rect 28 47 54 55
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

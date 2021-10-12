@@ -34,6 +34,15 @@ refresh: clean-all
 check:
 	$(SCRIPTS)/magic_gen.py -C -L
 
+graph:
+	$(SCRIPTS)/magic_gen.py --make-graph
+
+centering: clean-all
+	$(SCRIPTS)/magic_gen.py --center-origin
+
+properties: clean-all
+	$(SCRIPTS)/magic_gen.py --write-properties
+
 gds: $(MAG_CELLS)
 	$(SCRIPTS)/magic_gen.py -g
 

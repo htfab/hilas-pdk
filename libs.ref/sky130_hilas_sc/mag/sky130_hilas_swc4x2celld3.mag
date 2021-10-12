@@ -1,101 +1,107 @@
 magic
 tech sky130A
-timestamp 1632492731
+timestamp 1634057849
+<< checkpaint >>
+rect -630 -248 5202 2102
 << metal1 >>
-rect -887 596 -871 601
-rect -693 592 -669 601
-rect -475 591 -437 601
-rect -300 595 -276 601
-rect -72 588 -32 601
-rect 36 591 76 601
-rect 280 596 304 601
-rect 441 591 479 601
-rect 673 594 697 601
-rect 875 596 891 601
-rect -32 565 36 587
-rect -887 -3 -871 3
-rect -693 -4 -669 4
-rect -475 -4 -437 5
-rect -300 -4 -276 3
-rect -72 -4 -32 8
-rect 36 -4 76 8
-rect 280 -4 304 3
-rect 441 -4 479 11
-rect 673 -4 697 2
-rect 875 -3 891 3
+rect 1397 600 1413 605
+rect 1591 596 1615 605
+rect 1809 595 1847 605
+rect 1984 599 2008 605
+rect 2212 592 2252 605
+rect 2320 595 2360 605
+rect 2564 600 2588 605
+rect 2725 595 2763 605
+rect 2957 598 2981 605
+rect 3159 600 3175 605
+rect 2252 569 2320 591
+rect 1397 1 1413 7
+rect 1591 0 1615 8
+rect 1809 0 1847 9
+rect 1984 0 2008 7
+rect 2212 0 2252 12
+rect 2320 0 2360 12
+rect 2564 0 2588 7
+rect 2725 0 2763 15
+rect 2957 0 2981 6
+rect 3159 1 3175 7
 << metal2 >>
-rect -1004 507 -997 525
-rect 999 507 1008 525
-rect -1004 396 -998 414
-rect 1002 396 1008 414
-rect -1004 183 -997 201
-rect 999 183 1008 201
-rect -334 134 342 152
-rect -1004 73 -997 91
-rect 999 73 1008 91
+rect 1280 511 1287 529
+rect 3283 511 3292 529
+rect 1280 400 1286 418
+rect 3286 400 3292 418
+rect 1280 187 1287 205
+rect 3283 187 3292 205
+rect 1950 138 2626 156
+rect 1280 77 1287 95
+rect 3283 77 3292 95
 use sky130_hilas_cellAttempt01d3  sky130_hilas_cellAttempt01d3_1
-timestamp 1632492731
-transform -1 0 -260 0 1 378
-box -263 -404 744 246
+timestamp 1634057786
+transform -1 0 2024 0 1 382
+box 0 0 2024 1090
 use sky130_hilas_cellAttempt01d3  sky130_hilas_cellAttempt01d3_0
-timestamp 1632492731
-transform 1 0 264 0 1 378
-box -263 -404 744 246
+timestamp 1634057786
+transform 1 0 2548 0 1 382
+box 0 0 2024 1090
 << labels >>
-rlabel metal1 441 591 479 601 0 GATE2
+rlabel metal1 2725 595 2763 605 0 GATE2
 port 1 nsew analog default
-rlabel metal1 -72 -4 -32 8 0 VTUN
+rlabel metal1 2212 0 2252 12 0 VTUN
 port 2 nsew power default
-rlabel metal1 36 -4 76 8 0 VTUN
+rlabel metal1 2320 0 2360 12 0 VTUN
 port 2 nsew power default
-rlabel metal1 36 591 76 601 0 VTUN
+rlabel metal1 2320 595 2360 605 0 VTUN
 port 2 nsew power default
-rlabel metal1 -72 588 -32 601 0 VTUN
+rlabel metal1 2212 592 2252 605 0 VTUN
 port 2 nsew power default
-rlabel metal1 -475 591 -437 601 0 GATE1
+rlabel metal1 1809 595 1847 605 0 GATE1
 port 3 nsew analog default
-rlabel metal1 -475 -4 -437 5 0 GATE1
+rlabel metal1 1809 0 1847 9 0 GATE1
 port 3 nsew analog default
-rlabel metal1 441 -4 479 11 0 GATE2
+rlabel metal1 2725 0 2763 15 0 GATE2
 port 1 nsew analog default
-rlabel metal1 -887 596 -871 601 0 COL1
+rlabel metal1 1397 600 1413 605 0 COL1
 port 12 nsew analog default
-rlabel metal1 -887 -3 -871 3 0 COL1
+rlabel metal1 1397 1 1413 7 0 COL1
 port 12 nsew analog default
-rlabel metal1 875 -3 891 3 0 COL2
+rlabel metal1 3159 1 3175 7 0 COL2
 port 13 nsew analog default
-rlabel metal1 875 596 891 601 0 COL2
+rlabel metal1 3159 600 3175 605 0 COL2
 port 13 nsew analog default
-rlabel metal1 -693 595 -669 601 0 VGND
+rlabel metal1 1591 599 1615 605 0 VGND
 port 22 nsew
-rlabel metal1 -693 -4 -669 4 0 VGND
+rlabel metal1 1591 0 1615 8 0 VGND
 port 22 nsew
-rlabel metal1 -300 -4 -276 3 0 VGND
+rlabel metal1 1984 0 2008 7 0 VGND
 port 22 nsew
-rlabel metal1 -300 595 -276 601 0 VGND
+rlabel metal1 1984 599 2008 605 0 VGND
 port 22 nsew
-rlabel metal1 280 -4 304 3 0 VGND
+rlabel metal1 2564 0 2588 7 0 VGND
 port 22 nsew
-rlabel metal1 673 -4 697 2 0 VGND
+rlabel metal1 2957 0 2981 6 0 VGND
 port 22 nsew
-rlabel metal1 280 596 304 601 0 VGND
+rlabel metal1 2564 600 2588 605 0 VGND
 port 22 nsew
-rlabel metal1 673 594 697 601 0 VGND
+rlabel metal1 2957 598 2981 605 0 VGND
 port 22 nsew
-rlabel metal2 -1004 73 -997 91 0 ROW4
+rlabel metal2 1280 77 1287 95 0 ROW4
 port 20 nsew
-rlabel metal2 -1004 183 -997 201 0 ROW3
+rlabel metal2 1280 187 1287 205 0 ROW3
 port 19 nsew
-rlabel metal2 -1004 396 -998 414 0 ROW2
+rlabel metal2 1280 400 1286 418 0 ROW2
 port 15 nsew
-rlabel metal2 -1004 507 -997 525 0 ROW1
+rlabel metal2 1280 511 1287 529 0 ROW1
 port 14 nsew
-rlabel metal2 999 507 1008 525 0 ROW1
+rlabel metal2 3283 511 3292 529 0 ROW1
 port 14 nsew
-rlabel metal2 1002 396 1008 414 0 ROW2
+rlabel metal2 3286 400 3292 418 0 ROW2
 port 15 nsew
-rlabel metal2 999 183 1008 201 0 ROW3
+rlabel metal2 3283 187 3292 205 0 ROW3
 port 19 nsew
-rlabel metal2 999 73 1008 91 0 ROW4
+rlabel metal2 3283 77 3292 95 0 ROW4
 port 20 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

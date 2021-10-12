@@ -1,134 +1,142 @@
 magic
 tech sky130A
-timestamp 1632407404
+timestamp 1634057825
+<< checkpaint >>
+rect 359 2064 2168 2133
+rect -234 -248 2680 2064
+rect 1007 -589 2625 -248
 << error_s >>
-rect -509 717 -459 723
-rect -437 717 -387 723
-rect -509 675 -459 681
-rect -437 675 -387 681
-rect -1187 462 -1170 464
-rect -1187 443 -1170 445
-rect -1187 428 -1170 429
-rect 77 421 104 427
-rect -1187 409 -1170 410
-rect 77 379 104 385
-rect 77 354 104 360
-rect 77 312 104 318
-rect 77 271 104 277
-rect 77 229 104 235
-rect -509 204 -459 210
-rect -437 204 -387 210
-rect 77 204 104 210
-rect -509 162 -459 168
-rect -437 162 -387 168
-rect 77 162 104 168
+rect 964 577 1014 583
+rect 1036 577 1086 583
+rect 964 535 1014 541
+rect 1036 535 1086 541
+rect 286 322 303 324
+rect 286 303 303 305
+rect 286 288 303 289
+rect 1550 281 1577 287
+rect 286 269 303 270
+rect 1550 239 1577 245
+rect 1550 214 1577 220
+rect 1550 172 1577 178
+rect 1550 131 1577 137
+rect 1550 89 1577 95
+rect 964 64 1014 70
+rect 1036 64 1086 70
+rect 1550 64 1577 70
+rect 964 22 1014 28
+rect 1036 22 1086 28
+rect 1550 22 1577 28
 << nwell >>
-rect -328 571 -162 593
-rect 191 140 319 159
+rect 1145 431 1311 453
+rect 1664 0 1792 19
 << locali >>
-rect -1190 479 -1144 488
-rect -1190 462 -1187 479
-rect -1170 462 -1144 479
-rect -149 470 -131 493
-rect -1190 410 -1144 462
-rect -237 435 -131 470
-rect -217 418 -211 435
-rect -1190 393 -1187 410
-rect -1170 393 -1144 410
-rect -1190 387 -1144 393
+rect 283 339 329 348
+rect 283 322 286 339
+rect 303 322 329 339
+rect 1324 330 1342 353
+rect 283 270 329 322
+rect 1236 295 1342 330
+rect 1256 278 1262 295
+rect 283 253 286 270
+rect 303 253 329 270
+rect 283 247 329 253
 << viali >>
-rect -1187 462 -1170 479
-rect -1187 393 -1170 410
+rect 286 322 303 339
+rect 286 253 303 270
 << metal1 >>
-rect -1438 738 -1396 745
-rect -1068 737 -1045 745
-rect -416 737 -397 745
-rect -372 737 -344 745
-rect 123 731 157 745
-rect 190 730 217 745
-rect 127 579 153 605
-rect 122 532 165 535
-rect 122 498 127 532
-rect 161 498 165 532
-rect 122 496 165 498
-rect 127 495 161 496
-rect -1194 484 -1156 488
-rect -1194 391 -1190 484
-rect -1161 391 -1156 484
-rect -1194 387 -1156 391
-rect 123 140 157 159
-rect 190 140 217 161
+rect 35 598 77 605
+rect 405 597 428 605
+rect 1057 597 1076 605
+rect 1101 597 1129 605
+rect 1596 591 1630 605
+rect 1663 590 1690 605
+rect 1600 439 1626 465
+rect 1595 392 1638 395
+rect 1595 358 1600 392
+rect 1634 358 1638 392
+rect 1595 356 1638 358
+rect 1600 355 1634 356
+rect 279 344 317 348
+rect 279 251 283 344
+rect 312 251 317 344
+rect 279 247 317 251
+rect 1596 0 1630 19
+rect 1663 0 1690 21
 << via1 >>
-rect 127 498 161 532
-rect -1190 479 -1161 484
-rect -1190 462 -1187 479
-rect -1187 462 -1170 479
-rect -1170 462 -1161 479
-rect -1190 410 -1161 462
-rect -1190 393 -1187 410
-rect -1187 393 -1170 410
-rect -1170 393 -1161 410
-rect -1190 391 -1161 393
+rect 1600 358 1634 392
+rect 283 339 312 344
+rect 283 322 286 339
+rect 286 322 303 339
+rect 303 322 312 339
+rect 283 270 312 322
+rect 283 253 286 270
+rect 286 253 303 270
+rect 303 253 312 270
+rect 283 251 312 253
 << metal2 >>
-rect -1473 677 -1466 695
-rect -328 571 319 593
-rect 124 532 164 533
-rect 124 524 127 532
-rect -1191 505 127 524
-rect -1191 487 -1172 505
-rect -42 491 -3 505
-rect 124 498 127 505
-rect 161 498 164 532
-rect 124 497 164 498
-rect -1193 484 -1158 487
-rect -1193 391 -1190 484
-rect -1161 391 -1158 484
-rect -62 392 35 434
-rect -1193 388 -1158 391
-rect -177 327 0 347
-rect -334 278 -318 318
-rect -206 246 0 267
-rect -1473 192 -1465 207
-rect -286 142 -260 167
+rect 0 537 7 555
+rect 1145 431 1792 453
+rect 1597 392 1637 393
+rect 1597 384 1600 392
+rect 282 365 1600 384
+rect 282 347 301 365
+rect 1431 351 1470 365
+rect 1597 358 1600 365
+rect 1634 358 1637 392
+rect 1597 357 1637 358
+rect 280 344 315 347
+rect 280 251 283 344
+rect 312 251 315 344
+rect 1411 252 1508 294
+rect 280 248 315 251
+rect 1296 187 1473 207
+rect 1139 138 1155 178
+rect 1267 106 1473 127
+rect 0 52 8 67
+rect 1187 2 1213 27
 use sky130_hilas_pTransistorSingle  sky130_hilas_pTransistorSingle_0
-timestamp 1632400113
-transform 1 0 -323 0 1 580
-box 133 -174 320 165
+timestamp 1634057769
+transform 1 0 1150 0 1 440
+box 0 0 549 779
 use sky130_hilas_SingleTACore01  sky130_hilas_SingleTACore01_0
-timestamp 1632398358
-transform 1 0 164 0 1 181
-box -172 -26 155 550
+timestamp 1634057770
+transform 1 0 1637 0 1 41
+box 0 0 358 661
 use sky130_hilas_pTransistorPair  sky130_hilas_pTransistorPair_0
-timestamp 1629420194
-transform 1 0 -484 0 1 580
-box 133 -440 320 165
+timestamp 1634057767
+transform 1 0 989 0 1 440
+box 0 0 549 1063
 use sky130_hilas_FGBias2x1cell  sky130_hilas_FGBias2x1cell_0
-timestamp 1631881676
-transform 1 0 -1077 0 1 522
-box -396 -387 757 228
+timestamp 1634057765
+transform 1 0 396 0 1 382
+box 0 0 1654 1052
 << labels >>
-rlabel metal1 123 140 157 146 0 VGND
+rlabel metal1 1596 0 1630 6 0 VGND
 port 7 nsew ground default
-rlabel metal1 190 140 217 146 0 VPWR
+rlabel metal1 1663 0 1690 6 0 VPWR
 port 8 nsew power default
-rlabel metal1 123 740 157 745 0 VGND
+rlabel metal1 1596 600 1630 605 0 VGND
 port 7 nsew ground default
-rlabel metal1 190 740 217 745 0 VPWR
+rlabel metal1 1663 600 1690 605 0 VPWR
 port 8 nsew power default
-rlabel metal2 -286 142 -263 167 0 VIN
+rlabel metal2 1187 2 1210 27 0 VIN
 port 2 nsew analog default
-rlabel metal1 -416 737 -397 745 0 COLSEL1
+rlabel metal1 1057 597 1076 605 0 COLSEL1
 port 1 nsew
-rlabel metal2 -1473 677 -1466 695 0 DRAIN1
+rlabel metal2 0 537 7 555 0 DRAIN1
 port 9 nsew
-rlabel metal2 -1473 192 -1465 207 0 DRAIN2
+rlabel metal2 0 52 8 67 0 DRAIN2
 port 10 nsew
-rlabel metal1 -1438 738 -1396 745 0 VTUN
+rlabel metal1 35 598 77 605 0 VTUN
 port 11 nsew
-rlabel metal1 -1068 737 -1045 745 0 GATE1
+rlabel metal1 405 597 428 605 0 GATE1
 port 12 nsew
-rlabel metal1 -372 737 -344 745 0 VINJ
+rlabel metal1 1101 597 1129 605 0 VINJ
 port 13 nsew
-rlabel metal2 303 571 319 593 0 OUTPUT
+rlabel metal2 1776 431 1792 453 0 OUTPUT
 port 14 nsew
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

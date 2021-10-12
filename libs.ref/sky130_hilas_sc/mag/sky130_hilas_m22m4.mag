@@ -1,27 +1,31 @@
 magic
 tech sky130A
-timestamp 1607701799
+timestamp 1634057755
 << metal2 >>
-rect -14 18 23 24
-rect -14 -10 -9 18
-rect 19 -10 23 18
-rect -14 -16 23 -10
+rect 22 54 59 60
+rect 22 26 27 54
+rect 55 26 59 54
+rect 22 20 59 26
 << via2 >>
-rect -9 -10 19 18
+rect 27 26 55 54
 << metal3 >>
-rect -36 27 43 39
-rect -36 -21 -17 27
-rect 26 -21 43 27
-rect -36 -36 43 -21
+rect 0 63 79 75
+rect 0 15 19 63
+rect 62 15 79 63
+rect 0 0 79 15
 << via3 >>
-rect -17 18 26 27
-rect -17 -10 -9 18
-rect -9 -10 19 18
-rect 19 -10 26 18
-rect -17 -21 26 -10
+rect 19 54 62 63
+rect 19 26 27 54
+rect 27 26 55 54
+rect 55 26 62 54
+rect 19 15 62 26
 << metal4 >>
-rect -27 27 39 36
-rect -27 -21 -17 27
-rect 26 -21 39 27
-rect -27 -30 39 -21
+rect 9 63 75 72
+rect 9 15 19 63
+rect 62 15 75 63
+rect 9 6 75 15
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>

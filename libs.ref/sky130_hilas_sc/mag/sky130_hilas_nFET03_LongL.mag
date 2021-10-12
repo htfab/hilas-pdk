@@ -1,29 +1,33 @@
 magic
 tech sky130A
-timestamp 1632488964
+timestamp 1634057710
 << error_p >>
-rect 0 30 399 36
-rect 0 -12 399 -6
+rect 31 49 430 55
+rect 31 7 430 13
 << nmos >>
-rect 0 -6 399 30
+rect 31 13 430 49
 << ndiff >>
-rect -31 20 0 30
-rect -31 3 -26 20
-rect -6 3 0 20
-rect -31 -6 0 3
-rect 399 20 432 30
-rect 399 3 405 20
-rect 425 3 432 20
-rect 399 -6 432 3
+rect 0 39 31 49
+rect 0 22 5 39
+rect 25 22 31 39
+rect 0 13 31 22
+rect 430 39 463 49
+rect 430 22 436 39
+rect 456 22 463 39
+rect 430 13 463 22
 << ndiffc >>
-rect -26 3 -6 20
-rect 405 3 425 20
+rect 5 22 25 39
+rect 436 22 456 39
 << poly >>
-rect 0 30 399 43
-rect 0 -19 399 -6
+rect 31 49 430 62
+rect 31 0 430 13
 << locali >>
-rect -26 20 -6 28
-rect -26 -5 -6 3
-rect 405 20 425 28
-rect 405 -5 425 3
+rect 5 39 25 47
+rect 5 14 25 22
+rect 436 39 456 47
+rect 436 14 456 22
+<< properties >>
+string LEFsite unithd
+string LEFclass CORE
+string LEFsymmetry X Y R90
 << end >>
