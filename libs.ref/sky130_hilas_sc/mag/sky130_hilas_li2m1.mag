@@ -18,7 +18,7 @@ rect 0 6 3 23
 rect 20 6 23 23
 rect 0 0 23 6
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

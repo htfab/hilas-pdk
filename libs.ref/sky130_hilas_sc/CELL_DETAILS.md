@@ -545,6 +545,8 @@ Width: 8.000
 | 15                   | SELECT1              | metal2               | nsew                 |
 | 16                   | SELECT3              | metal2               | nsew                 |
 | 17                   | SELECT4              | metal2               | nsew                 |
+| 18                   | DRAIN4               | metal2               | n                    |
+| 19                   | DRAIN1               | metal2               | n                    |
 --------------------------------------------------------------------------------------------
 <a name="sky130-hilas-nFETLarge"></a>
 ### `sky130_hilas_nFETLarge`

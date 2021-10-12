@@ -242,7 +242,7 @@ timestamp 1634057708
 transform 1 0 498 0 1 110
 box 0 0 23 29
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>

@@ -5508,6 +5508,8 @@ module sky130_hilas_drainSelect01 (
     SELECT1,
     SELECT3,
     SELECT4,
+    DRAIN4,
+    DRAIN1,
     VGND,
     VNB,
     VPB
@@ -5519,6 +5521,8 @@ module sky130_hilas_drainSelect01 (
         inout SELECT1;
         inout SELECT3;
         inout SELECT4;
+        inout DRAIN4;
+        inout DRAIN1;
         inout VGND;
         inout VNB;
         inout VPB;
@@ -5537,7 +5541,9 @@ module sky130_hilas_drainSelect01 (
     SELECT2,
     SELECT1,
     SELECT3,
-    SELECT4
+    SELECT4,
+    DRAIN4,
+    DRAIN1
 );
         inout DRAIN3;
         inout VINJ;
@@ -5546,6 +5552,8 @@ module sky130_hilas_drainSelect01 (
         inout SELECT1;
         inout SELECT3;
         inout SELECT4;
+        inout DRAIN4;
+        inout DRAIN1;
 endmodule
 `endcelldefine
 

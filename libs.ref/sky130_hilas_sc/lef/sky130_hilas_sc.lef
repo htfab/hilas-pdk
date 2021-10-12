@@ -7036,6 +7036,18 @@ MACRO sky130_hilas_drainSelect01
         RECT 6.480 0.560 6.800 0.610 ;
     END
   END SELECT4
+  PIN DRAIN4
+    PORT
+      LAYER met2 ;
+        RECT 0.000 0.160 1.780 0.330 ;
+    END
+  END DRAIN4
+  PIN DRAIN1
+    PORT
+      LAYER met2 ;
+        RECT 0.000 5.680 1.780 5.860 ;
+    END
+  END DRAIN1
   OBS
       LAYER nwell ;
         RECT 2.320 4.630 5.740 5.870 ;
@@ -7215,7 +7227,6 @@ MACRO sky130_hilas_drainSelect01
         RECT 7.600 1.110 7.860 1.370 ;
         RECT 6.510 0.590 6.770 0.850 ;
       LAYER met2 ;
-        RECT 0.000 5.680 1.780 5.860 ;
         RECT 7.560 4.730 8.000 4.960 ;
         RECT 7.560 4.660 7.900 4.730 ;
         RECT 7.560 4.520 7.900 4.590 ;
@@ -7225,7 +7236,6 @@ MACRO sky130_hilas_drainSelect01
         RECT 7.560 1.460 7.900 1.530 ;
         RECT 7.560 1.320 7.900 1.390 ;
         RECT 7.560 1.090 8.000 1.320 ;
-        RECT 0.000 0.160 1.780 0.330 ;
   END
 END sky130_hilas_drainSelect01
 

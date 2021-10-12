@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1634057807
+timestamp 1634059102
 << checkpaint >>
 rect -398 -612 1430 1217
 << error_s >>
@@ -66,21 +66,21 @@ rect 0 242 200 258
 rect 564 198 572 221
 rect 563 64 572 87
 rect 0 16 178 33
-use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_3
+use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_1
 timestamp 1634057759
-transform 1 0 232 0 -1 267
-box 0 0 568 170
-use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_2
-timestamp 1634057759
-transform 1 0 232 0 1 18
+transform 1 0 232 0 -1 587
 box 0 0 568 170
 use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_0
 timestamp 1634057759
 transform 1 0 232 0 1 338
 box 0 0 568 170
-use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_1
+use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_2
 timestamp 1634057759
-transform 1 0 232 0 -1 587
+transform 1 0 232 0 1 18
+box 0 0 568 170
+use sky130_hilas_TgateVinj01  sky130_hilas_TgateVinj01_3
+timestamp 1634057759
+transform 1 0 232 0 -1 267
 box 0 0 568 170
 << labels >>
 rlabel space 57 357 62 375 0 DRAIN2
@@ -105,8 +105,12 @@ rlabel metal2 564 198 572 221 0 SELECT3
 port 16 nsew
 rlabel metal2 563 64 572 87 0 SELECT4
 port 17 nsew
+rlabel metal2 42 16 51 33 1 DRAIN4
+port 18 n
+rlabel metal2 50 568 59 585 1 DRAIN1
+port 19 n
 << properties >>
-string LEFsite unithd
 string LEFclass CORE
+string LEFsite unithd
 string LEFsymmetry X Y R90
 << end >>
