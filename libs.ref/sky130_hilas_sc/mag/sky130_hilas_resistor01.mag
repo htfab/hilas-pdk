@@ -1,6 +1,10 @@
 magic
 tech sky130A
-timestamp 1626535775
+timestamp 1637801776
+<< error_p >>
+rect -106 176 -89 180
+rect -75 164 438 204
+rect 453 178 470 180
 << psubdiff >>
 rect -131 148 491 156
 rect -131 131 -116 148

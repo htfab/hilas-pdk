@@ -1,12 +1,108 @@
 magic
 tech sky130A
-timestamp 1624147000
+timestamp 1637801776
 << error_s >>
-rect -330 594 -329 597
-rect -330 443 -329 446
-rect -330 292 -329 295
+rect 129 637 181 645
+rect 181 632 209 637
+rect 483 633 533 643
+rect 452 632 483 633
+rect -330 594 -295 598
+rect 129 595 181 603
+rect 483 591 533 601
+rect -553 572 -500 581
+rect -580 566 -553 572
+rect -500 566 -472 572
+rect -374 571 -322 581
+rect 55 572 108 581
+rect 202 572 254 582
+rect -402 566 -374 571
+rect 28 566 55 572
+rect 254 567 281 572
+rect 412 571 462 582
+rect 554 571 604 582
+rect 383 567 412 571
+rect -580 547 -577 566
+rect 28 547 31 566
+rect -553 530 -500 539
+rect -374 529 -322 539
+rect 55 530 108 539
+rect 202 530 254 540
+rect 412 529 462 540
+rect 554 529 604 540
+rect 129 486 181 494
+rect 181 481 209 486
+rect 483 482 533 492
+rect 452 481 483 482
+rect -330 443 -295 447
+rect 129 444 181 452
+rect 483 440 533 450
+rect -553 421 -500 430
+rect -580 415 -553 421
+rect -500 415 -472 421
+rect -374 420 -322 430
+rect 55 421 108 430
+rect 202 421 254 431
+rect -402 415 -374 420
+rect 28 415 55 421
+rect 254 416 281 421
+rect 412 420 462 431
+rect 554 420 604 431
+rect 383 416 412 420
+rect -580 396 -577 415
+rect 28 396 31 415
+rect -553 379 -500 388
+rect -374 378 -322 388
+rect 55 379 108 388
+rect 202 379 254 389
+rect 412 378 462 389
+rect 554 378 604 389
+rect 129 335 181 343
+rect 181 330 209 335
+rect 483 331 533 341
+rect 452 330 483 331
+rect -330 292 -295 296
+rect 129 293 181 301
+rect 483 289 533 299
+rect -553 270 -500 279
+rect -580 264 -553 270
+rect -500 264 -472 270
+rect -374 269 -322 279
+rect 55 270 108 279
+rect 202 270 254 280
+rect -402 264 -374 269
+rect 28 264 55 270
+rect 254 265 281 270
+rect 412 269 462 280
+rect 554 269 604 280
+rect 383 265 412 269
+rect -580 245 -577 264
+rect 28 245 31 264
+rect -553 228 -500 237
+rect -374 227 -322 237
+rect 55 228 108 237
+rect 202 228 254 238
+rect 412 227 462 238
+rect 554 227 604 238
 rect 202 225 254 226
 rect 412 225 462 226
+rect 129 185 181 193
+rect 181 180 209 185
+rect 483 181 533 191
+rect 452 180 483 181
+rect 129 143 181 151
+rect 483 139 533 149
+rect 55 120 108 129
+rect 202 120 254 130
+rect 28 114 55 120
+rect 254 115 281 120
+rect 412 119 462 130
+rect 554 119 604 130
+rect 383 115 412 119
+rect 28 95 31 114
+rect 55 78 108 87
+rect 202 78 254 88
+rect 412 77 462 88
+rect 554 77 604 88
 << nwell >>
 rect 32 659 54 665
 rect 32 64 54 69
@@ -159,34 +255,34 @@ rect -54 105 -51 110
 rect -54 89 -29 105
 rect -54 81 -51 89
 rect 645 85 658 102
-use sky130_hilas_VinjInv2  VinjInv2_2
-timestamp 1624141468
-transform 1 0 -301 0 1 60
-box -336 144 25 308
-use sky130_hilas_VinjInv2  VinjInv2_1
-timestamp 1624141468
-transform 1 0 -301 0 1 211
-box -336 144 25 308
-use sky130_hilas_VinjInv2  VinjInv2_0
-timestamp 1624141468
-transform 1 0 -301 0 1 362
-box -336 144 25 308
-use sky130_hilas_VinjNOR3  VinjNOR3_0
-timestamp 1624138502
-transform 1 0 307 0 1 -90
-box -337 144 351 308
-use sky130_hilas_VinjNOR3  VinjNOR3_3
-timestamp 1624138502
-transform 1 0 307 0 1 362
-box -337 144 351 308
-use sky130_hilas_VinjNOR3  VinjNOR3_1
-timestamp 1624138502
-transform 1 0 307 0 1 60
-box -337 144 351 308
 use sky130_hilas_VinjNOR3  VinjNOR3_2
-timestamp 1624138502
+timestamp 1637801776
 transform 1 0 307 0 1 211
 box -337 144 351 308
+use sky130_hilas_VinjNOR3  VinjNOR3_1
+timestamp 1637801776
+transform 1 0 307 0 1 60
+box -337 144 351 308
+use sky130_hilas_VinjNOR3  VinjNOR3_3
+timestamp 1637801776
+transform 1 0 307 0 1 362
+box -337 144 351 308
+use sky130_hilas_VinjNOR3  VinjNOR3_0
+timestamp 1637801776
+transform 1 0 307 0 1 -90
+box -337 144 351 308
+use sky130_hilas_VinjInv2  VinjInv2_0
+timestamp 1637801776
+transform 1 0 -301 0 1 362
+box -336 144 25 308
+use sky130_hilas_VinjInv2  VinjInv2_1
+timestamp 1637801776
+transform 1 0 -301 0 1 211
+box -336 144 25 308
+use sky130_hilas_VinjInv2  VinjInv2_2
+timestamp 1637801776
+transform 1 0 -301 0 1 60
+box -336 144 25 308
 << labels >>
 rlabel metal2 645 537 658 554 0 OUTPUT00
 port 1 nsew
