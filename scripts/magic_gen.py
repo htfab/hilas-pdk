@@ -99,7 +99,7 @@ class Conventions:
                     }
 
     def __init__(self):
-        self._pg_pin_map={item: parent for parent,ll in self.PG_PIN_NAMES.items() for item in ll}
+        self._pg_pin_map = {item: parent for parent,ll in self.PG_PIN_NAMES.items() for item in ll}
 
     def pg_pin_lookup(self, net):
         if net in self._pg_pin_map:
@@ -129,7 +129,7 @@ class Conventions:
             return None
 
 
-CONVENTIONS=Conventions()
+CONVENTIONS = Conventions()
 
 
 class StructuredTextFile:
